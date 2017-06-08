@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu</name>
+    <events>
+        <variable constant="0" name="UIState" sid="833072582617239" static="0" type="text">UIStart</variable>
+        <variable constant="0" name="SelectedGame" sid="917913845086719" static="0" type="number">-1</variable>
+        <event-group description="" sid="798539094925012" title="Initialize Menu State">
+            <sub-events>
+                <event-block sid="448334342164413">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="335861093306031" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Generate Levels</comment>
+                        <event-block sid="223349158918015">
+                            <conditions>
+                                <condition id="6" name="Is empty" sid="222681535761772" type="ScoreList" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set size" sid="324201594544330" type="ScoreList">
+                                    <param id="0" name="Width">12</param>
+                                    <param id="1" name="Height">5</param>
+                                    <param id="2" name="Depth">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="376417350786852">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="680382970176738" type="Function">
+                                            <param id="0" name="Name">&quot;Draw Animals&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="537542742347093" title="Drawing Animals">
+            <sub-events>
+                <event-group description="" sid="386127460647986" title="Debug Animals">
+                    <sub-events>
+                        <event-block sid="779162416233831">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="642139266784241" type="Touch">
+                                    <param id="0" name="Object">Animal</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="170670516155308" type="ScoreList">
+                                    <param id="0" name="X">Animal.Game</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">(ScoreList.At(Animal.Game, 0) + 1) % 3</param>
+                                </action>
+                                <action id="0" name="Call function" sid="549601522843226" type="Function">
+                                    <param id="0" name="Name">&quot;Draw Animals&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="530834341377286">
+                    <conditions>
+                        <condition id="0" name="On function" sid="504408702738929" type="Function">
+                            <param id="0" name="Name">&quot;Draw Animals&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="452208496249772">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="361037260997199" type="System">
+                                    <param id="0" name="Object">Animal</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="691667134652761">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="304683911534146" type="ScoreList">
+                                            <param id="0" name="X">Animal.Game</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">1</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="348555848057678" type="Animal">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="890880170882793" type="Animal">
+                                            <param id="0" name="Animation">&quot;Animation&quot; &amp; ScoreList.At(Animal.Game, 0)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="417931773508236">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="688774361272534" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="439682552983885" type="Animal">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="259049637324713" title="Menus">
+            <sub-events>
+                <event-group description="" sid="233120921953718" title="Settings Menu">
+                    <sub-events>
+                        <event-block sid="769616764691670">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="148349995353332" type="System">
+                                    <param id="0" name="Variable">UIState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;UISettings&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="820051134065875">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="730444906907357" type="Touch">
+                                            <param id="0" name="Object">ButtonBack</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="913495159455990" type="Function">
+                                            <param id="0" name="Name">&quot;Switch Menu To&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;UIStart&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="693656146438213" title="Level Menu">
+                    <sub-events>
+                        <event-block sid="198241647043509">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="696185119571805" type="System">
+                                    <param id="0" name="Variable">UIState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;UILevels&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="357240973176029">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="381882077631354" type="Touch">
+                                            <param id="0" name="Object">LevelIcon</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="459080238536782" type="System">
+                                            <param id="0" name="Variable">SelectedGame</param>
+                                            <param id="1" name="Value">LevelIcon.Game</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="697786891815410" type="Function">
+                                            <param id="0" name="Name">&quot;Switch Menu To&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;UIDifficulty&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="981980924533190">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="811109640064911" type="Touch">
+                                            <param id="0" name="Object">ButtonBack</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="732583223625735" type="Function">
+                                            <param id="0" name="Name">&quot;Switch Menu To&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;UIStart&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="203694849028451" title="Difficulty Menu">
+                    <sub-events>
+                        <event-block sid="362761814650097">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="610223398157889" type="System">
+                                    <param id="0" name="Variable">UIState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;UIDifficulty&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="152857877225018">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="502787091591142" type="Touch">
+                                            <param id="0" name="Object">ButtonBack</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="489913103382971" type="Function">
+                                            <param id="0" name="Name">&quot;Switch Menu To&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;UILevels&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="903129011343631" title="Start Menu">
+                    <sub-events>
+                        <event-block sid="954540399086581">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="204942102378158" type="System">
+                                    <param id="0" name="Variable">UIState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;UIStart&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="337458181481037">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="133626459089082" type="Touch">
+                                            <param id="0" name="Object">ButtonLevels</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="319080604571406" type="Function">
+                                            <param id="0" name="Name">&quot;Switch Menu To&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;UILevels&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="966298441948488">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="847069176497435" type="Touch">
+                                            <param id="0" name="Object">ButtonSettings</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="469113345748842" type="Function">
+                                            <param id="0" name="Name">&quot;Switch Menu To&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;UISettings&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="139980612319212" title="Switching Levels">
+                    <sub-events>
+                        <event-block sid="245507802519258">
+                            <conditions>
+                                <condition id="0" name="On function" sid="422199215004298" type="Function">
+                                    <param id="0" name="Name">&quot;Switch Menu To&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="533729929744306" type="System">
+                                    <param id="0" name="Layer">UIState</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="626089034242035" type="System">
+                                    <param id="0" name="Variable">UIState</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="601645914313355" type="System">
+                                    <param id="0" name="Layer">UIState</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="909382381472515">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="221181662337726" type="System">
+                                            <param id="0" name="Variable">UIState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;UIStart&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="256593632407763" type="ButtonBack">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="853481040020666" type="Background">
+                                            <param id="0" name="Animation">&quot;StartScreen&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="919587242528095">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="997555616612776" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="134859706617305" type="ButtonBack">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="873655756231300" type="Background">
+                                            <param id="0" name="Animation">&quot;LevelSelect&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="201165579596874">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="182559013592498" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="457556071655872">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="130550590401216" type="System">
+                                            <param id="0" name="Variable">UIState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;UIStart&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="799546577508130" type="ButtonBack">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="978669342453955" type="Background">
+                                            <param id="0" name="Animation">&quot;StartScreen&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

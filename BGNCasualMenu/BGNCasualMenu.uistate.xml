@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Menu</layout>
+        <event-sheet active="1" order="1">Menu</event-sheet>
+        <event-sheet order="2">Levels and Scores</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="0" name="LevelIcon" />
+        <family expanded="0" name="Animal" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/Menu/" />
+        <folder expanded="0" path="object-folder/Menu/Animals/" />
+        <folder expanded="0" path="object-folder/Menu/UI/" />
+        <folder expanded="1" path="object-folder/Menu/UI/Start/" />
+        <folder expanded="1" path="object-folder/Menu/UI/Settings/" />
+        <folder expanded="0" path="object-folder/Menu/UI/Levels/" />
+        <folder expanded="0" path="object-folder/Menu/UI/Difficulty/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Animal1/" />
+        <folder expanded="1" path="animation-folder/Animal2/" />
+        <folder expanded="1" path="animation-folder/TitleName/" />
+        <folder expanded="1" path="animation-folder/ButtonLevels/" />
+        <folder expanded="1" path="animation-folder/ButtonSettings/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/ButtonPlay/" />
+        <folder expanded="1" path="animation-folder/Sound/" />
+        <folder expanded="1" path="animation-folder/TitleSettings/" />
+        <folder expanded="1" path="animation-folder/Game0/" />
+        <folder expanded="1" path="animation-folder/TitleLevel/" />
+        <folder expanded="1" path="animation-folder/Game1/" />
+        <folder expanded="1" path="animation-folder/Game2/" />
+        <folder expanded="1" path="animation-folder/Game3/" />
+        <folder expanded="1" path="animation-folder/Game4/" />
+        <folder expanded="1" path="animation-folder/Game5/" />
+        <folder expanded="1" path="animation-folder/Game6/" />
+        <folder expanded="1" path="animation-folder/Game7/" />
+        <folder expanded="1" path="animation-folder/Game8/" />
+        <folder expanded="1" path="animation-folder/Game9/" />
+        <folder expanded="1" path="animation-folder/Game10/" />
+        <folder expanded="1" path="animation-folder/Game11/" />
+        <folder expanded="1" path="animation-folder/TitleDifficulty/" />
+        <folder expanded="1" path="animation-folder/ButtonEasy/" />
+        <folder expanded="1" path="animation-folder/ButtonMedium/" />
+        <folder expanded="1" path="animation-folder/ButtonHard/" />
+        <folder expanded="1" path="animation-folder/UIBackground/" />
+        <folder expanded="1" path="animation-folder/ButtonBack/" />
+        <folder expanded="1" path="animation-folder/Background/" />
+    </folders-expanded>
+</c2uistate>

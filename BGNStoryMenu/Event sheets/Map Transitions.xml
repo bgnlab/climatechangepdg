@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Map Transitions</name>
+    <events>
+        <variable constant="0" name="TransitioningTo" sid="520972473325341" static="0" type="text"></variable>
+        <variable constant="0" name="Transitioning" sid="915198749025796" static="0" type="number">0</variable>
+        <variable constant="0" name="PreviousMapLayout" sid="778799209463554" static="0" type="text"></variable>
+        <variable constant="1" name="FADESPEED" sid="776207876012501" static="0" type="number">10</variable>
+        <event-group description="" sid="750800471681819" title="Transition In">
+            <sub-events>
+                <event-block sid="601356733076445">
+                    <conditions>
+                        <condition id="0" name="On function" sid="863565829344580" type="Functions">
+                            <param id="0" name="Name">&quot;Transition In&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="867565816764202" type="System">
+                            <param id="0" name="Variable">Transitioning</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-18" name="Set layer opacity" sid="395351595061058" type="System">
+                            <param id="0" name="Layer">&quot;Transition&quot;</param>
+                            <param id="1" name="Opacity">100</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="706598230197299" type="System">
+                            <param id="0" name="Layer">&quot;Transition&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="132797678072465">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="919494743434937" type="System">
+                            <param id="0" name="Variable">Transitioning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="551568509539968">
+                            <conditions>
+                                <condition id="-17" name="Compare opacity" sid="717724370985927" type="System">
+                                    <param id="0" name="Layer">&quot;Transition&quot;</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Opacity">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="831168022946127" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="149537175420019" type="System">
+                                    <param id="0" name="Layer">&quot;Transition&quot;</param>
+                                    <param id="1" name="Opacity">LayerOpacity(&quot;Transition&quot;) - FADESPEED</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="915229986323743">
+                            <conditions>
+                                <condition id="-17" name="Compare opacity" sid="830472374028228" type="System">
+                                    <param id="0" name="Layer">&quot;Transition&quot;</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Opacity">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="327791844227818" type="System">
+                                    <param id="0" name="Layer">&quot;Transition&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="894897711603261" type="System">
+                                    <param id="0" name="Variable">Transitioning</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="684701359678916" title="Transition To">
+            <sub-events>
+                <event-block sid="535992503160648">
+                    <conditions>
+                        <condition id="0" name="On function" sid="121865483106257" type="Functions">
+                            <param id="0" name="Name">&quot;Transition To&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="291242707559911" type="System">
+                            <param id="0" name="Variable">Transitioning</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-18" name="Set layer opacity" sid="959929381804129" type="System">
+                            <param id="0" name="Layer">&quot;Transition&quot;</param>
+                            <param id="1" name="Opacity">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="637268175159029" type="System">
+                            <param id="0" name="Layer">&quot;Transition&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="554094330499717" type="System">
+                            <param id="0" name="Variable">TransitioningTo</param>
+                            <param id="1" name="Value">Functions.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="139613820371156">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="493906799529687" type="System">
+                            <param id="0" name="Variable">Transitioning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="234798745456237">
+                            <conditions>
+                                <condition id="-17" name="Compare opacity" sid="964768747687237" type="System">
+                                    <param id="0" name="Layer">&quot;Transition&quot;</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Opacity">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-18" name="Set layer opacity" sid="695264096007419" type="System">
+                                    <param id="0" name="Layer">&quot;Transition&quot;</param>
+                                    <param id="1" name="Opacity">LayerOpacity(&quot;Transition&quot;) + FADESPEED</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Play a flipping animation or something?</comment>
+                        <event-block sid="192535465706115">
+                            <conditions>
+                                <condition id="-17" name="Compare opacity" sid="880959987764033" type="System">
+                                    <param id="0" name="Layer">&quot;Transition&quot;</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Opacity">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="215363338160642" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="402030283663226" type="System">
+                                    <param id="0" name="Variable">PreviousMapLayout</param>
+                                    <param id="1" name="Value">LayoutName</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="291851740543386" type="System">
+                                    <param id="0" name="Variable">Transitioning</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="123862553236027" type="System">
+                                    <param id="0" name="Layout">TransitioningTo</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

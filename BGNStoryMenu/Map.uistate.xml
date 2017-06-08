@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Level Select</layout>
+        <layout order="8">Future View</layout>
+        <layout order="2">Present View</layout>
+        <layout order="4">Opening Cutscene</layout>
+        <event-sheet active="1" order="1">Level Select</event-sheet>
+        <event-sheet order="3">Scores and Levels</event-sheet>
+        <event-sheet order="5">Present View</event-sheet>
+        <event-sheet order="6">Future View</event-sheet>
+        <event-sheet order="7">Opening Cutscene</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/Level Select/" />
+        <folder expanded="1" path="object-folder/Level Select/Test Level/" />
+        <folder expanded="1" path="object-folder/Maps/" />
+        <folder expanded="0" path="object-folder/Maps/Future/" />
+        <folder expanded="1" path="object-folder/Maps/Present/" />
+        <folder expanded="0" path="object-folder/Maps/TimeTransition/" />
+        <folder expanded="0" path="object-folder/Opening Cutscene/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="layout-folder/Map/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="event-folder/Map/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/DifficultyEasy/" />
+        <folder expanded="1" path="animation-folder/BackButton/" />
+        <folder expanded="1" path="animation-folder/LevelIcon/" />
+        <folder expanded="1" path="animation-folder/ButtonEasy/" />
+        <folder expanded="1" path="animation-folder/ButtonMedium/" />
+        <folder expanded="1" path="animation-folder/ButtonHard/" />
+        <folder expanded="1" path="animation-folder/Smoke/" />
+        <folder expanded="1" path="animation-folder/DifficultyMedium/" />
+        <folder expanded="1" path="animation-folder/DifficultyHard/" />
+        <folder expanded="1" path="animation-folder/ToPresent/" />
+        <folder expanded="1" path="animation-folder/ToFuture/" />
+        <folder expanded="1" path="animation-folder/Region/" />
+        <folder expanded="1" path="animation-folder/TransitionCalendar/" />
+        <folder expanded="1" path="animation-folder/TransitionPane/" />
+        <folder expanded="1" path="animation-folder/Background/" />
+        <folder expanded="1" path="animation-folder/Thermometer/" />
+        <folder expanded="1" path="animation-folder/Calendar/" />
+    </folders-expanded>
+</c2uistate>

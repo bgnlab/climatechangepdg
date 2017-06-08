@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>BGNCasualMenu</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1cy79n4v6zuh5</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1920</width>
+        <height>1200</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Menu">
+            <object-folder name="Animals">
+                <object-type name="Animal1" sid="897877440924940">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Animation1" pingpong="0" repeatcount="1" repeatto="0" sid="207808695238425" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="402858962484285" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Animal2" sid="777096069861812">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Animation1" pingpong="0" repeatcount="1" repeatto="0" sid="317308628841592" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="978895798050383" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="UI">
+                <object-folder name="Start">
+                    <object-type name="TitleName" sid="887895989704486">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397468129823990" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="ButtonLevels" sid="678215687784122">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="847910720297630" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="ButtonSettings" sid="143229017918032">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="468945825812982" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Sprite" sid="127729469215660">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315971816733900" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="ButtonPlay" sid="641746943105042">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="944035132796141" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-folder name="Settings">
+                    <object-type name="Sound" sid="931477579401845">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="833112909765536" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="TitleSettings" sid="126633905863756">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="598829910916191" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-folder name="Levels">
+                    <object-type name="Game0" sid="439918757952823">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="751863267488912" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="TitleLevel" sid="848909340828694">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315967146009484" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Game1" sid="823057396206445">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="849929164526138" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Game2" sid="948463022703058">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="994681954618864" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Game3" sid="847602300556001">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="288076963543009" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Game4" sid="933240620457308">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="969130510600700" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Game5" sid="469923063682437">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="858149495307111" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Game6" sid="960104835844337">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="483469936749817" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Game7" sid="534864263423868">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="729033279008874" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Game8" sid="285927511570905">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="180570592064728" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Game9" sid="444531015224168">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995727587262022" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Game10" sid="746142507391412">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="773037716190011" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Game11" sid="624856155084962">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="790103015265006" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-folder name="Difficulty">
+                    <object-type name="TitleDifficulty" sid="341978656541847">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="655720043301310" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="ButtonEasy" sid="376598639776023">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818709072666135" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="ButtonMedium" sid="896657186319280">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804787389131743" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="ButtonHard" sid="692358723215076">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="661470886412555" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-type name="UIBackground" sid="141646706527039">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="656281218141052" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ButtonBack" sid="716684449658093">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="886910302430006" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="Background" sid="348671960813810">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="StartScreen" pingpong="0" repeatcount="1" repeatto="0" sid="108905934731114" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casusal game menu screen.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="LevelSelect" pingpong="0" repeatcount="1" repeatto="0" sid="796489804625052" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casual game game select blank.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="ScoreList" sid="104839921834037">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
+        <object-type name="Function" sid="908945410827701">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Touch" sid="530693496075012">
+            <plugin id="Touch" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="LevelIcon" plugin-id="Sprite" sid="203483345357945">
+            <members>
+                <member>Game0</member>
+                <member>Game1</member>
+                <member>Game10</member>
+                <member>Game11</member>
+                <member>Game2</member>
+                <member>Game3</member>
+                <member>Game4</member>
+                <member>Game5</member>
+                <member>Game6</member>
+                <member>Game7</member>
+                <member>Game8</member>
+                <member>Game9</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Game" sid="310859849956077" type="number" />
+            </instance-variables>
+        </family>
+        <family name="Animal" plugin-id="Sprite" sid="144975547066386">
+            <members>
+                <member>Animal1</member>
+                <member>Animal2</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Game" sid="889388965165008" type="number" />
+            </instance-variables>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Menu.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Menu.xml</event-sheet>
+        <event-sheet>Levels and Scores.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Function" uid="4" />
+        <global-instance type="Touch" uid="8">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

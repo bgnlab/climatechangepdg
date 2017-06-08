@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Map</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1dqgxuy7whswj</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="brightness">Brightness</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1920</width>
+        <height>1200</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Level Select">
+            <object-folder name="Test Level">
+                <object-type name="Text" sid="837352552104246">
+                    <plugin id="Text" />
+                </object-type>
+            </object-folder>
+            <object-type global="1" name="LevelList" sid="192622887803944">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="DifficultyEasy" sid="225370658738281">
+                <plugin id="Sprite" />
+                <container>
+                    <type>LevelIcon</type>
+                    <type>Smoke</type>
+                    <type>ButtonEasy</type>
+                    <type>ButtonHard</type>
+                    <type>ButtonMedium</type>
+                    <type>DifficultyEasy</type>
+                    <type>DifficultyHard</type>
+                    <type>DifficultyMedium</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="388477447517146" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="8.75" original-source="C:\Users\Yuan\Downloads\star full (new).png">
+                            <collision-poly>
+                                <point x="0.336" y="0.336" />
+                                <point x="0.5" y="0.044" />
+                                <point x="0.668" y="0.332" />
+                                <point x="0.916" y="0.5" />
+                                <point x="0.808" y="0.808" />
+                                <point x="0.212" y="0.788" />
+                                <point x="0.096" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BackButton" sid="806517370716048">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="721027343336515" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LevelIcon" sid="571171162810259">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="LevelName" sid="791905900003245" type="string" />
+                    <instance-variable name="LevelLayout" sid="544084516224915" type="string" />
+                    <instance-variable name="Difficulty" sid="187323320328535" type="number" />
+                    <instance-variable name="LevelNumber" sid="956659348454451" type="number" />
+                </instance-variables>
+                <container>
+                    <type>LevelIcon</type>
+                    <type>Smoke</type>
+                    <type>ButtonEasy</type>
+                    <type>ButtonHard</type>
+                    <type>ButtonMedium</type>
+                    <type>DifficultyEasy</type>
+                    <type>DifficultyHard</type>
+                    <type>DifficultyMedium</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Game0" pingpong="0" repeatcount="1" repeatto="0" sid="237619522933131" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Game1" pingpong="0" repeatcount="1" repeatto="0" sid="769603993284907" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Game2" pingpong="0" repeatcount="1" repeatto="0" sid="640277000463272" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Game3" pingpong="0" repeatcount="1" repeatto="0" sid="267173873906534" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Game4" pingpong="0" repeatcount="1" repeatto="0" sid="563208168182073" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Game5" pingpong="0" repeatcount="1" repeatto="0" sid="446182291996946" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Game6" pingpong="0" repeatcount="1" repeatto="0" sid="992725948258632" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Game7" pingpong="0" repeatcount="1" repeatto="0" sid="908406331568557" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Game8" pingpong="0" repeatcount="1" repeatto="0" sid="586201319505493" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Game9" pingpong="0" repeatcount="1" repeatto="0" sid="709291979313777" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Game10" pingpong="0" repeatcount="1" repeatto="0" sid="422715596148692" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Game11" pingpong="0" repeatcount="1" repeatto="0" sid="551184988528139" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ButtonEasy" sid="200987174369259">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Difficulty" sid="758302738408204" type="number" />
+                </instance-variables>
+                <container>
+                    <type>LevelIcon</type>
+                    <type>Smoke</type>
+                    <type>ButtonEasy</type>
+                    <type>ButtonHard</type>
+                    <type>ButtonMedium</type>
+                    <type>DifficultyEasy</type>
+                    <type>DifficultyHard</type>
+                    <type>DifficultyMedium</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890865317384527" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="5.46667" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ButtonMedium" sid="399971925655827">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Difficulty" sid="112986969849225" type="number" />
+                </instance-variables>
+                <container>
+                    <type>LevelIcon</type>
+                    <type>Smoke</type>
+                    <type>ButtonEasy</type>
+                    <type>ButtonHard</type>
+                    <type>ButtonMedium</type>
+                    <type>DifficultyEasy</type>
+                    <type>DifficultyHard</type>
+                    <type>DifficultyMedium</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759530739354393" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="3.86667" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ButtonHard" sid="759363995905631">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Difficulty" sid="209775385054272" type="number" />
+                </instance-variables>
+                <container>
+                    <type>LevelIcon</type>
+                    <type>Smoke</type>
+                    <type>ButtonEasy</type>
+                    <type>ButtonHard</type>
+                    <type>ButtonMedium</type>
+                    <type>DifficultyEasy</type>
+                    <type>DifficultyHard</type>
+                    <type>DifficultyMedium</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="874499847074822" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="2.26667" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Smoke" sid="318660281626901">
+                <plugin id="Sprite" />
+                <container>
+                    <type>LevelIcon</type>
+                    <type>Smoke</type>
+                    <type>ButtonEasy</type>
+                    <type>ButtonHard</type>
+                    <type>ButtonMedium</type>
+                    <type>DifficultyEasy</type>
+                    <type>DifficultyHard</type>
+                    <type>DifficultyMedium</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Easy" pingpong="0" repeatcount="1" repeatto="0" sid="369400945620949" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1.2" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Medium" pingpong="0" repeatcount="1" repeatto="0" sid="359949128560555" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1.2" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Hard" pingpong="0" repeatcount="1" repeatto="0" sid="793439273994272" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1.2" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DifficultyMedium" sid="612201176159822">
+                <plugin id="Sprite" />
+                <container>
+                    <type>LevelIcon</type>
+                    <type>Smoke</type>
+                    <type>ButtonEasy</type>
+                    <type>ButtonHard</type>
+                    <type>ButtonMedium</type>
+                    <type>DifficultyEasy</type>
+                    <type>DifficultyHard</type>
+                    <type>DifficultyMedium</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="475441509716445" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="5.75" original-source="C:\Users\Yuan\Downloads\star full (new).png">
+                            <collision-poly>
+                                <point x="0.336" y="0.336" />
+                                <point x="0.5" y="0.044" />
+                                <point x="0.668" y="0.332" />
+                                <point x="0.916" y="0.5" />
+                                <point x="0.808" y="0.808" />
+                                <point x="0.212" y="0.788" />
+                                <point x="0.096" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DifficultyHard" sid="728799686366006">
+                <plugin id="Sprite" />
+                <container>
+                    <type>LevelIcon</type>
+                    <type>Smoke</type>
+                    <type>ButtonEasy</type>
+                    <type>ButtonHard</type>
+                    <type>ButtonMedium</type>
+                    <type>DifficultyEasy</type>
+                    <type>DifficultyHard</type>
+                    <type>DifficultyMedium</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="860365787667471" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="2.75" original-source="C:\Users\Yuan\Downloads\star full (new).png">
+                            <collision-poly>
+                                <point x="0.336" y="0.336" />
+                                <point x="0.5" y="0.044" />
+                                <point x="0.668" y="0.332" />
+                                <point x="0.916" y="0.5" />
+                                <point x="0.808" y="0.808" />
+                                <point x="0.212" y="0.788" />
+                                <point x="0.096" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Maps">
+            <object-folder name="Future">
+                <object-type name="ToPresent" sid="359249940750185">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="812469399379617" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Present">
+                <object-type name="ToFuture" sid="142781596255546">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="908969582072030" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Region" sid="172619480916489">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="RegionNumber" sid="993897462290827" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="697776634143350" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Focus" pingpong="0" repeatcount="1" repeatto="0" sid="745627620236716" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TempIncrement" sid="761347235231717">
+                    <plugin id="Button" />
+                </object-type>
+            </object-folder>
+            <object-folder name="TimeTransition">
+                <object-type name="TransitionCalendar" sid="568433220671061">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>TransitionPane</type>
+                        <type>TransitionCalendar</type>
+                        <type>TransitionYear</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="649981966407716" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TransitionPane" sid="159675535452635">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>TransitionPane</type>
+                        <type>TransitionCalendar</type>
+                        <type>TransitionYear</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="256091124874760" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TransitionYear" sid="446034824435545">
+                    <plugin id="Text" />
+                    <container>
+                        <type>TransitionPane</type>
+                        <type>TransitionCalendar</type>
+                        <type>TransitionYear</type>
+                    </container>
+                </object-type>
+            </object-folder>
+            <object-type name="Background" sid="532587382221566">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="1C" pingpong="0" repeatcount="1" repeatto="0" sid="250851931494756" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 1 degrees.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="2C" pingpong="0" repeatcount="1" repeatto="0" sid="662388841989649" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 2 degrees.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="3C" pingpong="0" repeatcount="1" repeatto="0" sid="490095913987159" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 3 degrees.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="4C" pingpong="0" repeatcount="1" repeatto="0" sid="630174243154985" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 4 degrees.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="5C" pingpong="0" repeatcount="1" repeatto="0" sid="323827638425710" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 5 degrees.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="6C" pingpong="0" repeatcount="1" repeatto="0" sid="966077666164981" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 6 degrees.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Thermometer" sid="109642287589657">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="1C" pingpong="0" repeatcount="1" repeatto="0" sid="805681667362982" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\1C thermometer.png">
+                            <collision-poly>
+                                <point x="0.0818505" y="0.534884" />
+                                <point x="0.5" y="0.255814" />
+                                <point x="0.922598" y="0.505814" />
+                                <point x="0.922598" y="0.494186" />
+                                <point x="0.5" y="0.732558" />
+                                <point x="0.0818505" y="0.465116" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="2C" pingpong="0" repeatcount="1" repeatto="0" sid="746040380847724" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\2C thermometer.png">
+                            <collision-poly>
+                                <point x="0.0818505" y="0.534884" />
+                                <point x="0.5" y="0.255814" />
+                                <point x="0.922598" y="0.505814" />
+                                <point x="0.922598" y="0.494186" />
+                                <point x="0.5" y="0.732558" />
+                                <point x="0.0818505" y="0.465116" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="3C" pingpong="0" repeatcount="1" repeatto="0" sid="471113806346741" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.50289" original-source="C:\Users\Yuan\Downloads\3C thermometer.png">
+                            <collision-poly>
+                                <point x="0.0818505" y="0.534884" />
+                                <point x="0.5" y="0.255814" />
+                                <point x="0.922598" y="0.505814" />
+                                <point x="0.922598" y="0.494186" />
+                                <point x="0.5" y="0.732558" />
+                                <point x="0.0818505" y="0.465116" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="4C" pingpong="0" repeatcount="1" repeatto="0" sid="913500653986006" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\Yuan\Downloads\4C thermometer.png">
+                            <collision-poly>
+                                <point x="0.0818505" y="0.534884" />
+                                <point x="0.5" y="0.255814" />
+                                <point x="0.922598" y="0.505814" />
+                                <point x="0.922598" y="0.494186" />
+                                <point x="0.5" y="0.732558" />
+                                <point x="0.0818505" y="0.465116" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="5C" pingpong="0" repeatcount="1" repeatto="0" sid="220601361936956" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\5C thermometer.png">
+                            <collision-poly>
+                                <point x="0.0818505" y="0.534884" />
+                                <point x="0.5" y="0.255814" />
+                                <point x="0.922598" y="0.505814" />
+                                <point x="0.922598" y="0.494186" />
+                                <point x="0.5" y="0.732558" />
+                                <point x="0.0818505" y="0.465116" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="6C" pingpong="0" repeatcount="1" repeatto="0" sid="963249364634463" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\6C thermometer.png">
+                            <collision-poly>
+                                <point x="0.0818505" y="0.534884" />
+                                <point x="0.5" y="0.255814" />
+                                <point x="0.922598" y="0.505814" />
+                                <point x="0.922598" y="0.494186" />
+                                <point x="0.5" y="0.732558" />
+                                <point x="0.0818505" y="0.465116" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Calendar" sid="602535998501778">
+                <plugin id="Sprite" />
+                <container>
+                    <type>Calendar</type>
+                    <type>Year</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="155240767714589" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Year" sid="675197188356856">
+                <plugin id="Text" />
+                <container>
+                    <type>Calendar</type>
+                    <type>Year</type>
+                </container>
+            </object-type>
+        </object-folder>
+        <object-folder name="Opening Cutscene">
+            <object-type name="OpeningCutsceneText" sid="623333834607106">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="686751619442141">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-type name="Touch" sid="235968936273001">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Functions" sid="188436798377398">
+            <plugin id="Function" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout-folder name="Map">
+            <layout>Present View.xml</layout>
+            <layout>Future View.xml</layout>
+            <layout>Level Select.xml</layout>
+            <layout>Opening Cutscene.xml</layout>
+            <layout>Test Level.xml</layout>
+        </layout-folder>
+    </layout-folder>
+    <event-folder>
+        <event-folder name="Map">
+            <event-sheet>Future View.xml</event-sheet>
+            <event-sheet>Level Select.xml</event-sheet>
+            <event-sheet>Opening Cutscene.xml</event-sheet>
+            <event-sheet>Present View.xml</event-sheet>
+            <event-sheet>Scores and Levels.xml</event-sheet>
+            <event-sheet>Map Transitions.xml</event-sheet>
+        </event-folder>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="1">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Functions" uid="13" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
