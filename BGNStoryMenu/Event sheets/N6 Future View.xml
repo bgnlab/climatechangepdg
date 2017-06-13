@@ -20,7 +20,7 @@
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="0" name="Call function" sid="228886068982522" type="Functions">
-                    <param id="0" name="Name">&quot;Transition In&quot;</param>
+                    <param id="0" name="Name">&quot;N6 Transition In&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
@@ -39,7 +39,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="446648195789756" type="Functions">
-                    <param id="0" name="Name">&quot;Transition To&quot;</param>
+                    <param id="0" name="Name">&quot;N6 Transition To&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;N6 Present View&quot;</param>
                 </action>
             </actions>

@@ -30,7 +30,7 @@
         <event-group description="" sid="477988417948673" title="M7 Heat Lock Person Behaviour">
             <sub-events>
                 <variable constant="1" name="M7_PERSONSPEED" sid="585863631350948" static="0" type="number">5</variable>
-                <event-group description="" sid="700672218353482" title="Heat Lock Person Spawning">
+                <event-group description="" sid="700672218353482" title="M7 Heat Lock Person Spawning">
                     <sub-events>
                         <event-block sid="695204180281465">
                             <conditions>
@@ -48,10 +48,10 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="444692670807075" title="Heat Lock Person Movement">
+                <event-group description="" sid="444692670807075" title="M7 Heat Lock Person Movement">
                     <sub-events>
-                        <variable constant="1" name="WAITTIMEMIN" sid="613549810525179" static="0" type="number">2</variable>
-                        <variable constant="1" name="WaitTimeMax" sid="426087903147023" static="0" type="number">10</variable>
+                        <variable constant="1" name="M7_WAITTIMEMIN" sid="613549810525179" static="0" type="number">2</variable>
+                        <variable constant="1" name="M7_WAITTIMEMAX" sid="426087903147023" static="0" type="number">10</variable>
                         <event-block sid="336021872179128">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="120223814381876" type="M7_HeatLockPerson">
@@ -135,7 +135,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="890305022044891" type="Function">
-                                            <param id="0" name="Name">&quot;Generate Path&quot;</param>
+                                            <param id="0" name="Name">&quot;M7 Generate Path&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
                                         <action id="-10" name="Set value" sid="819282974575447" type="M7_HeatLockPerson">
@@ -149,7 +149,7 @@
                         <event-block sid="186799551660957">
                             <conditions>
                                 <condition id="0" name="On function" sid="862728617815642" type="Function">
-                                    <param id="0" name="Name">&quot;Person Select Next State&quot;</param>
+                                    <param id="0" name="Name">&quot;M7 Person Select Next State&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -170,7 +170,7 @@
                                         </action>
                                         <action id="-10" name="Set value" sid="146302193027032" type="M7_HeatLockPerson">
                                             <param id="0" name="Instance variable">WaitingTimer</param>
-                                            <param id="1" name="Value">floor(random(WAITTIMEMIN, WAITTIMEMAX + 1))</param>
+                                            <param id="1" name="Value">floor(random(M7_WAITTIMEMIN, M7_WAITTIMEMAX + 1))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -190,7 +190,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="917615544399952" title="Heat Lock Person Pathfinding">
+                <event-group description="" sid="917615544399952" title="M7 Heat Lock Person Pathfinding">
                     <sub-events>
                         <variable constant="0" name="M7_Path" sid="779199900776871" static="0" type="text"></variable>
                         <variable constant="0" name="M7_Destination" sid="924721281698815" static="0" type="number">0</variable>
@@ -198,7 +198,7 @@
                         <event-block sid="829543956718511">
                             <conditions>
                                 <condition id="0" name="On function" sid="284524971819460" type="Function">
-                                    <param id="0" name="Name">&quot;Generate Path&quot;</param>
+                                    <param id="0" name="Name">&quot;M7 Generate Path&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -247,7 +247,7 @@
         </event-group>
         <event-group description="" sid="615369672928270" title="M7 Heat Lock Object Interactions">
             <sub-events>
-                <event-group description="" sid="545667328686850" title="Heat Lock Door">
+                <event-group description="" sid="545667328686850" title="M7 Heat Lock Door">
                     <sub-events>
                         <event-block sid="847028597215671">
                             <conditions>

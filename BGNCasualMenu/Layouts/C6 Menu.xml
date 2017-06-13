@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Menu</name>
+    <name>C6 Menu</name>
     <sid>463518992062826</sid>
-    <event-sheet>Menu</event-sheet>
+    <event-sheet>C6 Menu</event-sheet>
     <size>
         <width>1920</width>
         <height>1200</height>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Background" uid="0">
+                <instance type="C6_Background" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Animal1" uid="1">
+                <instance type="C6_Animal1" uid="1">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -95,7 +95,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Animal2" uid="29">
+                <instance type="C6_Animal2" uid="29">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -139,7 +139,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TitleName" uid="5">
+                <instance type="C6_TitleName" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -161,7 +161,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ButtonLevels" uid="6">
+                <instance type="C6_ButtonLevels" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -183,7 +183,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ButtonSettings" uid="7">
+                <instance type="C6_ButtonSettings" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -205,7 +205,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ButtonPlay" uid="31">
+                <instance type="C6_ButtonPlay" uid="31">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -246,7 +246,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Game0" uid="12">
+                <instance type="C6_Game0" uid="12">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -271,7 +271,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Game1" uid="14">
+                <instance type="C6_Game1" uid="14">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -296,7 +296,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Game2" uid="15">
+                <instance type="C6_Game2" uid="15">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -321,7 +321,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Game3" uid="16">
+                <instance type="C6_Game3" uid="16">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -346,7 +346,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Game4" uid="17">
+                <instance type="C6_Game4" uid="17">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -371,7 +371,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Game5" uid="18">
+                <instance type="C6_Game5" uid="18">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -396,7 +396,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Game6" uid="19">
+                <instance type="C6_Game6" uid="19">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -421,7 +421,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Game7" uid="20">
+                <instance type="C6_Game7" uid="20">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -446,7 +446,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Game8" uid="21">
+                <instance type="C6_Game8" uid="21">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -471,7 +471,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Game9" uid="22">
+                <instance type="C6_Game9" uid="22">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -496,7 +496,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Game10" uid="23">
+                <instance type="C6_Game10" uid="23">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -521,7 +521,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Game11" uid="24">
+                <instance type="C6_Game11" uid="24">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -565,7 +565,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TitleDifficulty" uid="25">
+                <instance type="C6_TitleDifficulty" uid="25">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -587,7 +587,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ButtonEasy" uid="26">
+                <instance type="C6_ButtonEasy" uid="26">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -609,7 +609,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ButtonMedium" uid="27">
+                <instance type="C6_ButtonMedium" uid="27">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -631,7 +631,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ButtonHard" uid="28">
+                <instance type="C6_ButtonHard" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -672,7 +672,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Sound" uid="10">
+                <instance type="C6_Sound" uid="10">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -694,7 +694,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TitleSettings" uid="11">
+                <instance type="C6_TitleSettings" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -735,7 +735,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ButtonBack" uid="9">
+                <instance type="C6_ButtonBack" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -762,7 +762,7 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="ScoreList" uid="2">
+        <instance type="C6_ScoreList" uid="2">
             <properties>
                 <width>0</width>
                 <height>0</height>

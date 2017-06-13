@@ -42,7 +42,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="680934378049213" type="Functions">
-                            <param id="0" name="Name">&quot;Transition In&quot;</param>
+                            <param id="0" name="Name">&quot;N6 Transition In&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-9" name="Set value" sid="822174715580317" type="System">
@@ -95,7 +95,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="920040200529562" type="Functions">
-                    <param id="0" name="Name">&quot;Transition To&quot;</param>
+                    <param id="0" name="Name">&quot;N6 Transition To&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;N6 Future View&quot;</param>
                 </action>
             </actions>
