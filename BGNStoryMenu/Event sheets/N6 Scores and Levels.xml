@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Scores and Levels</name>
+    <name>N6 Scores and Levels</name>
     <events>
-        <variable constant="0" name="Difficulty" sid="715831217080593" static="0" type="number">0</variable>
-        <event-group description="" sid="371915595218376" title="Initializing Scores">
+        <variable constant="0" name="N6_Difficulty" sid="715831217080593" static="0" type="number">0</variable>
+        <event-group description="" sid="371915595218376" title="N6 Initializing Scores">
             <sub-events>
                 <event-block sid="801300592729345">
                     <conditions>
@@ -15,10 +15,10 @@
                         <comment>Fill Array With Data</comment>
                         <event-block sid="133269948625717">
                             <conditions>
-                                <condition id="6" name="Is empty" sid="402029790893302" type="LevelList" />
+                                <condition id="6" name="Is empty" sid="402029790893302" type="N6_LevelList" />
                             </conditions>
                             <actions>
-                                <action id="1" name="Set size" sid="723004585372753" type="LevelList">
+                                <action id="1" name="Set size" sid="723004585372753" type="N6_LevelList">
                                     <param id="0" name="Width">4</param>
                                     <param id="1" name="Height">3</param>
                                     <param id="2" name="Depth">2</param>
@@ -34,19 +34,19 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set at XYZ" sid="209427928442559" type="LevelList">
+                                        <action id="4" name="Set at XYZ" sid="209427928442559" type="N6_LevelList">
                                             <param id="0" name="X">loopindex(&quot;Adding Every Level&quot;) / 3</param>
                                             <param id="1" name="Y">loopindex(&quot;Adding Every Level&quot;) % 3</param>
                                             <param id="2" name="Z">0</param>
                                             <param id="3" name="Value">&quot;NAME OF GAME&quot;</param>
                                         </action>
-                                        <action disabled="1" id="4" name="Set at XYZ" sid="234668299605071" type="LevelList">
+                                        <action disabled="1" id="4" name="Set at XYZ" sid="234668299605071" type="N6_LevelList">
                                             <param id="0" name="X">loopindex(&quot;Adding Every Level&quot;) / 3</param>
                                             <param id="1" name="Y">loopindex(&quot;Adding Every Level&quot;) % 3</param>
                                             <param id="2" name="Z">1</param>
                                             <param id="3" name="Value">&quot;Game&quot; &amp; loopindex(&quot;Adding Every Level&quot;)</param>
                                         </action>
-                                        <action id="4" name="Set at XYZ" sid="897528785392909" type="LevelList">
+                                        <action id="4" name="Set at XYZ" sid="897528785392909" type="N6_LevelList">
                                             <param id="0" name="X">loopindex(&quot;Adding Every Level&quot;) / 3</param>
                                             <param id="1" name="Y">loopindex(&quot;Adding Every Level&quot;) % 3</param>
                                             <param id="2" name="Z">1</param>
@@ -60,7 +60,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="539157703815967" title="Updating Scores">
+        <event-group description="" sid="539157703815967" title="N6 Updating Scores">
             <sub-events>
                 <event-block sid="423128902893197">
                     <conditions>
@@ -72,7 +72,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="439665435105822" title="Test Level Events">
+        <event-group description="" sid="439665435105822" title="N6 Test Level Events">
             <sub-events>
                 <event-block sid="614605387468004">
                     <conditions>
@@ -80,18 +80,15 @@
                         <condition id="-8" name="Compare two values" sid="489348671684235" type="System">
                             <param id="0" name="First value">LayoutName</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">&quot;Test Level&quot;</param>
+                            <param id="2" name="Second value">&quot;N6 Test Level&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="641791841204116" type="Text">
-                            <param id="0" name="Text">&quot;Difficulty: &quot; &amp; Difficulty</param>
-                        </action>
                         <action id="-16" name="Wait" sid="667881742636274" type="System">
                             <param id="0" name="Seconds">2.0</param>
                         </action>
                         <action id="-25" name="Go to layout (by name)" sid="641300327903080" type="System">
-                            <param id="0" name="Layout">&quot;Level Select&quot;</param>
+                            <param id="0" name="Layout">&quot;N6 Level Select&quot;</param>
                         </action>
                     </actions>
                 </event-block>

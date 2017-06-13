@@ -10,15 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Level Select</layout>
-        <layout order="8">Future View</layout>
-        <layout order="2">Present View</layout>
-        <layout order="4">Opening Cutscene</layout>
-        <event-sheet active="1" order="1">Level Select</event-sheet>
-        <event-sheet order="3">Scores and Levels</event-sheet>
-        <event-sheet order="5">Present View</event-sheet>
-        <event-sheet order="6">Future View</event-sheet>
-        <event-sheet order="7">Opening Cutscene</event-sheet>
+        <event-sheet order="0">N6 Level Select</event-sheet>
+        <event-sheet order="1">N6 Scores and Levels</event-sheet>
+        <event-sheet active="1" order="2">N6 Present View</event-sheet>
+        <event-sheet order="3">N6 Future View</event-sheet>
+        <event-sheet order="4">N6 Opening Cutscene</event-sheet>
+        <event-sheet order="5">N6 Map Transitions</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -29,13 +26,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="0" path="object-folder/Level Select/" />
+        <folder expanded="1" path="object-folder/Level Select/" />
         <folder expanded="1" path="object-folder/Level Select/Test Level/" />
         <folder expanded="1" path="object-folder/Maps/" />
-        <folder expanded="0" path="object-folder/Maps/Future/" />
+        <folder expanded="1" path="object-folder/Maps/Future/" />
         <folder expanded="1" path="object-folder/Maps/Present/" />
-        <folder expanded="0" path="object-folder/Maps/TimeTransition/" />
-        <folder expanded="0" path="object-folder/Opening Cutscene/" />
+        <folder expanded="1" path="object-folder/Maps/TimeTransition/" />
+        <folder expanded="1" path="object-folder/Opening Cutscene/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="layout-folder/Map/" />
         <folder expanded="1" path="event-folder/" />
@@ -44,22 +41,22 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/DifficultyEasy/" />
-        <folder expanded="1" path="animation-folder/BackButton/" />
-        <folder expanded="1" path="animation-folder/LevelIcon/" />
-        <folder expanded="1" path="animation-folder/ButtonEasy/" />
-        <folder expanded="1" path="animation-folder/ButtonMedium/" />
-        <folder expanded="1" path="animation-folder/ButtonHard/" />
-        <folder expanded="1" path="animation-folder/Smoke/" />
-        <folder expanded="1" path="animation-folder/DifficultyMedium/" />
-        <folder expanded="1" path="animation-folder/DifficultyHard/" />
-        <folder expanded="1" path="animation-folder/ToPresent/" />
-        <folder expanded="1" path="animation-folder/ToFuture/" />
-        <folder expanded="1" path="animation-folder/Region/" />
-        <folder expanded="1" path="animation-folder/TransitionCalendar/" />
-        <folder expanded="1" path="animation-folder/TransitionPane/" />
-        <folder expanded="1" path="animation-folder/Background/" />
-        <folder expanded="1" path="animation-folder/Thermometer/" />
-        <folder expanded="1" path="animation-folder/Calendar/" />
+        <folder expanded="1" path="animation-folder/N6_DifficultyEasy/" />
+        <folder expanded="1" path="animation-folder/N6_BackButton/" />
+        <folder expanded="1" path="animation-folder/N6_LevelIcon/" />
+        <folder expanded="1" path="animation-folder/N6_ButtonEasy/" />
+        <folder expanded="1" path="animation-folder/N6_ButtonMedium/" />
+        <folder expanded="1" path="animation-folder/N6_ButtonHard/" />
+        <folder expanded="1" path="animation-folder/N6_Smoke/" />
+        <folder expanded="1" path="animation-folder/N6_DifficultyMedium/" />
+        <folder expanded="1" path="animation-folder/N6_DifficultyHard/" />
+        <folder expanded="1" path="animation-folder/N6_ToPresent/" />
+        <folder expanded="1" path="animation-folder/N6_ToFuture/" />
+        <folder expanded="1" path="animation-folder/N6_Region/" />
+        <folder expanded="1" path="animation-folder/N6_TransitionCalendar/" />
+        <folder expanded="1" path="animation-folder/N6_TransitionPane/" />
+        <folder expanded="1" path="animation-folder/N6_Background/" />
+        <folder expanded="1" path="animation-folder/N6_Thermometer/" />
+        <folder expanded="1" path="animation-folder/N6_Calendar/" />
     </folders-expanded>
 </c2uistate>

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Map Transitions</name>
+    <name>N6 Map Transitions</name>
     <events>
-        <variable constant="0" name="TransitioningTo" sid="520972473325341" static="0" type="text"></variable>
-        <variable constant="0" name="Transitioning" sid="915198749025796" static="0" type="number">0</variable>
-        <variable constant="0" name="PreviousMapLayout" sid="778799209463554" static="0" type="text"></variable>
-        <variable constant="1" name="FADESPEED" sid="776207876012501" static="0" type="number">10</variable>
-        <event-group description="" sid="750800471681819" title="Transition In">
+        <variable constant="0" name="N6_TransitioningTo" sid="520972473325341" static="0" type="text"></variable>
+        <variable constant="0" name="N6_Transitioning" sid="915198749025796" static="0" type="number">0</variable>
+        <variable constant="0" name="N6_PreviousMapLayout" sid="778799209463554" static="0" type="text"></variable>
+        <variable constant="1" name="N6_FADESPEED" sid="776207876012501" static="0" type="number">10</variable>
+        <event-group description="" sid="750800471681819" title="N6 Transition In">
             <sub-events>
                 <event-block sid="601356733076445">
                     <conditions>
@@ -17,7 +17,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="867565816764202" type="System">
-                            <param id="0" name="Variable">Transitioning</param>
+                            <param id="0" name="Variable">N6_Transitioning</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-18" name="Set layer opacity" sid="395351595061058" type="System">
@@ -33,7 +33,7 @@
                 <event-block sid="132797678072465">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="919494743434937" type="System">
-                            <param id="0" name="Variable">Transitioning</param>
+                            <param id="0" name="Variable">N6_Transitioning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -54,7 +54,7 @@
                                 </action>
                                 <action id="-18" name="Set layer opacity" sid="149537175420019" type="System">
                                     <param id="0" name="Layer">&quot;Transition&quot;</param>
-                                    <param id="1" name="Opacity">LayerOpacity(&quot;Transition&quot;) - FADESPEED</param>
+                                    <param id="1" name="Opacity">LayerOpacity(&quot;Transition&quot;) - N6_FADESPEED</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -72,7 +72,7 @@
                                     <param id="1" name="Visibility">0</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="894897711603261" type="System">
-                                    <param id="0" name="Variable">Transitioning</param>
+                                    <param id="0" name="Variable">N6_Transitioning</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
@@ -81,7 +81,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="684701359678916" title="Transition To">
+        <event-group description="" sid="684701359678916" title="N6 Transition To">
             <sub-events>
                 <event-block sid="535992503160648">
                     <conditions>
@@ -91,7 +91,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="291242707559911" type="System">
-                            <param id="0" name="Variable">Transitioning</param>
+                            <param id="0" name="Variable">N6_Transitioning</param>
                             <param id="1" name="Value">-1</param>
                         </action>
                         <action id="-18" name="Set layer opacity" sid="959929381804129" type="System">
@@ -103,7 +103,7 @@
                             <param id="1" name="Visibility">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="554094330499717" type="System">
-                            <param id="0" name="Variable">TransitioningTo</param>
+                            <param id="0" name="Variable">N6_TransitioningTo</param>
                             <param id="1" name="Value">Functions.Param(0)</param>
                         </action>
                     </actions>
@@ -111,7 +111,7 @@
                 <event-block sid="139613820371156">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="493906799529687" type="System">
-                            <param id="0" name="Variable">Transitioning</param>
+                            <param id="0" name="Variable">N6_Transitioning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">-1</param>
                         </condition>
@@ -129,7 +129,7 @@
                             <actions>
                                 <action id="-18" name="Set layer opacity" sid="695264096007419" type="System">
                                     <param id="0" name="Layer">&quot;Transition&quot;</param>
-                                    <param id="1" name="Opacity">LayerOpacity(&quot;Transition&quot;) + FADESPEED</param>
+                                    <param id="1" name="Opacity">LayerOpacity(&quot;Transition&quot;) + N6_FADESPEED</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -147,15 +147,15 @@
                                     <param id="0" name="Seconds">0.5</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="402030283663226" type="System">
-                                    <param id="0" name="Variable">PreviousMapLayout</param>
+                                    <param id="0" name="Variable">N6_PreviousMapLayout</param>
                                     <param id="1" name="Value">LayoutName</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="291851740543386" type="System">
-                                    <param id="0" name="Variable">Transitioning</param>
+                                    <param id="0" name="Variable">N6_Transitioning</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-25" name="Go to layout (by name)" sid="123862553236027" type="System">
-                                    <param id="0" name="Layout">TransitioningTo</param>
+                                    <param id="0" name="Layout">N6_TransitioningTo</param>
                                 </action>
                             </actions>
                         </event-block>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Level Select</name>
+    <name>N6 Level Select</name>
     <sid>309838753351610</sid>
-    <event-sheet>Level Select</event-sheet>
+    <event-sheet>N6 Level Select</event-sheet>
     <size>
         <width>1920</width>
         <height>1200</height>
@@ -47,7 +47,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ButtonEasy" uid="28">
+                <instance type="N6_ButtonEasy" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -72,7 +72,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DifficultyEasy" uid="16">
+                <instance type="N6_DifficultyEasy" uid="16">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -94,7 +94,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ButtonMedium" uid="30">
+                <instance type="N6_ButtonMedium" uid="30">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -119,7 +119,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ButtonHard" uid="31">
+                <instance type="N6_ButtonHard" uid="31">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -144,7 +144,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BackButton" uid="14">
+                <instance type="N6_BackButton" uid="14">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -166,7 +166,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LevelIcon" uid="2">
+                <instance type="N6_LevelIcon" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -194,7 +194,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DifficultyMedium" uid="27">
+                <instance type="N6_DifficultyMedium" uid="27">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -216,7 +216,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DifficultyHard" uid="32">
+                <instance type="N6_DifficultyHard" uid="32">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -238,7 +238,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Smoke" uid="29">
+                <instance type="N6_Smoke" uid="29">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
     </used-behaviors>
     <used-effects />
@@ -46,7 +47,7 @@
     <object-folder>
         <object-folder name="Heat Lock">
             <object-folder name="Rooms">
-                <object-type name="HeatLockRoom1" sid="438011665256193">
+                <object-type name="M7_HeatLockRoom1" sid="438011665256193">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="514896486919709" speed="5">
@@ -57,13 +58,8 @@
             </object-folder>
             <object-folder name="Thermostat" />
             <object-folder name="People">
-                <object-type name="HeatLockPerson1" sid="782667874044863">
+                <object-type name="M7_HeatLockPerson1" sid="782667874044863">
                     <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="CustomMovement" sid="482139370153258">
-                            <behavior id="custom" />
-                        </behavior-type>
-                    </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128897965129236" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -72,7 +68,7 @@
                 </object-type>
             </object-folder>
             <object-folder name="Objects">
-                <object-type name="HeatLockDoor1" sid="469095090500073">
+                <object-type name="M7_HeatLockDoor1" sid="469095090500073">
                     <plugin id="Sprite" />
                     <instance-variables>
                         <instance-variable name="Variable1" sid="261590270807110" type="number" />
@@ -81,27 +77,10 @@
                         <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="925718958811300" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
-                        <animation framecount="1" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="785825980949319" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="HeatLockDoor2" sid="906093217020349">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable name="Variable1" sid="482272473483834" type="number" />
-                    </instance-variables>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="429521409896325" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                        <animation framecount="1" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="216529583374180" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
                     </animation-folder>
                 </object-type>
             </object-folder>
-            <object-type name="HeatLockBackground" sid="418638116969609">
+            <object-type name="M7_HeatLockBackground" sid="418638116969609">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="669709305731673" speed="5">
@@ -118,10 +97,9 @@
         </object-type>
     </object-folder>
     <families>
-        <family name="HeatLockDoor" plugin-id="Sprite" sid="715437670202484">
+        <family name="M7_HeatLockDoor" plugin-id="Sprite" sid="715437670202484">
             <members>
-                <member>HeatLockDoor1</member>
-                <member>HeatLockDoor2</member>
+                <member>M7_HeatLockDoor1</member>
             </members>
             <instance-variables>
                 <instance-variable name="Open" sid="983191241668898" type="number" />
@@ -129,32 +107,41 @@
                 <instance-variable name="Room2" sid="545423970902961" type="string" />
             </instance-variables>
         </family>
-        <family name="HeatLockPerson" plugin-id="Sprite" sid="345353932365871">
+        <family name="M7_HeatLockPerson" plugin-id="Sprite" sid="345353932365871">
             <members>
-                <member>HeatLockPerson1</member>
+                <member>M7_HeatLockPerson1</member>
             </members>
             <instance-variables>
                 <instance-variable name="Path" sid="834682967284929" type="string" />
-                <instance-variable name="Current" sid="490275528206420" type="string" />
-                <instance-variable name="Action" sid="289779094673686" type="string" />
+                <instance-variable name="Current" sid="448783281423883" type="number" />
+                <instance-variable name="State" sid="289779094673686" type="string" />
                 <instance-variable name="WaitingTimer" sid="230040533824705" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="934153940385614">
+                    <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Pathfinding" sid="939688625409795">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
         </family>
-        <family name="HeatLockRoom" plugin-id="Sprite" sid="860093973876421">
+        <family name="M7_HeatLockRoom" plugin-id="Sprite" sid="860093973876421">
             <members>
-                <member>HeatLockRoom1</member>
+                <member>M7_HeatLockRoom1</member>
             </members>
             <instance-variables>
                 <instance-variable name="Temperature" sid="558775973770712" type="number" />
                 <instance-variable name="OldTemperature" sid="248951232695566" type="number" />
+                <instance-variable name="RoomNumber" sid="741596147932318" type="number" />
             </instance-variables>
         </family>
     </families>
     <layout-folder>
-        <layout>Heat Lock.xml</layout>
+        <layout>M7_HeatLock.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Heat Lock.xml</event-sheet>
+        <event-sheet>M7_HeatLock.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="4">

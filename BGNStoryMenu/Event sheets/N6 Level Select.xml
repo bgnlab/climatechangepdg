@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Level Select</name>
+    <name>N6 Level Select</name>
     <events>
-        <include>Scores and Levels</include>
-        <variable constant="0" name="Region" sid="165429645144269" static="0" type="number">0</variable>
-        <event-group description="" sid="370635687356346" title="Drawing and Generating Levels">
+        <include>N6 Scores and Levels</include>
+        <variable constant="0" name="N6_Region" sid="165429645144269" static="0" type="number">0</variable>
+        <event-group description="" sid="370635687356346" title="N6 Drawing and Generating Levels">
             <sub-events>
                 <comment>Dynamically Draw Levels</comment>
                 <event-block sid="167712343179998">
@@ -28,9 +28,9 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <variable constant="1" name="HORIZONTAL_MARGIN" sid="154503713273544" static="0" type="number">600</variable>
-                        <variable constant="1" name="VERTICAL_MARGIN" sid="879893979226388" static="0" type="number">-350</variable>
-                        <variable constant="1" name="BUTTON_SPACING" sid="173403532832416" static="0" type="number">200</variable>
+                        <variable constant="1" name="N6_HORIZONTAL_MARGIN" sid="154503713273544" static="0" type="number">600</variable>
+                        <variable constant="1" name="N6_VERTICAL_MARGIN" sid="879893979226388" static="0" type="number">-350</variable>
+                        <variable constant="1" name="N6_BUTTON_SPACING" sid="173403532832416" static="0" type="number">200</variable>
                         <event-block sid="958268509117944">
                             <conditions>
                                 <condition id="-10" name="For" sid="652076057450146" type="System">
@@ -41,60 +41,60 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="309540054063816" type="System">
-                                    <param id="0" name="Object to create">LevelIcon</param>
+                                    <param id="0" name="Object to create">N6_LevelIcon</param>
                                     <param id="1" name="Layer">&quot;UI&quot;</param>
-                                    <param id="2" name="X">LayoutWidth / 2 + HORIZONTAL_MARGIN * (loopindex(&quot;Level Icon Generation&quot;) - 1)</param>
-                                    <param id="3" name="Y">LayoutHeight / 2 - VERTICAL_MARGIN</param>
+                                    <param id="2" name="X">LayoutWidth / 2 + N6_HORIZONTAL_MARGIN * (loopindex(&quot;Level Icon Generation&quot;) - 1)</param>
+                                    <param id="3" name="Y">LayoutHeight / 2 - N6_VERTICAL_MARGIN</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="826258879193309" type="LevelIcon">
-                                    <param id="0" name="Animation">LevelList.At(Region, loopindex(&quot;Level Icon Generation&quot;), 1)</param>
+                                <action id="4" name="Set animation" sid="826258879193309" type="N6_LevelIcon">
+                                    <param id="0" name="Animation">N6_LevelList.At(N6_Region, loopindex(&quot;Level Icon Generation&quot;), 1)</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="712767244044936" type="LevelIcon">
+                                <action id="-10" name="Set value" sid="712767244044936" type="N6_LevelIcon">
                                     <param id="0" name="Instance variable">LevelLayout</param>
-                                    <param id="1" name="Value">LevelList.At(Region, loopindex(&quot;Level Icon Generation&quot;), 1)</param>
+                                    <param id="1" name="Value">N6_LevelList.At(N6_Region, loopindex(&quot;Level Icon Generation&quot;), 1)</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="983426733493903" type="LevelIcon">
+                                <action id="-10" name="Set value" sid="983426733493903" type="N6_LevelIcon">
                                     <param id="0" name="Instance variable">LevelName</param>
-                                    <param id="1" name="Value">LevelList.At(Region, loopindex(&quot;Level Icon Generation&quot;), 0)</param>
+                                    <param id="1" name="Value">N6_LevelList.At(N6_Region, loopindex(&quot;Level Icon Generation&quot;), 0)</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="741198759997176" type="LevelIcon">
+                                <action id="-10" name="Set value" sid="741198759997176" type="N6_LevelIcon">
                                     <param id="0" name="Instance variable">LevelNumber</param>
-                                    <param id="1" name="Value">Region * 3 + loopindex(&quot;Level Icon Generation&quot;)</param>
+                                    <param id="1" name="Value">N6_Region * 3 + loopindex(&quot;Level Icon Generation&quot;)</param>
                                 </action>
-                                <action id="-24" name="Move to top" sid="499500011534535" type="Smoke" />
+                                <action id="-24" name="Move to top" sid="499500011534535" type="N6_Smoke" />
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="704735706568926" title="Selecting and Loading Level">
+        <event-group description="" sid="704735706568926" title="N6 Selecting and Loading Level">
             <sub-events>
                 <event-block sid="180918359325551">
                     <conditions>
                         <condition id="17" name="On tap object" sid="662590084977601" type="Touch">
-                            <param id="0" name="Object">ButtonEasy</param>
+                            <param id="0" name="Object">N6_ButtonEasy</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="718819399996039" type="System">
-                            <param id="0" name="Variable">Difficulty</param>
+                            <param id="0" name="Variable">N6_Difficulty</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-25" name="Go to layout (by name)" sid="209961119755825" type="System">
-                            <param id="0" name="Layout">LevelIcon.LevelLayout</param>
+                            <param id="0" name="Layout">N6_LevelIcon.LevelLayout</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="303378091014242">
                     <conditions>
                         <condition id="17" name="On tap object" sid="125611416418601" type="Touch">
-                            <param id="0" name="Object">ButtonMedium</param>
+                            <param id="0" name="Object">N6_ButtonMedium</param>
                         </condition>
-                        <condition id="2" name="Compare at XYZ" sid="187659674476401" type="LevelList">
-                            <param id="0" name="X">Region</param>
-                            <param id="1" name="Y">LevelIcon.LevelNumber % 3</param>
+                        <condition id="2" name="Compare at XYZ" sid="187659674476401" type="N6_LevelList">
+                            <param id="0" name="X">N6_Region</param>
+                            <param id="1" name="Y">N6_LevelIcon.LevelNumber % 3</param>
                             <param id="2" name="Z">0</param>
                             <param id="3" name="Comparison">4</param>
                             <param id="4" name="Value">0</param>
@@ -102,22 +102,22 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="913570804430322" type="System">
-                            <param id="0" name="Variable">Difficulty</param>
+                            <param id="0" name="Variable">N6_Difficulty</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-25" name="Go to layout (by name)" sid="836936477022465" type="System">
-                            <param id="0" name="Layout">LevelIcon.LevelLayout</param>
+                            <param id="0" name="Layout">N6_LevelIcon.LevelLayout</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="507610679092877">
                     <conditions>
                         <condition id="17" name="On tap object" sid="322154566914164" type="Touch">
-                            <param id="0" name="Object">ButtonHard</param>
+                            <param id="0" name="Object">N6_ButtonHard</param>
                         </condition>
-                        <condition id="2" name="Compare at XYZ" sid="759205763058273" type="LevelList">
-                            <param id="0" name="X">Region</param>
-                            <param id="1" name="Y">LevelIcon.LevelNumber % 3</param>
+                        <condition id="2" name="Compare at XYZ" sid="759205763058273" type="N6_LevelList">
+                            <param id="0" name="X">N6_Region</param>
+                            <param id="1" name="Y">N6_LevelIcon.LevelNumber % 3</param>
                             <param id="2" name="Z">1</param>
                             <param id="3" name="Comparison">4</param>
                             <param id="4" name="Value">0</param>
@@ -125,11 +125,11 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="632258517298310" type="System">
-                            <param id="0" name="Variable">Difficulty</param>
+                            <param id="0" name="Variable">N6_Difficulty</param>
                             <param id="1" name="Value">2</param>
                         </action>
                         <action id="-25" name="Go to layout (by name)" sid="892800112988404" type="System">
-                            <param id="0" name="Layout">LevelIcon.LevelLayout</param>
+                            <param id="0" name="Layout">N6_LevelIcon.LevelLayout</param>
                         </action>
                     </actions>
                 </event-block>
@@ -139,12 +139,12 @@
         <event-block sid="684439861590293">
             <conditions>
                 <condition id="4" name="Is touching object" sid="413546821428315" type="Touch">
-                    <param id="0" name="Object">BackButton</param>
+                    <param id="0" name="Object">N6_BackButton</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-25" name="Go to layout (by name)" sid="735524774447119" type="System">
-                    <param id="0" name="Layout">&quot;Present View&quot;</param>
+                    <param id="0" name="Layout">&quot;N6 Present View&quot;</param>
                 </action>
             </actions>
         </event-block>

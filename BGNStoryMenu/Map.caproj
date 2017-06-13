@@ -50,25 +50,21 @@
     </configuration-settings>
     <object-folder>
         <object-folder name="Level Select">
-            <object-folder name="Test Level">
-                <object-type name="Text" sid="837352552104246">
-                    <plugin id="Text" />
-                </object-type>
-            </object-folder>
-            <object-type global="1" name="LevelList" sid="192622887803944">
+            <object-folder name="Test Level" />
+            <object-type global="1" name="N6_LevelList" sid="192622887803944">
                 <plugin id="Arr" />
             </object-type>
-            <object-type name="DifficultyEasy" sid="225370658738281">
+            <object-type name="N6_DifficultyEasy" sid="225370658738281">
                 <plugin id="Sprite" />
                 <container>
-                    <type>LevelIcon</type>
-                    <type>Smoke</type>
-                    <type>ButtonEasy</type>
-                    <type>ButtonHard</type>
-                    <type>ButtonMedium</type>
-                    <type>DifficultyEasy</type>
-                    <type>DifficultyHard</type>
-                    <type>DifficultyMedium</type>
+                    <type>N6_LevelIcon</type>
+                    <type>N6_Smoke</type>
+                    <type>N6_ButtonEasy</type>
+                    <type>N6_ButtonHard</type>
+                    <type>N6_ButtonMedium</type>
+                    <type>N6_DifficultyEasy</type>
+                    <type>N6_DifficultyHard</type>
+                    <type>N6_DifficultyMedium</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="388477447517146" speed="5">
@@ -86,7 +82,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="BackButton" sid="806517370716048">
+            <object-type name="N6_BackButton" sid="806517370716048">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="721027343336515" speed="5">
@@ -94,7 +90,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="LevelIcon" sid="571171162810259">
+            <object-type name="N6_LevelIcon" sid="571171162810259">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="LevelName" sid="791905900003245" type="string" />
@@ -103,14 +99,14 @@
                     <instance-variable name="LevelNumber" sid="956659348454451" type="number" />
                 </instance-variables>
                 <container>
-                    <type>LevelIcon</type>
-                    <type>Smoke</type>
-                    <type>ButtonEasy</type>
-                    <type>ButtonHard</type>
-                    <type>ButtonMedium</type>
-                    <type>DifficultyEasy</type>
-                    <type>DifficultyHard</type>
-                    <type>DifficultyMedium</type>
+                    <type>N6_LevelIcon</type>
+                    <type>N6_Smoke</type>
+                    <type>N6_ButtonEasy</type>
+                    <type>N6_ButtonHard</type>
+                    <type>N6_ButtonMedium</type>
+                    <type>N6_DifficultyEasy</type>
+                    <type>N6_DifficultyHard</type>
+                    <type>N6_DifficultyMedium</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Game0" pingpong="0" repeatcount="1" repeatto="0" sid="237619522933131" speed="5">
@@ -151,20 +147,20 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="ButtonEasy" sid="200987174369259">
+            <object-type name="N6_ButtonEasy" sid="200987174369259">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Difficulty" sid="758302738408204" type="number" />
                 </instance-variables>
                 <container>
-                    <type>LevelIcon</type>
-                    <type>Smoke</type>
-                    <type>ButtonEasy</type>
-                    <type>ButtonHard</type>
-                    <type>ButtonMedium</type>
-                    <type>DifficultyEasy</type>
-                    <type>DifficultyHard</type>
-                    <type>DifficultyMedium</type>
+                    <type>N6_LevelIcon</type>
+                    <type>N6_Smoke</type>
+                    <type>N6_ButtonEasy</type>
+                    <type>N6_ButtonHard</type>
+                    <type>N6_ButtonMedium</type>
+                    <type>N6_DifficultyEasy</type>
+                    <type>N6_DifficultyHard</type>
+                    <type>N6_DifficultyMedium</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890865317384527" speed="5">
@@ -172,20 +168,20 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="ButtonMedium" sid="399971925655827">
+            <object-type name="N6_ButtonMedium" sid="399971925655827">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Difficulty" sid="112986969849225" type="number" />
                 </instance-variables>
                 <container>
-                    <type>LevelIcon</type>
-                    <type>Smoke</type>
-                    <type>ButtonEasy</type>
-                    <type>ButtonHard</type>
-                    <type>ButtonMedium</type>
-                    <type>DifficultyEasy</type>
-                    <type>DifficultyHard</type>
-                    <type>DifficultyMedium</type>
+                    <type>N6_LevelIcon</type>
+                    <type>N6_Smoke</type>
+                    <type>N6_ButtonEasy</type>
+                    <type>N6_ButtonHard</type>
+                    <type>N6_ButtonMedium</type>
+                    <type>N6_DifficultyEasy</type>
+                    <type>N6_DifficultyHard</type>
+                    <type>N6_DifficultyMedium</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759530739354393" speed="5">
@@ -193,20 +189,20 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="ButtonHard" sid="759363995905631">
+            <object-type name="N6_ButtonHard" sid="759363995905631">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Difficulty" sid="209775385054272" type="number" />
                 </instance-variables>
                 <container>
-                    <type>LevelIcon</type>
-                    <type>Smoke</type>
-                    <type>ButtonEasy</type>
-                    <type>ButtonHard</type>
-                    <type>ButtonMedium</type>
-                    <type>DifficultyEasy</type>
-                    <type>DifficultyHard</type>
-                    <type>DifficultyMedium</type>
+                    <type>N6_LevelIcon</type>
+                    <type>N6_Smoke</type>
+                    <type>N6_ButtonEasy</type>
+                    <type>N6_ButtonHard</type>
+                    <type>N6_ButtonMedium</type>
+                    <type>N6_DifficultyEasy</type>
+                    <type>N6_DifficultyHard</type>
+                    <type>N6_DifficultyMedium</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="874499847074822" speed="5">
@@ -214,17 +210,17 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Smoke" sid="318660281626901">
+            <object-type name="N6_Smoke" sid="318660281626901">
                 <plugin id="Sprite" />
                 <container>
-                    <type>LevelIcon</type>
-                    <type>Smoke</type>
-                    <type>ButtonEasy</type>
-                    <type>ButtonHard</type>
-                    <type>ButtonMedium</type>
-                    <type>DifficultyEasy</type>
-                    <type>DifficultyHard</type>
-                    <type>DifficultyMedium</type>
+                    <type>N6_LevelIcon</type>
+                    <type>N6_Smoke</type>
+                    <type>N6_ButtonEasy</type>
+                    <type>N6_ButtonHard</type>
+                    <type>N6_ButtonMedium</type>
+                    <type>N6_DifficultyEasy</type>
+                    <type>N6_DifficultyHard</type>
+                    <type>N6_DifficultyMedium</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Easy" pingpong="0" repeatcount="1" repeatto="0" sid="369400945620949" speed="5">
@@ -238,17 +234,17 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="DifficultyMedium" sid="612201176159822">
+            <object-type name="N6_DifficultyMedium" sid="612201176159822">
                 <plugin id="Sprite" />
                 <container>
-                    <type>LevelIcon</type>
-                    <type>Smoke</type>
-                    <type>ButtonEasy</type>
-                    <type>ButtonHard</type>
-                    <type>ButtonMedium</type>
-                    <type>DifficultyEasy</type>
-                    <type>DifficultyHard</type>
-                    <type>DifficultyMedium</type>
+                    <type>N6_LevelIcon</type>
+                    <type>N6_Smoke</type>
+                    <type>N6_ButtonEasy</type>
+                    <type>N6_ButtonHard</type>
+                    <type>N6_ButtonMedium</type>
+                    <type>N6_DifficultyEasy</type>
+                    <type>N6_DifficultyHard</type>
+                    <type>N6_DifficultyMedium</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="475441509716445" speed="5">
@@ -266,17 +262,17 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="DifficultyHard" sid="728799686366006">
+            <object-type name="N6_DifficultyHard" sid="728799686366006">
                 <plugin id="Sprite" />
                 <container>
-                    <type>LevelIcon</type>
-                    <type>Smoke</type>
-                    <type>ButtonEasy</type>
-                    <type>ButtonHard</type>
-                    <type>ButtonMedium</type>
-                    <type>DifficultyEasy</type>
-                    <type>DifficultyHard</type>
-                    <type>DifficultyMedium</type>
+                    <type>N6_LevelIcon</type>
+                    <type>N6_Smoke</type>
+                    <type>N6_ButtonEasy</type>
+                    <type>N6_ButtonHard</type>
+                    <type>N6_ButtonMedium</type>
+                    <type>N6_DifficultyEasy</type>
+                    <type>N6_DifficultyHard</type>
+                    <type>N6_DifficultyMedium</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="860365787667471" speed="5">
@@ -297,7 +293,7 @@
         </object-folder>
         <object-folder name="Maps">
             <object-folder name="Future">
-                <object-type name="ToPresent" sid="359249940750185">
+                <object-type name="N6_ToPresent" sid="359249940750185">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="812469399379617" speed="5">
@@ -307,7 +303,7 @@
                 </object-type>
             </object-folder>
             <object-folder name="Present">
-                <object-type name="ToFuture" sid="142781596255546">
+                <object-type name="N6_ToFuture" sid="142781596255546">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="908969582072030" speed="5">
@@ -315,7 +311,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Region" sid="172619480916489">
+                <object-type name="N6_Region" sid="172619480916489">
                     <plugin id="Sprite" />
                     <instance-variables>
                         <instance-variable name="RegionNumber" sid="993897462290827" type="number" />
@@ -329,17 +325,17 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="TempIncrement" sid="761347235231717">
+                <object-type name="N6_TempIncrement" sid="761347235231717">
                     <plugin id="Button" />
                 </object-type>
             </object-folder>
             <object-folder name="TimeTransition">
-                <object-type name="TransitionCalendar" sid="568433220671061">
+                <object-type name="N6_TransitionCalendar" sid="568433220671061">
                     <plugin id="Sprite" />
                     <container>
-                        <type>TransitionPane</type>
-                        <type>TransitionCalendar</type>
-                        <type>TransitionYear</type>
+                        <type>N6_TransitionPane</type>
+                        <type>N6_TransitionCalendar</type>
+                        <type>N6_TransitionYear</type>
                     </container>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="649981966407716" speed="5">
@@ -347,12 +343,12 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="TransitionPane" sid="159675535452635">
+                <object-type name="N6_TransitionPane" sid="159675535452635">
                     <plugin id="Sprite" />
                     <container>
-                        <type>TransitionPane</type>
-                        <type>TransitionCalendar</type>
-                        <type>TransitionYear</type>
+                        <type>N6_TransitionPane</type>
+                        <type>N6_TransitionCalendar</type>
+                        <type>N6_TransitionYear</type>
                     </container>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="256091124874760" speed="5">
@@ -360,16 +356,16 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="TransitionYear" sid="446034824435545">
+                <object-type name="N6_TransitionYear" sid="446034824435545">
                     <plugin id="Text" />
                     <container>
-                        <type>TransitionPane</type>
-                        <type>TransitionCalendar</type>
-                        <type>TransitionYear</type>
+                        <type>N6_TransitionPane</type>
+                        <type>N6_TransitionCalendar</type>
+                        <type>N6_TransitionYear</type>
                     </container>
                 </object-type>
             </object-folder>
-            <object-type name="Background" sid="532587382221566">
+            <object-type name="N6_Background" sid="532587382221566">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="1C" pingpong="0" repeatcount="1" repeatto="0" sid="250851931494756" speed="5">
@@ -392,7 +388,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Thermometer" sid="109642287589657">
+            <object-type name="N6_Thermometer" sid="109642287589657">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="1C" pingpong="0" repeatcount="1" repeatto="0" sid="805681667362982" speed="5">
@@ -469,11 +465,11 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Calendar" sid="602535998501778">
+            <object-type name="N6_Calendar" sid="602535998501778">
                 <plugin id="Sprite" />
                 <container>
-                    <type>Calendar</type>
-                    <type>Year</type>
+                    <type>N6_Calendar</type>
+                    <type>N6_Year</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="155240767714589" speed="5">
@@ -481,16 +477,16 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Year" sid="675197188356856">
+            <object-type name="N6_Year" sid="675197188356856">
                 <plugin id="Text" />
                 <container>
-                    <type>Calendar</type>
-                    <type>Year</type>
+                    <type>N6_Calendar</type>
+                    <type>N6_Year</type>
                 </container>
             </object-type>
         </object-folder>
         <object-folder name="Opening Cutscene">
-            <object-type name="OpeningCutsceneText" sid="623333834607106">
+            <object-type name="N6_OpeningCutsceneText" sid="623333834607106">
                 <plugin id="Text" />
                 <behaviors>
                     <behavior-type name="Fade" sid="686751619442141">
@@ -509,21 +505,21 @@
     <families />
     <layout-folder>
         <layout-folder name="Map">
-            <layout>Present View.xml</layout>
-            <layout>Future View.xml</layout>
-            <layout>Level Select.xml</layout>
-            <layout>Opening Cutscene.xml</layout>
-            <layout>Test Level.xml</layout>
+            <layout>N6 Present View.xml</layout>
+            <layout>N6 Future View.xml</layout>
+            <layout>N6 Level Select.xml</layout>
+            <layout>N6 Opening Cutscene.xml</layout>
+            <layout>N6 Test Level.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
         <event-folder name="Map">
-            <event-sheet>Future View.xml</event-sheet>
-            <event-sheet>Level Select.xml</event-sheet>
-            <event-sheet>Opening Cutscene.xml</event-sheet>
-            <event-sheet>Present View.xml</event-sheet>
-            <event-sheet>Scores and Levels.xml</event-sheet>
-            <event-sheet>Map Transitions.xml</event-sheet>
+            <event-sheet>N6 Future View.xml</event-sheet>
+            <event-sheet>N6 Level Select.xml</event-sheet>
+            <event-sheet>N6 Opening Cutscene.xml</event-sheet>
+            <event-sheet>N6 Present View.xml</event-sheet>
+            <event-sheet>N6 Scores and Levels.xml</event-sheet>
+            <event-sheet>N6 Map Transitions.xml</event-sheet>
         </event-folder>
     </event-folder>
     <global-instances>
