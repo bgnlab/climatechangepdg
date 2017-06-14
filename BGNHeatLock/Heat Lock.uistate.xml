@@ -22,7 +22,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1">
         <family expanded="0" name="M7_Door" />
         <family expanded="1" name="M7_Person" />
-        <family expanded="0" name="M7_Room" />
+        <family expanded="1" name="M7_Room" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -37,13 +37,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/M7_HeatLockRoom0/" />
         <folder expanded="1" path="animation-folder/M7_HeatLockRoom1/" />
         <folder expanded="1" path="animation-folder/M7_HeatLockRoom2/" />
         <folder expanded="1" path="animation-folder/M7_HeatLockRoom3/" />
         <folder expanded="1" path="animation-folder/M7_HeatLockRoom4/" />
         <folder expanded="1" path="animation-folder/M7_HeatLockRoom5/" />
         <folder expanded="1" path="animation-folder/M7_HeatLockRoom6/" />
-        <folder expanded="1" path="animation-folder/M7_HeatLockRoom7/" />
         <folder expanded="1" path="animation-folder/M7_HeatLockPerson1/" />
         <folder expanded="1" path="animation-folder/M7_HeatLockDoor1/" />
         <folder expanded="1" path="animation-folder/M7_HeatLockBackground/" />

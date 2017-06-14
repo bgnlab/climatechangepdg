@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="M7_HeatLockRoom1" uid="3">
+                <instance type="M7_HeatLockRoom0" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -80,7 +80,10 @@
                     <instance-variables>
                         <Temperature>1</Temperature>
                         <OldTemperature>1</OldTemperature>
-                        <RoomNumber>0</RoomNumber>
+                        <Connection0>B</Connection0>
+                        <Connection1></Connection1>
+                        <Connection2></Connection2>
+                        <ID>A</ID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -97,7 +100,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="M7_HeatLockRoom2" uid="6">
+                <instance type="M7_HeatLockRoom1" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -107,7 +110,10 @@
                     <instance-variables>
                         <Temperature>1</Temperature>
                         <OldTemperature>1</OldTemperature>
-                        <RoomNumber>1</RoomNumber>
+                        <Connection0>A</Connection0>
+                        <Connection1>C</Connection1>
+                        <Connection2></Connection2>
+                        <ID>B</ID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -124,7 +130,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="M7_HeatLockRoom3" uid="7">
+                <instance type="M7_HeatLockRoom2" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -134,7 +140,10 @@
                     <instance-variables>
                         <Temperature>1</Temperature>
                         <OldTemperature>1</OldTemperature>
-                        <RoomNumber>2</RoomNumber>
+                        <Connection0>B</Connection0>
+                        <Connection1>F</Connection1>
+                        <Connection2></Connection2>
+                        <ID>C</ID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -151,7 +160,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="M7_HeatLockRoom4" uid="8">
+                <instance type="M7_HeatLockRoom3" uid="8">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -161,7 +170,10 @@
                     <instance-variables>
                         <Temperature>1</Temperature>
                         <OldTemperature>1</OldTemperature>
-                        <RoomNumber>3</RoomNumber>
+                        <Connection0>E</Connection0>
+                        <Connection1></Connection1>
+                        <Connection2></Connection2>
+                        <ID>D</ID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -178,7 +190,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="M7_HeatLockRoom5" uid="9">
+                <instance type="M7_HeatLockRoom4" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -188,7 +200,10 @@
                     <instance-variables>
                         <Temperature>1</Temperature>
                         <OldTemperature>1</OldTemperature>
-                        <RoomNumber>4</RoomNumber>
+                        <Connection0>D</Connection0>
+                        <Connection1>F</Connection1>
+                        <Connection2></Connection2>
+                        <ID>E</ID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -205,7 +220,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="M7_HeatLockRoom6" uid="10">
+                <instance type="M7_HeatLockRoom5" uid="10">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -215,13 +230,16 @@
                     <instance-variables>
                         <Temperature>1</Temperature>
                         <OldTemperature>1</OldTemperature>
-                        <RoomNumber>5</RoomNumber>
+                        <Connection0>C</Connection0>
+                        <Connection1>E</Connection1>
+                        <Connection2>G</Connection2>
+                        <ID>F</ID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1468</x>
-                        <y>1077</y>
+                        <x>1463</x>
+                        <y>1079</y>
                         <z>0</z>
                         <width>222</width>
                         <height>328</height>
@@ -232,7 +250,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="M7_HeatLockRoom7" uid="11">
+                <instance type="M7_HeatLockRoom6" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -242,7 +260,10 @@
                     <instance-variables>
                         <Temperature>1</Temperature>
                         <OldTemperature>1</OldTemperature>
-                        <RoomNumber>6</RoomNumber>
+                        <Connection0>F</Connection0>
+                        <Connection1></Connection1>
+                        <Connection2></Connection2>
+                        <ID>G</ID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -286,12 +307,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Path></Path>
-                        <Current>0</Current>
                         <State>waiting</State>
                         <WaitingTimer>0</WaitingTimer>
                         <Speed>100</Speed>
                         <MovementAngle>0</MovementAngle>
+                        <CurrentRoom></CurrentRoom>
+                        <PreviousRoom></PreviousRoom>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">

@@ -46,7 +46,7 @@
     <object-folder>
         <object-folder name="Heat Lock">
             <object-folder name="Rooms">
-                <object-type name="M7_HeatLockRoom1" sid="438011665256193">
+                <object-type name="M7_HeatLockRoom0" sid="438011665256193">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="514896486919709" speed="5">
@@ -61,7 +61,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="M7_HeatLockRoom2" sid="883450294365560">
+                <object-type name="M7_HeatLockRoom1" sid="883450294365560">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="468638520592644" speed="5">
@@ -76,7 +76,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="M7_HeatLockRoom3" sid="364916723264710">
+                <object-type name="M7_HeatLockRoom2" sid="364916723264710">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="912263270039890" speed="5">
@@ -91,7 +91,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="M7_HeatLockRoom4" sid="203599613005955">
+                <object-type name="M7_HeatLockRoom3" sid="203599613005955">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="115604757931058" speed="5">
@@ -106,7 +106,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="M7_HeatLockRoom5" sid="308427064791193">
+                <object-type name="M7_HeatLockRoom4" sid="308427064791193">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799052425456124" speed="5">
@@ -121,7 +121,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="M7_HeatLockRoom6" sid="463715483245654">
+                <object-type name="M7_HeatLockRoom5" sid="463715483245654">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="447096859701577" speed="5">
@@ -136,7 +136,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="M7_HeatLockRoom7" sid="976246467895392">
+                <object-type name="M7_HeatLockRoom6" sid="976246467895392">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664475457762653" speed="5">
@@ -215,12 +215,12 @@
                 <member>M7_HeatLockPerson1</member>
             </members>
             <instance-variables>
-                <instance-variable name="Path" sid="834682967284929" type="string" />
-                <instance-variable name="Current" sid="448783281423883" type="number" />
                 <instance-variable name="State" sid="289779094673686" type="string" />
                 <instance-variable name="WaitingTimer" sid="230040533824705" type="number" />
                 <instance-variable name="Speed" sid="588087789812988" type="number" />
                 <instance-variable name="MovementAngle" sid="609144814664610" type="number" />
+                <instance-variable name="CurrentRoom" sid="742836929786167" type="string" />
+                <instance-variable name="PreviousRoom" sid="544198015411797" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="934153940385614">
@@ -230,18 +230,21 @@
         </family>
         <family name="M7_Room" plugin-id="Sprite" sid="860093973876421">
             <members>
+                <member>M7_HeatLockRoom0</member>
                 <member>M7_HeatLockRoom1</member>
                 <member>M7_HeatLockRoom2</member>
                 <member>M7_HeatLockRoom3</member>
                 <member>M7_HeatLockRoom4</member>
                 <member>M7_HeatLockRoom5</member>
                 <member>M7_HeatLockRoom6</member>
-                <member>M7_HeatLockRoom7</member>
             </members>
             <instance-variables>
                 <instance-variable name="Temperature" sid="558775973770712" type="number" />
                 <instance-variable name="OldTemperature" sid="248951232695566" type="number" />
-                <instance-variable name="RoomNumber" sid="741596147932318" type="number" />
+                <instance-variable name="Connection0" sid="482020322790335" type="string" />
+                <instance-variable name="Connection1" sid="718995971879984" type="string" />
+                <instance-variable name="Connection2" sid="691337371693170" type="string" />
+                <instance-variable name="ID" sid="547748295635668" type="string" />
             </instance-variables>
         </family>
     </families>
