@@ -280,6 +280,45 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="M7_HeatLockPerson2" uid="12">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <State>waiting</State>
+                        <WaitingTimer>0</WaitingTimer>
+                        <Speed>100</Speed>
+                        <MovementAngle>0</MovementAngle>
+                        <CurrentRoom></CurrentRoom>
+                        <PreviousRoom></PreviousRoom>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1650</x>
+                        <y>224</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>200</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -326,8 +365,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>496</x>
-                        <y>670</y>
+                        <x>1291</x>
+                        <y>219</y>
                         <z>0</z>
                         <width>100</width>
                         <height>200</height>

@@ -116,7 +116,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="181801980070952" type="Function">
                                             <param id="0" name="Name">&quot;M7 Person Select Next State&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                            <param id="1" name="Parameter {n}">M7_Person.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -147,7 +147,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="962171767147607" type="Function">
                                             <param id="0" name="Name">&quot;M7 Person Select Next State&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                            <param id="1" name="Parameter {n}">M7_Person.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -158,6 +158,9 @@
                             <conditions>
                                 <condition id="0" name="On function" sid="862728617815642" type="Function">
                                     <param id="0" name="Name">&quot;M7 Person Select Next State&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="226069610137845" type="M7_Person">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
                                 </condition>
                             </conditions>
                             <actions />
