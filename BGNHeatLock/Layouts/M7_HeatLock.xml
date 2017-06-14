@@ -85,11 +85,173 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>488</x>
-                        <y>707</y>
+                        <x>494</x>
+                        <y>691</y>
                         <z>0</z>
-                        <width>328</width>
-                        <height>381</height>
+                        <width>308</width>
+                        <height>354</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="M7_HeatLockRoom2" uid="6">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Temperature>1</Temperature>
+                        <OldTemperature>1</OldTemperature>
+                        <RoomNumber>1</RoomNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>945</x>
+                        <y>684</y>
+                        <z>0</z>
+                        <width>562</width>
+                        <height>345</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="M7_HeatLockRoom3" uid="7">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Temperature>1</Temperature>
+                        <OldTemperature>1</OldTemperature>
+                        <RoomNumber>2</RoomNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1532</x>
+                        <y>681</y>
+                        <z>0</z>
+                        <width>555</width>
+                        <height>338</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="M7_HeatLockRoom4" uid="8">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Temperature>1</Temperature>
+                        <OldTemperature>1</OldTemperature>
+                        <RoomNumber>3</RoomNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>575</x>
+                        <y>1084</y>
+                        <z>0</z>
+                        <width>482</width>
+                        <height>344</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="M7_HeatLockRoom5" uid="9">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Temperature>1</Temperature>
+                        <OldTemperature>1</OldTemperature>
+                        <RoomNumber>4</RoomNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1077.5</x>
+                        <y>1078</y>
+                        <z>0</z>
+                        <width>489</width>
+                        <height>335</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="M7_HeatLockRoom6" uid="10">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Temperature>1</Temperature>
+                        <OldTemperature>1</OldTemperature>
+                        <RoomNumber>5</RoomNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1468</x>
+                        <y>1077</y>
+                        <z>0</z>
+                        <width>222</width>
+                        <height>328</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="M7_HeatLockRoom7" uid="11">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Temperature>1</Temperature>
+                        <OldTemperature>1</OldTemperature>
+                        <RoomNumber>6</RoomNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1707</x>
+                        <y>1070</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>319</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
@@ -128,26 +290,14 @@
                         <Current>0</Current>
                         <State>waiting</State>
                         <WaitingTimer>0</WaitingTimer>
+                        <Speed>100</Speed>
+                        <MovementAngle>0</MovementAngle>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">
                             <properties>
-                                <stepping-mode>Linear</stepping-mode>
+                                <stepping-mode>None</stepping-mode>
                                 <pixels-per-step>5</pixels-per-step>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>30</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
-                                <max-speed>200</max-speed>
-                                <acceleration>1000</acceleration>
-                                <deceleration>2000</deceleration>
-                                <rotate-speed>135</rotate-speed>
-                                <rotate-object>Yes</rotate-object>
-                                <diagonals>Enabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -155,8 +305,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>475</x>
-                        <y>702</y>
+                        <x>496</x>
+                        <y>670</y>
                         <z>0</z>
                         <width>100</width>
                         <height>200</height>
@@ -202,8 +352,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>655</x>
-                        <y>586</y>
+                        <x>656</x>
+                        <y>577</y>
                         <z>0</z>
                         <width>50</width>
                         <height>250</height>

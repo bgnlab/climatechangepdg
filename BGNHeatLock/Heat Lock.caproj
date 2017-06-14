@@ -15,7 +15,6 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
     </used-behaviors>
     <used-effects />
@@ -51,7 +50,104 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="514896486919709" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.476" y="0.96" />
+                                    <point x="0.556" y="0.956" />
+                                    <point x="0.564" y="1" />
+                                    <point x="0.472" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_HeatLockRoom2" sid="883450294365560">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="468638520592644" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.452" y="0.948" />
+                                    <point x="0.556" y="0.94" />
+                                    <point x="0.568" y="1" />
+                                    <point x="0.44" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_HeatLockRoom3" sid="364916723264710">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="912263270039890" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.468" y="0.936" />
+                                    <point x="0.572" y="0.924" />
+                                    <point x="0.568" y="1" />
+                                    <point x="0.48" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_HeatLockRoom4" sid="203599613005955">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="115604757931058" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.472" y="0.948" />
+                                    <point x="0.544" y="0.936" />
+                                    <point x="0.588" y="1" />
+                                    <point x="0.452" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_HeatLockRoom5" sid="308427064791193">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799052425456124" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.468" y="0.92" />
+                                    <point x="0.58" y="0.912" />
+                                    <point x="0.58" y="1" />
+                                    <point x="0.444" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_HeatLockRoom6" sid="463715483245654">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="447096859701577" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.488" y="0.936" />
+                                    <point x="0.58" y="0.924" />
+                                    <point x="0.58" y="1" />
+                                    <point x="0.484" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_HeatLockRoom7" sid="976246467895392">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664475457762653" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.472" y="0.92" />
+                                    <point x="0.572" y="0.924" />
+                                    <point x="0.572" y="1" />
+                                    <point x="0.472" y="1" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -62,7 +158,14 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128897965129236" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.38" y="0.945" />
+                                    <point x="0.61" y="0.925" />
+                                    <point x="0.6" y="1" />
+                                    <point x="0.38" y="1" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -97,7 +200,7 @@
         </object-type>
     </object-folder>
     <families>
-        <family name="M7_HeatLockDoor" plugin-id="Sprite" sid="715437670202484">
+        <family name="M7_Door" plugin-id="Sprite" sid="715437670202484">
             <members>
                 <member>M7_HeatLockDoor1</member>
             </members>
@@ -107,7 +210,7 @@
                 <instance-variable name="Room2" sid="545423970902961" type="string" />
             </instance-variables>
         </family>
-        <family name="M7_HeatLockPerson" plugin-id="Sprite" sid="345353932365871">
+        <family name="M7_Person" plugin-id="Sprite" sid="345353932365871">
             <members>
                 <member>M7_HeatLockPerson1</member>
             </members>
@@ -116,19 +219,24 @@
                 <instance-variable name="Current" sid="448783281423883" type="number" />
                 <instance-variable name="State" sid="289779094673686" type="string" />
                 <instance-variable name="WaitingTimer" sid="230040533824705" type="number" />
+                <instance-variable name="Speed" sid="588087789812988" type="number" />
+                <instance-variable name="MovementAngle" sid="609144814664610" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="934153940385614">
                     <behavior id="custom" />
                 </behavior-type>
-                <behavior-type name="Pathfinding" sid="939688625409795">
-                    <behavior id="Pathfinding" />
-                </behavior-type>
             </behaviors>
         </family>
-        <family name="M7_HeatLockRoom" plugin-id="Sprite" sid="860093973876421">
+        <family name="M7_Room" plugin-id="Sprite" sid="860093973876421">
             <members>
                 <member>M7_HeatLockRoom1</member>
+                <member>M7_HeatLockRoom2</member>
+                <member>M7_HeatLockRoom3</member>
+                <member>M7_HeatLockRoom4</member>
+                <member>M7_HeatLockRoom5</member>
+                <member>M7_HeatLockRoom6</member>
+                <member>M7_HeatLockRoom7</member>
             </members>
             <instance-variables>
                 <instance-variable name="Temperature" sid="558775973770712" type="number" />
