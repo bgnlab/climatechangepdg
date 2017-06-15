@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>C6 Levels and Scores</name>
+    <events>
+        <event-group description="" sid="791337797299431" title="C6 Load Minigame">
+            <sub-events>
+                <event-block sid="264701221174938">
+                    <conditions>
+                        <condition id="0" name="On function" sid="533774259585779" type="Function">
+                            <param id="0" name="Name">&quot;C6 Load Game&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Game 10</comment>
+                        <event-block sid="793475476161224">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="253432362481931" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="789692209901287">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="391726180189662" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="160849205691377" type="System">
+                                            <param id="0" name="Layout">&quot;m2_1_tutorial1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="167906220318283">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="500407072342116" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="643726041207579" type="System">
+                                            <param id="0" name="Layout">&quot;m2_2_main&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="948451613411717">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="835276491271803" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="784451375357210" type="System">
+                                            <param id="0" name="Layout">&quot;m2_3_main&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="621511723342435" title="C6 Return to Menu">
+            <sub-events>
+                <event-block sid="734073432895925">
+                    <conditions>
+                        <condition id="0" name="On function" sid="346712301722392" type="Function">
+                            <param id="0" name="Name">&quot;C6 Exit Game&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="642907408694984" type="System">
+                            <param id="0" name="Layout">&quot;C6 Menu&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

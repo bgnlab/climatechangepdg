@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>m2_1_tut1</name>
+    <events>
+        <variable constant="0" name="m2_1_waittttttt" sid="780755105764290" static="0" type="number">0</variable>
+        <variable constant="0" name="m2_1_prev" sid="198123933121642" static="0" type="number">0</variable>
+        <variable constant="0" name="m2_1_prg" sid="150344383380618" static="0" type="number">0</variable>
+        <event-block sid="463882700182023">
+            <conditions>
+                <condition id="14" name="On tap" sid="283858223189363" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="589238812142523" type="System">
+                    <param id="0" name="Variable">m2_1_prg</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="147428361661148" type="m2_1_Tutorial">
+                    <param id="0" name="Text">&quot;Turn off and unplug as many electronics as you can&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="130904877169118" type="System">
+                    <param id="0" name="Variable">m2_1_prg</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="601580874487010">
+            <conditions>
+                <condition id="14" name="On tap" sid="768368542392659" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="471150748703238" type="System">
+                    <param id="0" name="Variable">m2_1_prg</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="849635124900575" type="m2_1_flashy">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="851466491126349" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-10" name="Add to" sid="454305553232953" type="System">
+                    <param id="0" name="Variable">m2_1_prg</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="263066227776866">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="867000415709709" type="System">
+                    <param id="0" name="Interval (seconds)">3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="836365009951623" type="System">
+                    <param id="0" name="Variable">m2_1_prg</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="102692994234970" type="m2_1_CLICKER">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Wait" sid="360717271572899" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="452080260165726" type="m2_1_CLICKER">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="388871007073599" type="m2_1_ACLight">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="106002637885022" type="m2_1_AC">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="308285220924313" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="4" name="Set animation" sid="345253644386296" type="m2_1_CLICKER">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="821748183049051" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="724088856647422" type="m2_1_CLICKER">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="143919176984825" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="4" name="Set animation" sid="883535050868910" type="m2_1_CLICKER">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="166257051750604" type="m2_1_ACLight">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="4" name="Set animation" sid="145046440156185" type="m2_1_AC">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="816038084434367" type="System">
+                    <param id="0" name="Variable">m2_1_waittttttt</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="700430232989690">
+            <conditions>
+                <condition id="14" name="On tap" sid="678042370878677" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="554569466483825" type="System">
+                    <param id="0" name="Variable">m2_1_prg</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="716613877501560" type="System">
+                    <param id="0" name="Variable">m2_1_waittttttt</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="810780985416824" type="System">
+                    <param id="0" name="Layout">m2_1_tutorial2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="195090516987036">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="452024206445052" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="878936734590968" type="m2_1_anchor">
+                    <param id="0" name="X">m2_1_Tv.X-195</param>
+                    <param id="1" name="Y">m2_1_Tv.Y+25</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="271157244616033">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="110886398922565" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="406655582269544" type="m2_1_TvLight">
+                    <param id="0" name="X">m2_1_Tv.X+187</param>
+                    <param id="1" name="Y">m2_1_Tv.Y+85</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="372592967222132">
+            <conditions>
+                <condition id="-11" name="For Each" sid="258827784250756" type="System">
+                    <param id="0" name="Object">m2_1_wire1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="325116263901852">
+                    <conditions />
+                    <actions>
+                        <action id="-10" name="Set value" sid="798222463197429" type="m2_1_wire1">
+                            <param id="0" name="Instance variable">number</param>
+                            <param id="1" name="Value">m2_1_wire1.numbers</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="850194844356194">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="472511024008826" type="m2_1_wire1">
+                            <param id="0" name="Instance variable">numbers</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="10" name="Create distance joint" sid="155340824748579" type="m2_1_wire1">
+                            <param id="0" name="This image point">1</param>
+                            <param id="1" name="Object">m2_1_plugHole</param>
+                            <param id="2" name="That image point">0</param>
+                            <param id="3" name="Damping ratio">180</param>
+                            <param id="4" name="Spring frequency">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="727283447436757">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="983163612463846" type="m2_1_wires">
+                            <param id="0" name="Instance variable">number</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">m2_1_wire1.number-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="22" name="Create limited revolute joint" sid="101273842797154" type="m2_1_wire1">
+                            <param id="0" name="This image point">1</param>
+                            <param id="1" name="Object">m2_1_wires</param>
+                            <param id="2" name="Lower angle">0</param>
+                            <param id="3" name="Upper angle">0</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="498154592535643" type="m2_1_wire1">
+                            <param id="0" name="Object">m2_1_wires</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="173409293583935">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="151692707245455" type="m2_1_wire1">
+                            <param id="0" name="Instance variable">numbers</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="10" name="Create distance joint" sid="625866664754425" type="m2_1_wire1">
+                            <param id="0" name="This image point">1</param>
+                            <param id="1" name="Object">m2_1_anchor</param>
+                            <param id="2" name="That image point">0</param>
+                            <param id="3" name="Damping ratio">180</param>
+                            <param id="4" name="Spring frequency">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="110956985868226">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="778666091630680" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="861749323758600" type="m2_1_wires">
+                    <param id="0" name="Object">m2_1_wires</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="212247878243646" type="m2_1_wires">
+                    <param id="0" name="Object">m2_1_plugHole</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="137811771228202" type="m2_1_wires">
+                    <param id="0" name="Object">m2_1_anchor</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="528347881818098">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="664052802343911" type="System">
+                    <param id="0" name="Interval (seconds)">0.4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="130975898282581" type="m2_1_flashy">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="194760534467245" type="m2_1_flashy2">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Wait" sid="666864335996428" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="858487141922549" type="m2_1_flashy">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="917316825302338" type="m2_1_flashy2">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="378064072557723" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
