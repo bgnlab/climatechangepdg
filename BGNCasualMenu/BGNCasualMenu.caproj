@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors />
@@ -82,7 +83,18 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="847910720297630" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Play button.png">
+                                    <collision-poly>
+                                        <point x="0.0375" y="0.1" />
+                                        <point x="0.5" y="0" />
+                                        <point x="0.9625" y="0.1" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.9625" y="0.9" />
+                                        <point x="0.5" y="1" />
+                                        <point x="0.0375" y="0.9" />
+                                        <point x="0" y="0.5" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -90,7 +102,18 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="468945825812982" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Settings icon (108 x 108).png">
+                                    <collision-poly>
+                                        <point x="0.185185" y="0.185185" />
+                                        <point x="0.5" y="0.0555556" />
+                                        <point x="0.814815" y="0.185185" />
+                                        <point x="0.944444" y="0.5" />
+                                        <point x="0.814815" y="0.814815" />
+                                        <point x="0.5" y="0.944444" />
+                                        <point x="0.185185" y="0.814815" />
+                                        <point x="0.0648148" y="0.5" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -102,13 +125,27 @@
                             </animation>
                         </animation-folder>
                     </object-type>
+                    <object-type name="C6_TitlePlaceHolder" sid="157485250313807">
+                        <plugin id="Text" />
+                    </object-type>
                 </object-folder>
                 <object-folder name="Settings">
                     <object-type name="C6_Sound" sid="931477579401845">
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="833112909765536" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Sound icon (108 x 108).png">
+                                    <collision-poly>
+                                        <point x="0.185185" y="0.185185" />
+                                        <point x="0.5" y="0.0555556" />
+                                        <point x="0.814815" y="0.185185" />
+                                        <point x="0.944444" y="0.5" />
+                                        <point x="0.814815" y="0.814815" />
+                                        <point x="0.5" y="0.944444" />
+                                        <point x="0.185185" y="0.814815" />
+                                        <point x="0.0648148" y="0.5" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -117,6 +154,28 @@
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="598829910916191" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="C6_SettingsTitleTemp" sid="418736262399101">
+                        <plugin id="Text" />
+                    </object-type>
+                    <object-type name="C6_Music" sid="823790919148384">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="816401196203243" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Music icon (108 x 108).png">
+                                    <collision-poly>
+                                        <point x="0.185185" y="0.185185" />
+                                        <point x="0.5" y="0.0555556" />
+                                        <point x="0.814815" y="0.185185" />
+                                        <point x="0.944444" y="0.5" />
+                                        <point x="0.814815" y="0.814815" />
+                                        <point x="0.5" y="0.944444" />
+                                        <point x="0.185185" y="0.814815" />
+                                        <point x="0.0648148" y="0.5" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -240,7 +299,7 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818709072666135" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Column format easy.png" />
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -248,7 +307,14 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804787389131743" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.502732" original-source="C:\Users\Yuan\Downloads\Column format medium.png">
+                                    <collision-poly>
+                                        <point x="0.00492611" y="0.010929" />
+                                        <point x="1" y="0" />
+                                        <point x="1" y="1" />
+                                        <point x="0" y="1" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -256,24 +322,37 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="661470886412555" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Column format hard.png">
+                                    <collision-poly>
+                                        <point x="0" y="0" />
+                                        <point x="1" y="0" />
+                                        <point x="0.995098" y="0.98913" />
+                                        <point x="0" y="1" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
+                    <object-type name="C6_TempDiffTitle" sid="606094279039675">
+                        <plugin id="Text" />
+                    </object-type>
                 </object-folder>
-                <object-type name="C6_UIBackground" sid="141646706527039">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="656281218141052" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
                 <object-type name="C6_ButtonBack" sid="716684449658093">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="886910302430006" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Exit2.png">
+                                <collision-poly>
+                                    <point x="0.3025" y="0.3025" />
+                                    <point x="0.5" y="0.2425" />
+                                    <point x="0.73" y="0.27" />
+                                    <point x="0.925" y="0.5" />
+                                    <point x="0.8575" y="0.8575" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.3025" y="0.6975" />
+                                    <point x="0.0725" y="0.5" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -281,15 +360,21 @@
             <object-type name="C6_Background" sid="348671960813810">
                 <plugin id="Sprite" />
                 <animation-folder>
+                    <animation framecount="1" loop="0" name="LevelSelect" pingpong="0" repeatcount="1" repeatto="0" sid="196747552615964" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casual game select menu.png" />
+                    </animation>
                     <animation framecount="1" loop="0" name="StartScreen" pingpong="0" repeatcount="1" repeatto="0" sid="108905934731114" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casusal game menu screen.png" />
                     </animation>
-                    <animation framecount="1" loop="0" name="LevelSelect" pingpong="0" repeatcount="1" repeatto="0" sid="796489804625052" speed="5">
+                    <animation framecount="1" loop="0" name="Blank" pingpong="0" repeatcount="1" repeatto="0" sid="796489804625052" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casual game game select blank.png" />
                     </animation>
                 </animation-folder>
             </object-type>
             <object-type global="1" name="C6_ScoreList" sid="104839921834037">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Array" sid="887064551721954">
                 <plugin id="Arr" />
             </object-type>
         </object-folder>

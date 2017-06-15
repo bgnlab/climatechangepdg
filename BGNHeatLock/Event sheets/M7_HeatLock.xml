@@ -82,7 +82,7 @@
                     <sub-events>
                         <variable constant="0" name="M7_COLLISION_MARGIN" sid="724697748366516" static="0" type="number">0</variable>
                         <variable constant="1" name="M7_WAITTIMEMIN" sid="613549810525179" static="0" type="number">1</variable>
-                        <variable constant="1" name="M7_WAITTIMEMAX" sid="426087903147023" static="0" type="number">2</variable>
+                        <variable constant="1" name="M7_WAITTIMEMAX" sid="426087903147023" static="0" type="number">5</variable>
                         <event-block sid="336021872179128">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="120223814381876" type="M7_Person">

@@ -10,9 +10,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">C6 Menu</layout>
+        <layout order="0">C6 Menu</layout>
         <event-sheet order="1">C6 Menu</event-sheet>
-        <event-sheet order="2">C6 Levels and Scores</event-sheet>
+        <event-sheet active="1" order="2">C6 Levels and Scores</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -27,11 +27,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/Menu/" />
-        <folder expanded="1" path="object-folder/Menu/Animals/" />
-        <folder expanded="1" path="object-folder/Menu/UI/" />
+        <folder expanded="0" path="object-folder/Menu/Animals/" />
+        <folder expanded="0" path="object-folder/Menu/UI/" />
         <folder expanded="1" path="object-folder/Menu/UI/Start/" />
         <folder expanded="1" path="object-folder/Menu/UI/Settings/" />
-        <folder expanded="1" path="object-folder/Menu/UI/Levels/" />
+        <folder expanded="0" path="object-folder/Menu/UI/Levels/" />
         <folder expanded="1" path="object-folder/Menu/UI/Difficulty/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
@@ -47,6 +47,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/C6_ButtonPlay/" />
         <folder expanded="1" path="animation-folder/C6_Sound/" />
         <folder expanded="1" path="animation-folder/C6_TitleSettings/" />
+        <folder expanded="1" path="animation-folder/C6_Music/" />
         <folder expanded="1" path="animation-folder/C6_Game0/" />
         <folder expanded="1" path="animation-folder/C6_TitleLevel/" />
         <folder expanded="1" path="animation-folder/C6_Game1/" />
@@ -64,7 +65,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/C6_ButtonEasy/" />
         <folder expanded="1" path="animation-folder/C6_ButtonMedium/" />
         <folder expanded="1" path="animation-folder/C6_ButtonHard/" />
-        <folder expanded="1" path="animation-folder/C6_UIBackground/" />
         <folder expanded="1" path="animation-folder/C6_ButtonBack/" />
         <folder expanded="1" path="animation-folder/C6_Background/" />
     </folders-expanded>
