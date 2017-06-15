@@ -293,6 +293,25 @@
                             </animation>
                         </animation-folder>
                     </object-type>
+                    <object-type name="Padlock" sid="689889671533337">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="819660451472670" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\lock.png">
+                                    <collision-poly>
+                                        <point x="0.216" y="0.216" />
+                                        <point x="0.5" y="0.016" />
+                                        <point x="0.788" y="0.212" />
+                                        <point x="0.888" y="0.5" />
+                                        <point x="0.888" y="0.888" />
+                                        <point x="0.5" y="0.988" />
+                                        <point x="0.108" y="0.892" />
+                                        <point x="0.108" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
                 </object-folder>
                 <object-folder name="Difficulty">
                     <object-type name="C6_TitleDifficulty" sid="341978656541847">

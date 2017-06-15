@@ -10,13 +10,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">C6 Menu</layout>
+        <layout active="1" order="0">C6 Menu</layout>
         <layout order="1">m2_3_main</layout>
+        <layout order="7">m2_1_tutorial3</layout>
         <event-sheet order="2">C6 Levels and Scores</event-sheet>
         <event-sheet order="3">m2_3_main</event-sheet>
         <event-sheet order="4">C6 Menu</event-sheet>
         <event-sheet order="5">m2_2_main</event-sheet>
-        <event-sheet active="1" order="6">m2_1_main(e)</event-sheet>
+        <event-sheet order="6">m2_1_main(e)</event-sheet>
+        <event-sheet order="8">m2_1_tut3</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -40,23 +42,23 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="m2_1_TvWires" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/Menu/" />
         <folder expanded="1" path="object-folder/Menu/Animals/" />
         <folder expanded="1" path="object-folder/Menu/UI/" />
         <folder expanded="1" path="object-folder/Menu/UI/Start/" />
         <folder expanded="1" path="object-folder/Menu/UI/Settings/" />
         <folder expanded="1" path="object-folder/Menu/UI/Levels/" />
-        <folder expanded="1" path="object-folder/Menu/UI/Difficulty/" />
-        <folder expanded="1" path="object-folder/Game10EscapeRoom/" />
-        <folder expanded="1" path="object-folder/Game10EscapeRoom2/" />
-        <folder expanded="1" path="object-folder/Game10EscapeRoom3/" />
+        <folder expanded="0" path="object-folder/Menu/UI/Difficulty/" />
+        <folder expanded="0" path="object-folder/Game10EscapeRoom/" />
+        <folder expanded="0" path="object-folder/Game10EscapeRoom2/" />
+        <folder expanded="0" path="object-folder/Game10EscapeRoom3/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="layout-folder/Menu/" />
-        <folder expanded="1" path="layout-folder/Game10EscapeRoom/" />
+        <folder expanded="0" path="layout-folder/Game10EscapeRoom/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="event-folder/Game10EscapeRoom/" />
-        <folder expanded="1" path="event-folder/Menu/" />
+        <folder expanded="0" path="event-folder/Game10EscapeRoom/" />
+        <folder expanded="0" path="event-folder/Menu/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
@@ -84,6 +86,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/C6_Game9/" />
         <folder expanded="1" path="animation-folder/C6_Game10/" />
         <folder expanded="1" path="animation-folder/C6_Game11/" />
+        <folder expanded="1" path="animation-folder/Padlock/" />
         <folder expanded="1" path="animation-folder/C6_TitleDifficulty/" />
         <folder expanded="1" path="animation-folder/C6_ButtonEasy/" />
         <folder expanded="1" path="animation-folder/C6_ButtonMedium/" />
