@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>N6 Future View</name>
+    <events>
+        <include>N6 Scores and Levels</include>
+        <variable constant="0" name="N6_FutureTemperature" sid="660448388328563" static="0" type="number">6</variable>
+        <comment>1: transitioning in, -1: transitioning out, 0: not transitioning</comment>
+        <event-block sid="518304049511162">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="154384768192758" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="160826906389186" type="N6_Background">
+                    <param id="0" name="Animation">N6_FutureTemperature &amp; &quot;C&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="814220478934793" type="N6_Thermometer">
+                    <param id="0" name="Animation">N6_FutureTemperature &amp; &quot;C&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Call function" sid="228886068982522" type="Function">
+                    <param id="0" name="Name">&quot;N6 Transition In&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Switch to Present View</comment>
+        <event-block sid="387632259763592">
+            <conditions>
+                <condition id="17" name="On tap object" sid="627442945304456" type="Touch">
+                    <param id="0" name="Object">N6_ToPresent</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="321447063263910" type="System">
+                    <param id="0" name="Variable">N6_Transitioning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="446648195789756" type="Function">
+                    <param id="0" name="Name">&quot;N6 Transition To&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;N6 Present View&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <include>N6 Map Transitions</include>
+    </events>
+</c2eventsheet>
