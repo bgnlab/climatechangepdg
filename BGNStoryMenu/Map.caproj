@@ -495,6 +495,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
+        <object-folder name="N6 Story Map" />
         <object-type name="Touch" sid="235968936273001">
             <plugin id="Touch" />
         </object-type>
@@ -504,7 +505,7 @@
     </object-folder>
     <families />
     <layout-folder>
-        <layout-folder name="Map">
+        <layout-folder name="N6 Story Map">
             <layout>N6 Present View.xml</layout>
             <layout>N6 Future View.xml</layout>
             <layout>N6 Level Select.xml</layout>
@@ -513,7 +514,7 @@
         </layout-folder>
     </layout-folder>
     <event-folder>
-        <event-folder name="Map">
+        <event-folder name="N6 Story Map">
             <event-sheet>N6 Future View.xml</event-sheet>
             <event-sheet>N6 Level Select.xml</event-sheet>
             <event-sheet>N6 Opening Cutscene.xml</event-sheet>

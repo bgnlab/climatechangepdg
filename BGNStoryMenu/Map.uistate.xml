@@ -10,12 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <event-sheet order="0">N6 Level Select</event-sheet>
-        <event-sheet order="1">N6 Scores and Levels</event-sheet>
-        <event-sheet active="1" order="2">N6 Present View</event-sheet>
-        <event-sheet order="3">N6 Future View</event-sheet>
-        <event-sheet order="4">N6 Opening Cutscene</event-sheet>
-        <event-sheet order="5">N6 Map Transitions</event-sheet>
+        <event-sheet order="7">N6 Level Select</event-sheet>
+        <event-sheet order="8">N6 Scores and Levels</event-sheet>
+        <event-sheet active="1" order="9">N6 Present View</event-sheet>
+        <event-sheet order="10">N6 Future View</event-sheet>
+        <event-sheet order="11">N6 Opening Cutscene</event-sheet>
+        <event-sheet order="12">N6 Map Transitions</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -26,17 +26,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/Level Select/" />
+        <folder expanded="0" path="object-folder/Level Select/" />
         <folder expanded="1" path="object-folder/Level Select/Test Level/" />
-        <folder expanded="1" path="object-folder/Maps/" />
-        <folder expanded="1" path="object-folder/Maps/Future/" />
-        <folder expanded="1" path="object-folder/Maps/Present/" />
-        <folder expanded="1" path="object-folder/Maps/TimeTransition/" />
-        <folder expanded="1" path="object-folder/Opening Cutscene/" />
+        <folder expanded="0" path="object-folder/Maps/" />
+        <folder expanded="0" path="object-folder/Maps/Future/" />
+        <folder expanded="0" path="object-folder/Maps/Present/" />
+        <folder expanded="0" path="object-folder/Maps/TimeTransition/" />
+        <folder expanded="0" path="object-folder/Opening Cutscene/" />
+        <folder expanded="1" path="object-folder/N6 Story Map/" />
         <folder expanded="1" path="layout-folder/" />
-        <folder expanded="1" path="layout-folder/Map/" />
+        <folder expanded="1" path="layout-folder/N6 Story Map/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="event-folder/Map/" />
+        <folder expanded="0" path="event-folder/N6 Story Map/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />

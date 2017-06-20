@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>N6 Opening Cutscene</name>
+    <events>
+        <event-group description="" sid="216210719820747" title="N6 Title Animation">
+            <sub-events>
+                <event-block sid="199343430572283">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="667868885093791" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="185362431166793" type="N6_OpeningCutsceneText" />
+                        <action id="-16" name="Wait" sid="693900855354548" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="492860634788915" type="System">
+                            <param id="0" name="Layout">&quot;N6 Future View&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
