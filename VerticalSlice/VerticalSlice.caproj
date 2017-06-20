@@ -550,8 +550,8 @@
                     <instance-variable name="pressed" sid="782915641227889" type="boolean" />
                 </instance-variables>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="117764919776604" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.833333" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\office\keyboard button (60 x 60).png" />
+                    <animation framecount="1" loop="0" name="a1" pingpong="0" repeatcount="1" repeatto="0" sid="117764919776604" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.833333" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\office\keyboard button 1.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="575786671384991" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.833333" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\office\keyboard button pressed (60 x 60).png">
@@ -562,6 +562,15 @@
                                 <point x="0.166667" y="0.833333" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="a2" pingpong="0" repeatcount="1" repeatto="0" sid="382234277973756" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.833333" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\office\keyboard button 2.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="a3" pingpong="0" repeatcount="1" repeatto="0" sid="228626245481296" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.833333" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\office\keyboard button 3.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="a4" pingpong="0" repeatcount="1" repeatto="0" sid="671868008954605" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.833333" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\office\keyboard button 4.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -4108,13 +4117,13 @@
         </event-folder>
     </event-folder>
     <global-instances>
-        <global-instance type="Function" uid="288" />
-        <global-instance type="Touch" uid="289">
+        <global-instance type="Function" uid="316" />
+        <global-instance type="Touch" uid="317">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Audio" uid="290">
+        <global-instance type="Audio" uid="318">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
