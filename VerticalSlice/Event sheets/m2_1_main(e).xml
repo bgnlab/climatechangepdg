@@ -4,16 +4,15 @@
     <name>m2_1_main(e)</name>
     <events>
         <include>C6 Levels and Scores</include>
-        <variable constant="0" name="chainzz" sid="871525209252249" static="0" type="number">0</variable>
-        <variable constant="0" name="chainzzzz" sid="711375661151982" static="0" type="number">0</variable>
-        <variable constant="0" name="playing" sid="833018042651533" static="0" type="number">1</variable>
-        <variable constant="0" name="score" sid="404060174331174" static="0" type="number">0</variable>
-        <variable constant="0" name="win" sid="631573591262190" static="0" type="number">-1</variable>
-        <variable constant="0" name="timer" sid="886606613080031" static="0" type="number">15</variable>
-        <variable constant="0" name="PrevDragMouseX" sid="330927879285792" static="0" type="number">0</variable>
-        <variable constant="0" name="DiffX" sid="990804509311841" static="0" type="number">0</variable>
-        <variable constant="0" name="DragMouseX" sid="544104138559371" static="0" type="number">0</variable>
-        <variable constant="0" name="LevelSelect" sid="479017986098405" static="0" type="number">1</variable>
+        <variable constant="0" name="m2_1_chainzz" sid="871525209252249" static="0" type="number">0</variable>
+        <variable constant="0" name="m2_1_chainzzzz" sid="711375661151982" static="0" type="number">0</variable>
+        <variable constant="0" name="m2_1_score" sid="404060174331174" static="0" type="number">0</variable>
+        <variable constant="0" name="m2_1_PrevDragMouseX" sid="330927879285792" static="0" type="number">0</variable>
+        <variable constant="0" name="m2_1_DiffX" sid="990804509311841" static="0" type="number">0</variable>
+        <variable constant="0" name="m2_1_DragMouseX" sid="544104138559371" static="0" type="number">0</variable>
+        <variable constant="0" name="m2_1_playing" sid="833018042651533" static="0" type="number">1</variable>
+        <variable constant="0" name="m2_1_win" sid="631573591262190" static="0" type="number">-1</variable>
+        <variable constant="0" name="m2_1_timer" sid="886606613080031" static="0" type="number">30</variable>
         <event-group description="" sid="487333071599878" title="Scoring &amp; Hints3">
             <sub-events>
                 <event-block sid="512134496382777">
@@ -42,19 +41,19 @@
                             <param id="0" name="Interval (seconds)">0.01</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="571273113850402" type="System">
-                            <param id="0" name="Variable">win</param>
+                            <param id="0" name="Variable">m2_1_win</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">-1</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="208816401687526" type="System">
-                            <param id="0" name="Variable">playing</param>
+                            <param id="0" name="Variable">m2_1_playing</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-11" name="Subtract from" sid="882844352350707" type="System">
-                            <param id="0" name="Variable">timer</param>
+                            <param id="0" name="Variable">m2_1_timer</param>
                             <param id="1" name="Value">0.01</param>
                         </action>
                     </actions>
@@ -63,14 +62,14 @@
                     <conditions>
                         <condition id="-1" name="Every tick" sid="976822605895493" type="System" />
                         <condition id="-14" name="Compare variable" sid="175420614351503" type="System">
-                            <param id="0" name="Variable">timer</param>
+                            <param id="0" name="Variable">m2_1_timer</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-5" name="Set width" sid="370745155983555" type="m2_1_timer">
-                            <param id="0" name="Width">128*timer</param>
+                            <param id="0" name="Width">128*m2_1_timer</param>
                         </action>
                     </actions>
                 </event-block>
@@ -80,18 +79,18 @@
                             <param id="0" name="Object">m2_1_door</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="927766293099271" type="System">
-                            <param id="0" name="Variable">playing</param>
+                            <param id="0" name="Variable">m2_1_playing</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="178985806137339" type="System">
-                            <param id="0" name="Variable">win</param>
+                            <param id="0" name="Variable">m2_1_win</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="231334974176187" type="System">
-                            <param id="0" name="Variable">playing</param>
+                            <param id="0" name="Variable">m2_1_playing</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="0" name="Play" sid="575700711376460" type="Audio">
@@ -105,18 +104,18 @@
                 <event-block sid="688864562103805">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="797441244916276" type="System">
-                            <param id="0" name="Variable">timer</param>
+                            <param id="0" name="Variable">m2_1_timer</param>
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Value">0.01</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="732086264413989" type="System">
-                            <param id="0" name="Variable">win</param>
+                            <param id="0" name="Variable">m2_1_win</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="486357222177494" type="System">
-                            <param id="0" name="Variable">playing</param>
+                            <param id="0" name="Variable">m2_1_playing</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
@@ -124,12 +123,12 @@
                 <event-block sid="327040501228029">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="433891372764461" type="System">
-                            <param id="0" name="Variable">timer</param>
+                            <param id="0" name="Variable">m2_1_timer</param>
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Value">5.01</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="675543159951148" type="System">
-                            <param id="0" name="Variable">timer</param>
+                            <param id="0" name="Variable">m2_1_timer</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -145,7 +144,7 @@
         <event-block sid="797720219986523">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="457934625249457" type="System">
-                    <param id="0" name="Variable">playing</param>
+                    <param id="0" name="Variable">m2_1_playing</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
@@ -301,7 +300,7 @@
                                             <param id="0" name="Opacity">100</param>
                                         </action>
                                         <action id="-11" name="Subtract from" sid="372883469569202" type="System">
-                                            <param id="0" name="Variable">score</param>
+                                            <param id="0" name="Variable">m2_1_score</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="22" name="Set paused" sid="474200880405958" type="Audio">
@@ -321,7 +320,7 @@
                                             <param id="0" name="Opacity">0</param>
                                         </action>
                                         <action id="-10" name="Add to" sid="633426384210209" type="System">
-                                            <param id="0" name="Variable">score</param>
+                                            <param id="0" name="Variable">m2_1_score</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="22" name="Set paused" sid="640281782350948" type="Audio">
@@ -363,7 +362,7 @@
                                             <param id="0" name="Opacity">100</param>
                                         </action>
                                         <action id="-11" name="Subtract from" sid="884531608864552" type="System">
-                                            <param id="0" name="Variable">score</param>
+                                            <param id="0" name="Variable">m2_1_score</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
@@ -379,7 +378,7 @@
                                             <param id="0" name="Opacity">0</param>
                                         </action>
                                         <action id="-10" name="Add to" sid="925451372836690" type="System">
-                                            <param id="0" name="Variable">score</param>
+                                            <param id="0" name="Variable">m2_1_score</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="0" name="Play" sid="862443991808621" type="Audio">
@@ -523,7 +522,7 @@
                                             <param id="0" name="Opacity">70</param>
                                         </action>
                                         <action id="-10" name="Add to" sid="534490677007931" type="System">
-                                            <param id="0" name="Variable">score</param>
+                                            <param id="0" name="Variable">m2_1_score</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
@@ -546,7 +545,7 @@
                                             <param id="1" name="Y">600</param>
                                         </action>
                                         <action id="-10" name="Add to" sid="778390352687521" type="System">
-                                            <param id="0" name="Variable">score</param>
+                                            <param id="0" name="Variable">m2_1_score</param>
                                             <param id="1" name="Value">-1</param>
                                         </action>
                                     </actions>
@@ -577,7 +576,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-11" name="Subtract from" sid="935932271327623" type="System">
-                                            <param id="0" name="Variable">score</param>
+                                            <param id="0" name="Variable">m2_1_score</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="-16" name="Set opacity" sid="224154484012941" type="m2_1_ACLight">
@@ -607,7 +606,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Add to" sid="737480779358981" type="System">
-                                            <param id="0" name="Variable">score</param>
+                                            <param id="0" name="Variable">m2_1_score</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="-16" name="Set opacity" sid="312676862300092" type="m2_1_ACLight">
@@ -785,23 +784,23 @@
                             <param id="1" name="X co-ordinate">1080</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="476660148029944" type="System">
-                            <param id="0" name="Variable">playing</param>
+                            <param id="0" name="Variable">m2_1_playing</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="920465027680472" type="System">
-                            <param id="0" name="Variable">PrevDragMouseX</param>
-                            <param id="1" name="Value">DragMouseX</param>
+                            <param id="0" name="Variable">m2_1_PrevDragMouseX</param>
+                            <param id="1" name="Value">m2_1_DragMouseX</param>
                         </action>
                         <action id="-9" name="Set value" sid="568594146182307" type="System">
-                            <param id="0" name="Variable">DragMouseX</param>
+                            <param id="0" name="Variable">m2_1_DragMouseX</param>
                             <param id="1" name="Value">Touch.X</param>
                         </action>
                         <action id="-9" name="Set value" sid="687372840698761" type="System">
-                            <param id="0" name="Variable">DiffX</param>
-                            <param id="1" name="Value">DragMouseX-PrevDragMouseX</param>
+                            <param id="0" name="Variable">m2_1_DiffX</param>
+                            <param id="1" name="Value">m2_1_DragMouseX-m2_1_PrevDragMouseX</param>
                         </action>
                     </actions>
                 </event-block>
@@ -817,18 +816,18 @@
                             <param id="1" name="X co-ordinate">1080</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="263877493450050" type="System">
-                            <param id="0" name="Variable">playing</param>
+                            <param id="0" name="Variable">m2_1_playing</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="736998818538722" type="System">
-                            <param id="0" name="Variable">PrevDragMouseX</param>
+                            <param id="0" name="Variable">m2_1_PrevDragMouseX</param>
                             <param id="1" name="Value">Touch.X</param>
                         </action>
                         <action id="-9" name="Set value" sid="489315567605089" type="System">
-                            <param id="0" name="Variable">DragMouseX</param>
+                            <param id="0" name="Variable">m2_1_DragMouseX</param>
                             <param id="1" name="Value">Touch.X</param>
                         </action>
                     </actions>
@@ -842,18 +841,18 @@
                         <event-block sid="855578397428801">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="587874863460861" type="System">
-                                    <param id="0" name="Variable">DiffX</param>
+                                    <param id="0" name="Variable">m2_1_DiffX</param>
                                     <param id="1" name="Comparison">1</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-1" name="Set X" sid="985276407749931" type="m2_1_Tv">
-                                    <param id="0" name="X">lerp(m2_1_Tv.X,m2_1_Tv.X+DiffX,0.75)</param>
+                                    <param id="0" name="X">lerp(m2_1_Tv.X,m2_1_Tv.X+m2_1_DiffX,0.75)</param>
                                 </action>
                                 <action id="-11" name="Subtract from" sid="186794792440459" type="System">
-                                    <param id="0" name="Variable">DiffX</param>
-                                    <param id="1" name="Value">DiffX/3</param>
+                                    <param id="0" name="Variable">m2_1_DiffX</param>
+                                    <param id="1" name="Value">m2_1_DiffX/3</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1027,7 +1026,7 @@
                 <event-block sid="113970126594428">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="431702023379631" type="System">
-                            <param id="0" name="Variable">win</param>
+                            <param id="0" name="Variable">m2_1_win</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">-1</param>
                         </condition>
@@ -1058,7 +1057,7 @@
                             <conditions />
                             <actions>
                                 <action id="-9" name="Set value" sid="373083207285712" type="System">
-                                    <param id="0" name="Variable">score</param>
+                                    <param id="0" name="Variable">m2_1_score</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
@@ -1071,7 +1070,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Add to" sid="227176781217362" type="System">
-                                            <param id="0" name="Variable">score</param>
+                                            <param id="0" name="Variable">m2_1_score</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
@@ -1084,7 +1083,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Add to" sid="331078220604702" type="System">
-                                            <param id="0" name="Variable">score</param>
+                                            <param id="0" name="Variable">m2_1_score</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
@@ -1097,7 +1096,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Add to" sid="326734251471611" type="System">
-                                            <param id="0" name="Variable">score</param>
+                                            <param id="0" name="Variable">m2_1_score</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
@@ -1110,7 +1109,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Add to" sid="801678762413260" type="System">
-                                            <param id="0" name="Variable">score</param>
+                                            <param id="0" name="Variable">m2_1_score</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
@@ -1120,7 +1119,7 @@
                         <event-block sid="662966943716138">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="242275591106409" type="System">
-                                    <param id="0" name="Variable">win</param>
+                                    <param id="0" name="Variable">m2_1_win</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
@@ -1134,7 +1133,7 @@
                         <event-block sid="985293154446553">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="877588569247607" type="System">
-                                    <param id="0" name="Variable">win</param>
+                                    <param id="0" name="Variable">m2_1_win</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
@@ -1148,7 +1147,7 @@
                         <event-block sid="164117374476985">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="532399344280154" type="System">
-                                    <param id="0" name="Variable">score</param>
+                                    <param id="0" name="Variable">m2_1_score</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">4</param>
                                 </condition>
@@ -1168,20 +1167,10 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="787942317035538">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="210741978669963" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Append text" sid="726001203873045" type="m2_1_endDescription">
-                                    <param id="0" name="Text">newline&amp;&quot;You are still wasting energy.  Try again to improve your score!&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="280184173316241">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="988393752481299" type="System">
-                                    <param id="0" name="Variable">score</param>
+                                    <param id="0" name="Variable">m2_1_score</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">3</param>
                                 </condition>
@@ -1200,7 +1189,7 @@
                         <event-block sid="479779800034551">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="915678387306034" type="System">
-                                    <param id="0" name="Variable">score</param>
+                                    <param id="0" name="Variable">m2_1_score</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
@@ -1209,6 +1198,20 @@
                                 <action id="4" name="Set animation" sid="374597616451595" type="m2_1_star">
                                     <param id="0" name="Animation">&quot;Animation2&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="506605696242248">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="876640350455554" type="System">
+                                    <param id="0" name="Variable">m2_1_score</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="726001203873045" type="m2_1_endDescription">
+                                    <param id="0" name="Text">newline&amp;&quot;You are still wasting energy.  Try again to improve your score!&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

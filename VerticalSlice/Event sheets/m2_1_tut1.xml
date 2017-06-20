@@ -19,29 +19,13 @@
                 <action id="0" name="Set text" sid="147428361661148" type="m2_1_Tutorial">
                     <param id="0" name="Text">&quot;Turn off and unplug as many electronics as you can&quot;</param>
                 </action>
-                <action id="-10" name="Add to" sid="130904877169118" type="System">
-                    <param id="0" name="Variable">m2_1_prg</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="601580874487010">
-            <conditions>
-                <condition id="14" name="On tap" sid="768368542392659" type="Touch" />
-                <condition id="-14" name="Compare variable" sid="471150748703238" type="System">
-                    <param id="0" name="Variable">m2_1_prg</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="849635124900575" type="m2_1_flashy">
+                <action id="-15" name="Set visible" sid="442889505840002" type="m2_1_flashy">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="-16" name="Wait" sid="851466491126349" type="System">
+                <action id="-16" name="Wait" sid="995255252316709" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
-                <action id="-10" name="Add to" sid="454305553232953" type="System">
+                <action id="-10" name="Add to" sid="130904877169118" type="System">
                     <param id="0" name="Variable">m2_1_prg</param>
                     <param id="1" name="Value">1</param>
                 </action>
@@ -55,7 +39,7 @@
                 <condition id="-14" name="Compare variable" sid="836365009951623" type="System">
                     <param id="0" name="Variable">m2_1_prg</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">2</param>
+                    <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>
@@ -116,7 +100,7 @@
                 <condition id="-14" name="Compare variable" sid="554569466483825" type="System">
                     <param id="0" name="Variable">m2_1_prg</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">2</param>
+                    <param id="2" name="Value">1</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="716613877501560" type="System">
                     <param id="0" name="Variable">m2_1_waittttttt</param>
