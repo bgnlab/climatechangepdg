@@ -988,60 +988,118 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="572278530233699">
+                        <event-block sid="545103679531531">
                             <conditions>
-                                <condition id="-1" name="Compare X" sid="740451752685361" type="m2_3_nightLight">
+                                <condition id="-1" name="Compare X" sid="878508049554732" type="m2_3_nightLight">
                                     <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="X co-ordinate">1050</param>
+                                    <param id="1" name="X co-ordinate">900</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-1" name="Set X" sid="956275208380367" type="m2_3_nightLight">
-                                    <param id="0" name="X">1050</param>
+                                <action id="-1" name="Set X" sid="141550036966753" type="m2_3_nightLight">
+                                    <param id="0" name="X">900</param>
                                 </action>
-                                <action behavior="DragDrop" id="0" name="Set enabled" sid="895794697052278" type="m2_3_nightLight">
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="418269067920898" type="m2_3_nightLight">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="887449901535012">
+                        <event-block sid="743538093567382">
                             <conditions>
-                                <condition id="-22" name="Else" sid="633494224503822" type="System" />
-                                <condition id="-8" name="Is boolean instance variable set" sid="196954510327742" type="m2_3_nightLight">
+                                <condition id="-22" name="Else" sid="160486126517751" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="456894174955167" type="m2_3_nightLight">
                                     <param id="0" name="Instance variable">power</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="DragDrop" id="0" name="Set enabled" sid="162701765976919" type="m2_3_nightLight">
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="743400263390601" type="m2_3_nightLight">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="133282825484441">
+                        <event-block sid="999260550973179">
                             <conditions>
-                                <condition id="-1" name="Compare X" sid="451555428101518" type="m2_3_nightLight">
+                                <condition id="-1" name="Compare X" sid="851897878365157" type="m2_3_nightLight">
                                     <param id="0" name="Comparison">4</param>
                                     <param id="1" name="X co-ordinate">1415</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-1" name="Set X" sid="177532607403782" type="m2_3_nightLight">
-                                    <param id="0" name="X">1415</param>
+                                <action id="-1" name="Set X" sid="616662948576747" type="m2_3_nightLight">
+                                    <param id="0" name="X">1414</param>
                                 </action>
-                                <action behavior="DragDrop" id="0" name="Set enabled" sid="513455399127796" type="m2_3_nightLight">
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="701228831791864" type="m2_3_nightLight">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="123572572392166">
+                        <event-block sid="741923772981398">
                             <conditions>
-                                <condition id="-22" name="Else" sid="940071245106772" type="System" />
-                                <condition id="-8" name="Is boolean instance variable set" sid="357796387079382" type="m2_3_nightLight">
+                                <condition id="-22" name="Else" sid="455122856031861" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="486380702799232" type="m2_3_nightLight">
                                     <param id="0" name="Instance variable">power</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="DragDrop" id="0" name="Set enabled" sid="116147057522087" type="m2_3_nightLight">
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="387403072488260" type="m2_3_nightLight">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="155272995721417">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="965293097872129" type="m2_3_nightLight">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">575</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="669337120016484" type="m2_3_nightLight">
+                                    <param id="0" name="Y">574</param>
+                                </action>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="444696466725688" type="m2_3_nightLight">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="203858494119775">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="892247840426442" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="620821633492373" type="m2_3_nightLight">
+                                    <param id="0" name="Instance variable">power</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="256102674868709" type="m2_3_nightLight">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="932802995241891">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="313599546377929" type="m2_3_nightLight">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">180</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="259951089181667" type="m2_3_nightLight">
+                                    <param id="0" name="Y">181</param>
+                                </action>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="243950838155940" type="m2_3_nightLight">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="660929904440171">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="351477384200569" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="808044018603824" type="m2_3_nightLight">
+                                    <param id="0" name="Instance variable">power</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="147120983925775" type="m2_3_nightLight">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -1878,7 +1936,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block disabled="1" sid="563117054138334">
+                                <event-block sid="563117054138334">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="821725304044420" type="m2_3_nightLightWires">
                                             <param id="0" name="Instance variable">number</param>
