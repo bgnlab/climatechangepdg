@@ -13,10 +13,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="0">C6 Menu</layout>
         <layout order="3">m2_2_main</layout>
         <layout order="5">m2_1_main(e)</layout>
+        <layout order="7">m2_3_main</layout>
         <event-sheet order="1">C6 Levels and Scores</event-sheet>
         <event-sheet order="2">C6 Menu</event-sheet>
-        <event-sheet active="1" order="6">m2_1_main(e)</event-sheet>
         <event-sheet order="4">m2_2_main</event-sheet>
+        <event-sheet order="6">m2_1_main(e)</event-sheet>
+        <event-sheet active="1" order="8">m2_3_main</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -55,7 +57,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="layout-folder/Menu/" />
         <folder expanded="1" path="layout-folder/Game10EscapeRoom/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="0" path="event-folder/Game10EscapeRoom/" />
+        <folder expanded="1" path="event-folder/Game10EscapeRoom/" />
         <folder expanded="0" path="event-folder/Menu/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
