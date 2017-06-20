@@ -1631,6 +1631,44 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="m2_3_fanLite" sid="116427769656205">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="720709378576868" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\power light (32 x 32).png">
+                            <collision-poly>
+                                <point x="0.3125" y="0.3125" />
+                                <point x="0.5" y="0.21875" />
+                                <point x="0.6875" y="0.3125" />
+                                <point x="0.8125" y="0.5" />
+                                <point x="0.71875" y="0.71875" />
+                                <point x="0.5" y="0.8125" />
+                                <point x="0.28125" y="0.71875" />
+                                <point x="0.1875" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m2_3_fanLight" sid="554153929750047">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="506349145897480" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\power light (32 x 32).png">
+                            <collision-poly>
+                                <point x="0.3125" y="0.3125" />
+                                <point x="0.5" y="0.21875" />
+                                <point x="0.6875" y="0.3125" />
+                                <point x="0.8125" y="0.5" />
+                                <point x="0.71875" y="0.71875" />
+                                <point x="0.5" y="0.8125" />
+                                <point x="0.28125" y="0.71875" />
+                                <point x="0.1875" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Game10EscapeRoom(M)">
             <object-type name="m2_2_topCabinet" sid="801041803501639">

@@ -1209,6 +1209,12 @@
                                     <param id="0" name="Instance variable">power</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-16" name="Set opacity" sid="288270512226885" type="m2_3_fanLight">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="921508039496330" type="m2_3_fanLite">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="516858907104923">
