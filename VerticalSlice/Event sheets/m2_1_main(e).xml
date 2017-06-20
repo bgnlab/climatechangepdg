@@ -1117,6 +1117,34 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="662966943716138">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="242275591106409" type="System">
+                                    <param id="0" name="Variable">win</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="980221500642696" type="m2_1_endDescription">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="985293154446553">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="877588569247607" type="System">
+                                    <param id="0" name="Variable">win</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="260752294481536" type="m2_1_endDescription">
+                                    <param id="0" name="Text">&quot;Time&apos;s Up&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="164117374476985">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="532399344280154" type="System">
@@ -1174,31 +1202,17 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="662966943716138">
+                        <event-block sid="506605696242248">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="242275591106409" type="System">
-                                    <param id="0" name="Variable">win</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                <condition id="-14" name="Compare variable" sid="876640350455554" type="System">
+                                    <param id="0" name="Variable">score</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">4</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="980221500642696" type="m2_1_endDescription">
-                                    <param id="0" name="Text">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="985293154446553">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="877588569247607" type="System">
-                                    <param id="0" name="Variable">win</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="260752294481536" type="m2_1_endDescription">
-                                    <param id="0" name="Text">&quot;Time&apos;s Up&quot;</param>
+                                <action id="1" name="Append text" sid="726001203873045" type="m2_1_endDescription">
+                                    <param id="0" name="Text">newline&amp;&quot;You are still wasting energy.  Try again to improve your score!&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
