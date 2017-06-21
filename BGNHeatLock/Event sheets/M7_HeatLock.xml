@@ -3,9 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>M7_HeatLock</name>
     <events>
-        <variable constant="0" name="M7_HEATLOCK_NUMBEROFROOMS" sid="219805138335277" static="0" type="number">7</variable>
+        <variable constant="0" name="M7_NUMBEROFROOMS" sid="219805138335277" static="0" type="number">7</variable>
         <variable constant="0" name="DEBUG" sid="686712581298676" static="0" type="text"></variable>
-        <variable constant="0" name="M7_HeatLockTemperature" sid="176103752440200" static="0" type="number">18</variable>
+        <variable constant="0" name="M7_Temperature" sid="176103752440200" static="0" type="number">18</variable>
         <event-group description="" sid="385953040015592" title="M7 Room Object Data Initialization">
             <sub-events>
                 <event-block sid="706266292160068">
@@ -14,6 +14,35 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-group description="" sid="700672218353482" title="M7 Person Spawning">
+                            <sub-events>
+                                <variable constant="0" name="tempval" sid="485382954874502" static="0" type="number">0</variable>
+                                <event-block sid="695204180281465">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="803406688183622" type="System">
+                                            <param id="0" name="Object">M7_Person</param>
+                                        </condition>
+                                        <condition id="-16" name="Pick random instance" sid="925867933681916" type="System">
+                                            <param id="0" name="Object">M7_Room</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="170204680818069" type="M7_Person">
+                                            <param id="0" name="Instance variable">ChosenRoom</param>
+                                            <param id="1" name="Value">M7_Room.UID</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="300700905452528" type="M7_Person">
+                                            <param id="0" name="Instance variable">PreviousRoom</param>
+                                            <param id="1" name="Value">M7_Person.ChosenRoom</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="377029277269619" type="M7_Person">
+                                            <param id="0" name="X">M7_Room.X</param>
+                                            <param id="1" name="Y">M7_Room.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                         <event-group description="" sid="129594061920019" title="M7 Initialize Rooms">
                             <sub-events>
                                 <event-block sid="109879392692079">
@@ -51,7 +80,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="666374984055682" title="M7 Initilaize Doors">
+                        <event-group description="" sid="666374984055682" title="M7 Initialize Doors">
                             <sub-events>
                                 <event-block sid="567468262794882">
                                     <conditions />
@@ -63,7 +92,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="221648568052963" title="M7 Heat Lock Temperature Management">
+        <event-group description="" sid="221648568052963" title="M7 Temperature Management">
             <sub-events>
                 <event-group description="" sid="259876896402846" title="M7 Room Temperature Initialization">
                     <sub-events>
@@ -73,7 +102,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="101506629238562" type="System">
-                                    <param id="0" name="Variable">M7_HEATLOCK_NUMBEROFROOMS</param>
+                                    <param id="0" name="Variable">M7_NUMBEROFROOMS</param>
                                     <param id="1" name="Value">M7_Room.Count</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="376034596985204" type="M7_Room">
@@ -166,39 +195,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="477988417948673" title="M7 Heat Lock Person Behaviour">
+        <event-group description="" sid="477988417948673" title="M7 Person Behaviour">
             <sub-events>
-                <event-group description="" sid="700672218353482" title="M7 Heat Lock Person Spawning">
-                    <sub-events>
-                        <variable constant="0" name="tempval" sid="485382954874502" static="0" type="number">0</variable>
-                        <event-block sid="695204180281465">
-                            <conditions>
-                                <condition id="-2" name="On start of layout" sid="351587798377850" type="System" />
-                                <condition id="-11" name="For Each" sid="803406688183622" type="System">
-                                    <param id="0" name="Object">M7_Person</param>
-                                </condition>
-                                <condition id="-16" name="Pick random instance" sid="925867933681916" type="System">
-                                    <param id="0" name="Object">M7_Room</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="170204680818069" type="M7_Person">
-                                    <param id="0" name="Instance variable">ChosenRoom</param>
-                                    <param id="1" name="Value">M7_Room.UID</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="300700905452528" type="M7_Person">
-                                    <param id="0" name="Instance variable">PreviousRoom</param>
-                                    <param id="1" name="Value">M7_Person.ChosenRoom</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="377029277269619" type="M7_Person">
-                                    <param id="0" name="X">M7_Room.X</param>
-                                    <param id="1" name="Y">M7_Room.Y</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="444692670807075" title="M7 Heat Lock Person Movement">
+                <event-group description="" sid="444692670807075" title="M7 Person Movement">
                     <sub-events>
                         <event-block sid="992596853623321">
                             <conditions>
@@ -427,7 +426,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="917615544399952" title="M7 Heat Lock Person Pathfinding">
+                <event-group description="" sid="917615544399952" title="M7 Person Pathfinding">
                     <sub-events>
                         <variable constant="0" name="M7_PreviousRoom" sid="779199900776871" static="0" type="number">-1</variable>
                         <variable constant="0" name="M7_ChosenRoom" sid="270822681677396" static="0" type="number">-1</variable>
@@ -488,10 +487,6 @@
                                         <condition id="-22" name="Else" sid="254188515691240" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="842138946476965" type="System">
-                                            <param id="0" name="Variable">DEBUG</param>
-                                            <param id="1" name="Value">DEBUG &amp; M7_Destination</param>
-                                        </action>
                                         <action id="-9" name="Set value" sid="546377288087668" type="System">
                                             <param id="0" name="Variable">M7_TempIndex</param>
                                             <param id="1" name="Value">tokencount(M7_Destination, &quot; &quot;)</param>
@@ -500,17 +495,9 @@
                                             <param id="0" name="Variable">M7_TempIndex</param>
                                             <param id="1" name="Value">floor(random(0, M7_TempIndex))</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="922799437970883" type="System">
-                                            <param id="0" name="Variable">DEBUG</param>
-                                            <param id="1" name="Value">DEBUG &amp; &quot;(&quot; &amp; M7_TempIndex &amp; &quot;) --&gt; &quot;</param>
-                                        </action>
                                         <action id="-9" name="Set value" sid="895882997036051" type="System">
                                             <param id="0" name="Variable">M7_Destination</param>
                                             <param id="1" name="Value">tokenat(M7_Destination, M7_TempIndex, &quot; &quot;)</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="285336711239010" type="System">
-                                            <param id="0" name="Variable">DEBUG</param>
-                                            <param id="1" name="Value">DEBUG &amp; M7_Destination &amp; &quot;$&quot;</param>
                                         </action>
                                         <action id="1" name="Set return value" sid="701809167201610" type="Function">
                                             <param id="0" name="Value">int(M7_Destination)</param>
@@ -523,9 +510,9 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="615369672928270" title="M7 Heat Lock Object Interactions">
+        <event-group description="" sid="615369672928270" title="M7 Object Interactions">
             <sub-events>
-                <event-group description="" sid="545667328686850" title="M7 Heat Lock Door">
+                <event-group description="" sid="545667328686850" title="M7 Door Interactions">
                     <sub-events>
                         <event-block sid="847028597215671">
                             <conditions>
@@ -548,8 +535,8 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="662058481164618" title="M7 Heat Lock Scoring" />
-        <event-group description="" sid="232970218801745" title="M7 Heat Lock Helper Functions">
+        <event-group description="" sid="662058481164618" title="M7 Scoring" />
+        <event-group description="" sid="232970218801745" title="M7 Helper Functions">
             <sub-events>
                 <comment>Returns the change in temperature by surrounding rooms</comment>
                 <event-block sid="628176859389762">
