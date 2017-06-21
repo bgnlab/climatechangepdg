@@ -4,6 +4,7 @@
     <name>M7_HeatLock</name>
     <events>
         <variable constant="0" name="M7_HEATLOCK_NUMBEROFROOMS" sid="219805138335277" static="0" type="number">7</variable>
+        <variable constant="0" name="DEBUG" sid="686712581298676" static="0" type="text"></variable>
         <variable constant="0" name="M7_HeatLockTemperature" sid="176103752440200" static="0" type="number">18</variable>
         <event-group description="" sid="385953040015592" title="M7 Room Data Initialization">
             <sub-events>
@@ -362,9 +363,9 @@
                 <event-group description="" sid="917615544399952" title="M7 Heat Lock Person Pathfinding">
                     <sub-events>
                         <variable constant="0" name="M7_PreviousRoom" sid="779199900776871" static="0" type="number">-1</variable>
-                        <variable constant="0" name="M7_Destination" sid="924721281698815" static="0" type="text"></variable>
-                        <variable constant="0" name="M7_TempIndex" sid="520575937611103" static="0" type="number">0</variable>
                         <variable constant="0" name="M7_ChosenRoom" sid="270822681677396" static="0" type="number">-1</variable>
+                        <variable constant="0" name="M7_TempIndex" sid="520575937611103" static="0" type="number">0</variable>
+                        <variable constant="0" name="M7_Destination" sid="924721281698815" static="0" type="text"></variable>
                         <event-block sid="829543956718511">
                             <conditions>
                                 <condition id="0" name="On function" sid="284524971819460" type="Function">
@@ -386,19 +387,15 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="374021681513432" type="System">
                                     <param id="0" name="Variable">M7_Destination</param>
-                                    <param id="1" name="Value">replace(M7_Destination, &quot; &quot; &amp; M7_PreviousRoom, &quot;&quot;)</param>
+                                    <param id="1" name="Value">replace(M7_Destination, &quot; &quot; &amp; str(M7_PreviousRoom), &quot;&quot;)</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="546377288087668" type="System">
-                                    <param id="0" name="Variable">M7_TempIndex</param>
-                                    <param id="1" name="Value">tokencount(M7_Destination, &quot; &quot;)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="641386603521397" type="System">
-                                    <param id="0" name="Variable">M7_TempIndex</param>
-                                    <param id="1" name="Value">floor(random(0, M7_TempIndex))</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="895882997036051" type="System">
+                                <action id="-9" name="Set value" sid="759081268066661" type="System">
                                     <param id="0" name="Variable">M7_Destination</param>
-                                    <param id="1" name="Value">tokenat(M7_Destination, M7_TempIndex, &quot; &quot;)</param>
+                                    <param id="1" name="Value">replace(M7_Destination, str(M7_PreviousRoom), &quot;&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="540530700623127" type="System">
+                                    <param id="0" name="Variable">M7_Destination</param>
+                                    <param id="1" name="Value">trim(M7_Destination)</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -421,8 +418,32 @@
                                         <condition id="-22" name="Else" sid="254188515691240" type="System" />
                                     </conditions>
                                     <actions>
+                                        <action id="-9" name="Set value" sid="842138946476965" type="System">
+                                            <param id="0" name="Variable">DEBUG</param>
+                                            <param id="1" name="Value">DEBUG &amp; M7_Destination</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="546377288087668" type="System">
+                                            <param id="0" name="Variable">M7_TempIndex</param>
+                                            <param id="1" name="Value">tokencount(M7_Destination, &quot; &quot;)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="641386603521397" type="System">
+                                            <param id="0" name="Variable">M7_TempIndex</param>
+                                            <param id="1" name="Value">floor(random(0, M7_TempIndex))</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="922799437970883" type="System">
+                                            <param id="0" name="Variable">DEBUG</param>
+                                            <param id="1" name="Value">DEBUG &amp; &quot;(&quot; &amp; M7_TempIndex &amp; &quot;) --&gt; &quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="895882997036051" type="System">
+                                            <param id="0" name="Variable">M7_Destination</param>
+                                            <param id="1" name="Value">tokenat(M7_Destination, M7_TempIndex, &quot; &quot;)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="285336711239010" type="System">
+                                            <param id="0" name="Variable">DEBUG</param>
+                                            <param id="1" name="Value">DEBUG &amp; M7_Destination &amp; &quot;$&quot;</param>
+                                        </action>
                                         <action id="1" name="Set return value" sid="701809167201610" type="Function">
-                                            <param id="0" name="Value">int(tokenat(M7_Destination, M7_TempIndex, &quot; &quot;))</param>
+                                            <param id="0" name="Value">int(M7_Destination)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -544,12 +565,12 @@
                                         <condition id="-7" name="Compare instance variable" sid="788292582319887" type="M7_Room">
                                             <param id="0" name="Instance variable">ID</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">M7_Person.CurrentRoom</param>
+                                            <param id="2" name="Value">M7_Person.ChosenRoom</param>
                                         </condition>
                                         <condition id="-7" name="Compare instance variable" sid="286692332455429" type="M7_Room">
                                             <param id="0" name="Instance variable">ID</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">M7_Person.PreviousRoom</param>
+                                            <param id="2" name="Value">M7_Person.PrevRoom</param>
                                         </condition>
                                     </conditions>
                                     <actions />
@@ -582,7 +603,7 @@
                             <conditions />
                             <actions>
                                 <action id="1" name="Set return value" sid="419930663737358" type="Function">
-                                    <param id="0" name="Value">M7_TempRoom = -1 ? M7_Person.CurrentRoom : M7_TempRoom</param>
+                                    <param id="0" name="Value">M7_TempRoom = -1 ? M7_Person.ChosenRoom : M7_TempRoom</param>
                                 </action>
                             </actions>
                         </event-block>
