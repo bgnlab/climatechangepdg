@@ -84,6 +84,10 @@
                         <Connection1></Connection1>
                         <Connection2></Connection2>
                         <ID>A</ID>
+                        <Neighbour0>-1</Neighbour0>
+                        <Neighbour1>-1</Neighbour1>
+                        <Neighbour2>-1</Neighbour2>
+                        <Neighbour3>-1</Neighbour3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -114,6 +118,10 @@
                         <Connection1>C</Connection1>
                         <Connection2></Connection2>
                         <ID>B</ID>
+                        <Neighbour0>-1</Neighbour0>
+                        <Neighbour1>-1</Neighbour1>
+                        <Neighbour2>-1</Neighbour2>
+                        <Neighbour3>-1</Neighbour3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -144,6 +152,10 @@
                         <Connection1>F</Connection1>
                         <Connection2></Connection2>
                         <ID>C</ID>
+                        <Neighbour0>-1</Neighbour0>
+                        <Neighbour1>-1</Neighbour1>
+                        <Neighbour2>-1</Neighbour2>
+                        <Neighbour3>-1</Neighbour3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -174,6 +186,10 @@
                         <Connection1></Connection1>
                         <Connection2></Connection2>
                         <ID>D</ID>
+                        <Neighbour0>-1</Neighbour0>
+                        <Neighbour1>-1</Neighbour1>
+                        <Neighbour2>-1</Neighbour2>
+                        <Neighbour3>-1</Neighbour3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -204,6 +220,10 @@
                         <Connection1>F</Connection1>
                         <Connection2></Connection2>
                         <ID>E</ID>
+                        <Neighbour0>-1</Neighbour0>
+                        <Neighbour1>-1</Neighbour1>
+                        <Neighbour2>-1</Neighbour2>
+                        <Neighbour3>-1</Neighbour3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -234,6 +254,10 @@
                         <Connection1>E</Connection1>
                         <Connection2>G</Connection2>
                         <ID>F</ID>
+                        <Neighbour0>-1</Neighbour0>
+                        <Neighbour1>-1</Neighbour1>
+                        <Neighbour2>-1</Neighbour2>
+                        <Neighbour3>-1</Neighbour3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -264,6 +288,10 @@
                         <Connection1></Connection1>
                         <Connection2></Connection2>
                         <ID>G</ID>
+                        <Neighbour0>-1</Neighbour0>
+                        <Neighbour1>-1</Neighbour1>
+                        <Neighbour2>-1</Neighbour2>
+                        <Neighbour3>-1</Neighbour3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -294,6 +322,8 @@
                         <MovementAngle>0</MovementAngle>
                         <CurrentRoom></CurrentRoom>
                         <PreviousRoom></PreviousRoom>
+                        <ChosenRoom>0</ChosenRoom>
+                        <PrevRoom>0</PrevRoom>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">
@@ -352,6 +382,8 @@
                         <MovementAngle>0</MovementAngle>
                         <CurrentRoom></CurrentRoom>
                         <PreviousRoom></PreviousRoom>
+                        <ChosenRoom>0</ChosenRoom>
+                        <PrevRoom>0</PrevRoom>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">

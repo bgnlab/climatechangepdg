@@ -237,6 +237,8 @@
                 <instance-variable name="MovementAngle" sid="609144814664610" type="number" />
                 <instance-variable name="CurrentRoom" sid="742836929786167" type="string" />
                 <instance-variable name="PreviousRoom" sid="544198015411797" type="string" />
+                <instance-variable name="ChosenRoom" sid="151109876573444" type="number" />
+                <instance-variable name="PrevRoom" sid="160697593584266" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="934153940385614">
@@ -261,6 +263,10 @@
                 <instance-variable name="Connection1" sid="718995971879984" type="string" />
                 <instance-variable name="Connection2" sid="691337371693170" type="string" />
                 <instance-variable name="ID" sid="547748295635668" type="string" />
+                <instance-variable name="Neighbour0" sid="371551514189871" type="number" />
+                <instance-variable name="Neighbour1" sid="159376502090061" type="number" />
+                <instance-variable name="Neighbour2" sid="468028278281824" type="number" />
+                <instance-variable name="Neighbour3" sid="556380800890259" type="number" />
             </instance-variables>
         </family>
     </families>
