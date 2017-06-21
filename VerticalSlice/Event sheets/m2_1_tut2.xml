@@ -13,6 +13,10 @@
                 <action behavior="Physics" id="27" name="Set enabled" sid="884998144402998" type="m2_1_wire1">
                     <param id="0" name="Mode">0</param>
                 </action>
+                <action id="-10" name="Add to" sid="277966034820089" type="System">
+                    <param id="0" name="Variable">m2_1_noWait</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action id="-16" name="Set opacity" sid="935580164778886" type="m2_1_CLICKER">
                     <param id="0" name="Opacity">100</param>
                 </action>
@@ -67,10 +71,6 @@
                 <action id="4" name="Set animation" sid="827616628005653" type="m2_1_clicker2">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
-                </action>
-                <action id="-10" name="Add to" sid="277966034820089" type="System">
-                    <param id="0" name="Variable">m2_1_noWait</param>
-                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>

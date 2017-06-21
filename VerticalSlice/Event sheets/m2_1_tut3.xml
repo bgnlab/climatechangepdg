@@ -86,6 +86,10 @@
                 <action id="-16" name="Wait" sid="334279830937738" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
+                <action id="-10" name="Add to" sid="769575852291961" type="System">
+                    <param id="0" name="Variable">m2_1_plsWait</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action id="4" name="Set animation" sid="515922258478497" type="m2_1_CLICKER">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
@@ -103,10 +107,6 @@
                 <action id="4" name="Set animation" sid="626362728419716" type="m2_1_CLICKER">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
-                </action>
-                <action id="-10" name="Add to" sid="769575852291961" type="System">
-                    <param id="0" name="Variable">m2_1_plsWait</param>
-                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -126,8 +126,11 @@
         </event-block>
         <event-block sid="338357665697397">
             <conditions>
-                <condition id="17" name="On tap object" sid="726081596574594" type="Touch">
-                    <param id="0" name="Object">m2_1_ecit</param>
+                <condition id="14" name="On tap" sid="726081596574594" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="332195313296024" type="System">
+                    <param id="0" name="Variable">m2_1_plsWait</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>

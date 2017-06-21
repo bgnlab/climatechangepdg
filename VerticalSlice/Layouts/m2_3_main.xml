@@ -317,7 +317,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1600</x>
+                        <x>1585</x>
                         <y>572</y>
                         <z>0</z>
                         <width>100</width>
@@ -1117,7 +1117,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1524</x>
+                        <x>1509</x>
                         <y>539</y>
                         <z>0</z>
                         <width>67</width>
@@ -2095,28 +2095,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m2_3_timerHolder" uid="152">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>960</x>
-                        <y>20</y>
-                        <z>0</z>
-                        <width>1920</width>
-                        <height>40</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="m2_3_tmr" uid="153">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -2130,7 +2108,7 @@
                         <x>960</x>
                         <y>20</y>
                         <z>0</z>
-                        <width>1920</width>
+                        <width>40</width>
                         <height>40</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>

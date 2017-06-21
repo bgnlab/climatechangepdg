@@ -22,6 +22,10 @@
                 <action id="-15" name="Set visible" sid="442889505840002" type="m2_1_flashy">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="-10" name="Add to" sid="140124417150658" type="System">
+                    <param id="0" name="Variable">m2_1_waittttttt</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action id="-16" name="Wait" sid="995255252316709" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
@@ -73,10 +77,6 @@
                 <action id="4" name="Set animation" sid="538469678688010" type="m2_1_CLICKER">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
-                </action>
-                <action id="-10" name="Add to" sid="140124417150658" type="System">
-                    <param id="0" name="Variable">m2_1_waittttttt</param>
-                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
