@@ -50,679 +50,667 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-folder name="TEMPORAY_LEVEL_SELECT">
-            <object-type name="Text3" sid="785591800016967">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TEMP1" sid="327244431772089">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="440494068628909" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TEMP2" sid="337913729208090">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244891923020682" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TEMP3" sid="603770350836007">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="535331946662001" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TEMP4" sid="519308132891167">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="432854971885530" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-        </object-folder>
-        <object-folder name="M3_CarpoolGame_Objects">
-            <object-folder name="Arrays">
-                <object-type global="1" name="M3_ConnectedCells" sid="409196086107849">
-                    <plugin id="Arr" />
+        <object-folder name="M3 Carpool Game Objects">
+            <object-folder name="TEMPORAY_LEVEL_SELECT">
+                <object-type name="Text3" sid="785591800016967">
+                    <plugin id="Text" />
                 </object-type>
-                <object-type global="1" name="M3_OList" sid="935370145652731">
-                    <plugin id="Arr" />
-                </object-type>
-                <object-type global="1" name="M3_TutorialTargets" sid="708088100819676">
-                    <plugin id="Arr" />
-                </object-type>
-                <object-type global="1" name="M3_Targets" sid="102132207837380">
-                    <plugin id="Arr" />
-                </object-type>
-            </object-folder>
-            <object-folder name="Buttons">
-                <object-type name="M3_ClearButton" sid="566509415593733">
+                <object-type name="TEMP1" sid="327244431772089">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="239632647044538" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Clear.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_GoButton" sid="420542339899303">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="406202439953151" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Go.png">
-                                <collision-poly>
-                                    <point x="0.04" y="0.24" />
-                                    <point x="0.86" y="0.24" />
-                                    <point x="0.852" y="0.888" />
-                                    <point x="0.02" y="0.884" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
-            <object-folder name="Endgame">
-                <object-type name="M3_EndgameBackground" sid="495574497026953">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244987744120539" speed="5">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="440494068628909" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="M3_Star" sid="523522644685769">
+                <object-type name="TEMP2" sid="337913729208090">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="973838320356668" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\CarpoolMinigameProject\empty star (new).png">
-                                <collision-poly>
-                                    <point x="0.336" y="0.336" />
-                                    <point x="0.5" y="0.044" />
-                                    <point x="0.668" y="0.332" />
-                                    <point x="0.916" y="0.5" />
-                                    <point x="0.808" y="0.808" />
-                                    <point x="0.212" y="0.788" />
-                                    <point x="0.096" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Full" pingpong="0" repeatcount="1" repeatto="0" sid="294583965186262" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\CarpoolMinigameProject\star full (new).png">
-                                <collision-poly>
-                                    <point x="0.336" y="0.336" />
-                                    <point x="0.5" y="0.044" />
-                                    <point x="0.668" y="0.332" />
-                                    <point x="0.916" y="0.5" />
-                                    <point x="0.808" y="0.808" />
-                                    <point x="0.212" y="0.788" />
-                                    <point x="0.096" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_EndgameMenu" sid="744078973893503">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="513302412233547" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.511905" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\Win Fail State.png">
-                                <collision-poly>
-                                    <point x="0.0137383" y="0.132283" />
-                                    <point x="0.52133" y="0.0015748" />
-                                    <point x="0.999277" y="0.19685" />
-                                    <point x="0.999277" y="0.670866" />
-                                    <point x="0.916124" y="0.963779" />
-                                    <point x="0.52133" y="0.998425" />
-                                    <point x="0.117137" y="0.984252" />
-                                    <point x="0.000723066" y="0.670866" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_Retry" sid="968977960718523">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="247402810007195" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\Retry1.png">
-                                <collision-poly>
-                                    <point x="0.155556" y="0.155556" />
-                                    <point x="0.5" y="0.133333" />
-                                    <point x="0.844444" y="0.155556" />
-                                    <point x="0.95" y="0.5" />
-                                    <point x="0.894444" y="0.894444" />
-                                    <point x="0.5" y="0.938889" />
-                                    <point x="0.111111" y="0.888889" />
-                                    <point x="0.0555556" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Clicked" pingpong="0" repeatcount="1" repeatto="0" sid="223335438301429" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\Retry2.png">
-                                <collision-poly>
-                                    <point x="0.155556" y="0.155556" />
-                                    <point x="0.5" y="0.133333" />
-                                    <point x="0.844444" y="0.155556" />
-                                    <point x="0.95" y="0.5" />
-                                    <point x="0.866667" y="0.866667" />
-                                    <point x="0.5" y="0.9" />
-                                    <point x="0.133333" y="0.866667" />
-                                    <point x="0.0555556" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_Exit" sid="899149563026205">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="627357157273535" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\Exit1.png">
-                                <collision-poly>
-                                    <point x="0.155556" y="0.155556" />
-                                    <point x="0.5" y="0.133333" />
-                                    <point x="0.844444" y="0.155556" />
-                                    <point x="0.95" y="0.5" />
-                                    <point x="0.894444" y="0.894444" />
-                                    <point x="0.5" y="0.938889" />
-                                    <point x="0.111111" y="0.888889" />
-                                    <point x="0.0555556" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Clicked" pingpong="0" repeatcount="1" repeatto="0" sid="920969676419549" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\Exit2.png">
-                                <collision-poly>
-                                    <point x="0.155556" y="0.155556" />
-                                    <point x="0.5" y="0.127778" />
-                                    <point x="0.844444" y="0.155556" />
-                                    <point x="0.955556" y="0.5" />
-                                    <point x="0.872222" y="0.872222" />
-                                    <point x="0.5" y="0.9" />
-                                    <point x="0.133333" y="0.866667" />
-                                    <point x="0.05" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_EndgameText" sid="224091190552625">
-                    <plugin id="Text" />
-                </object-type>
-            </object-folder>
-            <object-folder name="FuelDisplay">
-                <object-type name="M3_FuelCan" sid="320123180550061">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="938792424716747" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\FuelCan.png">
-                                <collision-poly>
-                                    <point x="0.15" y="0.15" />
-                                    <point x="0.5" y="0.015" />
-                                    <point x="0.885" y="0.115" />
-                                    <point x="0.85" y="0.5" />
-                                    <point x="0.85" y="0.85" />
-                                    <point x="0.5" y="0.985" />
-                                    <point x="0.15" y="0.85" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_FuelLevel" sid="141160512389320">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="281364534024349" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\FuelCan.png">
-                                <collision-poly>
-                                    <point x="0.15" y="0.15" />
-                                    <point x="0.5" y="0.015" />
-                                    <point x="0.885" y="0.115" />
-                                    <point x="0.85" y="0.5" />
-                                    <point x="0.85" y="0.85" />
-                                    <point x="0.5" y="0.985" />
-                                    <point x="0.15" y="0.85" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
-            <object-folder name="Global">
-                <object-type name="Audio" sid="965503802505476">
-                    <plugin id="Audio" />
-                </object-type>
-                <object-type name="Mouse" sid="244137277473465">
-                    <plugin id="Mouse" />
-                </object-type>
-                <object-type name="Function" sid="206217328805715">
-                    <plugin id="Function" />
-                </object-type>
-                <object-type name="Touch" sid="923252118349061">
-                    <plugin id="Touch" />
-                </object-type>
-            </object-folder>
-            <object-folder name="MapPieces">
-                <object-type name="M3_JustForAlignment" sid="793429277644459">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="989816883145052" speed="5">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244891923020682" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="M3_PlayerPointer" sid="563542968679729">
+                <object-type name="TEMP3" sid="603770350836007">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128632445603849" speed="5">
-                            <frame duration="1" hotspotX="0.502242" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Direction Arrow.png">
-                                <collision-poly>
-                                    <point x="0.224215" y="0.342466" />
-                                    <point x="0.497758" y="0.342466" />
-                                    <point x="0.856502" y="0.219178" />
-                                    <point x="0.982063" y="0.5" />
-                                    <point x="0.843049" y="0.760274" />
-                                    <point x="0.497758" y="0.630137" />
-                                    <point x="0.242152" y="0.630137" />
-                                    <point x="0.0179372" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_Sprite2" sid="170582610045128">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable name="Location" sid="233827480534136" type="string" />
-                        <instance-variable name="PrimaryConnection" sid="705786503650065" type="string" />
-                        <instance-variable name="SecondaryConnection" sid="771842501018542" type="string" />
-                        <instance-variable name="UMadmanThirdConnection" sid="249277542254592" type="string" />
-                        <instance-variable name="OkayFineConnection4" sid="377680384907407" type="string" />
-                    </instance-variables>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="902339381268619" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Selection Circle.png">
-                                <collision-poly>
-                                    <point x="0.159292" y="0.159292" />
-                                    <point x="0.495575" y="0.0176991" />
-                                    <point x="0.840708" y="0.159292" />
-                                    <point x="0.982301" y="0.495575" />
-                                    <point x="0.840708" y="0.840708" />
-                                    <point x="0.495575" y="0.982301" />
-                                    <point x="0.159292" y="0.840708" />
-                                    <point x="0.0176991" y="0.495575" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="277838369450056" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.159292" y="0.159292" />
-                                    <point x="0.495575" y="0.0176991" />
-                                    <point x="0.840708" y="0.159292" />
-                                    <point x="0.982301" y="0.495575" />
-                                    <point x="0.840708" y="0.840708" />
-                                    <point x="0.495575" y="0.982301" />
-                                    <point x="0.159292" y="0.840708" />
-                                    <point x="0.0176991" y="0.495575" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Placeholder" pingpong="0" repeatcount="1" repeatto="0" sid="367149266000373" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.159292" y="0.159292" />
-                                    <point x="0.495575" y="0.0176991" />
-                                    <point x="0.840708" y="0.159292" />
-                                    <point x="0.982301" y="0.495575" />
-                                    <point x="0.840708" y="0.840708" />
-                                    <point x="0.495575" y="0.982301" />
-                                    <point x="0.159292" y="0.840708" />
-                                    <point x="0.0176991" y="0.495575" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="137797321940018" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.159292" y="0.159292" />
-                                    <point x="0.495575" y="0.0176991" />
-                                    <point x="0.840708" y="0.159292" />
-                                    <point x="0.982301" y="0.495575" />
-                                    <point x="0.840708" y="0.840708" />
-                                    <point x="0.495575" y="0.982301" />
-                                    <point x="0.159292" y="0.840708" />
-                                    <point x="0.0176991" y="0.495575" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_MapMed" sid="241656050123549">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="902747049854436" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Carpool Map1.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_Sprite3" sid="229490214259301">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable name="Location" sid="771005748404457" type="string" />
-                    </instance-variables>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="963769596955374" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.472" y="0.372" />
-                                    <point x="0.564" y="0.4" />
-                                    <point x="0.62" y="0.452" />
-                                    <point x="0.564" y="0.584" />
-                                    <point x="0.452" y="0.62" />
-                                    <point x="0.304" y="0.58" />
-                                    <point x="0.272" y="0.456" />
-                                    <point x="0.38" y="0.396" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_Sprite8" sid="602009260993411">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154532255147170" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passenger Holder.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_Sprite9" sid="587755661497256">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="316418343118636" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Arrow.png">
-                                <collision-poly>
-                                    <point x="0.282258" y="0.282258" />
-                                    <point x="0.5" y="0.00806452" />
-                                    <point x="0.717742" y="0.282258" />
-                                    <point x="0.572581" y="0.5" />
-                                    <point x="0.572581" y="0.572581" />
-                                    <point x="0.5" y="0.991935" />
-                                    <point x="0.427419" y="0.572581" />
-                                    <point x="0.427419" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_Easy" sid="109572530742587">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="885463165521674" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\EasyMap.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_Hard" sid="741688754638024">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="595757210928807" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\HardLevel.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
-            <object-folder name="MovingParts">
-                <object-type name="M3_Car" sid="548397735895161">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="CustomMovement" sid="438161668402432">
-                            <behavior id="custom" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="782751841468293" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.511364" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Car.png">
-                                <collision-poly>
-                                    <point x="0.0454545" y="0" />
-                                    <point x="0.487715" y="0" />
-                                    <point x="0.979115" y="0" />
-                                    <point x="0.979115" y="0.505682" />
-                                    <point x="1" y="1" />
-                                    <point x="0.487715" y="1" />
-                                    <point x="0.0208845" y="1" />
-                                    <point x="0.0577396" y="0.505682" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_Passenger" sid="904471930616347">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable name="IWantToGoTo" sid="364436070382371" type="string" />
-                    </instance-variables>
-                    <behaviors>
-                        <behavior-type name="CustomMovement" sid="307863472526922">
-                            <behavior id="custom" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="P1" pingpong="0" repeatcount="1" repeatto="0" sid="994477087227420" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.569767" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 1.png">
-                                <collision-poly>
-                                    <point x="0.2056" y="0.397116" />
-                                    <point x="0.4872" y="0.40307" />
-                                    <point x="0.4872" y="0.569767" />
-                                    <point x="0.2056" y="0.569767" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="P2" pingpong="0" repeatcount="1" repeatto="0" sid="665758537301687" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.574713" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 2.png">
-                                <collision-poly>
-                                    <point x="0.2056" y="0.404046" />
-                                    <point x="0.4872" y="0.409931" />
-                                    <point x="0.4872" y="0.574713" />
-                                    <point x="0.2056" y="0.574713" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="P3" pingpong="0" repeatcount="1" repeatto="0" sid="450023587154563" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.574713" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 3.png">
-                                <collision-poly>
-                                    <point x="0.2056" y="0.404046" />
-                                    <point x="0.4872" y="0.409931" />
-                                    <point x="0.4872" y="0.574713" />
-                                    <point x="0.2056" y="0.574713" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="P4" pingpong="0" repeatcount="1" repeatto="0" sid="635985417688939" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.574713" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 4.png">
-                                <collision-poly>
-                                    <point x="0.2056" y="0.404046" />
-                                    <point x="0.4872" y="0.409931" />
-                                    <point x="0.4872" y="0.574713" />
-                                    <point x="0.2056" y="0.574713" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="P5" pingpong="0" repeatcount="1" repeatto="0" sid="233038751071500" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.588889" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 5.png">
-                                <collision-poly>
-                                    <point x="0.2056" y="0.423911" />
-                                    <point x="0.4872" y="0.4296" />
-                                    <point x="0.4872" y="0.588889" />
-                                    <point x="0.2056" y="0.588889" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="P6" pingpong="0" repeatcount="1" repeatto="0" sid="140966947280208" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.574713" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 6.png">
-                                <collision-poly>
-                                    <point x="0.2056" y="0.404046" />
-                                    <point x="0.4872" y="0.409931" />
-                                    <point x="0.4872" y="0.574713" />
-                                    <point x="0.2056" y="0.574713" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="P7" pingpong="0" repeatcount="1" repeatto="0" sid="128807358768285" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.574713" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 7.png">
-                                <collision-poly>
-                                    <point x="0.2056" y="0.404046" />
-                                    <point x="0.4872" y="0.409931" />
-                                    <point x="0.4872" y="0.574713" />
-                                    <point x="0.2056" y="0.574713" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="P8" pingpong="0" repeatcount="1" repeatto="0" sid="847030158138245" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.588889" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 8.png">
-                                <collision-poly>
-                                    <point x="0.2056" y="0.423911" />
-                                    <point x="0.4872" y="0.4296" />
-                                    <point x="0.4872" y="0.588889" />
-                                    <point x="0.2056" y="0.588889" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
-            <object-folder name="Text">
-                <object-type name="M3_DescriptiveText" sid="154494611631778">
-                    <plugin id="Text" />
-                </object-type>
-                <object-type name="M3_EText" sid="906415651513657">
-                    <plugin id="Text" />
-                </object-type>
-                <object-type name="M3_EndgameText2" sid="379069060384221">
-                    <plugin id="Text" />
-                </object-type>
-                <object-type name="M3_FuelConsumed" sid="509642705218198">
-                    <plugin id="Spritefont2" />
-                    <texture />
-                </object-type>
-                <object-type name="M3_Instructions" sid="555908792552558">
-                    <plugin id="Text" />
-                </object-type>
-                <object-type name="M3_OnePlus" sid="882515768581216">
-                    <plugin id="Text" />
-                    <instance-variables>
-                        <instance-variable name="Mod" sid="486847791833227" type="number" />
-                    </instance-variables>
-                </object-type>
-                <object-type name="M3_SpriteFont" sid="611782501809498">
-                    <plugin id="Spritefont2" />
-                    <texture />
-                </object-type>
-                <object-type name="M3_Text" sid="268520560105888">
-                    <plugin id="Text" />
-                </object-type>
-                <object-type name="M3_Text2" sid="513825172988848">
-                    <plugin id="Text" />
-                    <instance-variables>
-                        <instance-variable name="OffsetX" sid="915966347652091" type="number" />
-                        <instance-variable name="OffsetY" sid="171495289360808" type="number" />
-                    </instance-variables>
-                </object-type>
-            </object-folder>
-            <object-folder name="Timer">
-                <object-type name="M3_TimerBar" sid="838734800018950">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="509675816964056" speed="5">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="535331946662001" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="M3_TimerIcon" sid="449522574904708">
+                <object-type name="TEMP4" sid="519308132891167">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="875871099567607" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Stopwatch.png">
-                                <collision-poly>
-                                    <point x="0.0806452" y="0.0806452" />
-                                    <point x="0.5" y="0.00806452" />
-                                    <point x="0.822581" y="0.177419" />
-                                    <point x="0.975806" y="0.5" />
-                                    <point x="0.846774" y="0.846774" />
-                                    <point x="0.5" y="0.991935" />
-                                    <point x="0.145161" y="0.854839" />
-                                    <point x="0.016129" y="0.5" />
-                                </collision-poly>
-                            </frame>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="432854971885530" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
             </object-folder>
-            <object-folder name="Tutorial">
-                <object-type name="M3_BlinkingBox" sid="945074235053509">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable name="Blinks" sid="867706336947938" type="number" />
-                        <instance-variable name="Blinking" sid="524800211239195" type="number" />
-                        <instance-variable name="Mod" sid="479729820234315" type="number" />
-                    </instance-variables>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="730341528039590" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_Mousey" sid="500315285504920">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable comment="0 is disabled, 1 is enabled, 2 is clicking" name="Status" sid="554802554107943" type="number" />
-                    </instance-variables>
-                    <behaviors>
-                        <behavior-type name="CustomMovement" sid="185634576075693">
-                            <behavior id="custom" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="556727814774159" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\selected.png">
-                                <collision-poly>
-                                    <point x="0.5075" y="0.335" />
-                                    <point x="0.705" y="0.33" />
-                                    <point x="0.705" y="0.505" />
-                                    <point x="0.51" y="0.5075" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Clicking" pingpong="0" repeatcount="1" repeatto="0" sid="265373587601800" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\standard.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_BlackBox" sid="999531559859142">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="715468437245766" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_TextboxHolder" sid="774201244459339">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="255484199858926" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="M3_Tutorial_Text" sid="967360562252875">
-                    <plugin id="Text" />
-                </object-type>
+            <object-folder name="M3_CarpoolGame_Objects">
+                <object-folder name="Arrays">
+                    <object-type global="1" name="M3_ConnectedCells" sid="409196086107849">
+                        <plugin id="Arr" />
+                    </object-type>
+                    <object-type global="1" name="M3_OList" sid="935370145652731">
+                        <plugin id="Arr" />
+                    </object-type>
+                    <object-type global="1" name="M3_TutorialTargets" sid="708088100819676">
+                        <plugin id="Arr" />
+                    </object-type>
+                    <object-type global="1" name="M3_Targets" sid="102132207837380">
+                        <plugin id="Arr" />
+                    </object-type>
+                </object-folder>
+                <object-folder name="Buttons">
+                    <object-type name="M3_ClearButton" sid="566509415593733">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="239632647044538" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Clear.png" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_GoButton" sid="420542339899303">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="406202439953151" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Go.png">
+                                    <collision-poly>
+                                        <point x="0.04" y="0.24" />
+                                        <point x="0.86" y="0.24" />
+                                        <point x="0.852" y="0.888" />
+                                        <point x="0.02" y="0.884" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-folder name="Endgame">
+                    <object-type name="M3_EndgameBackground" sid="495574497026953">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244987744120539" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_Star" sid="523522644685769">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="973838320356668" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\CarpoolMinigameProject\empty star (new).png">
+                                    <collision-poly>
+                                        <point x="0.336" y="0.336" />
+                                        <point x="0.5" y="0.044" />
+                                        <point x="0.668" y="0.332" />
+                                        <point x="0.916" y="0.5" />
+                                        <point x="0.808" y="0.808" />
+                                        <point x="0.212" y="0.788" />
+                                        <point x="0.096" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="Full" pingpong="0" repeatcount="1" repeatto="0" sid="294583965186262" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\CarpoolMinigameProject\star full (new).png">
+                                    <collision-poly>
+                                        <point x="0.336" y="0.336" />
+                                        <point x="0.5" y="0.044" />
+                                        <point x="0.668" y="0.332" />
+                                        <point x="0.916" y="0.5" />
+                                        <point x="0.808" y="0.808" />
+                                        <point x="0.212" y="0.788" />
+                                        <point x="0.096" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_EndgameMenu" sid="744078973893503">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="513302412233547" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.511905" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\Win Fail State.png">
+                                    <collision-poly>
+                                        <point x="0.0137383" y="0.132283" />
+                                        <point x="0.52133" y="0.0015748" />
+                                        <point x="0.999277" y="0.19685" />
+                                        <point x="0.999277" y="0.670866" />
+                                        <point x="0.916124" y="0.963779" />
+                                        <point x="0.52133" y="0.998425" />
+                                        <point x="0.117137" y="0.984252" />
+                                        <point x="0.000723066" y="0.670866" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_Retry" sid="968977960718523">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="247402810007195" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\Retry1.png">
+                                    <collision-poly>
+                                        <point x="0.155556" y="0.155556" />
+                                        <point x="0.5" y="0.133333" />
+                                        <point x="0.844444" y="0.155556" />
+                                        <point x="0.95" y="0.5" />
+                                        <point x="0.894444" y="0.894444" />
+                                        <point x="0.5" y="0.938889" />
+                                        <point x="0.111111" y="0.888889" />
+                                        <point x="0.0555556" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="Clicked" pingpong="0" repeatcount="1" repeatto="0" sid="223335438301429" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\Retry2.png">
+                                    <collision-poly>
+                                        <point x="0.155556" y="0.155556" />
+                                        <point x="0.5" y="0.133333" />
+                                        <point x="0.844444" y="0.155556" />
+                                        <point x="0.95" y="0.5" />
+                                        <point x="0.866667" y="0.866667" />
+                                        <point x="0.5" y="0.9" />
+                                        <point x="0.133333" y="0.866667" />
+                                        <point x="0.0555556" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_Exit" sid="899149563026205">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="627357157273535" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\Exit1.png">
+                                    <collision-poly>
+                                        <point x="0.155556" y="0.155556" />
+                                        <point x="0.5" y="0.133333" />
+                                        <point x="0.844444" y="0.155556" />
+                                        <point x="0.95" y="0.5" />
+                                        <point x="0.894444" y="0.894444" />
+                                        <point x="0.5" y="0.938889" />
+                                        <point x="0.111111" y="0.888889" />
+                                        <point x="0.0555556" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="Clicked" pingpong="0" repeatcount="1" repeatto="0" sid="920969676419549" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\Exit2.png">
+                                    <collision-poly>
+                                        <point x="0.155556" y="0.155556" />
+                                        <point x="0.5" y="0.127778" />
+                                        <point x="0.844444" y="0.155556" />
+                                        <point x="0.955556" y="0.5" />
+                                        <point x="0.872222" y="0.872222" />
+                                        <point x="0.5" y="0.9" />
+                                        <point x="0.133333" y="0.866667" />
+                                        <point x="0.05" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_EndgameText" sid="224091190552625">
+                        <plugin id="Text" />
+                    </object-type>
+                </object-folder>
+                <object-folder name="FuelDisplay">
+                    <object-type name="M3_FuelCan" sid="320123180550061">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="938792424716747" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\FuelCan.png">
+                                    <collision-poly>
+                                        <point x="0.15" y="0.15" />
+                                        <point x="0.5" y="0.015" />
+                                        <point x="0.885" y="0.115" />
+                                        <point x="0.85" y="0.5" />
+                                        <point x="0.85" y="0.85" />
+                                        <point x="0.5" y="0.985" />
+                                        <point x="0.15" y="0.85" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_FuelLevel" sid="141160512389320">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="281364534024349" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\FuelCan.png">
+                                    <collision-poly>
+                                        <point x="0.15" y="0.15" />
+                                        <point x="0.5" y="0.015" />
+                                        <point x="0.885" y="0.115" />
+                                        <point x="0.85" y="0.5" />
+                                        <point x="0.85" y="0.85" />
+                                        <point x="0.5" y="0.985" />
+                                        <point x="0.15" y="0.85" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-folder name="MapPieces">
+                    <object-type name="M3_JustForAlignment" sid="793429277644459">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="989816883145052" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_PlayerPointer" sid="563542968679729">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128632445603849" speed="5">
+                                <frame duration="1" hotspotX="0.502242" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Direction Arrow.png">
+                                    <collision-poly>
+                                        <point x="0.224215" y="0.342466" />
+                                        <point x="0.497758" y="0.342466" />
+                                        <point x="0.856502" y="0.219178" />
+                                        <point x="0.982063" y="0.5" />
+                                        <point x="0.843049" y="0.760274" />
+                                        <point x="0.497758" y="0.630137" />
+                                        <point x="0.242152" y="0.630137" />
+                                        <point x="0.0179372" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_Sprite2" sid="170582610045128">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="Location" sid="233827480534136" type="string" />
+                            <instance-variable name="PrimaryConnection" sid="705786503650065" type="string" />
+                            <instance-variable name="SecondaryConnection" sid="771842501018542" type="string" />
+                            <instance-variable name="UMadmanThirdConnection" sid="249277542254592" type="string" />
+                            <instance-variable name="OkayFineConnection4" sid="377680384907407" type="string" />
+                        </instance-variables>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="902339381268619" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Selection Circle.png">
+                                    <collision-poly>
+                                        <point x="0.159292" y="0.159292" />
+                                        <point x="0.495575" y="0.0176991" />
+                                        <point x="0.840708" y="0.159292" />
+                                        <point x="0.982301" y="0.495575" />
+                                        <point x="0.840708" y="0.840708" />
+                                        <point x="0.495575" y="0.982301" />
+                                        <point x="0.159292" y="0.840708" />
+                                        <point x="0.0176991" y="0.495575" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="277838369450056" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.159292" y="0.159292" />
+                                        <point x="0.495575" y="0.0176991" />
+                                        <point x="0.840708" y="0.159292" />
+                                        <point x="0.982301" y="0.495575" />
+                                        <point x="0.840708" y="0.840708" />
+                                        <point x="0.495575" y="0.982301" />
+                                        <point x="0.159292" y="0.840708" />
+                                        <point x="0.0176991" y="0.495575" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="Placeholder" pingpong="0" repeatcount="1" repeatto="0" sid="367149266000373" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.159292" y="0.159292" />
+                                        <point x="0.495575" y="0.0176991" />
+                                        <point x="0.840708" y="0.159292" />
+                                        <point x="0.982301" y="0.495575" />
+                                        <point x="0.840708" y="0.840708" />
+                                        <point x="0.495575" y="0.982301" />
+                                        <point x="0.159292" y="0.840708" />
+                                        <point x="0.0176991" y="0.495575" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="137797321940018" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.159292" y="0.159292" />
+                                        <point x="0.495575" y="0.0176991" />
+                                        <point x="0.840708" y="0.159292" />
+                                        <point x="0.982301" y="0.495575" />
+                                        <point x="0.840708" y="0.840708" />
+                                        <point x="0.495575" y="0.982301" />
+                                        <point x="0.159292" y="0.840708" />
+                                        <point x="0.0176991" y="0.495575" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_MapMed" sid="241656050123549">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="902747049854436" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Carpool Map1.png" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_Sprite3" sid="229490214259301">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="Location" sid="771005748404457" type="string" />
+                        </instance-variables>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="963769596955374" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.472" y="0.372" />
+                                        <point x="0.564" y="0.4" />
+                                        <point x="0.62" y="0.452" />
+                                        <point x="0.564" y="0.584" />
+                                        <point x="0.452" y="0.62" />
+                                        <point x="0.304" y="0.58" />
+                                        <point x="0.272" y="0.456" />
+                                        <point x="0.38" y="0.396" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_Sprite8" sid="602009260993411">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154532255147170" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passenger Holder.png" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_Sprite9" sid="587755661497256">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="316418343118636" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Arrow.png">
+                                    <collision-poly>
+                                        <point x="0.282258" y="0.282258" />
+                                        <point x="0.5" y="0.00806452" />
+                                        <point x="0.717742" y="0.282258" />
+                                        <point x="0.572581" y="0.5" />
+                                        <point x="0.572581" y="0.572581" />
+                                        <point x="0.5" y="0.991935" />
+                                        <point x="0.427419" y="0.572581" />
+                                        <point x="0.427419" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_Easy" sid="109572530742587">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="885463165521674" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\EasyMap.png" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_Hard" sid="741688754638024">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="595757210928807" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\HardLevel.png" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-folder name="MovingParts">
+                    <object-type name="M3_Car" sid="548397735895161">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="CustomMovement" sid="438161668402432">
+                                <behavior id="custom" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="782751841468293" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.511364" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Car.png">
+                                    <collision-poly>
+                                        <point x="0.0454545" y="0" />
+                                        <point x="0.487715" y="0" />
+                                        <point x="0.979115" y="0" />
+                                        <point x="0.979115" y="0.505682" />
+                                        <point x="1" y="1" />
+                                        <point x="0.487715" y="1" />
+                                        <point x="0.0208845" y="1" />
+                                        <point x="0.0577396" y="0.505682" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_Passenger" sid="904471930616347">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="IWantToGoTo" sid="364436070382371" type="string" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="CustomMovement" sid="307863472526922">
+                                <behavior id="custom" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="P1" pingpong="0" repeatcount="1" repeatto="0" sid="994477087227420" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.569767" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 1.png">
+                                    <collision-poly>
+                                        <point x="0.2056" y="0.397116" />
+                                        <point x="0.4872" y="0.40307" />
+                                        <point x="0.4872" y="0.569767" />
+                                        <point x="0.2056" y="0.569767" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="P2" pingpong="0" repeatcount="1" repeatto="0" sid="665758537301687" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.574713" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 2.png">
+                                    <collision-poly>
+                                        <point x="0.2056" y="0.404046" />
+                                        <point x="0.4872" y="0.409931" />
+                                        <point x="0.4872" y="0.574713" />
+                                        <point x="0.2056" y="0.574713" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="P3" pingpong="0" repeatcount="1" repeatto="0" sid="450023587154563" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.574713" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 3.png">
+                                    <collision-poly>
+                                        <point x="0.2056" y="0.404046" />
+                                        <point x="0.4872" y="0.409931" />
+                                        <point x="0.4872" y="0.574713" />
+                                        <point x="0.2056" y="0.574713" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="P4" pingpong="0" repeatcount="1" repeatto="0" sid="635985417688939" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.574713" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 4.png">
+                                    <collision-poly>
+                                        <point x="0.2056" y="0.404046" />
+                                        <point x="0.4872" y="0.409931" />
+                                        <point x="0.4872" y="0.574713" />
+                                        <point x="0.2056" y="0.574713" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="P5" pingpong="0" repeatcount="1" repeatto="0" sid="233038751071500" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.588889" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 5.png">
+                                    <collision-poly>
+                                        <point x="0.2056" y="0.423911" />
+                                        <point x="0.4872" y="0.4296" />
+                                        <point x="0.4872" y="0.588889" />
+                                        <point x="0.2056" y="0.588889" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="P6" pingpong="0" repeatcount="1" repeatto="0" sid="140966947280208" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.574713" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 6.png">
+                                    <collision-poly>
+                                        <point x="0.2056" y="0.404046" />
+                                        <point x="0.4872" y="0.409931" />
+                                        <point x="0.4872" y="0.574713" />
+                                        <point x="0.2056" y="0.574713" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="P7" pingpong="0" repeatcount="1" repeatto="0" sid="128807358768285" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.574713" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 7.png">
+                                    <collision-poly>
+                                        <point x="0.2056" y="0.404046" />
+                                        <point x="0.4872" y="0.409931" />
+                                        <point x="0.4872" y="0.574713" />
+                                        <point x="0.2056" y="0.574713" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="P8" pingpong="0" repeatcount="1" repeatto="0" sid="847030158138245" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.588889" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 8.png">
+                                    <collision-poly>
+                                        <point x="0.2056" y="0.423911" />
+                                        <point x="0.4872" y="0.4296" />
+                                        <point x="0.4872" y="0.588889" />
+                                        <point x="0.2056" y="0.588889" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-folder name="Text">
+                    <object-type name="M3_DescriptiveText" sid="154494611631778">
+                        <plugin id="Text" />
+                    </object-type>
+                    <object-type name="M3_EText" sid="906415651513657">
+                        <plugin id="Text" />
+                    </object-type>
+                    <object-type name="M3_EndgameText2" sid="379069060384221">
+                        <plugin id="Text" />
+                    </object-type>
+                    <object-type name="M3_FuelConsumed" sid="509642705218198">
+                        <plugin id="Spritefont2" />
+                        <texture />
+                    </object-type>
+                    <object-type name="M3_Instructions" sid="555908792552558">
+                        <plugin id="Text" />
+                    </object-type>
+                    <object-type name="M3_OnePlus" sid="882515768581216">
+                        <plugin id="Text" />
+                        <instance-variables>
+                            <instance-variable name="Mod" sid="486847791833227" type="number" />
+                        </instance-variables>
+                    </object-type>
+                    <object-type name="M3_SpriteFont" sid="611782501809498">
+                        <plugin id="Spritefont2" />
+                        <texture />
+                    </object-type>
+                    <object-type name="M3_Text" sid="268520560105888">
+                        <plugin id="Text" />
+                    </object-type>
+                    <object-type name="M3_Text2" sid="513825172988848">
+                        <plugin id="Text" />
+                        <instance-variables>
+                            <instance-variable name="OffsetX" sid="915966347652091" type="number" />
+                            <instance-variable name="OffsetY" sid="171495289360808" type="number" />
+                        </instance-variables>
+                    </object-type>
+                </object-folder>
+                <object-folder name="Timer">
+                    <object-type name="M3_TimerBar" sid="838734800018950">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="509675816964056" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_TimerIcon" sid="449522574904708">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="875871099567607" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Stopwatch.png">
+                                    <collision-poly>
+                                        <point x="0.0806452" y="0.0806452" />
+                                        <point x="0.5" y="0.00806452" />
+                                        <point x="0.822581" y="0.177419" />
+                                        <point x="0.975806" y="0.5" />
+                                        <point x="0.846774" y="0.846774" />
+                                        <point x="0.5" y="0.991935" />
+                                        <point x="0.145161" y="0.854839" />
+                                        <point x="0.016129" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-folder name="Tutorial">
+                    <object-type name="M3_BlinkingBox" sid="945074235053509">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="Blinks" sid="867706336947938" type="number" />
+                            <instance-variable name="Blinking" sid="524800211239195" type="number" />
+                            <instance-variable name="Mod" sid="479729820234315" type="number" />
+                        </instance-variables>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="730341528039590" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_Mousey" sid="500315285504920">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable comment="0 is disabled, 1 is enabled, 2 is clicking" name="Status" sid="554802554107943" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="CustomMovement" sid="185634576075693">
+                                <behavior id="custom" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="556727814774159" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\selected.png">
+                                    <collision-poly>
+                                        <point x="0.5075" y="0.335" />
+                                        <point x="0.705" y="0.33" />
+                                        <point x="0.705" y="0.505" />
+                                        <point x="0.51" y="0.5075" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="Clicking" pingpong="0" repeatcount="1" repeatto="0" sid="265373587601800" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\standard.png" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_BlackBox" sid="999531559859142">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="715468437245766" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_TextboxHolder" sid="774201244459339">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="255484199858926" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="M3_Tutorial_Text" sid="967360562252875">
+                        <plugin id="Text" />
+                    </object-type>
+                </object-folder>
             </object-folder>
         </object-folder>
     </object-folder>

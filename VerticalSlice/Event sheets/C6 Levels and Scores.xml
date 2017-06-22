@@ -13,6 +13,61 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <comment>Game 4</comment>
+                        <event-block sid="631786664554010">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="532448395470505" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="523869316078275">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="883360419885228" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="677228330129366" type="System">
+                                            <param id="0" name="Layout">&quot;M3_Tutorial_1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="334602803350313">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="119258450614916" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="477427865663531" type="System">
+                                            <param id="0" name="Layout">&quot;M3_Medium&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="162317848324229">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="613745459998335" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="407549777513109" type="System">
+                                            <param id="0" name="Layout">&quot;M3_Hard&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <comment>Game 10</comment>
                         <event-block sid="793475476161224">
                             <conditions>
