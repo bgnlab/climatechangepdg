@@ -954,6 +954,9 @@
                         </action>
                         <action id="-9" name="Destroy" sid="832807589640498" type="m2_2_timer" />
                         <action id="-9" name="Destroy" sid="862192994598950" type="m2_2_theLight" />
+                        <action id="6" name="Stop" sid="312336757480101" type="Audio">
+                            <param id="0" name="Tag">&quot;w0ta&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="497312294891405">
