@@ -21,32 +21,33 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1">
         <family expanded="0" name="M7_Door" />
-        <family expanded="1" name="M7_Person" />
-        <family expanded="1" name="M7_Room" />
+        <family expanded="0" name="M7_Person" />
+        <family expanded="0" name="M7_Room" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/Heat Lock/" />
-        <folder expanded="1" path="object-folder/Heat Lock/Rooms/" />
-        <folder expanded="1" path="object-folder/Heat Lock/Thermostat/" />
-        <folder expanded="1" path="object-folder/Heat Lock/People/" />
-        <folder expanded="1" path="object-folder/Heat Lock/Objects/" />
+        <folder expanded="1" path="object-folder/M7 Heat Lock/" />
+        <folder expanded="1" path="object-folder/M7 Heat Lock/Rooms/" />
+        <folder expanded="1" path="object-folder/M7 Heat Lock/Thermostat/" />
+        <folder expanded="1" path="object-folder/M7 Heat Lock/People/" />
+        <folder expanded="1" path="object-folder/M7 Heat Lock/Doors/" />
+        <folder expanded="1" path="object-folder/M7 Heat Lock/Windows/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/M7_HeatLockRoom0/" />
-        <folder expanded="1" path="animation-folder/M7_HeatLockRoom1/" />
-        <folder expanded="1" path="animation-folder/M7_HeatLockRoom2/" />
-        <folder expanded="1" path="animation-folder/M7_HeatLockRoom3/" />
-        <folder expanded="1" path="animation-folder/M7_HeatLockRoom4/" />
-        <folder expanded="1" path="animation-folder/M7_HeatLockRoom5/" />
-        <folder expanded="1" path="animation-folder/M7_HeatLockRoom6/" />
-        <folder expanded="1" path="animation-folder/M7_HeatLockPerson1/" />
-        <folder expanded="1" path="animation-folder/M7_HeatLockPerson2/" />
-        <folder expanded="1" path="animation-folder/M7_HeatLockDoor1/" />
-        <folder expanded="1" path="animation-folder/M7_HeatLockBackground/" />
+        <folder expanded="1" path="animation-folder/M7_Room0/" />
+        <folder expanded="1" path="animation-folder/M7_Room1/" />
+        <folder expanded="1" path="animation-folder/M7_Room2/" />
+        <folder expanded="1" path="animation-folder/M7_Room3/" />
+        <folder expanded="1" path="animation-folder/M7_Room4/" />
+        <folder expanded="1" path="animation-folder/M7_Room5/" />
+        <folder expanded="1" path="animation-folder/M7_Room6/" />
+        <folder expanded="1" path="animation-folder/M7_Person1/" />
+        <folder expanded="1" path="animation-folder/M7_Person2/" />
+        <folder expanded="1" path="animation-folder/M7_Door0/" />
+        <folder expanded="1" path="animation-folder/M7_Background/" />
     </folders-expanded>
 </c2uistate>
