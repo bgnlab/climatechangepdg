@@ -47,7 +47,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="N6_Background" uid="12">
+                <instance type="N6_Background" uid="59">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -88,7 +88,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="N6_Region" uid="0">
+                <instance type="N6_Region" uid="152">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -113,7 +113,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="N6_Region" uid="3">
+                <instance type="N6_Region" uid="211">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -138,7 +138,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="N6_Region" uid="4">
+                <instance type="N6_Region" uid="212">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -163,7 +163,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="N6_Region" uid="11">
+                <instance type="N6_Region" uid="213">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -207,7 +207,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="N6_TempIncrement" uid="33">
+                <instance type="N6_TempIncrement" uid="214">
                     <properties>
                         <type>Button</type>
                         <text>INCREMENT TEMPERATURE</text>
@@ -250,7 +250,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="N6_ToFuture" uid="8">
+                <instance type="N6_ToFuture" uid="215">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -272,7 +272,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="N6_Thermometer" uid="9">
+                <instance type="N6_Thermometer" uid="216">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -294,7 +294,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="N6_Calendar" uid="17">
+                <instance type="N6_Calendar" uid="217">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -316,7 +316,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="N6_Year" uid="18">
+                <instance type="N6_Year" uid="218">
                     <properties>
                         <text>2017</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -362,7 +362,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="N6_TransitionPane" uid="24">
+                <instance type="N6_TransitionPane" uid="219">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -384,7 +384,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="N6_TransitionCalendar" uid="25">
+                <instance type="N6_TransitionCalendar" uid="220">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -406,7 +406,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="N6_TransitionYear" uid="26">
+                <instance type="N6_TransitionYear" uid="221">
                     <properties>
                         <text>2100</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -438,7 +438,7 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="N6_LevelList" uid="5">
+        <instance type="N6_LevelList" uid="222">
             <properties>
                 <width>0</width>
                 <height>0</height>

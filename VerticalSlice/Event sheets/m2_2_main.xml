@@ -475,6 +475,10 @@
                                         <action id="-16" name="Set opacity" sid="141562873054011" type="m2_2_stoveLite">
                                             <param id="0" name="Opacity">100</param>
                                         </action>
+                                        <action id="4" name="Set animation" sid="227595133502354" type="m2_2_stoveLightSwitch">
+                                            <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="379029418204202">
@@ -493,6 +497,10 @@
                                         </action>
                                         <action id="-16" name="Set opacity" sid="750949478651388" type="m2_2_stoveLite">
                                             <param id="0" name="Opacity">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="905513779699734" type="m2_2_stoveLightSwitch">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>

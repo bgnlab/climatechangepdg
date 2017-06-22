@@ -15,6 +15,7 @@
         <variable constant="0" name="m2_3_lockPassworf" sid="651825413368853" static="0" type="number">0</variable>
         <variable constant="0" name="m2_3_playing" sid="925125533718039" static="0" type="number">1</variable>
         <variable constant="0" name="m2_3_win" sid="606887979437810" static="0" type="number">-1</variable>
+        <variable constant="0" name="m2_3_MousePrevX" sid="535602578584009" static="0" type="number">0</variable>
         <variable constant="0" name="m2_3_timer" sid="794463443780450" static="0" type="number">30</variable>
         <event-group description="" sid="859034363796915" title="m2_3_scoring&amp;setUp">
             <sub-events>
@@ -461,6 +462,51 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="263343956558616">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="748939191742905" type="m2_3_monitor">
+                            <param id="0" name="Instance variable">lock</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="791455245478895" type="m2_3_monitor">
+                            <param id="0" name="Instance variable">power</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="838675025064167" type="m2_3_monitorClear">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="770683080871252">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="523368427655893" type="Touch">
+                                    <param id="0" name="Object">m2_3_monitor</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="196486218230465" type="Touch">
+                                    <param id="0" name="Object">m2_3_button</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="129610965166625" type="m2_3_monitor">
+                                    <param id="0" name="Instance variable">lock</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="100497679784327">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="955786136338422" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="931575702536609" type="m2_3_monitorClear">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="713368917100686">
                     <conditions>
@@ -1410,6 +1456,72 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="107639290270918">
+                            <conditions>
+                                <condition id="7" name="Compare touch speed" sid="268920333422191" type="Touch">
+                                    <param id="0" name="Touch index">Touch.TouchID</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Speed">0</param>
+                                </condition>
+                                <condition id="4" name="Is touching object" sid="206989512473164" type="Touch">
+                                    <param id="0" name="Object">m2_3_Curtain</param>
+                                </condition>
+                                <condition id="-14" inverted="1" name="Compare variable" sid="877958097869738" type="System">
+                                    <param id="0" name="Variable">m2_3_windowChecker</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="673903835088811" type="System">
+                                    <param id="0" name="Variable">m2_1_PrevDragMouseX</param>
+                                    <param id="1" name="Value">Touch.X</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="640659439262661">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="892328145636408" type="System">
+                                            <param id="0" name="Interval (seconds)">0.01</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="189297841268895" type="m2_3_curtainLite">
+                                            <param id="0" name="Opacity">m2_3_curtainLite.Opacity+2</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="693263181890711" type="System">
+                                            <param id="0" name="Variable">m2_3_windowChecker</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="803907150975328" type="m2_3_Curtain">
+                                            <param id="0" name="Width">290-(m2_3_windowChecker*100/45)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="642846793704664">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="991726377811777" type="System">
+                                            <param id="0" name="Variable">m2_3_windowChecker</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="980040106959816" type="m2_3_Curtain">
+                                            <param id="0" name="Instance variable">opened</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="917727095870949" type="m2_3_Curtain">
+                                            <param id="0" name="Animation">&quot;high&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="895991303744076" type="m2_3_Curtain">
+                                            <param id="0" name="Width">290</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-group>
             </sub-events>
@@ -2329,38 +2441,129 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="465924099996572">
+                        <event-block any="1" sid="886761922730329">
                             <conditions>
-                                <condition id="4" inverted="1" name="Is touching object" sid="845991363195149" type="Touch">
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="893838238159513" type="m2_3_monitor">
+                                    <param id="0" name="Instance variable">power</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="713081389408408" type="m2_3_monitor">
+                                    <param id="0" name="Instance variable">lock</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="465924099996572">
+                                    <conditions>
+                                        <condition id="4" inverted="1" name="Is touching object" sid="845991363195149" type="Touch">
+                                            <param id="0" name="Object">m2_3_book</param>
+                                        </condition>
+                                        <condition id="4" inverted="1" name="Is touching object" sid="122676355796945" type="Touch">
+                                            <param id="0" name="Object">m2_3_button</param>
+                                        </condition>
+                                        <condition id="4" inverted="1" name="Is touching object" sid="798063989321630" type="Touch">
+                                            <param id="0" name="Object">m2_3_cupboard</param>
+                                        </condition>
+                                        <condition id="4" inverted="1" name="Is touching object" sid="521864760167575" type="Touch">
+                                            <param id="0" name="Object">m2_3_door</param>
+                                        </condition>
+                                        <condition id="4" inverted="1" name="Is touching object" sid="112642835812136" type="Touch">
+                                            <param id="0" name="Object">m2_3_fan</param>
+                                        </condition>
+                                        <condition id="4" inverted="1" name="Is touching object" sid="782256204518894" type="Touch">
+                                            <param id="0" name="Object">m2_3_fanPlug</param>
+                                        </condition>
+                                        <condition id="4" inverted="1" name="Is touching object" sid="137360279309439" type="Touch">
+                                            <param id="0" name="Object">m2_3_nightLight</param>
+                                        </condition>
+                                        <condition id="4" inverted="1" name="Is touching object" sid="842364561835759" type="Touch">
+                                            <param id="0" name="Object">m2_3_nightLightPlug</param>
+                                        </condition>
+                                        <condition id="4" inverted="1" name="Is touching object" sid="936722621734173" type="Touch">
+                                            <param id="0" name="Object">m2_3_padlock</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="668782840347617" type="Audio">
+                                            <param id="0" name="Audio file">sfx_click_unclickable_obj01</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-20</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="625430691466504">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="263820375082657" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="894659279395035" type="Audio">
+                                            <param id="0" name="Audio file">sfx_clicking_clikable_obj</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-15</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="522050168155198">
+                    <conditions>
+                        <condition id="14" name="On tap" sid="952560402210108" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="174766279352605" type="System">
+                            <param id="0" name="Variable">m2_3_playing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="666410218236247" type="m2_3_monitor">
+                            <param id="0" name="Instance variable">power</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="881812214338167" type="m2_3_monitor">
+                            <param id="0" name="Instance variable">lock</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="288206194759613">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is touching object" sid="727981671679162" type="Touch">
                                     <param id="0" name="Object">m2_3_book</param>
                                 </condition>
-                                <condition id="4" inverted="1" name="Is touching object" sid="122676355796945" type="Touch">
+                                <condition id="4" inverted="1" name="Is touching object" sid="409220300371365" type="Touch">
                                     <param id="0" name="Object">m2_3_button</param>
                                 </condition>
-                                <condition id="4" inverted="1" name="Is touching object" sid="798063989321630" type="Touch">
+                                <condition id="4" inverted="1" name="Is touching object" sid="547373602454861" type="Touch">
                                     <param id="0" name="Object">m2_3_cupboard</param>
                                 </condition>
-                                <condition id="4" inverted="1" name="Is touching object" sid="521864760167575" type="Touch">
+                                <condition id="4" inverted="1" name="Is touching object" sid="124283197964026" type="Touch">
                                     <param id="0" name="Object">m2_3_door</param>
                                 </condition>
-                                <condition id="4" inverted="1" name="Is touching object" sid="112642835812136" type="Touch">
+                                <condition id="4" inverted="1" name="Is touching object" sid="969407441242592" type="Touch">
                                     <param id="0" name="Object">m2_3_fan</param>
                                 </condition>
-                                <condition id="4" inverted="1" name="Is touching object" sid="782256204518894" type="Touch">
+                                <condition id="4" inverted="1" name="Is touching object" sid="958170260150100" type="Touch">
                                     <param id="0" name="Object">m2_3_fanPlug</param>
                                 </condition>
-                                <condition id="4" inverted="1" name="Is touching object" sid="137360279309439" type="Touch">
+                                <condition id="4" inverted="1" name="Is touching object" sid="673295201033122" type="Touch">
                                     <param id="0" name="Object">m2_3_nightLight</param>
                                 </condition>
-                                <condition id="4" inverted="1" name="Is touching object" sid="842364561835759" type="Touch">
+                                <condition id="4" inverted="1" name="Is touching object" sid="441978336241130" type="Touch">
                                     <param id="0" name="Object">m2_3_nightLightPlug</param>
                                 </condition>
-                                <condition id="4" inverted="1" name="Is touching object" sid="936722621734173" type="Touch">
+                                <condition id="4" inverted="1" name="Is touching object" sid="737021018537559" type="Touch">
                                     <param id="0" name="Object">m2_3_padlock</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="993387063755946" type="Touch">
+                                    <param id="0" name="Object">m2_3_monitor</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="668782840347617" type="Audio">
+                                <action id="0" name="Play" sid="973301783393673" type="Audio">
                                     <param id="0" name="Audio file">sfx_click_unclickable_obj01</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">-20</param>
@@ -2368,12 +2571,12 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="625430691466504">
+                        <event-block sid="117178882077730">
                             <conditions>
-                                <condition id="-22" name="Else" sid="263820375082657" type="System" />
+                                <condition id="-22" name="Else" sid="474765071916482" type="System" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="894659279395035" type="Audio">
+                                <action id="0" name="Play" sid="936861809094891" type="Audio">
                                     <param id="0" name="Audio file">sfx_clicking_clikable_obj</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">-15</param>
