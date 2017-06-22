@@ -23,6 +23,10 @@
                 <action id="-16" name="Wait" sid="681873647904012" type="System">
                     <param id="0" name="Seconds">0.2</param>
                 </action>
+                <action id="-10" name="Add to" sid="769575852291961" type="System">
+                    <param id="0" name="Variable">m2_1_plsWait</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="304284324036461">
@@ -85,10 +89,6 @@
                 </action>
                 <action id="-16" name="Wait" sid="334279830937738" type="System">
                     <param id="0" name="Seconds">0.5</param>
-                </action>
-                <action id="-10" name="Add to" sid="769575852291961" type="System">
-                    <param id="0" name="Variable">m2_1_plsWait</param>
-                    <param id="1" name="Value">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="515922258478497" type="m2_1_CLICKER">
                     <param id="0" name="Animation">&quot;Default&quot;</param>

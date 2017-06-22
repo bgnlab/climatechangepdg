@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>m2_1_tut1</name>
     <events>
-        <variable constant="0" name="m2_1_waittttttt" sid="780755105764290" static="0" type="number">0</variable>
+        <variable constant="0" name="m2_1_waittttttt" sid="780755105764290" static="0" type="number">1</variable>
         <variable constant="0" name="m2_1_prev" sid="198123933121642" static="0" type="number">0</variable>
         <variable constant="0" name="m2_1_prg" sid="150344383380618" static="0" type="number">0</variable>
         <event-block sid="463882700182023">
@@ -16,6 +16,7 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-21" name="Reset global variables" sid="303016709811304" type="System" />
                 <action id="0" name="Set text" sid="147428361661148" type="m2_1_Tutorial">
                     <param id="0" name="Text">&quot;Turn off and unplug as many electronics as you can&quot;</param>
                 </action>
@@ -147,7 +148,7 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
-                <condition id="-14" name="Compare variable" sid="716613877501560" type="System">
+                <condition disabled="1" id="-14" name="Compare variable" sid="716613877501560" type="System">
                     <param id="0" name="Variable">m2_1_waittttttt</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
