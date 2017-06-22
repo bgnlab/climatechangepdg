@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>m2_3_main</name>
     <events>
+        <variable constant="0" name="m2_3_MouseCurX" sid="913137335482933" static="0" type="number">0</variable>
         <include>C6 Levels and Scores</include>
         <variable constant="0" name="m2_3_checkermd" sid="946533819080235" static="0" type="number">0</variable>
         <variable constant="0" name="m2_3_checkermt" sid="775121740661840" static="0" type="number">0</variable>
@@ -1474,7 +1475,11 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="673903835088811" type="System">
-                                    <param id="0" name="Variable">m2_1_PrevDragMouseX</param>
+                                    <param id="0" name="Variable">m2_3_MousePrevX</param>
+                                    <param id="1" name="Value">m2_3_MouseCurX</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="193156307158678" type="System">
+                                    <param id="0" name="Variable">m2_3_MouseCurX</param>
                                     <param id="1" name="Value">Touch.X</param>
                                 </action>
                             </actions>
@@ -1484,8 +1489,21 @@
                                         <condition id="-6" name="Every X seconds" sid="892328145636408" type="System">
                                             <param id="0" name="Interval (seconds)">0.01</param>
                                         </condition>
+                                        <condition id="-14" name="Compare variable" sid="119127758382820" type="System">
+                                            <param id="0" name="Variable">m2_3_MouseCurX</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">m2_3_MousePrevX</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="-9" name="Set value" sid="289979467056338" type="System">
+                                            <param id="0" name="Variable">m2_3_MousePrevX</param>
+                                            <param id="1" name="Value">m2_3_MouseCurX</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="634541109526233" type="System">
+                                            <param id="0" name="Variable">m2_3_MouseCurX</param>
+                                            <param id="1" name="Value">Touch.X</param>
+                                        </action>
                                         <action id="-16" name="Set opacity" sid="189297841268895" type="m2_3_curtainLite">
                                             <param id="0" name="Opacity">m2_3_curtainLite.Opacity+2</param>
                                         </action>
