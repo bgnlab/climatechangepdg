@@ -23,6 +23,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="M7_Door" />
         <family expanded="0" name="M7_Person" />
         <family expanded="0" name="M7_Room" />
+        <family expanded="0" name="M7_Window" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -30,8 +31,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/M7 Heat Lock/Rooms/" />
         <folder expanded="1" path="object-folder/M7 Heat Lock/Thermostat/" />
         <folder expanded="1" path="object-folder/M7 Heat Lock/People/" />
-        <folder expanded="1" path="object-folder/M7 Heat Lock/Doors/" />
-        <folder expanded="1" path="object-folder/M7 Heat Lock/Windows/" />
+        <folder expanded="0" path="object-folder/M7 Heat Lock/Doors/" />
+        <folder expanded="0" path="object-folder/M7 Heat Lock/Windows/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -48,6 +49,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/M7_Person1/" />
         <folder expanded="1" path="animation-folder/M7_Person2/" />
         <folder expanded="1" path="animation-folder/M7_Door0/" />
+        <folder expanded="1" path="animation-folder/M7_Door1/" />
+        <folder expanded="1" path="animation-folder/M7_Door2/" />
+        <folder expanded="1" path="animation-folder/M7_Door3/" />
+        <folder expanded="1" path="animation-folder/M7_Door4/" />
+        <folder expanded="1" path="animation-folder/M7_Window0/" />
+        <folder expanded="1" path="animation-folder/M7_Window1/" />
+        <folder expanded="1" path="animation-folder/M7_Window2/" />
         <folder expanded="1" path="animation-folder/M7_Background/" />
     </folders-expanded>
 </c2uistate>

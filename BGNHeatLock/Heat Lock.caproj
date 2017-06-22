@@ -161,10 +161,10 @@
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128897965129236" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <collision-poly>
-                                    <point x="0.33" y="0.88" />
-                                    <point x="0.62" y="0.89" />
+                                    <point x="0.27" y="0" />
+                                    <point x="0.65" y="0" />
                                     <point x="0.65" y="1" />
-                                    <point x="0.35" y="1" />
+                                    <point x="0.27" y="1" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -193,10 +193,82 @@
                         <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="925718958811300" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
+                        <animation framecount="1" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="214138668303855" speed="5">
+                            <frame duration="1" hotspotX="0.125" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_Door1" sid="291619024780244">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="584838831655775" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="808966196560816" speed="5">
+                            <frame duration="1" hotspotX="0.125" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_Door2" sid="834687307626483">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="506782403045005" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="174354745876186" speed="5">
+                            <frame duration="1" hotspotX="0.125" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_Door3" sid="354211927487509">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="339002848123194" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="826779257304926" speed="5">
+                            <frame duration="1" hotspotX="0.125" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_Door4" sid="712243482907658">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="336050227865138" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="951849099337035" speed="5">
+                            <frame duration="1" hotspotX="0.125" hotspotY="0.5" />
+                        </animation>
                     </animation-folder>
                 </object-type>
             </object-folder>
-            <object-folder name="Windows" />
+            <object-folder name="Windows">
+                <object-type name="M7_Window0" sid="596381458424990">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="415549867563289" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_Window1" sid="745289078298697">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759711711982986" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_Window2" sid="632734721257559">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="179039728795967" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-type name="M7_Background" sid="418638116969609">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -221,11 +293,14 @@
         <family name="M7_Door" plugin-id="Sprite" sid="715437670202484">
             <members>
                 <member>M7_Door0</member>
+                <member>M7_Door1</member>
+                <member>M7_Door2</member>
+                <member>M7_Door3</member>
+                <member>M7_Door4</member>
             </members>
             <instance-variables>
                 <instance-variable name="Open" sid="983191241668898" type="number" />
-                <instance-variable name="Room1" sid="910005133776265" type="string" />
-                <instance-variable name="Room2" sid="545423970902961" type="string" />
+                <instance-variable name="Rooms" sid="827602361563659" type="string" />
             </instance-variables>
         </family>
         <family name="M7_Person" plugin-id="Sprite" sid="345353932365871">
@@ -262,6 +337,20 @@
                 <instance-variable name="OldTemperature" sid="248951232695566" type="number" />
                 <instance-variable name="VentCount" sid="378158399564968" type="number" />
                 <instance-variable name="Neighbours" sid="647454632703248" type="string" />
+                <instance-variable name="Windows" sid="967080754331584" type="string" />
+                <instance-variable name="Doors" sid="542181657722024" type="string" />
+                <instance-variable name="StoveCount" sid="319863765869726" type="number" />
+            </instance-variables>
+        </family>
+        <family name="M7_Window" plugin-id="Sprite" sid="476940482332153">
+            <members>
+                <member>M7_Window0</member>
+                <member>M7_Window1</member>
+                <member>M7_Window2</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Closed" sid="750551329093491" type="number" />
+                <instance-variable name="HasSun" sid="739186013012499" type="number" />
             </instance-variables>
         </family>
     </families>

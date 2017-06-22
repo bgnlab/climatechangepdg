@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="1">M3_Tutorial_2</layout>
+        <layout order="2">M3_Tutorial_3</layout>
+        <layout order="4">M3_Tutorial_1</layout>
+        <layout order="5">TEMPORARY_LEVEL_SELECT</layout>
+        <event-sheet active="1" order="3">M3_TutorialES</event-sheet>
+        <event-sheet order="0">M3_GameEventSheet</event-sheet>
+        <event-sheet order="6">TEMPORAY_LS_ES</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/TEMPORAY_LEVEL_SELECT/" />
+        <folder expanded="1" path="object-folder/M3_CarpoolGame_Objects/" />
+        <folder expanded="1" path="object-folder/M3_CarpoolGame_Objects/Arrays/" />
+        <folder expanded="1" path="object-folder/M3_CarpoolGame_Objects/Buttons/" />
+        <folder expanded="1" path="object-folder/M3_CarpoolGame_Objects/Endgame/" />
+        <folder expanded="1" path="object-folder/M3_CarpoolGame_Objects/FuelDisplay/" />
+        <folder expanded="1" path="object-folder/M3_CarpoolGame_Objects/Global/" />
+        <folder expanded="1" path="object-folder/M3_CarpoolGame_Objects/MapPieces/" />
+        <folder expanded="1" path="object-folder/M3_CarpoolGame_Objects/MovingParts/" />
+        <folder expanded="1" path="object-folder/M3_CarpoolGame_Objects/Text/" />
+        <folder expanded="1" path="object-folder/M3_CarpoolGame_Objects/Timer/" />
+        <folder expanded="1" path="object-folder/M3_CarpoolGame_Objects/Tutorial/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/TEMP1/" />
+        <folder expanded="1" path="animation-folder/TEMP2/" />
+        <folder expanded="1" path="animation-folder/TEMP3/" />
+        <folder expanded="1" path="animation-folder/TEMP4/" />
+        <folder expanded="1" path="animation-folder/M3_ClearButton/" />
+        <folder expanded="1" path="animation-folder/M3_GoButton/" />
+        <folder expanded="1" path="animation-folder/M3_EndgameBackground/" />
+        <folder expanded="1" path="animation-folder/M3_Star/" />
+        <folder expanded="1" path="animation-folder/M3_EndgameMenu/" />
+        <folder expanded="1" path="animation-folder/M3_Retry/" />
+        <folder expanded="1" path="animation-folder/M3_Exit/" />
+        <folder expanded="1" path="animation-folder/M3_FuelCan/" />
+        <folder expanded="1" path="animation-folder/M3_FuelLevel/" />
+        <folder expanded="1" path="animation-folder/M3_JustForAlignment/" />
+        <folder expanded="1" path="animation-folder/M3_PlayerPointer/" />
+        <folder expanded="1" path="animation-folder/M3_Sprite2/" />
+        <folder expanded="1" path="animation-folder/M3_MapMed/" />
+        <folder expanded="1" path="animation-folder/M3_Sprite3/" />
+        <folder expanded="1" path="animation-folder/M3_Sprite8/" />
+        <folder expanded="1" path="animation-folder/M3_Sprite9/" />
+        <folder expanded="1" path="animation-folder/M3_Easy/" />
+        <folder expanded="1" path="animation-folder/M3_Hard/" />
+        <folder expanded="1" path="animation-folder/M3_Car/" />
+        <folder expanded="1" path="animation-folder/M3_Passenger/" />
+        <folder expanded="1" path="animation-folder/M3_TimerBar/" />
+        <folder expanded="1" path="animation-folder/M3_TimerIcon/" />
+        <folder expanded="1" path="animation-folder/M3_BlinkingBox/" />
+        <folder expanded="1" path="animation-folder/M3_Mousey/" />
+        <folder expanded="1" path="animation-folder/M3_BlackBox/" />
+        <folder expanded="1" path="animation-folder/M3_TextboxHolder/" />
+    </folders-expanded>
+</c2uistate>
