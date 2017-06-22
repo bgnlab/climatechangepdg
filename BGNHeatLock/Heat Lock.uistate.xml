@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">M7_HeatLock</layout>
-        <event-sheet order="1">M7_HeatLock</event-sheet>
+        <layout order="0">M7_HeatLock</layout>
+        <event-sheet active="1" order="1">M7_HeatLock</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -31,7 +31,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/M7 Heat Lock/Rooms/" />
         <folder expanded="1" path="object-folder/M7 Heat Lock/Thermostat/" />
         <folder expanded="1" path="object-folder/M7 Heat Lock/People/" />
-        <folder expanded="0" path="object-folder/M7 Heat Lock/Doors/" />
+        <folder expanded="1" path="object-folder/M7 Heat Lock/Doors/" />
         <folder expanded="0" path="object-folder/M7 Heat Lock/Windows/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />

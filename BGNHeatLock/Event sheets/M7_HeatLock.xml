@@ -613,44 +613,56 @@
             <sub-events>
                 <event-group description="" sid="545667328686850" title="M7 Door Behaviour">
                     <sub-events>
-                        <event-block sid="310730186494695">
+                        <event-block sid="322695056185697">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="817041650241669" type="M7_Door">
-                                    <param id="0" name="Instance variable">Open</param>
+                                <condition id="1" name="Is overlapping another object" sid="683493606401548" type="M7_Door">
+                                    <param id="0" name="Object">M7_Person</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="688072964005018" type="M7_Door">
+                                    <param id="0" name="Instance variable">Occupied</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="549027752258312">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="503087626985366" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="726043884222575" type="M7_Door">
+                                    <param id="0" name="Instance variable">Occupied</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="773084409799769">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="297065913596970" type="M7_Door">
+                                    <param id="0" name="Instance variable">Occupied</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="773084409799769">
+                                <event-block sid="847028597215671">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="297065913596970" type="M7_Door">
-                                            <param id="0" name="Instance variable">Occupied</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
+                                        <condition id="17" name="On tap object" sid="948535004466842" type="Touch">
+                                            <param id="0" name="Object">M7_Door</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="847028597215671">
-                                            <conditions>
-                                                <condition id="17" name="On tap object" sid="948535004466842" type="Touch">
-                                                    <param id="0" name="Object">M7_Door</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="506243875820990" type="M7_Door">
-                                                    <param id="0" name="Instance variable">Open</param>
-                                                    <param id="1" name="Value">M7_Door.Open = 0 ? 1 : 0</param>
-                                                </action>
-                                                <action id="4" name="Set animation" sid="954334525393956" type="M7_Door">
-                                                    <param id="0" name="Animation">M7_Door.Open = 0 ? &quot;Closed&quot; : &quot;Open&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="386299334267273" type="M7_Door">
+                                            <param id="0" name="Instance variable">Open</param>
+                                            <param id="1" name="Value">Self.Open = 0 ? 1 : 0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="954334525393956" type="M7_Door">
+                                            <param id="0" name="Animation">Self.Open = 0 ? &quot;Closed&quot; : &quot;Open&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -658,7 +670,16 @@
                             <conditions>
                                 <condition id="-22" name="Else" sid="828346412450075" type="System" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-10" name="Set value" sid="320159571993842" type="M7_Door">
+                                    <param id="0" name="Instance variable">Open</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="558578452524929" type="M7_Door">
+                                    <param id="0" name="Animation">&quot;Open&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
