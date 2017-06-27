@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
@@ -242,28 +243,272 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="M7_Door5" sid="267085689956551">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="715450084203340" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="468235357194170" speed="5">
+                            <frame duration="1" hotspotX="0.125" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Windows">
                 <object-type name="M7_Window0" sid="596381458424990">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="415549867563289" speed="5">
+                        <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="415549867563289" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="755673339846350" speed="5">
+                            <frame duration="1" hotspotX="0.166667" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="M7_Window1" sid="745289078298697">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759711711982986" speed="5">
+                        <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="759711711982986" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="244312843210018" speed="5">
+                            <frame duration="1" hotspotX="0.166667" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="M7_Window2" sid="632734721257559">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="179039728795967" speed="5">
+                        <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="179039728795967" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="904309863255382" speed="5">
+                            <frame duration="1" hotspotX="0.166667" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Timer">
+                <object-type name="M7_Timer_Icon" sid="689877967050408">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="437981048274718" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Stopwatch.png">
+                                <collision-poly>
+                                    <point x="0.0806452" y="0.0806452" />
+                                    <point x="0.5" y="0.00806452" />
+                                    <point x="0.822581" y="0.177419" />
+                                    <point x="0.975806" y="0.5" />
+                                    <point x="0.846774" y="0.846774" />
+                                    <point x="0.5" y="0.991935" />
+                                    <point x="0.145161" y="0.854839" />
+                                    <point x="0.016129" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_Timer_Bar" sid="159953023339468">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="TimeLeft" sid="425711356668739" type="number" />
+                        <instance-variable name="MaxWidth" sid="880468968457728" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802228684751090" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="End Screen">
+                <object-type name="M7_End_BG" sid="751426128165846">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="463099235909508" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Win Fail State.png">
+                                <collision-poly>
+                                    <point x="0.0137383" y="0.132283" />
+                                    <point x="0.52133" y="0.0015748" />
+                                    <point x="0.999277" y="0.19685" />
+                                    <point x="0.999277" y="0.670866" />
+                                    <point x="0.916124" y="0.963779" />
+                                    <point x="0.52133" y="0.998425" />
+                                    <point x="0.117137" y="0.984252" />
+                                    <point x="0.000723066" y="0.670866" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_End_Restart" sid="129460247762053">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Up" pingpong="0" repeatcount="1" repeatto="0" sid="949699158816165" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Retry1.png">
+                                <collision-poly>
+                                    <point x="0.155556" y="0.155556" />
+                                    <point x="0.5" y="0.133333" />
+                                    <point x="0.844444" y="0.155556" />
+                                    <point x="0.95" y="0.5" />
+                                    <point x="0.894444" y="0.894444" />
+                                    <point x="0.5" y="0.938889" />
+                                    <point x="0.111111" y="0.888889" />
+                                    <point x="0.0555556" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Down" pingpong="0" repeatcount="1" repeatto="0" sid="874808515424517" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Retry2.png">
+                                <collision-poly>
+                                    <point x="0.155556" y="0.155556" />
+                                    <point x="0.5" y="0.133333" />
+                                    <point x="0.844444" y="0.155556" />
+                                    <point x="0.95" y="0.5" />
+                                    <point x="0.894444" y="0.894444" />
+                                    <point x="0.5" y="0.938889" />
+                                    <point x="0.111111" y="0.888889" />
+                                    <point x="0.0555556" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_End_Exit" sid="687833782293127">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Up" pingpong="0" repeatcount="1" repeatto="0" sid="322406161723997" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Exit1.png">
+                                <collision-poly>
+                                    <point x="0.155556" y="0.155556" />
+                                    <point x="0.5" y="0.127778" />
+                                    <point x="0.844444" y="0.155556" />
+                                    <point x="0.955556" y="0.5" />
+                                    <point x="0.894444" y="0.894444" />
+                                    <point x="0.5" y="0.933333" />
+                                    <point x="0.111111" y="0.888889" />
+                                    <point x="0.05" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Down" pingpong="0" repeatcount="1" repeatto="0" sid="633253690446948" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Exit2.png">
+                                <collision-poly>
+                                    <point x="0.155556" y="0.155556" />
+                                    <point x="0.5" y="0.127778" />
+                                    <point x="0.844444" y="0.155556" />
+                                    <point x="0.955556" y="0.5" />
+                                    <point x="0.894444" y="0.894444" />
+                                    <point x="0.5" y="0.933333" />
+                                    <point x="0.111111" y="0.888889" />
+                                    <point x="0.05" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_End_Star0" sid="777098340626620">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="696796679685482" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\empty star (new).png">
+                                <collision-poly>
+                                    <point x="0.336" y="0.336" />
+                                    <point x="0.5" y="0.044" />
+                                    <point x="0.668" y="0.332" />
+                                    <point x="0.916" y="0.5" />
+                                    <point x="0.808" y="0.808" />
+                                    <point x="0.212" y="0.788" />
+                                    <point x="0.096" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Full" pingpong="0" repeatcount="1" repeatto="0" sid="608603933176019" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\star full (new).png">
+                                <collision-poly>
+                                    <point x="0.336" y="0.336" />
+                                    <point x="0.5" y="0.044" />
+                                    <point x="0.668" y="0.332" />
+                                    <point x="0.916" y="0.5" />
+                                    <point x="0.808" y="0.808" />
+                                    <point x="0.212" y="0.788" />
+                                    <point x="0.096" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_End_Text" sid="186329991424996">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="M7_End_Star1" sid="449969539556904">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="987914867359751" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\empty star (new).png">
+                                <collision-poly>
+                                    <point x="0.336" y="0.336" />
+                                    <point x="0.5" y="0.044" />
+                                    <point x="0.668" y="0.332" />
+                                    <point x="0.916" y="0.5" />
+                                    <point x="0.808" y="0.808" />
+                                    <point x="0.212" y="0.788" />
+                                    <point x="0.096" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Full" pingpong="0" repeatcount="1" repeatto="0" sid="187452340895843" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\star full (new).png">
+                                <collision-poly>
+                                    <point x="0.336" y="0.336" />
+                                    <point x="0.5" y="0.044" />
+                                    <point x="0.668" y="0.332" />
+                                    <point x="0.916" y="0.5" />
+                                    <point x="0.808" y="0.808" />
+                                    <point x="0.212" y="0.788" />
+                                    <point x="0.096" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_End_Star2" sid="512239787570336">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="448399284262262" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\empty star (new).png">
+                                <collision-poly>
+                                    <point x="0.336" y="0.336" />
+                                    <point x="0.5" y="0.044" />
+                                    <point x="0.668" y="0.332" />
+                                    <point x="0.916" y="0.5" />
+                                    <point x="0.808" y="0.808" />
+                                    <point x="0.212" y="0.788" />
+                                    <point x="0.096" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Full" pingpong="0" repeatcount="1" repeatto="0" sid="892285620349365" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\star full (new).png">
+                                <collision-poly>
+                                    <point x="0.336" y="0.336" />
+                                    <point x="0.5" y="0.044" />
+                                    <point x="0.668" y="0.332" />
+                                    <point x="0.916" y="0.5" />
+                                    <point x="0.808" y="0.808" />
+                                    <point x="0.212" y="0.788" />
+                                    <point x="0.096" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="M7_End_Dim" sid="119692901231893">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="641766598430227" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
@@ -277,16 +522,16 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="M7_TemperatureText" sid="500316849176710">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
         </object-folder>
         <object-type name="Touch" sid="794535935296391">
             <plugin id="Touch" />
         </object-type>
         <object-type name="Function" sid="800460506755160">
             <plugin id="Function" />
-        </object-type>
-        <object-type name="SpriteFont" sid="500316849176710">
-            <plugin id="Spritefont2" />
-            <texture />
         </object-type>
     </object-folder>
     <families>
@@ -297,6 +542,7 @@
                 <member>M7_Door2</member>
                 <member>M7_Door3</member>
                 <member>M7_Door4</member>
+                <member>M7_Door5</member>
             </members>
             <instance-variables>
                 <instance-variable name="Open" sid="983191241668898" type="number" />
@@ -350,7 +596,7 @@
                 <member>M7_Window2</member>
             </members>
             <instance-variables>
-                <instance-variable name="Closed" sid="750551329093491" type="number" />
+                <instance-variable name="Open" sid="750551329093491" type="number" />
                 <instance-variable name="HasSun" sid="739186013012499" type="number" />
             </instance-variables>
         </family>

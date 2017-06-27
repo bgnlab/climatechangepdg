@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>C6 Menu</name>
     <events>
+        <include>GG Scores and Levels</include>
         <include>C6 Levels and Scores</include>
         <variable constant="0" name="C6_UIState" sid="833072582617239" static="0" type="text">UIStart</variable>
         <variable constant="0" name="C6_SelectedGame" sid="917913845086719" static="0" type="number">-1</variable>
@@ -186,7 +187,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="501922786289729" type="Function">
-                                            <param id="0" name="Name">&quot;C6 Load Game&quot;</param>
+                                            <param id="0" name="Name">&quot;GG Load Game&quot;</param>
                                             <param id="1" name="Parameter {n}">C6_SelectedGame{###}0</param>
                                         </action>
                                     </actions>
@@ -199,7 +200,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="890818353186043" type="Function">
-                                            <param id="0" name="Name">&quot;C6 Load Game&quot;</param>
+                                            <param id="0" name="Name">&quot;GG Load Game&quot;</param>
                                             <param id="1" name="Parameter {n}">C6_SelectedGame{###}1</param>
                                         </action>
                                     </actions>
@@ -212,7 +213,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="163990332250951" type="Function">
-                                            <param id="0" name="Name">&quot;C6 Load Game&quot;</param>
+                                            <param id="0" name="Name">&quot;GG Load Game&quot;</param>
                                             <param id="1" name="Parameter {n}">C6_SelectedGame{###}2</param>
                                         </action>
                                     </actions>

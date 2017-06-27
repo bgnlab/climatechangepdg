@@ -1470,7 +1470,7 @@
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>0,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Bottom</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1501,7 +1501,7 @@
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>0,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Bottom</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1532,7 +1532,7 @@
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>0,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Bottom</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1563,7 +1563,7 @@
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>0,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Bottom</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1594,7 +1594,7 @@
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>0,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Bottom</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1625,7 +1625,7 @@
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>0,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Bottom</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1656,7 +1656,7 @@
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>0,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Bottom</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1687,7 +1687,7 @@
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>0,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Bottom</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2141,6 +2141,14 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="GG_Levels" uid="807">
+            <properties>
+                <width>0</width>
+                <height>0</height>
+                <depth>0</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>

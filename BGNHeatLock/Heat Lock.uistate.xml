@@ -27,12 +27,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="0" path="object-folder/M7 Heat Lock/" />
-        <folder expanded="1" path="object-folder/M7 Heat Lock/Rooms/" />
+        <folder expanded="1" path="object-folder/M7 Heat Lock/" />
+        <folder expanded="0" path="object-folder/M7 Heat Lock/Rooms/" />
         <folder expanded="1" path="object-folder/M7 Heat Lock/Thermostat/" />
-        <folder expanded="1" path="object-folder/M7 Heat Lock/People/" />
-        <folder expanded="1" path="object-folder/M7 Heat Lock/Doors/" />
+        <folder expanded="0" path="object-folder/M7 Heat Lock/People/" />
+        <folder expanded="0" path="object-folder/M7 Heat Lock/Doors/" />
         <folder expanded="0" path="object-folder/M7 Heat Lock/Windows/" />
+        <folder expanded="0" path="object-folder/M7 Heat Lock/Timer/" />
+        <folder expanded="1" path="object-folder/M7 Heat Lock/End Screen/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
@@ -53,9 +55,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/M7_Door2/" />
         <folder expanded="1" path="animation-folder/M7_Door3/" />
         <folder expanded="1" path="animation-folder/M7_Door4/" />
+        <folder expanded="1" path="animation-folder/M7_Door5/" />
         <folder expanded="1" path="animation-folder/M7_Window0/" />
         <folder expanded="1" path="animation-folder/M7_Window1/" />
         <folder expanded="1" path="animation-folder/M7_Window2/" />
+        <folder expanded="1" path="animation-folder/M7_Timer_Icon/" />
+        <folder expanded="1" path="animation-folder/M7_Timer_Bar/" />
+        <folder expanded="1" path="animation-folder/M7_End_BG/" />
+        <folder expanded="1" path="animation-folder/M7_End_Restart/" />
+        <folder expanded="1" path="animation-folder/M7_End_Exit/" />
+        <folder expanded="1" path="animation-folder/M7_End_Star0/" />
+        <folder expanded="1" path="animation-folder/M7_End_Star1/" />
+        <folder expanded="1" path="animation-folder/M7_End_Star2/" />
+        <folder expanded="1" path="animation-folder/M7_End_Dim/" />
         <folder expanded="1" path="animation-folder/M7_Background/" />
     </folders-expanded>
 </c2uistate>
