@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>N6 Level Select</name>
     <events>
+        <include>GG Scores and Levels</include>
         <include>N6 Scores and Levels</include>
         <variable constant="0" name="N6_Region" sid="165429645144269" static="0" type="number">0</variable>
         <event-group description="" sid="370635687356346" title="N6 Drawing and Generating Levels">

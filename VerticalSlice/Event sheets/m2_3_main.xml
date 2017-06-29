@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>m2_3_main</name>
     <events>
+        <include>GG Scores and Levels</include>
         <variable constant="0" name="m2_3_MouseCurX" sid="913137335482933" static="0" type="number">0</variable>
-        <include>C6 Levels and Scores</include>
         <variable constant="0" name="m2_3_checkermd" sid="946533819080235" static="0" type="number">0</variable>
         <variable constant="0" name="m2_3_checkermt" sid="775121740661840" static="0" type="number">0</variable>
         <variable constant="0" name="m2_3_checkerT" sid="495989774115032" static="0" type="number">0</variable>
@@ -357,7 +357,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="996516788082565" type="Function">
-                            <param id="0" name="Name">&quot;C6 Exit Game&quot;</param>
+                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>

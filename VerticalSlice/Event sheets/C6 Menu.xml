@@ -4,7 +4,6 @@
     <name>C6 Menu</name>
     <events>
         <include>GG Scores and Levels</include>
-        <include>C6 Levels and Scores</include>
         <variable constant="0" name="C6_UIState" sid="833072582617239" static="0" type="text">UIStart</variable>
         <variable constant="0" name="C6_SelectedGame" sid="917913845086719" static="0" type="number">-1</variable>
         <event-group description="" sid="798539094925012" title="C6 Initialize Menu State">
