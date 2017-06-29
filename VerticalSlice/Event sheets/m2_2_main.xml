@@ -57,6 +57,10 @@
                         <action id="-16" name="Set opacity" sid="134044928808451" type="m2_2_microwaveLite">
                             <param id="0" name="Opacity">100</param>
                         </action>
+                        <action id="4" name="Set animation" sid="859934052106425" type="m2_2_fud1">
+                            <param id="0" name="Animation">&quot;a&quot; &amp; choose(1,2,3,4,5,6,7,8,9,10,11,12)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="704308869049336">
@@ -659,6 +663,9 @@
                                         <action id="-16" name="Set opacity" sid="630959047988796" type="m2_2_fridgeLite">
                                             <param id="0" name="Opacity">0</param>
                                         </action>
+                                        <action id="-15" name="Set visible" sid="704045924262159" type="m2_2_fud1">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="207493176593242">
@@ -684,6 +691,9 @@
                                         <action id="-16" name="Set opacity" sid="793165601411830" type="m2_2_fridgeLite">
                                             <param id="0" name="Opacity">100</param>
                                         </action>
+                                        <action id="-15" name="Set visible" sid="773409668046450" type="m2_2_fud1">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="879438416972656">
@@ -704,6 +714,9 @@
                                         <action id="-16" name="Set opacity" sid="849918436124167" type="m2_2_fridgeLite">
                                             <param id="0" name="Opacity">0</param>
                                         </action>
+                                        <action id="-15" name="Set visible" sid="143909410830818" type="m2_2_fud1">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -717,6 +730,10 @@
                             <actions>
                                 <action id="-14" name="Toggle boolean" sid="686406243624414" type="m2_2_fridge">
                                     <param id="0" name="Instance variable">opens</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="365884093360379" type="m2_2_fud1">
+                                    <param id="0" name="Animation">&quot;a&quot; &amp; choose(1,2,3,4,5,6,7,8,9,10,11,12)</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
