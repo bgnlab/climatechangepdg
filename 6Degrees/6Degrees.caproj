@@ -6,7 +6,7 @@
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
-    <app-id>com.bgnlab.6Degrees</app-id>
+    <app-id>com.bgnlab.sixdegrees</app-id>
     <unique-id>1mvkr2z7vwd8g</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
@@ -15,13 +15,17 @@
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
         <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
     <used-behaviors>
@@ -8421,6 +8425,870 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="m1">
+            <object-type name="m1_2ndStar" sid="107629834795464">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="206743177542594" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\star full (new).png">
+                            <collision-poly>
+                                <point x="0.328" y="0.328" />
+                                <point x="0.5" y="0.074" />
+                                <point x="0.672" y="0.328" />
+                                <point x="0.716" y="0.5" />
+                                <point x="0.746" y="0.746" />
+                                <point x="0.5" y="0.672" />
+                                <point x="0.256" y="0.744" />
+                                <point x="0.282" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_3rdStar" sid="246015038932949">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="248435372850800" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\star full (new).png">
+                            <collision-poly>
+                                <point x="0.328" y="0.328" />
+                                <point x="0.5" y="0.074" />
+                                <point x="0.672" y="0.328" />
+                                <point x="0.716" y="0.5" />
+                                <point x="0.746" y="0.746" />
+                                <point x="0.5" y="0.672" />
+                                <point x="0.256" y="0.744" />
+                                <point x="0.282" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_9patch" sid="394106516150515">
+                <plugin id="NinePatch" />
+                <texture />
+            </object-type>
+            <object-type name="m1_AdvanceHitbox" sid="263563257254876">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764921586056257" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_AdvanceTutorialClick" sid="896224547823683">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="632123518114003" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="m1_Array" sid="692520088179098">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="m1_Button" sid="175561503123647">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="m1_Button2" sid="327317522340573">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="m1_Car" sid="149551642361110">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="defaultXPos" sid="977853679875714" type="number" />
+                    <instance-variable name="defaultYPos" sid="957358774551470" type="number" />
+                    <instance-variable name="isDriving" sid="400761378239866" type="boolean" />
+                    <instance-variable name="baseSpeed" sid="558906464314008" type="number" />
+                    <instance-variable name="inPitStop" sid="682964682823683" type="boolean" />
+                    <instance-variable name="ContactX" sid="213117109190458" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="902968849738379" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Car.png">
+                            <image-point name="fuelExhaust" x="0" y="0.8" />
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Driving" pingpong="0" repeatcount="1" repeatto="0" sid="715205405165661" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\CarV2.png">
+                            <image-point name="fuelExhaust" x="0.0160714" y="0.63" />
+                            <image-point name="frontWheel" x="0.207143" y="0.783333" />
+                            <image-point name="backWheel" x="0.810714" y="0.783333" />
+                            <collision-poly>
+                                <point x="0.075" y="0.14" />
+                                <point x="0.5" y="0.126667" />
+                                <point x="0.923214" y="0.143333" />
+                                <point x="1" y="0.493333" />
+                                <point x="0.930357" y="0.87" />
+                                <point x="0.5" y="0.89" />
+                                <point x="0.069643" y="0.87" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Can" pingpong="0" repeatcount="1" repeatto="0" sid="374069757748524" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\CarPump.png">
+                            <image-point name="movedExhaust" x="0.302734" y="0.595703" />
+                            <collision-poly>
+                                <point x="0.5" y="0.40625" />
+                                <point x="0.59375" y="0.40625" />
+                                <point x="1" y="0.564453" />
+                                <point x="0.654297" y="0.654297" />
+                                <point x="0.5" y="0.654297" />
+                                <point x="0.3125" y="0.6875" />
+                                <point x="0.0390625" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Pressure" pingpong="0" repeatcount="1" repeatto="0" sid="288918716933963" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501305" original-source="C:\Users\Connor\Desktop\HandPumpConnorVer.png">
+                            <image-point name="fuelExhaust" x="0" y="0.809399" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_DifficultyList" sid="344293230000031">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="m1_DoubleArrow" sid="163643551251217">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="parked" sid="183623213004961" type="boolean" />
+                    <instance-variable name="parkedState" sid="197983104702500" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="150491172367217" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\DoubleArrow.png">
+                            <collision-poly>
+                                <point x="0.0764706" y="0.389706" />
+                                <point x="0.497059" y="0" />
+                                <point x="0.916177" y="0.379412" />
+                                <point x="0.758824" y="0.479412" />
+                                <point x="0.901471" y="0.617647" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0779412" y="0.614706" />
+                                <point x="0.266176" y="0.488235" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_EmptyStar" sid="905397677802263">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="517141081157077" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\empty star (new).png">
+                            <collision-poly>
+                                <point x="0.336" y="0.336" />
+                                <point x="0.5" y="0.044" />
+                                <point x="0.668" y="0.332" />
+                                <point x="0.916" y="0.5" />
+                                <point x="0.808" y="0.808" />
+                                <point x="0.212" y="0.788" />
+                                <point x="0.096" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_Exhaust" sid="824081832454346">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="m1_ExitBtn" sid="866722253834030">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="949649241875149" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\Exit1.png">
+                            <collision-poly>
+                                <point x="0.155556" y="0.155556" />
+                                <point x="0.5" y="0.127778" />
+                                <point x="0.844444" y="0.155556" />
+                                <point x="0.955556" y="0.5" />
+                                <point x="0.894444" y="0.894444" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.111111" y="0.888889" />
+                                <point x="0.05" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_firstBlinkingBox" sid="308235952742501">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="120354950108988">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="833304036227620" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_FuelBar" sid="225388142481455">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="fuelLevel" sid="255825855088755" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="392399265505123" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_FuelBarrel" sid="653281667401046">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726901617106558" speed="5">
+                        <frame duration="1" hotspotX="0.491667" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\Gas Tank.png">
+                            <collision-poly>
+                                <point x="0.0113398" y="0.0688312" />
+                                <point x="0.489691" y="0.0480519" />
+                                <point x="0.992784" y="0.0532468" />
+                                <point x="0.935052" y="0.5" />
+                                <point x="0.935052" y="0.91039" />
+                                <point x="0.489691" y="0.993506" />
+                                <point x="0.07732" y="0.88961" />
+                                <point x="0.07732" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_FuelMeter" sid="190008310528558">
+                <plugin id="progressbar" />
+                <instance-variables>
+                    <instance-variable name="maxLevel" sid="437554152186107" type="number" />
+                    <instance-variable name="currentLevel" sid="704353143708838" type="number" />
+                </instance-variables>
+            </object-type>
+            <object-type name="m1_FuelProgress" sid="197404609022163">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="defaultWidth" sid="243862688868006" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="969747130505484" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_FuelText" sid="695935593832110">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m1_Grass" sid="554231317108303">
+                <plugin id="TiledBg" />
+                <instance-variables>
+                    <instance-variable name="originalXPos" sid="350414195737079" type="number" />
+                </instance-variables>
+                <texture original-source="C:\Users\Connor\Desktop\Grass.png" />
+            </object-type>
+            <object-type name="m1_Highlighter" sid="204916499458807">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="288155033320316">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="618513628830518" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_InfiniteRoad" sid="115159479683411">
+                <plugin id="TiledBg" />
+                <instance-variables>
+                    <instance-variable name="originalXPos" sid="224978035031709" type="number" />
+                </instance-variables>
+                <texture original-source="C:\Users\Connor\Desktop\Road.png" />
+            </object-type>
+            <object-type name="m1_InteractiveTutorialText" sid="234740534653869">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m1_IsRepaired" sid="276317045187259">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m1_LeaveArrow" sid="224338989844280">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="cannotBePressed" sid="119137808311279" type="boolean" />
+                    <instance-variable name="isStopped" sid="752773283055073" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="440082280480929" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Arrow.png">
+                            <collision-poly>
+                                <point x="0.672059" y="0.447059" />
+                                <point x="0.660295" y="1" />
+                                <point x="0.329412" y="1" />
+                                <point x="0.332353" y="0.441176" />
+                                <point x="0.0720593" y="0.407353" />
+                                <point x="0.5" y="0" />
+                                <point x="0.942647" y="0.419118" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Leave" pingpong="0" repeatcount="1" repeatto="0" sid="333857508724130" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Stop" pingpong="0" repeatcount="1" repeatto="0" sid="809828680910483" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_LeaveStop" sid="785545687511427">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="m1_LeftArrow" sid="924677326098258">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="isPressed" sid="726725660840445" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="226741670716469" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_List" sid="994833831050352">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="m1_MobileSafeZone" sid="117924515288180">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="107343352587869" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_NextBtn" sid="222945994637387">
+                <plugin id="Button" />
+                <instance-variables>
+                    <instance-variable name="currentSlide" sid="240115479424117" type="number" />
+                </instance-variables>
+            </object-type>
+            <object-type name="m1_NextScreen" sid="721287431392551">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="313770922905608" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_PitStopHB" sid="171851168200678">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493288155535004" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_Play" sid="198673645975590">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="m1_PlayBtn" sid="280197381750603">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="m1_PlayBtn2" sid="796859582763623">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="m1_PressureBorder" sid="967939121263415">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="916338146419530" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_PressureProgress" sid="876927469243702">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="defaultWidth" sid="827593916841122" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="697938021244772" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_PressureText" sid="288189706514310">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m1_Pump" sid="879564241782160">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="isPressed" sid="138773803454456" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936741788202254" speed="5">
+                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\HandPump.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="pumpDown" pingpong="0" repeatcount="1" repeatto="0" sid="999860956949727" speed="5">
+                        <frame duration="1" hotspotX="0.373832" hotspotY="0.149038" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_pumpCarBtn" sid="118703365342559">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="m1_RepairStop" sid="478604106384604">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="originalPosX" sid="797556313666758" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="589637720270880" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_RepairStopHB" sid="821046537391563">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="204471761849344" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_RepeatingRoad" sid="638873238625719">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="m1_ReplayBtn" sid="907170495140964">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="m1_RetryBtn" sid="218282228807762">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="258422285387319" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\Retry1.png">
+                            <collision-poly>
+                                <point x="0.155556" y="0.155556" />
+                                <point x="0.5" y="0.133333" />
+                                <point x="0.844444" y="0.155556" />
+                                <point x="0.95" y="0.5" />
+                                <point x="0.894444" y="0.894444" />
+                                <point x="0.5" y="0.938889" />
+                                <point x="0.111111" y="0.888889" />
+                                <point x="0.0555556" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_RightArrow2" sid="233900270351232">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="cannotBePressed" sid="578053537772710" type="boolean" />
+                    <instance-variable name="CurrentState" sid="652600942712095" type="string" />
+                    <instance-variable name="State" sid="864549505259346" type="number" />
+                    <instance-variable name="isStopped" sid="786859973184394" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="874063966202983" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Arrow.png">
+                            <collision-poly>
+                                <point x="0.633824" y="0.5" />
+                                <point x="0.633824" y="0.633824" />
+                                <point x="0.5" y="0.992647" />
+                                <point x="0.367647" y="0.632353" />
+                                <point x="0.367647" y="0.5" />
+                                <point x="0.251471" y="0.251471" />
+                                <point x="0.5" y="0.00882353" />
+                                <point x="0.748529" y="0.251471" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Leave" pingpong="0" repeatcount="1" repeatto="0" sid="511997145126964" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_Rim" sid="605825962368771">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="635829078141209" speed="5">
+                        <frame duration="1" hotspotX="0.503333" hotspotY="0.53" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\Tire Rim.png">
+                            <collision-poly>
+                                <point x="0.263333" y="0.263333" />
+                                <point x="0.5" y="0.183333" />
+                                <point x="0.736667" y="0.263333" />
+                                <point x="0.863333" y="0.5" />
+                                <point x="0.766667" y="0.766667" />
+                                <point x="0.5" y="0.876667" />
+                                <point x="0.233333" y="0.766667" />
+                                <point x="0.136667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_Road" sid="458578541443733">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="159506889193953" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_Sprite" sid="261437240147417">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="377917381398416" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_Sprite2" sid="371863744988708">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499789138508769" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_Sprite3" sid="345803552950239">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="696016355924951" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_Sprite4" sid="887870525979121">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="857450656492809" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_Sprite5" sid="888450383950720">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270547434865075" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_Star" sid="456636086665588">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="970167074570519" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\star full (new).png">
+                            <collision-poly>
+                                <point x="0.328" y="0.328" />
+                                <point x="0.5" y="0.074" />
+                                <point x="0.672" y="0.328" />
+                                <point x="0.716" y="0.5" />
+                                <point x="0.746" y="0.746" />
+                                <point x="0.5" y="0.672" />
+                                <point x="0.256" y="0.744" />
+                                <point x="0.282" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_Star2" sid="606111220989110">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="628868981241526" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\star full.png">
+                            <collision-poly>
+                                <point x="0.328" y="0.328" />
+                                <point x="0.5" y="0.074" />
+                                <point x="0.672" y="0.328" />
+                                <point x="0.716" y="0.5" />
+                                <point x="0.746" y="0.746" />
+                                <point x="0.5" y="0.672" />
+                                <point x="0.256" y="0.744" />
+                                <point x="0.282" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_Station" sid="356984886055726">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="originalXPos" sid="555767960796453" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="531991774842106" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_Text2" sid="467148168987821">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m1_StopArrow" sid="727129962581873">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="cannotBePressed" sid="709811267351625" type="boolean" />
+                    <instance-variable name="isStopped" sid="202239476046527" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="740062864988871" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Arrow.png">
+                            <collision-poly>
+                                <point x="0.672059" y="0.458823" />
+                                <point x="0.695589" y="1" />
+                                <point x="0.314706" y="1" />
+                                <point x="0.305882" y="0.455882" />
+                                <point x="0.0691181" y="0.395589" />
+                                <point x="0.5" y="0.00882353" />
+                                <point x="0.919117" y="0.386765" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Leave" pingpong="0" repeatcount="1" repeatto="0" sid="766735250893841" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Stop" pingpong="0" repeatcount="1" repeatto="0" sid="409263048259602" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_TiledBackground" sid="242958864985624">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="m1_TiledBackground2" sid="279937196291449">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="m1_TiledBackground3" sid="198179097906898">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="m1_TimerBar" sid="992755283402994">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="867986219207187" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\timer bar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_TimerMeter" sid="890285647802197">
+                <plugin id="progressbar" />
+                <instance-variables>
+                    <instance-variable name="timeRemaining" sid="201072600803600" type="number" />
+                </instance-variables>
+            </object-type>
+            <object-type name="m1_TimerProgress" sid="503968694259563">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="465017236400168" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_Tire" sid="463431303037532">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="801656038036375" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\FullTire.png">
+                            <collision-poly>
+                                <point x="0.146667" y="0.146667" />
+                                <point x="0.5" y="0.00333333" />
+                                <point x="0.853333" y="0.146667" />
+                                <point x="0.996667" y="0.5" />
+                                <point x="0.853333" y="0.853333" />
+                                <point x="0.5" y="0.996667" />
+                                <point x="0.146667" y="0.853333" />
+                                <point x="0.00333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="FlatTire" pingpong="0" repeatcount="1" repeatto="0" sid="714996143193662" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\FlatTire.png">
+                            <collision-poly>
+                                <point x="0.17" y="0.17" />
+                                <point x="0.5" y="0.05" />
+                                <point x="0.83" y="0.17" />
+                                <point x="0.996667" y="0.5" />
+                                <point x="0.863333" y="0.863333" />
+                                <point x="0.5" y="0.95" />
+                                <point x="0.136667" y="0.863333" />
+                                <point x="0.00333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_TirePressureMeter" sid="411236896752129">
+                <plugin id="progressbar" />
+                <instance-variables>
+                    <instance-variable name="pressureValue" sid="214072903811896" type="number" />
+                </instance-variables>
+            </object-type>
+            <object-type name="m1_Tornado" sid="895240607703058">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="baseTornadoSpeed" sid="454987914696948" type="number" />
+                    <instance-variable name="carStopTornadoSpeed" sid="636550766591070" type="number" />
+                    <instance-variable name="test" sid="721037949905802" type="number" />
+                    <instance-variable name="wonXPosition" sid="510060858408433" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="141748079168254" speed="5">
+                        <frame duration="1" hotspotX="0.333333" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Tornado1.png">
+                            <collision-poly>
+                                <point x="0.143333" y="0.143333" />
+                                <point x="0.5" y="0.0866667" />
+                                <point x="0.856667" y="0.143333" />
+                                <point x="0.676667" y="0.5" />
+                                <point x="0.643333" y="0.643333" />
+                                <point x="0.496667" y="1" />
+                                <point x="0.363333" y="0.636667" />
+                                <point x="0.253333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Tornado2.png">
+                            <collision-poly>
+                                <point x="0.186667" y="0.186667" />
+                                <point x="0.5" y="0.0866667" />
+                                <point x="0.83" y="0.17" />
+                                <point x="0.643333" y="0.5" />
+                                <point x="0.586667" y="0.586667" />
+                                <point x="0.493333" y="1" />
+                                <point x="0.373333" y="0.626667" />
+                                <point x="0.293333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Tornado3.png">
+                            <collision-poly>
+                                <point x="0.16" y="0.16" />
+                                <point x="0.5" y="0.0933333" />
+                                <point x="0.883333" y="0.116667" />
+                                <point x="0.8" y="0.5" />
+                                <point x="0.653333" y="0.653333" />
+                                <point x="0.503333" y="1" />
+                                <point x="0.41" y="0.59" />
+                                <point x="0.35" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="1" name="what" pingpong="0" repeatcount="1" repeatto="0" sid="958146252701864" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.143333" y="0.143333" />
+                                <point x="0.5" y="0.0866667" />
+                                <point x="0.856667" y="0.143333" />
+                                <point x="0.676667" y="0.5" />
+                                <point x="0.643333" y="0.643333" />
+                                <point x="0.496667" y="1" />
+                                <point x="0.363333" y="0.636667" />
+                                <point x="0.253333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.186667" y="0.186667" />
+                                <point x="0.5" y="0.0866667" />
+                                <point x="0.83" y="0.17" />
+                                <point x="0.643333" y="0.5" />
+                                <point x="0.586667" y="0.586667" />
+                                <point x="0.493333" y="1" />
+                                <point x="0.373333" y="0.626667" />
+                                <point x="0.293333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.84" y="0.16" />
+                                <point x="0.906667" y="0.5" />
+                                <point x="0.883333" y="0.883333" />
+                                <point x="0.5" y="0.8" />
+                                <point x="0.346667" y="0.653333" />
+                                <point x="0" y="0.503333" />
+                                <point x="0.41" y="0.41" />
+                                <point x="0.5" y="0.35" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="1" name="NonHappy" pingpong="0" repeatcount="1" repeatto="0" sid="527016985071292" speed="5">
+                        <frame duration="1" hotspotX="0.333333" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\LameTornado3.png" />
+                        <frame duration="1" hotspotX="0.333333" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\LameTornado2.png" />
+                        <frame duration="1" hotspotX="0.333333" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\LameTornado1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_TutBtn" sid="266906855579602">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="m1_tutorialText" sid="492791639590545">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m1_WinBox" sid="770382503333587">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="145851815293827" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Pitstop.png">
+                            <collision-poly>
+                                <point x="0.21" y="0.21" />
+                                <point x="0.79" y="0.21" />
+                                <point x="0.816" y="0.5" />
+                                <point x="0.954" y="0.954" />
+                                <point x="0.046" y="0.954" />
+                                <point x="0.156" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_WinFailState" sid="837137569647012">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="983156535351281" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\Win Fail State.png">
+                            <collision-poly>
+                                <point x="0.0137383" y="0.132283" />
+                                <point x="0.52133" y="0.0015748" />
+                                <point x="0.999277" y="0.19685" />
+                                <point x="0.999277" y="0.670866" />
+                                <point x="0.916124" y="0.963779" />
+                                <point x="0.52133" y="0.998425" />
+                                <point x="0.117137" y="0.984252" />
+                                <point x="0.000723066" y="0.670866" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1_WinFailText" sid="369182809598947">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m1_WLText" sid="240212865631124">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-folder name="GG Levels and Scores">
             <object-type global="1" name="GG_Level_Data" sid="802247831316974">
                 <plugin id="Dictionary" />
@@ -8664,6 +9532,19 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="m1_Stops" plugin-id="Sprite" sid="624269770061180">
+            <members>
+                <member>m1_PitStopHB</member>
+                <member>m1_RepairStop</member>
+                <member>m1_Station</member>
+                <member>m1_WinBox</member>
+            </members>
+        </family>
+        <family name="m1_MovingUI" plugin-id="Button" sid="649607442697505">
+            <members>
+                <member>m1_pumpCarBtn</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout-folder name="C6 Casual Menu">
@@ -8698,6 +9579,13 @@
             <layout>m6_1_Tutorial.xml</layout>
             <layout>m6_2_main(m).xml</layout>
             <layout>m6_3_main(h).xml</layout>
+        </layout-folder>
+        <layout-folder name="m1 Tire Pressure">
+            <layout-folder name="TutorialLayouts">
+                <layout>m1_InteractiveTutorial.xml</layout>
+                <layout>m1_Layout 1.xml</layout>
+            </layout-folder>
+            <layout>m1_GameLayout.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
@@ -8735,9 +9623,15 @@
             <event-sheet>m6_2_main(m).xml</event-sheet>
             <event-sheet>m6_3_main(h).xml</event-sheet>
         </event-folder>
+        <event-folder name="m1 Tire Pressure">
+            <event-sheet>m1_DifficultyStart.xml</event-sheet>
+            <event-sheet>m1_GameEvents.xml</event-sheet>
+            <event-sheet>m1_InteractiveTutorialSheet.xml</event-sheet>
+            <event-sheet>m1_TutorialEventSheet.xml</event-sheet>
+        </event-folder>
     </event-folder>
     <global-instances>
-        <global-instance type="Audio" uid="1056">
+        <global-instance type="Audio" uid="1153">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -8751,14 +9645,14 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="1057" />
-        <global-instance type="Mouse" uid="1058" />
-        <global-instance type="Touch" uid="1059">
+        <global-instance type="Function" uid="1154" />
+        <global-instance type="Mouse" uid="1155" />
+        <global-instance type="Touch" uid="1156">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="LocalStorage" uid="1060" />
+        <global-instance type="LocalStorage" uid="1157" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="Game10EscapeRoom">
@@ -8809,7 +9703,7 @@
             <file name="bgm_carpool_game.m4a" />
             <file name="bgm_carpool_game.ogg" />
         </sound-folder>
-        <sound-folder name="M6 Food e">
+        <sound-folder name="M6 Food">
             <file name="bgm_food_game.m4a" />
             <file name="bgm_food_game.ogg" />
             <file name="sfx_cashsound.m4a" />
@@ -8828,6 +9722,16 @@
             <file name="sfx_bus_horn.ogg" />
             <file name="sfx_timer (1).m4a" />
             <file name="sfx_timer (1).ogg" />
+        </sound-folder>
+        <sound-folder name="M1 Tire Pressure">
+            <file name="sfx_driving.m4a" />
+            <file name="sfx_driving.ogg" />
+            <file name="sfx_pumping_air_pressure.m4a" />
+            <file name="sfx_pumping_air_pressure.ogg" />
+            <file name="sfx_refueling.m4a" />
+            <file name="sfx_refueling.ogg" />
+            <file name="bgm_tirepressure_game.m4a" />
+            <file name="bgm_tirepressure_game.ogg" />
         </sound-folder>
     </sounds-folder>
     <music-folder>

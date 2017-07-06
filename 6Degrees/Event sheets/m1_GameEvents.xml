@@ -1,0 +1,956 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>m1_GameEvents</name>
+    <events>
+        <variable constant="0" name="m1_3StarBound" sid="875924220699403" static="0" type="number">3</variable>
+        <variable constant="0" name="m1_2StarBound" sid="448541863023584" static="0" type="number">2</variable>
+        <variable constant="0" name="m1_1StarBound" sid="740444654967066" static="0" type="number">1</variable>
+        <variable constant="0" name="m1_timeToRefuel" sid="392513807968034" static="0" type="number">3</variable>
+        <comment>---FUEL LOSS EQUATION---</comment>
+        <comment>Note to Connor: Put equation here...</comment>
+        <variable constant="0" name="m1_maxPossibleFuelLoss" sid="346247587175390" static="0" type="number">3</variable>
+        <variable constant="0" name="m1_minPossibleFuelLoss" sid="656373789432063" static="0" type="number">0.5</variable>
+        <variable constant="0" name="m1_baseModifier" sid="646827030766745" static="0" type="number">0.5</variable>
+        <variable constant="0" name="m1_fractionReductionAmount" sid="920112100955796" static="0" type="number">100</variable>
+        <variable constant="0" name="m1_baseAirPressureMultiplier" sid="483640312226441" static="0" type="number">1.7</variable>
+        <variable constant="0" name="m1_invertPressureValue" sid="329020343177367" static="0" type="number">1</variable>
+        <comment>Other</comment>
+        <variable constant="0" name="m1_refuelValue" sid="107687248336244" static="0" type="number">6</variable>
+        <comment>% based values 0% to 100%</comment>
+        <variable constant="0" name="m1_pressurePerPump" sid="108191726278815" static="0" type="number">20</variable>
+        <comment>Values: 0 to 10 (1 = 10%, 2 = 20% etc)</comment>
+        <variable constant="0" name="m1_pressureLoss" sid="909202910385528" static="0" type="number">0.4</variable>
+        <variable constant="0" name="m1_pressureLossMax" sid="872180185758828" static="0" type="number">0.4</variable>
+        <comment>not used</comment>
+        <variable constant="0" name="m1_winDistance" sid="959593107641901" static="0" type="number">4</variable>
+        <comment>--------------------------------</comment>
+        <variable constant="0" name="m1_loseLayer" sid="547786313591000" static="0" type="number">6</variable>
+        <variable constant="0" name="m1_winLayer" sid="331240820355061" static="0" type="number">5</variable>
+        <variable constant="0" name="m1_atStop" sid="628812139278495" static="0" type="number">0</variable>
+        <comment>Tornado Variables</comment>
+        <event-group description="" sid="739810161677623" title="onStart">
+            <sub-events>
+                <comment>Scroll to the center of the screen</comment>
+                <event-block sid="165855721168487">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="408250093819511" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="538338417229504" type="Audio">
+                            <param id="0" name="Audio file">sfx_driving</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;driving&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="204543654622457" type="Audio">
+                            <param id="0" name="Audio file">bgm_tirepressure_game</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-15</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>tell all the meters to render their default value (they start at 0/? even if you set a starting value)</comment>
+                <event-block sid="500928879397120">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="888673400966785" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set progress" sid="720572961080508" type="m1_FuelMeter">
+                            <param id="0" name="Value">m1_FuelMeter.maxLevel</param>
+                        </action>
+                        <action id="3" name="Set progress" sid="751674964429060" type="m1_TimerMeter">
+                            <param id="0" name="Value">m1_TimerMeter.timeRemaining</param>
+                        </action>
+                        <action id="3" name="Set progress" sid="883546797628608" type="m1_TirePressureMeter">
+                            <param id="0" name="Value">m1_TirePressureMeter.pressureValue</param>
+                        </action>
+                        <action id="3" name="Set enabled" sid="193402649954387" type="m1_pumpCarBtn">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="434192506420706" type="System">
+                            <param id="0" name="Layer">m1_winLayer</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="468423807511223" type="System">
+                            <param id="0" name="Layer">m1_loseLayer</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="445116744400404" type="m1_PressureText">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="212869016942095" type="m1_Car">
+                            <param id="0" name="Instance variable">ContactX</param>
+                            <param id="1" name="Value">m1_Car.BBoxLeft - 200</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="177447732574320" title="Car Interactions">
+            <sub-events>
+                <comment>disable the car (the user can leave the stop by hitting the left arrow)</comment>
+                <event-block sid="807131094650137">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="751597031469949" type="m1_Car">
+                            <param id="0" name="Object">m1_RepairStopHB</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="673692342450609" type="m1_Car">
+                            <param id="0" name="Animation">&quot;Pressure&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="276416585136704" type="Function">
+                            <param id="0" name="Name">&quot;hideTires&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="3" name="Set enabled" sid="424952911390248" type="m1_pumpCarBtn">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="835852217000550" type="System">
+                            <param id="0" name="Variable">m1_isScrollingActive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="890764729949188" type="m1_Car">
+                            <param id="0" name="Instance variable">isDriving</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="811586433506388" type="m1_Car">
+                            <param id="0" name="Instance variable">inPitStop</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="1" name="Set visible" sid="596289448981567" type="m1_TirePressureMeter">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="565898266987396" type="m1_PressureText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="461806731372446" type="System">
+                            <param id="0" name="Variable">m1_atStop</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="104533338292732" type="m1_PressureProgress">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="969541562085611" type="m1_PressureBorder">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="120841413292526" title="Player Actions">
+            <sub-events>
+                <comment>user decides to stop at the current location (used to enter a pitstop)</comment>
+                <comment>click and hold pump</comment>
+                <event-block disabled="1" sid="395949559251962">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="841259335634411" type="System">
+                            <param id="0" name="Interval (seconds)">0.2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="143843088478697">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Mouse button is down" sid="881624744028999" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="104503881362748" type="m1_Pump">
+                                    <param id="0" name="Instance variable">isPressed</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="322436015325964" type="m1_Pump">
+                                    <param id="0" name="Instance variable">isPressed</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="745918385413814">
+                            <conditions>
+                                <condition id="2" name="Mouse button is down" sid="168848842166725" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="524215940683904" type="m1_Pump">
+                                    <param id="0" name="Instance variable">isPressed</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="377263951701278" type="m1_Pump">
+                                    <param id="0" name="Animation">&quot;pumpDown&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="933859381628801" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="547542538336673" type="m1_Pump">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="313403933290020" type="m1_TirePressureMeter">
+                                    <param id="0" name="Instance variable">pressureValue</param>
+                                    <param id="1" name="Value">m1_pressurePerPump</param>
+                                </action>
+                                <action id="3" name="Set progress" sid="165712266008290" type="m1_TirePressureMeter">
+                                    <param id="0" name="Value">m1_TirePressureMeter.Progress + m1_pressurePerPump</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>each time the user clicks the pump add pressure to the tires</comment>
+                <event-block sid="885420533497490">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="679546343032061" type="Touch">
+                            <param id="0" name="Object">m1_Pump</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="919510736154651" type="m1_DoubleArrow">
+                            <param id="0" name="Instance variable">parked</param>
+                        </condition>
+                        <condition id="-5" name="Compare width" sid="291358381643505" type="m1_PressureProgress">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Width">m1_PressureProgress.defaultWidth</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="662304030362483" type="m1_Pump" />
+                        <action id="3" name="Start" sid="406509393786406" type="m1_Pump">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="732286541453934" type="Audio">
+                            <param id="0" name="Audio file">sfx_pumping_air_pressure</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="643885781385190" type="m1_PressureProgress">
+                            <param id="0" name="Width">m1_PressureProgress.Width + m1_pressurePerPump * (m1_PressureProgress.defaultWidth/100)</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="385444996282987" type="m1_TirePressureMeter">
+                            <param id="0" name="Instance variable">pressureValue</param>
+                            <param id="1" name="Value">m1_pressurePerPump</param>
+                        </action>
+                        <action id="3" name="Set progress" sid="904465614024644" type="m1_TirePressureMeter">
+                            <param id="0" name="Value">m1_TirePressureMeter.Progress + m1_pressurePerPump</param>
+                        </action>
+                        <action disabled="1" id="-13" name="Set boolean" sid="533221069188666" type="m1_Pump">
+                            <param id="0" name="Instance variable">isPressed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="247197192702625">
+                    <conditions>
+                        <condition id="-5" name="Compare width" sid="983230609672275" type="m1_PressureProgress">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Width">m1_PressureProgress.defaultWidth</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="810769923813262" type="m1_PressureProgress">
+                            <param id="0" name="Width">m1_PressureProgress.defaultWidth</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>enter/leave refilling tire pressure</comment>
+                <event-block any="1" sid="574972711007638">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="283730306862805" type="Touch">
+                            <param id="0" name="Object">m1_DoubleArrow</param>
+                        </condition>
+                        <condition id="17" name="On tap object" sid="862667850923962" type="Touch">
+                            <param id="0" name="Object">m1_InfiniteRoad</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="596777829264648">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="812903248021018" type="System">
+                                    <param id="0" name="Variable">m1_isRefilling</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="918692614842642">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="386795730695803" type="m1_DoubleArrow">
+                                            <param id="0" name="Instance variable">parked</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="188964453651503" type="m1_Car">
+                                            <param id="0" name="X">m1_Car.X</param>
+                                            <param id="1" name="Y">m1_Car.Y  + 200</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="319928673402818" type="m1_Car">
+                                            <param id="0" name="Instance variable">isDriving</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="603083996581109" type="m1_DoubleArrow">
+                                            <param id="0" name="Instance variable">parked</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="6" name="Stop" sid="710218619907765" type="Audio">
+                                            <param id="0" name="Tag">&quot;driving&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="131331701921794">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="406521924717745" type="System" />
+                                        <condition id="-8" name="Is boolean instance variable set" sid="982531936915418" type="m1_DoubleArrow">
+                                            <param id="0" name="Instance variable">parked</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="720332189880683" type="m1_Car">
+                                            <param id="0" name="X">m1_Car.X</param>
+                                            <param id="1" name="Y">m1_Car.Y  - 200</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="113516200441015" type="m1_Car">
+                                            <param id="0" name="Instance variable">isDriving</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="781972978503742" type="m1_Car">
+                                            <param id="0" name="Instance variable">inPitStop</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="157133373924628" type="m1_Car">
+                                            <param id="0" name="Animation">&quot;Driving&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="772254941028186" type="Function">
+                                            <param id="0" name="Name">&quot;revealTires&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="803075699660183" type="System">
+                                            <param id="0" name="Variable">m1_isScrollingActive</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="3" name="Set enabled" sid="629169237917166" type="m1_pumpCarBtn">
+                                            <param id="0" name="Mode">0</param>
+                                        </action>
+                                        <action id="1" name="Set visible" sid="286796144312658" type="m1_TirePressureMeter">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="131493963657290" type="m1_PressureBorder">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="356942170684054" type="m1_PressureText">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="182218450646371" type="m1_PressureProgress">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="135346480163294" type="m1_DoubleArrow">
+                                            <param id="0" name="Instance variable">parked</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="454994353965334" type="System">
+                                            <param id="0" name="Variable">m1_atStop</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="182365134361239" type="Audio">
+                                            <param id="0" name="Audio file">sfx_driving</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;driving&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Events related to the timing of actions</comment>
+        <variable constant="0" name="m1_isScrollingActive" sid="352584478665411" static="0" type="number">1</variable>
+        <event-group description="" sid="969260351482881" title="Scrolling">
+            <sub-events>
+                <variable constant="0" name="buttonOffset" sid="946462894970826" static="0" type="number">50</variable>
+                <variable constant="0" name="tornadoScrollSpeed" sid="514342311609128" static="0" type="number">10</variable>
+                <variable constant="0" name="ScrollSpeed" sid="165883800662413" static="0" type="number">700</variable>
+                <comment>scrolling for all objects</comment>
+                <event-block sid="908457622557320">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="155412084172958" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="853658536361733">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="252044613938184" type="System">
+                                    <param id="0" name="Variable">m1_isScrollingActive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="517902632973067" type="m1_InfiniteRoad">
+                                    <param id="0" name="X">m1_InfiniteRoad.X - (dt*ScrollSpeed)</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="215843176989211" type="m1_Stops">
+                                    <param id="0" name="X">m1_Stops.X - (dt*ScrollSpeed)</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="902864602473010" type="m1_Grass">
+                                    <param id="0" name="X">m1_Grass.X - (dt * ScrollSpeed)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="400110534403305">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="692532887742922" type="m1_InfiniteRoad">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">LayoutWidth</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="410041754756593" type="m1_InfiniteRoad">
+                                            <param id="0" name="X">m1_InfiniteRoad.originalXPos</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="390756222787460" type="m1_Grass">
+                                            <param id="0" name="X">m1_Grass.originalXPos</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="707601358570200">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="483324951355549" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>If the users fuel hits 0 {auto refuel)</comment>
+                        <event-block sid="617562512364851">
+                            <conditions>
+                                <condition id="1" name="Compare progress" sid="129062111380481" type="m1_FuelMeter">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="200047483011022">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="224244048169663" type="m1_Car">
+                                            <param id="0" name="Instance variable">inPitStop</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="460865809479386" type="System">
+                                            <param id="0" name="Variable">m1_isRefilling</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="6" name="Stop" sid="693095965118126" type="Audio">
+                                            <param id="0" name="Tag">&quot;driving&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="687447707260826" type="Audio">
+                                            <param id="0" name="Audio file">sfx_refueling</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">10</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="401952509431527" type="m1_Car">
+                                            <param id="0" name="Instance variable">isDriving</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="222439202418083" type="System">
+                                            <param id="0" name="Variable">m1_isScrollingActive</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="312850092484354" type="m1_Car">
+                                            <param id="0" name="Animation">&quot;Can&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="544064791441891" type="Function">
+                                            <param id="0" name="Name">&quot;hideTires&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="3" name="Set progress" sid="973373694163152" type="m1_FuelMeter">
+                                            <param id="0" name="Value">m1_refuelValue</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="369824990577382" type="System">
+                                            <param id="0" name="Seconds">m1_timeToRefuel</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="764606024820989" type="m1_Car">
+                                            <param id="0" name="Animation">&quot;Driving&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="905444563050615" type="Function">
+                                            <param id="0" name="Name">&quot;revealTires&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="213893010539317" type="System">
+                                            <param id="0" name="Variable">m1_isScrollingActive</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="968293218491703" type="m1_Car">
+                                            <param id="0" name="Instance variable">isDriving</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="841614575333205" type="System">
+                                            <param id="0" name="Variable">m1_isRefilling</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="956254316127495" type="Audio">
+                                            <param id="0" name="Audio file">sfx_driving</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;driving&quot;</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="530493691660222" type="m1_FuelProgress">
+                                            <param id="0" name="Width">m1_FuelProgress.defaultWidth</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="288510429455465">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="741673030140592" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="724432511133960" type="m1_Exhaust">
+                            <param id="0" name="X">m1_Car.ImagePointX(1)</param>
+                            <param id="1" name="Y">m1_Car.ImagePointY(1)</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" sid="195138709400622" type="m1_Rim">
+                            <param id="0" name="Degrees">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>moves the tornado a % of the distance towards the car every tick</comment>
+                <event-group description="" sid="186891661912293" title="TornadoScrolling">
+                    <sub-events>
+                        <event-block sid="670126399342075">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="457330987946377" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="318299606420261">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="958329643114778" type="m1_Car">
+                                            <param id="0" name="Instance variable">inPitStop</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="953426149167548" type="System">
+                                            <param id="0" name="Variable">m1_isRefilling</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="428744861154181" type="m1_Tornado">
+                                            <param id="0" name="X">m1_Tornado.X + ((m1_Car.ContactX *m1_Tornado.carStopTornadoSpeed)/100)/60</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="681858899290054">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="131102944788192" type="m1_LeaveArrow">
+                                            <param id="0" name="Instance variable">isStopped</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="663423646584516" type="System">
+                                            <param id="0" name="Variable">m1_isRefilling</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="353628558871580" type="m1_Tornado">
+                                            <param id="0" name="X">m1_Tornado.X + ((m1_Car.ContactX *m1_Tornado.baseTornadoSpeed)/100)/60</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="m1_fuelUsageEquation" sid="271978103822268" static="0" type="number">0</variable>
+        <variable constant="0" name="m1_isRefilling" sid="549294321835393" static="0" type="number">0</variable>
+        <event-group description="" sid="924293252525642" title="TimerEvents">
+            <sub-events>
+                <variable constant="0" name="fuelrefreshRate" sid="661481041739582" static="0" type="number">20</variable>
+                <event-block sid="854173449965751">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="451193831613726" type="System">
+                            <param id="0" name="Interval (seconds)">0.05</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="447350403983151" type="System">
+                            <param id="0" name="Variable">m1_isRefilling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="853730873319881">
+                            <conditions>
+                                <condition disabled="1" id="-7" name="Compare instance variable" sid="194955587731106" type="m1_FuelMeter">
+                                    <param id="0" name="Instance variable">currentLevel</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>fuel depletion equation.</comment>
+                                <event-block sid="899719900557802">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="197489940948363" type="m1_Car">
+                                            <param id="0" name="Instance variable">isDriving</param>
+                                        </condition>
+                                        <condition id="1" name="Compare progress" sid="747567908064610" type="m1_TirePressureMeter">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Value">100</param>
+                                        </condition>
+                                        <condition id="1" name="Compare progress" sid="335252143974469" type="m1_TirePressureMeter">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set progress" sid="352293663524611" type="m1_FuelMeter">
+                                            <param id="0" name="Value">m1_FuelMeter.Progress - (m1_baseModifier + m1_baseAirPressureMultiplier*(m1_invertPressureValue - (m1_TirePressureMeter.Progress / 100)))/fuelrefreshRate</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="702083819612808" type="m1_FuelProgress">
+                                            <param id="0" name="Width">m1_FuelProgress.Width - ((m1_baseModifier + m1_baseAirPressureMultiplier*(m1_invertPressureValue - (m1_TirePressureMeter.Progress / 100)))/fuelrefreshRate)* (320/6)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>maximum possible tire pressure (this is because the equation breaks with 100% progress)</comment>
+                                <event-block sid="802676508684405">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="716340171017057" type="m1_Car">
+                                            <param id="0" name="Instance variable">isDriving</param>
+                                        </condition>
+                                        <condition id="1" name="Compare progress" sid="595167927065443" type="m1_TirePressureMeter">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Value">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set progress" sid="672995270973900" type="m1_FuelMeter">
+                                            <param id="0" name="Value">m1_FuelMeter.Progress - m1_minPossibleFuelLoss/fuelrefreshRate</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="890976546634845" type="m1_FuelProgress">
+                                            <param id="0" name="Width">m1_FuelProgress.Width - m1_minPossibleFuelLoss/fuelrefreshRate * (320/6)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>minimum possible tire pressure (this is because the equation breaks with 0% progress)</comment>
+                                <event-block sid="659904589505049">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="565151756282866" type="m1_Car">
+                                            <param id="0" name="Instance variable">isDriving</param>
+                                        </condition>
+                                        <condition id="1" name="Compare progress" sid="722947599285524" type="m1_TirePressureMeter">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set progress" sid="308202178462369" type="m1_FuelMeter">
+                                            <param id="0" name="Value">m1_FuelMeter.Progress - m1_maxPossibleFuelLoss/fuelrefreshRate</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="151293238602491" type="m1_FuelProgress">
+                                            <param id="0" name="Width">m1_FuelProgress.Width - m1_maxPossibleFuelLoss/fuelrefreshRate * (320/6)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>the time goes down every second.</comment>
+                <event-block sid="849825681899001">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="379246341035089" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="125277542364273" type="m1_TimerMeter">
+                            <param id="0" name="Instance variable">timeRemaining</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set progress" sid="494405942984869" type="m1_TimerMeter">
+                            <param id="0" name="Value">m1_TimerMeter.timeRemaining</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>every second, the tire pressure reduces by 10 OR 20 %</comment>
+                <event-group description="" sid="643908151587881" title="TirePressureLoss">
+                    <sub-events>
+                        <event-block sid="572835546019931">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="824591141651914" type="System">
+                                    <param id="0" name="Interval (seconds)">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="131307386711012">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="400624933929448" type="m1_Car">
+                                            <param id="0" name="Instance variable">isDriving</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set progress" sid="122249919469915" type="m1_TirePressureMeter">
+                                            <param id="0" name="Value">m1_TirePressureMeter.Progress - (m1_pressureLoss*10)</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="166733834029664" type="m1_TirePressureMeter">
+                                            <param id="0" name="Instance variable">pressureValue</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="663866446153086" type="m1_PressureProgress">
+                                            <param id="0" name="Width">m1_PressureProgress.Width - (m1_pressureLoss*10) * (m1_PressureProgress.defaultWidth/100)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="106907892744555">
+                                    <conditions>
+                                        <condition id="1" name="Compare progress" sid="896251940426604" type="m1_TirePressureMeter">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="Value">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="179510260263521" type="m1_Tire">
+                                            <param id="0" name="Animation">&quot;FlatTire&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="780588579934880">
+                                    <conditions>
+                                        <condition id="1" name="Compare progress" sid="396476777011597" type="m1_TirePressureMeter">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Value">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="167011084101780" type="m1_Tire">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="m1_1StarValue" sid="132998827015713" static="0" type="number">1</variable>
+        <variable constant="0" name="m1_2StarValue" sid="526070587096520" static="0" type="number">0.9</variable>
+        <variable constant="0" name="m1_3StarValue" sid="185509416990427" static="0" type="number">0.8</variable>
+        <event-group description="" sid="977008248092565" title="Win/Loss">
+            <sub-events>
+                <comment>They went the full distance without getting hit by the tornado (tornado version)</comment>
+                <event-block sid="259918920604180">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="788242861797139" type="System">
+                            <param id="0" name="Interval (seconds)">0.05</param>
+                        </condition>
+                        <condition id="-5" name="Compare width" sid="797855709448695" type="m1_TimerProgress">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Width">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="845064578580715" type="m1_TimerProgress">
+                            <param id="0" name="Width">Self.Width - 3.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="917218245489997">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="304954047994392" type="System" />
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="227217182193205" type="System">
+                            <param id="0" name="Layer">&quot;Lose&quot;</param>
+                        </condition>
+                        <condition id="-5" name="Compare width" sid="259081151744585" type="m1_TimerProgress">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Width">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="696567967361307" type="System">
+                            <param id="0" name="Layer">&quot;Win&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="951824722285644" type="m1_Tornado">
+                            <param id="0" name="Instance variable">wonXPosition</param>
+                            <param id="1" name="Value">m1_Tornado.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="989902663493758" type="System">
+                            <param id="0" name="Variable">m1_isScrollingActive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="752829259981846" type="Audio" />
+                        <action id="-9" name="Destroy" sid="586809291580412" type="m1_Tornado" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="460072560983242">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="767219564539462" type="m1_Tornado">
+                                    <param id="0" name="Instance variable">wonXPosition</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">m1_Car.ContactX * m1_1StarValue</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="593147746644871" type="m1_Star">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="156795180857064">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="407727689836195" type="m1_Tornado">
+                                    <param id="0" name="Instance variable">wonXPosition</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">m1_Car.ContactX * m1_2StarValue</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="251193941892356" type="m1_2ndStar">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="851238500681075">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="183186299302812" type="m1_Tornado">
+                                    <param id="0" name="Instance variable">wonXPosition</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">m1_Car.ContactX * m1_3StarValue</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="194524096192563" type="m1_3rdStar">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>They were hit by the tornado (tornado version)</comment>
+                <event-block sid="114330563926224">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="492092251248885" type="System">
+                            <param id="0" name="Layer">m1_winLayer</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="386568896481551" type="m1_Tornado">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">m1_Car.ContactX</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="277449014979967" type="System">
+                            <param id="0" name="Layer">&quot;Win&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="812191523052429" type="System">
+                            <param id="0" name="Variable">m1_isScrollingActive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="535729266818820" type="m1_Car">
+                            <param id="0" name="Instance variable">isDriving</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="557376839512910" type="Audio" />
+                        <action id="-9" name="Destroy" sid="410111475525643" type="m1_Tornado" />
+                    </actions>
+                </event-block>
+                <event-block sid="620884663902768">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="882287785108643" type="System">
+                            <param id="0" name="Layer">&quot;Win&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Replay the game</comment>
+                        <event-block sid="135491721153151">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="130759947567322" type="Touch">
+                                    <param id="0" name="Object">m1_RetryBtn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-21" name="Reset global variables" sid="286224787073384" type="System" />
+                                <action id="-26" name="Restart layout" sid="865855938040137" type="System" />
+                                <action id="-45" name="Reset persisted objects" sid="381671909443303" type="System" />
+                            </actions>
+                        </event-block>
+                        <comment>Exit to main menu</comment>
+                        <event-block sid="284040641493662">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="792230729033109" type="Touch">
+                                    <param id="0" name="Object">m1_ExitBtn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-21" name="Reset global variables" sid="574225157118205" type="System" />
+                                <action id="-45" name="Reset persisted objects" sid="842808959417623" type="System" />
+                                <action id="0" name="Call function" sid="966019973269968" type="Function">
+                                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>when called, this will hide the tires that are attached to the car (they are separate objects and if you move the car they just float there otherwise)</comment>
+        <event-block sid="509718522417461">
+            <conditions>
+                <condition id="0" name="On function" sid="689624079076010" type="Function">
+                    <param id="0" name="Name">&quot;hideTires&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="319253398350636" type="m1_Rim">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="494388646342423" type="m1_Tire">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>reveal the tires so the car has tires when driving</comment>
+        <event-block sid="774810480440547">
+            <conditions>
+                <condition id="0" name="On function" sid="823098248796864" type="Function">
+                    <param id="0" name="Name">&quot;revealTires&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="710145773032927" type="m1_Rim">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="826403685064275" type="m1_Tire">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
