@@ -3,34 +3,774 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>M7_HeatLock</name>
     <events>
+        <variable constant="0" name="M7_Difficulty" sid="854616381662170" static="0" type="number">1</variable>
         <variable constant="0" name="M7_DEBUG" sid="686712581298676" static="0" type="text"></variable>
         <variable constant="0" name="M7_Temperature" sid="176103752440200" static="0" type="number">18</variable>
-        <variable constant="1" name="M7_STARTING_TEMPERATURE" sid="550399671741321" static="0" type="number">18</variable>
         <variable constant="1" name="M7_TIME_LIMIT" sid="572441239436677" static="0" type="number">30</variable>
+        <variable constant="0" name="M7_Temp_State" sid="211733738425777" static="0" type="text">normal</variable>
         <variable constant="0" name="M7_Game_State" sid="319431560021926" static="0" type="text">Game</variable>
-        <event-group description="" sid="385953040015592" title="M7 Room Object Data Initialization">
+        <event-group description="" sid="401658813913275" title="M7 Tutorial">
+            <sub-events>
+                <event-block sid="589509423577316">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="989495756481535" type="System">
+                            <param id="0" name="Variable">M7_Game_State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Tutorial&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="M7_Tutorial_Progress" sid="549468618062526" static="1" type="number">0</variable>
+                        <variable constant="0" name="M7_Tutorial_State" sid="324166748619553" static="1" type="text">waiting</variable>
+                        <variable constant="0" name="M7_Tutorial_Animation_Progress" sid="418224455361059" static="1" type="number">0</variable>
+                        <variable constant="1" name="M7_TUTORIAL_ANIMATION_DURATION" sid="131343188386897" static="0" type="number">3</variable>
+                        <event-group description="" sid="499485535411609" title="M7 Tutorial Initialize">
+                            <sub-events>
+                                <event-block sid="249573126932910">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="601473224196664" type="System">
+                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="703447382916417" type="M7_Person1">
+                                            <param id="0" name="Instance variable">ChosenRoom</param>
+                                            <param id="1" name="Value">M7_Room0.UID</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="735001970996438" type="M7_Person1">
+                                            <param id="0" name="Instance variable">PreviousRoom</param>
+                                            <param id="1" name="Value">M7_Person.ChosenRoom</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="970265730345890" type="M7_Person1">
+                                            <param id="0" name="X">M7_Room0.X</param>
+                                            <param id="1" name="Y">M7_Room0.Y</param>
+                                        </action>
+                                        <action id="9" name="Set scale" sid="936703001494063" type="M7_Tutorial_Highlight">
+                                            <param id="0" name="Scale">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="843415204682102" type="M7_Tutorial_Highlight">
+                                            <param id="0" name="X">M7_Person1.X</param>
+                                            <param id="1" name="Y">M7_Person1.Y - 100</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="345748203907810" type="M7_Tutorial_Highlight">
+                                            <param id="0" name="Animation">&quot;a_0&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="961458954715973" type="M7_Tutorial_Instructions">
+                                            <param id="0" name="Text">&quot;Keep the people warm&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="698957320641217" type="M7_Tutorial_Prompt">
+                                            <param id="0" name="Text">&quot;Tap anywhere to continue&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="862224550674965" type="System">
+                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                            <param id="1" name="Value">M7_Tutorial_Progress + 1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="281663982166377" type="System">
+                                            <param id="0" name="Variable">M7_Tutorial_Animation_Progress</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <comment>Preparation for the Animations</comment>
+                                        <event-block sid="562858500088990">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="389694850564253" type="M7_Room0">
+                                                    <param id="0" name="Instance variable">Temperature</param>
+                                                    <param id="1" name="Value">-0.9</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="794380351873362" type="Function">
+                                                    <param id="0" name="Name">&quot;M7 Windows Weather Change&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="769332729266142" title="M7 Tutorial Animation">
+                            <sub-events>
+                                <event-block sid="117345074449533">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="236096382836229" type="System">
+                                            <param id="0" name="Variable">M7_Tutorial_State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;anim&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set layer visible" sid="100710024056408" type="System">
+                                            <param id="0" name="Layer">&quot;Tutorial&quot;</param>
+                                            <param id="1" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="307247201025712">
+                                            <conditions>
+                                                <condition id="-21" name="Is between values" sid="101148833156581" type="System">
+                                                    <param id="0" name="Value">M7_Tutorial_Animation_Progress</param>
+                                                    <param id="1" name="Lower bound">0</param>
+                                                    <param id="2" name="Upper bound">M7_TUTORIAL_ANIMATION_DURATION</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="110310393908859" type="System">
+                                                    <param id="0" name="Variable">M7_Tutorial_Animation_Progress</param>
+                                                    <param id="1" name="Value">M7_Tutorial_Animation_Progress + dt</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <comment>Door</comment>
+                                                <event-block sid="859377498610909">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="215718186815343" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">3</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="831793645717182">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="281838129903160" type="M7_Door0">
+                                                                    <param id="0" name="Instance variable">Open</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Compare variable" sid="796111544425327" type="System">
+                                                                    <param id="0" name="Variable">M7_Tutorial_Animation_Progress</param>
+                                                                    <param id="1" name="Comparison">5</param>
+                                                                    <param id="2" name="Value">0.3</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="670705624354352" type="Function">
+                                                                    <param id="0" name="Name">&quot;M7 Door Open Close&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">M7_Door0.UID</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <comment>Sun Window</comment>
+                                                <event-block sid="679037947989753">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="391495968657415" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">4</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="268917416693437">
+                                                            <conditions>
+                                                                <condition id="-21" name="Is between values" sid="142903911560828" type="System">
+                                                                    <param id="0" name="Value">M7_Tutorial_Animation_Progress</param>
+                                                                    <param id="1" name="Lower bound">0.3</param>
+                                                                    <param id="2" name="Upper bound">2.3</param>
+                                                                </condition>
+                                                                <condition id="-7" name="Compare instance variable" sid="529100042095460" type="M7_Window0">
+                                                                    <param id="0" name="Instance variable">Open</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="272894723633239" type="Function">
+                                                                    <param id="0" name="Name">&quot;M7 Windows Open Close&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">M7_Window0.UID</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="664495760049691">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="149012157285169" type="System">
+                                                                    <param id="0" name="Variable">M7_Tutorial_Animation_Progress</param>
+                                                                    <param id="1" name="Comparison">4</param>
+                                                                    <param id="2" name="Value">2.3</param>
+                                                                </condition>
+                                                                <condition id="-7" name="Compare instance variable" sid="953445745030634" type="M7_Window0">
+                                                                    <param id="0" name="Instance variable">HasSun</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="213131828326908" type="Function">
+                                                                    <param id="0" name="Name">&quot;M7 Windows Weather Change&quot;</param>
+                                                                    <param id="1" name="Parameter {n}"></param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <comment>Cold WIndow</comment>
+                                                <event-block sid="224503627659418">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="884643737995803" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">5</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="864164135357076">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="192899053516945" type="M7_Window0">
+                                                                    <param id="0" name="Instance variable">Open</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Compare variable" sid="498858284617908" type="System">
+                                                                    <param id="0" name="Variable">M7_Tutorial_Animation_Progress</param>
+                                                                    <param id="1" name="Comparison">5</param>
+                                                                    <param id="2" name="Value">0.2</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="642408793025925" type="Function">
+                                                                    <param id="0" name="Name">&quot;M7 Windows Open Close&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">M7_Window0.UID</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-group description="" sid="250838315220808" title="M7 Tutorial Temp Manage">
+                                                    <sub-events>
+                                                        <event-block sid="843593994062951">
+                                                            <conditions>
+                                                                <condition id="-14" name="Pick by unique ID" sid="605887929550189" type="M7_Door">
+                                                                    <param id="0" name="Unique ID">M7_Door0.UID</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <variable constant="1" name="M7_DOOR_OPEN_PERCENT_PER_SECOND" sid="382726612981418" static="0" type="number">0.3</variable>
+                                                                <variable constant="1" name="M7_DOOR_CLOSED_PERCENT_PER_SECOND" sid="708013532132995" static="0" type="number">0.1</variable>
+                                                                <variable constant="0" name="M7_Temp_Room_0" sid="567316391445738" static="0" type="number">0</variable>
+                                                                <variable constant="0" name="M7_Temp_Room_1" sid="234009264321206" static="0" type="number">0</variable>
+                                                                <event-block sid="686755794745361">
+                                                                    <conditions>
+                                                                        <condition id="-14" name="Pick by unique ID" sid="954284510873535" type="M7_Room">
+                                                                            <param id="0" name="Unique ID">int(tokenat(M7_Door.Rooms, 0, &quot; &quot;))</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Set value" sid="857365412822000" type="System">
+                                                                            <param id="0" name="Variable">M7_Temp_Room_0</param>
+                                                                            <param id="1" name="Value">M7_Room.OldTemperature</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="804941833513517">
+                                                                    <conditions>
+                                                                        <condition id="-14" name="Pick by unique ID" sid="422106132871374" type="M7_Room">
+                                                                            <param id="0" name="Unique ID">int(tokenat(M7_Door.Rooms, 1, &quot; &quot;))</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Set value" sid="714953341173321" type="System">
+                                                                            <param id="0" name="Variable">M7_Temp_Room_1</param>
+                                                                            <param id="1" name="Value">M7_Room.OldTemperature</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <variable constant="0" name="M7_Temp_Difference" sid="660602735959740" static="0" type="number">0</variable>
+                                                                <event-block sid="289114499058629">
+                                                                    <conditions />
+                                                                    <actions>
+                                                                        <action id="-9" name="Set value" sid="396335315310120" type="System">
+                                                                            <param id="0" name="Variable">M7_Temp_Difference</param>
+                                                                            <param id="1" name="Value">M7_Temp_Room_1 - M7_Temp_Room_0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="805901434777642">
+                                                                    <conditions>
+                                                                        <condition id="-14" name="Pick by unique ID" sid="627876993445564" type="M7_Room">
+                                                                            <param id="0" name="Unique ID">int(tokenat(M7_Door.Rooms, 0, &quot; &quot;))</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-10" name="Set value" sid="691014414135785" type="M7_Room">
+                                                                            <param id="0" name="Instance variable">Temperature</param>
+                                                                            <param id="1" name="Value">Self.Temperature + (M7_Door.Open ? M7_DOOR_OPEN_PERCENT_PER_SECOND : M7_DOOR_CLOSED_PERCENT_PER_SECOND) * M7_Temp_Difference * dt</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="382714788555995">
+                                                                    <conditions>
+                                                                        <condition id="-14" name="Pick by unique ID" sid="821856389157292" type="M7_Room">
+                                                                            <param id="0" name="Unique ID">int(tokenat(M7_Door.Rooms, 1, &quot; &quot;))</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-10" name="Set value" sid="148276446185872" type="M7_Room">
+                                                                            <param id="0" name="Instance variable">Temperature</param>
+                                                                            <param id="1" name="Value">Self.Temperature - (M7_Door.Open ? M7_DOOR_OPEN_PERCENT_PER_SECOND : M7_DOOR_CLOSED_PERCENT_PER_SECOND) * M7_Temp_Difference * dt</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <variable constant="1" name="M7_WINDOW_OPEN_CHANGE_PER_SECOND2" sid="434569289482370" static="0" type="number">-0.4</variable>
+                                                        <variable constant="1" name="M7_WINDOW_OPEN_SUN_CHANGE_PER_SECOND2" sid="235499461370193" static="0" type="number">0.6</variable>
+                                                        <variable constant="1" name="M7_WINDOW_CLOSED_CHANGE_PER_SECOND2" sid="293820434122615" static="0" type="number">-0.15</variable>
+                                                        <variable constant="1" name="M7_WINDOW_OPEN_CHANGE_PER_SECOND" sid="219970858615892" static="0" type="number">-0.4</variable>
+                                                        <variable constant="1" name="M7_WINDOW_OPEN_SUN_CHANGE_PER_SECOND" sid="625760552392861" static="0" type="number">0.6</variable>
+                                                        <variable constant="1" name="M7_WINDOW_CLOSED_CHANGE_PER_SECOND" sid="717883705036988" static="0" type="number">-0.15</variable>
+                                                        <event-block sid="880727163005967">
+                                                            <conditions>
+                                                                <condition id="-14" name="Pick by unique ID" sid="417169290942793" type="M7_Room">
+                                                                    <param id="0" name="Unique ID">M7_Room0.UID</param>
+                                                                </condition>
+                                                                <condition id="-7" name="Compare instance variable" sid="678540504790535" type="M7_Room">
+                                                                    <param id="0" name="Instance variable">Windows</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                                </condition>
+                                                                <condition id="-10" name="For" sid="992662017707111" type="System">
+                                                                    <param id="0" name="Name">&quot;Every Window of Room&quot;</param>
+                                                                    <param id="1" name="Start index">0</param>
+                                                                    <param id="2" name="End index">tokencount(M7_Room.Windows,&quot; &quot;)</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Pick by unique ID" sid="963866400863159" type="M7_Window">
+                                                                    <param id="0" name="Unique ID">int(tokenat(M7_Room.Windows, loopindex(&quot;Every Window of Room&quot;), &quot; &quot;))</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="633595656712127">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="213415185626417" type="M7_Window">
+                                                                            <param id="0" name="Instance variable">Open</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">1</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-10" name="Set value" sid="541393647809599" type="M7_Room">
+                                                                            <param id="0" name="Instance variable">Temperature</param>
+                                                                            <param id="1" name="Value">Self.Temperature + (M7_Window.HasSun = 1 ?  M7_WINDOW_OPEN_SUN_CHANGE_PER_SECOND:M7_WINDOW_OPEN_CHANGE_PER_SECOND ) * dt</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="478104701653942">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="942161563423394" type="M7_Window">
+                                                                            <param id="0" name="Instance variable">Open</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">0</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-10" name="Set value" sid="741705715211251" type="M7_Room">
+                                                                            <param id="0" name="Instance variable">Temperature</param>
+                                                                            <param id="1" name="Value">Self.Temperature + M7_WINDOW_CLOSED_CHANGE_PER_SECOND * dt</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="739005223991258">
+                                                            <conditions>
+                                                                <condition id="-11" name="For Each" sid="712556643636044" type="System">
+                                                                    <param id="0" name="Object">M7_Room</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="932393876827226" type="M7_Room">
+                                                                    <param id="0" name="Instance variable">Temperature</param>
+                                                                    <param id="1" name="Value">max(min(Self.Temperature, 2), -1.5)</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="201938635926223" type="M7_Room">
+                                                                    <param id="0" name="Instance variable">OldTemperature</param>
+                                                                    <param id="1" name="Value">Self.Temperature</param>
+                                                                </action>
+                                                                <action id="-6" name="Set height" sid="367926432698853" type="M7_Room">
+                                                                    <param id="0" name="Height">max(min((Self.Temperature - 1) * -0.5 * Self.Maxheight, Self.Maxheight),0)</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="518868440207887">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="452266259507019" type="M7_Room">
+                                                                            <param id="0" name="Instance variable">Temperature</param>
+                                                                            <param id="1" name="Comparison">3</param>
+                                                                            <param id="2" name="Value">-1</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="665614438117126" type="M7_Room">
+                                                                            <param id="0" name="Animation">&quot;Freezing&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="558778538071981">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="978648783282539" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="186745832142770" type="M7_Room">
+                                                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-group>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="519378596263925">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="393519632202866" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="423802912577036" type="System">
+                                                    <param id="0" name="Variable">M7_Tutorial_State</param>
+                                                    <param id="1" name="Value">&quot;waiting&quot;</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="554816289571023" type="System">
+                                                    <param id="0" name="Variable">M7_Tutorial_Animation_Progress</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="285218043001191" title="M7 Tutorial Interactions">
+                            <sub-events>
+                                <event-block sid="913395801053383">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="500396744905444" type="System">
+                                            <param id="0" name="Variable">M7_Tutorial_State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;waiting&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set layer visible" sid="928401110187917" type="System">
+                                            <param id="0" name="Layer">&quot;Tutorial&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="342448811667405">
+                                            <conditions>
+                                                <condition id="17" name="On tap object" sid="927472128282223" type="Touch">
+                                                    <param id="0" name="Object">M7_Tutorial_Highlight</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="740480514478333">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="497436873044033" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="528732925077113" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Value">M7_Tutorial_Progress + 1</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="619453368272162" type="M7_Tutorial_Highlight">
+                                                            <param id="0" name="Animation">&quot;a_1&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-3" name="Set position" sid="132255306324882" type="M7_Tutorial_Highlight">
+                                                            <param id="0" name="X">M7_Door0.X</param>
+                                                            <param id="1" name="Y">M7_Door0.Y</param>
+                                                        </action>
+                                                        <action id="0" name="Set text" sid="820620273332262" type="M7_Tutorial_Instructions">
+                                                            <param id="0" name="Text">&quot;Doors control the flow of heat&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Set text" sid="382150874288531" type="M7_Tutorial_Prompt">
+                                                            <param id="0" name="Text">&quot;Open the door to continue&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="780639581618405">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="533123201464823" type="System" />
+                                                        <condition id="-14" name="Compare variable" sid="514274085607067" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="321425015185015" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Value">M7_Tutorial_Progress + 1</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="261397835577392" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_State</param>
+                                                            <param id="1" name="Value">&quot;anim&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <comment>Next part&apos;s layout</comment>
+                                                        <event-block sid="885711936481021">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="594162726171990" type="M7_Tutorial_Highlight">
+                                                                    <param id="0" name="X">M7_Window0.X</param>
+                                                                    <param id="1" name="Y">M7_Window0.Y</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="985744926675800" type="M7_Tutorial_Instructions">
+                                                                    <param id="0" name="Text">&quot;Open blinds in sunny weather can warm up the room&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="374897618486673" type="M7_Tutorial_Prompt">
+                                                                    <param id="0" name="Text">&quot;Open the blinds to warm up the room&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="949736170912059">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="928960327042242" type="System" />
+                                                        <condition id="-14" name="Compare variable" sid="407948712153838" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">3</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="348862677237064" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Value">M7_Tutorial_Progress + 1</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="432758841803483" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_State</param>
+                                                            <param id="1" name="Value">&quot;anim&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <comment>Next part&apos;s layout</comment>
+                                                        <event-block sid="986361569083915">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="696131859358151" type="M7_Tutorial_Highlight">
+                                                                    <param id="0" name="X">M7_Window0.X</param>
+                                                                    <param id="1" name="Y">M7_Window0.Y</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="809114681208125" type="M7_Tutorial_Instructions">
+                                                                    <param id="0" name="Text">&quot;But if the weather is cold, heat will escape&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="331983656450067" type="M7_Tutorial_Prompt">
+                                                                    <param id="0" name="Text">&quot;Close the blinds to retain heat&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="728730540217848">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="721387956966067" type="System" />
+                                                        <condition id="-14" name="Compare variable" sid="809118596744417" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">4</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="107061572163137" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Value">M7_Tutorial_Progress + 1</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="996398219583615" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_State</param>
+                                                            <param id="1" name="Value">&quot;anim&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <comment>Next Part&apos;s Layout</comment>
+                                                        <event-block sid="434394973796645">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="9" name="Set scale" sid="955866220169187" type="M7_Tutorial_Highlight">
+                                                                    <param id="0" name="Scale">1.5</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="904482207065835" type="M7_Tutorial_Highlight">
+                                                                    <param id="0" name="Animation">&quot;a_5&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-3" name="Set position" sid="435778367686380" type="M7_Tutorial_Highlight">
+                                                                    <param id="0" name="X">266</param>
+                                                                    <param id="1" name="Y">167</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="748183111861157" type="M7_Tutorial_Instructions">
+                                                                    <param id="0" name="Text">&quot;If a person is too cold, they will raise the heat and use more energy&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="427660511365790" type="M7_Tutorial_Prompt">
+                                                                    <param id="0" name="Text">&quot;Tap anywhere to begin&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <comment>End Tutorial</comment>
+                                                <event-block sid="942332825501177">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="990933727866948" type="System" />
+                                                        <condition id="-14" name="Compare variable" sid="307327635711791" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Comparison">5</param>
+                                                            <param id="2" name="Value">5</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="184557695379512" type="System">
+                                                            <param id="0" name="Variable">M7_Game_State</param>
+                                                            <param id="1" name="Value">&quot;Game&quot;</param>
+                                                        </action>
+                                                        <action id="-4" name="Set layer visible" sid="551941372684423" type="System">
+                                                            <param id="0" name="Layer">&quot;Tutorial&quot;</param>
+                                                            <param id="1" name="Visibility">0</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="384210738925617" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="608555328835178" type="Function">
+                                                            <param id="0" name="Name">&quot;M7 Reset Values&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="385953040015592" title="M7 Initialization">
             <sub-events>
                 <event-block sid="706266292160068">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="396147156109733" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="486116917097738" type="System">
-                            <param id="0" name="Variable">M7_Game_State</param>
-                            <param id="1" name="Value">&quot;Game&quot;</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="102378227938632" type="System">
+                        <action id="-4" name="Set layer visible" sid="670749038202606" type="System">
                             <param id="0" name="Layer">&quot;EndGame&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
+                        <action id="0" name="Call function" sid="655973672784259" type="Function">
+                            <param id="0" name="Name">&quot;M7 Reset Values&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Play" sid="340434086327784" type="Audio">
+                            <param id="0" name="Audio file">bgm_heatlock</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;M7 BGM&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="362085256164725">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="408159620692511" type="System">
+                                    <param id="0" name="Variable">M7_Difficulty</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="486116917097738" type="System">
+                                    <param id="0" name="Variable">M7_Game_State</param>
+                                    <param id="1" name="Value">&quot;Tutorial&quot;</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="266280835994830" type="System">
+                                    <param id="0" name="Layer">&quot;Tutorial&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="958007939947362">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="853175580246504" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="725435485177369" type="System">
+                                    <param id="0" name="Variable">M7_Game_State</param>
+                                    <param id="1" name="Value">&quot;Game&quot;</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="501960065276660" type="System">
+                                    <param id="0" name="Layer">&quot;Tutorial&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <variable constant="1" name="M7_STARTING_TEMPERATURE" sid="550399671741321" static="0" type="number">18</variable>
+                <event-block sid="840833383961996">
+                    <conditions>
+                        <condition id="0" name="On function" sid="863749541679926" type="Function">
+                            <param id="0" name="Name">&quot;M7 Reset Values&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
                         <action id="-9" name="Set value" sid="821498127887150" type="System">
                             <param id="0" name="Variable">M7_Temperature</param>
                             <param id="1" name="Value">M7_STARTING_TEMPERATURE</param>
                         </action>
                     </actions>
                     <sub-events>
+                        <event-group description="" sid="699075257642697" title="M7 Initialize Temperature">
+                            <sub-events>
+                                <event-block sid="192297878317702">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="607826438058520" type="System">
+                                            <param id="0" name="Object">M7_Room</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="173017340019835" type="M7_Room">
+                                            <param id="0" name="Instance variable">Temperature</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                         <event-group description="" sid="129594061920019" title="M7 Initialize Rooms">
                             <sub-events>
+                                <event-block sid="900957951852780">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="236638045197707" type="System">
+                                            <param id="0" name="Object">M7_Room</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="177912802121052" type="M7_Room">
+                                            <param id="0" name="Instance variable">Maxheight</param>
+                                            <param id="1" name="Value">Self.Maxheight = 0 ? Self.Height : Self.Maxheight</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="109879392692079">
                                     <conditions />
                                     <actions>
@@ -91,6 +831,10 @@
                                             <param id="0" name="Instance variable">Doors</param>
                                             <param id="1" name="Value">str(M7_Door1.UID)</param>
                                         </action>
+                                        <action id="-10" name="Set value" sid="898596556022352" type="M7_Door5">
+                                            <param id="0" name="Instance variable">Rooms</param>
+                                            <param id="1" name="Value">M7_Room2.UID &amp; &quot; &quot; &amp; M7_Room5.UID</param>
+                                        </action>
                                         <action id="-10" name="Set value" sid="724009584791557" type="M7_Room3">
                                             <param id="0" name="Instance variable">Doors</param>
                                             <param id="1" name="Value">str(M7_Door2.UID)</param>
@@ -119,10 +863,6 @@
                                             <param id="0" name="Instance variable">Doors</param>
                                             <param id="1" name="Value">str(M7_Door4.UID)</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="898596556022352" type="M7_Door5">
-                                            <param id="0" name="Instance variable">Rooms</param>
-                                            <param id="1" name="Value">M7_Room2.UID &amp; &quot; &quot; &amp; M7_Room5.UID</param>
-                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -143,6 +883,41 @@
                                         <action id="-10" name="Set value" sid="706890466919475" type="M7_Room6">
                                             <param id="0" name="Instance variable">Windows</param>
                                             <param id="1" name="Value">str(M7_Window2.UID)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="143644965525720">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="810980363896646" type="System">
+                                            <param id="0" name="Object">M7_Window</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="756771426444617" type="M7_Window">
+                                            <param id="0" name="Animation">Self.Open = 0 ? (Self.HasSun = 0 ? &quot;Closed&quot; : &quot;ClosedSun&quot;) : (Self.HasSun = 0 ? &quot;Open&quot; : &quot;OpenSun&quot;)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="853149883157020">
+                                    <conditions />
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="388211217098006" type="M7_Weather">
+                                            <param id="0" name="Animation">Self.HasSun = 1 ? &quot;Sun&quot; : &quot;Cloud&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="109678889320093" title="M7 Initialize Vents">
+                            <sub-events>
+                                <event-block sid="271623441076491">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="916201183630170" type="Function">
+                                            <param id="0" name="Name">&quot;M7 Vents Initialize&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -173,7 +948,21 @@
                                             <param id="0" name="X">M7_Room.X</param>
                                             <param id="1" name="Y">M7_Room.Y</param>
                                         </action>
+                                        <action id="4" name="Set animation" sid="499193377749848" type="M7_Person">
+                                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="488888867351969">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                        <event-block sid="924487551715268">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-group>
@@ -199,7 +988,7 @@
                             <conditions />
                             <actions>
                                 <action id="0" name="Set text" sid="505773650915587" type="M7_TemperatureText">
-                                    <param id="0" name="Text">M7_Temperature &amp; &quot; C&quot;</param>
+                                    <param id="0" name="Text">M7_Temperature</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -209,6 +998,7 @@
         </event-group>
         <event-group description="" sid="221648568052963" title="M7 Temperature Management">
             <sub-events>
+                <comment>Changes in Room temperature due to different factors</comment>
                 <event-block sid="816289123847404">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="803366216145937" type="System">
@@ -216,12 +1006,16 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;Game&quot;</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="343599951124123" type="System">
+                            <param id="0" name="Variable">M7_Temp_State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;normal&quot;</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-group description="" sid="911608263032701" title="M7 Change By Vent">
+                        <event-group description="" sid="911608263032701" title="M7 Change By Extra">
                             <sub-events>
-                                <variable constant="1" name="M7_VENT_TEMP_CHANGE_PER_SECOND" sid="512645319629668" static="0" type="number">0.2</variable>
                                 <event-block sid="941893856809144">
                                     <conditions>
                                         <condition id="-11" name="For Each" sid="354355574403700" type="System">
@@ -231,16 +1025,60 @@
                                     <actions>
                                         <action id="-10" name="Set value" sid="418942861382075" type="M7_Room">
                                             <param id="0" name="Instance variable">Temperature</param>
-                                            <param id="1" name="Value">Self.Temperature + M7_VENT_TEMP_CHANGE_PER_SECOND * Self.VentCount * dt</param>
+                                            <param id="1" name="Value">Self.Temperature + Self.ExtraHeatPerSecond * dt</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="950534424390963" title="M7 Change By Stove">
+                            <sub-events>
+                                <variable constant="1" name="M7_STOVE_CHANGE_PER_SEC" sid="284703578704714" static="0" type="number">0.4</variable>
+                                <event-block sid="321152804624826">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="772310143107606" type="System">
+                                            <param id="0" name="Object">M7_Room</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="967962416989534" type="M7_Room">
+                                            <param id="0" name="Instance variable">StoveCount</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="772247453399704">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="601868267772461" type="System">
+                                                    <param id="0" name="Object">M7_Person</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="464208081281596" type="M7_Person">
+                                                    <param id="0" name="Instance variable">ChosenRoom</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">M7_Room.UID</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="901276234118738" type="M7_Person">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;waiting&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="946004262290864" type="M7_Room">
+                                                    <param id="0" name="Instance variable">Temperature</param>
+                                                    <param id="1" name="Value">Self.Temperature + M7_STOVE_CHANGE_PER_SEC * dt</param>
+                                                </action>
+                                                <action id="-24" name="Stop loop" sid="523088542075511" type="System" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-group>
                         <event-group description="" sid="551481265412711" title="M7 Change by Window">
                             <sub-events>
                                 <variable constant="1" name="M7_WINDOW_OPEN_CHANGE_PER_SECOND" sid="514014624442509" static="0" type="number">-0.4</variable>
-                                <variable constant="1" name="M7_WINDOW_OPEN_SUN_CHANGE_PER_SECOND" sid="537559780219987" static="0" type="number">0.2</variable>
+                                <variable constant="1" name="M7_WINDOW_OPEN_SUN_CHANGE_PER_SECOND" sid="537559780219987" static="0" type="number">0.6</variable>
                                 <variable constant="1" name="M7_WINDOW_CLOSED_CHANGE_PER_SECOND" sid="846584333438592" static="0" type="number">-0.15</variable>
                                 <event-block sid="265577437313055">
                                     <conditions>
@@ -299,8 +1137,8 @@
                         </event-group>
                         <event-group description="" sid="403950509424355" title="M7 Change By Neighbours">
                             <sub-events>
-                                <variable constant="1" name="M7_DOOR_OPEN_CHANGE_PER_SECOND" sid="718612546590700" static="0" type="number">0.5</variable>
-                                <variable constant="1" name="M7_DOOR_CLOSED_CHANGE_PER_SECOND" sid="256921152753428" static="0" type="number">0.3</variable>
+                                <variable constant="1" name="M7_DOOR_OPEN_PERCENT_PER_SECOND" sid="718612546590700" static="0" type="number">0.3</variable>
+                                <variable constant="1" name="M7_DOOR_CLOSED_PERCENT_PER_SECOND" sid="256921152753428" static="0" type="number">0.1</variable>
                                 <variable constant="0" name="M7_Temp_Room_0" sid="834522587221392" static="0" type="number">0</variable>
                                 <variable constant="0" name="M7_Temp_Room_1" sid="983112934350306" static="0" type="number">0</variable>
                                 <event-block sid="283054556915212">
@@ -337,101 +1175,41 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="586840442389200">
+                                        <variable constant="0" name="M7_Temp_Difference" sid="328265596384338" static="0" type="number">0</variable>
+                                        <event-block sid="752954529725364">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="737940453529347" type="System">
+                                                    <param id="0" name="Variable">M7_Temp_Difference</param>
+                                                    <param id="1" name="Value">M7_Temp_Room_1 - M7_Temp_Room_0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="930202370897642">
                                             <conditions>
-                                                <condition id="-14" name="Compare variable" sid="837782200840170" type="System">
-                                                    <param id="0" name="Variable">M7_Temp_Room_0</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Value">M7_Temp_Room_1</param>
+                                                <condition id="-14" name="Pick by unique ID" sid="592500544285318" type="M7_Room">
+                                                    <param id="0" name="Unique ID">int(tokenat(M7_Door.Rooms, 0, &quot; &quot;))</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="530024177338135">
-                                                    <conditions>
-                                                        <condition id="-8" name="Compare two values" sid="354375897123519" type="System">
-                                                            <param id="0" name="First value">M7_Temp_Room_0</param>
-                                                            <param id="1" name="Comparison">2</param>
-                                                            <param id="2" name="Second value">M7_Temp_Room_1</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="930202370897642">
-                                                            <conditions>
-                                                                <condition id="-14" name="Pick by unique ID" sid="592500544285318" type="M7_Room">
-                                                                    <param id="0" name="Unique ID">int(tokenat(M7_Door.Rooms, 0, &quot; &quot;))</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-10" name="Set value" sid="892689459291804" type="M7_Room">
-                                                                    <param id="0" name="Instance variable">Temperature</param>
-                                                                    <param id="1" name="Value">Self.Temperature + (M7_Door.Open ? M7_DOOR_OPEN_CHANGE_PER_SECOND : M7_DOOR_CLOSED_CHANGE_PER_SECOND) * dt</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                        <event-block sid="514220891418712">
-                                                            <conditions>
-                                                                <condition id="-14" name="Pick by unique ID" sid="867614749931597" type="M7_Room">
-                                                                    <param id="0" name="Unique ID">int(tokenat(M7_Door.Rooms, 1, &quot; &quot;))</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-10" name="Set value" sid="500269771559989" type="M7_Room">
-                                                                    <param id="0" name="Instance variable">Temperature</param>
-                                                                    <param id="1" name="Value">Self.Temperature - (M7_Door.Open ? M7_DOOR_OPEN_CHANGE_PER_SECOND : M7_DOOR_CLOSED_CHANGE_PER_SECOND) * dt</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                                <event-block sid="225992315093100">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="800032859430895" type="System" />
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="951126312859856">
-                                                            <conditions>
-                                                                <condition id="-8" name="Compare two values" sid="198872234781001" type="System">
-                                                                    <param id="0" name="First value">M7_Temp_Room_0</param>
-                                                                    <param id="1" name="Comparison">4</param>
-                                                                    <param id="2" name="Second value">M7_Temp_Room_1</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions />
-                                                            <sub-events>
-                                                                <event-block sid="596444117852381">
-                                                                    <conditions>
-                                                                        <condition id="-14" name="Pick by unique ID" sid="854859734989116" type="M7_Room">
-                                                                            <param id="0" name="Unique ID">int(tokenat(M7_Door.Rooms, 0, &quot; &quot;))</param>
-                                                                        </condition>
-                                                                    </conditions>
-                                                                    <actions>
-                                                                        <action id="-10" name="Set value" sid="785269716248494" type="M7_Room">
-                                                                            <param id="0" name="Instance variable">Temperature</param>
-                                                                            <param id="1" name="Value">Self.Temperature - (M7_Door.Open ? M7_DOOR_OPEN_CHANGE_PER_SECOND : M7_DOOR_CLOSED_CHANGE_PER_SECOND) * dt</param>
-                                                                        </action>
-                                                                    </actions>
-                                                                </event-block>
-                                                                <event-block sid="567190607116904">
-                                                                    <conditions>
-                                                                        <condition id="-14" name="Pick by unique ID" sid="481925697359901" type="M7_Room">
-                                                                            <param id="0" name="Unique ID">int(tokenat(M7_Door.Rooms, 1, &quot; &quot;))</param>
-                                                                        </condition>
-                                                                    </conditions>
-                                                                    <actions>
-                                                                        <action id="-10" name="Set value" sid="329281147338517" type="M7_Room">
-                                                                            <param id="0" name="Instance variable">Temperature</param>
-                                                                            <param id="1" name="Value">Self.Temperature + (M7_Door.Open ? M7_DOOR_OPEN_CHANGE_PER_SECOND : M7_DOOR_CLOSED_CHANGE_PER_SECOND) * dt</param>
-                                                                        </action>
-                                                                    </actions>
-                                                                </event-block>
-                                                            </sub-events>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                            </sub-events>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="390928380977685" type="M7_Room">
+                                                    <param id="0" name="Instance variable">Temperature</param>
+                                                    <param id="1" name="Value">Self.Temperature + (M7_Door.Open ? M7_DOOR_OPEN_PERCENT_PER_SECOND : M7_DOOR_CLOSED_PERCENT_PER_SECOND) * M7_Temp_Difference * dt</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="514220891418712">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="867614749931597" type="M7_Room">
+                                                    <param id="0" name="Unique ID">int(tokenat(M7_Door.Rooms, 1, &quot; &quot;))</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="500269771559989" type="M7_Room">
+                                                    <param id="0" name="Instance variable">Temperature</param>
+                                                    <param id="1" name="Value">Self.Temperature - (M7_Door.Open ? M7_DOOR_OPEN_PERCENT_PER_SECOND : M7_DOOR_CLOSED_PERCENT_PER_SECOND) * M7_Temp_Difference * dt</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -455,32 +1233,64 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="710938550841922" title="M7 Update Room">
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="710938550841922" title="M7 Update Room">
+                    <sub-events>
+                        <variable constant="1" name="M7_OPACITYMAX" sid="445236862712544" static="0" type="number">30</variable>
+                        <event-block sid="762001667074124">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="211690632253589" type="System">
+                                    <param id="0" name="Object">M7_Room</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="639866427789573" type="M7_Room">
+                                    <param id="0" name="Instance variable">Temperature</param>
+                                    <param id="1" name="Value">max(min(Self.Temperature, 1), -1)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="122534558232634" type="M7_Room">
+                                    <param id="0" name="Instance variable">OldTemperature</param>
+                                    <param id="1" name="Value">Self.Temperature</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="545481288983254" type="M7_Room">
+                                    <param id="0" name="Height">max(min((Self.Temperature - 1) * -0.5 * Self.Maxheight, Self.Maxheight),0)</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <variable constant="1" name="M7_OPACITYMAX" sid="445236862712544" static="0" type="number">30</variable>
-                                <event-block sid="762001667074124">
+                                <event-block sid="144292537925454">
                                     <conditions>
-                                        <condition id="-11" name="For Each" sid="211690632253589" type="System">
-                                            <param id="0" name="Object">M7_Room</param>
+                                        <condition id="-7" name="Compare instance variable" sid="897755281047616" type="M7_Room">
+                                            <param id="0" name="Instance variable">Temperature</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">-1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="122534558232634" type="M7_Room">
-                                            <param id="0" name="Instance variable">OldTemperature</param>
-                                            <param id="1" name="Value">Self.Temperature</param>
+                                        <action id="4" name="Set animation" sid="331377735422771" type="M7_Room">
+                                            <param id="0" name="Animation">&quot;Freezing&quot;</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
-                                        <action id="-16" name="Set opacity" sid="748005148545468" type="M7_Room">
-                                            <param id="0" name="Opacity">min(Self.Temperature * -1 * M7_OPACITYMAX, M7_OPACITYMAX)</param>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="164330502394163">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="500531408215790" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="191252309194701" type="M7_Room">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-group>
+                        </event-block>
                     </sub-events>
-                </event-block>
+                </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="477988417948673" title="M7 Person Behaviour">
+        <event-group description="" sid="477988417948673" title="M7 Person">
             <sub-events>
                 <event-block sid="381199812463784">
                     <conditions>
@@ -492,7 +1302,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-group description="" sid="444692670807075" title="M7 Person Movement">
+                        <event-group description="" sid="444692670807075" title="M7 Person Update">
                             <sub-events>
                                 <event-block sid="992596853623321">
                                     <conditions>
@@ -634,6 +1444,10 @@
                                                     <param id="0" name="Which">0</param>
                                                     <param id="1" name="Speed">0</param>
                                                 </action>
+                                                <action id="4" name="Set animation" sid="786215137692467" type="M7_Person">
+                                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <comment>Choose State &quot;moving&quot;</comment>
@@ -686,6 +1500,10 @@
                                                             <param id="0" name="Which">0</param>
                                                             <param id="1" name="Speed">0</param>
                                                         </action>
+                                                        <action id="4" name="Set animation" sid="230862523123140" type="M7_Person">
+                                                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
                                                     </actions>
                                                 </event-block>
                                                 <comment>If not dead end, set path to new room</comment>
@@ -712,6 +1530,10 @@
                                                         <action behavior="CustomMovement" id="2" name="Set speed" sid="163768502310696" type="M7_Person">
                                                             <param id="0" name="Which">2</param>
                                                             <param id="1" name="Speed">M7_Person.Speed * sin(M7_Person.MovementAngle)</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="730698008629942" type="M7_Person">
+                                                            <param id="0" name="Animation">Self.CustomMovement.dx &gt; 0 ? &quot;walking_r&quot; : &quot;walking_l&quot; </param>
+                                                            <param id="1" name="From">1</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -807,7 +1629,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="615369672928270" title="M7 Object Interactions">
+        <event-group description="" sid="615369672928270" title="M7 Player Interactions">
             <sub-events>
                 <event-block sid="666946093969361">
                     <conditions>
@@ -816,11 +1638,17 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;Game&quot;</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="240974939977055" type="System">
+                            <param id="0" name="Variable">M7_Temp_State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;normal&quot;</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-group description="" sid="824669515385871" title="M7 Window Behaviour">
+                        <event-group description="" sid="527238678445700" title="M7 Window Controller">
                             <sub-events>
+                                <comment>Player opening and closing the window</comment>
                                 <event-block sid="807449586543315">
                                     <conditions>
                                         <condition id="17" name="On tap object" sid="806134458735335" type="Touch">
@@ -828,61 +1656,28 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="123297751949406" type="M7_Window">
-                                            <param id="0" name="Instance variable">Open</param>
-                                            <param id="1" name="Value">Self.Open = 0 ? 1 : 0</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="117453591456768" type="M7_Window">
-                                            <param id="0" name="Animation">Self.Open = 0 ? &quot;Closed&quot; : &quot;Open&quot;</param>
-                                            <param id="1" name="From">1</param>
+                                        <action id="0" name="Call function" sid="206041983858624" type="Function">
+                                            <param id="0" name="Name">&quot;M7 Windows Open Close&quot;</param>
+                                            <param id="1" name="Parameter {n}">M7_Window.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="545667328686850" title="M7 Door Behaviour">
+                        <event-group description="" sid="545667328686850" title="M7 Door Controller">
                             <sub-events>
-                                <event-block sid="322695056185697">
+                                <event-block sid="847028597215671">
                                     <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="683493606401548" type="M7_Door">
-                                            <param id="0" name="Object">M7_Person</param>
+                                        <condition id="17" name="On tap object" sid="948535004466842" type="Touch">
+                                            <param id="0" name="Object">M7_Door</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="320159571993842" type="M7_Door">
-                                            <param id="0" name="Instance variable">Open</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="554567885008907" type="M7_Door">
-                                            <param id="0" name="Animation">Self.Open = 0 ? &quot;Closed&quot; : &quot;Open&quot;</param>
-                                            <param id="1" name="From">1</param>
+                                        <action id="0" name="Call function" sid="416313063805042" type="Function">
+                                            <param id="0" name="Name">&quot;M7 Door Open Close&quot;</param>
+                                            <param id="1" name="Parameter {n}">M7_Door.UID</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                                <event-block sid="549027752258312">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="503087626985366" type="System" />
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="847028597215671">
-                                            <conditions>
-                                                <condition id="17" name="On tap object" sid="948535004466842" type="Touch">
-                                                    <param id="0" name="Object">M7_Door</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="386299334267273" type="M7_Door">
-                                                    <param id="0" name="Instance variable">Open</param>
-                                                    <param id="1" name="Value">Self.Open = 0 ? 1 : 0</param>
-                                                </action>
-                                                <action id="4" name="Set animation" sid="954334525393956" type="M7_Door">
-                                                    <param id="0" name="Animation">Self.Open = 0 ? &quot;Closed&quot; : &quot;Open&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-group>
@@ -890,9 +1685,267 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="315475360373171" title="M7 Weather">
+            <sub-events>
+                <event-block sid="484515278798965">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="802555322078777" type="System">
+                            <param id="0" name="Variable">M7_Game_State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Game&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="587374495764155" type="System">
+                            <param id="0" name="Variable">M7_Temp_State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;normal&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-group description="" sid="719881483858892" title="M7 Window Weather Change">
+                            <sub-events>
+                                <variable constant="0" name="M7_WEATHER_TIMER" sid="327398641133680" static="1" type="number">-1</variable>
+                                <variable comment="15" constant="1" name="M7_WEATHER_TIMER_RANGE_MIN" sid="670248373641698" static="0" type="number">5</variable>
+                                <variable constant="1" name="M7_WEATHER_TIMER_RANGE_MAX" sid="525723658500700" static="0" type="number">15</variable>
+                                <event-block sid="329648196712007">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="475607954800366" type="System">
+                                            <param id="0" name="Variable">M7_WEATHER_TIMER</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="438756335912574" type="System">
+                                            <param id="0" name="Variable">M7_WEATHER_TIMER</param>
+                                            <param id="1" name="Value">random(M7_WEATHER_TIMER_RANGE_MIN, M7_WEATHER_TIMER_RANGE_MAX)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="287936430678350" type="Function">
+                                            <param id="0" name="Name">&quot;M7 Windows Weather Change&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="326668289088732">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="189027949407409" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="309246071976626" type="System">
+                                            <param id="0" name="Variable">M7_WEATHER_TIMER</param>
+                                            <param id="1" name="Value">M7_WEATHER_TIMER - dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="807368219761773" title="M7 Doors">
+            <sub-events>
+                <event-block sid="322695056185697">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="683493606401548" type="M7_Door">
+                            <param id="0" name="Object">M7_Person</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="735733922301439" type="M7_Door">
+                            <param id="0" name="Instance variable">Open</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="974286613039946" type="Function">
+                            <param id="0" name="Name">&quot;M7 Door Open Close&quot;</param>
+                            <param id="1" name="Parameter {n}">M7_Door.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="581390109348251">
+                    <conditions>
+                        <condition id="0" name="On function" sid="323550708171734" type="Function">
+                            <param id="0" name="Name">&quot;M7 Door Open Close&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="742654743637509" type="M7_Door">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="791818562794072">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="937625194664802" type="M7_Door">
+                                    <param id="0" name="Object">M7_Person</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="960804936897152" type="M7_Person">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;waiting&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="895431163356363" type="M7_Door">
+                                    <param id="0" name="Instance variable">Open</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="523236781330321">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="466296388662160" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="386299334267273" type="M7_Door">
+                                    <param id="0" name="Instance variable">Open</param>
+                                    <param id="1" name="Value">Self.Open = 0 ? 1 : 0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="282043381175516">
+                            <conditions />
+                            <actions>
+                                <action id="4" name="Set animation" sid="954334525393956" type="M7_Door">
+                                    <param id="0" name="Animation">Self.Open = 0 ? &quot;Closed&quot; : &quot;Open&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="449533076914895" type="Audio">
+                                    <param id="0" name="Audio file">sfx_door_open</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="738834676704138" title="M7 Windows">
+            <sub-events>
+                <comment>When the weather changes from sun to cloudy, or vice versa</comment>
+                <event-block sid="810942485415248">
+                    <conditions>
+                        <condition id="0" name="On function" sid="975222828943448" type="Function">
+                            <param id="0" name="Name">&quot;M7 Windows Weather Change&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="805300159564112" type="M7_Weather">
+                            <param id="0" name="Instance variable">HasSun</param>
+                            <param id="1" name="Value">Self.HasSun = 0 ? 1 :0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="201343786877239" type="M7_Weather">
+                            <param id="0" name="Animation">Self.HasSun = 1 ? &quot;Sun&quot; : &quot;Cloud&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="781511930285781">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="160953602820996" type="System">
+                                    <param id="0" name="Object">M7_Window</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="600394458402020" type="M7_Window">
+                                    <param id="0" name="Instance variable">HasSun</param>
+                                    <param id="1" name="Value">Self.WeatherInfluence = 1 ? (Self.HasSun = 0 ? 1: 0) : 0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="373316761727733" type="M7_Window">
+                                    <param id="0" name="Animation">Self.Open = 0 ? (Self.HasSun = 0 ? &quot;Closed&quot; : &quot;ClosedSun&quot;) : (Self.HasSun = 0 ? &quot;Open&quot; : &quot;OpenSun&quot;)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>When the window is opened or closed</comment>
+                <event-block sid="162689488002703">
+                    <conditions>
+                        <condition id="0" name="On function" sid="934174218069176" type="Function">
+                            <param id="0" name="Name">&quot;M7 Windows Open Close&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="751831941282574" type="M7_Window">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="974375757087134" type="Audio">
+                            <param id="0" name="Audio file">sfx_blinds_open</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="523197785424595" type="M7_Window">
+                            <param id="0" name="Instance variable">Open</param>
+                            <param id="1" name="Value">Self.Open = 0 ? 1 : 0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="517546079983928" type="M7_Window">
+                            <param id="0" name="Animation">Self.Open = 0 ? (Self.HasSun = 0 ? &quot;Closed&quot; : &quot;ClosedSun&quot;) : (Self.HasSun = 0 ? &quot;Open&quot; : &quot;OpenSun&quot;)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="946686085442525" title="M7 Vents">
+            <sub-events>
+                <variable constant="0" name="M7_Vents_Volume" sid="422456055032514" static="1" type="number">0</variable>
+                <variable constant="0" name="M7_Vents_State" sid="648398835378008" static="1" type="number">0</variable>
+                <event-block sid="205626621952397">
+                    <conditions>
+                        <condition id="0" name="On function" sid="842720531289887" type="Function">
+                            <param id="0" name="Name">&quot;M7 Vents Initialize&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="479806726067474" type="System">
+                            <param id="0" name="Variable">M7_Vents_State</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="169621676078433" type="M7_Vent">
+                            <param id="0" name="Animation">M7_Vents_State &amp; &quot;C&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="236901972998285" type="System">
+                            <param id="0" name="Variable">M7_Vents_Volume</param>
+                            <param id="1" name="Value">-40</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="977938572853676">
+                    <conditions>
+                        <condition id="0" name="On function" sid="829614397891265" type="Function">
+                            <param id="0" name="Name">&quot;M7 Vents Increment Temp&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="384350584822787" type="System">
+                            <param id="0" name="Variable">M7_Vents_State</param>
+                            <param id="1" name="Value">M7_Vents_State + 1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="744985673634028" type="M7_Vent">
+                            <param id="0" name="Animation">M7_Vents_State &amp; &quot;C&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="839546312100929" type="Audio">
+                            <param id="0" name="Audio file">sfx_AC</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">M7_Vents_Volume</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="475855930500725" type="System">
+                            <param id="0" name="Variable">M7_Vents_Volume</param>
+                            <param id="1" name="Value">M7_Vents_Volume + 5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="662058481164618" title="M7 Thermostat and Scoring">
             <sub-events>
-                <comment>Add Temperature Scoring/End Conditions</comment>
                 <event-block sid="258961365341296">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="948431313756322" type="System">
@@ -900,11 +1953,33 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;Game&quot;</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="897024028620533" type="System">
+                            <param id="0" name="Variable">M7_Temp_State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;normal&quot;</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
                         <event-group description="" sid="995870902724340" title="M7 Check Temperature of Each Person">
                             <sub-events>
+                                <comment>Automatically end game if thermostat set too high</comment>
+                                <event-block sid="325556591649805">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="811471555490517" type="System">
+                                            <param id="0" name="Variable">M7_Temperature</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">21</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="802824012534428" type="Function">
+                                            <param id="0" name="Name">&quot;M7 End Game&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>If the person is in a room under -1 degrees, increase the thermostat</comment>
                                 <event-block sid="402309143097592">
                                     <conditions>
                                         <condition id="-11" name="For Each" sid="150154395163864" type="System">
@@ -918,7 +1993,6 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <comment>If the person is in a room under -1 degrees, increase the thermostat</comment>
                                         <event-block sid="677068586314177">
                                             <conditions>
                                                 <condition id="-14" name="Pick by unique ID" sid="168577282191202" type="M7_Room">
@@ -934,6 +2008,10 @@
                                                 <action id="0" name="Call function" sid="826153663224879" type="Function">
                                                     <param id="0" name="Name">&quot;M7 Increase Temperature&quot;</param>
                                                     <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="785344754253392" type="M7_Person">
+                                                    <param id="0" name="Animation">&quot;adjusting_temp&quot;</param>
+                                                    <param id="1" name="From">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -963,45 +2041,123 @@
                                             <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="122146336971463" type="Function">
-                                            <param id="0" name="Name">&quot;M7 End Game&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="511859320047968">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="762785012462777" type="System">
+                                                    <param id="0" name="Object">M7_Person</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="CustomMovement" id="0" name="Stop" sid="168300763088700" type="M7_Person" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="430388409122702">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="122146336971463" type="Function">
+                                                    <param id="0" name="Name">&quot;M7 End Game&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-group>
                     </sub-events>
                 </event-block>
-                <event-block sid="420202295369899">
-                    <conditions>
-                        <condition id="0" name="On function" sid="156104583109628" type="Function">
-                            <param id="0" name="Name">&quot;M7 Increase Temperature&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
+                <event-group description="" sid="525509832666268" title="Temperature Increase Transition">
                     <sub-events>
-                        <event-block sid="524241001756610">
+                        <variable constant="0" name="M7_Transition_Counter" sid="337390884750133" static="1" type="number">0</variable>
+                        <variable constant="1" name="M7_TEMP_INCREASE_TRANSITION_RATE_DURATION" sid="316959003907820" static="0" type="number">0.5</variable>
+                        <event-block sid="443482500143842">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="366930194239211" type="System">
-                                    <param id="0" name="Object">M7_Room</param>
+                                <condition id="-14" name="Compare variable" sid="434084959282359" type="System">
+                                    <param id="0" name="Variable">M7_Temp_State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;increasing&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="768996190926243" type="M7_Room">
-                                    <param id="0" name="Instance variable">Temperature</param>
-                                    <param id="1" name="Value">Self.Temperature + 1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="385327860563201" type="M7_Room">
-                                    <param id="0" name="Instance variable">OldTemperature</param>
-                                    <param id="1" name="Value">Self.Temperature</param>
+                                <action id="-9" name="Set value" sid="409039412942034" type="System">
+                                    <param id="0" name="Variable">M7_Transition_Counter</param>
+                                    <param id="1" name="Value">M7_Transition_Counter + dt/M7_TEMP_INCREASE_TRANSITION_RATE_DURATION</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="524241001756610">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="366930194239211" type="System">
+                                            <param id="0" name="Object">M7_Room</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="768996190926243" type="M7_Room">
+                                            <param id="0" name="Instance variable">Temperature</param>
+                                            <param id="1" name="Value">Self.Temperature + dt/M7_TEMP_INCREASE_TRANSITION_RATE_DURATION</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="385327860563201" type="M7_Room">
+                                            <param id="0" name="Instance variable">OldTemperature</param>
+                                            <param id="1" name="Value">Self.Temperature</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="147606754086072">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="414325027797750" type="System">
+                                            <param id="0" name="Variable">M7_Transition_Counter</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="912705971637280" type="System">
+                                            <param id="0" name="Variable">M7_Temp_State</param>
+                                            <param id="1" name="Value">&quot;normal&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="690323471004773">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="481335964637196" type="System">
+                                                    <param id="0" name="Object">M7_Person</param>
+                                                </condition>
+                                                <condition id="2" name="Is playing" sid="296808025410267" type="M7_Person">
+                                                    <param id="0" name="Animation">&quot;adjusting_temp&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="329811077271774" type="M7_Person">
+                                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="574431118060537">
-                            <conditions />
+                        <event-block sid="420202295369899">
+                            <conditions>
+                                <condition id="0" name="On function" sid="156104583109628" type="Function">
+                                    <param id="0" name="Name">&quot;M7 Increase Temperature&quot;</param>
+                                </condition>
+                            </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="543172657465527" type="Function">
+                                    <param id="0" name="Name">&quot;M7 Vents Increment Temp&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="696457716376929" type="System">
+                                    <param id="0" name="Variable">M7_Transition_Counter</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="123340659363168" type="System">
+                                    <param id="0" name="Variable">M7_Temp_State</param>
+                                    <param id="1" name="Value">&quot;increasing&quot;</param>
+                                </action>
                                 <action id="-9" name="Set value" sid="628883904129699" type="System">
                                     <param id="0" name="Variable">M7_Temperature</param>
                                     <param id="1" name="Value">M7_Temperature + 1</param>
@@ -1012,10 +2168,10 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
+                </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="459515281947133" title="M7 End Game">
+        <event-group description="" sid="459515281947133" title="M7 End">
             <sub-events>
                 <event-block sid="457415082801501">
                     <conditions>
@@ -1028,6 +2184,7 @@
                             <param id="0" name="Variable">M7_Game_State</param>
                             <param id="1" name="Value">&quot;End&quot;</param>
                         </action>
+                        <action id="33" name="Stop all" sid="294713831243994" type="Audio" />
                     </actions>
                     <sub-events>
                         <event-block sid="247861463040136">
@@ -1105,12 +2262,11 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="247101603742993" type="M7_End_Exit">
-                                            <param id="0" name="Animation">&quot;Down&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
                                         <action id="-16" name="Wait" sid="381483924331399" type="System">
                                             <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="6" name="Stop" sid="884502942157158" type="Audio">
+                                            <param id="0" name="Tag">&quot;M7 BGM&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1121,14 +2277,58 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="352848205269254" type="M7_End_Restart">
-                                            <param id="0" name="Animation">&quot;Down&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
                                         <action id="-16" name="Wait" sid="763770534048453" type="System">
                                             <param id="0" name="Seconds">0.1</param>
                                         </action>
                                         <action id="-26" name="Restart layout" sid="683953705616247" type="System" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="408893782623042">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="592708006211697" type="Touch">
+                                            <param id="0" name="Object">M7_End_Exit</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="287337756522060" type="M7_End_Exit">
+                                            <param id="0" name="Animation">&quot;Down&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="291463253320938">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="422947203699256" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="907425683361279" type="M7_End_Exit">
+                                            <param id="0" name="Animation">&quot;Up&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="763370408681602">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="689234121060517" type="Touch">
+                                            <param id="0" name="Object">M7_End_Restart</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="937177261220413" type="M7_End_Restart">
+                                            <param id="0" name="Animation">&quot;Down&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="564898839903527">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="486932186908550" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="173216248548962" type="M7_End_Restart">
+                                            <param id="0" name="Animation">&quot;Up&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>

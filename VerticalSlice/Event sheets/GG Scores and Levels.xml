@@ -11,7 +11,15 @@
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="350382830732689" type="System" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Set item" sid="216259256805756" type="LocalStorage">
+                            <param id="0" name="Key">&quot;scorestate&quot;</param>
+                            <param id="1" name="Value">GG_Level_Data.AsJSON</param>
+                        </action>
+                        <action id="1" name="Get item" sid="179940521792891" type="LocalStorage">
+                            <param id="0" name="Key">&quot;scorestate&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <comment>Fill Array With Data</comment>
                         <event-block sid="231583249699418">
@@ -31,6 +39,14 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="894145305993092">
+            <conditions>
+                <condition id="1" name="On item get" sid="775439796642071" type="LocalStorage">
+                    <param id="0" name="Key">&quot;scorestate&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
         <event-group description="" sid="592690023303973" title="GG Updating Data">
             <sub-events>
                 <comment>Function(game#, difficulty, score)</comment>
