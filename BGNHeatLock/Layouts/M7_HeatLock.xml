@@ -39,9 +39,6 @@
                     <instance-variables>
                         <HasSun>0</HasSun>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="HardLight" />
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -321,8 +318,8 @@
                         <width>126</width>
                         <height>236</height>
                         <depth>0</depth>
-                        <hotspotX>0.491228014</hotspotX>
-                        <hotspotY>1.006450057</hotspotY>
+                        <hotspotX>0.491228074</hotspotX>
+                        <hotspotY>1.006451607</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -663,10 +660,10 @@
                         <x>282</x>
                         <y>479</y>
                         <z>0</z>
-                        <width>126.315788269</width>
-                        <height>213.636367798</height>
+                        <width>202.105255127</width>
+                        <height>250</height>
                         <depth>0</depth>
-                        <hotspotX>0.209999993</hotspotX>
+                        <hotspotX>0.487500012</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -690,11 +687,11 @@
                         <x>282</x>
                         <y>896</y>
                         <z>0</z>
-                        <width>120</width>
-                        <height>219.672134399</height>
+                        <width>192</width>
+                        <height>240.437164307</height>
                         <depth>0</depth>
-                        <hotspotX>0.419999987</hotspotX>
-                        <hotspotY>0.50248754</hotspotY>
+                        <hotspotX>0.456250012</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -709,7 +706,7 @@
                     <instance-variables>
                         <Open>0</Open>
                         <HasSun>0</HasSun>
-                        <WeatherInfluence>1</WeatherInfluence>
+                        <WeatherInfluence>0</WeatherInfluence>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -717,11 +714,11 @@
                         <x>1788</x>
                         <y>895</y>
                         <z>0</z>
-                        <width>120</width>
-                        <height>219.672134399</height>
+                        <width>192</width>
+                        <height>240.437164307</height>
                         <depth>0</depth>
-                        <hotspotX>0.579999983</hotspotX>
-                        <hotspotY>0.50248754</hotspotY>
+                        <hotspotX>0.543749988</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

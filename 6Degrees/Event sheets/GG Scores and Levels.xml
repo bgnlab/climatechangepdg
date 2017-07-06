@@ -179,6 +179,25 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>Game 6</comment>
+                        <event-block sid="662825382046987">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="403913674841675" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="980069146271070" type="System">
+                                    <param id="0" name="Variable">GG_Difficulty</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="277171282882773" type="System">
+                                    <param id="0" name="Layout">&quot;M7_HeatLock&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <comment>Game 8</comment>
                         <event-block sid="222630852809354">
                             <conditions>
@@ -188,15 +207,37 @@
                                     <param id="2" name="Value">8</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="331840486350482" type="System">
-                                    <param id="0" name="Variable">GG_Difficulty</param>
-                                    <param id="1" name="Value">Function.Param(1)</param>
-                                </action>
-                                <action id="-25" name="Go to layout (by name)" sid="733654006324572" type="System">
-                                    <param id="0" name="Layout">&quot;m1_GameLayout&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="509391687048274">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="618129911429777" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="274405003501943" type="System">
+                                            <param id="0" name="Layout">&quot;m1_InteractiveTutorial&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="671203433506737">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="217105985637996" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="147907283955410" type="System">
+                                            <param id="0" name="Variable">GG_Difficulty</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
+                                        <action id="-25" name="Go to layout (by name)" sid="716896968882210" type="System">
+                                            <param id="0" name="Layout">&quot;m1_GameLayout&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Game 10</comment>
                         <event-block sid="536698396122290">

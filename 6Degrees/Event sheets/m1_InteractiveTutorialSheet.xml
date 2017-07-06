@@ -533,8 +533,9 @@
                     <param id="0" name="Group name">&quot;Player Actions&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
-                <action id="-2" name="Go to layout" sid="152048725519583" type="System">
-                    <param id="0" name="Layout">m1_Layout 1</param>
+                <action id="0" name="Call function" sid="169101530673538" type="Function">
+                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>

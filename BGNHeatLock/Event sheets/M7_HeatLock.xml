@@ -79,6 +79,8 @@
                                         <event-block sid="562858500088990">
                                             <conditions />
                                             <actions>
+                                                <action id="-9" name="Destroy" sid="304620617949571" type="M7_Person3" />
+                                                <action id="-9" name="Destroy" sid="414701240314020" type="M7_Person2" />
                                                 <action id="-10" name="Set value" sid="389694850564253" type="M7_Room0">
                                                     <param id="0" name="Instance variable">Temperature</param>
                                                     <param id="1" name="Value">-0.9</param>
@@ -925,6 +927,30 @@
                         </event-group>
                         <event-group description="" sid="700672218353482" title="M7 Person Spawning">
                             <sub-events>
+                                <event-block sid="753466343739636">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="547303897741957" type="System">
+                                            <param id="0" name="Variable">M7_Difficulty</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="787048523780706" type="M7_Person3" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="432454790322653">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="140233816658464" type="System">
+                                            <param id="0" name="Variable">M7_Difficulty</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="107799908383151" type="M7_Person2" />
+                                    </actions>
+                                </event-block>
                                 <variable constant="0" name="tempval" sid="485382954874502" static="0" type="number">0</variable>
                                 <event-block sid="695204180281465">
                                     <conditions>
@@ -953,16 +979,6 @@
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
-                                    <sub-events>
-                                        <event-block sid="488888867351969">
-                                            <conditions />
-                                            <actions />
-                                        </event-block>
-                                        <event-block sid="924487551715268">
-                                            <conditions />
-                                            <actions />
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-group>

@@ -16,14 +16,11 @@
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
     </used-behaviors>
-    <used-effects>
-        <effect author="Scirra" id="hardlight">Hard Light</effect>
-    </used-effects>
+    <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -605,16 +602,16 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="1" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="491549483432489" speed="5">
-                            <frame duration="1" hotspotX="0.21" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\accordian blinds closed3.png" />
+                            <frame duration="1" hotspotX="0.4875" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\closed.png" />
                         </animation>
                         <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="178566658761025" speed="5">
-                            <frame duration="1" hotspotX="0.47" hotspotY="0.531915" original-source="C:\Users\Yuan\Downloads\accordian blinds closed b.png" />
+                            <frame duration="1" hotspotX="0.45625" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\closed.png" />
                         </animation>
                         <animation framecount="1" loop="1" name="OpenSun" pingpong="0" repeatcount="1" repeatto="0" sid="260115853627254" speed="5">
-                            <frame duration="1" hotspotX="0.21" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\accordian blinds closed2.png" />
+                            <frame duration="1" hotspotX="0.4875" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Open Sun.png" />
                         </animation>
                         <animation framecount="1" loop="0" name="ClosedSun" pingpong="0" repeatcount="1" repeatto="0" sid="336781896813662" speed="5">
-                            <frame duration="1" hotspotX="0.46" hotspotY="0.532338" original-source="C:\Users\Yuan\Downloads\accordian blinds open b.png" />
+                            <frame duration="1" hotspotX="0.45625" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\closed sun.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -622,16 +619,16 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="759711711982986" speed="5">
-                            <frame duration="1" hotspotX="0.42" hotspotY="0.502488" original-source="C:\Users\Yuan\Downloads\accordian blinds open b.png" />
+                            <frame duration="1" hotspotX="0.45625" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\closed.png" />
                         </animation>
                         <animation framecount="1" loop="1" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="244312843210018" speed="5">
-                            <frame duration="1" hotspotX="0.21" hotspotY="0.484043" original-source="C:\Users\Yuan\Downloads\accordian blinds closed3.png" />
+                            <frame duration="1" hotspotX="0.4875" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\open.png" />
                         </animation>
                         <animation framecount="1" loop="0" name="ClosedSun" pingpong="0" repeatcount="1" repeatto="0" sid="664638462144962" speed="5">
-                            <frame duration="1" hotspotX="0.42" hotspotY="0.502488" original-source="C:\Users\Yuan\Downloads\accordian blinds open b.png" />
+                            <frame duration="1" hotspotX="0.45625" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\closed sun.png" />
                         </animation>
                         <animation framecount="1" loop="1" name="OpenSun" pingpong="0" repeatcount="1" repeatto="0" sid="961843445567607" speed="5">
-                            <frame duration="1" hotspotX="0.21" hotspotY="0.489362" original-source="C:\Users\Yuan\Downloads\accordian blinds closed2.png" />
+                            <frame duration="1" hotspotX="0.4875" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Open Sun.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -639,50 +636,16 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="316813245605488" speed="5">
-                            <frame duration="1" hotspotX="0.58" hotspotY="0.502488" original-source="C:\Users\Yuan\Downloads\accordian blinds open b.png">
-                                <collision-poly>
-                                    <point x="0.25" y="0" />
-                                    <point x="0.75" y="0" />
-                                    <point x="0.75" y="1" />
-                                    <point x="0.25" y="1" />
-                                </collision-poly>
-                            </frame>
+                            <frame duration="1" hotspotX="0.54375" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\closed.png" />
                         </animation>
                         <animation framecount="1" loop="1" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="904309863255382" speed="5">
-                            <frame duration="1" hotspotX="0.79" hotspotY="0.515957" original-source="C:\Users\Yuan\Downloads\accordian blinds closed3.png">
-                                <collision-poly>
-                                    <point x="0.17" y="0.0904255" />
-                                    <point x="0.5" y="0.5" />
-                                    <point x="0.32" y="0.361702" />
-                                    <point x="0.51" y="0.5" />
-                                    <point x="0.67" y="0.824468" />
-                                    <point x="0.5" y="0.882979" />
-                                    <point x="0.17" y="0.909574" />
-                                </collision-poly>
-                            </frame>
+                            <frame duration="1" hotspotX="0.5125" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\open.png" />
                         </animation>
                         <animation framecount="1" loop="1" name="OpenSun" pingpong="0" repeatcount="1" repeatto="0" sid="675548543278934" speed="5">
-                            <frame duration="1" hotspotX="0.79" hotspotY="0.484043" original-source="C:\Users\Yuan\Downloads\accordian blinds closed2.png">
-                                <collision-poly>
-                                    <point x="0.83" y="0.909574" />
-                                    <point x="0.5" y="0.776596" />
-                                    <point x="0.48" y="0.744681" />
-                                    <point x="0.5" y="0.5" />
-                                    <point x="0.68" y="0.361702" />
-                                    <point x="0.5" y="0.505319" />
-                                    <point x="0.83" y="0.0904255" />
-                                </collision-poly>
-                            </frame>
+                            <frame duration="1" hotspotX="0.5125" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Open Sun.png" />
                         </animation>
                         <animation framecount="1" loop="0" name="ClosedSun" pingpong="0" repeatcount="1" repeatto="0" sid="832649212829476" speed="5">
-                            <frame duration="1" hotspotX="0.58" hotspotY="0.502488">
-                                <collision-poly>
-                                    <point x="0.25" y="0" />
-                                    <point x="0.75" y="0" />
-                                    <point x="0.75" y="1" />
-                                    <point x="0.25" y="1" />
-                                </collision-poly>
-                            </frame>
+                            <frame duration="1" hotspotX="0.54375" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\closed sun.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1050,17 +1013,12 @@
                 <instance-variables>
                     <instance-variable name="HasSun" sid="906352140627244" type="number" />
                 </instance-variables>
-                <effects>
-                    <effect-type name="HardLight">
-                        <effect id="hardlight" />
-                    </effect-type>
-                </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Sun" pingpong="0" repeatcount="1" repeatto="0" sid="476184848065007" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\sunny winter day background.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\sunny winter day background (1).png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Cloud" pingpong="0" repeatcount="1" repeatto="0" sid="766014407113058" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\cloudy winter day background.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\stormy winter day background.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1071,9 +1029,6 @@
                         <frame duration="1" hotspotX="0.504762" hotspotY="0.439024" original-source="C:\Users\Yuan\Downloads\hi.png" />
                     </animation>
                 </animation-folder>
-            </object-type>
-            <object-type name="ShadowLight" sid="172494796110859">
-                <plugin id="shadowlight" />
             </object-type>
         </object-folder>
         <object-type name="Touch" sid="794535935296391">

@@ -47,7 +47,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="m1_MobileSafeZone" uid="0">
+                <instance type="m1_MobileSafeZone" uid="1110">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -88,7 +88,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="m1_Grass" uid="29">
+                <instance type="m1_Grass" uid="1111">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -111,7 +111,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_Road" uid="2">
+                <instance type="m1_Road" uid="1112">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -133,7 +133,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="m1_StopArrow" uid="7">
+                <instance type="m1_StopArrow" uid="1113">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Stop</initial-animation>
@@ -159,7 +159,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_InfiniteRoad" uid="19">
+                <instance type="m1_InfiniteRoad" uid="1114">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -182,7 +182,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_Sprite2" uid="21">
+                <instance type="m1_Sprite2" uid="1115">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -204,7 +204,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_Exhaust" uid="28">
+                <instance type="m1_Exhaust" uid="1116">
                     <properties>
                         <rate>10</rate>
                         <spray-cone>60</spray-cone>
@@ -243,7 +243,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_TimerProgress" uid="5">
+                <instance type="m1_TimerProgress" uid="1117">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -265,7 +265,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_TimerBar" uid="22">
+                <instance type="m1_TimerBar" uid="1118">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -287,7 +287,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_FuelMeter" uid="11">
+                <instance type="m1_FuelMeter" uid="1119">
                     <properties>
                         <value>6</value>
                         <maximum>6</maximum>
@@ -312,7 +312,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="m1_FuelText" uid="15">
+                <instance type="m1_FuelText" uid="1120">
                     <properties>
                         <text>Fuel</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -339,7 +339,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_FuelProgress" uid="54">
+                <instance type="m1_FuelProgress" uid="1121">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -364,7 +364,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_FuelBarrel" uid="42">
+                <instance type="m1_FuelBarrel" uid="1122">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -386,7 +386,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_PressureProgress" uid="55">
+                <instance type="m1_PressureProgress" uid="1123">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -411,7 +411,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_PressureBorder" uid="56">
+                <instance type="m1_PressureBorder" uid="1124">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -452,7 +452,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="m1_Car" uid="1">
+                <instance type="m1_Car" uid="1125">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Driving</initial-animation>
@@ -482,7 +482,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_TimerMeter" uid="14">
+                <instance type="m1_TimerMeter" uid="1126">
                     <properties>
                         <value>30</value>
                         <maximum>30</maximum>
@@ -506,7 +506,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="m1_TirePressureMeter" uid="8">
+                <instance type="m1_TirePressureMeter" uid="1127">
                     <properties>
                         <value>100</value>
                         <maximum>100</maximum>
@@ -530,7 +530,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="m1_Text2" uid="16">
+                <instance type="m1_Text2" uid="1128">
                     <properties>
                         <text>Time Left</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -557,7 +557,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_PressureText" uid="27">
+                <instance type="m1_PressureText" uid="1129">
                     <properties>
                         <text>Pressure</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -584,7 +584,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_WinBox" uid="24">
+                <instance type="m1_WinBox" uid="1130">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -606,7 +606,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_LeaveArrow" uid="141">
+                <instance type="m1_LeaveArrow" uid="1131">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -632,7 +632,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_Pump" uid="142">
+                <instance type="m1_Pump" uid="1132">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -657,7 +657,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_Tire" uid="4">
+                <instance type="m1_Tire" uid="1133">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -679,7 +679,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_Rim" uid="3">
+                <instance type="m1_Rim" uid="1134">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -701,7 +701,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_Tire" uid="13">
+                <instance type="m1_Tire" uid="1135">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -723,7 +723,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_Rim" uid="9">
+                <instance type="m1_Rim" uid="1136">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -745,7 +745,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_Tornado" uid="39">
+                <instance type="m1_Tornado" uid="1137">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>NonHappy</initial-animation>
@@ -773,7 +773,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_DoubleArrow" uid="18">
+                <instance type="m1_DoubleArrow" uid="1138">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -818,7 +818,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="m1_RepairStopHB" uid="12">
+                <instance type="m1_RepairStopHB" uid="1139">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -859,7 +859,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="m1_WinFailState" uid="32">
+                <instance type="m1_WinFailState" uid="1140">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -881,7 +881,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_EmptyStar" uid="46">
+                <instance type="m1_EmptyStar" uid="1141">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -903,7 +903,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_EmptyStar" uid="45">
+                <instance type="m1_EmptyStar" uid="1142">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -925,7 +925,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_EmptyStar" uid="44">
+                <instance type="m1_EmptyStar" uid="1143">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -947,7 +947,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_Sprite3" uid="25">
+                <instance type="m1_Sprite3" uid="1144">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -969,7 +969,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_ReplayBtn" uid="33">
+                <instance type="m1_ReplayBtn" uid="1145">
                     <properties>
                         <type>Button</type>
                         <text>Replay?</text>
@@ -993,7 +993,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="m1_Star" uid="85">
+                <instance type="m1_Star" uid="1146">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1015,7 +1015,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_2ndStar" uid="107">
+                <instance type="m1_2ndStar" uid="1147">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1037,7 +1037,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_3rdStar" uid="138">
+                <instance type="m1_3rdStar" uid="1148">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1059,7 +1059,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_WLText" uid="139">
+                <instance type="m1_WLText" uid="1149">
                     <properties>
                         <text>WIN!</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1086,7 +1086,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_RetryBtn" uid="51">
+                <instance type="m1_RetryBtn" uid="1150">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1108,7 +1108,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_ExitBtn" uid="52">
+                <instance type="m1_ExitBtn" uid="1151">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1130,7 +1130,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_WinFailText" uid="53">
+                <instance type="m1_WinFailText" uid="1152">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1176,7 +1176,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="m1_Sprite5" uid="31">
+                <instance type="m1_Sprite5" uid="1153">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1198,7 +1198,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_Sprite4" uid="26">
+                <instance type="m1_Sprite4" uid="1154">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1220,7 +1220,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m1_ReplayBtn" uid="30">
+                <instance type="m1_ReplayBtn" uid="1155">
                     <properties>
                         <type>Button</type>
                         <text>Replay?</text>
@@ -1244,7 +1244,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="m1_WLText" uid="140">
+                <instance type="m1_WLText" uid="1156">
                     <properties>
                         <text>LOSE</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1276,7 +1276,7 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="m1_Array" uid="20">
+        <instance type="m1_Array" uid="1157">
             <properties>
                 <width>10</width>
                 <height>1</height>
