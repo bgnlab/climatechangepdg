@@ -4,7 +4,8 @@
     <name>GG Scores and Levels</name>
     <events>
         <comment>Game Version is either &apos;CASUAL&apos; or &apos;STORY&apos;</comment>
-        <variable constant="1" name="GAME_VERSION" sid="661238395450024" static="0" type="text">CASUAL</variable>
+        <variable constant="1" name="GG_GAME_VERSION" sid="661238395450024" static="0" type="text">CASUAL</variable>
+        <variable constant="0" name="GG_Difficulty" sid="453214844668942" static="0" type="number">0</variable>
         <event-group description="" sid="888092148056112" title="GG Initializing Data">
             <sub-events>
                 <event-block sid="171393357177441">
@@ -39,14 +40,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="894145305993092">
-            <conditions>
-                <condition id="1" name="On item get" sid="775439796642071" type="LocalStorage">
-                    <param id="0" name="Key">&quot;scorestate&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
         <event-group description="" sid="592690023303973" title="GG Updating Data">
             <sub-events>
                 <comment>Function(game#, difficulty, score)</comment>
@@ -261,7 +254,7 @@
                         <event-block sid="535456783325429">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="477743686764844" type="System">
-                                    <param id="0" name="Variable">GAME_VERSION</param>
+                                    <param id="0" name="Variable">GG_GAME_VERSION</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;CASUAL&quot;</param>
                                 </condition>
@@ -275,7 +268,7 @@
                         <event-block sid="660565617340568">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="943779317272298" type="System">
-                                    <param id="0" name="Variable">GAME_VERSION</param>
+                                    <param id="0" name="Variable">GG_GAME_VERSION</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;STORY&quot;</param>
                                 </condition>

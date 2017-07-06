@@ -16,11 +16,14 @@
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="hardlight">Hard Light</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -435,6 +438,99 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="M7_Person3" sid="551340866957483">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="936768907952084" speed="5">
+                            <frame duration="1" hotspotX="0.491228" hotspotY="1.00645" original-source="C:\Users\Yuan\Downloads\figure 1 still 2.png">
+                                <collision-poly>
+                                    <point x="0.471591" y="0.13783" />
+                                    <point x="0.545455" y="0.140762" />
+                                    <point x="0.545455" y="0.841642" />
+                                    <point x="0.471591" y="0.859238" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="1" name="walking_r" pingpong="0" repeatcount="1" repeatto="0" sid="290792855996211" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.944282" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\figure 1 motion 1.png">
+                                <collision-poly>
+                                    <point x="0.471591" y="0.13783" />
+                                    <point x="0.545455" y="0.140762" />
+                                    <point x="0.545455" y="0.841642" />
+                                    <point x="0.471591" y="0.859238" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.497585" hotspotY="0.959752" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\figure 1 motion 2.png">
+                                <collision-poly>
+                                    <point x="0.471591" y="0.13783" />
+                                    <point x="0.545455" y="0.140762" />
+                                    <point x="0.545455" y="0.841642" />
+                                    <point x="0.471591" y="0.859238" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.518072" hotspotY="0.926686" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\figure 1 motion 3.png">
+                                <collision-poly>
+                                    <point x="0.471591" y="0.13783" />
+                                    <point x="0.545455" y="0.140762" />
+                                    <point x="0.545455" y="0.841642" />
+                                    <point x="0.471591" y="0.859238" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.510417" hotspotY="0.928161" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\figure 1 motion 4.png">
+                                <collision-poly>
+                                    <point x="0.471591" y="0.13783" />
+                                    <point x="0.545455" y="0.140762" />
+                                    <point x="0.545455" y="0.841642" />
+                                    <point x="0.471591" y="0.859238" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="1" name="walking_l" pingpong="0" repeatcount="1" repeatto="0" sid="469678206909345" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.944282">
+                                <collision-poly>
+                                    <point x="0.471591" y="0.13783" />
+                                    <point x="0.545455" y="0.140762" />
+                                    <point x="0.545455" y="0.841642" />
+                                    <point x="0.471591" y="0.859238" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.502415" hotspotY="0.959752">
+                                <collision-poly>
+                                    <point x="0.471591" y="0.13783" />
+                                    <point x="0.545455" y="0.140762" />
+                                    <point x="0.545455" y="0.841642" />
+                                    <point x="0.471591" y="0.859238" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.481928" hotspotY="0.926686">
+                                <collision-poly>
+                                    <point x="0.471591" y="0.13783" />
+                                    <point x="0.545455" y="0.140762" />
+                                    <point x="0.545455" y="0.841642" />
+                                    <point x="0.471591" y="0.859238" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.489583" hotspotY="0.928161">
+                                <collision-poly>
+                                    <point x="0.471591" y="0.13783" />
+                                    <point x="0.545455" y="0.140762" />
+                                    <point x="0.545455" y="0.841642" />
+                                    <point x="0.471591" y="0.859238" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="adjusting_temp" pingpong="0" repeatcount="1" repeatto="0" sid="960772576890142" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.938416">
+                                <collision-poly>
+                                    <point x="0.471591" y="0.13783" />
+                                    <point x="0.545455" y="0.140762" />
+                                    <point x="0.545455" y="0.841642" />
+                                    <point x="0.471591" y="0.859238" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Doors">
                 <object-type name="M7_Door0" sid="469095090500073">
@@ -508,23 +604,17 @@
                 <object-type name="M7_Window0" sid="596381458424990">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="4" loop="1" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="491549483432489" speed="5">
-                            <frame duration="1" hotspotX="0.0526316" hotspotY="0.488636" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\open window 1.png" />
-                            <frame duration="1" hotspotX="0.048" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\open window 2.png" />
-                            <frame duration="1" hotspotX="0.033557" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\open window 3.png" />
-                            <frame duration="1" hotspotX="0.04" hotspotY="0.5" />
+                        <animation framecount="1" loop="1" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="491549483432489" speed="5">
+                            <frame duration="1" hotspotX="0.21" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\accordian blinds closed3.png" />
                         </animation>
                         <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="178566658761025" speed="5">
-                            <frame duration="1" hotspotX="0.39" hotspotY="0.530055" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\closed window.png" />
+                            <frame duration="1" hotspotX="0.47" hotspotY="0.531915" original-source="C:\Users\Yuan\Downloads\accordian blinds closed b.png" />
                         </animation>
-                        <animation framecount="4" loop="1" name="OpenSun" pingpong="0" repeatcount="1" repeatto="0" sid="178400387451428" speed="5">
-                            <frame duration="1" hotspotX="0.0526316" hotspotY="0.488636" />
-                            <frame duration="1" hotspotX="0.048" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.033557" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.048" hotspotY="0.5" />
+                        <animation framecount="1" loop="1" name="OpenSun" pingpong="0" repeatcount="1" repeatto="0" sid="260115853627254" speed="5">
+                            <frame duration="1" hotspotX="0.21" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\accordian blinds closed2.png" />
                         </animation>
-                        <animation framecount="1" loop="0" name="ClosedSun" pingpong="0" repeatcount="1" repeatto="0" sid="253108429229743" speed="5">
-                            <frame duration="1" hotspotX="0.39" hotspotY="0.530055" />
+                        <animation framecount="1" loop="0" name="ClosedSun" pingpong="0" repeatcount="1" repeatto="0" sid="336781896813662" speed="5">
+                            <frame duration="1" hotspotX="0.46" hotspotY="0.532338" original-source="C:\Users\Yuan\Downloads\accordian blinds open b.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -532,22 +622,16 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="759711711982986" speed="5">
-                            <frame duration="1" hotspotX="0.39" hotspotY="0.502732" />
+                            <frame duration="1" hotspotX="0.42" hotspotY="0.502488" original-source="C:\Users\Yuan\Downloads\accordian blinds open b.png" />
                         </animation>
-                        <animation framecount="4" loop="1" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="244312843210018" speed="5">
-                            <frame duration="1" hotspotX="0.0526316" hotspotY="0.488636" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\open window 1.png" />
-                            <frame duration="1" hotspotX="0.04" hotspotY="0.505618" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\open window 2.png" />
-                            <frame duration="1" hotspotX="0.033557" hotspotY="0.523256" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\open window 3.png" />
-                            <frame duration="1" hotspotX="0.04" hotspotY="0.505618" />
+                        <animation framecount="1" loop="1" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="244312843210018" speed="5">
+                            <frame duration="1" hotspotX="0.21" hotspotY="0.484043" original-source="C:\Users\Yuan\Downloads\accordian blinds closed3.png" />
                         </animation>
-                        <animation framecount="1" loop="0" name="ClosedSun" pingpong="0" repeatcount="1" repeatto="0" sid="621453120959259" speed="7">
-                            <frame duration="1" hotspotX="0.39" hotspotY="0.502732" />
+                        <animation framecount="1" loop="0" name="ClosedSun" pingpong="0" repeatcount="1" repeatto="0" sid="664638462144962" speed="5">
+                            <frame duration="1" hotspotX="0.42" hotspotY="0.502488" original-source="C:\Users\Yuan\Downloads\accordian blinds open b.png" />
                         </animation>
-                        <animation framecount="4" loop="1" name="OpenSun" pingpong="0" repeatcount="1" repeatto="0" sid="677527671288782" speed="5">
-                            <frame duration="1" hotspotX="0.0526316" hotspotY="0.488636" />
-                            <frame duration="1" hotspotX="0.04" hotspotY="0.505618" />
-                            <frame duration="1" hotspotX="0.033557" hotspotY="0.523256" />
-                            <frame duration="1" hotspotX="0.04" hotspotY="0.505618" />
+                        <animation framecount="1" loop="1" name="OpenSun" pingpong="0" repeatcount="1" repeatto="0" sid="961843445567607" speed="5">
+                            <frame duration="1" hotspotX="0.21" hotspotY="0.489362" original-source="C:\Users\Yuan\Downloads\accordian blinds closed2.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -555,76 +639,48 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="316813245605488" speed="5">
-                            <frame duration="1" hotspotX="0.61" hotspotY="0.502732" />
-                        </animation>
-                        <animation framecount="4" loop="1" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="904309863255382" speed="5">
-                            <frame duration="1" hotspotX="0.947368" hotspotY="0.488636" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\open window 1.png">
+                            <frame duration="1" hotspotX="0.58" hotspotY="0.502488" original-source="C:\Users\Yuan\Downloads\accordian blinds open b.png">
                                 <collision-poly>
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.96" hotspotY="0.522472" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\open window 2.png">
-                                <collision-poly>
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.966443" hotspotY="0.511628" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\open window 3.png">
-                                <collision-poly>
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.96" hotspotY="0.522472">
-                                <collision-poly>
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
+                                    <point x="0.25" y="0" />
+                                    <point x="0.75" y="0" />
+                                    <point x="0.75" y="1" />
+                                    <point x="0.25" y="1" />
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="1" loop="0" name="ClosedSun" pingpong="0" repeatcount="1" repeatto="0" sid="558102104860999" speed="5">
-                            <frame duration="1" hotspotX="0.61" hotspotY="0.502732" />
+                        <animation framecount="1" loop="1" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="904309863255382" speed="5">
+                            <frame duration="1" hotspotX="0.79" hotspotY="0.515957" original-source="C:\Users\Yuan\Downloads\accordian blinds closed3.png">
+                                <collision-poly>
+                                    <point x="0.17" y="0.0904255" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.32" y="0.361702" />
+                                    <point x="0.51" y="0.5" />
+                                    <point x="0.67" y="0.824468" />
+                                    <point x="0.5" y="0.882979" />
+                                    <point x="0.17" y="0.909574" />
+                                </collision-poly>
+                            </frame>
                         </animation>
-                        <animation framecount="4" loop="1" name="OpenSun" pingpong="0" repeatcount="1" repeatto="0" sid="856677920656745" speed="5">
-                            <frame duration="1" hotspotX="0.947368" hotspotY="0.488636">
+                        <animation framecount="1" loop="1" name="OpenSun" pingpong="0" repeatcount="1" repeatto="0" sid="675548543278934" speed="5">
+                            <frame duration="1" hotspotX="0.79" hotspotY="0.484043" original-source="C:\Users\Yuan\Downloads\accordian blinds closed2.png">
                                 <collision-poly>
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
+                                    <point x="0.83" y="0.909574" />
+                                    <point x="0.5" y="0.776596" />
+                                    <point x="0.48" y="0.744681" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.68" y="0.361702" />
+                                    <point x="0.5" y="0.505319" />
+                                    <point x="0.83" y="0.0904255" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.96" hotspotY="0.522472">
+                        </animation>
+                        <animation framecount="1" loop="0" name="ClosedSun" pingpong="0" repeatcount="1" repeatto="0" sid="832649212829476" speed="5">
+                            <frame duration="1" hotspotX="0.58" hotspotY="0.502488">
                                 <collision-poly>
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.966443" hotspotY="0.511628">
-                                <collision-poly>
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.96" hotspotY="0.522472">
-                                <collision-poly>
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
+                                    <point x="0.25" y="0" />
+                                    <point x="0.75" y="0" />
+                                    <point x="0.75" y="1" />
+                                    <point x="0.25" y="1" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -994,12 +1050,17 @@
                 <instance-variables>
                     <instance-variable name="HasSun" sid="906352140627244" type="number" />
                 </instance-variables>
+                <effects>
+                    <effect-type name="HardLight">
+                        <effect id="hardlight" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Sun" pingpong="0" repeatcount="1" repeatto="0" sid="476184848065007" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\heat lock sunny day background.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\sunny winter day background.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Cloud" pingpong="0" repeatcount="1" repeatto="0" sid="766014407113058" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170704T134916Z-001\heat lock stormy day background.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\cloudy winter day background.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1010,6 +1071,9 @@
                         <frame duration="1" hotspotX="0.504762" hotspotY="0.439024" original-source="C:\Users\Yuan\Downloads\hi.png" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="ShadowLight" sid="172494796110859">
+                <plugin id="shadowlight" />
             </object-type>
         </object-folder>
         <object-type name="Touch" sid="794535935296391">
@@ -1042,6 +1106,7 @@
             <members>
                 <member>M7_Person1</member>
                 <member>M7_Person2</member>
+                <member>M7_Person3</member>
             </members>
             <instance-variables>
                 <instance-variable name="State" sid="289779094673686" type="string" />
