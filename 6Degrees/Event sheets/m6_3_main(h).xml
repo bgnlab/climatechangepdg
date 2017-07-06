@@ -624,7 +624,7 @@
                 <event-block sid="827835599966994">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="757567952140870" type="System">
-                            <param id="0" name="Interval (seconds)">0.01</param>
+                            <param id="0" name="Interval (seconds)">0.05</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="271785868496753" type="System">
                             <param id="0" name="Variable">m6_3_win</param>
@@ -635,7 +635,7 @@
                     <actions>
                         <action id="-11" name="Subtract from" sid="552720601059459" type="System">
                             <param id="0" name="Variable">m6_3_timer</param>
-                            <param id="1" name="Value">0.01</param>
+                            <param id="1" name="Value">0.05</param>
                         </action>
                     </actions>
                 </event-block>
