@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>m1_InteractiveTutorialSheet</name>
+    <events>
+        <variable constant="0" name="m1_tutorialTracker" sid="169111311010715" static="0" type="number">1</variable>
+        <include>m1_GameEvents</include>
+        <event-block sid="631001687726206">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="767947185997688" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="252350601948912" type="System">
+                    <param id="0" name="Group name">&quot;Player Actions&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="854840922860777" type="System">
+                    <param id="0" name="Group name">&quot;TornadoScrolling&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="478159812262080" type="System">
+                    <param id="0" name="Group name">&quot;TirePressureLoss&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="597071998812983" type="System">
+                    <param id="0" name="Group name">&quot;Win/Loss&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="271745948410712" type="System">
+                    <param id="0" name="Group name">&quot;Player Actions&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="0" name="Call function" sid="515922243562657" type="Function">
+                    <param id="0" name="Name">&quot;TutorialPart&quot; &amp;m1_tutorialTracker</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="873375979411532">
+            <conditions>
+                <condition id="0" name="On function" sid="384971675776514" type="Function">
+                    <param id="0" name="Name">&quot;TutorialPart1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="981933403013835" type="m1_InteractiveTutorialText">
+                    <param id="0" name="Text">&quot;Drive Efficiently.&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="490353094744330" type="System">
+                    <param id="0" name="Variable">m1_tutorialTracker</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="996636264268305">
+            <conditions>
+                <condition id="0" name="On function" sid="695917003566110" type="Function">
+                    <param id="0" name="Name">&quot;TutorialPart2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="709309427552042" type="m1_AdvanceTutorialClick">
+                    <param id="0" name="X">1921</param>
+                    <param id="1" name="Y">1201</param>
+                </action>
+                <action id="-5" name="Set width" sid="831448143881838" type="m1_FuelProgress">
+                    <param id="0" name="Width">m1_FuelProgress.defaultWidth/2</param>
+                </action>
+                <action id="3" name="Set progress" sid="269255305745265" type="m1_FuelMeter">
+                    <param id="0" name="Value">3</param>
+                </action>
+                <action id="0" name="Set text" sid="254964323795263" type="m1_InteractiveTutorialText">
+                    <param id="0" name="Text">&quot;Fuel will deplete over time.&quot;</param>
+                </action>
+                <action id="-7" name="Set size" sid="310335770702864" type="m1_Highlighter">
+                    <param id="0" name="Width">m1_FuelBarrel.Width</param>
+                    <param id="1" name="Height">m1_FuelBarrel.Height</param>
+                </action>
+                <action id="-3" name="Set position" sid="998895039889306" type="m1_Highlighter">
+                    <param id="0" name="X">m1_FuelBarrel.X</param>
+                    <param id="1" name="Y">m1_FuelBarrel.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="285878306930228">
+            <conditions>
+                <condition id="2" name="Is playing" sid="902424020626688" type="m1_Car">
+                    <param id="0" name="Animation">&quot;Can&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="599218019052574" type="System">
+                    <param id="0" name="Variable">m1_tutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="556859658265755" type="m1_InteractiveTutorialText">
+                    <param id="0" name="Text">&quot;You will stop to refuel automatically.&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="636159358727289" type="System">
+                    <param id="0" name="Variable">m1_tutorialTracker</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="231570735974813" type="m1_AdvanceTutorialClick">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="976054948183807" type="m1_Highlighter">
+                    <param id="0" name="Width">m1_Car.Width</param>
+                    <param id="1" name="Height">m1_Car.Height</param>
+                </action>
+                <action id="-3" name="Set position" sid="337925762480340" type="m1_Highlighter">
+                    <param id="0" name="X">m1_Car.X</param>
+                    <param id="1" name="Y">m1_Car.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="420492134301486">
+            <conditions>
+                <condition id="0" name="On function" sid="424145869878021" type="Function">
+                    <param id="0" name="Name">&quot;TutorialPart3&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="897382061100116" type="m1_Tire">
+                    <param id="0" name="Animation">&quot;FlatTire&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="3" name="Set progress" sid="825278628659618" type="m1_TirePressureMeter">
+                    <param id="0" name="Value">30</param>
+                </action>
+                <action id="0" name="Set text" sid="279731924774114" type="m1_InteractiveTutorialText">
+                    <param id="0" name="Text">&quot;Fuel depletes faster when tire pressure is low.&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="449328426784642" type="System">
+                    <param id="0" name="Variable">m1_tutorialTracker</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-7" name="Set size" sid="563789907512546" type="m1_Highlighter">
+                    <param id="0" name="Width">m1_FuelBarrel.Width</param>
+                    <param id="1" name="Height">m1_FuelBarrel.Height</param>
+                </action>
+                <action id="-3" name="Set position" sid="232691232969902" type="m1_Highlighter">
+                    <param id="0" name="X">m1_FuelBarrel.X</param>
+                    <param id="1" name="Y">m1_FuelBarrel.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="607986348442903">
+            <conditions>
+                <condition id="0" name="On function" sid="594127531271080" type="Function">
+                    <param id="0" name="Name">&quot;TutorialPart4&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="567198146565932" type="m1_AdvanceTutorialClick">
+                    <param id="0" name="X">1921</param>
+                    <param id="1" name="Y">1201</param>
+                </action>
+                <action id="4" name="Set animation" sid="496826603304673" type="m1_Tire">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="3" name="Set progress" sid="904775703700614" type="m1_TirePressureMeter">
+                    <param id="0" name="Value">100</param>
+                </action>
+                <action id="0" name="Set text" sid="223221427670087" type="m1_InteractiveTutorialText">
+                    <param id="0" name="Text">&quot;Use the arrow to get off and on the road to check the tire pressure.&quot;</param>
+                </action>
+                <action id="-7" name="Set size" sid="705993648200744" type="m1_Highlighter">
+                    <param id="0" name="Width">m1_DoubleArrow.Width</param>
+                    <param id="1" name="Height">m1_DoubleArrow.Height</param>
+                </action>
+                <action id="-3" name="Set position" sid="263644192763673" type="m1_Highlighter">
+                    <param id="0" name="X">m1_DoubleArrow.X</param>
+                    <param id="1" name="Y">m1_DoubleArrow.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="406084090025175">
+            <conditions>
+                <condition id="0" name="On function" sid="841844142866590" type="Function">
+                    <param id="0" name="Name">&quot;TutorialPart5&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="297155313465366">
+            <conditions>
+                <condition id="0" name="On function" sid="655556321212851" type="Function">
+                    <param id="0" name="Name">&quot;TutorialPart6&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="945973192005993" type="m1_InteractiveTutorialText">
+                    <param id="0" name="Text">&quot;Leave the stop&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="947590903273137">
+            <conditions>
+                <condition id="17" name="On tap object" sid="440837062950325" type="Touch">
+                    <param id="0" name="Object">m1_AdvanceTutorialClick</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="842267761667006" type="Function">
+                    <param id="0" name="Name">&quot;TutorialPart&quot; &amp;m1_tutorialTracker</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="418324914886809" title="stuff">
+            <sub-events>
+                <event-block sid="384278923563140">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="971676210501835" type="Touch">
+                            <param id="0" name="Object">m1_DoubleArrow</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="403114934294006" type="System">
+                            <param id="0" name="Variable">m1_tutorialTracker</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="455288938562791" type="m1_Car">
+                            <param id="0" name="Animation">&quot;Can&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="656677855183337">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="454890713297905" type="System">
+                                    <param id="0" name="Variable">m1_tutorialTracker</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="788370350367297" type="m1_InteractiveTutorialText">
+                                    <param id="0" name="Text">&quot;While parked, you can refill your tire pressure by pressing the pump.&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="553377974913974" type="m1_Highlighter">
+                                    <param id="0" name="Width">m1_Pump.Width</param>
+                                    <param id="1" name="Height">m1_Pump.Height</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="412089649288453" type="m1_Highlighter">
+                                    <param id="0" name="X">m1_Pump.X</param>
+                                    <param id="1" name="Y">m1_Pump.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="322793469441903" type="m1_AdvanceTutorialClick">
+                                    <param id="0" name="X">1921</param>
+                                    <param id="1" name="Y">1201</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="285456872443204" type="System">
+                                    <param id="0" name="Variable">m1_tutorialTracker</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="978323471209870" type="Function">
+                                    <param id="0" name="Name">&quot;pullOver&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-3" name="Set position" sid="883046645909586" type="m1_AdvanceTutorialClick">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="650366176029736" type="Function">
+                                    <param id="0" name="Name">&quot;TutorialPart&quot; &amp;m1_tutorialTracker</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-5" name="Set width" sid="373854936953187" type="m1_PressureProgress">
+                                    <param id="0" name="Width">m1_PressureProgress.defaultWidth/2</param>
+                                </action>
+                                <action id="3" name="Set progress" sid="486089596525936" type="m1_TirePressureMeter">
+                                    <param id="0" name="Value">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="314002136702533">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="277235365146016" type="System">
+                                    <param id="0" name="Variable">m1_tutorialTracker</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="831244292090641" type="Function">
+                                    <param id="0" name="Name">&quot;pullOver&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-3" name="Set position" sid="760631409740175" type="m1_Highlighter">
+                                    <param id="0" name="X">3000</param>
+                                    <param id="1" name="Y">3000</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="645831600321460" type="m1_AdvanceTutorialClick">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="965451596057390" type="System">
+                                    <param id="0" name="Layer">&quot;Win&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="548623590001694">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="171010347261972" type="Touch">
+                            <param id="0" name="Object">m1_Pump</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="565123836491528" type="m1_DoubleArrow">
+                            <param id="0" name="Instance variable">parked</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="410833354623374" type="System">
+                            <param id="0" name="Variable">m1_tutorialTracker</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="209818159622011" type="Function">
+                            <param id="0" name="Name">&quot;Pump&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-10" name="Add to" sid="870865239189098" type="System">
+                            <param id="0" name="Variable">m1_tutorialTracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="478604356042870">
+            <conditions>
+                <condition id="0" name="On function" sid="690552784628108" type="Function">
+                    <param id="0" name="Name">&quot;pullOver&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="127085269943530">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="677500412257396" type="System">
+                            <param id="0" name="Variable">m1_isRefilling</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="961531399026855">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="748961193238114" type="m1_DoubleArrow">
+                                    <param id="0" name="Instance variable">parked</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="767787785560428" type="m1_Car">
+                                    <param id="0" name="X">m1_Car.X</param>
+                                    <param id="1" name="Y">m1_Car.Y  + 200</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="525923828055591" type="m1_Car">
+                                    <param id="0" name="Instance variable">isDriving</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="867479847352683" type="m1_DoubleArrow">
+                                    <param id="0" name="Instance variable">parked</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="6" name="Stop" sid="869262304032534" type="Audio">
+                                    <param id="0" name="Tag">&quot;driving&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="407791805959584">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="546472698812394" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="373284306601290" type="m1_DoubleArrow">
+                                    <param id="0" name="Instance variable">parked</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="414106862158575" type="m1_Car">
+                                    <param id="0" name="X">m1_Car.X</param>
+                                    <param id="1" name="Y">m1_Car.Y  - 200</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="696101218972015" type="m1_Car">
+                                    <param id="0" name="Instance variable">isDriving</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="619849412456957" type="m1_Car">
+                                    <param id="0" name="Instance variable">inPitStop</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="354456827612057" type="m1_Car">
+                                    <param id="0" name="Animation">&quot;Driving&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="466468835454297" type="Function">
+                                    <param id="0" name="Name">&quot;revealTires&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="131720713361776" type="System">
+                                    <param id="0" name="Variable">m1_isScrollingActive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="3" name="Set enabled" sid="571732353514175" type="m1_pumpCarBtn">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                                <action id="1" name="Set visible" sid="318736213345332" type="m1_TirePressureMeter">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="232638678388520" type="m1_PressureBorder">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="729831871439405" type="m1_PressureText">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="159651330560690" type="m1_PressureProgress">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="222206664271801" type="m1_DoubleArrow">
+                                    <param id="0" name="Instance variable">parked</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="760536230599164" type="System">
+                                    <param id="0" name="Variable">m1_atStop</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action disabled="1" id="0" name="Play" sid="529133696627100" type="Audio">
+                                    <param id="0" name="Audio file">sfx_driving</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;driving&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="202761635452702">
+            <conditions>
+                <condition id="0" name="On function" sid="696094785067955" type="Function">
+                    <param id="0" name="Name">&quot;Pump&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="828502840876009" type="m1_Pump" />
+                <action id="3" name="Start" sid="282229512269154" type="m1_Pump">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="0" name="Play" sid="158908356906897" type="Audio">
+                    <param id="0" name="Audio file">sfx_pumping_air_pressure</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-5" name="Set width" sid="206134889499183" type="m1_PressureProgress">
+                    <param id="0" name="Width">m1_PressureProgress.Width + m1_pressurePerPump * (m1_PressureProgress.defaultWidth/100)</param>
+                </action>
+                <action id="-11" name="Add to" sid="162952880740107" type="m1_TirePressureMeter">
+                    <param id="0" name="Instance variable">pressureValue</param>
+                    <param id="1" name="Value">m1_pressurePerPump</param>
+                </action>
+                <action id="3" name="Set progress" sid="785874729348593" type="m1_TirePressureMeter">
+                    <param id="0" name="Value">m1_TirePressureMeter.Progress + m1_pressurePerPump</param>
+                </action>
+                <action disabled="1" id="-13" name="Set boolean" sid="626589205276636" type="m1_Pump">
+                    <param id="0" name="Instance variable">isPressed</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="353005152566719" type="m1_AdvanceTutorialClick">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="346382254270395">
+                    <conditions>
+                        <condition id="-5" name="Compare width" sid="645297882325050" type="m1_PressureProgress">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Width">m1_PressureProgress.defaultWidth</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="622052769581169" type="m1_PressureProgress">
+                            <param id="0" name="Width">m1_PressureProgress.defaultWidth</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="240828169100366">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="497251423290536" type="m1_Highlighter" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="0" name="Restart fade" sid="412813892231987" type="m1_Highlighter" />
+            </actions>
+        </event-block>
+        <event-block sid="534753289432107">
+            <conditions>
+                <condition id="17" name="On tap object" sid="730769783207468" type="Touch">
+                    <param id="0" name="Object">m1_ExitBtn</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="168476018980527" type="System">
+                    <param id="0" name="Layer">&quot;Win&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="875277178088588" type="System" />
+                <action id="-45" name="Reset persisted objects" sid="782857355004445" type="System" />
+                <action id="-12" name="Set group active" sid="144429267374594" type="System">
+                    <param id="0" name="Group name">&quot;Player Actions&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="572535257482064" type="System">
+                    <param id="0" name="Group name">&quot;TornadoScrolling&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="365303509994741" type="System">
+                    <param id="0" name="Group name">&quot;TirePressureLoss&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="933192525815018" type="System">
+                    <param id="0" name="Group name">&quot;Win/Loss&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="579444754341647" type="System">
+                    <param id="0" name="Group name">&quot;Player Actions&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="152048725519583" type="System">
+                    <param id="0" name="Layout">m1_Layout 1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

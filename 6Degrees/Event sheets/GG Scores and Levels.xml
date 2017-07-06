@@ -69,6 +69,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <comment>Game1</comment>
                         <event-block sid="468511602489857">
                             <conditions>
                                 <condition id="1" name="Compare parameter" sid="747967058379928" type="Function">
@@ -177,6 +178,25 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <comment>Game 8</comment>
+                        <event-block sid="222630852809354">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="998009903557589" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="331840486350482" type="System">
+                                    <param id="0" name="Variable">GG_Difficulty</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="733654006324572" type="System">
+                                    <param id="0" name="Layout">&quot;m1_GameLayout&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <comment>Game 10</comment>
                         <event-block sid="536698396122290">

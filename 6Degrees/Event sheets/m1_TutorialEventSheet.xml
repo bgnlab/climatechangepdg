@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>m1_TutorialEventSheet</name>
+    <events>
+        <variable constant="0" name="currentSlide" sid="760063424085719" static="0" type="number">1</variable>
+        <event-block sid="430217649090230">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="608780130664302" type="System" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-7" name="Scroll to position" sid="704219876706333" type="System">
+                    <param id="0" name="X">600</param>
+                    <param id="1" name="Y">400</param>
+                </action>
+                <action id="5" name="Set CSS style" sid="260963296148771" type="m1_PlayBtn">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;green&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="494554031769173">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="687907884879755" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="288622533318954" type="System">
+                    <param id="0" name="Variable">m1_isRefilling</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="703232464004495">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="626295059038228" type="m1_Car">
+                            <param id="0" name="Instance variable">isDriving</param>
+                        </condition>
+                        <condition id="1" name="Compare progress" sid="431455118912723" type="m1_TirePressureMeter">
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="Value">100</param>
+                        </condition>
+                        <condition id="1" name="Compare progress" sid="272145113086136" type="m1_TirePressureMeter">
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set progress" sid="836575151570964" type="m1_FuelMeter">
+                            <param id="0" name="Value">m1_FuelMeter.Progress - (m1_baseModifier + (m1_invertPressureValue - (m1_TirePressureMeter.Progress / 100)))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="424829924110086" type="System">
+                            <param id="0" name="Variable">m1_fuelUsageEquation</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="645753241519176">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="137920485223894" type="m1_Car">
+                            <param id="0" name="Instance variable">isDriving</param>
+                        </condition>
+                        <condition id="1" name="Compare progress" sid="389933825796910" type="m1_TirePressureMeter">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set progress" sid="270950298786004" type="m1_FuelMeter">
+                            <param id="0" name="Value">m1_FuelMeter.Progress - 1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="326129917226779" type="System">
+                            <param id="0" name="Variable">m1_fuelUsageEquation</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="367654341950487">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="603568517475685" type="m1_Car">
+                            <param id="0" name="Instance variable">isDriving</param>
+                        </condition>
+                        <condition id="1" name="Compare progress" sid="120612261523677" type="m1_TirePressureMeter">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set progress" sid="615637004137819" type="m1_FuelMeter">
+                            <param id="0" name="Value">m1_FuelMeter.Progress - 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="777418277542473" type="System">
+                            <param id="0" name="Variable">m1_fuelUsageEquation</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="989528444712192">
+            <conditions>
+                <condition id="0" name="On clicked" sid="519069645927129" type="m1_PlayBtn" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="847064132829893">
+                    <conditions>
+                        <condition id="4" name="Compare selected item text" sid="639939984229606" type="m1_List">
+                            <param id="0" name="Text to compare">&quot;easy&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="122673097353920" type="System">
+                            <param id="0" name="Variable">m1_chosenDifficulty</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="342229848619344" type="System">
+                            <param id="0" name="Layout">m1_GameLayout</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="298980567702757">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="301386453446248" type="System" />
+                        <condition id="4" name="Compare selected item text" sid="362363606426650" type="m1_List">
+                            <param id="0" name="Text to compare">&quot;medium&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="706269142295993" type="System">
+                            <param id="0" name="Variable">m1_chosenDifficulty</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="488669360918069" type="System">
+                            <param id="0" name="Layout">m1_GameLayout</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="993932321622458">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="707274828456514" type="System" />
+                        <condition id="4" name="Compare selected item text" sid="252113819775907" type="m1_List">
+                            <param id="0" name="Text to compare">&quot;hard&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="302248491869417" type="System">
+                            <param id="0" name="Variable">m1_chosenDifficulty</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="769965051586139" type="System">
+                            <param id="0" name="Layout">m1_GameLayout</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="942475968069552">
+            <conditions>
+                <condition id="0" name="On clicked" sid="729327268015332" type="m1_NextBtn" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="191728482975210" type="System">
+                    <param id="0" name="Variable">currentSlide</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="753087971029383" type="System">
+                    <param id="0" name="Layout">&quot;TutorialLayoutPT&quot; &amp;currentSlide</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="506843787306124">
+            <conditions>
+                <condition id="17" name="On tap object" sid="904799010410884" type="Touch">
+                    <param id="0" name="Object">m1_AdvanceHitbox</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="417307544854886" type="System">
+                    <param id="0" name="Variable">currentSlide</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="939225945694392" type="System">
+                    <param id="0" name="Layout">&quot;TutorialLayoutPT&quot; &amp;currentSlide</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="318719736707723">
+            <conditions>
+                <condition id="0" name="On clicked" sid="664609513395537" type="m1_TutBtn" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="834798821872923" type="System">
+                    <param id="0" name="Layout">m1_InteractiveTutorial</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
