@@ -1761,6 +1761,25 @@
                     <param id="0" name="Text">&quot;Hold and release the leftover containing things needed for the recipe over the pot.&quot;</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="783581528857053">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="363562837923976" type="System">
+                            <param id="0" name="Object">m6_1_fud</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="689151086015915" type="m6_1_fud">
+                            <param id="0" name="Instance variable">name</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;StuffedGoose&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="299661295379521" type="m6_1_fud">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="537552616454175">
             <conditions>
