@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>m1_InteractiveTutorialSheet</name>
     <events>
+        <include>GG Scores and Levels</include>
         <variable constant="0" name="m1_tutorialTracker" sid="169111311010715" static="0" type="number">1</variable>
         <include>m1_GameEvents</include>
         <event-block sid="631001687726206">
