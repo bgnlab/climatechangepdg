@@ -6611,6 +6611,9 @@
                                 </collision-poly>
                             </frame>
                         </animation>
+                        <animation framecount="1" loop="0" name="click_begin_prompt" pingpong="0" repeatcount="1" repeatto="0" sid="825022853234157" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="M7_Tutorial_Instructions" sid="836714620166437">

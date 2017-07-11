@@ -505,7 +505,7 @@
                                                             <param id="0" name="Text">&quot;Doors control the flow of heat&quot;</param>
                                                         </action>
                                                         <action id="0" name="Set text" sid="382150874288531" type="M7_Tutorial_Prompt">
-                                                            <param id="0" name="Text">&quot;Open the door to continue&quot;</param>
+                                                            <param id="0" name="Text">&quot;Tap the door to open it&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -541,7 +541,7 @@
                                                                     <param id="0" name="Text">&quot;Open blinds in sunny weather can warm up the room&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Set text" sid="374897618486673" type="M7_Tutorial_Prompt">
-                                                                    <param id="0" name="Text">&quot;Open the blinds to warm up the room&quot;</param>
+                                                                    <param id="0" name="Text">&quot;Tap the blinds to open it and warm the room&quot;</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -579,7 +579,7 @@
                                                                     <param id="0" name="Text">&quot;But if the weather is cold, heat will escape&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Set text" sid="331983656450067" type="M7_Tutorial_Prompt">
-                                                                    <param id="0" name="Text">&quot;Close the blinds to retain heat&quot;</param>
+                                                                    <param id="0" name="Text">&quot;Tap the blinds again to close it and retain heat&quot;</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -624,6 +624,47 @@
                                                                     <param id="0" name="Text">&quot;If a person is too cold, they will raise the heat and use more energy&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Set text" sid="427660511365790" type="M7_Tutorial_Prompt">
+                                                                    <param id="0" name="Text">&quot;Tap anywhere to continue&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="764945646039792">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="885812793677101" type="System" />
+                                                        <condition id="-14" name="Compare variable" sid="879475290619542" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">5</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="603942096176546" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Value">M7_Tutorial_Progress + 1</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <comment>Next Part&apos;s Layout</comment>
+                                                        <event-block sid="432583779698024">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="9" name="Set scale" sid="864355433991738" type="M7_Tutorial_Highlight">
+                                                                    <param id="0" name="Scale">1.5</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="634386111298417" type="M7_Tutorial_Highlight">
+                                                                    <param id="0" name="Animation">&quot;click_begin_prompt&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-3" name="Set position" sid="211572091342137" type="M7_Tutorial_Highlight">
+                                                                    <param id="0" name="X">0</param>
+                                                                    <param id="1" name="Y">0</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="237318624745401" type="M7_Tutorial_Instructions">
+                                                                    <param id="0" name="Text">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="668706048366647" type="M7_Tutorial_Prompt">
                                                                     <param id="0" name="Text">&quot;Tap anywhere to begin&quot;</param>
                                                                 </action>
                                                             </actions>
@@ -637,7 +678,7 @@
                                                         <condition id="-14" name="Compare variable" sid="307327635711791" type="System">
                                                             <param id="0" name="Variable">M7_Tutorial_Progress</param>
                                                             <param id="1" name="Comparison">5</param>
-                                                            <param id="2" name="Value">5</param>
+                                                            <param id="2" name="Value">6</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -932,24 +973,24 @@
                         </event-group>
                         <event-group description="" sid="700672218353482" title="M7 Person Spawning">
                             <sub-events>
-                                <event-block sid="753466343739636">
+                                <event-block sid="432454790322653">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="547303897741957" type="System">
+                                        <condition id="-14" name="Compare variable" sid="140233816658464" type="System">
                                             <param id="0" name="Variable">M7_Difficulty</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">1</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">2</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" sid="787048523780706" type="M7_Person3" />
                                     </actions>
                                 </event-block>
-                                <event-block sid="432454790322653">
+                                <event-block sid="753466343739636">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="140233816658464" type="System">
+                                        <condition id="-14" name="Compare variable" sid="547303897741957" type="System">
                                             <param id="0" name="Variable">M7_Difficulty</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">2</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>

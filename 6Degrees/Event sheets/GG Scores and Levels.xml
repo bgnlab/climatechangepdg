@@ -307,6 +307,7 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="33" name="Stop all" sid="613785910707297" type="Audio" />
                         <action id="-16" name="Wait" sid="417948699816230" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
