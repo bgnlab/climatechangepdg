@@ -162,8 +162,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="989941152616452" type="m2_1_key">
-                                    <param id="0" name="Instance variable">pickup</param>
+                                <action id="-13" name="Set boolean" sid="989941152616452" type="m2_1_lock">
+                                    <param id="0" name="Instance variable">pickUp</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="0" name="Play" sid="318484986006248" type="Audio">
@@ -172,34 +172,37 @@
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="809702932282564" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="408229358421381" type="m2_1_key" />
                             </actions>
-                            <sub-events>
-                                <event-block sid="547788508356384">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="689089682250382" type="m2_1_key">
-                                            <param id="0" name="Instance variable">pickup</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-16" name="Set opacity" sid="287636920710580" type="m2_1_key">
-                                            <param id="0" name="Opacity">0</param>
-                                        </action>
-                                        <action id="-9" name="Destroy" sid="724557501513801" type="m2_1_lock" />
-                                    </actions>
-                                </event-block>
-                                <event-block sid="353677063690164">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="198098308328990" type="m2_1_key">
-                                            <param id="0" name="Instance variable">pickup</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-16" name="Set opacity" sid="874354149690394" type="m2_1_key">
-                                            <param id="0" name="Opacity">100</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                        </event-block>
+                        <event-block sid="830445286173568">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="577651529261859" type="Touch">
+                                    <param id="0" name="Object">m2_1_lock</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="305490034853002" type="m2_1_lock">
+                                    <param id="0" name="Instance variable">pickUp</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="576629742996022" type="Audio">
+                                    <param id="0" name="Audio file">sfx_clicking_clikable_obj</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="341240888565594" type="m2_1_lock" />
+                                <action id="-16" name="Wait" sid="697630019217613" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="128820719377685" type="m2_1_closetDoor">
+                                    <param id="0" name="Instance variable">lock</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="315805820332545">
                             <conditions>
@@ -240,8 +243,8 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="717031102409335" type="m2_1_closetDoor">
                                     <param id="0" name="Instance variable">open</param>
                                 </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="724497874411814" type="m2_1_key">
-                                    <param id="0" name="Instance variable">pickup</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="798748254078857" type="m2_1_closetDoor">
+                                    <param id="0" name="Instance variable">lock</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -919,12 +922,15 @@
                                 <condition id="4" inverted="1" name="Is touching object" sid="583119485283511" type="Touch">
                                     <param id="0" name="Object">m2_1_key</param>
                                 </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="129539661399551" type="Touch">
+                                    <param id="0" name="Object">m2_1_lock</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Play" sid="608734168944823" type="Audio">
                                     <param id="0" name="Audio file">sfx_click_unclickable_obj01</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-5</param>
+                                    <param id="3" name="Volume">-10</param>
                                     <param id="1" name="Tag (optional)">&quot;nuu&quot;</param>
                                 </action>
                             </actions>
@@ -942,20 +948,12 @@
                                 <action id="0" name="Play" sid="583421071131782" type="Audio">
                                     <param id="0" name="Audio file">sfx_doorlock</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
+                                    <param id="3" name="Volume">100</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="992632441613592">
-                    <conditions>
-                        <condition id="4" name="Is touching object" sid="553118876584230" type="Touch">
-                            <param id="0" name="Object">m2_1_closetDoor</param>
-                        </condition>
-                    </conditions>
-                    <actions />
                 </event-block>
                 <event-block sid="865419193805659">
                     <conditions>

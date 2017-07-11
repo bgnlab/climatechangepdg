@@ -858,6 +858,7 @@
                     </properties>
                     <instance-variables>
                         <open>false</open>
+                        <lock>true</lock>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -976,17 +977,20 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <pickUp>false</pickUp>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1619</x>
                         <y>616</y>
                         <z>0</z>
-                        <width>68</width>
-                        <height>87</height>
+                        <width>90</width>
+                        <height>120</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.505747139</hotspotY>
+                        <hotspotY>0.508333325</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
