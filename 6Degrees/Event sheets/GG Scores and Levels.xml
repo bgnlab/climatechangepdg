@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GG Scores and Levels</name>
     <events>
-        <variable constant="0" name="HI" sid="955187849357069" static="0" type="text"></variable>
         <comment>Game Version is either &apos;CASUAL&apos; or &apos;STORY&apos;</comment>
+        <variable constant="0" name="HI" sid="955187849357069" static="0" type="text"></variable>
         <variable constant="1" name="GG_GAME_VERSION" sid="661238395450024" static="0" type="text">CASUAL</variable>
         <variable constant="0" name="GG_Difficulty" sid="453214844668942" static="0" type="number">0</variable>
         <variable constant="0" name="GG_Selected_Game" sid="396281275119535" static="0" type="number">-1</variable>
