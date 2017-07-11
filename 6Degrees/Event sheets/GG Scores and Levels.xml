@@ -13,10 +13,6 @@
                         <condition id="-2" name="On start of layout" sid="350382830732689" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set item" sid="216259256805756" type="LocalStorage">
-                            <param id="0" name="Key">&quot;scorestate&quot;</param>
-                            <param id="1" name="Value">GG_Level_Data.AsJSON</param>
-                        </action>
                         <action id="1" name="Get item" sid="179940521792891" type="LocalStorage">
                             <param id="0" name="Key">&quot;scorestate&quot;</param>
                         </action>
@@ -37,6 +33,18 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="693192551945276">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="474518309106064" type="LocalStorage">
+                            <param id="0" name="Key">&quot;scorestate&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Load" sid="935208664612507" type="GG_Level_Data">
+                            <param id="0" name="JSON">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
