@@ -3,47 +3,25 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GG Scores and Levels</name>
     <events>
+        <variable constant="0" name="HI" sid="955187849357069" static="0" type="text"></variable>
         <comment>Game Version is either &apos;CASUAL&apos; or &apos;STORY&apos;</comment>
         <variable constant="1" name="GG_GAME_VERSION" sid="661238395450024" static="0" type="text">CASUAL</variable>
         <variable constant="0" name="GG_Difficulty" sid="453214844668942" static="0" type="number">0</variable>
+        <variable constant="0" name="GG_Selected_Game" sid="396281275119535" static="0" type="number">-1</variable>
         <event-group description="" sid="888092148056112" title="GG Initializing Data">
             <sub-events>
                 <event-block sid="171393357177441">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="350382830732689" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="1" name="Get item" sid="179940521792891" type="LocalStorage">
-                            <param id="0" name="Key">&quot;scorestate&quot;</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <comment>Fill Array With Data</comment>
-                        <event-block sid="231583249699418">
-                            <conditions>
-                                <condition id="6" name="Is empty" sid="576512933512085" type="N6_LevelList" />
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set size" sid="546884611233419" type="GG_Levels">
-                                    <param id="0" name="Width">12</param>
-                                    <param id="1" name="Height">3</param>
-                                    <param id="2" name="Depth">1</param>
-                                </action>
-                                <action id="0" name="Clear" sid="621981026165246" type="GG_Levels" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions />
                 </event-block>
-                <event-block sid="693192551945276">
+                <event-block sid="100060445461913">
                     <conditions>
-                        <condition id="1" name="On item get" sid="474518309106064" type="LocalStorage">
-                            <param id="0" name="Key">&quot;scorestate&quot;</param>
-                        </condition>
+                        <condition id="-25" name="On loader layout complete" sid="627395704128675" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Load" sid="935208664612507" type="GG_Level_Data">
-                            <param id="0" name="JSON">LocalStorage.ItemValue</param>
-                        </action>
+                        <action id="3" name="Clear storage" sid="753498823747310" type="LocalStorage" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -57,13 +35,29 @@
                             <param id="0" name="Name">&quot;GG Update Level Score&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="3" name="Set at XY" sid="338999797277328" type="GG_Levels">
-                            <param id="0" name="X">Function.Param(0)</param>
-                            <param id="1" name="Y">Function.Param(1)</param>
-                            <param id="2" name="Value">Function.Param(2)</param>
-                        </action>
-                    </actions>
+                    <actions />
+                </event-block>
+                <event-block sid="869373485105347">
+                    <conditions>
+                        <condition id="0" name="On function" sid="546838099112036" type="Function">
+                            <param id="0" name="Name">&quot;GG Reset Game&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="617662022665959">
+                    <conditions>
+                        <condition id="3" name="On storage cleared" sid="189196252132955" type="LocalStorage" />
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="325682393987686">
+                    <conditions>
+                        <condition id="0" name="On function" sid="158332488862480" type="Function">
+                            <param id="0" name="Name">&quot;GG Initialize Scores&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -75,7 +69,12 @@
                             <param id="0" name="Name">&quot;GG Load Game&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="442902897245444" type="System">
+                            <param id="0" name="Variable">GG_Selected_Game</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <comment>Game1</comment>
                         <event-block sid="468511602489857">
