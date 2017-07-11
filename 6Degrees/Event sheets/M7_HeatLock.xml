@@ -57,7 +57,7 @@
                                             <param id="1" name="Y">M7_Person1.Y - 100</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="345748203907810" type="M7_Tutorial_Highlight">
-                                            <param id="0" name="Animation">&quot;a_0&quot;</param>
+                                            <param id="0" name="Animation">&quot;click_anywhere&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                         <action id="0" name="Set text" sid="961458954715973" type="M7_Tutorial_Instructions">
@@ -494,7 +494,7 @@
                                                             <param id="1" name="Value">M7_Tutorial_Progress + 1</param>
                                                         </action>
                                                         <action id="4" name="Set animation" sid="619453368272162" type="M7_Tutorial_Highlight">
-                                                            <param id="0" name="Animation">&quot;a_1&quot;</param>
+                                                            <param id="0" name="Animation">&quot;click_spotlight&quot;</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
                                                         <action id="-3" name="Set position" sid="132255306324882" type="M7_Tutorial_Highlight">
@@ -613,7 +613,7 @@
                                                                     <param id="0" name="Scale">1.5</param>
                                                                 </action>
                                                                 <action id="4" name="Set animation" sid="904482207065835" type="M7_Tutorial_Highlight">
-                                                                    <param id="0" name="Animation">&quot;a_5&quot;</param>
+                                                                    <param id="0" name="Animation">&quot;click_anywhere&quot;</param>
                                                                     <param id="1" name="From">1</param>
                                                                 </action>
                                                                 <action id="-3" name="Set position" sid="435778367686380" type="M7_Tutorial_Highlight">
