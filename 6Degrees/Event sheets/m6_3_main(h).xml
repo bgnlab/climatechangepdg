@@ -2198,5 +2198,67 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="516297405733376" title="m6_3_tempStars">
+            <sub-events>
+                <event-block sid="179756091971908">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="788715737412621" type="System">
+                            <param id="0" name="Variable">m6_3_buy</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="882252708622613" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="971472557564083" type="System">
+                            <param id="0" name="Variable">m6_2_tempscore</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="303501720227317">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="642481570340349" type="m6_3_Recipe1">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="883920391920687" type="System">
+                                    <param id="0" name="Variable">m6_2_tempscore</param>
+                                    <param id="1" name="Value">m6_3_Recipe1.At(m6_3_Recipe1.CurX,1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="500579714703323">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="257776712531916" type="System">
+                                    <param id="0" name="Object">m6_2_tempstar</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="186462945850903">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="723949705340774" type="m6_2_tempstar">
+                                            <param id="0" name="Instance variable">score</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">m6_2_tempscore</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="314971911706860" type="m6_2_tempstar">
+                                            <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
