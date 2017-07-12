@@ -5975,6 +5975,53 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="M7_ThermostatSignal" sid="615835135806512">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="s0" pingpong="0" repeatcount="1" repeatto="0" sid="507768906685567" speed="5">
+                            <frame duration="1" hotspotX="0.506849" hotspotY="0.510204" original-source="C:\Users\GAMEPLAYER-01\Downloads\signal 1.png">
+                                <collision-poly>
+                                    <point x="0.150685" y="0.22449" />
+                                    <point x="0.493151" y="0.102041" />
+                                    <point x="0.835616" y="0.244898" />
+                                    <point x="0.767123" y="0.489796" />
+                                    <point x="0.794521" y="0.693878" />
+                                    <point x="0.493151" y="0.795918" />
+                                    <point x="0.205479" y="0.693878" />
+                                    <point x="0.219178" y="0.489796" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="s1" pingpong="0" repeatcount="1" repeatto="0" sid="642418133123922" speed="5">
+                            <frame duration="1" hotspotX="0.506849" hotspotY="0.510204" original-source="C:\Users\GAMEPLAYER-01\Downloads\signal 2.png">
+                                <collision-poly>
+                                    <point x="0.150685" y="0.22449" />
+                                    <point x="0.493151" y="0.102041" />
+                                    <point x="0.835616" y="0.244898" />
+                                    <point x="0.767123" y="0.489796" />
+                                    <point x="0.794521" y="0.693878" />
+                                    <point x="0.493151" y="0.530612" />
+                                    <point x="0.205479" y="0.693878" />
+                                    <point x="0.219178" y="0.489796" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="s3" pingpong="0" repeatcount="1" repeatto="0" sid="303959779650594" speed="5">
+                            <frame duration="1" hotspotX="0.506849" hotspotY="0.510204">
+                                <collision-poly>
+                                    <point x="0.150685" y="0.22449" />
+                                    <point x="0.493151" y="0.102041" />
+                                    <point x="0.835616" y="0.244898" />
+                                    <point x="0.767123" y="0.489796" />
+                                    <point x="0.794521" y="0.693878" />
+                                    <point x="0.493151" y="0.530612" />
+                                    <point x="0.205479" y="0.693878" />
+                                    <point x="0.219178" y="0.489796" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="People">
                 <object-type name="M7_Person1" sid="782667874044863">
