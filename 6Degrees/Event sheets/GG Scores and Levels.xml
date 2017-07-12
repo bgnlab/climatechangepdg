@@ -4,7 +4,7 @@
     <name>GG Scores and Levels</name>
     <events>
         <comment>Game Version is either &apos;CASUAL&apos; or &apos;STORY&apos;</comment>
-        <variable constant="0" name="HI" sid="955187849357069" static="0" type="text"></variable>
+        <variable constant="0" name="GG_Reload" sid="955187849357069" static="0" type="number">0</variable>
         <variable constant="1" name="GG_GAME_VERSION" sid="661238395450024" static="0" type="text">CASUAL</variable>
         <variable constant="0" name="GG_Difficulty" sid="453214844668942" static="0" type="number">0</variable>
         <variable constant="0" name="GG_Selected_Game" sid="396281275119535" static="0" type="number">-1</variable>
@@ -317,6 +317,10 @@
                         <action id="33" name="Stop all" sid="613785910707297" type="Audio" />
                         <action id="-16" name="Wait" sid="417948699816230" type="System">
                             <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="690767540899328" type="System">
+                            <param id="0" name="Variable">GG_Reload</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                     <sub-events>

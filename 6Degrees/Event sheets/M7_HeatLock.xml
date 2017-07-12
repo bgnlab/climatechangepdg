@@ -84,7 +84,7 @@
                                                 <action id="-9" name="Destroy" sid="414701240314020" type="M7_Person2" />
                                                 <action id="-10" name="Set value" sid="389694850564253" type="M7_Room0">
                                                     <param id="0" name="Instance variable">Temperature</param>
-                                                    <param id="1" name="Value">0</param>
+                                                    <param id="1" name="Value">-0.6</param>
                                                 </action>
                                                 <action id="0" name="Call function" sid="794380351873362" type="Function">
                                                     <param id="0" name="Name">&quot;M7 Windows Weather Change&quot;</param>
@@ -800,6 +800,11 @@
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="408159620692511" type="System">
                                     <param id="0" name="Variable">M7_Difficulty</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="875513770612737" type="System">
+                                    <param id="0" name="Variable">GG_Reload</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
@@ -2402,6 +2407,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="-9" name="Set value" sid="523577392715367" type="System">
+                                            <param id="0" name="Variable">GG_Reload</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                         <action id="-16" name="Wait" sid="763770534048453" type="System">
                                             <param id="0" name="Seconds">0.1</param>
                                         </action>
