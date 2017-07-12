@@ -14,7 +14,7 @@
         <variable constant="0" name="m2_2_score" sid="471000514429909" static="0" type="number">0</variable>
         <variable constant="0" name="m2_2_playing" sid="116402929902207" static="0" type="number">1</variable>
         <variable constant="0" name="m2_2_win" sid="750987597721381" static="0" type="number">-1</variable>
-        <variable constant="0" name="m2_2_timer" sid="333493582682826" static="0" type="number">30</variable>
+        <variable constant="0" name="m2_2_timer" sid="333493582682826" static="0" type="number">7</variable>
         <event-group description="" sid="524315539581255" title="m2_2_Scoring&amp;setUp">
             <sub-events>
                 <event-block sid="804477834408803">
@@ -86,6 +86,63 @@
                             <param id="1" name="Value">0.01</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="142525970449359">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="247691211483360" type="System">
+                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="381104568908677" type="System">
+                                    <param id="0" name="Variable">m2_2_timer</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="802273658929236" type="System">
+                                    <param id="0" name="Variable">m2_2_timer</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="411601641898514" type="m2_2_timer">
+                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="613543744795286" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="947782910396467" type="m2_2_timer">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="561957481164596">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="668168550051816" type="System">
+                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="139659808202195" type="System">
+                                    <param id="0" name="Variable">m2_2_timer</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="925259439950337" type="System">
+                                    <param id="0" name="Variable">m2_2_timer</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="416749884986897" type="Audio">
+                                    <param id="0" name="Audio file">sfx_timer (1)</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="149368396841570">
                     <conditions>
