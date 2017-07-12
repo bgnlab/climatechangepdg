@@ -803,11 +803,6 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="875513770612737" type="System">
-                                    <param id="0" name="Variable">GG_Reload</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="486116917097738" type="System">
@@ -2407,10 +2402,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="523577392715367" type="System">
-                                            <param id="0" name="Variable">GG_Reload</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
                                         <action id="-16" name="Wait" sid="763770534048453" type="System">
                                             <param id="0" name="Seconds">0.1</param>
                                         </action>

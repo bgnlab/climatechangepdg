@@ -8,37 +8,37 @@
         <variable constant="0" name="C6_SelectedGame" sid="917913845086719" static="0" type="number">-1</variable>
         <event-group description="" sid="798539094925012" title="C6 Initialize Menu State">
             <sub-events>
+                <event-block sid="165946170246953">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="684877759261315" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="978208440830971" type="Function">
+                            <param id="0" name="Name">&quot;GG Fetch State&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Start CASUAL&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="448334342164413">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="335861093306031" type="System" />
+                        <condition id="0" name="On function" sid="783930151792419" type="Function">
+                            <param id="0" name="Name">&quot;Start CASUAL&quot;</param>
+                        </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <comment>Generate Levels</comment>
-                        <event-block sid="223349158918015">
-                            <conditions>
-                                <condition id="6" name="Is empty" sid="222681535761772" type="C6_ScoreList" />
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set size" sid="324201594544330" type="C6_ScoreList">
-                                    <param id="0" name="Width">12</param>
-                                    <param id="1" name="Height">5</param>
-                                    <param id="2" name="Depth">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="376417350786852">
-                                    <conditions />
-                                    <actions>
-                                        <action id="0" name="Call function" sid="680382970176738" type="Function">
-                                            <param id="0" name="Name">&quot;C6 Draw Animals&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="0" name="Call function" sid="475908107587314" type="Function">
+                            <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;UIStart&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="680382970176738" type="Function">
+                            <param id="0" name="Name">&quot;C6 Draw Animals&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="332089813770697" type="System">
+                            <param id="0" name="Layer">&quot;Black&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -71,6 +71,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <comment>TODO</comment>
                 <event-block sid="530834341377286">
                     <conditions>
                         <condition id="0" name="On function" sid="504408702738929" type="Function">
@@ -86,37 +87,6 @@
                                 </condition>
                             </conditions>
                             <actions />
-                            <sub-events>
-                                <event-block sid="691667134652761">
-                                    <conditions>
-                                        <condition id="1" name="Compare at XY" sid="304683911534146" type="C6_ScoreList">
-                                            <param id="0" name="X">C6_Animal.Game</param>
-                                            <param id="1" name="Y">0</param>
-                                            <param id="2" name="Comparison">1</param>
-                                            <param id="3" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="348555848057678" type="C6_Animal">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="890880170882793" type="C6_Animal">
-                                            <param id="0" name="Animation">&quot;Animation&quot; &amp; C6_ScoreList.At(C6_Animal.Game, 0)</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="417931773508236">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="688774361272534" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="439682552983885" type="C6_Animal">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -153,7 +123,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="501922786289729" type="Function">
-                                    <param id="0" name="Name">&quot;GG Load Game&quot;</param>
+                                    <param id="0" name="Name">&quot;GG Select Game&quot;</param>
                                     <param id="1" name="Parameter {n}">C6_SelectedGame{###}0</param>
                                 </action>
                             </actions>
@@ -166,7 +136,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="890818353186043" type="Function">
-                                    <param id="0" name="Name">&quot;GG Load Game&quot;</param>
+                                    <param id="0" name="Name">&quot;GG Select Game&quot;</param>
                                     <param id="1" name="Parameter {n}">C6_SelectedGame{###}1</param>
                                 </action>
                             </actions>
@@ -179,7 +149,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="163990332250951" type="Function">
-                                    <param id="0" name="Name">&quot;GG Load Game&quot;</param>
+                                    <param id="0" name="Name">&quot;GG Select Game&quot;</param>
                                     <param id="1" name="Parameter {n}">C6_SelectedGame{###}2</param>
                                 </action>
                             </actions>
@@ -212,7 +182,7 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="580277138466740" type="C6_LevelIcon">
+                                        <condition disabled="1" id="-7" name="Compare instance variable" sid="580277138466740" type="C6_LevelIcon">
                                             <param id="0" name="Instance variable">Game</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">4</param>
@@ -424,19 +394,8 @@
                             </sub-events>
                         </event-block>
                         <event-block sid="201165579596874">
-                            <conditions>
-                                <condition id="-2" name="On start of layout" sid="182559013592498" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-4" name="Set layer visible" sid="658858664074073" type="System">
-                                    <param id="0" name="Layer">&quot;UIDifficulty&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                                <action id="0" name="Call function" sid="475908107587314" type="Function">
-                                    <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;UIStart&quot;</param>
-                                </action>
-                            </actions>
+                            <conditions />
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-group>

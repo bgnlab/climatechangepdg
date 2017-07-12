@@ -23,6 +23,19 @@
                     </conditions>
                     <actions>
                         <action id="-21" name="Reset global variables" sid="225986984781708" type="System" />
+                        <action id="0" name="Call function" sid="718664221387032" type="Function">
+                            <param id="0" name="Name">&quot;GG Fetch State&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;m2_1 Initialize Game&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="555017852070011">
+                    <conditions>
+                        <condition id="0" name="On function" sid="997627269459168" type="Function">
+                            <param id="0" name="Name">&quot;m2_1 Initialize Game&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
                         <action id="-18" name="Set layer opacity" sid="798782154387194" type="System">
                             <param id="0" name="Layer">1</param>
                             <param id="1" name="Opacity">0</param>
@@ -35,7 +48,51 @@
                             <param id="0" name="Animation">&quot;Animation3&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-42" name="Signal" sid="693673719398007" type="System">
+                            <param id="0" name="Tag">&quot;m2_1_init&quot;</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="254636161755232">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="193077515360598" type="GG_State">
+                                    <param id="0" name="Key">&quot;tutorial_finished&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="228223662701026" type="m2_1_flashy" />
+                                <action id="-9" name="Destroy" sid="338066286639752" type="m2_1_flashy2" />
+                                <action id="-9" name="Destroy" sid="513296229143757" type="m2_1_CLICKER" />
+                                <action id="-9" name="Destroy" sid="502903395780741" type="m2_1_clicker2" />
+                                <action id="-9" name="Destroy" sid="545866785077086" type="m2_1_clickz" />
+                                <action id="-9" name="Destroy" sid="929650551396628" type="m2_1_Tutorial" />
+                                <action id="-9" name="Destroy" sid="649697108762057" type="m2_1_tutText" />
+                                <action id="-9" name="Destroy" sid="747369069030042" type="m2_1_tutText2" />
+                                <action id="-9" name="Destroy" sid="761806760200593" type="m2_1_tutText3" />
+                                <action id="-9" name="Destroy" sid="272915195979213" type="m2_1_blink" />
+                                <action id="-9" name="Set value" sid="137833991531682" type="System">
+                                    <param id="0" name="Variable">m2_1_playing</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="166119164761731" type="System">
+                                    <param id="0" name="Variable">m2_1_tutPage</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="267251410705124">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="998455181533682" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="256344387181088" type="m2_1_clickz">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="157586734497547">
                     <conditions>
@@ -607,6 +664,9 @@
                         <condition id="-2" name="On start of layout" sid="541873280611497" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-41" name="Wait for signal" sid="251301219627948" type="System">
+                            <param id="0" name="Tag">&quot;m2_1_init&quot;</param>
+                        </action>
                         <action behavior="Physics" id="23" name="Enable/disable collisions" sid="486137469388208" type="m2_1_wires">
                             <param id="0" name="Object">m2_1_wires</param>
                             <param id="1" name="State">0</param>
@@ -869,6 +929,9 @@
                         <condition id="-2" name="On start of layout" sid="681725532747047" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-41" name="Wait for signal" sid="588669102512821" type="System">
+                            <param id="0" name="Tag">&quot;m2_1_init&quot;</param>
+                        </action>
                         <action id="0" name="Play" sid="784268944241773" type="Audio">
                             <param id="0" name="Audio file">sfx_AC</param>
                             <param id="2" name="Loop">1</param>
@@ -960,6 +1023,9 @@
                         <condition id="-2" name="On start of layout" sid="209770165754342" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-41" name="Wait for signal" sid="474422937856711" type="System">
+                            <param id="0" name="Tag">&quot;m2_1_init&quot;</param>
+                        </action>
                         <action id="-41" name="Wait for signal" sid="808968886803004" type="System">
                             <param id="0" name="Tag">&quot;baeaeaeh&quot;</param>
                         </action>
@@ -980,6 +1046,9 @@
                         <condition id="-2" name="On start of layout" sid="726884448367593" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-41" name="Wait for signal" sid="292572818948359" type="System">
+                            <param id="0" name="Tag">&quot;m2_1_init&quot;</param>
+                        </action>
                         <action behavior="Physics" id="23" name="Enable/disable collisions" sid="832763959242964" type="m2_1_endMenu">
                             <param id="0" name="Object">m2_1_plugHole</param>
                             <param id="1" name="State">0</param>
@@ -1218,7 +1287,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-26" name="Restart layout" sid="844952216070073" type="System" />
+                                        <action id="0" name="Call function" sid="982546254914066" type="Function">
+                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;m2_1 Restart Game&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="818979972112724">
@@ -1321,29 +1393,29 @@
         </event-group>
         <event-group description="" sid="296113987591155" title="m2_1_Tutorial">
             <sub-events>
-                <event-block sid="318802137019241">
+                <event-block sid="672050016671453">
                     <conditions>
-                        <condition id="14" name="On tap" sid="783978508965465" type="Touch" />
-                        <condition id="-14" name="Compare variable" sid="998029030909740" type="System">
+                        <condition id="14" name="On tap" sid="266278766033152" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="577412615068857" type="System">
                             <param id="0" name="Variable">m2_1_tutPage</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="741812794529948" type="m2_1_tutText">
+                        <action id="0" name="Set text" sid="926277294318151" type="m2_1_tutText">
                             <param id="0" name="Text">&quot;Tap to interact with objects.&quot;</param>
                         </action>
-                        <action id="-10" name="Add to" sid="906414484666339" type="System">
+                        <action id="-10" name="Add to" sid="578949873978182" type="System">
                             <param id="0" name="Variable">m2_1_blinkCount</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-16" name="Wait" sid="822517450703103" type="System">
+                        <action id="-16" name="Wait" sid="314659518215147" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="776587187639750" type="m2_1_clickz" />
-                        <action id="-9" name="Destroy" sid="480479693420188" type="m2_1_tutText3" />
-                        <action id="-10" name="Add to" sid="915779399816767" type="System">
+                        <action id="-9" name="Destroy" sid="221175790139242" type="m2_1_clickz" />
+                        <action id="-9" name="Destroy" sid="609523708993053" type="m2_1_tutText3" />
+                        <action id="-10" name="Add to" sid="580827417083247" type="System">
                             <param id="0" name="Variable">m2_1_tutPage</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -1601,6 +1673,23 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" sid="381662545896340" title="M2_1_begin_game" />
+        <event-group description="" sid="163558769125825" title="m2_1 Restart Game">
+            <sub-events>
+                <event-block sid="375255312625718">
+                    <conditions>
+                        <condition id="0" name="On function" sid="272160812643958" type="Function">
+                            <param id="0" name="Name">&quot;m2_1 Restart Game&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="318327817795492" type="System">
+                            <param id="0" name="Variable">hi</param>
+                            <param id="1" name="Value">&quot;546456&quot;</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="826947667254423" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
