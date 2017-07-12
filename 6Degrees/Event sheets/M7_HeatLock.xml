@@ -68,7 +68,7 @@
                                         </action>
                                         <action id="-9" name="Set value" sid="862224550674965" type="System">
                                             <param id="0" name="Variable">M7_Tutorial_Progress</param>
-                                            <param id="1" name="Value">M7_Tutorial_Progress + 1</param>
+                                            <param id="1" name="Value">M7_Tutorial_Progress + 0.5</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="281663982166377" type="System">
                                             <param id="0" name="Variable">M7_Tutorial_Animation_Progress</param>
@@ -84,7 +84,7 @@
                                                 <action id="-9" name="Destroy" sid="414701240314020" type="M7_Person2" />
                                                 <action id="-10" name="Set value" sid="389694850564253" type="M7_Room0">
                                                     <param id="0" name="Instance variable">Temperature</param>
-                                                    <param id="1" name="Value">-0.9</param>
+                                                    <param id="1" name="Value">0</param>
                                                 </action>
                                                 <action id="0" name="Call function" sid="794380351873362" type="Function">
                                                     <param id="0" name="Name">&quot;M7 Windows Weather Change&quot;</param>
@@ -128,6 +128,23 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
+                                                <comment>Cold</comment>
+                                                <event-block sid="115463359235587">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="799642939218878" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="137341512551960">
+                                                            <conditions />
+                                                            <actions />
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
                                                 <comment>Door</comment>
                                                 <event-block sid="859377498610909">
                                                     <conditions>
@@ -480,8 +497,46 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
+                                                <event-block sid="445028389268552">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="909444175885825" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0.5</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="468797990047889" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_Progress</param>
+                                                            <param id="1" name="Value">M7_Tutorial_Progress + 0.5</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <comment>Next part&apos;s layout</comment>
+                                                        <event-block sid="833470071978055">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="881972367843858" type="M7_Tutorial_Highlight">
+                                                                    <param id="0" name="Animation">&quot;click_anywhere&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-3" name="Set position" sid="642632805507589" type="M7_Tutorial_Highlight">
+                                                                    <param id="0" name="X">M7_Person1.X</param>
+                                                                    <param id="1" name="Y">M7_Person1.Y - 100</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="316126146232943" type="M7_Tutorial_Instructions">
+                                                                    <param id="0" name="Text">&quot;The colder the room is, the more blue it becomes&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="185654864923093" type="M7_Tutorial_Prompt">
+                                                                    <param id="0" name="Text">&quot;Tap anywhere to continue&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
                                                 <event-block sid="740480514478333">
                                                     <conditions>
+                                                        <condition id="-22" name="Else" sid="176339368653735" type="System" />
                                                         <condition id="-14" name="Compare variable" sid="497436873044033" type="System">
                                                             <param id="0" name="Variable">M7_Tutorial_Progress</param>
                                                             <param id="1" name="Comparison">0</param>
@@ -492,6 +547,10 @@
                                                         <action id="-9" name="Set value" sid="528732925077113" type="System">
                                                             <param id="0" name="Variable">M7_Tutorial_Progress</param>
                                                             <param id="1" name="Value">M7_Tutorial_Progress + 1</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="631522193506722" type="System">
+                                                            <param id="0" name="Variable">M7_Tutorial_State</param>
+                                                            <param id="1" name="Value">&quot;anim&quot;</param>
                                                         </action>
                                                         <action id="4" name="Set animation" sid="619453368272162" type="M7_Tutorial_Highlight">
                                                             <param id="0" name="Animation">&quot;click_spotlight&quot;</param>
