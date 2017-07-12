@@ -3,9 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>m2_1_main(e)</name>
     <events>
+        <include>GG Scores and Levels</include>
         <variable constant="0" name="m2_1_blinkCount" sid="875162946210545" static="0" type="number">0</variable>
         <variable constant="0" name="m2_1_tutPage" sid="113542597187029" static="0" type="number">1</variable>
-        <include>GG Scores and Levels</include>
         <variable constant="0" name="m2_1_chainzz" sid="871525209252249" static="0" type="number">0</variable>
         <variable constant="0" name="m2_1_chainzzzz" sid="711375661151982" static="0" type="number">0</variable>
         <variable constant="0" name="m2_1_score" sid="404060174331174" static="0" type="number">0</variable>
@@ -1601,5 +1601,6 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-group description="" sid="381662545896340" title="M2_1_begin_game" />
     </events>
 </c2eventsheet>
