@@ -6641,82 +6641,28 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="1" name="0C" pingpong="0" repeatcount="1" repeatto="0" sid="671130492558430" speed="5">
-                            <frame duration="1" hotspotX="0.494118" hotspotY="0.532468">
+                            <frame duration="1" hotspotX="0.494118" hotspotY="0.532468" original-source="C:\Users\GAMEPLAYER-01\Downloads\vent off.png">
                                 <collision-poly>
-                                    <point x="0.00588235" y="0.181818" />
-                                    <point x="0.494118" y="0.012987" />
-                                    <point x="0.994118" y="0.155844" />
-                                    <point x="0.994118" y="0.909091" />
-                                    <point x="0.494118" y="0.987013" />
-                                    <point x="0.00588235" y="0.883117" />
+                                    <point x="0" y="0" />
+                                    <point x="0.5018" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0.5018" y="1" />
+                                    <point x="0" y="1" />
                                 </collision-poly>
                             </frame>
                         </animation>
                         <animation framecount="2" loop="1" name="1C" pingpong="0" repeatcount="1" repeatto="0" sid="375225183313458" speed="5">
-                            <frame duration="1" hotspotX="0.494118" hotspotY="0.532468">
-                                <collision-poly>
-                                    <point x="0.00588235" y="0.181818" />
-                                    <point x="0.494118" y="0.012987" />
-                                    <point x="0.994118" y="0.155844" />
-                                    <point x="0.994118" y="0.909091" />
-                                    <point x="0.494118" y="0.987013" />
-                                    <point x="0.00588235" y="0.883117" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.491228" hotspotY="0.532468" original-source="C:\Users\Yuan\Downloads\vent on 1.png">
-                                <collision-poly>
-                                    <point x="0.00584795" y="0.142857" />
-                                    <point x="0.508772" y="0.012987" />
-                                    <point x="0.988304" y="0.194805" />
-                                    <point x="0.988304" y="0.857143" />
-                                    <point x="0.508772" y="0.987013" />
-                                    <point x="0.00584795" y="0.909091" />
-                                </collision-poly>
-                            </frame>
+                            <frame duration="1" hotspotX="0.494118" hotspotY="0.532468" original-source="C:\Users\GAMEPLAYER-01\Downloads\vent off.png" />
+                            <frame duration="1" hotspotX="0.491228" hotspotY="0.532468" original-source="C:\Users\GAMEPLAYER-01\Downloads\vent on 1.png" />
                         </animation>
                         <animation framecount="2" loop="1" name="2C" pingpong="0" repeatcount="1" repeatto="0" sid="734688781290564" speed="5">
-                            <frame duration="1" hotspotX="0.491228" hotspotY="0.532468">
-                                <collision-poly>
-                                    <point x="0.00584795" y="0.142857" />
-                                    <point x="0.508772" y="0.012987" />
-                                    <point x="0.988304" y="0.194805" />
-                                    <point x="0.988304" y="0.857143" />
-                                    <point x="0.508772" y="0.987013" />
-                                    <point x="0.00584795" y="0.909091" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.48" hotspotY="0.532468" original-source="C:\Users\Yuan\Downloads\vent on 2.png">
-                                <collision-poly>
-                                    <point x="0" y="0" />
-                                    <point x="0.509774" y="0" />
-                                    <point x="1" y="0" />
-                                    <point x="1" y="1" />
-                                    <point x="0.509774" y="1" />
-                                    <point x="0" y="1" />
-                                </collision-poly>
-                            </frame>
+                            <frame duration="1" hotspotX="0.491228" hotspotY="0.532468" original-source="C:\Users\GAMEPLAYER-01\Downloads\vent on 1.png" />
+                            <frame duration="1" hotspotX="0.48" hotspotY="0.532468" original-source="C:\Users\GAMEPLAYER-01\Downloads\vent on 2.png" />
                         </animation>
                         <animation framecount="2" loop="1" name="3C" pingpong="0" repeatcount="1" repeatto="0" sid="977214362121029" speed="5">
-                            <frame duration="1" hotspotX="0.48" hotspotY="0.532468" original-source="C:\Users\Yuan\Downloads\vent on 2.png">
-                                <collision-poly>
-                                    <point x="0" y="0" />
-                                    <point x="0.509774" y="0" />
-                                    <point x="1" y="0" />
-                                    <point x="1" y="1" />
-                                    <point x="0.509774" y="1" />
-                                    <point x="0" y="1" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.459016" hotspotY="0.532468" original-source="C:\Users\Yuan\Downloads\vent on 3.png">
-                                <collision-poly>
-                                    <point x="0" y="0" />
-                                    <point x="0.48887" y="0" />
-                                    <point x="1" y="0" />
-                                    <point x="1" y="1" />
-                                    <point x="0.48887" y="1" />
-                                    <point x="0" y="1" />
-                                </collision-poly>
-                            </frame>
+                            <frame duration="1" hotspotX="0.48" hotspotY="0.532468" original-source="C:\Users\GAMEPLAYER-01\Downloads\vent on 2.png" />
+                            <frame duration="1" hotspotX="0.459016" hotspotY="0.532468" original-source="C:\Users\GAMEPLAYER-01\Downloads\vent on 3.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
