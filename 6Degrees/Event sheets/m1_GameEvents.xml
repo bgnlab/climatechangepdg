@@ -692,6 +692,57 @@
                             <param id="0" name="Value">m1_TimerMeter.timeRemaining</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="346057742491587">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="393213624720527" type="m1_TimerMeter">
+                                    <param id="0" name="Instance variable">timeRemaining</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="492377115153002" type="m1_TimerMeter">
+                                    <param id="0" name="Instance variable">timeRemaining</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="217726970213020" type="m1_TimerProgress">
+                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="532432527461146" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="767177103584743" type="m1_TimerProgress">
+                                    <param id="0" name="Animation">&quot;default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="265529292371500">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="337954145822039" type="m1_TimerMeter">
+                                    <param id="0" name="Instance variable">timeRemaining</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="435273180345815" type="m1_TimerMeter">
+                                    <param id="0" name="Instance variable">timeRemaining</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="796509463551328" type="Audio">
+                                    <param id="0" name="Audio file">sfx_timer (1)</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>every second, the tire pressure reduces by 10 OR 20 %</comment>
                 <event-group description="" sid="643908151587881" title="TirePressureLoss">
