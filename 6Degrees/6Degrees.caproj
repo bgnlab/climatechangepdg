@@ -376,16 +376,7 @@
                         <plugin id="Text" />
                     </object-type>
                 </object-folder>
-                <object-folder name="Black">
-                    <object-type name="M7_Tutorial_Highlight2" sid="847362751968613">
-                        <plugin id="Sprite" />
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="click_begin_prompt" pingpong="0" repeatcount="1" repeatto="0" sid="863132935143161" speed="5">
-                                <frame duration="1" hotspotX="0" hotspotY="0" />
-                            </animation>
-                        </animation-folder>
-                    </object-type>
-                </object-folder>
+                <object-folder name="Black" />
                 <object-type name="C6_ButtonBack" sid="716684449658093">
                     <plugin id="Sprite" />
                     <animation-folder>
