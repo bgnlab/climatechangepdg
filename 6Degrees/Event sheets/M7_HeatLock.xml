@@ -2111,6 +2111,11 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;waiting&quot;</param>
                                         </condition>
+                                        <condition id="-14" name="Compare variable" sid="908338969733002" type="System">
+                                            <param id="0" name="Variable">M7_Temp_State</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;increasing&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
@@ -2193,7 +2198,6 @@
                     <sub-events>
                         <variable constant="0" name="M7_Transition_Counter" sid="337390884750133" static="1" type="number">0</variable>
                         <variable constant="1" name="M7_TEMP_INCREASE_TRANSITION_RATE_DURATION" sid="316959003907820" static="0" type="number">0.5</variable>
-                        <event-group description="" sid="767252619172675" title="M7 Temperature Signal" />
                         <event-block sid="443482500143842">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="434084959282359" type="System">
@@ -2210,21 +2214,20 @@
                             </actions>
                             <sub-events>
                                 <comment>Transmission Animation</comment>
-                                <event-block sid="909757917792355">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="266957735185465" type="System">
-                                            <param id="0" name="First value">M7_ThermostatSignal.Count</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">0</param>
-                                        </condition>
-                                        <condition id="-24" name="For Each (ordered)" sid="774419832856850" type="System">
-                                            <param id="0" name="Object">M7_ThermostatSignal</param>
-                                            <param id="1" name="Expression">M7_ThermostatSignal.IID</param>
-                                            <param id="2" name="Order">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                </event-block>
+                                <event-group description="" sid="767252619172675" title="M7 Temperature Signal">
+                                    <sub-events>
+                                        <event-block sid="909757917792355">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="266957735185465" type="System">
+                                                    <param id="0" name="First value">M7_ThermostatSignal.Count</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
                                 <event-block sid="524241001756610">
                                     <conditions>
                                         <condition id="-11" name="For Each" sid="366930194239211" type="System">
