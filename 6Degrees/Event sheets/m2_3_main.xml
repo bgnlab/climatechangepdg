@@ -83,6 +83,63 @@
                             <param id="1" name="Value">0.01</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="217869709334812">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="805380789092202" type="System">
+                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="783137217892803" type="System">
+                                    <param id="0" name="Variable">m2_3_timer</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="486394711737171" type="System">
+                                    <param id="0" name="Variable">m2_3_timer</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="139629677730031" type="m2_3_timer">
+                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="128904930390442" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="289305942027472" type="m2_3_timer">
+                                    <param id="0" name="Animation">&quot;default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="670692596199615">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="675760557504232" type="System">
+                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="915334245620256" type="System">
+                                    <param id="0" name="Variable">m2_3_timer</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="215811940274125" type="System">
+                                    <param id="0" name="Variable">m2_3_timer</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="961514258085345" type="Audio">
+                                    <param id="0" name="Audio file">sfx_timer (1)</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="628281977433291">
                     <conditions>
