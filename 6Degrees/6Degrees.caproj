@@ -1329,115 +1329,8 @@
                 </object-type>
                 <object-type name="m2_1_wire1" sid="827808121210369">
                     <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable name="numbers" sid="842762742504147" type="number" />
-                    </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="400752465693040" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_1_wire2" sid="601849826305117">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="740923036483604" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_1_wire3" sid="715253998805749">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="509060364676882" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_1_wire4" sid="810236973879737">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="593648849118656" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_1_wire5" sid="856778956016782">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703613303186291" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_1_wire6" sid="754583226335140">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="272969325930728" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_1_wire7" sid="599841896897474">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="569127413912104" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_1_wire8" sid="952842129994328">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="421021690496691" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_1_wire9" sid="950019578170369">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="302432458458270" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_1_wire10" sid="948967559913658">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="424967433948480" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_1_wire11" sid="385333827162598">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="600948931044445" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_1_wire12" sid="320352111181005">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="231283779535386" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_1_wire13" sid="455227139571653">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="629798539380658" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_1_wire14" sid="294644695138888">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="387739889015074" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
@@ -2000,6 +1893,19 @@
                                     <point x="0.215104" y="0.624545" />
                                 </collision-poly>
                             </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="m2_1_floooor" sid="430113038839701">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Physics" sid="374373198702325">
+                            <behavior id="Physics" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="122532148421655" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -10586,19 +10492,6 @@
         <family name="m2_1_wires" plugin-id="Sprite" sid="644140661896544">
             <members>
                 <member>m2_1_wire1</member>
-                <member>m2_1_wire10</member>
-                <member>m2_1_wire11</member>
-                <member>m2_1_wire12</member>
-                <member>m2_1_wire13</member>
-                <member>m2_1_wire14</member>
-                <member>m2_1_wire2</member>
-                <member>m2_1_wire3</member>
-                <member>m2_1_wire4</member>
-                <member>m2_1_wire5</member>
-                <member>m2_1_wire6</member>
-                <member>m2_1_wire7</member>
-                <member>m2_1_wire8</member>
-                <member>m2_1_wire9</member>
             </members>
             <instance-variables>
                 <instance-variable name="number" sid="747947886143482" type="number" />

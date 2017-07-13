@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>m2_1_main(e)</name>
     <events>
+        <variable constant="0" name="m2_1_wireChecker" sid="337780905068152" static="0" type="number">0</variable>
         <include>GG Scores and Levels</include>
         <variable constant="0" name="m2_1_blinkCount" sid="875162946210545" static="0" type="number">0</variable>
         <variable constant="0" name="m2_1_tutPage" sid="113542597187029" static="0" type="number">1</variable>
@@ -659,117 +660,186 @@
         </event-block>
         <event-group description="" sid="918704186196042" title="Tv Movement2">
             <sub-events>
-                <event-block sid="365513431130037">
+                <event-block sid="566729251973325">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="541873280611497" type="System" />
+                        <condition id="-2" name="On start of layout" sid="869150616739642" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-41" name="Wait for signal" sid="251301219627948" type="System">
-                            <param id="0" name="Tag">&quot;m2_1_init&quot;</param>
-                        </action>
-                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="486137469388208" type="m2_1_wires">
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="614873916598399" type="m2_1_wires">
                             <param id="0" name="Object">m2_1_wires</param>
                             <param id="1" name="State">0</param>
                         </action>
-                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="339576316716336" type="m2_1_plugHole">
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="190454791336615" type="m2_1_plugHole">
                             <param id="0" name="Object">m2_1_wires</param>
                             <param id="1" name="State">0</param>
                         </action>
-                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="303975849477815" type="m2_1_anchor">
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="904266484393129" type="m2_1_anchor">
                             <param id="0" name="Object">m2_1_wires</param>
                             <param id="1" name="State">0</param>
                         </action>
-                        <action behavior="Physics" id="10" name="Create distance joint" sid="893683663638667" type="m2_1_wire1">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_plugHole</param>
-                            <param id="2" name="That image point">0</param>
-                            <param id="3" name="Damping ratio">0</param>
-                            <param id="4" name="Spring frequency">0</param>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="649985969617642">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="646379364817060" type="System">
+                                    <param id="0" name="Count">25</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="504780867332737" type="System">
+                                    <param id="0" name="Object to create">m2_1_wire1</param>
+                                    <param id="1" name="Layer">&quot;Layer 0&quot;</param>
+                                    <param id="2" name="X">835+(loopindex+1)*(80/25)</param>
+                                    <param id="3" name="Y">730+(loopindex+1)*(30/25)</param>
+                                </action>
+                                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="108039412901119" type="m2_1_wires">
+                                    <param id="0" name="Object">m2_1_wires</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="392564515641944" type="m2_1_wire1">
+                                    <param id="0" name="Instance variable">number</param>
+                                    <param id="1" name="Value">loopindex+1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="714569951006525" type="m2_1_wire1">
+                                    <param id="0" name="Angle">288.144</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="349771042843022" type="System">
+                                    <param id="0" name="Variable">m2_1_wireChecker</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="902388756256084" type="m2_1_wire1">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Object">m2_1_Tv</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="868001074273453" type="m2_1_wire1">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Object">m2_1_plugHole</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="766190559890622">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="157606329224303" type="System">
+                            <param id="0" name="Object">m2_1_wire1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="187576394346952" type="System">
+                            <param id="0" name="Variable">m2_1_wireChecker</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">25</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="924578471317153" type="System">
+                            <param id="0" name="Variable">m2_1_wireChecker</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="752373683289732" type="System">
+                            <param id="0" name="Variable">m2_1_wireChecker</param>
+                            <param id="1" name="Value">1</param>
                         </action>
-                        <action behavior="Physics" id="22" name="Create limited revolute joint" sid="237025756482212" type="m2_1_wire2">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_wire1</param>
-                            <param id="2" name="Lower angle">0</param>
-                            <param id="3" name="Upper angle">0</param>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="735084549921664">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="659488265486203" type="m2_1_wire1">
+                                    <param id="0" name="Instance variable">number</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="11" name="Create revolute joint" sid="829129431883540" type="m2_1_wire1">
+                                    <param id="0" name="This image point">0</param>
+                                    <param id="1" name="Object">m2_1_plugHole</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="805016388985269">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="115655379352539" type="m2_1_wire1">
+                                    <param id="0" name="Instance variable">number</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">25</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="11" name="Create revolute joint" sid="107961739449188" type="m2_1_wire1">
+                                    <param id="0" name="This image point">0</param>
+                                    <param id="1" name="Object">m2_1_anchor</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="502360235302606">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="832699167433498" type="m2_1_wires">
+                                    <param id="0" name="Instance variable">number</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">m2_1_wire1.number-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="22" name="Create limited revolute joint" sid="731810068507455" type="m2_1_wire1">
+                                    <param id="0" name="This image point">0</param>
+                                    <param id="1" name="Object">m2_1_wires</param>
+                                    <param id="2" name="Lower angle">0</param>
+                                    <param id="3" name="Upper angle">360</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="587338575221110">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="634661136159160" type="m2_1_wires">
+                                    <param id="0" name="Instance variable">number</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">m2_1_wire1.number-2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="22" name="Create limited revolute joint" sid="457421707275597" type="m2_1_wire1">
+                                    <param id="0" name="This image point">0</param>
+                                    <param id="1" name="Object">m2_1_wires</param>
+                                    <param id="2" name="Lower angle">0</param>
+                                    <param id="3" name="Upper angle">360</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="485819123727411">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="353098250449950" type="m2_1_wires">
+                                    <param id="0" name="Instance variable">number</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">m2_1_wire1.number+1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="22" name="Create limited revolute joint" sid="875261632674502" type="m2_1_wire1">
+                                    <param id="0" name="This image point">0</param>
+                                    <param id="1" name="Object">m2_1_wires</param>
+                                    <param id="2" name="Lower angle">0</param>
+                                    <param id="3" name="Upper angle">360</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="907257197227011">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="397633176766642" type="System">
+                            <param id="0" name="Variable">m2_1_wireChecker</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">51</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="621990481443273" type="m2_1_Tv">
+                            <param id="0" name="X">1000</param>
                         </action>
-                        <action behavior="Physics" id="22" name="Create limited revolute joint" sid="338767929597810" type="m2_1_wire3">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_wire2</param>
-                            <param id="2" name="Lower angle">0</param>
-                            <param id="3" name="Upper angle">0</param>
-                        </action>
-                        <action behavior="Physics" id="22" name="Create limited revolute joint" sid="801520292635983" type="m2_1_wire4">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_wire3</param>
-                            <param id="2" name="Lower angle">0</param>
-                            <param id="3" name="Upper angle">0</param>
-                        </action>
-                        <action behavior="Physics" id="22" name="Create limited revolute joint" sid="917696790026112" type="m2_1_wire5">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_wire4</param>
-                            <param id="2" name="Lower angle">0</param>
-                            <param id="3" name="Upper angle">0</param>
-                        </action>
-                        <action behavior="Physics" id="22" name="Create limited revolute joint" sid="131076549088483" type="m2_1_wire6">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_wire5</param>
-                            <param id="2" name="Lower angle">0</param>
-                            <param id="3" name="Upper angle">0</param>
-                        </action>
-                        <action behavior="Physics" id="22" name="Create limited revolute joint" sid="390866007812465" type="m2_1_wire7">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_wire6</param>
-                            <param id="2" name="Lower angle">0</param>
-                            <param id="3" name="Upper angle">0</param>
-                        </action>
-                        <action behavior="Physics" id="22" name="Create limited revolute joint" sid="481582864070618" type="m2_1_wire8">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_wire7</param>
-                            <param id="2" name="Lower angle">0</param>
-                            <param id="3" name="Upper angle">0</param>
-                        </action>
-                        <action behavior="Physics" id="22" name="Create limited revolute joint" sid="965774361161954" type="m2_1_wire9">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_wire8</param>
-                            <param id="2" name="Lower angle">0</param>
-                            <param id="3" name="Upper angle">0</param>
-                        </action>
-                        <action behavior="Physics" id="22" name="Create limited revolute joint" sid="642494985804977" type="m2_1_wire10">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_wire9</param>
-                            <param id="2" name="Lower angle">0</param>
-                            <param id="3" name="Upper angle">0</param>
-                        </action>
-                        <action behavior="Physics" id="22" name="Create limited revolute joint" sid="347858691532427" type="m2_1_wire11">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_wire10</param>
-                            <param id="2" name="Lower angle">0</param>
-                            <param id="3" name="Upper angle">0</param>
-                        </action>
-                        <action behavior="Physics" id="22" name="Create limited revolute joint" sid="354631737710376" type="m2_1_wire12">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_wire11</param>
-                            <param id="2" name="Lower angle">0</param>
-                            <param id="3" name="Upper angle">0</param>
-                        </action>
-                        <action behavior="Physics" id="22" name="Create limited revolute joint" sid="672108159296338" type="m2_1_wire13">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_wire12</param>
-                            <param id="2" name="Lower angle">0</param>
-                            <param id="3" name="Upper angle">0</param>
-                        </action>
-                        <action behavior="Physics" id="22" name="Create limited revolute joint" sid="319403428820601" type="m2_1_wire14">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_wire13</param>
-                            <param id="2" name="Lower angle">0</param>
-                            <param id="3" name="Upper angle">0</param>
-                        </action>
-                        <action behavior="Physics" id="10" name="Create distance joint" sid="598140923219063" type="m2_1_wire14">
-                            <param id="0" name="This image point">0</param>
-                            <param id="1" name="Object">m2_1_anchor</param>
-                            <param id="2" name="That image point">0</param>
-                            <param id="3" name="Damping ratio">0</param>
-                            <param id="4" name="Spring frequency">0</param>
+                        <action id="-10" name="Add to" sid="808101959490846" type="System">
+                            <param id="0" name="Variable">m2_1_wireChecker</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>

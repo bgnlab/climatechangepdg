@@ -190,23 +190,8 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="325116263901852">
-                    <conditions />
-                    <actions>
-                        <action id="-10" name="Set value" sid="798222463197429" type="m2_1_wire1">
-                            <param id="0" name="Instance variable">number</param>
-                            <param id="1" name="Value">m2_1_wire1.numbers</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="850194844356194">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="472511024008826" type="m2_1_wire1">
-                            <param id="0" name="Instance variable">numbers</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
+                    <conditions />
                     <actions>
                         <action behavior="Physics" id="10" name="Create distance joint" sid="155340824748579" type="m2_1_wire1">
                             <param id="0" name="This image point">1</param>
@@ -239,13 +224,7 @@
                     </actions>
                 </event-block>
                 <event-block sid="173409293583935">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="151692707245455" type="m2_1_wire1">
-                            <param id="0" name="Instance variable">numbers</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">25</param>
-                        </condition>
-                    </conditions>
+                    <conditions />
                     <actions>
                         <action behavior="Physics" id="10" name="Create distance joint" sid="625866664754425" type="m2_1_wire1">
                             <param id="0" name="This image point">1</param>

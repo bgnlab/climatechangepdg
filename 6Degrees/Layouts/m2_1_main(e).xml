@@ -123,47 +123,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m2_1_anchor" uid="250">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <ropeCount>20</ropeCount>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>Yes</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>848.770446777</x>
-                        <y>759.489257813</y>
-                        <z>0</z>
-                        <width>8</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="m2_1_wire1" uid="251">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -173,7 +132,6 @@
                     </properties>
                     <instance-variables>
                         <number>0</number>
-                        <numbers>0</numbers>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -194,548 +152,15 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>833.770446777</x>
-                        <y>744.489257813</y>
+                        <x>835</x>
+                        <y>730</y>
                         <z>0</z>
                         <width>4</width>
                         <height>8</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="m2_1_wire2" uid="252">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <number>0</number>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>833.770446777</x>
-                        <y>748.489257813</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="m2_1_wire3" uid="253">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <number>0</number>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>833.770446777</x>
-                        <y>752.489257813</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="m2_1_wire4" uid="254">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <number>0</number>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>833.770446777</x>
-                        <y>756.489257813</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="m2_1_wire5" uid="255">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <number>0</number>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>833.770446777</x>
-                        <y>760.489257813</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="m2_1_wire6" uid="256">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <number>0</number>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>833.770446777</x>
-                        <y>764.489257813</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="m2_1_wire7" uid="257">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <number>0</number>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>833.770446777</x>
-                        <y>768.489257813</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="m2_1_wire8" uid="258">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <number>0</number>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>834.648620605</x>
-                        <y>772.220458984</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>8.081665039</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>-0.52359879</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="m2_1_wire9" uid="259">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <number>0</number>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>837.57019043</x>
-                        <y>775.147155762</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>-1.04719758</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="m2_1_wire10" uid="260">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <number>0</number>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>841.514709473</x>
-                        <y>776.272399902</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>-1.570796371</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="m2_1_wire11" uid="261">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <number>0</number>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>845.582885742</x>
-                        <y>775.147644043</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>-2.094395161</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="m2_1_wire12" uid="262">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <number>0</number>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>848.362609863</x>
-                        <y>772.530761719</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>-2.617993832</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="m2_1_wire13" uid="263">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <number>0</number>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>849.415405273</x>
-                        <y>768.464538574</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="m2_1_wire14" uid="264">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <number>0</number>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>849.395324707</x>
-                        <y>765.357727051</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
+                        <angle>-1.254123211</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -768,8 +193,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>834.452087402</x>
-                        <y>732.558837891</y>
+                        <x>835</x>
+                        <y>730</y>
                         <z>0</z>
                         <width>40</width>
                         <height>40</height>
@@ -944,6 +369,47 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="m2_1_anchor" uid="250">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ropeCount>20</ropeCount>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>915</x>
+                        <y>760</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="m2_1_Tv" uid="273">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -958,8 +424,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1003.770446777</x>
-                        <y>734.489257813</y>
+                        <x>1110</x>
+                        <y>735</y>
                         <z>0</z>
                         <width>405</width>
                         <height>320</height>
@@ -1071,7 +537,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1190.770507813</x>
+                        <x>1300.770507813</x>
                         <y>819.489257813</y>
                         <z>0</z>
                         <width>32</width>
@@ -1516,6 +982,44 @@
                         <z>0</z>
                         <width>240</width>
                         <height>240</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="m2_1_floooor" uid="60">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.1</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>967</x>
+                        <y>1024</y>
+                        <z>0</z>
+                        <width>2257</width>
+                        <height>250</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
