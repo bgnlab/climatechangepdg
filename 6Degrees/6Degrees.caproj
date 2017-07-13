@@ -36,6 +36,7 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="brightness">Brightness</effect>
+        <effect author="Scirra" id="lumblend">Luminosity</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -6002,18 +6003,28 @@
                 </object-type>
                 <object-type name="M7_ThermostatSignal" sid="615835135806512">
                     <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="totalSteps" sid="280583674460634" type="number" />
+                        <instance-variable name="timer" sid="237554121267934" type="number" />
+                        <instance-variable name="distance" sid="397452417331646" type="number" />
+                    </instance-variables>
+                    <effects>
+                        <effect-type name="Luminosity">
+                            <effect id="lumblend" />
+                        </effect-type>
+                    </effects>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="s0" pingpong="0" repeatcount="1" repeatto="0" sid="507768906685567" speed="5">
-                            <frame duration="1" hotspotX="0.506849" hotspotY="0.510204" original-source="C:\Users\GAMEPLAYER-01\Downloads\signal 1.png">
+                            <frame duration="1" hotspotX="0.48" hotspotY="0.5125" original-source="C:\Users\GAMEPLAYER-01\Downloads\signal 4.png">
                                 <collision-poly>
-                                    <point x="0.150685" y="0.22449" />
-                                    <point x="0.493151" y="0.102041" />
-                                    <point x="0.835616" y="0.244898" />
-                                    <point x="0.767123" y="0.489796" />
-                                    <point x="0.794521" y="0.693878" />
-                                    <point x="0.493151" y="0.795918" />
-                                    <point x="0.205479" y="0.693878" />
-                                    <point x="0.219178" y="0.489796" />
+                                    <point x="0.77551" y="0.150685" />
+                                    <point x="0.897959" y="0.493151" />
+                                    <point x="0.755102" y="0.835616" />
+                                    <point x="0.510204" y="0.767123" />
+                                    <point x="0.306122" y="0.794521" />
+                                    <point x="0.204082" y="0.493151" />
+                                    <point x="0.306122" y="0.205479" />
+                                    <point x="0.510204" y="0.219178" />
                                 </collision-poly>
                             </frame>
                         </animation>
