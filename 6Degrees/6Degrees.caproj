@@ -36,7 +36,6 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="brightness">Brightness</effect>
-        <effect author="Scirra" id="noisemask">Noise Mask</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -5915,12 +5914,8 @@
                         <instance-variable name="totalSteps" sid="280583674460634" type="number" />
                         <instance-variable name="timer" sid="237554121267934" type="number" />
                         <instance-variable name="distance" sid="397452417331646" type="number" />
+                        <instance-variable name="flag" sid="456217774043155" type="number" />
                     </instance-variables>
-                    <effects>
-                        <effect-type name="NoiseMask">
-                            <effect id="noisemask" />
-                        </effect-type>
-                    </effects>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="s0" pingpong="0" repeatcount="1" repeatto="0" sid="507768906685567" speed="5">
                             <frame duration="1" hotspotX="0.48" hotspotY="0.5125" original-source="C:\Users\GAMEPLAYER-01\Downloads\signal 4.png">
