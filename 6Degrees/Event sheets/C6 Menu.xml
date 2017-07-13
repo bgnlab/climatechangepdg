@@ -13,6 +13,10 @@
                         <condition id="-2" name="On start of layout" sid="684877759261315" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-4" name="Set layer visible" sid="883584788774411" type="System">
+                            <param id="0" name="Layer">&quot;Black&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
                         <action id="0" name="Call function" sid="978208440830971" type="Function">
                             <param id="0" name="Name">&quot;GG Fetch State&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Start CASUAL&quot;</param>
@@ -122,6 +126,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-4" name="Set layer visible" sid="409574360182029" type="System">
+                                    <param id="0" name="Layer">&quot;Black&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
                                 <action id="0" name="Call function" sid="501922786289729" type="Function">
                                     <param id="0" name="Name">&quot;GG Select Game&quot;</param>
                                     <param id="1" name="Parameter {n}">C6_SelectedGame{###}0</param>
@@ -135,6 +143,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-4" name="Set layer visible" sid="667824605414140" type="System">
+                                    <param id="0" name="Layer">&quot;Black&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
                                 <action id="0" name="Call function" sid="890818353186043" type="Function">
                                     <param id="0" name="Name">&quot;GG Select Game&quot;</param>
                                     <param id="1" name="Parameter {n}">C6_SelectedGame{###}1</param>
@@ -148,6 +160,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-4" name="Set layer visible" sid="941150601409787" type="System">
+                                    <param id="0" name="Layer">&quot;Black&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
                                 <action id="0" name="Call function" sid="163990332250951" type="Function">
                                     <param id="0" name="Name">&quot;GG Select Game&quot;</param>
                                     <param id="1" name="Parameter {n}">C6_SelectedGame{###}2</param>
@@ -339,6 +355,19 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;UISettings&quot;</param>
                                         </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="134859706617305" type="C6_ButtonBack">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="873655756231300" type="C6_Background">
+                                            <param id="0" name="Animation">&quot;Blank&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="201165579596874">
+                                    <conditions>
                                         <condition id="-14" name="Compare variable" sid="770113131172808" type="System">
                                             <param id="0" name="Variable">C6_UIState</param>
                                             <param id="1" name="Comparison">0</param>
@@ -346,10 +375,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="134859706617305" type="C6_ButtonBack">
+                                        <action id="-15" name="Set visible" sid="449229470563458" type="C6_ButtonBack">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action id="4" name="Set animation" sid="873655756231300" type="C6_Background">
+                                        <action id="4" name="Set animation" sid="449467778060331" type="C6_Background">
                                             <param id="0" name="Animation">&quot;Blank&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -370,6 +399,10 @@
                                         <action id="4" name="Set animation" sid="853481040020666" type="C6_Background">
                                             <param id="0" name="Animation">&quot;StartScreen&quot;</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="612561713375374" type="System">
+                                            <param id="0" name="Layer">&quot;UIDifficulty&quot;</param>
+                                            <param id="1" name="Visibility">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -392,10 +425,6 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="201165579596874">
-                            <conditions />
-                            <actions />
                         </event-block>
                     </sub-events>
                 </event-group>
