@@ -1461,217 +1461,257 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="296113987591155" title="m2_1_Tutorial">
+        <event-group description="" sid="762035370991452" title="m2_1_Tutorial">
             <sub-events>
-                <event-block sid="672050016671453">
+                <event-block sid="889198862756750">
                     <conditions>
-                        <condition id="14" name="On tap" sid="266278766033152" type="Touch" />
-                        <condition id="-14" name="Compare variable" sid="577412615068857" type="System">
+                        <condition id="14" name="On tap" sid="346799840157594" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="453179353424308" type="System">
                             <param id="0" name="Variable">m2_1_tutPage</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="926277294318151" type="m2_1_tutText">
+                        <action id="0" name="Set text" sid="403211393050800" type="m2_1_tutText">
                             <param id="0" name="Text">&quot;Tap to interact with objects.&quot;</param>
                         </action>
-                        <action id="-10" name="Add to" sid="578949873978182" type="System">
-                            <param id="0" name="Variable">m2_1_blinkCount</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="4" name="Set font color" sid="240097450894906" type="m2_1_tutText">
+                            <param id="0" name="Color">rgb(255,255,255)</param>
                         </action>
-                        <action id="-16" name="Wait" sid="314659518215147" type="System">
+                        <action id="-16" name="Set opacity" sid="508630897315212" type="m2_1_tuttap">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="759764039523299" type="m2_1_tutLight">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="919089089442128" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="221175790139242" type="m2_1_clickz" />
-                        <action id="-9" name="Destroy" sid="609523708993053" type="m2_1_tutText3" />
-                        <action id="-10" name="Add to" sid="580827417083247" type="System">
+                        <action id="-9" name="Destroy" sid="653265803342140" type="m2_1_clickz" />
+                        <action id="-9" name="Destroy" sid="354390350286458" type="m2_1_tutText3" />
+                        <action id="-10" name="Add to" sid="817517256075431" type="System">
                             <param id="0" name="Variable">m2_1_tutPage</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="688409370841573">
+                <event-block sid="939840101869983">
                     <conditions>
-                        <condition id="17" name="On tap object" sid="220761163013895" type="Touch">
+                        <condition id="17" name="On tap object" sid="369867974061414" type="Touch">
                             <param id="0" name="Object">m2_1_lightSwitch</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="520606108287086" type="System">
+                        <condition id="-14" name="Compare variable" sid="232183311332520" type="System">
                             <param id="0" name="Variable">m2_1_tutPage</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="238219498404565" type="m2_1_tutText">
+                        <action id="0" name="Set text" sid="575097502457556" type="m2_1_tutText">
                             <param id="0" name="Text">&quot;Anything with a red light is still using electricity. Turn the light back on.&quot;</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="183191033377907" type="m2_1_lightSwitch">
+                        <action id="-13" name="Set boolean" sid="194024353416301" type="m2_1_lightSwitch">
                             <param id="0" name="Instance variable">power</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-16" name="Wait" sid="605658429808877" type="System">
+                        <action id="-15" name="Set visible" sid="512726280143050" type="m2_1_tutLight">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="384267017410525" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
-                        <action id="-10" name="Add to" sid="434018049087854" type="System">
+                        <action id="-10" name="Add to" sid="343748167531590" type="System">
                             <param id="0" name="Variable">m2_1_tutPage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="214009396740134" type="System">
+                            <param id="0" name="Variable">m2_1_blinkCount</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="721356530235382">
+                <event-block sid="979822663606403">
                     <conditions>
-                        <condition id="17" name="On tap object" sid="720865197114557" type="Touch">
+                        <condition id="17" name="On tap object" sid="903250188331046" type="Touch">
                             <param id="0" name="Object">m2_1_lightSwitch</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="965291741109741" type="System">
+                        <condition id="-14" name="Compare variable" sid="404342979919535" type="System">
                             <param id="0" name="Variable">m2_1_tutPage</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="773991354276566" type="System">
+                        <action id="-10" name="Add to" sid="903959277738191" type="System">
                             <param id="0" name="Variable">m2_1_blinkCount</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Set text" sid="566487182476910" type="m2_1_tutText">
+                        <action id="0" name="Set text" sid="250307264626527" type="m2_1_tutText">
                             <param id="0" name="Text">&quot;Certain objects can be dragged.&quot;</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="505689607616337" type="m2_1_lightSwitch">
+                        <action id="-13" name="Set boolean" sid="185373586849230" type="m2_1_lightSwitch">
                             <param id="0" name="Instance variable">power</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-16" name="Wait" sid="899658787526289" type="System">
+                        <action id="-15" name="Set visible" sid="909302155187578" type="m2_1_tutLight">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="173114638583834" type="m2_1_tutLight">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">740</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="717837468701637" type="m2_1_tutLight">
+                            <param id="0" name="Width">810</param>
+                            <param id="1" name="Height">460</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="877712888626233" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
-                        <action id="-10" name="Add to" sid="116907794630137" type="System">
+                        <action id="-10" name="Add to" sid="606179318642969" type="System">
                             <param id="0" name="Variable">m2_1_tutPage</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="290105612806898">
+                <event-block sid="397457755218637">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="561170488890415" type="m2_1_Tv">
+                        <condition id="-1" name="Compare X" sid="136643030217885" type="m2_1_Tv">
                             <param id="0" name="Comparison">5</param>
                             <param id="1" name="X co-ordinate">1065</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="746826504311016" type="System">
+                        <condition id="-14" name="Compare variable" sid="456823988760020" type="System">
                             <param id="0" name="Variable">m2_1_tutPage</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="221348515047055" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="650657020832063" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="586386201345529" type="m2_1_tutText">
+                        <action id="0" name="Set text" sid="567464969355514" type="m2_1_tutText">
                             <param id="0" name="Text">&quot;Turn off and unplug as many electronics as you can.&quot;</param>
                         </action>
-                        <action id="-10" name="Add to" sid="453389228564002" type="System">
+                        <action id="4" name="Set font color" sid="571213517867246" type="m2_1_tutText">
+                            <param id="0" name="Color">rgb(0,0,0)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="269064393413357" type="System">
                             <param id="0" name="Variable">m2_1_blinkCount</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-16" name="Wait" sid="738542736951037" type="System">
+                        <action id="-18" name="Set layer opacity" sid="854108530491623" type="System">
+                            <param id="0" name="Layer">&quot;tutorial&quot;</param>
+                            <param id="1" name="Opacity">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="821556653049184" type="m2_1_tutLight">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="545746744176553" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
-                        <action id="-10" name="Add to" sid="133435623544370" type="System">
+                        <action id="-10" name="Add to" sid="376884582289023" type="System">
                             <param id="0" name="Variable">m2_1_tutPage</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="455505768857378" type="System">
+                        <action id="-9" name="Set value" sid="402223388964383" type="System">
                             <param id="0" name="Variable">m2_1_playing</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="576472705763626">
+                <event-block sid="761019420923039">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="752483977226713" type="System">
+                        <condition id="-14" name="Compare variable" sid="131073659933084" type="System">
                             <param id="0" name="Variable">m2_1_score</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">3</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="393562478640538" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="927374185011050" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="308944508187025" type="m2_1_tutText">
+                        <action id="0" name="Set text" sid="478105465911898" type="m2_1_tutText">
                             <param id="0" name="Text">&quot;Leave through door.&quot;</param>
                         </action>
-                        <action id="-10" name="Add to" sid="635610659816424" type="System">
+                        <action id="-18" name="Set layer opacity" sid="170849389275453" type="System">
+                            <param id="0" name="Layer">&quot;tutorial&quot;</param>
+                            <param id="1" name="Opacity">100</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="560400179405793" type="m2_1_tutText">
+                            <param id="0" name="Color">rgb(255,255,255)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="151247537247698" type="System">
                             <param id="0" name="Variable">m2_1_blinkCount</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="357198063502398">
+                <event-block sid="335116088810327">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="262639007471070" type="System">
+                        <condition id="-6" name="Every X seconds" sid="356588297574611" type="System">
                             <param id="0" name="Interval (seconds)">0.4</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="631463777057044" type="m2_1_blink">
+                        <action id="-16" name="Set opacity" sid="231197473710162" type="m2_1_blink">
                             <param id="0" name="Opacity">100</param>
                         </action>
-                        <action id="4" name="Set animation" sid="834502928191596" type="m2_1_clickz">
+                        <action id="4" name="Set animation" sid="688086472926623" type="m2_1_clickz">
                             <param id="0" name="Animation">&quot;Animation2&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" sid="387811910610355" type="System">
+                        <action id="-16" name="Wait" sid="775822064397709" type="System">
                             <param id="0" name="Seconds">0.2</param>
                         </action>
-                        <action id="-16" name="Set opacity" sid="541613245224586" type="m2_1_blink">
+                        <action id="-16" name="Set opacity" sid="417769747245654" type="m2_1_blink">
                             <param id="0" name="Opacity">0</param>
                         </action>
-                        <action id="4" name="Set animation" sid="846265808605939" type="m2_1_clickz">
+                        <action id="4" name="Set animation" sid="158610061632935" type="m2_1_clickz">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="996309845156060">
+                <event-block sid="968794472136014">
                     <conditions>
-                        <condition id="-11" name="For Each" sid="294488379243910" type="System">
+                        <condition id="-11" name="For Each" sid="783369391285843" type="System">
                             <param id="0" name="Object">m2_1_blink</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="865920337123406">
+                        <event-block sid="317928130642502">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="209474542294150" type="m2_1_blink">
+                                <condition id="-7" name="Compare instance variable" sid="216424868150540" type="m2_1_blink">
                                     <param id="0" name="Instance variable">numba</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">m2_1_blinkCount</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="998411090873774" type="m2_1_blink">
+                                <action id="-15" name="Set visible" sid="863006184410364" type="m2_1_blink">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="498297954477528">
+                        <event-block sid="721997563238162">
                             <conditions>
-                                <condition id="-22" name="Else" sid="736876138975252" type="System" />
+                                <condition id="-22" name="Else" sid="898640366625174" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="770307848280823" type="m2_1_blink">
+                                <action id="-15" name="Set visible" sid="593366390618017" type="m2_1_blink">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="456033775817616">
+                        <event-block sid="183695401809427">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="343288466523824" type="m2_1_blink">
+                                <condition id="-7" name="Compare instance variable" sid="403640050238504" type="m2_1_blink">
                                     <param id="0" name="Instance variable">numba</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="678664856579226" type="m2_1_blink">
+                                <action id="-3" name="Set position" sid="320141906641842" type="m2_1_blink">
                                     <param id="0" name="X">m2_1_Tv.X</param>
                                     <param id="1" name="Y">m2_1_Tv.Y</param>
                                 </action>
@@ -1681,62 +1721,56 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="322229991741204">
+        <event-block sid="395138280364668">
             <conditions>
-                <condition id="-1" name="Every tick" sid="115139403976207" type="System" />
+                <condition id="-1" name="Every tick" sid="830588830547211" type="System" />
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="555742577075145">
+                <event-block sid="789419205990605">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="902079986834646" type="m2_1_lightSwitch">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="362331642152088" type="m2_1_lightSwitch">
                             <param id="0" name="Instance variable">power</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="440262766140993" type="m2_1theLight">
+                        <action id="-16" name="Set opacity" sid="918065500024385" type="m2_1theLight">
                             <param id="0" name="Opacity">95</param>
                         </action>
-                        <action id="-16" name="Set opacity" sid="589751848867913" type="m2_1_dpprCrack">
+                        <action id="-16" name="Set opacity" sid="713137283463178" type="m2_1_dpprCrack">
                             <param id="0" name="Opacity">100</param>
                         </action>
-                        <action id="4" name="Set animation" sid="157776818209129" type="m2_1_lightSwitch">
+                        <action id="4" name="Set animation" sid="763692691253163" type="m2_1_lightSwitch">
                             <param id="0" name="Animation">&quot;Animation2&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="4" name="Set font color" sid="710940849626678" type="m2_1_tutText">
-                            <param id="0" name="Color">rgb(255, 255, 255)</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="570306309160893" type="m2_1_tutText2">
+                        <action id="-15" name="Set visible" sid="987160262075937" type="m2_1_tutText2">
                             <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="332853518290848">
+                <event-block sid="184257691352456">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="497989863277012" type="m2_1_lightSwitch">
+                        <condition id="-8" name="Is boolean instance variable set" sid="761040871940117" type="m2_1_lightSwitch">
                             <param id="0" name="Instance variable">power</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="666517572492254" type="m2_1theLight">
+                        <action id="-16" name="Set opacity" sid="568680652005872" type="m2_1theLight">
                             <param id="0" name="Opacity">0</param>
                         </action>
-                        <action id="-16" name="Set opacity" sid="818505409321925" type="m2_1_dpprCrack">
+                        <action id="-16" name="Set opacity" sid="158048142070542" type="m2_1_dpprCrack">
                             <param id="0" name="Opacity">10</param>
                         </action>
-                        <action id="-3" name="Set position" sid="564750700116309" type="m2_1theLight">
+                        <action id="-3" name="Set position" sid="975347408779158" type="m2_1theLight">
                             <param id="0" name="X">960</param>
                             <param id="1" name="Y">600</param>
                         </action>
-                        <action id="4" name="Set animation" sid="671204633350330" type="m2_1_lightSwitch">
+                        <action id="4" name="Set animation" sid="219083247159099" type="m2_1_lightSwitch">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="4" name="Set font color" sid="347494791280421" type="m2_1_tutText">
-                            <param id="0" name="Color">rgb(0,0,0)</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="537660979460234" type="m2_1_tutText2">
+                        <action id="-15" name="Set visible" sid="252110461364440" type="m2_1_tutText2">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
