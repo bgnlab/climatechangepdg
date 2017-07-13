@@ -34,15 +34,8 @@
                     <param id="0" name="Variable">m2_1_prg</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-16" name="Set opacity" sid="110742211080673" type="m2_1_CLICKER">
-                    <param id="0" name="Opacity">100</param>
-                </action>
                 <action id="-16" name="Wait" sid="599139325508216" type="System">
                     <param id="0" name="Seconds">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="451023694231132" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Set opacity" sid="376844383715542" type="m2_1_ACLight">
                     <param id="0" name="Opacity">0</param>
@@ -54,16 +47,8 @@
                 <action id="-16" name="Wait" sid="717355708629849" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
-                <action id="4" name="Set animation" sid="247699055874837" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
                 <action id="-16" name="Wait" sid="241744824622889" type="System">
                     <param id="0" name="Seconds">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="595633249292389" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Set opacity" sid="655988601320626" type="m2_1_ACLight">
                     <param id="0" name="Opacity">100</param>
@@ -74,10 +59,6 @@
                 </action>
                 <action id="-16" name="Wait" sid="734124468595127" type="System">
                     <param id="0" name="Seconds">0.5</param>
-                </action>
-                <action id="4" name="Set animation" sid="538469678688010" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -93,15 +74,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Set opacity" sid="102692994234970" type="m2_1_CLICKER">
-                    <param id="0" name="Opacity">100</param>
-                </action>
                 <action id="-16" name="Wait" sid="360717271572899" type="System">
                     <param id="0" name="Seconds">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="452080260165726" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Set opacity" sid="388871007073599" type="m2_1_ACLight">
                     <param id="0" name="Opacity">0</param>
@@ -113,16 +87,8 @@
                 <action id="-16" name="Wait" sid="308285220924313" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
-                <action id="4" name="Set animation" sid="345253644386296" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
                 <action id="-16" name="Wait" sid="821748183049051" type="System">
                     <param id="0" name="Seconds">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="724088856647422" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Set opacity" sid="166257051750604" type="m2_1_ACLight">
                     <param id="0" name="Opacity">100</param>
@@ -133,10 +99,6 @@
                 </action>
                 <action id="-16" name="Wait" sid="143919176984825" type="System">
                     <param id="0" name="Seconds">0.5</param>
-                </action>
-                <action id="4" name="Set animation" sid="883535050868910" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>

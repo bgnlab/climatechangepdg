@@ -17,19 +17,8 @@
                     <param id="0" name="Variable">m2_1_noWait</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-16" name="Set opacity" sid="935580164778886" type="m2_1_CLICKER">
-                    <param id="0" name="Opacity">100</param>
-                </action>
                 <action id="-16" name="Wait" sid="537335931688562" type="System">
                     <param id="0" name="Seconds">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="281310287394333" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="785195645958215" type="m2_1_clicker2">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="155674895705324" type="m2_1_closetDoor">
                     <param id="0" name="Animation">&quot;Animation2&quot;</param>
@@ -38,24 +27,8 @@
                 <action id="-16" name="Wait" sid="693019203671464" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
-                <action id="4" name="Set animation" sid="519346259742337" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="259260769195524" type="m2_1_clicker2">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
                 <action id="-16" name="Wait" sid="282053757992710" type="System">
                     <param id="0" name="Seconds">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="692525023233443" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="686228628249677" type="m2_1_clicker2">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="723044508781170" type="m2_1_closetDoor">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
@@ -63,14 +36,6 @@
                 </action>
                 <action id="-16" name="Wait" sid="678211248928687" type="System">
                     <param id="0" name="Seconds">0.5</param>
-                </action>
-                <action id="4" name="Set animation" sid="679433667601150" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="827616628005653" type="m2_1_clicker2">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -108,45 +73,18 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Set opacity" sid="573916529120723" type="m2_1_CLICKER">
-                    <param id="0" name="Opacity">100</param>
-                </action>
                 <action id="-16" name="Wait" sid="733978528043924" type="System">
                     <param id="0" name="Seconds">1</param>
                 </action>
-                <action id="4" name="Set animation" sid="645673092099093" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
                 <action id="4" name="Set animation" sid="568661931450488" type="m2_1_closetDoor">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="938482883102768" type="m2_1_clicker2">
                     <param id="0" name="Animation">&quot;Animation2&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="448869068818823" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
-                <action id="4" name="Set animation" sid="952444510668153" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="503711179287714" type="m2_1_clicker2">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
                 <action id="-16" name="Wait" sid="614581334400000" type="System">
                     <param id="0" name="Seconds">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="214090410340919" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="534165849099500" type="m2_1_clicker2">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="953394616445624" type="m2_1_closetDoor">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
@@ -154,14 +92,6 @@
                 </action>
                 <action id="-16" name="Wait" sid="909513090005658" type="System">
                     <param id="0" name="Seconds">0.5</param>
-                </action>
-                <action id="4" name="Set animation" sid="589032975794674" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="693644957747331" type="m2_1_clicker2">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -187,12 +117,6 @@
             <actions>
                 <action id="-1" name="Set X" sid="977874534547963" type="m2_1_TvLight">
                     <param id="0" name="X">m2_1_Tv.X+187</param>
-                </action>
-                <action id="-1" name="Set X" sid="545036269024908" type="m2_1_Tv">
-                    <param id="0" name="X">m2_1_clicker2.X</param>
-                </action>
-                <action id="-1" name="Set X" sid="924323823262811" type="m2_1_flashy">
-                    <param id="0" name="X">m2_1_clicker2.X</param>
                 </action>
             </actions>
         </event-block>
@@ -222,11 +146,7 @@
                             <param id="2" name="Value">1.5</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-1" name="Set X" sid="461882867972716" type="m2_1_clicker2">
-                            <param id="0" name="X">m2_1_clicker2.X-5</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="677098875059203">
                     <conditions>
@@ -241,11 +161,7 @@
                             <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-1" name="Set X" sid="201492063256878" type="m2_1_clicker2">
-                            <param id="0" name="X">m2_1_clicker2.X+5</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="511099532272911">
                     <conditions>

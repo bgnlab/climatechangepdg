@@ -36,36 +36,17 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Set opacity" sid="360957752040193" type="m2_1_CLICKER">
-                    <param id="0" name="Opacity">100</param>
-                </action>
                 <action id="-16" name="Wait" sid="288534923487355" type="System">
                     <param id="0" name="Seconds">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="726589113701267" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="358897479776220" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
-                <action id="4" name="Set animation" sid="880909972306884" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
                 <action id="-16" name="Wait" sid="195461335316533" type="System">
                     <param id="0" name="Seconds">1</param>
                 </action>
-                <action id="4" name="Set animation" sid="971286324222210" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
                 <action id="-16" name="Wait" sid="215748907965821" type="System">
                     <param id="0" name="Seconds">0.5</param>
-                </action>
-                <action id="4" name="Set animation" sid="398727043732222" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -77,36 +58,17 @@
                 <action behavior="Physics" id="27" name="Set enabled" sid="551512497089480" type="m2_1_wire1">
                     <param id="0" name="Mode">0</param>
                 </action>
-                <action id="-16" name="Set opacity" sid="156148544287936" type="m2_1_CLICKER">
-                    <param id="0" name="Opacity">100</param>
-                </action>
                 <action id="-16" name="Wait" sid="271736229899672" type="System">
                     <param id="0" name="Seconds">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="185400310131047" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="334279830937738" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
-                <action id="4" name="Set animation" sid="515922258478497" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
                 <action id="-16" name="Wait" sid="729071388012068" type="System">
                     <param id="0" name="Seconds">1</param>
                 </action>
-                <action id="4" name="Set animation" sid="941329069242908" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
                 <action id="-16" name="Wait" sid="997373636272320" type="System">
                     <param id="0" name="Seconds">0.5</param>
-                </action>
-                <action id="4" name="Set animation" sid="626362728419716" type="m2_1_CLICKER">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>

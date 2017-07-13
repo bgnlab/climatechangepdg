@@ -1545,38 +1545,6 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="m2_1_CLICKER" sid="355006477204342">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="723924630337412" speed="5">
-                            <frame duration="1" hotspotX="0.505" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\selected.png">
-                                <collision-poly>
-                                    <point x="0.3025" y="0.3025" />
-                                    <point x="0.5" y="0.2425" />
-                                    <point x="0.73" y="0.27" />
-                                    <point x="0.925" y="0.5" />
-                                    <point x="0.8575" y="0.8575" />
-                                    <point x="0.5" y="1" />
-                                    <point x="0.3025" y="0.6975" />
-                                    <point x="0.0725" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="666436352894372" speed="5">
-                            <frame duration="1" hotspotX="0.505" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\standard.png">
-                                <collision-poly>
-                                    <point x="0.285" y="0.285" />
-                                    <point x="0.5" y="0.02" />
-                                    <point x="0.925" y="0.5" />
-                                    <point x="0.8575" y="0.8575" />
-                                    <point x="0.5" y="1" />
-                                    <point x="0.3025" y="0.6975" />
-                                    <point x="0.0725" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
                 <object-type name="m2_1_flashy" sid="534425250137241">
                     <plugin id="Sprite" />
                     <animation-folder>
@@ -1762,70 +1730,6 @@
                 <object-type name="m2_1_ecit" sid="991537986111309">
                     <plugin id="Spritefont2" />
                     <texture />
-                </object-type>
-                <object-type name="m2_1_clicker2" sid="925252637045720">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="873235393458307" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\selected.png">
-                                <collision-poly>
-                                    <point x="0.285" y="0.285" />
-                                    <point x="0.5" y="0.02" />
-                                    <point x="0.925" y="0.5" />
-                                    <point x="0.8575" y="0.8575" />
-                                    <point x="0.5" y="1" />
-                                    <point x="0.3025" y="0.6975" />
-                                    <point x="0.0725" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="596828059561966" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\standard.png">
-                                <collision-poly>
-                                    <point x="0.3025" y="0.3025" />
-                                    <point x="0.5" y="0.2425" />
-                                    <point x="0.73" y="0.27" />
-                                    <point x="0.925" y="0.5" />
-                                    <point x="0.8575" y="0.8575" />
-                                    <point x="0.5" y="1" />
-                                    <point x="0.3025" y="0.6975" />
-                                    <point x="0.0725" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_1_clickz" sid="199583779996575">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="832057851918119" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\selected.png">
-                                <collision-poly>
-                                    <point x="0.285" y="0.285" />
-                                    <point x="0.5" y="0.02" />
-                                    <point x="0.925" y="0.5" />
-                                    <point x="0.8575" y="0.8575" />
-                                    <point x="0.5" y="1" />
-                                    <point x="0.3025" y="0.6975" />
-                                    <point x="0.0725" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="630831972842369" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\standard.png">
-                                <collision-poly>
-                                    <point x="0.3025" y="0.3025" />
-                                    <point x="0.5" y="0.2425" />
-                                    <point x="0.73" y="0.27" />
-                                    <point x="0.925" y="0.5" />
-                                    <point x="0.8575" y="0.8575" />
-                                    <point x="0.5" y="1" />
-                                    <point x="0.3025" y="0.6975" />
-                                    <point x="0.0725" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
                 </object-type>
                 <object-type name="m2_1_lock" sid="748147877144044">
                     <plugin id="Sprite" />
