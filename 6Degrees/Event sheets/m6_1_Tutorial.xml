@@ -1689,156 +1689,176 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="678276186122656">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="556387246759213" type="System">
-                    <param id="0" name="Interval (seconds)">0.4</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Set opacity" sid="315044303404781" type="m6_1_blink1">
-                    <param id="0" name="Opacity">100</param>
-                </action>
-                <action id="-16" name="Wait" sid="455341593070852" type="System">
-                    <param id="0" name="Seconds">0.2</param>
-                </action>
-                <action id="-16" name="Set opacity" sid="836034010140834" type="m6_1_blink1">
-                    <param id="0" name="Opacity">0.2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="516725234348086">
-            <conditions>
-                <condition id="14" name="On tap" sid="785228891380703" type="Touch" />
-                <condition id="-14" name="Compare variable" sid="748319471355861" type="System">
-                    <param id="0" name="Variable">m6_tut_stage</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="231641355236774" type="m6_TutorialText">
-                    <param id="0" name="Text">&quot;Tap leftovers to see their contents.&quot;</param>
-                </action>
-                <action id="-16" name="Wait" sid="491610614712265" type="System">
-                    <param id="0" name="Seconds">0.1</param>
-                </action>
-                <action id="-10" name="Add to" sid="571762547886232" type="System">
-                    <param id="0" name="Variable">m6_tut_stage</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="175845783380327">
-            <conditions>
-                <condition id="14" name="On tap" sid="934242405042262" type="Touch" />
-                <condition id="-14" name="Compare variable" sid="121838744178129" type="System">
-                    <param id="0" name="Variable">m6_tut_stage</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">4</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="33" name="Stop all" sid="101779017172518" type="Audio" />
-                <action id="-2" name="Go to layout" sid="442916240981554" type="System">
-                    <param id="0" name="Layout">m6_1_main(e)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="874712854592951">
-            <conditions>
-                <condition id="17" name="On tap object" sid="333767522236217" type="Touch">
-                    <param id="0" name="Object">m6_1_lulImABG</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="883141879091309" type="System">
-                    <param id="0" name="Variable">m6_tut_stage</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="641620378497965" type="m6_TutorialText">
-                    <param id="0" name="Text">&quot;Hold and release the leftover containing things needed for the recipe over the pot.&quot;</param>
-                </action>
-            </actions>
+        <event-group description="" sid="595968961095640" title="m6_1_tut">
             <sub-events>
-                <event-block sid="783581528857053">
+                <event-block sid="516725234348086">
                     <conditions>
-                        <condition id="-11" name="For Each" sid="363562837923976" type="System">
-                            <param id="0" name="Object">m6_1_fud</param>
+                        <condition id="14" name="On tap" sid="785228891380703" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="748319471355861" type="System">
+                            <param id="0" name="Variable">m6_tut_stage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="689151086015915" type="m6_1_fud">
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="231641355236774" type="m6_TutorialText">
+                            <param id="0" name="Text">&quot;Tap leftovers to see their contents.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="491610614712265" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="571762547886232" type="System">
+                            <param id="0" name="Variable">m6_tut_stage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="175845783380327">
+                    <conditions>
+                        <condition id="14" name="On tap" sid="934242405042262" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="121838744178129" type="System">
+                            <param id="0" name="Variable">m6_tut_stage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="101779017172518" type="Audio" />
+                        <action id="-2" name="Go to layout" sid="442916240981554" type="System">
+                            <param id="0" name="Layout">m6_1_main(e)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="256369172514008">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="271706137688475" type="System">
+                            <param id="0" name="Variable">m6_tut_stage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="157751163486783" type="System">
+                            <param id="0" name="Layer">&quot;tutorial&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="874712854592951">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="333767522236217" type="Touch">
+                            <param id="0" name="Object">m6_1_lulImABG</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="883141879091309" type="System">
+                            <param id="0" name="Variable">m6_tut_stage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="641620378497965" type="m6_TutorialText">
+                            <param id="0" name="Text">&quot;Hold and release the leftover containing things needed for the recipe over the pot.&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="783581528857053">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="363562837923976" type="System">
+                                    <param id="0" name="Object">m6_1_fud</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="689151086015915" type="m6_1_fud">
+                                    <param id="0" name="Instance variable">name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;StuffedGoose&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="299661295379521" type="m6_1_fud">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="537552616454175">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="513367660354076" type="System" />
+                        <condition id="-11" name="For Each" sid="790327410368763" type="System">
+                            <param id="0" name="Object">m6_1_blink1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="897492865497564">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="647197661779012" type="m6_1_blink1">
+                                    <param id="0" name="Instance variable">number</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">m6_tut_stage</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="120652293533433" type="m6_1_blink1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="702794290979157">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="751594130641533" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="557930668287455" type="m6_1_blink1">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="876313338795809">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="355225154004910" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="528818248500716" type="m6_1_fud">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;StuffedGoose&quot;</param>
                         </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="DragDrop" id="0" name="Set enabled" sid="299661295379521" type="m6_1_fud">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="537552616454175">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="513367660354076" type="System" />
-                <condition id="-11" name="For Each" sid="790327410368763" type="System">
-                    <param id="0" name="Object">m6_1_blink1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="897492865497564">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="647197661779012" type="m6_1_blink1">
-                            <param id="0" name="Instance variable">number</param>
+                        <condition id="-14" name="Compare variable" sid="676277934564643" type="System">
+                            <param id="0" name="Variable">m6_tut_stage</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">m6_tut_stage</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="120652293533433" type="m6_1_blink1">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="-3" name="Set position" sid="886134817226234" type="m6_1_tutLight">
+                            <param id="0" name="X">m6_1_fud.X</param>
+                            <param id="1" name="Y">m6_1_fud.Y+50</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="200599477643478" type="m6_1_tutLight">
+                            <param id="0" name="Width">170</param>
+                            <param id="1" name="Height">170</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="702794290979157">
+                <event-block sid="945530429882814">
                     <conditions>
-                        <condition id="-22" name="Else" sid="751594130641533" type="System" />
+                        <condition id="-2" name="Compare Y" sid="795330021239981" type="m6_1_tutLight">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">900</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="557930668287455" type="m6_1_blink1">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="-3" name="Set position" sid="623377814904267" type="m6_1_tutLight">
+                            <param id="0" name="X">1448</param>
+                            <param id="1" name="Y">1141.5</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="568713071659177" type="m6_1_tutLight">
+                            <param id="0" name="Width">830</param>
+                            <param id="1" name="Height">260</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="876313338795809">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="355225154004910" type="System" />
-                <condition id="-7" name="Compare instance variable" sid="528818248500716" type="m6_1_fud">
-                    <param id="0" name="Instance variable">name</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">&quot;StuffedGoose&quot;</param>
-                </condition>
-                <condition id="-9" name="Is visible" sid="162341345704171" type="m6_1_blink1" />
-                <condition id="-14" name="Compare variable" sid="676277934564643" type="System">
-                    <param id="0" name="Variable">m6_tut_stage</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-1" name="Set X" sid="886134817226234" type="m6_1_blink1">
-                    <param id="0" name="X">m6_1_fud.X</param>
-                </action>
-                <action id="-2" name="Set Y" sid="200599477643478" type="m6_1_blink1">
-                    <param id="0" name="Y">m6_1_fud.Y+50</param>
-                </action>
-            </actions>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>
