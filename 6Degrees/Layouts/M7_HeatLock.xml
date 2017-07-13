@@ -210,6 +210,40 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="M7_ThermostatSignal" uid="880">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <totalSteps>0</totalSteps>
+                        <timer>0</timer>
+                        <distance>0</distance>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="NoiseMask">
+                            <parameters>
+                                <intensity>10</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2146</x>
+                        <y>857</y>
+                        <z>0</z>
+                        <width>150</width>
+                        <height>240</height>
+                        <depth>0</depth>
+                        <hotspotX>0.479999989</hotspotX>
+                        <hotspotY>0.512499988</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1119,36 +1153,6 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="M7_ThermostatSignal" uid="880">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <totalSteps>0</totalSteps>
-                        <timer>0</timer>
-                        <distance>0</distance>
-                    </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Luminosity" />
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>2138</x>
-                        <y>596</y>
-                        <z>0</z>
-                        <width>50</width>
-                        <height>80</height>
-                        <depth>0</depth>
-                        <hotspotX>0.479999989</hotspotX>
-                        <hotspotY>0.512499988</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

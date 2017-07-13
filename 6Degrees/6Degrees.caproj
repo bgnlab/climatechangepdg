@@ -2,7 +2,7 @@
 <c2project>
     <name>6Degrees</name>
     <description>Climate Change!</description>
-    <version>1.0.0.1</version>
+    <version>1.0.0.2</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -36,7 +36,7 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="brightness">Brightness</effect>
-        <effect author="Scirra" id="lumblend">Luminosity</effect>
+        <effect author="Scirra" id="noisemask">Noise Mask</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -5917,8 +5917,8 @@
                         <instance-variable name="distance" sid="397452417331646" type="number" />
                     </instance-variables>
                     <effects>
-                        <effect-type name="Luminosity">
-                            <effect id="lumblend" />
+                        <effect-type name="NoiseMask">
+                            <effect id="noisemask" />
                         </effect-type>
                     </effects>
                     <animation-folder>
