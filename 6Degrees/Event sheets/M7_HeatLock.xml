@@ -2374,7 +2374,7 @@
                     <sub-events>
                         <variable constant="0" name="M7_Transition_Person" sid="109118951293631" static="1" type="number">0</variable>
                         <variable constant="0" name="M7_Transition_Counter" sid="337390884750133" static="1" type="number">0</variable>
-                        <variable constant="1" name="M7_TEMP_INCREASE_TRANSITION_RATE_DURATION" sid="316959003907820" static="0" type="number">1</variable>
+                        <variable constant="1" name="M7_TEMP_INCREASE_TRANSITION_RATE_DURATION" sid="316959003907820" static="0" type="number">1.2</variable>
                         <event-block sid="443482500143842">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="434084959282359" type="System">
@@ -2386,7 +2386,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="409039412942034" type="System">
                                     <param id="0" name="Variable">M7_Transition_Counter</param>
-                                    <param id="1" name="Value">M7_Transition_Counter + dt/M7_TEMP_INCREASE_TRANSITION_RATE_DURATION</param>
+                                    <param id="1" name="Value">M7_Transition_Counter + dt</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -2398,7 +2398,7 @@
                                             <actions>
                                                 <action id="-23" name="Move at angle" sid="242659914284735" type="M7_ThermostatSignal">
                                                     <param id="0" name="Angle">Self.Angle</param>
-                                                    <param id="1" name="Distance">Self.distance * dt * M7_TEMP_INCREASE_TRANSITION_RATE_DURATION</param>
+                                                    <param id="1" name="Distance">Self.distance * dt/ M7_TEMP_INCREASE_TRANSITION_RATE_DURATION</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -2426,7 +2426,7 @@
                                         <condition id="-14" name="Compare variable" sid="414325027797750" type="System">
                                             <param id="0" name="Variable">M7_Transition_Counter</param>
                                             <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">1</param>
+                                            <param id="2" name="Value">M7_TEMP_INCREASE_TRANSITION_RATE_DURATION</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -2465,6 +2465,51 @@
                                                 <action id="-3" name="Set position" sid="313586493204467" type="M7_ThermostatSignal">
                                                     <param id="0" name="X">-300</param>
                                                     <param id="1" name="Y">-300</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="108865656817553">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="642993030820630" type="System">
+                                                    <param id="0" name="Variable">M7_Temperature</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">19</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="284732030273933" type="M7_End_Star2">
+                                                    <param id="0" name="Animation">&quot;Empty&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="140306578887760">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="655600419753183" type="System">
+                                                    <param id="0" name="Variable">M7_Temperature</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">20</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="235210553136852" type="M7_End_Star1">
+                                                    <param id="0" name="Animation">&quot;Empty&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="586305999636366">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="912537345048093" type="System">
+                                                    <param id="0" name="Variable">M7_Temperature</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">21</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="277978475558086" type="M7_End_Star0">
+                                                    <param id="0" name="Animation">&quot;Empty&quot;</param>
+                                                    <param id="1" name="From">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -2512,51 +2557,6 @@
                                         <action id="-10" name="Set value" sid="735112021182511" type="M7_ThermostatSignal">
                                             <param id="0" name="Instance variable">distance</param>
                                             <param id="1" name="Value">distance(Self.X, Self.Y, M7_Thermostat.X, M7_Thermostat.Y)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="756437911491557">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="493087506403458" type="System">
-                                            <param id="0" name="Variable">M7_Temperature</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">19</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="934187151543464" type="M7_End_Star2">
-                                            <param id="0" name="Animation">&quot;Empty&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="876533825435583">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="924240044081004" type="System">
-                                            <param id="0" name="Variable">M7_Temperature</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">20</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="410829713090009" type="M7_End_Star1">
-                                            <param id="0" name="Animation">&quot;Empty&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="625594871950911">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="676549804501382" type="System">
-                                            <param id="0" name="Variable">M7_Temperature</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">21</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="294032896108513" type="M7_End_Star0">
-                                            <param id="0" name="Animation">&quot;Empty&quot;</param>
-                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>

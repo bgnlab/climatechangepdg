@@ -223,11 +223,25 @@
                         <distance>0</distance>
                         <flag>0</flag>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="ScanLines">
+                            <parameters>
+                                <line-height>1.5</line-height>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="WarpRipple">
+                            <parameters>
+                                <amplitude>0.02</amplitude>
+                                <frequency>3</frequency>
+                                <speed>-2</speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2253</x>
-                        <y>665</y>
+                        <x>-288</x>
+                        <y>573</y>
                         <z>0</z>
                         <width>150</width>
                         <height>240</height>
@@ -502,14 +516,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1432</x>
-                        <y>667</y>
+                        <x>1433</x>
+                        <y>681</y>
                         <z>0</z>
                         <width>567</width>
                         <height>398</height>
                         <depth>0</depth>
                         <hotspotX>0.388007045</hotspotX>
-                        <hotspotY>0.894472361</hotspotY>
+                        <hotspotY>0.927135706</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

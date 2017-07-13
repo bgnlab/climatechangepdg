@@ -36,6 +36,8 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="brightness">Brightness</effect>
+        <effect author="Scirra" id="scanlines">Scan lines</effect>
+        <effect author="Scirra" id="warpripple">Warp Ripple</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -5765,7 +5767,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="912263270039890" speed="5">
-                            <frame duration="1" hotspotX="0.388007" hotspotY="0.894472">
+                            <frame duration="1" hotspotX="0.388007" hotspotY="0.927136">
                                 <collision-poly>
                                     <point x="0.468" y="0.936" />
                                     <point x="0.572" y="0.924" />
@@ -5916,6 +5918,14 @@
                         <instance-variable name="distance" sid="397452417331646" type="number" />
                         <instance-variable name="flag" sid="456217774043155" type="number" />
                     </instance-variables>
+                    <effects>
+                        <effect-type name="ScanLines">
+                            <effect id="scanlines" />
+                        </effect-type>
+                        <effect-type name="WarpRipple">
+                            <effect id="warpripple" />
+                        </effect-type>
+                    </effects>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="s0" pingpong="0" repeatcount="1" repeatto="0" sid="507768906685567" speed="5">
                             <frame duration="1" hotspotX="0.48" hotspotY="0.5125" original-source="C:\Users\GAMEPLAYER-01\Downloads\signal 4.png">
