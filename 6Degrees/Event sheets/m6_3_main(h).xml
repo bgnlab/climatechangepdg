@@ -293,6 +293,18 @@
                                         <action id="-9" name="Destroy" sid="860543891879024" type="m6_3_recipeIngrType" />
                                     </actions>
                                 </event-block>
+                                <event-block sid="385836930518088">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="802128507326668" type="m6_1_lines">
+                                            <param id="0" name="Instance variable">ingredient</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="681902142031915" type="m6_1_lines" />
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="162074047606724">
@@ -364,6 +376,30 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" sid="385540132811000" type="m6_3_recipeIngrType" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="268329264515053">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="370568204143350" type="m6_1_lines">
+                                            <param id="0" name="Instance variable">ingredient</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="724430622538309" type="m6_1_lines" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="280902688631495">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="656270995497613" type="m6_1_lines">
+                                            <param id="0" name="Instance variable">ingredient</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="483134578495311" type="m6_1_lines" />
                                     </actions>
                                 </event-block>
                                 <event-block sid="569216237251410">
@@ -467,6 +503,18 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" sid="583811035578848" type="m6_3_recipeIngrType" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="772620080478736">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="396271161866556" type="m6_1_lines">
+                                            <param id="0" name="Instance variable">ingredient</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="618713739120841" type="m6_1_lines" />
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -685,6 +733,30 @@
                 </action>
             </actions>
             <sub-events>
+                <event-block sid="372221661058410">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="283136517915421" type="System">
+                            <param id="0" name="Object">m6_1_lines</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="292295167082448">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="353793532415714" type="System">
+                                    <param id="0" name="First value">m6_3_Recipe1.At(m6_1_lines.ingredient,1) </param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="142749129640324" type="m6_1_lines">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="121060966104872">
                     <conditions>
                         <condition id="-11" name="For Each" sid="751860412733604" type="System">
