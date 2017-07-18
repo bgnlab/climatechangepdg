@@ -4670,6 +4670,38 @@
             </object-folder>
         </object-folder>
         <object-folder name="M1 Tire Pressure">
+            <object-folder name="m1 tutorial">
+                <object-type name="m1_AdvanceTutorialClick" sid="896224547823683">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="a1" pingpong="0" repeatcount="1" repeatto="0" sid="264264321285375" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="a2" pingpong="0" repeatcount="1" repeatto="0" sid="632123518114003" speed="5">
+                            <frame duration="1" hotspotX="0.500262" hotspotY="0.500417" original-source="C:\Users\GAMEPLAYER-01\Documents\climatechangepdg\6Degrees\Animations\M7_Tutorial_Highlight\click_anywhere\000.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="a3" pingpong="0" repeatcount="1" repeatto="0" sid="125646985842322" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.454948" y="0.444583" />
+                                    <point x="0.501042" y="0.4" />
+                                    <point x="0.546615" y="0.447917" />
+                                    <point x="0.552865" y="0.53125" />
+                                    <point x="0.519792" y="0.582083" />
+                                    <point x="0.475781" y="0.578333" />
+                                    <point x="0.445833" y="0.522083" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="m1_Tutorial_Instruction" sid="356368549685311">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="m1_Tutorial_Prompt" sid="965397298147158">
+                    <plugin id="Text" />
+                </object-type>
+            </object-folder>
             <object-type name="m1_2ndStar" sid="107629834795464">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -4716,14 +4748,6 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764921586056257" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="m1_AdvanceTutorialClick" sid="896224547823683">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="632123518114003" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0" />
                     </animation>
                 </animation-folder>
