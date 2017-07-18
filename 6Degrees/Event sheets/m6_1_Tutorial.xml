@@ -153,7 +153,7 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="0" name="Set text" sid="658643966699906" type="m6_TutorialText">
-                            <param id="0" name="Text">&quot;Complete the recipe!&quot; &amp; newline &amp; &quot;The needed ingredients are displayed here.&quot;</param>
+                            <param id="0" name="Text">&quot;Complete the recipe!&quot; &amp; newline &amp; &quot;The needed ingredients are displayed here.&quot; &amp; newline &amp; &quot;Tap anywhere to continue&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1034,7 +1034,10 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="0" name="Set text" sid="251408993948295" type="m6_TutorialText">
-                                    <param id="0" name="Text">&quot;When you finish picking leftovers, tap the DONE button to buy the rest of the ingredients.&quot;</param>
+                                    <param id="0" name="Text">&quot;When you finish picking leftovers, tap the &quot;&quot;Buy Remaining Ingredients&quot;&quot; button to buy the rest of the ingredients.&quot;</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="699277197347593" type="m6_TutorialText">
+                                    <param id="0" name="Size (pt)">42</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="984400106709532" type="System">
                                     <param id="0" name="Variable">m6_tut_checker</param>
@@ -1632,7 +1635,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="607464376179557" type="m6_1_kek">
-                                    <param id="0" name="Text">&quot;Try to buy the least amount of new ingredients.&quot; &amp; newline &amp; &quot;Now play and find every ingredient needed.&quot;</param>
+                                    <param id="0" name="Text">&quot;Try to buy the least amount of new ingredients.&quot; &amp; newline &amp; &quot;Now play and find every ingredient needed.&quot;&amp; newline &amp; &quot;Tap anywhere to continue&quot;</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="691089832635840" type="System">
                                     <param id="0" name="Variable">m6_tut_stage</param>
@@ -1829,22 +1832,47 @@
                             <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="886134817226234" type="m6_1_tutLight">
-                            <param id="0" name="X">m6_1_fud.X</param>
-                            <param id="1" name="Y">m6_1_fud.Y+50</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="200599477643478" type="m6_1_tutLight">
-                            <param id="0" name="Width">170</param>
-                            <param id="1" name="Height">170</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="102920495526836">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="926376836741262" type="m6_1_fud">
+                                    <param id="0" name="Instance variable">hint</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="585307677930012" type="m6_1_tutLight">
+                                    <param id="0" name="X">m6_1_fud.X</param>
+                                    <param id="1" name="Y">m6_1_fud.Y</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="875046646726207" type="m6_1_tutLight">
+                                    <param id="0" name="Width">170</param>
+                                    <param id="1" name="Height">340</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="544818980259257">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="589435001497264" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="455268588923105" type="m6_1_tutLight">
+                                    <param id="0" name="X">m6_1_fud.X</param>
+                                    <param id="1" name="Y">m6_1_fud.Y+50</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="998139324329873" type="m6_1_tutLight">
+                                    <param id="0" name="Width">170</param>
+                                    <param id="1" name="Height">170</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="945530429882814">
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="795330021239981" type="m6_1_tutLight">
                             <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">900</param>
+                            <param id="1" name="Y co-ordinate">840</param>
                         </condition>
                     </conditions>
                     <actions>

@@ -866,6 +866,30 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-block sid="490082217309132">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="593218161433647" type="System">
+                            <param id="0" name="Object">m6_1_lines</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="929114916730643">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="487084383639905" type="System">
+                                    <param id="0" name="First value">m6_1_Recipe1.At(m6_1_lines.ingredient,1) </param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="825750543742848" type="m6_1_lines">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="656348362356217">
