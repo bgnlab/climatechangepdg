@@ -764,9 +764,12 @@
                                                                 <condition id="-22" name="Else" sid="177087061512310" type="System" />
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-10" name="Set value" sid="623674493065941" type="M7_Room0">
+                                                                <action id="-10" name="Set value" sid="781568650833467" type="M7_Room">
                                                                     <param id="0" name="Instance variable">Temperature</param>
-                                                                    <param id="1" name="Value">-2</param>
+                                                                    <param id="1" name="Value">Self.Temperature + dt/0.2</param>
+                                                                </action>
+                                                                <action id="-6" name="Set height" sid="729227262471404" type="M7_Room">
+                                                                    <param id="0" name="Height">max(min((Self.Temperature - 1) * -0.5 * Self.Maxheight, Self.Maxheight),0)</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>

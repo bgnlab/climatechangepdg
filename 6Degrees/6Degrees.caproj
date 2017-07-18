@@ -6277,10 +6277,24 @@
                             <frame duration="1" hotspotX="0.45625" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\closed.png" />
                         </animation>
                         <animation framecount="1" loop="1" name="OpenSun" pingpong="0" repeatcount="1" repeatto="0" sid="260115853627254" speed="5">
-                            <frame duration="1" hotspotX="0.4875" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Open Sun.png" />
+                            <frame duration="1" hotspotX="0.495" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\000.png">
+                                <collision-poly>
+                                    <point x="0.415833" y="0.145" />
+                                    <point x="0.583333" y="0.145" />
+                                    <point x="0.585833" y="0.858333" />
+                                    <point x="0.4125" y="0.86" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="ClosedSun" pingpong="0" repeatcount="1" repeatto="0" sid="336781896813662" speed="5">
-                            <frame duration="1" hotspotX="0.45625" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\closed sun.png" />
+                            <frame duration="1" hotspotX="0.488333" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\001.png">
+                                <collision-poly>
+                                    <point x="0.418333" y="0.118333" />
+                                    <point x="0.5625" y="0.115" />
+                                    <point x="0.564167" y="0.823333" />
+                                    <point x="0.418333" y="0.83" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -6294,10 +6308,24 @@
                             <frame duration="1" hotspotX="0.4875" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\open.png" />
                         </animation>
                         <animation framecount="1" loop="0" name="ClosedSun" pingpong="0" repeatcount="1" repeatto="0" sid="664638462144962" speed="5">
-                            <frame duration="1" hotspotX="0.45625" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\closed sun.png" />
+                            <frame duration="1" hotspotX="0.486667" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\001.png">
+                                <collision-poly>
+                                    <point x="0.431667" y="0.183333" />
+                                    <point x="0.538333" y="0.183333" />
+                                    <point x="0.5375" y="0.816667" />
+                                    <point x="0.433333" y="0.82" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                         <animation framecount="1" loop="1" name="OpenSun" pingpong="0" repeatcount="1" repeatto="0" sid="961843445567607" speed="5">
-                            <frame duration="1" hotspotX="0.4875" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Open Sun.png" />
+                            <frame duration="1" hotspotX="0.496667" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\000.png">
+                                <collision-poly>
+                                    <point x="0.561667" y="0.173333" />
+                                    <point x="0.560833" y="0.855" />
+                                    <point x="0.430833" y="0.855" />
+                                    <point x="0.431667" y="0.171667" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>

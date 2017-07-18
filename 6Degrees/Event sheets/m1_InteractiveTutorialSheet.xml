@@ -68,45 +68,74 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="525603747841799">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="514535885281290" type="System">
+                    <param id="0" name="Variable">m1_tutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set progress" sid="550996101308193" type="m1_FuelMeter">
+                    <param id="0" name="Value">3</param>
+                </action>
+                <action id="-5" name="Set width" sid="494351502479281" type="m1_FuelProgress">
+                    <param id="0" name="Width">m1_FuelProgress.defaultWidth/2</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="996636264268305">
             <conditions>
                 <condition id="0" name="On function" sid="695917003566110" type="Function">
                     <param id="0" name="Name">&quot;TutorialPart2&quot;</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="709309427552042" type="m1_AdvanceTutorialClick">
-                    <param id="0" name="X">1367</param>
-                    <param id="1" name="Y">480</param>
-                </action>
-                <action id="4" name="Set animation" sid="397179211574920" type="m1_AdvanceTutorialClick">
-                    <param id="0" name="Animation">&quot;a2&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="-5" name="Set width" sid="831448143881838" type="m1_FuelProgress">
-                    <param id="0" name="Width">m1_FuelProgress.defaultWidth/2</param>
-                </action>
-                <action id="3" name="Set progress" sid="269255305745265" type="m1_FuelMeter">
-                    <param id="0" name="Value">3</param>
-                </action>
-                <action id="0" name="Set text" sid="254964323795263" type="m1_InteractiveTutorialText">
-                    <param id="0" name="Text">&quot;Fuel will deplete over time.&quot;</param>
-                </action>
-                <action id="0" name="Set text" sid="589510454744887" type="m1_Tutorial_Instruction">
-                    <param id="0" name="Text">&quot;Fuel will deplete over time&quot;</param>
-                </action>
-                <action id="0" name="Set text" sid="286846545375356" type="m1_Tutorial_Prompt">
-                    <param id="0" name="Text">&quot;Tap anywhere to continue&quot;</param>
-                </action>
-                <action id="-7" name="Set size" sid="310335770702864" type="m1_Highlighter">
-                    <param id="0" name="Width">m1_FuelBarrel.Width</param>
-                    <param id="1" name="Height">m1_FuelBarrel.Height</param>
-                </action>
-                <action id="-3" name="Set position" sid="998895039889306" type="m1_Highlighter">
-                    <param id="0" name="X">m1_FuelBarrel.X</param>
-                    <param id="1" name="Y">m1_FuelBarrel.Y</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="243476062902580">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="797338923960383" type="m1_AdvanceTutorialClick">
+                            <param id="0" name="Animation">&quot;a2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="922867283831457">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="392498825633277" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="709309427552042" type="m1_AdvanceTutorialClick">
+                            <param id="0" name="X">1367</param>
+                            <param id="1" name="Y">480</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="397179211574920" type="m1_AdvanceTutorialClick">
+                            <param id="0" name="Animation">&quot;a2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="831448143881838" type="m1_FuelProgress">
+                            <param id="0" name="Width">m1_FuelProgress.defaultWidth/2</param>
+                        </action>
+                        <action id="3" name="Set progress" sid="269255305745265" type="m1_FuelMeter">
+                            <param id="0" name="Value">3</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="729051287961968" type="System">
+                            <param id="0" name="Variable">m1_tutorialTracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="254964323795263" type="m1_InteractiveTutorialText">
+                            <param id="0" name="Text">&quot;Fuel will deplete over time.&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="589510454744887" type="m1_Tutorial_Instruction">
+                            <param id="0" name="Text">&quot;Fuel will deplete over time&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="286846545375356" type="m1_Tutorial_Prompt">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="285878306930228">
             <conditions>
@@ -116,7 +145,7 @@
                 <condition id="-14" name="Compare variable" sid="599218019052574" type="System">
                     <param id="0" name="Variable">m1_tutorialTracker</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">2</param>
+                    <param id="2" name="Value">3</param>
                 </condition>
             </conditions>
             <actions>
@@ -144,7 +173,7 @@
         <event-block sid="420492134301486">
             <conditions>
                 <condition id="0" name="On function" sid="424145869878021" type="Function">
-                    <param id="0" name="Name">&quot;TutorialPart3&quot;</param>
+                    <param id="0" name="Name">&quot;TutorialPart4&quot;</param>
                 </condition>
             </conditions>
             <actions>
@@ -175,7 +204,7 @@
         <event-block sid="607986348442903">
             <conditions>
                 <condition id="0" name="On function" sid="594127531271080" type="Function">
-                    <param id="0" name="Name">&quot;TutorialPart4&quot;</param>
+                    <param id="0" name="Name">&quot;TutorialPart5&quot;</param>
                 </condition>
             </conditions>
             <actions>
@@ -206,7 +235,7 @@
         <event-block sid="406084090025175">
             <conditions>
                 <condition id="0" name="On function" sid="841844142866590" type="Function">
-                    <param id="0" name="Name">&quot;TutorialPart5&quot;</param>
+                    <param id="0" name="Name">&quot;TutorialPart6&quot;</param>
                 </condition>
             </conditions>
             <actions />
@@ -214,7 +243,7 @@
         <event-block sid="297155313465366">
             <conditions>
                 <condition id="0" name="On function" sid="655556321212851" type="Function">
-                    <param id="0" name="Name">&quot;TutorialPart6&quot;</param>
+                    <param id="0" name="Name">&quot;TutorialPart7&quot;</param>
                 </condition>
             </conditions>
             <actions>
@@ -246,7 +275,7 @@
                         <condition id="-14" name="Compare variable" sid="403114934294006" type="System">
                             <param id="0" name="Variable">m1_tutorialTracker</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">4</param>
+                            <param id="2" name="Value">5</param>
                         </condition>
                         <condition id="2" inverted="1" name="Is playing" sid="455288938562791" type="m1_Car">
                             <param id="0" name="Animation">&quot;Can&quot;</param>
@@ -259,7 +288,7 @@
                                 <condition id="-14" name="Compare variable" sid="454890713297905" type="System">
                                     <param id="0" name="Variable">m1_tutorialTracker</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
+                                    <param id="2" name="Value">5</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -307,7 +336,7 @@
                                 <condition id="-14" name="Compare variable" sid="277235365146016" type="System">
                                     <param id="0" name="Variable">m1_tutorialTracker</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">6</param>
+                                    <param id="2" name="Value">7</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -342,7 +371,7 @@
                         <condition id="-14" name="Compare variable" sid="410833354623374" type="System">
                             <param id="0" name="Variable">m1_tutorialTracker</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">5</param>
+                            <param id="2" name="Value">6</param>
                         </condition>
                     </conditions>
                     <actions>

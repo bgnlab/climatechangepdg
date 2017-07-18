@@ -226,7 +226,7 @@
                     <effect-instances>
                         <effect-instance type="ScanLines">
                             <parameters>
-                                <line-height>1.5</line-height>
+                                <line-height>2</line-height>
                             </parameters>
                         </effect-instance>
                         <effect-instance type="WarpRipple">
@@ -240,8 +240,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-288</x>
-                        <y>573</y>
+                        <x>-220</x>
+                        <y>534</y>
                         <z>0</z>
                         <width>150</width>
                         <height>240</height>
