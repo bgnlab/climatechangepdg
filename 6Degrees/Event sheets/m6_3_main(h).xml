@@ -66,7 +66,7 @@
                         </action>
                         <action disabled="1" id="-9" name="Set value" sid="700437287670766" type="System">
                             <param id="0" name="Variable">m6_3_recipe</param>
-                            <param id="1" name="Value">2</param>
+                            <param id="1" name="Value">3</param>
                         </action>
                         <action id="-18" name="Set layer opacity" sid="835233954808549" type="System">
                             <param id="0" name="Layer">&quot;end&quot;</param>
@@ -654,7 +654,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="105909289061958">
+                <event-block disabled="1" sid="105909289061958">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="579521921946606" type="System">
                             <param id="0" name="Variable">m6_3_timer</param>
@@ -1093,10 +1093,15 @@
                 </event-group>
                 <event-group description="" sid="174649267319933" title="m6_3_completenessChecker">
                     <sub-events>
-                        <event-block sid="105844160152269">
+                        <event-block any="1" sid="105844160152269">
                             <conditions>
                                 <condition id="17" name="On tap object" sid="342621987397137" type="Touch">
                                     <param id="0" name="Object">m6_3_buy</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="806741428499824" type="System">
+                                    <param id="0" name="Variable">m6_3_timer</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2053,11 +2058,14 @@
                         <condition id="-4" name="Trigger once while true" sid="240382655783059" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-16" name="Wait" sid="218924550232681" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
                         <action id="0" name="Set text" sid="319565757604462" type="m6_3_kek">
                             <param id="0" name="Text">&quot;You&apos;ve successfully made &quot; &amp; m6_3_Recipe.At(0,0,0)</param>
                         </action>
                         <action id="1" name="Append text" sid="557337540162842" type="m6_3_kek">
-                            <param id="0" name="Text">newline&amp;&quot;You bought &quot; &amp; (10-m6_3_score)/2 &amp; &quot; new items.&quot;</param>
+                            <param id="0" name="Text">newline&amp;&quot;You bought &quot; &amp; (10-m6_2_tempscore) &amp; &quot; new items.&quot;</param>
                         </action>
                         <action id="-18" name="Set layer opacity" sid="936748205092534" type="System">
                             <param id="0" name="Layer">&quot;end&quot;</param>
@@ -2074,7 +2082,7 @@
                         <event-block sid="945519729919637">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="898632381997880" type="System">
-                                    <param id="0" name="Variable">m6_3_score</param>
+                                    <param id="0" name="Variable">m6_2_tempscore</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">6</param>
                                 </condition>
@@ -2088,7 +2096,7 @@
                         <event-block sid="433010880122196">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="955630419922632" type="System">
-                                    <param id="0" name="Variable">m6_3_score</param>
+                                    <param id="0" name="Variable">m6_2_tempscore</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">6</param>
                                 </condition>
@@ -2103,7 +2111,7 @@
                         <event-block sid="503140995397678">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="268323253471674" type="System">
-                                    <param id="0" name="Variable">m6_3_score</param>
+                                    <param id="0" name="Variable">m6_2_tempscore</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">8</param>
                                 </condition>
@@ -2118,7 +2126,7 @@
                         <event-block sid="715766094987490">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="214943226198638" type="System">
-                                    <param id="0" name="Variable">m6_3_score</param>
+                                    <param id="0" name="Variable">m6_2_tempscore</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">10</param>
                                 </condition>
@@ -2214,7 +2222,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="971472557564083" type="System">
                             <param id="0" name="Variable">m6_2_tempscore</param>
-                            <param id="1" name="Value">10</param>
+                            <param id="1" name="Value">11</param>
                         </action>
                     </actions>
                     <sub-events>
