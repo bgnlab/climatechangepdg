@@ -429,6 +429,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="C6_TitleLevel" uid="20">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>970</x>
+                        <y>190</y>
+                        <z>0</z>
+                        <width>351.499633789</width>
+                        <height>175.749816895</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -458,8 +480,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>404</x>
-                        <y>969</y>
+                        <x>408</x>
+                        <y>831</y>
                         <z>0</z>
                         <width>462</width>
                         <height>226</height>
@@ -480,8 +502,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>950</x>
-                        <y>974</y>
+                        <x>954</x>
+                        <y>836</y>
                         <z>0</z>
                         <width>406</width>
                         <height>184</height>
@@ -502,8 +524,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1498</x>
-                        <y>970</y>
+                        <x>1502</x>
+                        <y>832</y>
                         <z>0</z>
                         <width>406</width>
                         <height>183</height>
@@ -516,7 +538,7 @@
                 </instance>
                 <instance type="C6_TempDiffTitle" uid="13">
                     <properties>
-                        <text>Difficulty</text>
+                        <text>GAME TITLE!!!!!</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-96,400,0</font>
                         <color>0,0,0</color>
@@ -529,11 +551,38 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>709</x>
-                        <y>34</y>
+                        <x>283</x>
+                        <y>112</y>
                         <z>0</z>
-                        <width>493</width>
-                        <height>241</height>
+                        <width>1321</width>
+                        <height>249</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text" uid="17">
+                    <properties>
+                        <text>G A ME D E SCRIPTION</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-32,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>509</x>
+                        <y>475</y>
+                        <z>0</z>
+                        <width>889.044372559</width>
+                        <height>133.356658936</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
