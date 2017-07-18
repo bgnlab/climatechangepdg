@@ -111,19 +111,8 @@
         </event-group>
         <event-group description="" sid="259049637324713" title="C6 Menus">
             <sub-events>
-                <event-block sid="769616764691670">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="148349995353332" type="System">
-                            <param id="0" name="Variable">C6_UIState</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;UISettings&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
                 <event-block sid="362761814650097">
                     <conditions>
-                        <condition id="-22" name="Else" sid="690989939316613" type="System" />
                         <condition id="-14" name="Compare variable" sid="610223398157889" type="System">
                             <param id="0" name="Variable">C6_UIState</param>
                             <param id="1" name="Comparison">0</param>
@@ -168,6 +157,19 @@
                                 <action id="0" name="Call function" sid="163990332250951" type="Function">
                                     <param id="0" name="Name">&quot;GG Select Game&quot;</param>
                                     <param id="1" name="Parameter {n}">C6_SelectedGame{###}2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="644328527431372">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="661329554695581" type="Touch">
+                                    <param id="0" name="Object">C6_ButtonBack</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="603757517301941" type="Function">
+                                    <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;UILevels&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -233,10 +235,24 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="798998185949249">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="192961663569824" type="Touch">
+                                    <param id="0" name="Object">C6_ButtonBack</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="289370447166658" type="Function">
+                                    <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;UIStart&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="954540399086581">
                     <conditions>
+                        <condition id="-22" name="Else" sid="808064853968873" type="System" />
                         <condition id="-14" name="Compare variable" sid="204942102378158" type="System">
                             <param id="0" name="Variable">C6_UIState</param>
                             <param id="1" name="Comparison">0</param>
@@ -255,19 +271,6 @@
                                 <action id="0" name="Call function" sid="319080604571406" type="Function">
                                     <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;UILevels&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="966298441948488">
-                            <conditions>
-                                <condition id="17" name="On tap object" sid="847069176497435" type="Touch">
-                                    <param id="0" name="Object">C6_ButtonSettings</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="469113345748842" type="Function">
-                                    <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;UISettings&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -296,33 +299,20 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="907591655116603">
+                        <event-block any="1" sid="391374042284528">
                             <conditions>
-                                <condition id="-22" name="Else" sid="538934637824761" type="System" />
+                                <condition id="-14" name="Compare variable" sid="590390418580649" type="System">
+                                    <param id="0" name="Variable">C6_UIState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;UILevels&quot;</param>
+                                </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block any="1" sid="391374042284528">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="527396744268881" type="System">
-                                            <param id="0" name="Variable">C6_UIState</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;UISettings&quot;</param>
-                                        </condition>
-                                        <condition id="-14" name="Compare variable" sid="590390418580649" type="System">
-                                            <param id="0" name="Variable">C6_UIState</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;UILevels&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="732583223625735" type="Function">
-                                            <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;UIStart&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="0" name="Call function" sid="732583223625735" type="Function">
+                                    <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;UIStart&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -359,11 +349,6 @@
                             <sub-events>
                                 <event-block any="1" sid="919587242528095">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="997555616612776" type="System">
-                                            <param id="0" name="Variable">C6_UIState</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;UISettings&quot;</param>
-                                        </condition>
                                         <condition id="-14" name="Compare variable" sid="770113131172808" type="System">
                                             <param id="0" name="Variable">C6_UIState</param>
                                             <param id="1" name="Comparison">0</param>
