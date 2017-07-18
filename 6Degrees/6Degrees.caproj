@@ -340,7 +340,16 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818709072666135" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Column format easy.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Column format tutorial.png">
+                                    <collision-poly>
+                                        <point x="0.0627706" y="0.128319" />
+                                        <point x="0.5" y="0.106195" />
+                                        <point x="0.941558" y="0.119469" />
+                                        <point x="0.941558" y="0.880531" />
+                                        <point x="0.5" y="0.920354" />
+                                        <point x="0.0627706" y="0.871681" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -402,7 +411,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="LevelSelect" pingpong="0" repeatcount="1" repeatto="0" sid="196747552615964" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casual game select menu.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Eight Game menu screen.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="StartScreen" pingpong="0" repeatcount="1" repeatto="0" sid="108905934731114" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casusal game menu screen.png" />
@@ -6628,6 +6637,14 @@
             <object-type global="1" name="GG_State" sid="140638206685021">
                 <plugin id="Dictionary" />
             </object-type>
+            <object-type name="GG_Black" sid="690027789939674">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="264219779795925" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="M6 Food">
             <object-folder name="m6_1_Food(E)">
@@ -10748,6 +10765,8 @@
         <file name="sfx_AC.m4a" />
         <file name="bgm_heatlock.m4a" />
         <file name="bgm_heatlock.ogg" />
+        <file name="bgm_casualmenubackground.m4a" />
+        <file name="bgm_casualmenubackground.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
