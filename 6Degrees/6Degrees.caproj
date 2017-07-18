@@ -6719,6 +6719,14 @@
             <object-type global="1" name="GG_State" sid="140638206685021">
                 <plugin id="Dictionary" />
             </object-type>
+            <object-type name="GG_Black" sid="690027789939674">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="264219779795925" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="M6 Food">
             <object-folder name="m6_1_Food(E)">
