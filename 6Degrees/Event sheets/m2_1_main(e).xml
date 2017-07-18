@@ -260,6 +260,34 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="309397070225784">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="907524453698321" type="m2_1_key">
+                                    <param id="0" name="Object">m2_1_lock</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="809361506410277" type="m2_1_lock">
+                                    <param id="0" name="Instance variable">pickUp</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="668466549151591" type="Audio">
+                                    <param id="0" name="Audio file">sfx_clicking_clikable_obj</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="374006119229348" type="m2_1_lock" />
+                                <action id="-9" name="Destroy" sid="721212601207365" type="m2_1_key" />
+                                <action id="-16" name="Wait" sid="827101165229939" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="803758091811936" type="m2_1_closetDoor">
+                                    <param id="0" name="Instance variable">lock</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="315805820332545">
                             <conditions>
                                 <condition id="17" name="On tap object" sid="905191730396954" type="Touch">
@@ -328,7 +356,7 @@
                                 </action>
                                 <action id="3" name="Set volume" sid="593840890703578" type="Audio">
                                     <param id="0" name="Tag">&quot;Heat&quot;</param>
-                                    <param id="1" name="dB">10</param>
+                                    <param id="1" name="dB">5</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1003,13 +1031,13 @@
                         <action id="0" name="Play" sid="784268944241773" type="Audio">
                             <param id="0" name="Audio file">sfx_AC</param>
                             <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">-10</param>
+                            <param id="3" name="Volume">-15</param>
                             <param id="1" name="Tag (optional)">&quot;AC&quot;</param>
                         </action>
                         <action id="0" name="Play" sid="708084083494206" type="Audio">
                             <param id="0" name="Audio file">sfx_waterheater</param>
                             <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">-5</param>
+                            <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;Heat&quot;</param>
                         </action>
                     </actions>
@@ -1283,20 +1311,7 @@
                                     <param id="2" name="Value">4</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="560989617205498" type="m2_1_star">
-                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="596678047653512" type="m2_1_star2">
-                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="315528475125741" type="m2_1_star3">
-                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="280184173316241">
                             <conditions>
@@ -1306,16 +1321,7 @@
                                     <param id="2" name="Value">3</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="567721980197654" type="m2_1_star">
-                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="539989512801089" type="m2_1_star2">
-                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="479779800034551">
                             <conditions>
@@ -1325,12 +1331,7 @@
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="374597616451595" type="m2_1_star">
-                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="506605696242248">
                             <conditions>
@@ -1431,18 +1432,6 @@
                         <condition id="-1" name="Every tick" sid="568891859717799" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="990006898087232" type="m2_1_star">
-                            <param id="0" name="X">m2_1_endMenu.X-300</param>
-                            <param id="1" name="Y">m2_1_endMenu.Y-240</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="831083210498352" type="m2_1_star2">
-                            <param id="0" name="X">m2_1_endMenu.X</param>
-                            <param id="1" name="Y">m2_1_endMenu.Y-240</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="342592779767984" type="m2_1_star3">
-                            <param id="0" name="X">m2_1_endMenu.X+300</param>
-                            <param id="1" name="Y">m2_1_endMenu.Y-240</param>
-                        </action>
                         <action id="-3" name="Set position" sid="544339473317471" type="m2_1_endDescription">
                             <param id="0" name="X">m2_1_endMenu.X</param>
                             <param id="1" name="Y">m2_1_endMenu.Y</param>
