@@ -227,14 +227,6 @@
                             </animation>
                         </animation-folder>
                     </object-type>
-                    <object-type name="C6_Game2" sid="948463022703058">
-                        <plugin id="Sprite" />
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="994681954618864" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            </animation>
-                        </animation-folder>
-                    </object-type>
                     <object-type name="C6_Game3" sid="847602300556001">
                         <plugin id="Sprite" />
                         <animation-folder>
@@ -259,7 +251,7 @@
                             </animation>
                         </animation-folder>
                     </object-type>
-                    <object-type name="C6_Game6" sid="960104835844337">
+                    <object-type name="C6_Game2" sid="960104835844337">
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="483469936749817" speed="5">
@@ -275,34 +267,10 @@
                             </animation>
                         </animation-folder>
                     </object-type>
-                    <object-type name="C6_Game8" sid="285927511570905">
-                        <plugin id="Sprite" />
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="180570592064728" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            </animation>
-                        </animation-folder>
-                    </object-type>
-                    <object-type name="C6_Game9" sid="444531015224168">
-                        <plugin id="Sprite" />
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995727587262022" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            </animation>
-                        </animation-folder>
-                    </object-type>
-                    <object-type name="C6_Game10" sid="746142507391412">
+                    <object-type name="C6_Game6" sid="746142507391412">
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="773037716190011" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            </animation>
-                        </animation-folder>
-                    </object-type>
-                    <object-type name="C6_Game11" sid="624856155084962">
-                        <plugin id="Sprite" />
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="790103015265006" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             </animation>
                         </animation-folder>
@@ -396,14 +364,14 @@
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="886910302430006" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Exit2.png">
                                 <collision-poly>
-                                    <point x="0.3025" y="0.3025" />
-                                    <point x="0.5" y="0.2425" />
-                                    <point x="0.73" y="0.27" />
-                                    <point x="0.925" y="0.5" />
-                                    <point x="0.8575" y="0.8575" />
-                                    <point x="0.5" y="1" />
-                                    <point x="0.3025" y="0.6975" />
-                                    <point x="0.0725" y="0.5" />
+                                    <point x="0.155556" y="0.155556" />
+                                    <point x="0.5" y="0.127778" />
+                                    <point x="0.844444" y="0.155556" />
+                                    <point x="0.955556" y="0.5" />
+                                    <point x="0.872222" y="0.872222" />
+                                    <point x="0.5" y="0.9" />
+                                    <point x="0.133333" y="0.866667" />
+                                    <point x="0.05" y="0.5" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -413,11 +381,11 @@
             <object-type name="C6_Background" sid="348671960813810">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="StartScreen" pingpong="0" repeatcount="1" repeatto="0" sid="108905934731114" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casusal game menu screen.png" />
-                    </animation>
                     <animation framecount="1" loop="0" name="LevelSelect" pingpong="0" repeatcount="1" repeatto="0" sid="196747552615964" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Eight Game menu screen.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="StartScreen" pingpong="0" repeatcount="1" repeatto="0" sid="108905934731114" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casusal game menu screen.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Blank" pingpong="0" repeatcount="1" repeatto="0" sid="796489804625052" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casual game game select blank.png" />
@@ -9974,19 +9942,16 @@
             <members>
                 <member>C6_Game0</member>
                 <member>C6_Game1</member>
-                <member>C6_Game10</member>
-                <member>C6_Game11</member>
                 <member>C6_Game2</member>
                 <member>C6_Game3</member>
                 <member>C6_Game4</member>
                 <member>C6_Game5</member>
                 <member>C6_Game6</member>
                 <member>C6_Game7</member>
-                <member>C6_Game8</member>
-                <member>C6_Game9</member>
             </members>
             <instance-variables>
                 <instance-variable name="Game" sid="310859849956077" type="number" />
+                <instance-variable name="Name" sid="370158777049242" type="string" />
             </instance-variables>
         </family>
         <family name="C6_Animal" plugin-id="Sprite" sid="144975547066386">

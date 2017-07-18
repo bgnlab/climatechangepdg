@@ -9,7 +9,7 @@
         <variable constant="0" name="GG_Selected_Game" sid="396281275119535" static="0" type="number">-1</variable>
         <variable constant="0" name="GG_After_LS" sid="802643025859519" static="0" type="text"></variable>
         <variable constant="0" name="GG_Callback" sid="401688082894111" static="0" type="text"></variable>
-        <variable constant="0" name="hi" sid="119982164244513" static="0" type="text"></variable>
+        <variable constant="0" name="GG_hi" sid="119982164244513" static="0" type="text"></variable>
         <event-group description="" sid="888092148056112" title="GG Initializing Data">
             <sub-events>
                 <event-block sid="926914594403044">
@@ -33,21 +33,31 @@
                             <param id="0" name="Name">&quot;GG Initialize Data&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Add key" sid="768504855342997" type="GG_State">
-                            <param id="0" name="Key">&quot;difficulty&quot;</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="0" name="Add key" sid="844158907084633" type="GG_State">
-                            <param id="0" name="Key">&quot;exit from game&quot;</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="0" name="Add key" sid="816940487649781" type="GG_State">
-                            <param id="0" name="Key">&quot;tutorial_finished&quot;</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <comment>Initialize State</comment>
+                        <event-block sid="458399479010082">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Add key" sid="768504855342997" type="GG_State">
+                                    <param id="0" name="Key">&quot;difficulty&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Add key" sid="844158907084633" type="GG_State">
+                                    <param id="0" name="Key">&quot;exit from game&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Add key" sid="816940487649781" type="GG_State">
+                                    <param id="0" name="Key">&quot;tutorial_finished&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Initialize Score</comment>
+                        <event-block sid="902017182196466">
+                            <conditions />
+                            <actions />
+                        </event-block>
                         <event-block sid="693003290817485">
                             <conditions />
                             <actions>
@@ -195,11 +205,6 @@
                         <action id="33" name="Stop all" sid="718182359846678" type="Audio" />
                     </actions>
                     <sub-events>
-                        <comment>Game 0 -- DC Parking</comment>
-                        <event-block sid="323390061174067">
-                            <conditions />
-                            <actions />
-                        </event-block>
                         <comment>Game 1 -- M6 Food</comment>
                         <event-block sid="468511602489857">
                             <conditions>
@@ -255,83 +260,13 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Game 2 - M4 Clothing Game</comment>
-                        <event-block sid="997361468036397">
-                            <conditions />
-                            <actions />
-                        </event-block>
-                        <comment>Game 3 - MY Frogger</comment>
-                        <event-block sid="956619795111916">
-                            <conditions />
-                            <actions />
-                        </event-block>
-                        <comment>Game 4 -- Carpool (defunct)</comment>
-                        <event-block disabled="1" sid="484231744500706">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="628348901496472" type="System">
-                                    <param id="0" name="First value">GG_Selected_Game</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block disabled="1" sid="414834610663723">
-                                    <conditions>
-                                        <condition id="1" name="Compare parameter" sid="306636167929579" type="Function">
-                                            <param id="0" name="Index">1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-25" name="Go to layout (by name)" sid="490832068756190" type="System">
-                                            <param id="0" name="Layout">&quot;M3_Tutorial_1&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="843848172041326">
-                                    <conditions>
-                                        <condition id="1" name="Compare parameter" sid="124643063357825" type="Function">
-                                            <param id="0" name="Index">1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-25" name="Go to layout (by name)" sid="997923741016785" type="System">
-                                            <param id="0" name="Layout">&quot;M3_Medium&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="763587096839629">
-                                    <conditions>
-                                        <condition id="1" name="Compare parameter" sid="580344954072319" type="Function">
-                                            <param id="0" name="Index">1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-25" name="Go to layout (by name)" sid="861549910743737" type="System">
-                                            <param id="0" name="Layout">&quot;M3_Hard&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <comment>Game 5 - MX Spending</comment>
-                        <event-block sid="262761287469757">
-                            <conditions />
-                            <actions />
-                        </event-block>
-                        <comment>Game 6 -- M7 Heatlock</comment>
+                        <comment>Game 2 - M7 Heatlock</comment>
                         <event-block sid="662825382046987">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="166904792555709" type="System">
                                     <param id="0" name="First value">GG_Selected_Game</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">6</param>
+                                    <param id="2" name="Second value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -340,13 +275,13 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Game 8 -- M1 Tire Pressure</comment>
+                        <comment>Game 4 -- M1 Tire Pressure</comment>
                         <event-block sid="222630852809354">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="927273885691694" type="System">
                                     <param id="0" name="First value">GG_Selected_Game</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">8</param>
+                                    <param id="2" name="Second value">4</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -377,13 +312,13 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Game 10 -- M2 Escape Room</comment>
+                        <comment>Game 6 -- M2 Escape Room</comment>
                         <event-block sid="536698396122290">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="932214542653983" type="System">
                                     <param id="0" name="First value">GG_Selected_Game</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">10</param>
+                                    <param id="2" name="Second value">6</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -548,7 +483,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="327320417021285" type="System">
-                            <param id="0" name="Variable">hi</param>
+                            <param id="0" name="Variable">GG_hi</param>
                             <param id="1" name="Value">&quot;123123123&quot;</param>
                         </action>
                         <action id="0" name="Call function" sid="758180350571785" type="Function">
