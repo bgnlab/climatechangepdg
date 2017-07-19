@@ -1450,7 +1450,8 @@
                         </event-block>
                         <event-block sid="382874606727814">
                             <conditions>
-                                <condition id="17" name="On tap object" sid="284639845130046" type="Touch">
+                                <condition id="0" name="On any touch start" sid="900627537579787" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="284639845130046" type="Touch">
                                     <param id="0" name="Object">m2_3_book</param>
                                 </condition>
                             </conditions>
@@ -1490,7 +1491,8 @@
                         </event-block>
                         <event-block sid="757789770350778">
                             <conditions>
-                                <condition id="17" name="On tap object" sid="746274400487068" type="Touch">
+                                <condition id="0" name="On any touch start" sid="737475866379664" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="746274400487068" type="Touch">
                                     <param id="0" name="Object">m2_3_fan</param>
                                 </condition>
                             </conditions>
