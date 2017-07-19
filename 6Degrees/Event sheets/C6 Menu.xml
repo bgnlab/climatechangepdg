@@ -473,16 +473,16 @@
                                                         <condition id="-22" name="Else" sid="177773711342133" type="System" />
                                                         <condition id="-8" name="Compare two values" sid="656367225146360" type="System">
                                                             <param id="0" name="First value">tokenat(C6_Game_Difficulty_Data, 1, &quot; &quot;)</param>
-                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="1" name="Comparison">1</param>
                                                             <param id="2" name="Second value">&quot;0&quot;</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="4" name="Set animation" sid="582903622451373" type="C6_ButtonHard">
-                                                            <param id="0" name="Animation">&quot;d0&quot;</param>
+                                                        <action id="4" name="Set animation" sid="950743450057687" type="C6_ButtonHard">
+                                                            <param id="0" name="Animation">&quot;d&quot; &amp; tokenat(C6_Game_Difficulty_Data, 2, &quot; &quot;)</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
-                                                        <action id="-27" name="Set effect enabled" sid="892212317437930" type="C6_ButtonHard">
+                                                        <action id="-27" name="Set effect enabled" sid="178133076493392" type="C6_ButtonHard">
                                                             <param id="0" name="Mode">0</param>
                                                             <param id="1" name="Effect">&quot;Sepia&quot;</param>
                                                         </action>
@@ -493,11 +493,11 @@
                                                         <condition id="-22" name="Else" sid="830839096987321" type="System" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="4" name="Set animation" sid="526888381506044" type="C6_ButtonHard">
-                                                            <param id="0" name="Animation">&quot;d&quot; &amp; tokenat(C6_Game_Difficulty_Data, 2, &quot; &quot;)</param>
+                                                        <action id="4" name="Set animation" sid="582903622451373" type="C6_ButtonHard">
+                                                            <param id="0" name="Animation">&quot;d0&quot;</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
-                                                        <action id="-27" name="Set effect enabled" sid="840058108253859" type="C6_ButtonHard">
+                                                        <action id="-27" name="Set effect enabled" sid="892212317437930" type="C6_ButtonHard">
                                                             <param id="0" name="Mode">0</param>
                                                             <param id="1" name="Effect">&quot;Sepia&quot;</param>
                                                         </action>
