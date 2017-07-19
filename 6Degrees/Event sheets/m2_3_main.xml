@@ -1453,6 +1453,12 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="253838546080646" type="m2_3_monitor">
                                     <param id="0" name="Instance variable">locked</param>
                                 </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="955028651675840" type="m2_3_powerBar">
+                                    <param id="0" name="Instance variable">power</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="297523780745828" type="m2_3_powerBar">
+                                    <param id="0" name="Instance variable">plugged</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="377344977288471" type="System">
