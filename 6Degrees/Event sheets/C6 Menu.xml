@@ -35,7 +35,7 @@
                         <comment>Set UI State</comment>
                         <event-block sid="510923425610583">
                             <conditions>
-                                <condition id="0" name="Compare value" sid="198667594403917" type="GG_State_Scores">
+                                <condition id="0" name="Compare value" sid="198667594403917" type="GG_State">
                                     <param id="0" name="Key">&quot;exit from game&quot;</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
@@ -72,7 +72,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="905068356210441" type="System">
                                     <param id="0" name="Variable">GG_Selected_Game</param>
-                                    <param id="1" name="Value">GG_State_Scores.Get(&quot;selected game&quot;)</param>
+                                    <param id="1" name="Value">GG_State.Get(&quot;selected game&quot;)</param>
                                 </action>
                                 <action id="0" name="Call function" sid="680382970176738" type="Function">
                                     <param id="0" name="Name">&quot;C6 Draw Animals&quot;</param>
@@ -229,6 +229,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
+                                <comment>For available levels</comment>
                                 <event-block any="1" sid="861255348921033">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="773018658666291" type="C6_LevelIcon">
@@ -356,7 +357,13 @@
                                         </action>
                                     </actions>
                                     <sub-events>
+                                        <comment>Setting the Text, Description, etc...</comment>
                                         <event-block sid="651496948338824">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                        <comment>Setting the States of the Difficulty Buttons</comment>
+                                        <event-block sid="586548608564383">
                                             <conditions />
                                             <actions />
                                         </event-block>

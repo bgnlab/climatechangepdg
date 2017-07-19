@@ -6685,9 +6685,6 @@
             </object-type>
         </object-folder>
         <object-folder name="GG Levels and Scores">
-            <object-type global="1" name="GG_Scores" sid="802247831316974">
-                <plugin id="Dictionary" />
-            </object-type>
             <object-type name="temp" sid="468779609495104">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -6699,7 +6696,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type global="1" name="GG_State_Scores" sid="140638206685021">
+            <object-type global="1" name="GG_State" sid="140638206685021">
                 <plugin id="Dictionary" />
             </object-type>
             <object-type name="GG_Black" sid="690027789939674">
