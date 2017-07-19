@@ -255,7 +255,8 @@
                         </event-block>
                         <event-block sid="963996434290976">
                             <conditions>
-                                <condition id="17" name="On tap object" sid="576816292428594" type="Touch">
+                                <condition id="0" name="On any touch start" sid="499252480906382" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="576816292428594" type="Touch">
                                     <param id="0" name="Object">m2_2_waterFaucet</param>
                                 </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="991750608458982" type="m2_2_waterFaucet">
@@ -504,7 +505,8 @@
                     <sub-events>
                         <event-block sid="299482758857468">
                             <conditions>
-                                <condition id="17" name="On tap object" sid="323250872861565" type="Touch">
+                                <condition id="0" name="On any touch start" sid="601998406505935" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="323250872861565" type="Touch">
                                     <param id="0" name="Object">m2_2_Lights</param>
                                 </condition>
                             </conditions>
@@ -781,7 +783,8 @@
                         </event-block>
                         <event-block sid="183335670410342">
                             <conditions>
-                                <condition id="17" name="On tap object" sid="280441198226675" type="Touch">
+                                <condition id="0" name="On any touch start" sid="282451971390017" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="280441198226675" type="Touch">
                                     <param id="0" name="Object">m2_2_fridge</param>
                                 </condition>
                             </conditions>
@@ -797,7 +800,8 @@
                         </event-block>
                         <event-block sid="973583879575499">
                             <conditions>
-                                <condition id="17" name="On tap object" sid="134618157396754" type="Touch">
+                                <condition id="0" name="On any touch start" sid="292470554412874" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="134618157396754" type="Touch">
                                     <param id="0" name="Object">m2_2_uselessShit1</param>
                                 </condition>
                             </conditions>
@@ -809,7 +813,8 @@
                         </event-block>
                         <event-block sid="411369756984895">
                             <conditions>
-                                <condition id="17" name="On tap object" sid="346721128999025" type="Touch">
+                                <condition id="0" name="On any touch start" sid="121158546861483" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="346721128999025" type="Touch">
                                     <param id="0" name="Object">m2_2_stoveLight</param>
                                 </condition>
                             </conditions>
@@ -821,9 +826,7 @@
                         </event-block>
                         <event-block sid="288970232742592">
                             <conditions>
-                                <condition id="17" name="On tap object" sid="434454727042885" type="Touch">
-                                    <param id="0" name="Object">m2_2_microwave</param>
-                                </condition>
+                                <condition id="0" name="On any touch start" sid="434454727042885" type="Touch" />
                             </conditions>
                             <actions>
                                 <action id="-14" name="Toggle boolean" sid="868158036917317" type="m2_2_microwave">

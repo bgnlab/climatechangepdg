@@ -362,7 +362,8 @@
                         </event-block>
                         <event-block sid="799970480933680">
                             <conditions>
-                                <condition id="17" name="On tap object" sid="280882177474665" type="Touch">
+                                <condition id="0" name="On any touch start" sid="700079584762150" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="280882177474665" type="Touch">
                                     <param id="0" name="Object">m2_1_waterHeater</param>
                                 </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="547006592773101" type="m2_1_closetDoor">
@@ -542,7 +543,8 @@
                     <sub-events>
                         <event-block sid="910542634217173">
                             <conditions>
-                                <condition id="17" name="On tap object" sid="597067592061441" type="Touch">
+                                <condition id="0" name="On any touch start" sid="164487801555154" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="597067592061441" type="Touch">
                                     <param id="0" name="Object">m2_1_lightSwitch</param>
                                 </condition>
                             </conditions>
@@ -608,7 +610,8 @@
                     <sub-events>
                         <event-block sid="583423297497580">
                             <conditions>
-                                <condition id="17" name="On tap object" sid="819700332380909" type="Touch">
+                                <condition id="0" name="On any touch start" sid="770738568393658" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="819700332380909" type="Touch">
                                     <param id="0" name="Object">m2_1_themostat</param>
                                 </condition>
                             </conditions>
