@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>m2_3_main</name>
     <events>
-        <variable constant="0" name="m2_3_checkerPB" sid="921332341745235" static="0" type="number">0</variable>
         <include>GG Scores and Levels</include>
         <variable constant="0" name="m2_3_tempScore" sid="804985333503328" static="0" type="number">0</variable>
         <variable constant="0" name="m2_3_MouseCurX" sid="913137335482933" static="0" type="number">0</variable>
@@ -65,7 +64,7 @@
                 <event-block sid="932117000177377">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="339812678710754" type="System">
-                            <param id="0" name="Interval (seconds)">0.05</param>
+                            <param id="0" name="Interval (seconds)">0.01</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="496207849108360" type="System">
                             <param id="0" name="Variable">m2_3_playing</param>
@@ -81,31 +80,7 @@
                     <actions>
                         <action id="-11" name="Subtract from" sid="430977485228371" type="System">
                             <param id="0" name="Variable">m2_3_timer</param>
-                            <param id="1" name="Value">0.05</param>
-                        </action>
-                        <action id="-29" name="Move to object" sid="649485642394962" type="m2_3_modemWire">
-                            <param id="0" name="Where">1</param>
-                            <param id="1" name="Object">m2_3_Modem</param>
-                        </action>
-                        <action id="-29" name="Move to object" sid="392597085800111" type="m2_3_nightLightPlug">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Object">m2_3_fanWire</param>
-                        </action>
-                        <action id="-29" name="Move to object" sid="298813519286376" type="m2_3_nightLightWires">
-                            <param id="0" name="Where">1</param>
-                            <param id="1" name="Object">m2_3_nightLightPlug</param>
-                        </action>
-                        <action id="-29" name="Move to object" sid="613667180791678" type="m2_3_powerBarWire">
-                            <param id="0" name="Where">1</param>
-                            <param id="1" name="Object">m2_3_powerBar</param>
-                        </action>
-                        <action id="-29" name="Move to object" sid="100958338034412" type="m2_3_powerBarWire">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Object">m2_3_powerPlugPlug</param>
-                        </action>
-                        <action id="-29" name="Move to object" sid="944178473191476" type="m2_3_powerBarWire">
-                            <param id="0" name="Where">1</param>
-                            <param id="1" name="Object">m2_3_powerBarPlug</param>
+                            <param id="1" name="Value">0.01</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1323,61 +1298,34 @@
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="773496442332201" type="m2_3_monitor">
+                                <action id="-13" name="Set boolean" sid="101121335343930" type="m2_3_monitor">
                                     <param id="0" name="Instance variable">power</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="654939436365351" type="m2_3_Modem">
+                                <action id="-13" name="Set boolean" sid="598720739976906" type="m2_3_Modem">
                                     <param id="0" name="Instance variable">power</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="465114490319217" type="m2_3_tower">
+                                <action id="-13" name="Set boolean" sid="837517343893821" type="m2_3_tower">
                                     <param id="0" name="Instance variable">power</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="323149521875378" type="m2_3_modemLight">
+                                <action id="-16" name="Set opacity" sid="235338653324901" type="m2_3_modemLight">
                                     <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block any="1" sid="817038288505003">
-                            <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="662592609343970" type="m2_3_powerBar">
-                                    <param id="0" name="Instance variable">power</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="594402778445369" type="m2_3_powerBar">
-                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="766250247639347" type="m2_3_monitor">
-                                    <param id="0" name="Instance variable">power</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="348343773301493" type="m2_3_Modem">
-                                    <param id="0" name="Instance variable">power</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="804644312746090" type="m2_3_tower">
-                                    <param id="0" name="Instance variable">power</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="365979837680448" type="m2_3_modemLight">
-                                    <param id="0" name="Opacity">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block any="1" sid="675205348195013">
+                        <event-block sid="675205348195013">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="279771732460829" type="m2_3_powerBar">
                                     <param id="0" name="Instance variable">power</param>
                                 </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="331537663489355" type="m2_3_powerBar">
-                                    <param id="0" name="Instance variable">plugged</param>
-                                </condition>
                             </conditions>
                             <actions>
+                                <action id="4" name="Set animation" sid="516115478137639" type="m2_3_powerBar">
+                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-13" name="Set boolean" sid="119656623118418" type="m2_3_monitor">
                                     <param id="0" name="Instance variable">power</param>
                                     <param id="1" name="Value">0</param>
@@ -1541,25 +1489,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="797654129951665">
-                            <conditions>
-                                <condition id="17" name="On tap object" sid="907900441686965" type="Touch">
-                                    <param id="0" name="Object">m2_3_powerBarPlug</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="766991852694624" type="m2_3_cupboard">
-                                    <param id="0" name="Instance variable">open</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Physics" id="21" name="Set immovable" sid="597031992809342" type="m2_3_powerBarPlug">
-                                    <param id="0" name="Setting">0</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="879437703081504" type="m2_3_powerBar">
-                                    <param id="0" name="Instance variable">plugged</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="757789770350778">
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="737475866379664" type="Touch" />
@@ -1714,167 +1643,6 @@
         </event-block>
         <event-group description="" sid="600271356571373" title="m2_3_wiresAAAAAAAHHHHHHH">
             <sub-events>
-                <event-group description="" sid="100110284005860" title="m2_3_PowerBarWires">
-                    <sub-events>
-                        <event-block sid="930655732201872">
-                            <conditions>
-                                <condition id="-2" name="On start of layout" sid="823102782574474" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="265830909165449" type="m2_3_powerBarWires">
-                                    <param id="0" name="Object">m2_3_modemWires</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="964697280448858" type="m2_3_powerBarWires">
-                                    <param id="0" name="Object">m2_3_monitorWires</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="319808369842985" type="m2_3_powerBarWires">
-                                    <param id="0" name="Object">m2_3_towerWires</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="147283566777961" type="m2_3_powerBarWires">
-                                    <param id="0" name="Object">m2_3_Modem</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="761266804870567" type="m2_3_powerBarWires">
-                                    <param id="0" name="Object">m2_3_modemPlug</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="140436208693696" type="m2_3_powerBarWires">
-                                    <param id="0" name="Object">m2_3_monitorPlug</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="485608313997122" type="m2_3_powerBarWires">
-                                    <param id="0" name="Object">m2_3_towerPlug</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="820055491818972" type="m2_3_powerBarPlug">
-                                    <param id="0" name="Object">m2_3_modemWire</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="569814063818259" type="m2_3_powerBarWires">
-                                    <param id="0" name="Object">m2_3_powerBarPlug</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="645728874754491" type="m2_3_powerBarPlug">
-                                    <param id="0" name="Object">m2_3_modemPlug</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="682055187562904">
-                                    <conditions>
-                                        <condition id="-12" name="Repeat" sid="119547143771442" type="System">
-                                            <param id="0" name="Count">25</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="342801577219877" type="System">
-                                            <param id="0" name="Object to create">m2_3_powerBarWire</param>
-                                            <param id="1" name="Layer">0</param>
-                                            <param id="2" name="X">1651-((loopindex+1)*(45/25))</param>
-                                            <param id="3" name="Y">901 + ((loopindex+1)*(156/25))</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="839265597753156" type="m2_3_powerBarWire">
-                                            <param id="0" name="Instance variable">number</param>
-                                            <param id="1" name="Value">loopindex+1</param>
-                                        </action>
-                                        <action id="-10" name="Add to" sid="249986936165588" type="System">
-                                            <param id="0" name="Variable">m2_3_checkerPB</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="157692816652195">
-                            <conditions>
-                                <condition id="-11" name="For Each" sid="399692014735547" type="System">
-                                    <param id="0" name="Object">m2_3_powerBarWire</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="986163600391752" type="System">
-                                    <param id="0" name="Variable">m2_3_checkerPB</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">25</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="381536524332615" type="System">
-                                    <param id="0" name="Variable">m2_3_checkerPB</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">50</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="180580659836850" type="System">
-                                    <param id="0" name="Variable">m2_3_checkerPB</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="160372915578994">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="113815546970719" type="m2_3_powerBarWire">
-                                            <param id="0" name="Instance variable">number</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Physics" id="11" name="Create revolute joint" sid="438809327495052" type="m2_3_powerBarWire">
-                                            <param id="0" name="This image point">0</param>
-                                            <param id="1" name="Object">m2_3_powerBarPlug</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="138826046375835">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="389339828596643" type="m2_3_powerBarWire">
-                                            <param id="0" name="Instance variable">number</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">25</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Physics" id="11" name="Create revolute joint" sid="535888598162206" type="m2_3_powerBarWire">
-                                            <param id="0" name="This image point">1</param>
-                                            <param id="1" name="Object">m2_3_powerBar</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="972792208433677">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="939105650820709" type="m2_3_powerBarWires">
-                                            <param id="0" name="Instance variable">number</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">m2_3_powerBarWire.number-1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Physics" id="11" name="Create revolute joint" sid="645405077205390" type="m2_3_powerBarWire">
-                                            <param id="0" name="This image point">0</param>
-                                            <param id="1" name="Object">m2_3_powerBarWires</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="246431600387107">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="448563119418915" type="m2_3_powerBarWires">
-                                            <param id="0" name="Instance variable">number</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">m2_3_powerBarWire.number+1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Physics" id="11" name="Create revolute joint" sid="130381430656388" type="m2_3_powerBarWire">
-                                            <param id="0" name="This image point">0</param>
-                                            <param id="1" name="Object">m2_3_powerBarWires</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
                 <event-group description="" sid="902951015057721" title="m2_3_fanWires">
                     <sub-events>
                         <event-block sid="845372237674602">
@@ -2123,11 +1891,11 @@
                                             <param id="0" name="Variable">m2_3_checkermd</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-29" name="Move to object" sid="427842143620961" type="m2_3_modemWire">
+                                        <action id="-29" name="Move to object" sid="427842143620961" type="m2_3_towerWire">
                                             <param id="0" name="Where">1</param>
                                             <param id="1" name="Object">m2_3_modemPlug</param>
                                         </action>
-                                        <action id="-29" name="Move to object" sid="812806036506113" type="m2_3_modemWire">
+                                        <action id="-29" name="Move to object" sid="812806036506113" type="m2_3_towerWire">
                                             <param id="0" name="Where">1</param>
                                             <param id="1" name="Object">m2_3_Modem</param>
                                         </action>
@@ -2423,6 +2191,21 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="622134958388332">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="403999628693301" type="System">
+                                    <param id="0" name="Variable">m2_3_checkern</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">80</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-29" name="Move to object" sid="728137189005159" type="m2_3_nightLightPlug">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">m2_3_fanWire</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -3144,7 +2927,7 @@
             <actions>
                 <action id="-9" name="Set value" sid="616360913299194" type="System">
                     <param id="0" name="Variable">m2_3_tempScore</param>
-                    <param id="1" name="Value">m2_3_fan.power+m2_3_nightLight.power+(m2_3_powerBar.power*m2_3_powerBar.plugged)*3</param>
+                    <param id="1" name="Value">m2_3_fan.power+m2_3_nightLight.power+m2_3_powerBar.power+m2_3_powerBar.power+m2_3_powerBar.power</param>
                 </action>
             </actions>
             <sub-events>

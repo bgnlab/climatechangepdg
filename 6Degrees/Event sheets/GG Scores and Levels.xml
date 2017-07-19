@@ -198,7 +198,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>After Save</comment>
+                <comment>Directing to Actual Game</comment>
                 <event-block sid="828370310244102">
                     <conditions>
                         <condition id="0" name="On function" sid="900104179355022" type="Function">
@@ -388,12 +388,30 @@
                         <action id="33" name="Stop all" sid="613785910707297" type="Audio" />
                     </actions>
                     <sub-events>
+                        <event-group description="" sid="564467102749048" title="GG Calculate Save Data">
+                            <sub-events>
+                                <event-block sid="189406618587990">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Add key" sid="581163001024856" type="GG_State">
+                                            <param id="0" name="Key">&quot;game&quot; &amp; GG_Selected_Game</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <comment>Save new score</comment>
                         <event-block sid="867402010718416">
                             <conditions />
                             <actions>
-                                <action id="0" name="Call function" sid="121154391224955" type="Function">
-                                    <param id="0" name="Name">&quot;GG Exit Game 2&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
+                                <action id="-9" name="Set value" sid="708333110338585" type="System">
+                                    <param id="0" name="Variable">GG_After_LS</param>
+                                    <param id="1" name="Value">&quot;GG Exit Game 2&quot;</param>
+                                </action>
+                                <action id="0" name="Set item" sid="116631192408672" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;ggstate&quot;</param>
+                                    <param id="1" name="Value">GG_State.AsJSON</param>
                                 </action>
                             </actions>
                         </event-block>
