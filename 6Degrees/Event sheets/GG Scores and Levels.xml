@@ -48,16 +48,16 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="0" name="Add key" sid="816940487649781" type="GG_State">
-                                    <param id="0" name="Key">&quot;tutorial_finished&quot;</param>
+                                    <param id="0" name="Key">&quot;tutorial finished&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Add key" sid="248792698653765" type="GG_State">
+                                    <param id="0" name="Key">&quot;selected game&quot;</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Initialize Score</comment>
-                        <event-block sid="902017182196466">
-                            <conditions />
-                            <actions />
-                        </event-block>
+                        <comment>Initialize Score ?</comment>
                         <event-block sid="693003290817485">
                             <conditions />
                             <actions>
@@ -165,8 +165,12 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="0" name="Add key" sid="453792982984056" type="GG_State">
-                            <param id="0" name="Key">&quot;tutorial_finished&quot;</param>
+                            <param id="0" name="Key">&quot;tutorial finished&quot;</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Add key" sid="668143312393765" type="GG_State">
+                            <param id="0" name="Key">&quot;selected game&quot;</param>
+                            <param id="1" name="Value">GG_Selected_Game</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -382,9 +386,6 @@
                     </conditions>
                     <actions>
                         <action id="33" name="Stop all" sid="613785910707297" type="Audio" />
-                        <action id="-16" name="Wait" sid="417948699816230" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="867402010718416">
@@ -482,10 +483,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="327320417021285" type="System">
-                            <param id="0" name="Variable">GG_hi</param>
-                            <param id="1" name="Value">&quot;123123123&quot;</param>
-                        </action>
                         <action id="0" name="Call function" sid="758180350571785" type="Function">
                             <param id="0" name="Name">GG_Callback</param>
                             <param id="1" name="Parameter {n}"></param>
