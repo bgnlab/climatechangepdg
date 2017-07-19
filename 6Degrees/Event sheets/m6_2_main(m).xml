@@ -645,7 +645,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="105909289061958">
+                <event-block disabled="1" sid="105909289061958">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="579521921946606" type="System">
                             <param id="0" name="Variable">m6_2_timer</param>
@@ -1108,10 +1108,15 @@
                 </event-group>
                 <event-group description="" sid="174649267319933" title="m6_2_completenessChecker">
                     <sub-events>
-                        <event-block sid="105844160152269">
+                        <event-block any="1" sid="105844160152269">
                             <conditions>
                                 <condition id="17" name="On tap object" sid="342621987397137" type="Touch">
                                     <param id="0" name="Object">m6_2_buy</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="469732533652100" type="System">
+                                    <param id="0" name="Variable">m6_2_timer</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
