@@ -307,25 +307,55 @@
                     <object-type name="C6_ButtonEasy" sid="376598639776023">
                         <plugin id="Sprite" />
                         <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818709072666135" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Column format tutorial.png">
-                                    <collision-poly>
-                                        <point x="0.0627706" y="0.128319" />
-                                        <point x="0.5" y="0.106195" />
-                                        <point x="0.941558" y="0.119469" />
-                                        <point x="0.941558" y="0.880531" />
-                                        <point x="0.5" y="0.920354" />
-                                        <point x="0.0627706" y="0.871681" />
-                                    </collision-poly>
-                                </frame>
+                            <animation framecount="1" loop="0" name="d0" pingpong="0" repeatcount="1" repeatto="0" sid="818709072666135" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\e0.png" />
+                            </animation>
+                            <animation framecount="1" loop="0" name="d1" pingpong="0" repeatcount="1" repeatto="0" sid="809796067032702" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\e1.png" />
+                            </animation>
+                            <animation framecount="1" loop="0" name="d2" pingpong="0" repeatcount="1" repeatto="0" sid="370650725540899" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\e2.png" />
+                            </animation>
+                            <animation framecount="1" loop="0" name="d3" pingpong="0" repeatcount="1" repeatto="0" sid="779146756953873" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\e3.png" />
                             </animation>
                         </animation-folder>
                     </object-type>
                     <object-type name="C6_ButtonMedium" sid="896657186319280">
                         <plugin id="Sprite" />
                         <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804787389131743" speed="5">
+                            <animation framecount="1" loop="0" name="d0" pingpong="0" repeatcount="1" repeatto="0" sid="804787389131743" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.502732" original-source="C:\Users\Yuan\Downloads\Column format medium.png">
+                                    <collision-poly>
+                                        <point x="0.00492611" y="0.010929" />
+                                        <point x="1" y="0" />
+                                        <point x="1" y="1" />
+                                        <point x="0" y="1" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="d1" pingpong="0" repeatcount="1" repeatto="0" sid="566188838979052" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.505" original-source="C:\Users\GAMEPLAYER-01\Downloads\h1.png">
+                                    <collision-poly>
+                                        <point x="0.00492611" y="0.010929" />
+                                        <point x="1" y="0" />
+                                        <point x="1" y="1" />
+                                        <point x="0" y="1" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="d2" pingpong="0" repeatcount="1" repeatto="0" sid="863038430097422" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.505" original-source="C:\Users\GAMEPLAYER-01\Downloads\m2.png">
+                                    <collision-poly>
+                                        <point x="0.00492611" y="0.010929" />
+                                        <point x="1" y="0" />
+                                        <point x="1" y="1" />
+                                        <point x="0" y="1" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="d3" pingpong="0" repeatcount="1" repeatto="0" sid="920726153377420" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.505" original-source="C:\Users\GAMEPLAYER-01\Downloads\m3.png">
                                     <collision-poly>
                                         <point x="0.00492611" y="0.010929" />
                                         <point x="1" y="0" />
@@ -339,8 +369,38 @@
                     <object-type name="C6_ButtonHard" sid="692358723215076">
                         <plugin id="Sprite" />
                         <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="661470886412555" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Column format hard.png">
+                            <animation framecount="1" loop="0" name="d0" pingpong="0" repeatcount="1" repeatto="0" sid="661470886412555" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\h0.png">
+                                    <collision-poly>
+                                        <point x="0" y="0" />
+                                        <point x="1" y="0" />
+                                        <point x="0.995098" y="0.98913" />
+                                        <point x="0" y="1" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="d1" pingpong="0" repeatcount="1" repeatto="0" sid="965195297145176" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\h1.png">
+                                    <collision-poly>
+                                        <point x="0" y="0" />
+                                        <point x="1" y="0" />
+                                        <point x="0.995098" y="0.98913" />
+                                        <point x="0" y="1" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="d2" pingpong="0" repeatcount="1" repeatto="0" sid="780351056727906" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\h2.png">
+                                    <collision-poly>
+                                        <point x="0" y="0" />
+                                        <point x="1" y="0" />
+                                        <point x="0.995098" y="0.98913" />
+                                        <point x="0" y="1" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="d3" pingpong="0" repeatcount="1" repeatto="0" sid="317514065556567" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\h3.png">
                                     <collision-poly>
                                         <point x="0" y="0" />
                                         <point x="1" y="0" />
@@ -6639,7 +6699,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type global="1" name="GG_State" sid="140638206685021">
+            <object-type global="1" name="GG_State_Scores" sid="140638206685021">
                 <plugin id="Dictionary" />
             </object-type>
             <object-type name="GG_Black" sid="690027789939674">

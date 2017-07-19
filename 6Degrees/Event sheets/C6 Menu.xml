@@ -38,7 +38,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="905068356210441" type="System">
                                     <param id="0" name="Variable">GG_Selected_Game</param>
-                                    <param id="1" name="Value">GG_State.Get(&quot;selected game&quot;)</param>
+                                    <param id="1" name="Value">GG_State_Scores.Get(&quot;selected game&quot;)</param>
                                 </action>
                                 <action id="0" name="Call function" sid="680382970176738" type="Function">
                                     <param id="0" name="Name">&quot;C6 Draw Animals&quot;</param>
@@ -59,7 +59,7 @@
                         <comment>Set UI State</comment>
                         <event-block sid="510923425610583">
                             <conditions>
-                                <condition id="0" name="Compare value" sid="198667594403917" type="GG_State">
+                                <condition id="0" name="Compare value" sid="198667594403917" type="GG_State_Scores">
                                     <param id="0" name="Key">&quot;exit from game&quot;</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
@@ -314,28 +314,7 @@
                                     <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-4" name="Set layer visible" sid="533729929744306" type="System">
-                                    <param id="0" name="Layer">C6_UIState</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="440701323218437" type="System">
-                                    <param id="0" name="Layer">&quot;UIDifficulty&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="626089034242035" type="System">
-                                    <param id="0" name="Variable">C6_UIState</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="601645914313355" type="System">
-                                    <param id="0" name="Layer">C6_UIState</param>
-                                    <param id="1" name="Visibility">1</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="973857114455183" type="System">
-                                    <param id="0" name="Layer">&quot;Animals&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block any="1" sid="919587242528095">
                                     <conditions>
@@ -351,6 +330,12 @@
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="651496948338824">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="909382381472515">
                                     <conditions>
@@ -383,6 +368,31 @@
                                         <action id="4" name="Set animation" sid="833116569514722" type="C6_Background">
                                             <param id="0" name="Animation">&quot;LevelSelect&quot;</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="847447838166871">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-4" name="Set layer visible" sid="533729929744306" type="System">
+                                            <param id="0" name="Layer">C6_UIState</param>
+                                            <param id="1" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="440701323218437" type="System">
+                                            <param id="0" name="Layer">&quot;UIDifficulty&quot;</param>
+                                            <param id="1" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="626089034242035" type="System">
+                                            <param id="0" name="Variable">C6_UIState</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="601645914313355" type="System">
+                                            <param id="0" name="Layer">C6_UIState</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="973857114455183" type="System">
+                                            <param id="0" name="Layer">&quot;Animals&quot;</param>
+                                            <param id="1" name="Visibility">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
