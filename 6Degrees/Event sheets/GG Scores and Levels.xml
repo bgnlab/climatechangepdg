@@ -388,19 +388,26 @@
                         <action id="33" name="Stop all" sid="613785910707297" type="Audio" />
                     </actions>
                     <sub-events>
-                        <event-group description="" sid="564467102749048" title="GG Calculate Save Data">
-                            <sub-events>
-                                <event-block sid="189406618587990">
-                                    <conditions />
-                                    <actions>
-                                        <action id="0" name="Add key" sid="581163001024856" type="GG_State">
-                                            <param id="0" name="Key">&quot;game&quot; &amp; GG_Selected_Game</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
+                        <comment>Calculate Save Data</comment>
+                        <event-block sid="189406618587990">
+                            <conditions>
+                                <condition id="3" name="Has key" sid="543251459022356" type="GG_State">
+                                    <param id="0" name="Key">&quot;game&quot; &amp; GG_Selected_Game</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="581163001024856" type="GG_State">
+                                    <param id="0" name="Key">&quot;game&quot; &amp; GG_Selected_Game</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="400597953594988">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="394899910265639" type="System" />
+                            </conditions>
+                            <actions />
+                        </event-block>
                         <comment>Save new score</comment>
                         <event-block sid="867402010718416">
                             <conditions />
