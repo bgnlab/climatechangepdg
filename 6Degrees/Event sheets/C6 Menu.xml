@@ -146,6 +146,7 @@
         </event-group>
         <event-group description="" sid="259049637324713" title="C6 Menus">
             <sub-events>
+                <variable constant="0" name="C6_Switched" sid="496696625665803" static="0" type="number">0</variable>
                 <event-block sid="362761814650097">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="610223398157889" type="System">
@@ -175,12 +176,28 @@
                                     <param id="0" name="Object">C6_ButtonMedium</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="890818353186043" type="Function">
-                                    <param id="0" name="Name">&quot;GG Select Game&quot;</param>
-                                    <param id="1" name="Parameter {n}">GG_Selected_Game{###}1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="265236525910663">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="849388857440849" type="C6_ButtonEasy">
+                                            <param id="0" name="Animation">&quot;d1&quot;</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="202727757748191" type="C6_ButtonEasy">
+                                            <param id="0" name="Animation">&quot;d2&quot;</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="501026836269824" type="C6_ButtonEasy">
+                                            <param id="0" name="Animation">&quot;d3&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="890818353186043" type="Function">
+                                            <param id="0" name="Name">&quot;GG Select Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">GG_Selected_Game{###}1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="849987999967404">
                             <conditions>
@@ -188,12 +205,28 @@
                                     <param id="0" name="Object">C6_ButtonHard</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="163990332250951" type="Function">
-                                    <param id="0" name="Name">&quot;GG Select Game&quot;</param>
-                                    <param id="1" name="Parameter {n}">GG_Selected_Game{###}2</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="499029792718059">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="451169100655596" type="C6_ButtonMedium">
+                                            <param id="0" name="Animation">&quot;d1&quot;</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="787615903643958" type="C6_ButtonMedium">
+                                            <param id="0" name="Animation">&quot;d2&quot;</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="898293582502507" type="C6_ButtonMedium">
+                                            <param id="0" name="Animation">&quot;d3&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="163990332250951" type="Function">
+                                            <param id="0" name="Name">&quot;GG Select Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">GG_Selected_Game{###}2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="644328527431372">
                             <conditions>
@@ -205,6 +238,10 @@
                                 <action id="0" name="Call function" sid="603757517301941" type="Function">
                                     <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;UILevels&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="550914155368628" type="System">
+                                    <param id="0" name="Variable">C6_Switched</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -270,6 +307,11 @@
                             <conditions>
                                 <condition id="17" name="On tap object" sid="192961663569824" type="Touch">
                                     <param id="0" name="Object">C6_ButtonBack</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="606874261623484" type="System">
+                                    <param id="0" name="Variable">C6_Switched</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -358,15 +400,159 @@
                                     </actions>
                                     <sub-events>
                                         <comment>Setting the Text, Description, etc...</comment>
-                                        <event-block sid="651496948338824">
-                                            <conditions />
-                                            <actions />
-                                        </event-block>
+                                        <event-group description="" sid="600431153687778" title="C6 Setting Text" />
                                         <comment>Setting the States of the Difficulty Buttons</comment>
-                                        <event-block sid="586548608564383">
-                                            <conditions />
-                                            <actions />
-                                        </event-block>
+                                        <event-group description="" sid="613998623232183" title="C6 Setting Difficulty Button State">
+                                            <sub-events>
+                                                <variable constant="0" name="C6_Game_Difficulty_Data" sid="835191895779763" static="1" type="text"></variable>
+                                                <event-block sid="753439739400100">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="448831032809886" type="System">
+                                                            <param id="0" name="Variable">C6_Game_Difficulty_Data</param>
+                                                            <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; GG_Selected_Game)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <comment>Tutorial Button</comment>
+                                                <event-block any="1" sid="586548608564383">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="487759328462416" type="System">
+                                                            <param id="0" name="First value">C6_Game_Difficulty_Data</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">&quot;0&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="198139946669970" type="C6_ButtonEasy">
+                                                            <param id="0" name="Animation">&quot;d0&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="428545337505478">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="652412346546504" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="870577216855702" type="C6_ButtonEasy">
+                                                            <param id="0" name="Animation">&quot;d&quot; &amp; tokenat(C6_Game_Difficulty_Data, 0, &quot; &quot;)</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <comment>Medium Button</comment>
+                                                <event-block any="1" sid="508322134004151">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="595472827660653" type="System">
+                                                            <param id="0" name="First value">C6_Game_Difficulty_Data</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">&quot;0&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="972025650102928" type="C6_ButtonMedium">
+                                                            <param id="0" name="Animation">&quot;d0&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-27" name="Set effect enabled" sid="885831657442867" type="C6_ButtonMedium">
+                                                            <param id="0" name="Mode">1</param>
+                                                            <param id="1" name="Effect">&quot;Sepia&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="868853591658281">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="144365125211975" type="System" />
+                                                        <condition id="-8" name="Compare two values" sid="423408794012282" type="System">
+                                                            <param id="0" name="First value">tokenat(C6_Game_Difficulty_Data, 0, &quot; &quot;)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">&quot;0&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="761160804697839" type="C6_ButtonMedium">
+                                                            <param id="0" name="Animation">&quot;d0&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-27" name="Set effect enabled" sid="914794884141223" type="C6_ButtonMedium">
+                                                            <param id="0" name="Mode">0</param>
+                                                            <param id="1" name="Effect">&quot;Sepia&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="970237222063333">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="669481745289090" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="297496477813337" type="C6_ButtonMedium">
+                                                            <param id="0" name="Animation">&quot;d&quot; &amp; tokenat(C6_Game_Difficulty_Data, 1, &quot; &quot;)</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-27" name="Set effect enabled" sid="263123249774306" type="C6_ButtonMedium">
+                                                            <param id="0" name="Mode">0</param>
+                                                            <param id="1" name="Effect">&quot;Sepia&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <comment>Hard Button</comment>
+                                                <event-block any="1" sid="681047765651430">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="436973695564806" type="System">
+                                                            <param id="0" name="First value">C6_Game_Difficulty_Data</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">&quot;0&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="595583979030688" type="C6_ButtonHard">
+                                                            <param id="0" name="Animation">&quot;d0&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-27" name="Set effect enabled" sid="478641682837858" type="C6_ButtonHard">
+                                                            <param id="0" name="Mode">1</param>
+                                                            <param id="1" name="Effect">&quot;Sepia&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="715601847773178">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="177773711342133" type="System" />
+                                                        <condition id="-8" name="Compare two values" sid="656367225146360" type="System">
+                                                            <param id="0" name="First value">tokenat(C6_Game_Difficulty_Data, 1, &quot; &quot;)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">&quot;0&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="582903622451373" type="C6_ButtonHard">
+                                                            <param id="0" name="Animation">&quot;d0&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-27" name="Set effect enabled" sid="892212317437930" type="C6_ButtonHard">
+                                                            <param id="0" name="Mode">0</param>
+                                                            <param id="1" name="Effect">&quot;Sepia&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="985832825704391">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="830839096987321" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="526888381506044" type="C6_ButtonHard">
+                                                            <param id="0" name="Animation">&quot;d&quot; &amp; tokenat(C6_Game_Difficulty_Data, 2, &quot; &quot;)</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-27" name="Set effect enabled" sid="840058108253859" type="C6_ButtonHard">
+                                                            <param id="0" name="Mode">0</param>
+                                                            <param id="1" name="Effect">&quot;Sepia&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-group>
                                     </sub-events>
                                 </event-block>
                                 <event-block sid="909382381472515">

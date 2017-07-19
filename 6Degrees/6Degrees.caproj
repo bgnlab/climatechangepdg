@@ -37,6 +37,7 @@
     <used-effects>
         <effect author="Scirra" id="brightness">Brightness</effect>
         <effect author="Scirra" id="scanlines">Scan lines</effect>
+        <effect author="Scirra" id="sepia">Sepia</effect>
         <effect author="Scirra" id="warpripple">Warp Ripple</effect>
     </used-effects>
     <configurations>
@@ -149,6 +150,25 @@
                     </object-type>
                     <object-type name="C6_TitlePlaceHolder" sid="157485250313807">
                         <plugin id="Text" />
+                    </object-type>
+                    <object-type name="Sprite2" sid="663659426814040">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="693388632292983" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\Causal Critters Logo.png">
+                                    <collision-poly>
+                                        <point x="0.101042" y="0.161667" />
+                                        <point x="0.5" y="0.1475" />
+                                        <point x="0.829687" y="0.2725" />
+                                        <point x="0.897917" y="0.5" />
+                                        <point x="0.843229" y="0.749167" />
+                                        <point x="0.5" y="0.749167" />
+                                        <point x="0.197396" y="0.684167" />
+                                        <point x="0.122917" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
                     </object-type>
                 </object-folder>
                 <object-folder name="Settings">
@@ -323,6 +343,11 @@
                     </object-type>
                     <object-type name="C6_ButtonMedium" sid="896657186319280">
                         <plugin id="Sprite" />
+                        <effects>
+                            <effect-type name="Sepia">
+                                <effect id="sepia" />
+                            </effect-type>
+                        </effects>
                         <animation-folder>
                             <animation framecount="1" loop="0" name="d0" pingpong="0" repeatcount="1" repeatto="0" sid="804787389131743" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.502732" original-source="C:\Users\Yuan\Downloads\Column format medium.png">
@@ -368,6 +393,11 @@
                     </object-type>
                     <object-type name="C6_ButtonHard" sid="692358723215076">
                         <plugin id="Sprite" />
+                        <effects>
+                            <effect-type name="Sepia">
+                                <effect id="sepia" />
+                            </effect-type>
+                        </effects>
                         <animation-folder>
                             <animation framecount="1" loop="0" name="d0" pingpong="0" repeatcount="1" repeatto="0" sid="661470886412555" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\h0.png">
@@ -414,7 +444,7 @@
                     <object-type name="C6_TempDiffTitle" sid="606094279039675">
                         <plugin id="Text" />
                     </object-type>
-                    <object-type name="Text" sid="583985029252231">
+                    <object-type name="C6_DiffDescription" sid="583985029252231">
                         <plugin id="Text" />
                     </object-type>
                 </object-folder>
@@ -441,11 +471,11 @@
             <object-type name="C6_Background" sid="348671960813810">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="LevelSelect" pingpong="0" repeatcount="1" repeatto="0" sid="196747552615964" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Eight Game menu screen.png" />
-                    </animation>
                     <animation framecount="1" loop="0" name="StartScreen" pingpong="0" repeatcount="1" repeatto="0" sid="108905934731114" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casusal game menu screen.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="LevelSelect" pingpong="0" repeatcount="1" repeatto="0" sid="196747552615964" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Eight Game menu screen.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Blank" pingpong="0" repeatcount="1" repeatto="0" sid="796489804625052" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casual game game select blank.png" />
