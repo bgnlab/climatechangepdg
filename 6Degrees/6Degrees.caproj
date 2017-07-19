@@ -7307,8 +7307,8 @@
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="511077396235283" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\leftover\Pot.png">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="511077396235283" speed="10">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\leftover\poot.png">
                                 <collision-poly>
                                     <point x="0.115" y="0.845" />
                                     <point x="0.885" y="0.855" />
@@ -8660,6 +8660,40 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="m6_2_tempstar" sid="200389517620556">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="score" sid="613208263344674" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="303896777031257" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\empty star (new).png">
+                                <collision-poly>
+                                    <point x="0.336" y="0.336" />
+                                    <point x="0.5" y="0.044" />
+                                    <point x="0.668" y="0.332" />
+                                    <point x="0.916" y="0.5" />
+                                    <point x="0.808" y="0.808" />
+                                    <point x="0.212" y="0.788" />
+                                    <point x="0.096" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="262568285689527" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\star full (new).png">
+                                <collision-poly>
+                                    <point x="0.336" y="0.336" />
+                                    <point x="0.5" y="0.044" />
+                                    <point x="0.668" y="0.332" />
+                                    <point x="0.916" y="0.5" />
+                                    <point x="0.808" y="0.808" />
+                                    <point x="0.212" y="0.788" />
+                                    <point x="0.096" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="m6_3_food(H)">
                 <object-type name="m6_3_blink1" sid="271127969076904">
@@ -9488,7 +9522,7 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="511077396235283" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\leftover\Pot.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\leftover\poot.png">
                                 <collision-poly>
                                     <point x="0.115" y="0.845" />
                                     <point x="0.885" y="0.855" />
@@ -9887,6 +9921,48 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
+            <object-type name="m6_1_lines" sid="546379245384144">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="ingredient" sid="204551043521981" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361840756609964" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m6_stoveFire" sid="820012670625714">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="298847318536763" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\leftover\stove1.png">
+                            <collision-poly>
+                                <point x="0.434" y="0.723333" />
+                                <point x="0.5" y="0.713333" />
+                                <point x="0.566" y="0.723333" />
+                                <point x="0.5" y="0.971667" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\leftover\stove2.png">
+                            <collision-poly>
+                                <point x="0.434" y="0.723333" />
+                                <point x="0.5" y="0.713333" />
+                                <point x="0.566" y="0.723333" />
+                                <point x="0.5" y="0.971667" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\leftover\stove3.png">
+                            <collision-poly>
+                                <point x="0.434" y="0.723333" />
+                                <point x="0.5" y="0.713333" />
+                                <point x="0.566" y="0.723333" />
+                                <point x="0.5" y="0.971667" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Audio" sid="836488677985367">
             <plugin id="Audio" />
@@ -9905,51 +9981,6 @@
         </object-type>
         <object-type global="1" name="Dictionary" sid="185893897457786">
             <plugin id="Dictionary" />
-        </object-type>
-        <object-type name="m6_2_tempstar" sid="200389517620556">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="score" sid="613208263344674" type="number" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="303896777031257" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\empty star (new).png">
-                        <collision-poly>
-                            <point x="0.336" y="0.336" />
-                            <point x="0.5" y="0.044" />
-                            <point x="0.668" y="0.332" />
-                            <point x="0.916" y="0.5" />
-                            <point x="0.808" y="0.808" />
-                            <point x="0.212" y="0.788" />
-                            <point x="0.096" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="262568285689527" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\star full (new).png">
-                        <collision-poly>
-                            <point x="0.336" y="0.336" />
-                            <point x="0.5" y="0.044" />
-                            <point x="0.668" y="0.332" />
-                            <point x="0.916" y="0.5" />
-                            <point x="0.808" y="0.808" />
-                            <point x="0.212" y="0.788" />
-                            <point x="0.096" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="m6_1_lines" sid="546379245384144">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="ingredient" sid="204551043521981" type="number" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361840756609964" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
         </object-type>
         <object-type name="m2_3_powerPlugPlug" sid="948213959295934">
             <plugin id="Sprite" />
