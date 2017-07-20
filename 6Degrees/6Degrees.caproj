@@ -35,8 +35,10 @@
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="brightness">Brightness</effect>
@@ -15288,6 +15290,486 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
+        <object-folder name="my_frogger">
+            <object-type name="my_Background" sid="612430635900189">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="411783555535664" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Connor\Desktop\Game Art\Hopper\frogger background update.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_downArrow" sid="891199118125763">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="853505727150899" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\Arrow.png">
+                            <collision-poly>
+                                <point x="0.370588" y="0" />
+                                <point x="0.632353" y="0" />
+                                <point x="1" y="0.508824" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_EmptyBottle" sid="674383651160255">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="994359680423625" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="D:\Connor\Desktop\Game Art\Hopper\empty water bottle.png">
+                            <collision-poly>
+                                <point x="0.368421" y="0.175" />
+                                <point x="0.491228" y="0.0833333" />
+                                <point x="0.649123" y="0.166667" />
+                                <point x="0.824561" y="0.5" />
+                                <point x="0.684211" y="0.85" />
+                                <point x="0.491228" y="0.85" />
+                                <point x="0.333333" y="0.841667" />
+                                <point x="0.192982" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_Frog" sid="885149071389257">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="isDead" sid="376079052446844" type="boolean" />
+                    <instance-variable name="positionReminder" sid="121651173927228" type="string" />
+                    <instance-variable name="startX" sid="524726639728147" type="number" />
+                    <instance-variable name="startY" sid="342717617823482" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="BoundToLayout" sid="377105805158852">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="591054789245044" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Hopper\frogger frog.png">
+                            <collision-poly>
+                                <point x="0.363083" y="0.309577" />
+                                <point x="0.616633" y="0.309577" />
+                                <point x="0.62069" y="0.77951" />
+                                <point x="0.356998" y="0.777283" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Ded" pingpong="0" repeatcount="1" repeatto="0" sid="626001422768590" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Hopper\dead frog.png">
+                            <collision-poly>
+                                <point x="0.0709939" y="0.0668151" />
+                                <point x="0.926978" y="0.077951" />
+                                <point x="0.941177" y="0.937639" />
+                                <point x="0.0588236" y="0.933185" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="DedH" pingpong="0" repeatcount="1" repeatto="0" sid="520294246660815" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Hopper\dead frog horizontal.png">
+                            <collision-poly>
+                                <point x="0.166667" y="0.166667" />
+                                <point x="0.5" y="0.0208333" />
+                                <point x="0.833333" y="0.166667" />
+                                <point x="0.8125" y="0.5" />
+                                <point x="0.90625" y="0.90625" />
+                                <point x="0.09375" y="0.90625" />
+                                <point x="0.1875" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_HideWall" sid="399590522153499">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="743130305741813" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_PlayGame" sid="819245916672931">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="my_ScreenClick" sid="291101828261536">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="344220464266051" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_Puddle" sid="203138687733526">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="965417682771365" speed="5">
+                        <frame duration="1" hotspotX="0.458333" hotspotY="0.489583" original-source="C:\Users\Connor\Desktop\Game Art\Hopper\frog puddle 1.png">
+                            <collision-poly>
+                                <point x="0.15625" y="0.15625" />
+                                <point x="0.5" y="0.0104167" />
+                                <point x="0.84375" y="0.15625" />
+                                <point x="0.989583" y="0.5" />
+                                <point x="0.895833" y="0.895833" />
+                                <point x="0.5" y="0.989583" />
+                                <point x="0.09375" y="0.90625" />
+                                <point x="0.0104167" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_LoseText" sid="336124424324270">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="my_PressAnyKeyToContinueText" sid="300260756253707">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="my_bottleScoreText" sid="228177724411213">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="my_showControls" sid="686045648187791">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="623551863022630" speed="5">
+                        <frame duration="1" hotspotX="0.516" hotspotY="0.496" original-source="D:\Connor\Desktop\Game Art\Global UI\better square.png">
+                            <collision-poly>
+                                <point x="0.0402352" y="0.220519" />
+                                <point x="0.51462" y="0.027013" />
+                                <point x="0.962354" y="0.265974" />
+                                <point x="0.962354" y="0.728312" />
+                                <point x="0.51462" y="0.952987" />
+                                <point x="0.0394737" y="0.775065" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_showTruck1" sid="530382508957696">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="954500496842636" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_playTut" sid="175621388445813">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="my_leftArrow" sid="784372623160074">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="100630084510771" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\Arrow.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.502941" y="0" />
+                                <point x="1" y="0.361765" />
+                                <point x="1" y="0.632353" />
+                                <point x="0.488235" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_Sprite" sid="325525112724437">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="502376314826267" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_showTrucks" sid="780714758599264">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="543642118091799" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_showSpot" sid="550476367302000">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="631492144342869" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_Sprite6" sid="434059257298123">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="805514881699520" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Connor\Desktop\Game Art\Hopper\water droplet outline.png">
+                            <collision-poly>
+                                <point x="0.292553" y="0.221774" />
+                                <point x="0.5" y="0.0645161" />
+                                <point x="0.712766" y="0.217742" />
+                                <point x="0.882979" y="0.5" />
+                                <point x="0.75" y="0.810484" />
+                                <point x="0.5" y="0.875" />
+                                <point x="0.255319" y="0.806452" />
+                                <point x="0.12766" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_Target" sid="822321218337378">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="878699591422656" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_showTruck2" sid="997797832835878">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339477096909813" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_Sprite3" sid="384184815153513">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="325520359435096" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\Grass.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_Tilemap" sid="814103231993845">
+                <plugin id="Tilemap" />
+                <texture />
+                <tiles />
+            </object-type>
+            <object-type name="my_TruckLeft" sid="256595031602790">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="bottlesUsedToSpawn" sid="988543814935178" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Wrap" sid="161195239784922">
+                        <behavior id="wrap" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="574797843054691">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="168809445355590" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Connor\Desktop\Game Art\Hopper\frogger water truck.png">
+                            <collision-poly>
+                                <point x="0.0590278" y="0.0729167" />
+                                <point x="0.944445" y="0.0833333" />
+                                <point x="0.940972" y="0.90625" />
+                                <point x="0.0555556" y="0.895833" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="labeless" pingpong="0" repeatcount="1" repeatto="0" sid="699237837424160" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-02\Desktop\frogger truck blue.png">
+                            <collision-poly>
+                                <point x="0.0590278" y="0.125" />
+                                <point x="0.934028" y="0.135417" />
+                                <point x="0.930556" y="0.864583" />
+                                <point x="0.0590278" y="0.864583" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_TruckRight" sid="978401218234430">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="bottlesUsedToSpawn" sid="529985147215834" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Wrap" sid="858358353712946">
+                        <behavior id="wrap" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="592565552249002">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="656058912771637" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Connor\Desktop\Game Art\Hopper\frogger water bottle truck .png">
+                            <collision-poly>
+                                <point x="0.971812" y="0.914286" />
+                                <point x="0.064108" y="0.909652" />
+                                <point x="0.065451" y="0.073597" />
+                                <point x="0.97047" y="0.0793792" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="labelless" pingpong="0" repeatcount="1" repeatto="0" sid="544199195544532" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-02\Desktop\frogger truck red.png">
+                            <collision-poly>
+                                <point x="0.947917" y="0.875" />
+                                <point x="0.0694444" y="0.875" />
+                                <point x="0.0659722" y="0.114583" />
+                                <point x="0.944444" y="0.104167" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_TutorialBorder" sid="440409960412786">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="666058448590783">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="563133887204816" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_lane" sid="678769299763341">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="451016491102314" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_rightArrow" sid="404002256695121">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="916246279789758" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\Arrow.png">
+                            <collision-poly>
+                                <point x="0" y="0.366177" />
+                                <point x="0.5" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.482353" y="1" />
+                                <point x="0" y="0.638235" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_showFrog" sid="758271844954455">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="261880915836694" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_Sprite5" sid="125553341256359">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="113762990525184" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_TiledBackground" sid="202150493143827">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\Grass.png" />
+            </object-type>
+            <object-type name="my_TutorialText" sid="200170739659562">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="my_WaterGauge" sid="233007655214441">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="302682943059809">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="443154169320243" speed="5">
+                        <frame duration="1" hotspotX="0.510989" hotspotY="0.522088" original-source="C:\Users\Connor\Desktop\Game Art\Hopper\raindrop gauge.png">
+                            <collision-poly>
+                                <point x="0.302198" y="0.128514" />
+                                <point x="0.505495" y="0.00401608" />
+                                <point x="0.703297" y="0.13253" />
+                                <point x="0.972527" y="0.518072" />
+                                <point x="0.752747" y="0.943775" />
+                                <point x="0.505495" y="0.991968" />
+                                <point x="0.252747" y="0.947791" />
+                                <point x="0.0274725" y="0.518072" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_upArrow" sid="521388119139978">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="456121784198072" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\Arrow.png">
+                            <collision-poly>
+                                <point x="0" y="0.626471" />
+                                <point x="0" y="2.32831e-010" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.602941" />
+                                <point x="0.620588" y="1" />
+                                <point x="0.367647" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_WaterBottle" sid="584924021017205">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="752551782878885" speed="5">
+                        <frame duration="1" hotspotX="0.866142" hotspotY="0.852459" original-source="D:\Connor\Desktop\Game Art\Hopper\water bottle 1.png" />
+                        <frame duration="1" hotspotX="0.866142" hotspotY="0.852459" original-source="D:\Connor\Desktop\Game Art\Hopper\water bottle 2.png" />
+                        <frame duration="1" hotspotX="0.866142" hotspotY="0.852459" original-source="D:\Connor\Desktop\Game Art\Hopper\water bottle 3.png" />
+                        <frame duration="1" hotspotX="0.866142" hotspotY="0.852459" original-source="D:\Connor\Desktop\Game Art\Hopper\water bottle 4.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_Waterdrop" sid="317246034870607">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="597535998017138" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Connor\Desktop\Game Art\Hopper\water droplet cover (1).png">
+                            <collision-poly>
+                                <point x="0.0487356" y="0.0394859" />
+                                <point x="0.984193" y="0.0394859" />
+                                <point x="1" y="0.547733" />
+                                <point x="0.973187" y="1" />
+                                <point x="0.059741" y="1" />
+                                <point x="0.0377302" y="0.547733" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_WaterValue" sid="657563482592982">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="defaultHeight" sid="891260489653688" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="548339507778077" speed="5">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_WinHitbox" sid="877474308164059">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="897511527207376" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="REPLACE_WITH_REAL_TIMER" sid="711818693617773">
             <plugin id="Sprite" />
             <animation-folder>
@@ -15658,6 +16140,11 @@
             <layout>m4_pickDifficulty.xml</layout>
             <layout>m4_TutorialLevel.xml</layout>
         </layout-folder>
+        <layout-folder name="My Frogger">
+            <layout>My GameLayout.xml</layout>
+            <layout>My TutorialLayout.xml</layout>
+            <layout>My Layout 1.xml</layout>
+        </layout-folder>
     </layout-folder>
     <event-folder>
         <event-folder name="M2 Escape Room">
@@ -15719,9 +16206,14 @@
             <event-sheet>m4_DifficultySetup.xml</event-sheet>
             <event-sheet>m4_TutorialSheet.xml</event-sheet>
         </event-folder>
+        <event-folder name="My Frogger">
+            <event-sheet>My GameEvents.xml</event-sheet>
+            <event-sheet>My mainmenusheet.xml</event-sheet>
+            <event-sheet>My TutorialEventSheet.xml</event-sheet>
+        </event-folder>
     </event-folder>
     <global-instances>
-        <global-instance type="Audio" uid="1774">
+        <global-instance type="Audio" uid="1881">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -15735,14 +16227,14 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="1775" />
-        <global-instance type="Mouse" uid="1776" />
-        <global-instance type="Touch" uid="1777">
+        <global-instance type="Function" uid="1882" />
+        <global-instance type="Mouse" uid="1883" />
+        <global-instance type="Touch" uid="1884">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="LocalStorage" uid="1778" />
+        <global-instance type="LocalStorage" uid="1885" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="Game10EscapeRoom">
@@ -15906,6 +16398,20 @@
             <file name="sfx_soldclothing.ogg" />
             <file name="sfx_trashclothing.m4a" />
             <file name="sfx_trashclothing.ogg" />
+        </sound-folder>
+        <sound-folder name="My Frogger">
+            <file name="bgm_frog_game_lessfroggy.m4a" />
+            <file name="bgm_frog_game_lessfroggy.ogg" />
+            <file name="FrogHop.m4a" />
+            <file name="FrogToTortilla.m4a" />
+            <file name="FrogHop.ogg" />
+            <file name="PuddleSplash.m4a" />
+            <file name="FrogToTortilla.ogg" />
+            <file name="PuddleSplash.ogg" />
+            <file name="sfx_boing.m4a" />
+            <file name="sfx_boing.ogg" />
+            <file name="Truck.m4a" />
+            <file name="Truck.ogg" />
         </sound-folder>
     </sounds-folder>
     <music-folder>

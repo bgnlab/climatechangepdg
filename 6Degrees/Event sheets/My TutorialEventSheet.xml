@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>My TutorialEventSheet</name>
+    <events>
+        <include>GG Scores and Levels</include>
+        <include>My GameEvents</include>
+        <variable constant="0" name="mY_frogResetPositionX" sid="496751182474283" static="0" type="number">0</variable>
+        <variable constant="0" name="my_frogResetPositionY" sid="880354141280385" static="0" type="number">0</variable>
+        <variable constant="0" name="my_TutorialTracker" sid="500596792533571" static="0" type="number">0</variable>
+        <variable constant="0" name="my_canAdvance" sid="808659929361984" static="0" type="number">0</variable>
+        <event-block sid="394840234668991">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="939759201044456" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="437245783893413" type="System">
+                    <param id="0" name="Group name">&quot;my_Water Reduction&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="688626681750846" type="System">
+                    <param id="0" name="Group name">&quot;my_Collision Events&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="224313209628492" type="System">
+                    <param id="0" name="Group name">&quot;my_WinEvents&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="720526781868139" type="System">
+                    <param id="0" name="Group name">&quot;my_Lose Events&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="822566141247447" type="System">
+                    <param id="0" name="Layer">&quot;TutorialEnd&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="858555717517771" type="System">
+                    <param id="0" name="Variable">my_TutorialTracker</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="313458609854559" type="System">
+                    <param id="0" name="Variable">mY_frogResetPositionX</param>
+                    <param id="1" name="Value">my_Frog.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="243848883665499" type="System">
+                    <param id="0" name="Variable">my_frogResetPositionY</param>
+                    <param id="1" name="Value">my_Frog.Y</param>
+                </action>
+                <action id="-9" name="Set value" sid="882474149433374" type="System">
+                    <param id="0" name="Variable">my_waterLoss</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Get to the first point</comment>
+        <event-block sid="905129930054927">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="535658180089793" type="System">
+                    <param id="0" name="Variable">my_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="839072994889627" type="my_Target">
+                    <param id="0" name="X">928</param>
+                    <param id="1" name="Y">800</param>
+                </action>
+                <action id="-3" name="Set position" sid="144804578725910" type="my_showSpot">
+                    <param id="0" name="X">my_Target.X</param>
+                    <param id="1" name="Y">my_Target.Y</param>
+                </action>
+                <action id="-15" name="Set visible" sid="112115926042848" type="my_showControls">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="771402176306694">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="283885203548552" type="my_Target">
+                    <param id="0" name="Object">my_Frog</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="223112366083813" type="System">
+                    <param id="0" name="Group name">&quot;my_Water Reduction&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="443180470350804">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="327366867833613" type="System">
+                            <param id="0" name="Variable">my_TutorialTracker</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="702326336124443" type="System">
+                            <param id="0" name="Variable">my_TutorialTracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action disabled="1" id="-13" name="Set boolean" sid="215852919774216" type="my_Frog">
+                            <param id="0" name="Instance variable">isDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="818717375082219" type="my_showControls">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="677817517107775" type="System">
+                            <param id="0" name="Group name">&quot;my_ControlsGroup&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="147980640371508">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="165127988339453" type="System">
+                            <param id="0" name="Variable">my_TutorialTracker</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="970271067959070" type="System">
+                            <param id="0" name="Variable">my_TutorialTracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="313444491723414" type="System">
+                            <param id="0" name="Variable">mY_frogResetPositionX</param>
+                            <param id="1" name="Value">my_Frog.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="703670317288780" type="System">
+                            <param id="0" name="Variable">my_frogResetPositionY</param>
+                            <param id="1" name="Value">my_Frog.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="214404632336680">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="993437018459674" type="System">
+                            <param id="0" name="Variable">my_TutorialTracker</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="120998751389594" type="my_Target">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">32</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="599533097000236" type="System">
+                            <param id="0" name="Variable">my_TutorialTracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="511926111716359" type="my_showTrucks">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="424172430433566" type="my_showFrog">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="704880890146733" type="my_showControls">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="442945207134269" type="my_Frog">
+                            <param id="0" name="Instance variable">isDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="842045197315197" type="my_showSpot">
+                            <param id="0" name="X">m4_WinFailState.X</param>
+                            <param id="1" name="Y">m4_WinFailState.Y</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="937674403286654" type="my_showSpot">
+                            <param id="0" name="Width">m4_WinFailState.Width</param>
+                            <param id="1" name="Height">m4_WinFailState.Height</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>show the user the water depleting</comment>
+        <event-block sid="853754322967222">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="878102868192731" type="System">
+                    <param id="0" name="Variable">my_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="303621833694424" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="469855476959535" type="my_showSpot">
+                    <param id="0" name="X">my_Waterdrop.X</param>
+                    <param id="1" name="Y">my_Waterdrop.Y - my_Waterdrop.Height/2</param>
+                </action>
+                <action id="-7" name="Set size" sid="241856506903876" type="my_showSpot">
+                    <param id="0" name="Width">my_Waterdrop.Width</param>
+                    <param id="1" name="Height">my_Waterdrop.Height</param>
+                </action>
+                <action id="0" name="Set text" sid="432519056361066" type="my_TutorialText">
+                    <param id="0" name="Text">&quot;If you dry out you will use a water bottle.&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="800619547772190" type="my_showTrucks">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="456699945723247" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="357649109915735" type="my_TutorialText">
+                    <param id="0" name="Text">&quot;For every water bottle used, more trucks will start shipping watter bottles.&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="844599446156931">
+            <conditions>
+                <condition id="17" name="On tap object" sid="346240490039529" type="Touch">
+                    <param id="0" name="Object">my_ScreenClick</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="415961040967086" type="System">
+                    <param id="0" name="Variable">my_canAdvance</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="783453982150200" type="System">
+                    <param id="0" name="Variable">my_canAdvance</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="814944413736273">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="911590863113101" type="System">
+                            <param id="0" name="Variable">my_TutorialTracker</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="535763810103201" type="System">
+                            <param id="0" name="Variable">my_TutorialTracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="695906772248225" type="my_Frog">
+                            <param id="0" name="Instance variable">isDead</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="656883316717458" type="my_showControls">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="850715011872338" type="my_Frog">
+                            <param id="0" name="X">928</param>
+                            <param id="1" name="Y">800</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="556567913940678" type="my_PressAnyKeyToContinueText">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="106013662983876" type="System">
+                            <param id="0" name="Group name">&quot;my_ControlsGroup&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="327146691058223">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="795807458686263" type="System">
+                    <param id="0" name="Variable">my_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="478626583961690" type="my_showTruck1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="543691982767363" type="my_showTruck2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="132215051319680" type="my_Target">
+                    <param id="0" name="X">928</param>
+                    <param id="1" name="Y">512</param>
+                </action>
+                <action id="-3" name="Set position" sid="399415343613970" type="my_showSpot">
+                    <param id="0" name="X">my_Target.X</param>
+                    <param id="1" name="Y">my_Target.Y</param>
+                </action>
+                <action id="-7" name="Set size" sid="117422601417882" type="my_showSpot">
+                    <param id="0" name="Width">my_Target.Width</param>
+                    <param id="1" name="Height">my_Target.Height</param>
+                </action>
+                <action id="0" name="Set text" sid="211058748543440" type="my_TutorialText">
+                    <param id="0" name="Text">&quot;Puddles will refresh you without using a bottle, Why not head there!?&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="971690986681240" type="my_PressAnyKeyToContinueText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="201939511436551" type="System">
+                    <param id="0" name="Variable">my_waterLoss</param>
+                    <param id="1" name="Value">3.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="995371918387403">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="228766585486466" type="System">
+                    <param id="0" name="Variable">my_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="981510967989137" type="my_showTruck1">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="536061026155083" type="my_showTruck2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="486149238966543" type="my_showTrucks">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="137692416892482" type="my_Target">
+                    <param id="0" name="X">928</param>
+                    <param id="1" name="Y">32</param>
+                </action>
+                <action id="-3" name="Set position" sid="621632544222310" type="my_showSpot">
+                    <param id="0" name="X">my_Target.X</param>
+                    <param id="1" name="Y">my_Target.Y</param>
+                </action>
+                <action id="-7" name="Set size" sid="762791430090721" type="my_showSpot">
+                    <param id="0" name="Width">my_Target.Width</param>
+                    <param id="1" name="Height">my_Target.Height</param>
+                </action>
+                <action id="0" name="Set text" sid="309778067479122" type="my_TutorialText">
+                    <param id="0" name="Text">&quot;Now try to get to the point at the end&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="408161801150806">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="931531413395686" type="System">
+                    <param id="0" name="Variable">my_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="681311088773250" type="my_TutorialText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="839628903213145" type="System">
+                    <param id="0" name="Layer">&quot;TutorialEnd&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="479017041570186">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="138076689112093" type="my_TruckLeft">
+                    <param id="0" name="Object">my_Frog</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="783012918768383" type="my_TruckRight">
+                    <param id="0" name="Object">my_Frog</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="357030628835876" type="my_Frog">
+                    <param id="0" name="Instance variable">isDead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="439464545151556" type="Audio">
+                    <param id="0" name="Audio file">FrogToTortilla</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="140859872776700" type="my_Frog">
+                    <param id="0" name="Animation">&quot;Ded&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="174224010542745" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-1" name="Set X" sid="895415810552060" type="my_Frog">
+                    <param id="0" name="X">mY_frogResetPositionX</param>
+                </action>
+                <action id="-2" name="Set Y" sid="103410803366462" type="my_Frog">
+                    <param id="0" name="Y">my_frogResetPositionY</param>
+                </action>
+                <action id="4" name="Set animation" sid="165215674882895" type="my_Frog">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="906262443400638" type="my_Frog">
+                    <param id="0" name="Instance variable">isDead</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="253257060714832">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="770349659864112" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="410992058292314" type="my_showFrog">
+                    <param id="0" name="X">my_Frog.X</param>
+                    <param id="1" name="Y">my_Frog.Y</param>
+                </action>
+                <action id="-3" name="Set position" sid="460382021607435" type="my_showTruck1">
+                    <param id="0" name="X">my_TruckRight.X</param>
+                    <param id="1" name="Y">my_TruckRight.Y</param>
+                </action>
+                <action id="-3" name="Set position" sid="730774180450133" type="my_showTruck2">
+                    <param id="0" name="X">my_TruckLeft.X</param>
+                    <param id="1" name="Y">my_TruckLeft.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="468995434774599">
+            <conditions>
+                <condition id="17" name="On tap object" sid="291761817154039" type="Touch">
+                    <param id="0" name="Object">m4_ExitBtn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="639312961633676" type="Audio" />
+                <action id="-12" name="Set group active" sid="335273357989880" type="System">
+                    <param id="0" name="Group name">&quot;my_ControlsGroup&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="503731135995968" type="System">
+                    <param id="0" name="Group name">&quot;my_Water Reduction&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="544888847865883" type="System">
+                    <param id="0" name="Group name">&quot;my_Collision Events&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="165409661733732" type="System">
+                    <param id="0" name="Group name">&quot;my_WinEvents&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="708545948203272" type="System">
+                    <param id="0" name="Group name">&quot;my_Lose Events&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="0" name="Call function" sid="417271995740298" type="Function">
+                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                    <param id="1" name="Parameter {n}">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="146128640809845">
+            <conditions>
+                <condition id="-6" name="Compare height" sid="737160281373757" type="my_WaterValue">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Height">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="332896353289634" type="System">
+                    <param id="0" name="Variable">my_canAdvance</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="863886525910518">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="707115400668983" type="System">
+                            <param id="0" name="Variable">my_TutorialTracker</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="174953247349219" type="my_PressAnyKeyToContinueText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

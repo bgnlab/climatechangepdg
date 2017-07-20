@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>My GameEvents</name>
+    <events>
+        <include>GG Scores and Levels</include>
+        <variable constant="0" name="my_starBound1" sid="585886185419505" static="0" type="number">3</variable>
+        <variable constant="0" name="my_starBound2" sid="131396735493864" static="0" type="number">2</variable>
+        <variable constant="0" name="my_starBound3" sid="724977579848885" static="0" type="number">1</variable>
+        <variable constant="0" name="my_bottlesUsed" sid="745526657249857" static="0" type="number">0</variable>
+        <variable constant="0" name="my_refreshDelay" sid="983213244622880" static="0" type="number">0</variable>
+        <variable constant="0" name="my_startSpawning" sid="937756090592561" static="0" type="number">0</variable>
+        <variable constant="0" name="my_leftTotalSpawnTime" sid="172910224488668" static="0" type="number">0</variable>
+        <variable constant="0" name="my_truckSpawn" sid="824808895185577" static="0" type="number">0</variable>
+        <variable constant="0" name="my_rightTotalSpawnTime" sid="844895937564300" static="0" type="number">0</variable>
+        <variable constant="0" name="my_waterLoss" sid="830456476864615" static="0" type="number">3.5</variable>
+        <variable constant="0" name="my_truckspawnvalue" sid="900368051754985" static="0" type="number">0</variable>
+        <variable constant="0" name="my_scrollSpeed" sid="665421901113033" static="0" type="number">200</variable>
+        <event-block sid="543768083723559">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="297070253373945" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="496300556250329" type="System">
+                    <param id="0" name="Layer">&quot;Win/Lose&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="929249322445317" type="System">
+                    <param id="0" name="Variable">my_bottlesUsed</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Play" sid="756290429459810" type="Audio">
+                    <param id="0" name="Audio file">bgm_frog_game_lessfroggy</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action disabled="1" id="0" name="Play" sid="825179045856121" type="Audio">
+                    <param id="0" name="Audio file">Truck</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="658750089257738" title="my_ControlsGroup">
+            <sub-events>
+                <event-block sid="425391216479917">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="216006453653614" type="my_Frog">
+                            <param id="0" name="Instance variable">isDead</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="263272747151839">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="430130818099965" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="374098313842231" type="Touch">
+                                    <param id="0" name="Object">my_upArrow</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="549638965310046" type="my_Frog">
+                                    <param id="0" name="Y">my_Frog.Y - my_Frog.Width</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="338263424606081" type="my_Frog">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="711720477478939" type="Audio">
+                                    <param id="0" name="Audio file">FrogHop</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="477646861619464">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="334502181023892" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="987785694248952" type="Touch">
+                                    <param id="0" name="Object">my_downArrow</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="798611409383984" type="my_Frog">
+                                    <param id="0" name="Y">my_Frog.Y + my_Frog.Width</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="508133031127262" type="my_Frog">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                                <action id="0" name="Play" sid="294466952438379" type="Audio">
+                                    <param id="0" name="Audio file">FrogHop</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="513232559238872">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="314382077125980" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="760853895194996" type="Touch">
+                                    <param id="0" name="Object">my_leftArrow</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="830566978883554" type="my_Frog">
+                                    <param id="0" name="X">my_Frog.X - my_Frog.Height</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="840592701292938" type="my_Frog">
+                                    <param id="0" name="Angle">270</param>
+                                </action>
+                                <action id="0" name="Play" sid="184761183659952" type="Audio">
+                                    <param id="0" name="Audio file">FrogHop</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="488044670106408">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="720560132279648" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="157916131300220" type="Touch">
+                                    <param id="0" name="Object">my_rightArrow</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="321322986042198" type="my_Frog">
+                                    <param id="0" name="X">my_Frog.X + my_Frog.Height</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="146690814201211" type="my_Frog">
+                                    <param id="0" name="Angle">90</param>
+                                </action>
+                                <action id="0" name="Play" sid="323059392052683" type="Audio">
+                                    <param id="0" name="Audio file">FrogHop</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="823118690991272" title="my_Collision Events">
+            <sub-events>
+                <event-block sid="663033793443937">
+                    <conditions>
+                        <condition id="0" name="On function" sid="914298947299752" type="Function">
+                            <param id="0" name="Name">&quot;frogHit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-15" name="Set visible" sid="750138412770807" type="my_LoseText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="194680974066103" type="my_Frog">
+                            <param id="0" name="Instance variable">isDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="448423453264183" type="System">
+                            <param id="0" name="Layer">&quot;Win/Lose&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="304001841553097" type="Audio">
+                            <param id="0" name="Audio file">FrogToTortilla</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="315255112509809">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="575833000257139" type="my_Frog">
+                                    <param id="0" name="First angle">359</param>
+                                    <param id="1" name="Second angle">1</param>
+                                </condition>
+                                <condition id="-13" name="Is between angles" sid="445012129093109" type="my_Frog">
+                                    <param id="0" name="First angle">179</param>
+                                    <param id="1" name="Second angle">181</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="773043778489546" type="my_Frog">
+                                    <param id="0" name="Animation">&quot;Ded&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="918415615776428" type="m4_WinFailText">
+                                    <param id="0" name="Text">&quot;WASTED&quot;</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="442346864147110" type="m4_WinFailText">
+                                    <param id="0" name="Color">rgb(255, 10, 10)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="930124136707327">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="813363209480279" type="my_Frog">
+                                    <param id="0" name="First angle">89</param>
+                                    <param id="1" name="Second angle">91</param>
+                                </condition>
+                                <condition id="-13" name="Is between angles" sid="121124552571504" type="my_Frog">
+                                    <param id="0" name="First angle">269</param>
+                                    <param id="1" name="Second angle">271</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="264599653524558" type="my_Frog">
+                                    <param id="0" name="Animation">&quot;DedH&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="911942164906688" type="m4_WinFailText">
+                                    <param id="0" name="Text">&quot;U R DED&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="779739932756623">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="282587538981180" type="my_TruckLeft">
+                            <param id="0" name="Object">my_Frog</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="809711971787165">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="990287807704042" type="my_TruckLeft" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="623209021479789" type="Function">
+                                    <param id="0" name="Name">&quot;frogHit&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="240738993695245">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="770934700695418" type="my_TruckRight">
+                            <param id="0" name="Object">my_Frog</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="386731602108824">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="286787500826503" type="my_TruckRight" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="387509208899397" type="Function">
+                                    <param id="0" name="Name">&quot;frogHit&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="618490427684694" title="my_Water Reduction">
+            <sub-events>
+                <event-block sid="959331981904520">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="946916935756031" type="System">
+                            <param id="0" name="Interval (seconds)">0.02</param>
+                        </condition>
+                        <condition id="-6" name="Compare height" sid="354049973022217" type="my_WaterValue">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Height">0</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="416927208009615" type="my_Frog">
+                            <param id="0" name="Instance variable">isDead</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-6" name="Set height" sid="303180808870791" type="my_WaterValue">
+                            <param id="0" name="Height">self.Height- (192/50)/my_waterLoss</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="400522362025683">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="986214159860076" type="my_Puddle">
+                    <param id="0" name="Object">my_Frog</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="987518014224086" type="Audio">
+                    <param id="0" name="Audio file">PuddleSplash</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-6" name="Set height" sid="867310837832345" type="my_WaterValue">
+                    <param id="0" name="Height">self.defaultHeight</param>
+                </action>
+                <action id="-9" name="Destroy" sid="432923216807203" type="my_Puddle" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="745154548580704" title="my_FrogDelay">
+            <sub-events>
+                <comment></comment>
+                <event-block sid="404253661940797">
+                    <conditions>
+                        <condition id="-6" name="Compare height" sid="857264317862355" type="my_WaterValue">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="946602022110197" type="System">
+                            <param id="0" name="Variable">my_refreshDelay</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="111194757260607" type="Function">
+                            <param id="0" name="Name">&quot;pauseFrog&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="297483895384573">
+                    <conditions>
+                        <condition id="0" name="On function" sid="217798411176806" type="Function">
+                            <param id="0" name="Name">&quot;pauseFrog&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="357280680304326" type="my_Frog">
+                            <param id="0" name="Instance variable">isDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="987046062730026" type="System">
+                            <param id="0" name="Variable">my_refreshDelay</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="905962260643623" type="my_WaterBottle">
+                            <param id="0" name="X">my_Frog.X</param>
+                            <param id="1" name="Y">my_Frog.Y</param>
+                        </action>
+                        <action id="3" name="Start" sid="300767787556711" type="my_WaterBottle">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="484958405016493" type="System">
+                            <param id="0" name="Variable">my_bottlesUsed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="944817059104313" type="Audio">
+                            <param id="0" name="Audio file">PuddleSplash</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="204117278935420" type="my_bottleScoreText">
+                            <param id="0" name="Text">&quot;Bottles Used: &quot; &amp;my_bottlesUsed</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="183731571078593">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="321007078203872" type="System">
+                                    <param id="0" name="Object">my_TruckLeft</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="119310595307247" type="System">
+                                    <param id="0" name="Variable">my_bottlesUsed</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" disabled="1" id="0" name="Set speed" sid="999211292129151" type="my_TruckLeft">
+                                    <param id="0" name="Speed">self.Bullet.Speed + 50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="913837519173880">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="675335825068211" type="System">
+                                    <param id="0" name="Object">my_TruckRight</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="828129757004028" type="System">
+                                    <param id="0" name="Variable">my_bottlesUsed</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" disabled="1" id="0" name="Set speed" sid="489114898529941" type="my_TruckRight">
+                                    <param id="0" name="Speed">self.Bullet.Speed + 50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="764892217466404">
+                    <conditions>
+                        <condition disabled="1" id="-7" name="Compare time" sid="799421805218486" type="System">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Time (seconds)">my_refreshDelay + 0.75</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="874019775342770" type="System">
+                            <param id="0" name="Variable">my_refreshDelay</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="714560157744697" type="my_Frog">
+                            <param id="0" name="Instance variable">isDead</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="830948851178574" type="my_Frog">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="273503377776066" type="my_WaterValue">
+                            <param id="0" name="Height">self.defaultHeight</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="815618068738553" type="System">
+                            <param id="0" name="Variable">my_refreshDelay</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="398064268846649">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="982491548438338" type="my_WinHitbox">
+                            <param id="0" name="Object">my_Frog</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="780012392439250" type="my_Frog">
+                            <param id="0" name="Instance variable">isDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="740951801705216" type="System">
+                            <param id="0" name="Layer">&quot;Win/Lose&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="749499415544343" type="m4_WinFailText">
+                            <param id="0" name="Text">&quot;FROGGO GET!&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="939872439089372" type="Function">
+                            <param id="0" name="Name">&quot;onWin&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="433366691024697">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="474745268578940" type="my_WaterBottle" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="470022948918374" type="my_WaterBottle">
+                            <param id="0" name="Object">my_EmptyBottle</param>
+                            <param id="1" name="Layer">&quot;Trash&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="636848864586261" type="my_WaterBottle">
+                            <param id="0" name="X">3000</param>
+                            <param id="1" name="Y">3000</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="255294607880766" title="my_WinEvents">
+            <sub-events>
+                <event-block sid="194594524584022">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="355498483459619" type="System">
+                            <param id="0" name="Layer">&quot;Win/Lose&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="623712458730666">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="281035581823872" type="Touch">
+                                    <param id="0" name="Object">m4_RetryBtn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="789587705171972" type="Audio" />
+                                <action id="-21" name="Reset global variables" sid="579253981372637" type="System" />
+                                <action id="-26" name="Restart layout" sid="802024908821474" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="136218961826625">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="512205239506628" type="Touch">
+                                    <param id="0" name="Object">m4_ExitBtn</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="152690214499308">
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="854615031632570" type="m4_star1" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="595564227195458">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="203706303303207" type="m4_star2" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="426430718147434">
+                                                    <conditions>
+                                                        <condition id="-9" name="Is visible" sid="963141438231008" type="m4_star3" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="856511138373284" type="Function">
+                                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                                            <param id="1" name="Parameter {n}">3</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="545639468689877">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="762990247108084" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="894154206718597" type="Function">
+                                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                                            <param id="1" name="Parameter {n}">2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="284973550020047">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="661640961828998" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="928623790544072" type="Function">
+                                                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                                    <param id="1" name="Parameter {n}">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="989495936918752">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="328255701382025" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="248080317239984" type="Function">
+                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="593960435252696">
+                    <conditions>
+                        <condition id="0" name="On function" sid="757062822579843" type="Function">
+                            <param id="0" name="Name">&quot;onWin&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="520734713726674">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="631586376197565" type="System">
+                                    <param id="0" name="Variable">my_starBound1</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">my_bottlesUsed</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="321844273916221" type="m4_star1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="212632644595197">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="790067664335229" type="System">
+                                    <param id="0" name="Variable">my_starBound2</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">my_bottlesUsed</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="637543003744077" type="m4_star2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="950651348131630">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="649891941224048" type="System">
+                                    <param id="0" name="Variable">my_starBound3</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">my_bottlesUsed</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="307463068212917" type="m4_star3">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>timer created by ivan for universal timer design</comment>
+        <event-group description="" sid="739920975100737" title="my_Lose Events">
+            <sub-events>
+                <event-block sid="355820443685377">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="516848079026834" type="System">
+                            <param id="0" name="Interval (seconds)">0.05</param>
+                        </condition>
+                        <condition id="-5" name="Compare width" sid="714053446579842" type="m4_TimerProgress">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Width">0</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="999181392173179" type="System">
+                            <param id="0" name="Layer">&quot;Win/Lose&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="922877862791384" type="m4_TimerProgress">
+                            <param id="0" name="Width">Self.Width - 3.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="233603976367143">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="138385604740874" type="System" />
+                        <condition id="-5" name="Compare width" sid="508162344197290" type="m4_TimerProgress">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Width">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="510321828994106" type="System">
+                            <param id="0" name="Layer">&quot;Win/Lose&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="977409125872195" type="my_Frog">
+                            <param id="0" name="Instance variable">isDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="676272556662968" type="m4_WinFailText">
+                            <param id="0" name="Text">&quot;Out of Time&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="550492884796370">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="696520979710829" type="my_TruckLeft" />
+                <condition id="-9" inverted="1" name="Is visible" sid="556281947448149" type="my_TruckLeft" />
+                <condition id="-14" name="Compare variable" sid="301666734236534" type="System">
+                    <param id="0" name="Variable">my_bottlesUsed</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">my_TruckLeft.bottlesUsedToSpawn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="733677316379061" type="my_TruckLeft">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="278866962220791">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="698351465720632" type="my_TruckRight" />
+                <condition id="-9" inverted="1" name="Is visible" sid="832432577175447" type="my_TruckRight" />
+                <condition id="-14" name="Compare variable" sid="798943644996850" type="System">
+                    <param id="0" name="Variable">my_bottlesUsed</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">my_TruckRight.bottlesUsedToSpawn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="985415964617044" type="my_TruckRight">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="471104528426480">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="921563531570054" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+                <condition id="-5" name="Compare width" sid="644879625187493" type="m4_TimerProgress">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Width">320</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="525414509406176" type="m4_TimerProgress">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="169899206106042" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="4" name="Set animation" sid="865592431807989" type="m4_TimerProgress">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

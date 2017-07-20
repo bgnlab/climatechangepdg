@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>My mainmenusheet</name>
+    <events>
+        <event-block sid="975639662902939">
+            <conditions>
+                <condition id="0" name="On clicked" sid="848130815305336" type="my_playTut" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="280692616221898" type="System">
+                    <param id="0" name="Layout">My TutorialLayout</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="670490423176098" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="817627143702762">
+            <conditions>
+                <condition id="0" name="On clicked" sid="456544851876933" type="my_PlayGame" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="388844419676140" type="System">
+                    <param id="0" name="Layout">My GameLayout</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="640709649536785" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
