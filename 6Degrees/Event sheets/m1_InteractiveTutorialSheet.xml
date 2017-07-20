@@ -48,14 +48,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="124080414285103" type="m1_AdvanceTutorialClick">
-                    <param id="0" name="X">1350</param>
-                    <param id="1" name="Y">735</param>
-                </action>
-                <action id="4" name="Set animation" sid="823196793691628" type="m1_AdvanceTutorialClick">
-                    <param id="0" name="Animation">&quot;a1&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
                 <action id="0" name="Set text" sid="520894134205335" type="m1_Tutorial_Instruction">
                     <param id="0" name="Text">&quot;Drive Efficiently&quot;</param>
                 </action>
@@ -106,14 +98,6 @@
                         <condition id="-22" name="Else" sid="392498825633277" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="709309427552042" type="m1_AdvanceTutorialClick">
-                            <param id="0" name="X">1367</param>
-                            <param id="1" name="Y">480</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="397179211574920" type="m1_AdvanceTutorialClick">
-                            <param id="0" name="Animation">&quot;a2&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                         <action id="-5" name="Set width" sid="831448143881838" type="m1_FuelProgress">
                             <param id="0" name="Width">m1_FuelProgress.defaultWidth/2</param>
                         </action>
@@ -132,6 +116,17 @@
                         </action>
                         <action id="0" name="Set text" sid="286846545375356" type="m1_Tutorial_Prompt">
                             <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="797711828317824" type="m1_tutLight">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="455751553132937" type="m1_tutLight">
+                            <param id="0" name="X">1386</param>
+                            <param id="1" name="Y">500</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="467432823699372" type="m1_tutLight">
+                            <param id="0" name="Width">671</param>
+                            <param id="1" name="Height">473</param>
                         </action>
                     </actions>
                 </event-block>
@@ -152,13 +147,12 @@
                 <action id="0" name="Set text" sid="556859658265755" type="m1_InteractiveTutorialText">
                     <param id="0" name="Text">&quot;You will stop to refuel automatically.&quot;</param>
                 </action>
+                <action id="0" name="Set text" sid="270608376058907" type="m1_Tutorial_Instruction">
+                    <param id="0" name="Text">&quot;You will stop to refuel automatically.&quot;</param>
+                </action>
                 <action id="-10" name="Add to" sid="636159358727289" type="System">
                     <param id="0" name="Variable">m1_tutorialTracker</param>
                     <param id="1" name="Value">1</param>
-                </action>
-                <action id="-3" name="Set position" sid="231570735974813" type="m1_AdvanceTutorialClick">
-                    <param id="0" name="X">0</param>
-                    <param id="1" name="Y">0</param>
                 </action>
                 <action id="-7" name="Set size" sid="976054948183807" type="m1_Highlighter">
                     <param id="0" name="Width">m1_Car.Width</param>
@@ -167,6 +161,20 @@
                 <action id="-3" name="Set position" sid="337925762480340" type="m1_Highlighter">
                     <param id="0" name="X">m1_Car.X</param>
                     <param id="1" name="Y">m1_Car.Y</param>
+                </action>
+                <action id="-3" name="Set position" sid="481130430739530" type="m1_tutLight">
+                    <param id="0" name="X">1386</param>
+                    <param id="1" name="Y">588.5</param>
+                </action>
+                <action id="-7" name="Set size" sid="896144347298454" type="m1_tutLight">
+                    <param id="0" name="Width">671</param>
+                    <param id="1" name="Height">800</param>
+                </action>
+                <action id="-16" name="Wait" sid="778978737602195" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="0" name="Set text" sid="530643620900955" type="m1_Tutorial_Prompt">
+                    <param id="0" name="Text">&quot;Tap anywhere to continue&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -187,6 +195,9 @@
                 <action id="0" name="Set text" sid="279731924774114" type="m1_InteractiveTutorialText">
                     <param id="0" name="Text">&quot;Fuel depletes faster when tire pressure is low.&quot;</param>
                 </action>
+                <action id="0" name="Set text" sid="358622413863595" type="m1_Tutorial_Instruction">
+                    <param id="0" name="Text">&quot;Fuel depletes faster when tire pressure is low.&quot;</param>
+                </action>
                 <action id="-10" name="Add to" sid="449328426784642" type="System">
                     <param id="0" name="Variable">m1_tutorialTracker</param>
                     <param id="1" name="Value">1</param>
@@ -199,6 +210,14 @@
                     <param id="0" name="X">m1_FuelBarrel.X</param>
                     <param id="1" name="Y">m1_FuelBarrel.Y</param>
                 </action>
+                <action id="-3" name="Set position" sid="556901731103629" type="m1_tutLight">
+                    <param id="0" name="X">1386</param>
+                    <param id="1" name="Y">500</param>
+                </action>
+                <action id="-7" name="Set size" sid="683695679605633" type="m1_tutLight">
+                    <param id="0" name="Width">671</param>
+                    <param id="1" name="Height">473</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="607986348442903">
@@ -208,10 +227,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="567198146565932" type="m1_AdvanceTutorialClick">
-                    <param id="0" name="X">1921</param>
-                    <param id="1" name="Y">1201</param>
-                </action>
                 <action id="4" name="Set animation" sid="496826603304673" type="m1_Tire">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
@@ -222,6 +237,12 @@
                 <action id="0" name="Set text" sid="223221427670087" type="m1_InteractiveTutorialText">
                     <param id="0" name="Text">&quot;Use the arrow to get off and on the road to check the tire pressure.&quot;</param>
                 </action>
+                <action id="0" name="Set text" sid="231883885266175" type="m1_Tutorial_Instruction">
+                    <param id="0" name="Text">&quot;Use the arrow to get off and on the road to check the tire pressure.&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="876022843756441" type="m1_Tutorial_Prompt">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
                 <action id="-7" name="Set size" sid="705993648200744" type="m1_Highlighter">
                     <param id="0" name="Width">m1_DoubleArrow.Width</param>
                     <param id="1" name="Height">m1_DoubleArrow.Height</param>
@@ -229,6 +250,14 @@
                 <action id="-3" name="Set position" sid="263644192763673" type="m1_Highlighter">
                     <param id="0" name="X">m1_DoubleArrow.X</param>
                     <param id="1" name="Y">m1_DoubleArrow.Y</param>
+                </action>
+                <action id="-3" name="Set position" sid="948968350984619" type="m1_tutLight">
+                    <param id="0" name="X">1226</param>
+                    <param id="1" name="Y">1026</param>
+                </action>
+                <action id="-7" name="Set size" sid="822574298133861" type="m1_tutLight">
+                    <param id="0" name="Width">351</param>
+                    <param id="1" name="Height">480</param>
                 </action>
             </actions>
         </event-block>
@@ -249,6 +278,17 @@
             <actions>
                 <action id="0" name="Set text" sid="945973192005993" type="m1_InteractiveTutorialText">
                     <param id="0" name="Text">&quot;Leave the stop&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="188405731204012" type="m1_Tutorial_Instruction">
+                    <param id="0" name="Text">&quot;Leave the stop&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="621734684701678" type="m1_tutLight">
+                    <param id="0" name="X">1226</param>
+                    <param id="1" name="Y">1026</param>
+                </action>
+                <action id="-7" name="Set size" sid="175388687372730" type="m1_tutLight">
+                    <param id="0" name="Width">351</param>
+                    <param id="1" name="Height">480</param>
                 </action>
             </actions>
         </event-block>
@@ -295,6 +335,17 @@
                                 <action id="0" name="Set text" sid="788370350367297" type="m1_InteractiveTutorialText">
                                     <param id="0" name="Text">&quot;While parked, you can refill your tire pressure by pressing the pump.&quot;</param>
                                 </action>
+                                <action id="0" name="Set text" sid="431222005835080" type="m1_Tutorial_Instruction">
+                                    <param id="0" name="Text">&quot;While parked, you can refill your tire pressure by pressing the pump.&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="841130218546665" type="m1_tutLight">
+                                    <param id="0" name="X">1446</param>
+                                    <param id="1" name="Y">1011</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="243015989155109" type="m1_tutLight">
+                                    <param id="0" name="Width">266</param>
+                                    <param id="1" name="Height">623</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="553377974913974" type="m1_Highlighter">
                                     <param id="0" name="Width">m1_Pump.Width</param>
                                     <param id="1" name="Height">m1_Pump.Height</param>
@@ -303,10 +354,6 @@
                                     <param id="0" name="X">m1_Pump.X</param>
                                     <param id="1" name="Y">m1_Pump.Y</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="322793469441903" type="m1_AdvanceTutorialClick">
-                                    <param id="0" name="X">1921</param>
-                                    <param id="1" name="Y">1201</param>
-                                </action>
                                 <action id="-10" name="Add to" sid="285456872443204" type="System">
                                     <param id="0" name="Variable">m1_tutorialTracker</param>
                                     <param id="1" name="Value">1</param>
@@ -314,10 +361,6 @@
                                 <action id="0" name="Call function" sid="978323471209870" type="Function">
                                     <param id="0" name="Name">&quot;pullOver&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="-3" name="Set position" sid="883046645909586" type="m1_AdvanceTutorialClick">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">0</param>
                                 </action>
                                 <action id="0" name="Call function" sid="650366176029736" type="Function">
                                     <param id="0" name="Name">&quot;TutorialPart&quot; &amp;m1_tutorialTracker</param>
@@ -348,13 +391,12 @@
                                     <param id="0" name="X">3000</param>
                                     <param id="1" name="Y">3000</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="645831600321460" type="m1_AdvanceTutorialClick">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">0</param>
-                                </action>
                                 <action id="-4" name="Set layer visible" sid="965451596057390" type="System">
                                     <param id="0" name="Layer">&quot;Win&quot;</param>
                                     <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="237921140474606" type="m1_tutLight">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -526,10 +568,6 @@
                 <action disabled="1" id="-13" name="Set boolean" sid="626589205276636" type="m1_Pump">
                     <param id="0" name="Instance variable">isPressed</param>
                     <param id="1" name="Value">1</param>
-                </action>
-                <action id="-3" name="Set position" sid="353005152566719" type="m1_AdvanceTutorialClick">
-                    <param id="0" name="X">0</param>
-                    <param id="1" name="Y">0</param>
                 </action>
             </actions>
             <sub-events>
