@@ -131,6 +131,14 @@
                         <action id="4" name="Load" sid="152004088318769" type="GG_State">
                             <param id="0" name="JSON">LocalStorage.ItemValue</param>
                         </action>
+                        <action id="-9" name="Set value" sid="609280908468044" type="System">
+                            <param id="0" name="Variable">GG_Difficulty</param>
+                            <param id="1" name="Value">GG_State.Get(&quot;difficulty&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="599573445150359" type="System">
+                            <param id="0" name="Variable">GG_Selected_Game</param>
+                            <param id="1" name="Value">GG_State.Get(&quot;selected game&quot;)</param>
+                        </action>
                         <action id="0" name="Call function" sid="738602492763552" type="Function">
                             <param id="0" name="Name">GG_Callback</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -389,16 +397,27 @@
                     </actions>
                     <sub-events>
                         <comment>Calculate Save Data</comment>
+                        <variable constant="0" name="GG_Score_String" sid="862853632978777" static="0" type="text"></variable>
+                        <variable constant="0" name="GG_Score_Key" sid="246538445241856" static="0" type="text"></variable>
+                        <event-block sid="454284670715217">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="613991499891765" type="System">
+                                    <param id="0" name="Variable">GG_Score_Key</param>
+                                    <param id="1" name="Value">&quot;game&quot; &amp; GG_Selected_Game</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="189406618587990">
                             <conditions>
                                 <condition id="3" name="Has key" sid="543251459022356" type="GG_State">
-                                    <param id="0" name="Key">&quot;game&quot; &amp; GG_Selected_Game</param>
+                                    <param id="0" name="Key">GG_Score_Key</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Add key" sid="581163001024856" type="GG_State">
-                                    <param id="0" name="Key">&quot;game&quot; &amp; GG_Selected_Game</param>
-                                    <param id="1" name="Value">0</param>
+                                <action id="-9" name="Set value" sid="974365259596241" type="System">
+                                    <param id="0" name="Variable">GG_Score_String</param>
+                                    <param id="1" name="Value">GG_State.Get(GG_Score_Key)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -406,7 +425,80 @@
                             <conditions>
                                 <condition id="-22" name="Else" sid="394899910265639" type="System" />
                             </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="592377540093328" type="System">
+                                    <param id="0" name="Variable">GG_Score_String</param>
+                                    <param id="1" name="Value">&quot;0 0 0&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="706903812727005">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="330082064676065" type="System">
+                                    <param id="0" name="First value">int(tokenat(GG_Score_String, GG_State.Get(&quot;difficulty&quot;), &quot; &quot;))</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
                             <actions />
+                            <sub-events>
+                                <event-block sid="973119130001811">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="568319675848229" type="System">
+                                            <param id="0" name="Variable">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="753440721654578" type="System">
+                                            <param id="0" name="Variable">GG_Score_String</param>
+                                            <param id="1" name="Value">Function.Param(0) &amp; &quot; &quot; &amp; tokenat(GG_Score_String, 1, &quot; &quot;) &amp; &quot; &quot; &amp; tokenat(GG_Score_String, 2, &quot; &quot;) </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="497324818402736">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="906418306112264" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="278496870827516" type="System">
+                                            <param id="0" name="Variable">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="430293860440776" type="System">
+                                            <param id="0" name="Variable">GG_Score_String</param>
+                                            <param id="1" name="Value">tokenat(GG_Score_String, 0, &quot; &quot;) &amp; Function.Param(0) &amp; &quot; &quot; &amp;  tokenat(GG_Score_String, 2, &quot; &quot;) </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="385344662814665">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="651950188895235" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="287174345747364" type="System">
+                                            <param id="0" name="Variable">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="295634333267123" type="System">
+                                            <param id="0" name="Variable">GG_Score_String</param>
+                                            <param id="1" name="Value">tokenat(GG_Score_String, 0, &quot; &quot;) &amp; &quot; &quot; &amp; tokenat(GG_Score_String, 1, &quot; &quot;) &amp; Function.Param(0) </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="242000095528323">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Add key" sid="248290658928722" type="GG_State">
+                                            <param id="0" name="Key">GG_Score_Key</param>
+                                            <param id="1" name="Value">GG_Score_String</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Save new score</comment>
                         <event-block sid="867402010718416">
@@ -482,6 +574,111 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <comment>Calculate Save Data</comment>
+                        <variable constant="0" name="GG_Score_String" sid="752211111540470" static="0" type="text"></variable>
+                        <variable constant="0" name="GG_Score_Key" sid="220667837068621" static="0" type="text"></variable>
+                        <event-block sid="482642348516179">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="158779534853721" type="System">
+                                    <param id="0" name="Variable">GG_Score_Key</param>
+                                    <param id="1" name="Value">&quot;game&quot; &amp; GG_Selected_Game</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="928572818324546">
+                            <conditions>
+                                <condition id="3" name="Has key" sid="327470940999578" type="GG_State">
+                                    <param id="0" name="Key">GG_Score_Key</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="634789267950305" type="System">
+                                    <param id="0" name="Variable">GG_Score_String</param>
+                                    <param id="1" name="Value">GG_State.Get(GG_Score_Key)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="730470278326348">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="975530128017565" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="616604976097778" type="System">
+                                    <param id="0" name="Variable">GG_Score_String</param>
+                                    <param id="1" name="Value">&quot;1 0 0&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="234475490096907">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="171852781190450" type="System">
+                                    <param id="0" name="First value">int(tokenat(GG_Score_String, GG_State.Get(&quot;difficulty&quot;), &quot; &quot;))</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="966768571270651">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="145961724506536" type="System">
+                                            <param id="0" name="Variable">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="570688519020856" type="System">
+                                            <param id="0" name="Variable">GG_Score_String</param>
+                                            <param id="1" name="Value">Function.Param(0) &amp; &quot; &quot; &amp; tokenat(GG_Score_String, 1, &quot; &quot;) &amp; &quot; &quot; &amp; tokenat(GG_Score_String, 2, &quot; &quot;) </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="191802672334621">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="965626538042643" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="990550529561977" type="System">
+                                            <param id="0" name="Variable">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="134414465514805" type="System">
+                                            <param id="0" name="Variable">GG_Score_String</param>
+                                            <param id="1" name="Value">tokenat(GG_Score_String, 0, &quot; &quot;) &amp; Function.Param(0) &amp; &quot; &quot; &amp;  tokenat(GG_Score_String, 2, &quot; &quot;) </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="632901405129396">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="280904391026660" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="923659420573708" type="System">
+                                            <param id="0" name="Variable">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="355460837170680" type="System">
+                                            <param id="0" name="Variable">GG_Score_String</param>
+                                            <param id="1" name="Value">tokenat(GG_Score_String, 0, &quot; &quot;) &amp; &quot; &quot; &amp; tokenat(GG_Score_String, 1, &quot; &quot;) &amp; Function.Param(0) </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="204140371255463">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Add key" sid="655075266700948" type="GG_State">
+                                            <param id="0" name="Key">GG_Score_Key</param>
+                                            <param id="1" name="Value">GG_Score_String</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Save Score</comment>
                         <event-block sid="714902665674831">
                             <conditions />
                             <actions>
