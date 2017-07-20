@@ -505,7 +505,7 @@
                             </actions>
                         </event-block>
                         <comment>Calculate Animal Scoring</comment>
-                        <event-block disabled="1" sid="363537352198952">
+                        <event-block sid="363537352198952">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="548238461662014" type="System">
                                     <param id="0" name="Variable">GG_GAME_VERSION</param>
@@ -516,10 +516,10 @@
                             <actions />
                             <sub-events>
                                 <variable constant="0" name="GG_trigger_animals" sid="677065542274262" static="0" type="number">0</variable>
-                                <event-group description="" disabled="1" sid="773099186739512" title="GG Checking Individual Game Score Triggers">
+                                <event-group description="" sid="773099186739512" title="GG Checking Individual Game Score Triggers">
                                     <sub-events>
                                         <variable constant="0" name="GG_Temp_Score" sid="160953389768475" static="0" type="text"></variable>
-                                        <event-block disabled="1" sid="776436073283749">
+                                        <event-block sid="776436073283749">
                                             <conditions />
                                             <actions>
                                                 <action id="-9" name="Set value" sid="689106451821114" type="System">
@@ -529,7 +529,7 @@
                                             </actions>
                                         </event-block>
                                         <comment>If Medium + Hard scores is greater than 3</comment>
-                                        <event-block disabled="1" sid="672294482241099">
+                                        <event-block sid="672294482241099">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="763256825039302" type="System">
                                                     <param id="0" name="First value">GG_Temp_Score</param>
@@ -559,12 +559,12 @@
                                         </event-block>
                                     </sub-events>
                                 </event-group>
-                                <event-group description="" disabled="1" sid="492662667356403" title="GG Checking Total Game Score Triggers">
+                                <event-group description="" sid="492662667356403" title="GG Checking Total Game Score Triggers">
                                     <sub-events>
                                         <variable constant="0" name="GG_Score_Sum" sid="699525106719616" static="0" type="number">0</variable>
                                         <comment>Checking the scores of each game, totaling them up</comment>
                                         <comment>Flagging &apos;trigger animal&apos; as necessary</comment>
-                                        <event-block disabled="1" sid="613163064254004">
+                                        <event-block sid="613163064254004">
                                             <conditions>
                                                 <condition id="-10" name="For" sid="559993311253986" type="System">
                                                     <param id="0" name="Name">&quot;Each Game&quot;</param>
@@ -576,7 +576,7 @@
                                             <sub-events>
                                                 <comment>Adding Medium and Hard Scores to Sum</comment>
                                                 <variable constant="0" name="GG_Temp_Scores" sid="868696582608445" static="0" type="text"></variable>
-                                                <event-block disabled="1" sid="488578182144737">
+                                                <event-block sid="488578182144737">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="255164468489736" type="System">
                                                             <param id="0" name="First value">GG_State.Get(&quot;game&quot; &amp; loopindex)</param>
@@ -598,97 +598,197 @@
                                             </sub-events>
                                         </event-block>
                                         <comment>Animals with total conditions</comment>
-                                        <event-block disabled="1" sid="693890748933184">
+                                        <event-block sid="306364534755019">
                                             <conditions>
-                                                <condition id="3" name="Has key" sid="795388211871094" type="GG_State">
-                                                    <param id="0" name="Key">&quot;C6_Animal_Visible8&quot;</param>
-                                                </condition>
-                                                <condition id="0" name="Compare value" sid="421500533024235" type="GG_State">
-                                                    <param id="0" name="Key">&quot;C6_Animal_Visible8&quot;</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
                                                 <condition id="-14" name="Compare variable" sid="158536538842892" type="System">
                                                     <param id="0" name="Variable">GG_Score_Sum</param>
                                                     <param id="1" name="Comparison">5</param>
                                                     <param id="2" name="Value">8</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="556627224429507" type="System">
-                                                    <param id="0" name="Variable">GG_trigger_animals</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="693890748933184">
+                                                    <conditions>
+                                                        <condition id="3" name="Has key" sid="795388211871094" type="GG_State">
+                                                            <param id="0" name="Key">&quot;C6_Animal_Visible8&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="437038957929176">
+                                                            <conditions>
+                                                                <condition id="0" name="Compare value" sid="421500533024235" type="GG_State">
+                                                                    <param id="0" name="Key">&quot;C6_Animal_Visible8&quot;</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="556627224429507" type="System">
+                                                                    <param id="0" name="Variable">GG_trigger_animals</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="818229666038618">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="329114850278604" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="738084857949929" type="System">
+                                                            <param id="0" name="Variable">GG_trigger_animals</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
-                                        <event-block disabled="1" sid="534917539902060">
+                                        <event-block sid="895152307030413">
                                             <conditions>
-                                                <condition id="3" name="Has key" sid="317579798222418" type="GG_State">
-                                                    <param id="0" name="Key">&quot;C6_Animal_Visible9&quot;</param>
-                                                </condition>
-                                                <condition id="0" name="Compare value" sid="588678948084705" type="GG_State">
-                                                    <param id="0" name="Key">&quot;C6_Animal_Visible9&quot;</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
                                                 <condition id="-14" name="Compare variable" sid="709913227302435" type="System">
                                                     <param id="0" name="Variable">GG_Score_Sum</param>
                                                     <param id="1" name="Comparison">5</param>
                                                     <param id="2" name="Value">16</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="715309130228686" type="System">
-                                                    <param id="0" name="Variable">GG_trigger_animals</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="534917539902060">
+                                                    <conditions>
+                                                        <condition id="3" name="Has key" sid="317579798222418" type="GG_State">
+                                                            <param id="0" name="Key">&quot;C6_Animal_Visible9&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="846640835324003">
+                                                            <conditions>
+                                                                <condition id="0" name="Compare value" sid="588678948084705" type="GG_State">
+                                                                    <param id="0" name="Key">&quot;C6_Animal_Visible9&quot;</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="715309130228686" type="System">
+                                                                    <param id="0" name="Variable">GG_trigger_animals</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="768624158368183">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="917532832931818" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="130612680408708" type="System">
+                                                            <param id="0" name="Variable">GG_trigger_animals</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
-                                        <event-block disabled="1" sid="972282665264981">
+                                        <event-block sid="220298863406160">
                                             <conditions>
-                                                <condition id="3" name="Has key" sid="425169221178791" type="GG_State">
-                                                    <param id="0" name="Key">&quot;C6_Animal_Visible10&quot;</param>
-                                                </condition>
-                                                <condition id="0" name="Compare value" sid="995337903564562" type="GG_State">
-                                                    <param id="0" name="Key">&quot;C6_Animal_Visible10&quot;</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
                                                 <condition id="-14" name="Compare variable" sid="935493009729545" type="System">
                                                     <param id="0" name="Variable">GG_Score_Sum</param>
                                                     <param id="1" name="Comparison">5</param>
                                                     <param id="2" name="Value">32</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="191612573930025" type="System">
-                                                    <param id="0" name="Variable">GG_trigger_animals</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="972282665264981">
+                                                    <conditions>
+                                                        <condition id="3" name="Has key" sid="425169221178791" type="GG_State">
+                                                            <param id="0" name="Key">&quot;C6_Animal_Visible10&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="252790005279693">
+                                                            <conditions>
+                                                                <condition id="0" name="Compare value" sid="995337903564562" type="GG_State">
+                                                                    <param id="0" name="Key">&quot;C6_Animal_Visible10&quot;</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="191612573930025" type="System">
+                                                                    <param id="0" name="Variable">GG_trigger_animals</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="991697123224256">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="129254228819545" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="507996180036609" type="System">
+                                                            <param id="0" name="Variable">GG_trigger_animals</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
-                                        <event-block disabled="1" sid="458727541706323">
+                                        <event-block sid="458727541706323">
                                             <conditions>
-                                                <condition id="3" name="Has key" sid="349501713751674" type="GG_State">
-                                                    <param id="0" name="Key">&quot;C6_Animal_Visible11&quot;</param>
-                                                </condition>
-                                                <condition id="0" name="Compare value" sid="963335366602916" type="GG_State">
-                                                    <param id="0" name="Key">&quot;C6_Animal_Visible11&quot;</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
                                                 <condition id="-14" name="Compare variable" sid="298678048677988" type="System">
                                                     <param id="0" name="Variable">GG_Score_Sum</param>
                                                     <param id="1" name="Comparison">5</param>
                                                     <param id="2" name="Value">48</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="644684546948310" type="System">
-                                                    <param id="0" name="Variable">GG_trigger_animals</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="154725266425167">
+                                                    <conditions>
+                                                        <condition id="3" name="Has key" sid="349501713751674" type="GG_State">
+                                                            <param id="0" name="Key">&quot;C6_Animal_Visible11&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="389222300951450">
+                                                            <conditions>
+                                                                <condition id="0" name="Compare value" sid="963335366602916" type="GG_State">
+                                                                    <param id="0" name="Key">&quot;C6_Animal_Visible11&quot;</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="644684546948310" type="System">
+                                                                    <param id="0" name="Variable">GG_trigger_animals</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="262894369591714">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="979130167680243" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="333585455442599" type="System">
+                                                            <param id="0" name="Variable">GG_trigger_animals</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-group>
