@@ -2070,6 +2070,78 @@
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="100015306236587">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="469504112147535" type="System">
+                                            <param id="0" name="Variable">m6_2_tempscore</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="992443240473135" type="Function">
+                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="721515319195280">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="864959192059191" type="System">
+                                            <param id="0" name="Variable">m6_2_tempscore</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="962774168187234" type="System">
+                                            <param id="0" name="Variable">m6_2_tempscore</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="367048629274537" type="Function">
+                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="433133495781529">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="766124785248049" type="System">
+                                            <param id="0" name="Variable">m6_2_tempscore</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="875618097767217" type="System">
+                                            <param id="0" name="Variable">m6_2_tempscore</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="742164168953540" type="Function">
+                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="708479208232212">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="678819296549537" type="System">
+                                            <param id="0" name="Variable">m6_2_tempscore</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="432471351471599" type="Function">
+                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="974297944245201">
                             <conditions>
