@@ -473,7 +473,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="430293860440776" type="System">
                                             <param id="0" name="Variable">GG_Score_String</param>
-                                            <param id="1" name="Value">tokenat(GG_Score_String, 0, &quot; &quot;) &amp; Function.Param(0) &amp; &quot; &quot; &amp;  tokenat(GG_Score_String, 2, &quot; &quot;) </param>
+                                            <param id="1" name="Value">tokenat(GG_Score_String, 0, &quot; &quot;) &amp; &quot; &quot; &amp; Function.Param(0) &amp; &quot; &quot; &amp;  tokenat(GG_Score_String, 2, &quot; &quot;) </param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -489,7 +489,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="295634333267123" type="System">
                                             <param id="0" name="Variable">GG_Score_String</param>
-                                            <param id="1" name="Value">tokenat(GG_Score_String, 0, &quot; &quot;) &amp; &quot; &quot; &amp; tokenat(GG_Score_String, 1, &quot; &quot;) &amp; Function.Param(0) </param>
+                                            <param id="1" name="Value">tokenat(GG_Score_String, 0, &quot; &quot;) &amp; &quot; &quot; &amp; tokenat(GG_Score_String, 1, &quot; &quot;) &amp; &quot; &quot; &amp; Function.Param(0) </param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -541,21 +541,55 @@
                                                     <param id="1" name="Comparison">5</param>
                                                     <param id="2" name="Second value">3</param>
                                                 </condition>
-                                                <condition id="3" name="Has key" sid="992685850578933" type="GG_State">
-                                                    <param id="0" name="Key">&quot;C6_Animal_Visible&quot; &amp; GG_Selected_Game</param>
-                                                </condition>
-                                                <condition id="0" name="Compare value" sid="873120884328848" type="GG_State">
-                                                    <param id="0" name="Key">&quot;C6_Animal_Visible&quot; &amp; GG_Selected_Game</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="761161382359160" type="System">
-                                                    <param id="0" name="Variable">GG_trigger_animals</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <comment>Check if it is change or not (value is non-existent or is 0)</comment>
+                                                <event-block sid="794309833168250">
+                                                    <conditions>
+                                                        <condition id="3" name="Has key" sid="992685850578933" type="GG_State">
+                                                            <param id="0" name="Key">&quot;C6_Animal_Visible&quot; &amp; GG_Selected_Game</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="862511860342335">
+                                                            <conditions>
+                                                                <condition id="0" name="Compare value" sid="873120884328848" type="GG_State">
+                                                                    <param id="0" name="Key">&quot;C6_Animal_Visible&quot; &amp; GG_Selected_Game</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="875403765689480" type="System">
+                                                                    <param id="0" name="Variable">GG_trigger_animals</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="0" name="Add key" sid="806126533537810" type="GG_State">
+                                                                    <param id="0" name="Key">&quot;C6_Animal_Visible&quot; &amp; GG_Selected_Game</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="561712203541754">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="932335801952741" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="585728751289312" type="System">
+                                                            <param id="0" name="Variable">GG_trigger_animals</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="0" name="Add key" sid="980825076745307" type="GG_State">
+                                                            <param id="0" name="Key">&quot;C6_Animal_Visible&quot; &amp; GG_Selected_Game</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-group>
@@ -629,6 +663,10 @@
                                                                     <param id="0" name="Variable">GG_trigger_animals</param>
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
+                                                                <action id="0" name="Add key" sid="822756955794317" type="GG_State">
+                                                                    <param id="0" name="Key">&quot;C6_Animal_Visible8&quot;</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
@@ -640,6 +678,10 @@
                                                     <actions>
                                                         <action id="-9" name="Set value" sid="738084857949929" type="System">
                                                             <param id="0" name="Variable">GG_trigger_animals</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="0" name="Add key" sid="962363878542361" type="GG_State">
+                                                            <param id="0" name="Key">&quot;C6_Animal_Visible8&quot;</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
                                                     </actions>
@@ -677,6 +719,10 @@
                                                                     <param id="0" name="Variable">GG_trigger_animals</param>
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
+                                                                <action id="0" name="Add key" sid="702887769341949" type="GG_State">
+                                                                    <param id="0" name="Key">&quot;C6_Animal_Visible9&quot;</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
@@ -688,6 +734,10 @@
                                                     <actions>
                                                         <action id="-9" name="Set value" sid="130612680408708" type="System">
                                                             <param id="0" name="Variable">GG_trigger_animals</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="0" name="Add key" sid="961689827424791" type="GG_State">
+                                                            <param id="0" name="Key">&quot;C6_Animal_Visible9&quot;</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
                                                     </actions>
@@ -725,6 +775,10 @@
                                                                     <param id="0" name="Variable">GG_trigger_animals</param>
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
+                                                                <action id="0" name="Add key" sid="191807006339889" type="GG_State">
+                                                                    <param id="0" name="Key">&quot;C6_Animal_Visible10&quot;</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
@@ -736,6 +790,10 @@
                                                     <actions>
                                                         <action id="-9" name="Set value" sid="507996180036609" type="System">
                                                             <param id="0" name="Variable">GG_trigger_animals</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="0" name="Add key" sid="405484430411462" type="GG_State">
+                                                            <param id="0" name="Key">&quot;C6_Animal_Visible10&quot;</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
                                                     </actions>
@@ -773,6 +831,10 @@
                                                                     <param id="0" name="Variable">GG_trigger_animals</param>
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
+                                                                <action id="0" name="Add key" sid="177937575727090" type="GG_State">
+                                                                    <param id="0" name="Key">&quot;C6_Animal_Visible11&quot;</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
@@ -786,12 +848,25 @@
                                                             <param id="0" name="Variable">GG_trigger_animals</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
+                                                        <action id="0" name="Add key" sid="343377857499861" type="GG_State">
+                                                            <param id="0" name="Key">&quot;C6_Animal_Visible11&quot;</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-group>
+                                <event-block sid="238422017745738">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Add key" sid="156905401323945" type="GG_State">
+                                            <param id="0" name="Key">&quot;trigger animals&quot;</param>
+                                            <param id="1" name="Value">GG_trigger_animals</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <comment>TODO: Calculate Narrative Events</comment>

@@ -158,19 +158,19 @@
                                 <event-block sid="433087114017480">
                                     <conditions>
                                         <condition id="0" name="Compare value" sid="839195968459890" type="GG_State">
-                                            <param id="0" name="Key">&quot;trigger animal&quot;</param>
+                                            <param id="0" name="Key">&quot;trigger animals&quot;</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="418506526892597" type="Function">
-                                            <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;UIDifficulty&quot;</param>
-                                        </action>
                                         <action id="1" name="Set key" sid="721468149750571" type="GG_State">
                                             <param id="0" name="Key">&quot;trigger animal&quot;</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="279038369380502" type="Function">
+                                            <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;UIStart&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
