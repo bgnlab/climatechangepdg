@@ -1,0 +1,1340 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>m4_GameEventSheet</name>
+    <events>
+        <include>GG Scores and Levels</include>
+        <variable constant="0" name="m4_tapLeniency" sid="490408921976131" static="0" type="number">50</variable>
+        <variable constant="0" name="m4_droppedOverZone" sid="589369347876108" static="0" type="number">0</variable>
+        <variable constant="0" name="m4_itterator" sid="465031812448796" static="0" type="number">0</variable>
+        <variable constant="0" name="m4_playerScore" sid="516533506679574" static="0" type="number">0</variable>
+        <variable constant="0" name="m4_gridTileSizeX" sid="712430873457542" static="0" type="number">96</variable>
+        <variable constant="0" name="m4_gridTileSizeY" sid="481391999204459" static="0" type="number">96</variable>
+        <variable constant="0" name="m4_gridTileOffsetX" sid="757052443947767" static="0" type="number">32</variable>
+        <variable constant="0" name="m4_numberOfItemsPlaced" sid="986730626286501" static="0" type="number">0</variable>
+        <variable constant="0" name="m4_gridTileOffsetY" sid="188241101935279" static="0" type="number">64</variable>
+        <event-block sid="730003800700993">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="552239772410781" type="System" />
+            </conditions>
+            <actions>
+                <action id="-45" name="Reset persisted objects" sid="968139302502321" type="System" />
+                <action id="-21" name="Reset global variables" sid="234923407016828" type="System" />
+                <action id="-5" name="Set width" sid="171373515771617" type="m4_Pieces">
+                    <param id="0" name="Width">m4_Pieces.Width / 3</param>
+                </action>
+                <action id="-6" name="Set height" sid="435642660887689" type="m4_Pieces">
+                    <param id="0" name="Height">m4_Pieces.Height / 3</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>grab the iid of each piece present</comment>
+                <event-block sid="534166718583574">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="352806216416377" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Insert" sid="372409417937366" type="m4_Array">
+                            <param id="0" name="Value">m4_Pieces.IID</param>
+                            <param id="1" name="Index">m4_itterator</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="530541604653967" type="System">
+                            <param id="0" name="Variable">m4_itterator</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action disabled="1" id="-5" name="Set width" sid="750033691738509" type="m4_Pieces">
+                            <param id="0" name="Width">m4_Pieces.Width * 3</param>
+                        </action>
+                        <action disabled="1" id="-6" name="Set height" sid="102607701844864" type="m4_Pieces">
+                            <param id="0" name="Height">m4_Pieces.Height * 3</param>
+                        </action>
+                        <action disabled="1" id="-18" name="Rotate clockwise" sid="327450235630737" type="m4_Pieces">
+                            <param id="0" name="Degrees">90</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="293207269924160" type="m4_Pieces">
+                            <param id="0" name="Instance variable">Number</param>
+                            <param id="1" name="Value">m4_itterator</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="616960846110347" type="m4_Pieces">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="725718167209254">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="799495263166125" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;M4_TutorialLevel&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="268564632956049" type="Function">
+                            <param id="0" name="Name">&quot;M4 Callback&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="434833493361875">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="665534881545336" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="873570252339490" type="Function">
+                            <param id="0" name="Name">&quot;GG Fetch State&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;M4 Callback&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Initialize after state has been  loaded</comment>
+        <event-block sid="905260456707434">
+            <conditions>
+                <condition id="0" name="On function" sid="369635426158865" type="Function">
+                    <param id="0" name="Name">&quot;M4 Callback&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="664303510788147">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="286927173132665" type="System">
+                            <param id="0" name="Variable">GG_Difficulty</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="538044275123873" type="System">
+                            <param id="0" name="Variable">m4_scrollSpeed</param>
+                            <param id="1" name="Value">200</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="204398471920221" type="System">
+                            <param id="0" name="Variable">m4_1StarScore</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="392696127986806" type="System">
+                            <param id="0" name="Variable">m4_2StarScore</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="378306924012798" type="System">
+                            <param id="0" name="Variable">m4_3StarScore</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="968508088871268" type="System">
+                            <param id="0" name="Variable">m4_timeTillItemLeaves</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="706211348990462">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="966119951529110" type="System">
+                            <param id="0" name="Variable">GG_Difficulty</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="129655992474184" type="System">
+                            <param id="0" name="Variable">m4_scrollSpeed</param>
+                            <param id="1" name="Value">300</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="367867426423631" type="System">
+                            <param id="0" name="Variable">m4_1StarScore</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="140597207204858" type="System">
+                            <param id="0" name="Variable">m4_2StarScore</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="486234487735937" type="System">
+                            <param id="0" name="Variable">m4_3StarScore</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="416539853597162" type="System">
+                            <param id="0" name="Variable">m4_timeTillItemLeaves</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="571751140325838">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="264661918535044" type="System">
+                            <param id="0" name="Variable">GG_Difficulty</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="703358079159746" type="System">
+                            <param id="0" name="Variable">m4_scrollSpeed</param>
+                            <param id="1" name="Value">600</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="292922751416351" type="System">
+                            <param id="0" name="Variable">m4_1StarScore</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="461255445380171" type="System">
+                            <param id="0" name="Variable">m4_2StarScore</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="812374735119636" type="System">
+                            <param id="0" name="Variable">m4_3StarScore</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="352928566402110" type="System">
+                            <param id="0" name="Variable">m4_timeTillItemLeaves</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="671228258171025">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="952271643271177" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="766103655830901" type="m4_Pieces">
+                            <param id="0" name="Speed">m4_scrollSpeed</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="428871995154412">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Play" sid="864477589730277" type="Audio">
+                            <param id="0" name="Audio file">bgm_clothing_game</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="168585684905180" type="System">
+                            <param id="0" name="Layer">&quot;Win&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <variable constant="0" name="m4_scrollSpeed" sid="567283353821112" static="0" type="number">200</variable>
+        <variable constant="0" name="m4_xLog" sid="747952547048934" static="0" type="number">200</variable>
+        <variable constant="0" name="m4_yLog" sid="639046604953978" static="0" type="number">200</variable>
+        <event-group description="" sid="144907101350813" title="m4_Scrolling">
+            <sub-events>
+                <event-block sid="228173279078677">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="426758403335492" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="258390396975804" type="m4_TiledConveyor">
+                            <param id="0" name="Y">m4_TiledConveyor.Y + (dt * m4_scrollSpeed)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>scrolls the background</comment>
+                        <event-block sid="711534696443763">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="731581581124936" type="m4_TiledConveyor">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">m4_TiledConveyor.resetPoint</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="522501995690831" type="m4_TiledConveyor">
+                                    <param id="0" name="Y">m4_TiledConveyor.startingPosition</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="107840500383646">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="341527655131315" type="System" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="422657603249141" type="m4_Pieces">
+                            <param id="0" name="Instance variable">isSelected</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="109785232960292" type="m4_Pieces">
+                            <param id="0" name="Instance variable">placementSuccessful</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="279053334589355" type="m4_Pieces">
+                            <param id="0" name="Instance variable">putOnConveyor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="885461110596536" type="m4_Pieces">
+                            <param id="0" name="X">m4_Pieces.X + (dt * m4_scrollSpeed)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="542350385553923" type="System">
+                            <param id="0" name="Variable">m4_xLog</param>
+                            <param id="1" name="Value">m4_xLog + (dt*m4_scrollSpeed)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="584598027522893" type="System">
+                            <param id="0" name="Variable">m4_yLog</param>
+                            <param id="1" name="Value">m4_yLog + (dt*m4_scrollSpeed)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="m4_dragX" sid="911257590473357" static="0" type="number">0</variable>
+        <variable constant="0" name="m4_dragY" sid="534544936849446" static="0" type="number">0</variable>
+        <variable constant="0" name="m4_pieceValtemp" sid="963681444556463" static="0" type="number">0</variable>
+        <variable constant="0" name="m4_bordervalTemp" sid="500262677983401" static="0" type="number">0</variable>
+        <event-group description="" sid="375046028543494" title="m4_DragEvents">
+            <sub-events>
+                <variable constant="0" name="xStart" sid="278230288318030" static="0" type="number">0</variable>
+                <variable constant="0" name="yStart" sid="856148810439804" static="0" type="number">0</variable>
+                <comment>logic for placing a piece: when a piece is selected pick a random one that the mouse clicks on (used if there are multiple overtop eachother)</comment>
+                <event-block sid="993528546611280">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="488164807297767" type="m4_Pieces" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="574633696647307" type="m4_Pieces">
+                            <param id="0" name="Instance variable">placementSuccessful</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="284379418232631" type="m4_Pieces">
+                            <param id="0" name="Instance variable">putOnConveyor</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="335812588742245" type="m4_Pieces">
+                            <param id="0" name="Instance variable">lastX</param>
+                            <param id="1" name="Value">Self.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="929464236463098" type="m4_Pieces">
+                            <param id="0" name="Instance variable">lastY</param>
+                            <param id="1" name="Value">self.Y</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="912900263700469" type="m4_Pieces">
+                            <param id="0" name="Instance variable">grabbed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="210929100735792" type="System">
+                            <param id="0" name="Variable">m4_xLog</param>
+                            <param id="1" name="Value">m4_Pieces.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="132856140380841" type="System">
+                            <param id="0" name="Variable">m4_yLog</param>
+                            <param id="1" name="Value">m4_Pieces.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="864174214908734">
+                    <conditions>
+                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="702473772886176" type="m4_Pieces" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="264389817642481" type="m4_Pieces">
+                            <param id="0" name="Instance variable">placementSuccessful</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-16" name="Wait" sid="976142270990043" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="133629853769020">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="846435867178979" type="m4_Pieces">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">Self.lastX</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="337545300923757" type="m4_Pieces">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="Y co-ordinate">Self.lastY</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="888387740354912" type="m4_Pieces">
+                                    <param id="0" name="Instance variable">grabbed</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="111640015039230">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="621027955123543" type="m4_Pieces">
+                                            <param id="0" name="Instance variable">isSizedUp</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="952728723600294" type="m4_Pieces">
+                                            <param id="0" name="Instance variable">isSizedUp</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="560835923233003" type="m4_Pieces">
+                                            <param id="0" name="Width">m4_Pieces.Width * 1.5</param>
+                                        </action>
+                                        <action id="-6" name="Set height" sid="201550426012207" type="m4_Pieces">
+                                            <param id="0" name="Height">m4_Pieces.Height * 1.5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>if the piece is sideways, move it based on Y , X</comment>
+                                <event-block any="1" sid="303302765171081">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="411564364010295" type="m4_Pieces">
+                                            <param id="0" name="First angle">89</param>
+                                            <param id="1" name="Second angle">91</param>
+                                        </condition>
+                                        <condition id="-13" name="Is between angles" sid="972756169937667" type="m4_Pieces">
+                                            <param id="0" name="First angle">269</param>
+                                            <param id="1" name="Second angle">271</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="676993152434457" type="m4_Pieces">
+                                            <param id="0" name="X">round((Touch.X - m4_gridTileSizeY*2)/m4_gridTileSizeY)*m4_gridTileSizeY + self.Height/2 + m4_gridTileOffsetX</param>
+                                            <param id="1" name="Y">round((Touch.Y - m4_gridTileSizeX*2)/m4_gridTileSizeX)*m4_gridTileSizeX + self.Width/2 +  m4_gridTileOffsetY</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="415884494539566" type="m4_Pieces">
+                                            <param id="0" name="Instance variable">wasMoved</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="687852126786344" type="System">
+                                            <param id="0" name="Variable">m4_dragX</param>
+                                            <param id="1" name="Value">m4_Pieces.X</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="624119141321541" type="System">
+                                            <param id="0" name="Variable">m4_dragY</param>
+                                            <param id="1" name="Value">m4_Pieces.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>if the piece is not sideways move it based on X , Y</comment>
+                                <event-block any="1" sid="907371226598350">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="562704366884724" type="m4_Pieces">
+                                            <param id="0" name="First angle">359</param>
+                                            <param id="1" name="Second angle">1</param>
+                                        </condition>
+                                        <condition id="-13" name="Is between angles" sid="980411817575758" type="m4_Pieces">
+                                            <param id="0" name="First angle">179</param>
+                                            <param id="1" name="Second angle">181</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="946627197219343" type="m4_Pieces">
+                                            <param id="0" name="X">round((Touch.X - m4_gridTileSizeX*2)/m4_gridTileSizeX)*m4_gridTileSizeX + self.Width/2 + m4_gridTileOffsetX</param>
+                                            <param id="1" name="Y">round((Touch.Y - m4_gridTileSizeY*2)/m4_gridTileSizeY)*m4_gridTileSizeY + self.Height/2 +  m4_gridTileOffsetY</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="250831868048854" type="m4_Pieces">
+                                            <param id="0" name="Instance variable">wasMoved</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="117104414528550" type="System">
+                                            <param id="0" name="Variable">m4_dragX</param>
+                                            <param id="1" name="Value">m4_Pieces.X</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="819403881704624" type="System">
+                                            <param id="0" name="Variable">m4_dragY</param>
+                                            <param id="1" name="Value">m4_Pieces.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>if the player properly places a piece, place it and give them a +1</comment>
+                <variable constant="0" name="releaseX" sid="524399834227858" static="0" type="number">0</variable>
+                <variable constant="0" name="releaseY" sid="375597680013880" static="0" type="number">0</variable>
+                <event-block sid="394099774261498">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="625633998884582" type="m4_Pieces" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="297202305904823" type="System">
+                            <param id="0" name="Variable">releaseX</param>
+                            <param id="1" name="Value">Touch.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="756039180530051" type="System">
+                            <param id="0" name="Variable">releaseY</param>
+                            <param id="1" name="Value">Touch.Y</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="945857336541320" type="m4_Pieces">
+                            <param id="0" name="Instance variable">grabbed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="855715375288185" type="m4_Pieces">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="627574498172990" type="System">
+                            <param id="0" name="Variable">m4_bordervalTemp</param>
+                            <param id="1" name="Value">m4_DropZone.BBoxLeft</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="440201766035496" type="System">
+                            <param id="0" name="Variable">m4_pieceValtemp</param>
+                            <param id="1" name="Value">m4_Pieces.BBoxLeft</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="463150709411644">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="428830883414994" type="System">
+                                    <param id="0" name="First value">m4_DropZone.BBoxBottom</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">m4_Pieces.BBoxBottom</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="245660477009675" type="System">
+                                    <param id="0" name="First value">m4_DropZone.BBoxLeft</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">m4_Pieces.BBoxLeft</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="748309475299581" type="System">
+                                    <param id="0" name="First value">m4_DropZone.BBoxRight</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">m4_Pieces.BBoxRight</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="419690070494684" type="System">
+                                    <param id="0" name="First value">m4_DropZone.BBoxTop</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">m4_Pieces.BBoxTop</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-3" name="Set position" sid="773036580149757" type="m4_Pieces">
+                                    <param id="0" name="X">m4_Pieces.X + m4_DumpTruck.X</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="500401415948896" type="m4_Pieces">
+                                    <param id="0" name="X">LayoutWidth *2</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="656894335820017" type="m4_Pieces">
+                                    <param id="0" name="Instance variable">placementSuccessful</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="346620081899928" type="Audio">
+                                    <param id="0" name="Audio file">sfx_trashclothing</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="881954103588960" type="System">
+                                    <param id="0" name="Variable">m4_playerScore</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="145165112144471" type="m4_ScoreText">
+                                    <param id="0" name="Text">&quot;Score: &quot; &amp;m4_playerScore</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set text" sid="187700875968487" type="m4_ScoreText">
+                                    <param id="0" name="Text">&quot;IS NOT IN BOUNDS&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="325081446956563">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="761770465586410" type="System" />
+                                <condition id="-1" name="Compare X" sid="626091294042924" type="m4_Pieces">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">Self.lastX + m4_tapLeniency</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="323337053002992" type="m4_Pieces">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">Self.lastY + m4_tapLeniency</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block disabled="1" sid="794553271204527">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="151015064211599" type="m4_Pieces">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="X co-ordinate">Self.lastX - m4_tapLeniency</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="268499013524583" type="m4_Pieces">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Y co-ordinate">Self.lastY - m4_tapLeniency</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="363614578210047" type="m4_Pieces">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-18" name="Rotate clockwise" sid="422567115585312" type="m4_Pieces">
+                                            <param id="0" name="Degrees">90</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="731128302105650" type="m4_Pieces">
+                                            <param id="0" name="Instance variable">putOnConveyor</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>if the user drops a piece not over the drop zone reset it</comment>
+                        <event-block sid="876130596201841">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="700326892550513" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="292195635768059" type="Audio">
+                                    <param id="0" name="Audio file">sfx_placeclothing</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action disabled="1" id="-10" name="Add to" sid="116590754619797" type="System">
+                                    <param id="0" name="Variable">m4_numberOfItemsPlaced</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action disabled="1" id="-10" name="Add to" sid="509639569594485" type="System">
+                                    <param id="0" name="Variable">m4_playerScore</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="888908174612173" type="m4_ScoreText">
+                                    <param id="0" name="Text">&quot;Score: &quot; &amp;m4_playerScore</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="856077238080656" type="m4_Pieces">
+                                    <param id="0" name="X">m4_dragX</param>
+                                    <param id="1" name="Y">m4_dragY</param>
+                                </action>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="955803255022687" type="m4_Pieces">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="580053857994071" type="System">
+                                    <param id="0" name="Variable">m4_droppedOverZone</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="306114109717302" type="m4_Pieces">
+                                    <param id="0" name="Instance variable">putOnConveyor</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="730745942514517" type="m4_Pieces">
+                                    <param id="0" name="Instance variable">wasDropped</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="896085119981593" type="m4_Pieces">
+                                    <param id="0" name="Instance variable">placementSuccessful</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set text" sid="638546583538679" type="m4_ScoreText">
+                                    <param id="0" name="Text">&quot;IS IN BOUNDS&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>if the piece they drop collides with any of the following, do a special condition</comment>
+        <event-block sid="506217981600209">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="286129649548117" type="System">
+                    <param id="0" name="Variable">m4_droppedOverZone</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="913532037886961" type="m4_Pieces">
+                    <param id="0" name="Instance variable">wasDropped</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="873132038291989" type="System">
+                    <param id="0" name="Variable">m4_droppedOverZone</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="390423034785884" type="m4_Pieces">
+                    <param id="0" name="Instance variable">wasDropped</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <variable constant="0" name="badPlacement" sid="864968540724423" static="0" type="number">0</variable>
+                <event-block sid="950139894721873">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="643915410827814" type="System">
+                            <param id="0" name="Object">m4_Boundry</param>
+                            <param id="1" name="Expression">0</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="270300282889221">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="142669319480191" type="m4_Pieces">
+                                    <param id="0" name="Object">m4_Boundry</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="177620283951676" type="System">
+                                    <param id="0" name="Variable">badPlacement</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="888380132140096">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="112935177036466" type="m4_Pieces">
+                            <param id="0" name="Object">m4_PiecesFamily</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="533599226631207" type="System">
+                            <param id="0" name="Variable">badPlacement</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="145453202845053">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="280214921479241" type="System">
+                            <param id="0" name="Variable">badPlacement</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="897422772229156">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="342847678424991" type="m4_Pieces">
+                                    <param id="0" name="Object">m4_PiecesFamily</param>
+                                </condition>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="140059849196462" type="m4_Pieces">
+                                    <param id="0" name="Object">m4_Boundry</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="237382489688986" type="Audio">
+                                    <param id="0" name="Audio file">sfx_placeclothing</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="331546887372664" type="System">
+                                    <param id="0" name="Variable">m4_numberOfItemsPlaced</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="813646899004999" type="System">
+                                    <param id="0" name="Variable">m4_playerScore</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="654925796006329" type="m4_ScoreText">
+                                    <param id="0" name="Text">&quot;Score: &quot; &amp;m4_playerScore</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="931445272773689" type="m4_Pieces">
+                                    <param id="0" name="X">m4_dragX</param>
+                                    <param id="1" name="Y">m4_dragY</param>
+                                </action>
+                                <action id="10" name="Insert" sid="963146799093635" type="m4_storeArray">
+                                    <param id="0" name="Value">m4_Pieces.IID</param>
+                                    <param id="1" name="Index">0</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="721236192337355" type="System">
+                                    <param id="0" name="Variable">m4_TutorialPiecePlaced</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="127259496239440">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="542422050652678" type="System" />
+                        <condition id="-14" name="Compare variable" sid="724169630420434" type="System">
+                            <param id="0" name="Variable">badPlacement</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-3" name="Set position" sid="837190607295219" type="m4_Pieces">
+                            <param id="0" name="X">m4_Pieces.X + m4_DumpTruck.X</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="908184288332191" type="System">
+                            <param id="0" name="Variable">m4_playerScore</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="427251084544675" type="m4_Pieces">
+                            <param id="0" name="X">LayoutWidth *2</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="688063937370823" type="m4_Pieces">
+                            <param id="0" name="Instance variable">placementSuccessful</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="971697839830158" type="Audio">
+                            <param id="0" name="Audio file">sfx_trashclothing</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="541695356965180" type="m4_ScoreText">
+                            <param id="0" name="Text">&quot;Score: &quot; &amp;m4_playerScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="734147547132925" title="m4_HitEvents">
+            <sub-events>
+                <comment>if a piece reaches the truck, destroy and subtract score</comment>
+                <event-block sid="172769393817631">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="871164321914851" type="m4_TruckHitbox">
+                            <param id="0" name="Object">m4_Pieces</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="673239951992277" type="m4_Pieces">
+                            <param id="0" name="Instance variable">grabbed</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="302913185980879" type="m4_Pieces">
+                            <param id="0" name="Instance variable">putOnConveyor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set rate" sid="890956882602603" type="m4_ItemTrashedParticle">
+                            <param id="0" name="Rate">50</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Destroy" sid="957386747618570" type="m4_Pieces" />
+                        <action disabled="1" id="-3" name="Set position" sid="562075809581372" type="m4_Pieces">
+                            <param id="0" name="X">m4_Pieces.X + m4_DumpTruck.X*2</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="316480330996106" type="m4_Pieces">
+                            <param id="0" name="X">LayoutWidth *2</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="707677544798009" type="System">
+                            <param id="0" name="Variable">m4_playerScore</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="683452400692707" type="Audio">
+                            <param id="0" name="Audio file">sfx_trashclothing</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="457734144151972" type="m4_ScoreText">
+                            <param id="0" name="Text">&quot;Score: &quot; &amp;m4_playerScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="m4_1StarScore" sid="468015284440691" static="0" type="number">2</variable>
+        <variable constant="0" name="m4_2StarScore" sid="876399250174359" static="0" type="number">4</variable>
+        <variable constant="0" name="m4_3StarScore" sid="272726969964700" static="0" type="number">6</variable>
+        <event-group description="" sid="135269153626021" title="m4_TimedEvents">
+            <sub-events>
+                <event-group description="" sid="239054854089447" title="m4_GameTimer">
+                    <sub-events>
+                        <event-block sid="587474221916425">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="581384158008183" type="System">
+                                    <param id="0" name="Interval (seconds)">0.05</param>
+                                </condition>
+                                <condition id="-5" name="Compare width" sid="359081563930340" type="m4_TimerProgress">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Width">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="631079165107874" type="m4_TimerProgress">
+                                    <param id="0" name="Width">Self.Width - 3.2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="948614967960575">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="880083280930935" type="System" />
+                                <condition id="-5" name="Compare width" sid="693112992582536" type="m4_TimerProgress">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Width">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="752982519935697" type="System">
+                                    <param id="0" name="Layer">&quot;Win&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="599727278568937">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="272124571972067" type="System">
+                                            <param id="0" name="Variable">m4_playerScore</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">m4_1StarScore</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="138828645114869" type="m4_star1">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="999695987919799">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="981371228914538" type="System">
+                                            <param id="0" name="Variable">m4_playerScore</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">m4_2StarScore</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="529426078051133" type="m4_star2">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="213587497849676">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="687000098036348" type="System">
+                                            <param id="0" name="Variable">m4_playerScore</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">m4_3StarScore</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="119227499936534" type="m4_star3">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="149480361472779">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="905934636254453" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="390179427529510" type="m4_Text">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>timer created by ivan for universal timer design</comment>
+                <event-group description="" sid="680857451154415" title="m4_ClothingSpawning">
+                    <sub-events>
+                        <event-block sid="397271190916140">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="712460853986074" type="System">
+                                    <param id="0" name="Interval (seconds)">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="113026732358753">
+                                    <conditions>
+                                        <condition id="-13" name="Pick nth instance" sid="457653698797781" type="System">
+                                            <param id="0" name="Object">m4_Pieces</param>
+                                            <param id="1" name="Instance">m4_instanceTracker</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="557531114554312" type="m4_Pieces">
+                                            <param id="0" name="Instance variable">putOnConveyor</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-5" name="Set width" sid="869133939208301" type="m4_Pieces">
+                                            <param id="0" name="Width">m4_Pieces.Width * 2</param>
+                                        </action>
+                                        <action id="-6" name="Set height" sid="272510647634436" type="m4_Pieces">
+                                            <param id="0" name="Height">m4_Pieces.Height * 2</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="641289798106163" type="m4_Pieces">
+                                            <param id="0" name="X">m4_backgroundTop.ImagePointX(&quot;clothingSpawnPoint&quot;)</param>
+                                            <param id="1" name="Y">m4_backgroundTop.ImagePointY(&quot;clothingSpawnPoint&quot;)</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="453903384270344" type="m4_Pieces">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="528455614587566" type="m4_Pieces">
+                                            <param id="0" name="Instance variable">putOnConveyor</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="125208112460030" type="System">
+                                            <param id="0" name="Variable">m4_instanceTracker</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="2" name="Stop" sid="819281685299177" type="m4_ThrowingStuffGuy" />
+                                        <action id="4" name="Set animation" sid="225975676170675" type="m4_ThrowingStuffGuy">
+                                            <param id="0" name="Animation">&quot;DrawnThrowingGuy&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="403568179590617">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="854141897333866" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="190564340399822">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="705266681773682" type="m4_ThrowingStuffGuy">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Number">16</param>
+                                        </condition>
+                                        <condition id="-13" name="Pick nth instance" sid="114194643810314" type="System">
+                                            <param id="0" name="Object">m4_Pieces</param>
+                                            <param id="1" name="Instance">m4_instanceTracker</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="877253432482993" type="m4_Pieces">
+                                            <param id="0" name="Instance variable">putOnConveyor</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-24" name="Move to top" sid="209622789614490" type="m4_Pieces" />
+                                        <action id="-3" name="Set position" sid="104134354291014" type="m4_Pieces">
+                                            <param id="0" name="X">m4_ThrowingStuffGuy.ImagePointX(&quot;Imagepoint 1&quot;)</param>
+                                            <param id="1" name="Y">m4_ThrowingStuffGuy.ImagePointY(&quot;Imagepoint 1&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="m4_instanceTracker" sid="656751559275423" static="0" type="number">0</variable>
+        <variable constant="0" name="m4_timeTillItemLeaves" sid="245491381745359" static="0" type="number">7</variable>
+        <variable constant="0" name="m4_clothingPicked" sid="194231563828972" static="0" type="number">0</variable>
+        <event-group description="" sid="596559216706005" title="m4_Selling">
+            <sub-events>
+                <event-block sid="141268337644361">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="377926695597906" type="System">
+                            <param id="0" name="Interval (seconds)">m4_timeTillItemLeaves</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="198438043456018">
+                            <conditions>
+                                <condition id="6" inverted="1" name="Is empty" sid="240718005876288" type="m4_storeArray" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="656125495751641" type="System">
+                                    <param id="0" name="Variable">m4_randomSellValue</param>
+                                    <param id="1" name="Value">M4_storeArray.At(round(random(0,M4_storeArray.Count)))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="670178149908390">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="594714239650937" type="System">
+                                            <param id="0" name="Object">m4_Pieces</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="792896063991416">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="614735813330101" type="System">
+                                                    <param id="0" name="First value">m4_Pieces.IID</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">m4_randomSellValue</param>
+                                                </condition>
+                                                <condition id="6" inverted="1" name="Is empty" sid="740157350820141" type="m4_storeArray" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="395707500903811" type="m4_ItemSoldParticle">
+                                                    <param id="0" name="X">m4_Pieces.X</param>
+                                                    <param id="1" name="Y">m4_Pieces.Y</param>
+                                                </action>
+                                                <action id="1" name="Set rate" sid="545187196080293" type="m4_ItemSoldParticle">
+                                                    <param id="0" name="Rate">50</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="146866219931873" type="m4_Pieces">
+                                                    <param id="0" name="X">LayoutWidth *2</param>
+                                                    <param id="1" name="Y">0</param>
+                                                </action>
+                                                <action id="-11" name="Subtract from" sid="679298777623825" type="System">
+                                                    <param id="0" name="Variable">m4_numberOfItemsPlaced</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="182765878433175" type="Audio">
+                                                    <param id="0" name="Audio file">sfx_soldclothing</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="451426934289285" type="m4_Pieces">
+                                                    <param id="0" name="Instance variable">wasSold</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="m4_randomSellValue" sid="205772392727834" static="0" type="number">-1</variable>
+        <event-group description="" sid="512352945977931" title="m4_OtherStuff">
+            <sub-events>
+                <event-block sid="562356105458248">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="771025544005836" type="System">
+                            <param id="0" name="Layer">&quot;Win&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="355679297906530">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="298109811431703" type="Touch">
+                                    <param id="0" name="Object">m4_RetryBtn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="215607170402912" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="935323696426892">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="695598167119466" type="Touch">
+                                    <param id="0" name="Object">m4_ExitBtn</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="200145418095581">
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="565730376171931" type="m4_star1" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="349241158135735">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="504562802587175" type="m4_star2" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="997559162426866">
+                                                    <conditions>
+                                                        <condition id="-9" name="Is visible" sid="909444769485312" type="m4_star3" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="896992580881273" type="Function">
+                                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                                            <param id="1" name="Parameter {n}">3</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="576439537610808">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="717600862281934" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="383859894673601" type="Function">
+                                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                                            <param id="1" name="Parameter {n}">2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="249162782380561">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="201091949562138" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="938757285470378" type="Function">
+                                                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                                    <param id="1" name="Parameter {n}">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="983306036703752">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="771839363341881" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="546286670582355" type="Function">
+                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block disabled="1" sid="720876379126365">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="953613806226120" type="m4_Boundry">
+                    <param id="0" name="Object">m4_Pieces</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="757523039785065" type="m4_Pieces">
+                    <param id="0" name="Instance variable">putOnConveyor</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="883376027775036" type="m4_Pieces">
+                    <param id="0" name="Instance variable">placementSuccessful</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="522450449964399" type="m4_Pieces">
+                    <param id="0" name="X">m4_Pieces.X + m4_DumpTruck.X</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="573712512015405" type="m4_Pieces">
+                    <param id="0" name="Instance variable">placementSuccessful</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Play" sid="315762474297888" type="Audio">
+                    <param id="0" name="Audio file">sfx_trashclothing</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="872498508871853" type="System">
+                    <param id="0" name="Variable">m4_playerScore</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="859512640328539" type="m4_ScoreText">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp;m4_playerScore</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="565933413872590">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="633030509552164" type="m4_PiecesFamily">
+                    <param id="0" name="Object">m4_Pieces</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="789920859164463" type="m4_Pieces">
+                    <param id="0" name="Instance variable">putOnConveyor</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="519944651453719" type="m4_Pieces">
+                    <param id="0" name="Instance variable">placementSuccessful</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="593581799209312" type="m4_Pieces">
+                    <param id="0" name="X">m4_Pieces.X + m4_DumpTruck.X</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="741442201987647" type="m4_Pieces">
+                    <param id="0" name="Instance variable">placementSuccessful</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Play" sid="238305430535985" type="Audio">
+                    <param id="0" name="Audio file">sfx_trashclothing</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="995468475539282" type="System">
+                    <param id="0" name="Variable">m4_playerScore</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="291668724406787" type="m4_ScoreText">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp;m4_playerScore</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="169535932095399">
+            <conditions>
+                <condition id="-11" name="For Each" sid="102741352720576" type="System">
+                    <param id="0" name="Object">m4_Pieces</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="298315994385253" type="m4_Pieces">
+                    <param id="0" name="Instance variable">putOnConveyor</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="195060783284828" type="m4_Pieces">
+                    <param id="0" name="Instance variable">placementSuccessful</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="724677644625790">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="606720123852694" type="System">
+                            <param id="0" name="First value">m4_DropZone.BBoxBottom</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">m4_Pieces.BBoxBottom</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="579898649556370" type="System">
+                            <param id="0" name="First value">m4_DropZone.BBoxLeft</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">m4_Pieces.BBoxLeft</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="597307260820216" type="System">
+                            <param id="0" name="First value">m4_DropZone.BBoxRight</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">m4_Pieces.BBoxRight</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="332808023444183" type="System">
+                            <param id="0" name="First value">m4_DropZone.BBoxTop</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">m4_Pieces.BBoxTop</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="815781837576399" type="m4_Pieces">
+                            <param id="0" name="X">m4_Pieces.X + m4_DumpTruck.X</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="969294667774640" type="m4_Pieces">
+                            <param id="0" name="Instance variable">placementSuccessful</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="529094705963836" type="Audio">
+                            <param id="0" name="Audio file">sfx_trashclothing</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="417016502256676" type="System">
+                            <param id="0" name="Variable">m4_playerScore</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="184283591272553" type="m4_ScoreText">
+                            <param id="0" name="Text">&quot;Score: &quot; &amp;m4_playerScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="352714994022864">
+            <conditions>
+                <condition id="0" name="On function" sid="671078263117201" type="Function">
+                    <param id="0" name="Name">&quot;trashClothing&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="130851918210965" type="m4_Pieces">
+                    <param id="0" name="X">LayoutWidth *2</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="174603177299360">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="416797976844117" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set rate" sid="783183727823637" type="m4_ItemTrashedParticle">
+                    <param id="0" name="Rate">self.Rate - 2</param>
+                </action>
+                <action id="1" name="Set rate" sid="880374778814647" type="m4_ItemSoldParticle">
+                    <param id="0" name="Rate">self.Rate -2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

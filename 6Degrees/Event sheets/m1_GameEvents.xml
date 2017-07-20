@@ -999,6 +999,12 @@
                             <actions>
                                 <action id="-26" name="Restart layout" sid="865855938040137" type="System" />
                             </actions>
+                            <sub-events>
+                                <event-block sid="550507267961687">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="446873023020765">
                             <conditions>

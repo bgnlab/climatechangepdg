@@ -24,11 +24,13 @@
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
         <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
@@ -551,10 +553,10 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="d0" pingpong="0" repeatcount="1" repeatto="0" sid="818709072666135" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\e0.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Column format tutorial.png" />
                             </animation>
                             <animation framecount="1" loop="0" name="d1" pingpong="0" repeatcount="1" repeatto="0" sid="809796067032702" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\e1.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Column format tutorial.png" />
                             </animation>
                             <animation framecount="1" loop="0" name="d2" pingpong="0" repeatcount="1" repeatto="0" sid="370650725540899" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\e2.png" />
@@ -580,7 +582,7 @@
                                 </frame>
                             </animation>
                             <animation framecount="1" loop="0" name="d1" pingpong="0" repeatcount="1" repeatto="0" sid="566188838979052" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.505" original-source="C:\Users\GAMEPLAYER-01\Downloads\h1.png">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.505" original-source="C:\Users\GAMEPLAYER-01\Downloads\m1.png">
                                     <collision-poly>
                                         <point x="0.00492611" y="0.010929" />
                                         <point x="1" y="0" />
@@ -13959,6 +13961,1333 @@
                 </object-type>
             </object-folder>
         </object-folder>
+        <object-folder name="M4">
+            <object-type global="1" name="m4_Array" sid="802452124334315">
+                <plugin id="Arr" />
+                <instance-variables>
+                    <instance-variable name="itterator" sid="326371699271174" type="number" />
+                </instance-variables>
+            </object-type>
+            <object-type name="m4_Background" sid="932783063530583">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="454461001043617" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\background.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Revised" pingpong="0" repeatcount="1" repeatto="0" sid="185857774446270" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\GAMEPLAYER-02\Desktop\background v.2.1 BOTTOM.png">
+                            <collision-poly>
+                                <point x="0.141146" y="0.225833" />
+                                <point x="0.858854" y="0.225833" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_Boundry" sid="998395527041699">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="860365831272434" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_Button" sid="615331166527461">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="m4_Button2" sid="529875185757474">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="m4_Conveyor" sid="582358619364226">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="964503931695359" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\conveyor belt.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_ConveyorWall" sid="961806327265476">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="739746748969021" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_DropZone" sid="754976215783503">
+                <plugin id="Tilemap" />
+                <texture />
+                <tiles />
+            </object-type>
+            <object-type name="m4_DumpTruck" sid="137188421075108">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653711277455650" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\dumpster.png">
+                            <collision-poly>
+                                <point x="0.0901961" y="0.125683" />
+                                <point x="0.5" y="0.0218579" />
+                                <point x="0.792157" y="0.289617" />
+                                <point x="0.958824" y="0.5" />
+                                <point x="0.87451" y="0.825137" />
+                                <point x="0.5" y="0.959016" />
+                                <point x="0.164706" y="0.770492" />
+                                <point x="0.0176471" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_emptyStar" sid="790711650945993">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="934219244271680" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\empty star (new).png">
+                            <collision-poly>
+                                <point x="0.336" y="0.336" />
+                                <point x="0.5" y="0.044" />
+                                <point x="0.668" y="0.332" />
+                                <point x="0.916" y="0.5" />
+                                <point x="0.808" y="0.808" />
+                                <point x="0.212" y="0.788" />
+                                <point x="0.096" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_ExitBtn" sid="290330596722607">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="129329103808118" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\Exit1.png">
+                            <collision-poly>
+                                <point x="0.155556" y="0.155556" />
+                                <point x="0.5" y="0.127778" />
+                                <point x="0.844444" y="0.155556" />
+                                <point x="0.955556" y="0.5" />
+                                <point x="0.894444" y="0.894444" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.111111" y="0.888889" />
+                                <point x="0.05" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_fourthBlinkingBox" sid="803911934757841">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="871683187896540">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869893212850741" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_firstBlinkingBox" sid="470842759187297">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="911759092622439">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="777864359064341" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_List" sid="992921412857865">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="m4_NextBtn" sid="581581909929432">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="m4_NextClick" sid="126924376162375">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="preventClicksY" sid="911301886666148" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="277437886684124" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_pickDifficultyClick" sid="912911492050856">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="504622527257735" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_Pieces" sid="248796990601011">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="xOffsetValue" sid="357558532050609" type="number" />
+                    <instance-variable name="yOffsetValue" sid="809720545775376" type="number" />
+                    <instance-variable name="isSelected" sid="910389273613698" type="boolean" />
+                    <instance-variable name="lastX" sid="353782337523007" type="number" />
+                    <instance-variable name="lastY" sid="409079363617297" type="number" />
+                    <instance-variable name="wasDropped" sid="282101255449986" type="boolean" />
+                    <instance-variable name="placementSuccessful" sid="808909481645253" type="boolean" />
+                    <instance-variable name="putOnConveyor" sid="311172106297825" type="boolean" />
+                    <instance-variable name="timeLeftInStore" sid="747302199674475" type="number" />
+                    <instance-variable name="wasSold" sid="845981537336446" type="boolean" />
+                    <instance-variable name="grabbed" sid="633363407350372" type="boolean" />
+                    <instance-variable name="wasMoved" sid="620752305335084" type="boolean" />
+                    <instance-variable name="isSizedUp" sid="272120692285928" type="boolean" />
+                    <instance-variable name="Number" sid="402991824499935" type="number" />
+                    <instance-variable name="tutResetX" sid="481570877726825" type="number" />
+                    <instance-variable name="tutResetY" sid="908861910428049" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="590552043310560">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="508083190048054">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Corner" pingpong="0" repeatcount="1" repeatto="0" sid="558239470061332" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Shape2.png">
+                            <collision-poly>
+                                <point x="0.0429688" y="0.0290698" />
+                                <point x="0.960938" y="0.0319767" />
+                                <point x="0.953125" y="0.968023" />
+                                <point x="0.0546875" y="0.973837" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece1" pingpong="0" repeatcount="1" repeatto="0" sid="130967129630821" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_01.png">
+                            <collision-poly>
+                                <point x="0.0155039" y="0.645833" />
+                                <point x="0.0174419" y="0.356771" />
+                                <point x="0.267442" y="0.354167" />
+                                <point x="0.267442" y="0.0208333" />
+                                <point x="0.984496" y="0.0208334" />
+                                <point x="0.984496" y="0.3125" />
+                                <point x="0.734496" y="0.307292" />
+                                <point x="0.736434" y="0.973958" />
+                                <point x="0.51938" y="0.96875" />
+                                <point x="0.515504" y="0.645834" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece2" pingpong="0" repeatcount="1" repeatto="0" sid="852154937626267" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_02.png">
+                            <collision-poly>
+                                <point x="0.0338542" y="0.0286458" />
+                                <point x="0.979167" y="0.0260417" />
+                                <point x="0.976563" y="0.981771" />
+                                <point x="0.0260417" y="0.979167" />
+                                <point x="0.0286459" y="0.699219" />
+                                <point x="0.716146" y="0.700521" />
+                                <point x="0.716146" y="0.300781" />
+                                <point x="0.0338541" y="0.299479" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece3" pingpong="0" repeatcount="1" repeatto="0" sid="526921771329421" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_03.png">
+                            <collision-poly>
+                                <point x="0.0286458" y="0.03125" />
+                                <point x="0.96875" y="0.0347222" />
+                                <point x="0.971354" y="0.631944" />
+                                <point x="0.772135" y="0.635417" />
+                                <point x="0.773438" y="0.302083" />
+                                <point x="0.221354" y="0.305556" />
+                                <point x="0.216146" y="0.965278" />
+                                <point x="0.0286458" y="0.965278" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece4" pingpong="0" repeatcount="1" repeatto="0" sid="564741360564102" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_04.png">
+                            <collision-poly>
+                                <point x="0.28125" y="0.357639" />
+                                <point x="0.283854" y="0.0381944" />
+                                <point x="0.971354" y="0.0347222" />
+                                <point x="0.971354" y="0.298611" />
+                                <point x="0.466146" y="0.298611" />
+                                <point x="0.463542" y="0.965278" />
+                                <point x="0.03125" y="0.965278" />
+                                <point x="0.03125" y="0.361111" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece5" pingpong="0" repeatcount="1" repeatto="0" sid="590735477365339" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_05.png">
+                            <collision-poly>
+                                <point x="0.234375" y="0.375" />
+                                <point x="0.231771" y="0.0364583" />
+                                <point x="0.96875" y="0.0347222" />
+                                <point x="0.966146" y="0.305555" />
+                                <point x="0.372396" y="0.309028" />
+                                <point x="0.375" y="0.961806" />
+                                <point x="0.236979" y="0.965278" />
+                                <point x="0.234375" y="0.631944" />
+                                <point x="0.0286458" y="0.63368" />
+                                <point x="0.0260417" y="0.375" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece6" pingpong="0" repeatcount="1" repeatto="0" sid="351557914960954" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_06.png">
+                            <collision-poly>
+                                <point x="0.0416667" y="0.276042" />
+                                <point x="0.371528" y="0.273438" />
+                                <point x="0.369792" y="0.0221354" />
+                                <point x="0.972222" y="0.0208333" />
+                                <point x="0.96875" y="0.21875" />
+                                <point x="0.607639" y="0.221354" />
+                                <point x="0.611111" y="0.782552" />
+                                <point x="0.947916" y="0.78125" />
+                                <point x="0.951389" y="0.973958" />
+                                <point x="0.371528" y="0.976562" />
+                                <point x="0.369792" y="0.471354" />
+                                <point x="0.0381945" y="0.46875" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece7" pingpong="0" repeatcount="1" repeatto="0" sid="290676161327621" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_07.png">
+                            <collision-poly>
+                                <point x="0.0381944" y="0.0243056" />
+                                <point x="0.607639" y="0.0277778" />
+                                <point x="0.611111" y="0.708333" />
+                                <point x="0.965278" y="0.708334" />
+                                <point x="0.961804" y="0.970486" />
+                                <point x="0.0347222" y="0.96875" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece8" pingpong="0" repeatcount="1" repeatto="0" sid="294812317118546" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_08.png">
+                            <collision-poly>
+                                <point x="0.0190972" y="0.0416667" />
+                                <point x="0.984375" y="0.0416667" />
+                                <point x="0.982639" y="0.953125" />
+                                <point x="0.852431" y="0.947917" />
+                                <point x="0.850694" y="0.4375" />
+                                <point x="0.0208333" y="0.442708" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece9" pingpong="0" repeatcount="1" repeatto="0" sid="364329037940030" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_11.png">
+                            <collision-poly>
+                                <point x="0.380208" y="0.53125" />
+                                <point x="0.385417" y="0.0277778" />
+                                <point x="0.932292" y="0.03125" />
+                                <point x="0.927083" y="0.21875" />
+                                <point x="0.596354" y="0.218316" />
+                                <point x="0.598958" y="0.530382" />
+                                <point x="0.934896" y="0.535156" />
+                                <point x="0.932292" y="0.717014" />
+                                <point x="0.598958" y="0.71875" />
+                                <point x="0.604167" y="0.972222" />
+                                <point x="0.390625" y="0.96875" />
+                                <point x="0.385417" y="0.71875" />
+                                <point x="0.046875" y="0.71875" />
+                                <point x="0.0520833" y="0.53125" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece10" pingpong="0" repeatcount="1" repeatto="0" sid="819131359520867" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_12.png">
+                            <collision-poly>
+                                <point x="0.03125" y="0.0277778" />
+                                <point x="0.463542" y="0.0243056" />
+                                <point x="0.463542" y="0.704861" />
+                                <point x="0.963542" y="0.701389" />
+                                <point x="0.966146" y="0.96875" />
+                                <point x="0.0234375" y="0.96875" />
+                                <point x="0.0260417" y="0.708333" />
+                                <point x="0.283203" y="0.710937" />
+                                <point x="0.282552" y="0.307292" />
+                                <point x="0.031901" y="0.306424" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece11" pingpong="0" repeatcount="1" repeatto="0" sid="620554732763291" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_13.png">
+                            <collision-poly>
+                                <point x="0.03125" y="0.0208333" />
+                                <point x="0.96875" y="0.0182292" />
+                                <point x="0.965278" y="0.726563" />
+                                <point x="0.628472" y="0.723958" />
+                                <point x="0.631944" y="0.986979" />
+                                <point x="0.368056" y="0.984375" />
+                                <point x="0.371528" y="0.526042" />
+                                <point x="0.704861" y="0.523438" />
+                                <point x="0.701389" y="0.226563" />
+                                <point x="0.0347222" y="0.223958" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece12" pingpong="0" repeatcount="1" repeatto="0" sid="348765759691215" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_24.png">
+                            <collision-poly>
+                                <point x="0.0347222" y="0.0381944" />
+                                <point x="0.965278" y="0.0347222" />
+                                <point x="0.961805" y="0.295139" />
+                                <point x="0.628472" y="0.295139" />
+                                <point x="0.631944" y="0.701389" />
+                                <point x="0.960069" y="0.704861" />
+                                <point x="0.961806" y="0.96875" />
+                                <point x="0.0381944" y="0.96875" />
+                                <point x="0.0381944" y="0.708333" />
+                                <point x="0.392361" y="0.708333" />
+                                <point x="0.392361" y="0.291667" />
+                                <point x="0.0416667" y="0.295139" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece13" pingpong="0" repeatcount="1" repeatto="0" sid="647034089177323" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_25.png">
+                            <collision-poly>
+                                <point x="0.227083" y="0.541667" />
+                                <point x="0.229167" y="0.046875" />
+                                <point x="0.770833" y="0.0520834" />
+                                <point x="0.770833" y="0.536458" />
+                                <point x="0.9875" y="0.536458" />
+                                <point x="0.985417" y="0.96875" />
+                                <point x="0.616667" y="0.973958" />
+                                <point x="0.614583" y="0.442708" />
+                                <point x="0.370833" y="0.442708" />
+                                <point x="0.36875" y="0.963542" />
+                                <point x="0.01875" y="0.963542" />
+                                <point x="0.0208333" y="0.541667" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece14" pingpong="0" repeatcount="1" repeatto="0" sid="361682746722521" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_14.png">
+                            <collision-poly>
+                                <point x="0.375" y="0.533854" />
+                                <point x="0.375" y="0.28125" />
+                                <point x="0.711806" y="0.283854" />
+                                <point x="0.71007" y="0.0234375" />
+                                <point x="0.957465" y="0.0247395" />
+                                <point x="0.958333" y="0.971354" />
+                                <point x="0.706597" y="0.96875" />
+                                <point x="0.708333" y="0.710937" />
+                                <point x="0.0381944" y="0.713542" />
+                                <point x="0.0347222" y="0.533854" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece15" pingpong="0" repeatcount="1" repeatto="0" sid="121569585993318" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_15.png">
+                            <collision-poly>
+                                <point x="0.260416" y="0.013889" />
+                                <point x="0.739584" y="0.0104167" />
+                                <point x="0.736979" y="0.347222" />
+                                <point x="0.986979" y="0.347222" />
+                                <point x="0.986979" y="0.649305" />
+                                <point x="0.239584" y="0.649305" />
+                                <point x="0.23698" y="0.984375" />
+                                <point x="0.0104166" y="0.982639" />
+                                <point x="0.0104167" y="0.34375" />
+                                <point x="0.260417" y="0.347223" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece16" pingpong="0" repeatcount="1" repeatto="0" sid="707561768482829" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_19.png">
+                            <collision-poly>
+                                <point x="0.0182292" y="0.0277778" />
+                                <point x="0.463542" y="0.0277778" />
+                                <point x="0.466146" y="0.364583" />
+                                <point x="0.722656" y="0.365451" />
+                                <point x="0.723958" y="0.696181" />
+                                <point x="0.963542" y="0.697917" />
+                                <point x="0.966146" y="0.972222" />
+                                <point x="0.526042" y="0.975695" />
+                                <point x="0.526042" y="0.642361" />
+                                <point x="0.0182292" y="0.638889" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece17" pingpong="0" repeatcount="1" repeatto="0" sid="956240474394675" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_21.png">
+                            <collision-poly>
+                                <point x="0.0260417" y="0.536458" />
+                                <point x="0.279948" y="0.53776" />
+                                <point x="0.280599" y="0.0253907" />
+                                <point x="0.463542" y="0.0260417" />
+                                <point x="0.460938" y="0.53125" />
+                                <point x="0.971354" y="0.533854" />
+                                <point x="0.971354" y="0.726562" />
+                                <point x="0.46875" y="0.723958" />
+                                <point x="0.466146" y="0.971354" />
+                                <point x="0.28125" y="0.973958" />
+                                <point x="0.278646" y="0.727865" />
+                                <point x="0.0286458" y="0.726563" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece18" pingpong="0" repeatcount="1" repeatto="0" sid="744143126794281" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_22.png">
+                            <collision-poly>
+                                <point x="0.273437" y="0.357639" />
+                                <point x="0.272135" y="0.0243056" />
+                                <point x="0.472005" y="0.0243056" />
+                                <point x="0.471354" y="0.357639" />
+                                <point x="0.718425" y="0.358507" />
+                                <point x="0.718099" y="0.692708" />
+                                <point x="0.977865" y="0.694444" />
+                                <point x="0.976562" y="0.972222" />
+                                <point x="0.273438" y="0.96875" />
+                                <point x="0.270833" y="0.621528" />
+                                <point x="0.0182292" y="0.625" />
+                                <point x="0.015625" y="0.357639" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece19" pingpong="0" repeatcount="1" repeatto="0" sid="250047328422558" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_20.png">
+                            <collision-poly>
+                                <point x="0.979167" y="0.03125" />
+                                <point x="0.976563" y="0.965278" />
+                                <point x="0.774251" y="0.964301" />
+                                <point x="0.775065" y="0.293186" />
+                                <point x="0.479818" y="0.294705" />
+                                <point x="0.480469" y="0.641493" />
+                                <point x="0.278646" y="0.640625" />
+                                <point x="0.277344" y="0.302952" />
+                                <point x="0.0260417" y="0.302083" />
+                                <point x="0.0260417" y="0.0277778" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece20" pingpong="0" repeatcount="1" repeatto="0" sid="882215195132126" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_18.png">
+                            <collision-poly>
+                                <point x="0.378472" y="0.278646" />
+                                <point x="0.378472" y="0.0286458" />
+                                <point x="0.635417" y="0.03125" />
+                                <point x="0.631945" y="0.523438" />
+                                <point x="0.958333" y="0.520833" />
+                                <point x="0.954861" y="0.71875" />
+                                <point x="0.631945" y="0.721354" />
+                                <point x="0.631944" y="0.973958" />
+                                <point x="0.368056" y="0.971354" />
+                                <point x="0.364583" y="0.726562" />
+                                <point x="0.0381945" y="0.723958" />
+                                <point x="0.0416667" y="0.278646" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece21" pingpong="0" repeatcount="1" repeatto="0" sid="841369522401696" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_16.png">
+                            <collision-poly>
+                                <point x="0.046875" y="0.015625" />
+                                <point x="0.442708" y="0.0173611" />
+                                <point x="0.445313" y="0.180556" />
+                                <point x="0.953125" y="0.182292" />
+                                <point x="0.958333" y="0.32118" />
+                                <point x="0.453125" y="0.322917" />
+                                <point x="0.447917" y="0.991319" />
+                                <point x="0.0416667" y="0.993056" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_PlayBtn" sid="718827616755437">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="m4_Pieces2" sid="188553209658901">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="xOffsetValue" sid="965111634273799" type="number" />
+                    <instance-variable name="yOffsetValue" sid="496888430225785" type="number" />
+                    <instance-variable name="isSelected" sid="665109467363957" type="boolean" />
+                    <instance-variable name="lastX" sid="520533895458216" type="number" />
+                    <instance-variable name="lastY" sid="857463584457415" type="number" />
+                    <instance-variable name="wasDropped" sid="697356346430208" type="boolean" />
+                    <instance-variable name="placementSuccessful" sid="791145350066031" type="boolean" />
+                    <instance-variable name="putOnConveyor" sid="243013267603426" type="boolean" />
+                    <instance-variable name="timeLeftInStore" sid="927161250527830" type="number" />
+                    <instance-variable name="wasSold" sid="418373969589447" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="692324194137178">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Corner" pingpong="0" repeatcount="1" repeatto="0" sid="929957855621706" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Shape2.png">
+                            <collision-poly>
+                                <point x="0.0429688" y="0.0290698" />
+                                <point x="0.960938" y="0.0319767" />
+                                <point x="0.953125" y="0.968023" />
+                                <point x="0.0546875" y="0.973837" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece1" pingpong="0" repeatcount="1" repeatto="0" sid="622514175506279" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_01.png">
+                            <collision-poly>
+                                <point x="0.0387597" y="0.375" />
+                                <point x="0.282946" y="0.369792" />
+                                <point x="0.282946" y="0.046875" />
+                                <point x="0.968992" y="0.0416667" />
+                                <point x="0.965116" y="0.302083" />
+                                <point x="0.722868" y="0.307292" />
+                                <point x="0.72093" y="0.942708" />
+                                <point x="0.531008" y="0.947917" />
+                                <point x="0.534884" y="0.619792" />
+                                <point x="0.0387597" y="0.614583" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece2" pingpong="0" repeatcount="1" repeatto="0" sid="516975332955504" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_02.png">
+                            <collision-poly>
+                                <point x="0.0338542" y="0.0286458" />
+                                <point x="0.979167" y="0.0260417" />
+                                <point x="0.976563" y="0.981771" />
+                                <point x="0.0260417" y="0.979167" />
+                                <point x="0.0286459" y="0.699219" />
+                                <point x="0.716146" y="0.700521" />
+                                <point x="0.716146" y="0.300781" />
+                                <point x="0.0338541" y="0.299479" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece3" pingpong="0" repeatcount="1" repeatto="0" sid="293876004477629" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_03.png">
+                            <collision-poly>
+                                <point x="0.0286458" y="0.03125" />
+                                <point x="0.96875" y="0.0347222" />
+                                <point x="0.971354" y="0.631944" />
+                                <point x="0.772135" y="0.635417" />
+                                <point x="0.773438" y="0.302083" />
+                                <point x="0.221354" y="0.305556" />
+                                <point x="0.216146" y="0.965278" />
+                                <point x="0.0286458" y="0.965278" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece4" pingpong="0" repeatcount="1" repeatto="0" sid="961202038558881" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_04.png">
+                            <collision-poly>
+                                <point x="0.28125" y="0.357639" />
+                                <point x="0.283854" y="0.0381944" />
+                                <point x="0.971354" y="0.0347222" />
+                                <point x="0.971354" y="0.298611" />
+                                <point x="0.466146" y="0.298611" />
+                                <point x="0.463542" y="0.965278" />
+                                <point x="0.03125" y="0.965278" />
+                                <point x="0.03125" y="0.361111" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece5" pingpong="0" repeatcount="1" repeatto="0" sid="394256583751455" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_05.png">
+                            <collision-poly>
+                                <point x="0.234375" y="0.375" />
+                                <point x="0.231771" y="0.0364583" />
+                                <point x="0.96875" y="0.0347222" />
+                                <point x="0.966146" y="0.305555" />
+                                <point x="0.372396" y="0.309028" />
+                                <point x="0.375" y="0.961806" />
+                                <point x="0.236979" y="0.965278" />
+                                <point x="0.234375" y="0.631944" />
+                                <point x="0.0286458" y="0.63368" />
+                                <point x="0.0260417" y="0.375" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece6" pingpong="0" repeatcount="1" repeatto="0" sid="450291967860998" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_06.png">
+                            <collision-poly>
+                                <point x="0.0416667" y="0.276042" />
+                                <point x="0.371528" y="0.273438" />
+                                <point x="0.369792" y="0.0221354" />
+                                <point x="0.972222" y="0.0208333" />
+                                <point x="0.96875" y="0.21875" />
+                                <point x="0.607639" y="0.221354" />
+                                <point x="0.611111" y="0.782552" />
+                                <point x="0.947916" y="0.78125" />
+                                <point x="0.951389" y="0.973958" />
+                                <point x="0.371528" y="0.976562" />
+                                <point x="0.369792" y="0.471354" />
+                                <point x="0.0381945" y="0.46875" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece7" pingpong="0" repeatcount="1" repeatto="0" sid="576519427920920" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_07.png">
+                            <collision-poly>
+                                <point x="0.0381944" y="0.0243056" />
+                                <point x="0.607639" y="0.0277778" />
+                                <point x="0.611111" y="0.708333" />
+                                <point x="0.965278" y="0.708334" />
+                                <point x="0.961804" y="0.970486" />
+                                <point x="0.0347222" y="0.96875" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece8" pingpong="0" repeatcount="1" repeatto="0" sid="470438308008212" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_08.png">
+                            <collision-poly>
+                                <point x="0.0190972" y="0.0416667" />
+                                <point x="0.984375" y="0.0416667" />
+                                <point x="0.982639" y="0.953125" />
+                                <point x="0.852431" y="0.947917" />
+                                <point x="0.850694" y="0.4375" />
+                                <point x="0.0208333" y="0.442708" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece9" pingpong="0" repeatcount="1" repeatto="0" sid="956747371020077" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_11.png">
+                            <collision-poly>
+                                <point x="0.380208" y="0.53125" />
+                                <point x="0.385417" y="0.0277778" />
+                                <point x="0.932292" y="0.03125" />
+                                <point x="0.927083" y="0.21875" />
+                                <point x="0.596354" y="0.218316" />
+                                <point x="0.598958" y="0.530382" />
+                                <point x="0.934896" y="0.535156" />
+                                <point x="0.932292" y="0.717014" />
+                                <point x="0.598958" y="0.71875" />
+                                <point x="0.604167" y="0.972222" />
+                                <point x="0.390625" y="0.96875" />
+                                <point x="0.385417" y="0.71875" />
+                                <point x="0.046875" y="0.71875" />
+                                <point x="0.0520833" y="0.53125" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece10" pingpong="0" repeatcount="1" repeatto="0" sid="649969272163979" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_12.png">
+                            <collision-poly>
+                                <point x="0.03125" y="0.0277778" />
+                                <point x="0.463542" y="0.0243056" />
+                                <point x="0.463542" y="0.704861" />
+                                <point x="0.963542" y="0.701389" />
+                                <point x="0.966146" y="0.96875" />
+                                <point x="0.0234375" y="0.96875" />
+                                <point x="0.0260417" y="0.708333" />
+                                <point x="0.283203" y="0.710937" />
+                                <point x="0.282552" y="0.307292" />
+                                <point x="0.031901" y="0.306424" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece11" pingpong="0" repeatcount="1" repeatto="0" sid="207775509779065" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_13.png">
+                            <collision-poly>
+                                <point x="0.03125" y="0.0208333" />
+                                <point x="0.96875" y="0.0182292" />
+                                <point x="0.965278" y="0.726563" />
+                                <point x="0.628472" y="0.723958" />
+                                <point x="0.631944" y="0.986979" />
+                                <point x="0.368056" y="0.984375" />
+                                <point x="0.371528" y="0.526042" />
+                                <point x="0.704861" y="0.523438" />
+                                <point x="0.701389" y="0.226563" />
+                                <point x="0.0347222" y="0.223958" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece12" pingpong="0" repeatcount="1" repeatto="0" sid="902941400436975" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_24.png">
+                            <collision-poly>
+                                <point x="0.0347222" y="0.0381944" />
+                                <point x="0.965278" y="0.0347222" />
+                                <point x="0.961805" y="0.295139" />
+                                <point x="0.628472" y="0.295139" />
+                                <point x="0.631944" y="0.701389" />
+                                <point x="0.960069" y="0.704861" />
+                                <point x="0.961806" y="0.96875" />
+                                <point x="0.0381944" y="0.96875" />
+                                <point x="0.0381944" y="0.708333" />
+                                <point x="0.392361" y="0.708333" />
+                                <point x="0.392361" y="0.291667" />
+                                <point x="0.0416667" y="0.295139" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece13" pingpong="0" repeatcount="1" repeatto="0" sid="330169271028101" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_25.png">
+                            <collision-poly>
+                                <point x="0.227083" y="0.541667" />
+                                <point x="0.229167" y="0.046875" />
+                                <point x="0.770833" y="0.0520834" />
+                                <point x="0.770833" y="0.536458" />
+                                <point x="0.9875" y="0.536458" />
+                                <point x="0.985417" y="0.96875" />
+                                <point x="0.616667" y="0.973958" />
+                                <point x="0.614583" y="0.442708" />
+                                <point x="0.370833" y="0.442708" />
+                                <point x="0.36875" y="0.963542" />
+                                <point x="0.01875" y="0.963542" />
+                                <point x="0.0208333" y="0.541667" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece14" pingpong="0" repeatcount="1" repeatto="0" sid="224028633675795" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_14.png">
+                            <collision-poly>
+                                <point x="0.375" y="0.533854" />
+                                <point x="0.375" y="0.28125" />
+                                <point x="0.711806" y="0.283854" />
+                                <point x="0.71007" y="0.0234375" />
+                                <point x="0.957465" y="0.0247395" />
+                                <point x="0.958333" y="0.971354" />
+                                <point x="0.706597" y="0.96875" />
+                                <point x="0.708333" y="0.710937" />
+                                <point x="0.0381944" y="0.713542" />
+                                <point x="0.0347222" y="0.533854" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece15" pingpong="0" repeatcount="1" repeatto="0" sid="642472472831530" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_15.png">
+                            <collision-poly>
+                                <point x="0.270833" y="0.0208334" />
+                                <point x="0.726563" y="0.0173611" />
+                                <point x="0.723958" y="0.364583" />
+                                <point x="0.96875" y="0.361111" />
+                                <point x="0.971354" y="0.631944" />
+                                <point x="0.229167" y="0.628472" />
+                                <point x="0.226563" y="0.970486" />
+                                <point x="0.0208333" y="0.972222" />
+                                <point x="0.0234375" y="0.354167" />
+                                <point x="0.273438" y="0.354167" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece16" pingpong="0" repeatcount="1" repeatto="0" sid="994741396838224" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_19.png">
+                            <collision-poly>
+                                <point x="0.0182292" y="0.0277778" />
+                                <point x="0.463542" y="0.0277778" />
+                                <point x="0.466146" y="0.364583" />
+                                <point x="0.722656" y="0.365451" />
+                                <point x="0.723958" y="0.696181" />
+                                <point x="0.963542" y="0.697917" />
+                                <point x="0.966146" y="0.972222" />
+                                <point x="0.526042" y="0.975695" />
+                                <point x="0.526042" y="0.642361" />
+                                <point x="0.0182292" y="0.638889" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece17" pingpong="0" repeatcount="1" repeatto="0" sid="895490944499133" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_21.png">
+                            <collision-poly>
+                                <point x="0.0260417" y="0.536458" />
+                                <point x="0.279948" y="0.53776" />
+                                <point x="0.280599" y="0.0253907" />
+                                <point x="0.463542" y="0.0260417" />
+                                <point x="0.460938" y="0.53125" />
+                                <point x="0.971354" y="0.533854" />
+                                <point x="0.971354" y="0.726562" />
+                                <point x="0.46875" y="0.723958" />
+                                <point x="0.466146" y="0.971354" />
+                                <point x="0.28125" y="0.973958" />
+                                <point x="0.278646" y="0.727865" />
+                                <point x="0.0286458" y="0.726563" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece18" pingpong="0" repeatcount="1" repeatto="0" sid="744509080056150" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_22.png">
+                            <collision-poly>
+                                <point x="0.273437" y="0.357639" />
+                                <point x="0.272135" y="0.0243056" />
+                                <point x="0.472005" y="0.0243056" />
+                                <point x="0.471354" y="0.357639" />
+                                <point x="0.718425" y="0.358507" />
+                                <point x="0.718099" y="0.692708" />
+                                <point x="0.977865" y="0.694444" />
+                                <point x="0.976562" y="0.972222" />
+                                <point x="0.273438" y="0.96875" />
+                                <point x="0.270833" y="0.621528" />
+                                <point x="0.0182292" y="0.625" />
+                                <point x="0.015625" y="0.357639" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece19" pingpong="0" repeatcount="1" repeatto="0" sid="648690976390429" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_20.png">
+                            <collision-poly>
+                                <point x="0.979167" y="0.03125" />
+                                <point x="0.976563" y="0.965278" />
+                                <point x="0.774251" y="0.964301" />
+                                <point x="0.775065" y="0.293186" />
+                                <point x="0.479818" y="0.294705" />
+                                <point x="0.480469" y="0.641493" />
+                                <point x="0.278646" y="0.640625" />
+                                <point x="0.277344" y="0.302952" />
+                                <point x="0.0260417" y="0.302083" />
+                                <point x="0.0260417" y="0.0277778" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece20" pingpong="0" repeatcount="1" repeatto="0" sid="690584819632564" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_18.png">
+                            <collision-poly>
+                                <point x="0.378472" y="0.278646" />
+                                <point x="0.378472" y="0.0286458" />
+                                <point x="0.635417" y="0.03125" />
+                                <point x="0.631945" y="0.523438" />
+                                <point x="0.958333" y="0.520833" />
+                                <point x="0.954861" y="0.71875" />
+                                <point x="0.631945" y="0.721354" />
+                                <point x="0.631944" y="0.973958" />
+                                <point x="0.368056" y="0.971354" />
+                                <point x="0.364583" y="0.726562" />
+                                <point x="0.0381945" y="0.723958" />
+                                <point x="0.0416667" y="0.278646" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piece21" pingpong="0" repeatcount="1" repeatto="0" sid="191655996646776" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\clothing_16.png">
+                            <collision-poly>
+                                <point x="0.046875" y="0.015625" />
+                                <point x="0.442708" y="0.0173611" />
+                                <point x="0.445313" y="0.180556" />
+                                <point x="0.953125" y="0.182292" />
+                                <point x="0.958333" y="0.32118" />
+                                <point x="0.453125" y="0.322917" />
+                                <point x="0.447917" y="0.991319" />
+                                <point x="0.0416667" y="0.993056" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_RetryBtn" sid="218732394758250">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339191378531886" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\Retry1.png">
+                            <collision-poly>
+                                <point x="0.155556" y="0.155556" />
+                                <point x="0.5" y="0.133333" />
+                                <point x="0.844444" y="0.155556" />
+                                <point x="0.95" y="0.5" />
+                                <point x="0.894444" y="0.894444" />
+                                <point x="0.5" y="0.938889" />
+                                <point x="0.111111" y="0.888889" />
+                                <point x="0.0555556" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_ScoreText" sid="807805667139446">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m4_secondBlinkingBox" sid="572850979772679">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="729024495193796">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="551498622551758" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_Sprite" sid="991624439670472">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="618470271670193" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_Sprite2" sid="540589312583681">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="921006994278059" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_Sprite3" sid="428775467534911">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="847875552028883" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_Sprite4" sid="972501161481515">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="213058116535278" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\ShapeInsert.png">
+                            <collision-poly>
+                                <point x="0.36" y="0.48" />
+                                <point x="0.64" y="0.48" />
+                                <point x="1" y="0.5" />
+                                <point x="0.99875" y="0.998333" />
+                                <point x="0.5" y="0.998333" />
+                                <point x="0.3575" y="0.523333" />
+                                <point x="0.3575" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_Sprite5" sid="964919429040122">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="977643960225288" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_star2" sid="213776969269960">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="922138613842077" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\star full (new).png">
+                            <collision-poly>
+                                <point x="0.336" y="0.336" />
+                                <point x="0.5" y="0.044" />
+                                <point x="0.668" y="0.332" />
+                                <point x="0.916" y="0.5" />
+                                <point x="0.808" y="0.808" />
+                                <point x="0.212" y="0.788" />
+                                <point x="0.096" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_star3" sid="617372599801656">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="100146185578588" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\star full (new).png">
+                            <collision-poly>
+                                <point x="0.336" y="0.336" />
+                                <point x="0.5" y="0.044" />
+                                <point x="0.668" y="0.332" />
+                                <point x="0.916" y="0.5" />
+                                <point x="0.808" y="0.808" />
+                                <point x="0.212" y="0.788" />
+                                <point x="0.096" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_star1" sid="144763755135731">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="833787708300894" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\star full (new).png">
+                            <collision-poly>
+                                <point x="0.336" y="0.336" />
+                                <point x="0.5" y="0.044" />
+                                <point x="0.668" y="0.332" />
+                                <point x="0.916" y="0.5" />
+                                <point x="0.808" y="0.808" />
+                                <point x="0.212" y="0.788" />
+                                <point x="0.096" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_tapRotateClick" sid="213328354537658">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="ActivationArea" sid="205041182845462" type="number" />
+                    <instance-variable name="safeArea" sid="664497483451016" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="453296442690908" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_Text" sid="988609551832906">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m4_Text2" sid="940518506550416">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m4_Text3" sid="300229364196923">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m4_Text4" sid="284015551271999">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m4_thirdBlinkingBox" sid="588448403152731">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="747741795902046">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="125514814244794" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_ThrowingStuffGuy" sid="543830691928965">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="30" loop="0" name="DrawnThrowingGuy" pingpong="0" repeatcount="0" repeatto="0" sid="923231601419878" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_002.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_003.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_004.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_005.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_006.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_007.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_008.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_009.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_010.png" />
+                        <frame duration="1" hotspotX="0.497326" hotspotY="0.502874" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_011.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_012.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_013.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_014.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_015.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_016.png">
+                            <image-point name="Imagepoint 1" x="0.377005" y="0.166667" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_017.png">
+                            <image-point name="Imagepoint 1" x="0.272727" y="0.112069" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_018.png">
+                            <image-point name="Imagepoint 1" x="0.165775" y="0.0545977" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_019.png">
+                            <image-point name="Imagepoint 1" x="0.147059" y="0.109195" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_020.png">
+                            <image-point name="Imagepoint 1" x="0.13369" y="0.135057" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_021.png">
+                            <image-point name="Imagepoint 1" x="0.136364" y="0.143678" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_022.png">
+                            <image-point name="Imagepoint 1" x="0.136364" y="0.181034" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_023.png">
+                            <image-point name="Imagepoint 1" x="0.136364" y="0.201149" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_024.png">
+                            <image-point name="Imagepoint 1" x="0.136364" y="0.247126" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_025.png">
+                            <image-point name="Imagepoint 1" x="0.136364" y="0.272988" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_026.png">
+                            <image-point name="Imagepoint 1" x="0.136364" y="0.278736" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_027.png">
+                            <image-point name="Imagepoint 1" x="0.136364" y="0.278736" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_028.png">
+                            <image-point name="Imagepoint 1" x="0.136364" y="0.275862" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Sprite Work\BGNGameAnimations\ClothingDonation\new guy sprite\ThrowingGuy_029.png">
+                            <image-point name="Imagepoint 1" x="0.136364" y="0.284483" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_TiledConveyor" sid="145305502476448">
+                <plugin id="TiledBg" />
+                <instance-variables>
+                    <instance-variable name="startingPosition" sid="805431299159112" type="number" />
+                    <instance-variable name="resetPoint" sid="304840519084958" type="number" />
+                </instance-variables>
+                <texture original-source="C:\Users\Connor\Desktop\Game Art\Clothing Donation\conveyor belt.png" />
+            </object-type>
+            <object-type name="m4_Tilemap" sid="700939951670840">
+                <plugin id="Tilemap" />
+                <texture />
+                <tiles />
+            </object-type>
+            <object-type name="m4_Tilemap2" sid="530438076849812">
+                <plugin id="Tilemap" />
+                <texture />
+                <tiles />
+            </object-type>
+            <object-type name="m4_TimerBar" sid="119876302631358">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="652480505219201" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\timer bar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_TimerProgress" sid="107289354933880">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="659204493022800" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_TruckHitbox" sid="957841679105881">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="871439416530414" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_TutorialButton" sid="245209311594774">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="m4_TutorialText" sid="902718587721565">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m4_VisualGrid" sid="654623090399571">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="920700602034707" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Connor\Desktop\grid.png">
+                            <collision-poly>
+                                <point x="0.00115741" y="0.0012987" />
+                                <point x="0.998843" y="0.0012987" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_WinFailState" sid="725213458684987">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="236255070984947" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\Win Fail State.png">
+                            <collision-poly>
+                                <point x="0.0137383" y="0.132283" />
+                                <point x="0.52133" y="0.0015748" />
+                                <point x="0.999277" y="0.19685" />
+                                <point x="0.999277" y="0.670866" />
+                                <point x="0.916124" y="0.963779" />
+                                <point x="0.52133" y="0.998425" />
+                                <point x="0.117137" y="0.984252" />
+                                <point x="0.000723066" y="0.670866" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_WinFailText" sid="418043581394037">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m4_backgroundTop" sid="330305903580826">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="379254552870273" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\GAMEPLAYER-02\Desktop\background v.2.1 TOP.png">
+                            <image-point name="clothingSpawnPoint" x="0.0635417" y="0.274167" />
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.516146" y="0.225833" />
+                                <point x="0.483854" y="0.225833" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_HideWall" sid="947223910470932">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="513712672696706" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_InHere" sid="141129267843639">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m4_ItemSoldParticle" sid="219041457978975">
+                <plugin id="Particles" />
+                <texture original-source="D:\Connor\Desktop\Game Art\Clothing Donation\Dollar.png" />
+            </object-type>
+            <object-type name="m4_ItemTrashedParticle" sid="542062799439210">
+                <plugin id="Particles" />
+                <texture original-source="D:\Connor\Desktop\Game Art\Clothing Donation\RedDollar.png" />
+            </object-type>
+            <object-type name="m4_PressAnyKeyToContinueText" sid="661151475342652">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="m4_ScreenClick" sid="554016931276209">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211436190609839" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_showClothes" sid="903736057627316">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="839733510935259" speed="5">
+                        <frame duration="1" hotspotX="0.516" hotspotY="0.496" original-source="D:\Connor\Desktop\Game Art\Global UI\better square.png">
+                            <collision-poly>
+                                <point x="0.0402352" y="0.220519" />
+                                <point x="0.51462" y="0.027013" />
+                                <point x="0.962354" y="0.265974" />
+                                <point x="0.962354" y="0.728312" />
+                                <point x="0.51462" y="0.952987" />
+                                <point x="0.0394737" y="0.775065" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_showStore" sid="341435762191376">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="661364701919435" speed="5">
+                        <frame duration="1" hotspotX="0.516" hotspotY="0.496" original-source="D:\Connor\Desktop\Game Art\Global UI\better square.png">
+                            <collision-poly>
+                                <point x="0.0402352" y="0.220519" />
+                                <point x="0.51462" y="0.027013" />
+                                <point x="0.962354" y="0.265974" />
+                                <point x="0.962354" y="0.728312" />
+                                <point x="0.51462" y="0.952987" />
+                                <point x="0.0394737" y="0.775065" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="m4_storeArray" sid="658820903581140">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
         <object-type name="REPLACE_WITH_REAL_TIMER" sid="711818693617773">
             <plugin id="Sprite" />
             <animation-folder>
@@ -14263,6 +15592,12 @@
                 <instance-variable name="gameNum" sid="374691224729436" type="number" />
             </instance-variables>
         </family>
+        <family name="m4_PiecesFamily" plugin-id="Sprite" sid="658068990436359">
+            <members>
+                <member>m4_Pieces</member>
+                <member>m4_Pieces2</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout-folder name="C6 Casual Menu">
@@ -14317,6 +15652,11 @@
             <layout>mx_1_tutorial.xml</layout>
             <layout>mx_2_main(m).xml</layout>
             <layout>mx_3_main(h).xml</layout>
+        </layout-folder>
+        <layout-folder name="M4">
+            <layout>m4_GameLayout.xml</layout>
+            <layout>m4_pickDifficulty.xml</layout>
+            <layout>m4_TutorialLevel.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
@@ -14373,9 +15713,15 @@
             <event-sheet>mx_2_main(m).xml</event-sheet>
             <event-sheet>mx_3_main(h).xml</event-sheet>
         </event-folder>
+        <event-folder name="M4">
+            <event-sheet>m4_GameEventSheet.xml</event-sheet>
+            <event-sheet>m4_DifficultySet.xml</event-sheet>
+            <event-sheet>m4_DifficultySetup.xml</event-sheet>
+            <event-sheet>m4_TutorialSheet.xml</event-sheet>
+        </event-folder>
     </event-folder>
     <global-instances>
-        <global-instance type="Audio" uid="1673">
+        <global-instance type="Audio" uid="1774">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -14389,14 +15735,14 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="1674" />
-        <global-instance type="Mouse" uid="1675" />
-        <global-instance type="Touch" uid="1676">
+        <global-instance type="Function" uid="1775" />
+        <global-instance type="Mouse" uid="1776" />
+        <global-instance type="Touch" uid="1777">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="LocalStorage" uid="1677" />
+        <global-instance type="LocalStorage" uid="1778" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="Game10EscapeRoom">
@@ -14553,6 +15899,14 @@
             <file name="sfx_grab.m4a" />
             <file name="sfx_grab.ogg" />
         </sound-folder>
+        <sound-folder name="M4">
+            <file name="sfx_placeclothing.m4a" />
+            <file name="sfx_placeclothing.ogg" />
+            <file name="sfx_soldclothing.m4a" />
+            <file name="sfx_soldclothing.ogg" />
+            <file name="sfx_trashclothing.m4a" />
+            <file name="sfx_trashclothing.ogg" />
+        </sound-folder>
     </sounds-folder>
     <music-folder>
         <file name="sfx_AC.ogg" />
@@ -14575,6 +15929,10 @@
         <file name="bgm_heatlock.ogg" />
         <file name="bgm_casualmenubackground.m4a" />
         <file name="bgm_casualmenubackground.ogg" />
+        <file name="David Cutter - Like This.m4a" />
+        <file name="David Cutter - Like This.ogg" />
+        <file name="bgm_clothing_game.m4a" />
+        <file name="bgm_clothing_game.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

@@ -374,6 +374,45 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Game 2 - M4 Clothing</comment>
+                        <event-block sid="403414734404420">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="950565138459172" type="System">
+                                    <param id="0" name="First value">GG_Selected_Game</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="708929160496567">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="378845090238823" type="System">
+                                            <param id="0" name="First value">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-45" name="Reset persisted objects" sid="352822114712053" type="System" />
+                                        <action id="-21" name="Reset global variables" sid="205013205381196" type="System" />
+                                        <action id="-2" name="Go to layout" sid="884118490224364" type="System">
+                                            <param id="0" name="Layout">m4_TutorialLevel</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="967840670745960">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="436727976945254" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="226917299793778" type="System">
+                                            <param id="0" name="Layout">m4_GameLayout</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <comment>Game 4 -- M1 Tire Pressure</comment>
                         <event-block sid="222630852809354">
                             <conditions>

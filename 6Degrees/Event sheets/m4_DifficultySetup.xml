@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>m4_DifficultySetup</name>
+    <events>
+        <event-group description="" sid="367717722972720" title="m4_Stuff">
+            <sub-events>
+                <variable constant="0" name="chosenDifficultySave" sid="319700313443246" static="0" type="number">0</variable>
+                <event-block sid="874993858376172">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="331081793399312" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="492874649117317" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="654566855210864">
+                    <conditions>
+                        <condition id="0" name="On function" sid="661636656360483" type="Function">
+                            <param id="0" name="Name">&quot;setDifficulty0&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="927442891003145" type="System">
+                            <param id="0" name="Variable">m4_scrollSpeed</param>
+                            <param id="1" name="Value">200</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="609064916831348" type="System">
+                            <param id="0" name="Variable">m4_1StarScore</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="692631933802859" type="System">
+                            <param id="0" name="Variable">m4_2StarScore</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="124765111217232" type="System">
+                            <param id="0" name="Variable">m4_3StarScore</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="477844606371899" type="System">
+                            <param id="0" name="Variable">m4_timeTillItemLeaves</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="122649528176404">
+                    <conditions>
+                        <condition id="0" name="On function" sid="342268988365460" type="Function">
+                            <param id="0" name="Name">&quot;setDifficulty1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="418201645187089" type="System">
+                            <param id="0" name="Variable">m4_scrollSpeed</param>
+                            <param id="1" name="Value">300</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="412956707085702" type="System">
+                            <param id="0" name="Variable">m4_1StarScore</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="191599098780782" type="System">
+                            <param id="0" name="Variable">m4_2StarScore</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="174221936609257" type="System">
+                            <param id="0" name="Variable">m4_3StarScore</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="460205424647104" type="System">
+                            <param id="0" name="Variable">m4_timeTillItemLeaves</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="393931865319898">
+                    <conditions>
+                        <condition id="0" name="On function" sid="130286065065255" type="Function">
+                            <param id="0" name="Name">&quot;setDifficulty2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="417869749125037" type="System">
+                            <param id="0" name="Variable">m4_scrollSpeed</param>
+                            <param id="1" name="Value">1000</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="998887610254878" type="System">
+                            <param id="0" name="Variable">m4_1StarScore</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="396287689374138" type="System">
+                            <param id="0" name="Variable">m4_2StarScore</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="310764373712294" type="System">
+                            <param id="0" name="Variable">m4_3StarScore</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="779656085756317" type="System">
+                            <param id="0" name="Variable">m4_timeTillItemLeaves</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

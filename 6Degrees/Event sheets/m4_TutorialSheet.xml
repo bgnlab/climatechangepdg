@@ -1,0 +1,731 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>m4_TutorialSheet</name>
+    <events>
+        <include>m4_GameEventSheet</include>
+        <variable constant="0" name="m4_TutorialTracker" sid="205099117228541" static="0" type="number">0</variable>
+        <variable constant="0" name="m4_TutorialPiecePlaced" sid="727259519284282" static="0" type="number">0</variable>
+        <variable constant="0" name="m4_canClick" sid="744920309438632" static="0" type="number">0</variable>
+        <event-block sid="555053731833319">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="614867850520820" type="System" />
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="107163125095435" type="System" />
+                <action id="-4" name="Set layer visible" sid="694487522717728" type="System">
+                    <param id="0" name="Layer">&quot;TutorialComplete&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="230622054633593" type="System">
+                    <param id="0" name="Group name">&quot;GameTimer&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="565420155290243" type="System">
+                    <param id="0" name="Group name">&quot;m4_OtherStuff&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="825189604987392" type="System">
+                    <param id="0" name="Group name">&quot;Selling&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="478772940404616" type="System">
+                    <param id="0" name="Variable">m4_TutorialTracker</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="952966745010714" type="Function">
+                    <param id="0" name="Name">&quot;disable1,2D&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="579398464946452">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="714297588833751" type="System">
+                    <param id="0" name="Variable">m4_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="791973261346067" type="m4_TutorialText">
+                    <param id="0" name="Text">&quot;Clothing will be placed on the conveyor&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="567925042713070" type="m4_showClothes">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="537559741747348">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="346181679827452" type="System">
+                    <param id="0" name="Variable">m4_instanceTracker</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="887828938524534" type="System">
+                    <param id="0" name="Variable">m4_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="779906030936581" type="System">
+                    <param id="0" name="Group name">&quot;ClothingSpawning&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="0" name="Call function" sid="395307844249713" type="Function">
+                    <param id="0" name="Name">&quot;disable1,2B&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-10" name="Add to" sid="582799073521209" type="System">
+                    <param id="0" name="Variable">m4_TutorialTracker</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="312959039003042">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="527913213816663" type="System">
+                    <param id="0" name="Variable">m4_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="204414450421896" type="m4_TutorialText">
+                    <param id="0" name="Text">&quot;Drag clothing into the store&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="335724540814011" type="m4_showStore">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Call function" sid="551775227011860" type="Function">
+                    <param id="0" name="Name">&quot;enable1,2D&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="853183940690941">
+            <conditions>
+                <condition id="6" inverted="1" name="Is empty" sid="442027272879867" type="m4_storeArray" />
+                <condition id="-14" name="Compare variable" sid="493564831509186" type="System">
+                    <param id="0" name="Variable">m4_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="712615409954428">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="198888188026709" type="System">
+                    <param id="0" name="Variable">m4_TutorialPiecePlaced</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="824380098664242" type="System">
+                    <param id="0" name="Variable">m4_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="794282974988124" type="System">
+                    <param id="0" name="Variable">m4_TutorialTracker</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="269812408246483" type="Function">
+                    <param id="0" name="Name">&quot;disable1,2D&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="431602719949431">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="267662103786725" type="System">
+                    <param id="0" name="Variable">m4_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="393094454987426" type="m4_TutorialText">
+                    <param id="0" name="Text">&quot;Clothes will ocasionally be purchased from the store&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="753391355043857" type="m4_showClothes">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="566591669897911" type="m4_InHere">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="623132229507365" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-12" name="Set group active" sid="996648006077830" type="System">
+                    <param id="0" name="Group name">&quot;Selling&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="381164851708916" type="m4_PressAnyKeyToContinueText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="992525882061036" type="System">
+                    <param id="0" name="Variable">m4_canClick</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="101328847317244">
+            <conditions>
+                <condition id="17" name="On tap object" sid="699615923066947" type="Touch">
+                    <param id="0" name="Object">m4_ScreenClick</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="399537391232040" type="System">
+                    <param id="0" name="Variable">m4_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="331151731692411" type="System">
+                    <param id="0" name="Variable">m4_canClick</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="608780690532390" type="System">
+                    <param id="0" name="Variable">m4_TutorialTracker</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="360452961881222" type="m4_PressAnyKeyToContinueText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Call function" sid="956866858935395" type="Function">
+                    <param id="0" name="Name">&quot;enable1,2B&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="643287603959812" type="Function">
+                    <param id="0" name="Name">&quot;enable1,2D&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="484434446089663">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="352045357439105" type="System">
+                    <param id="0" name="Variable">m4_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="895955535792472" type="m4_PressAnyKeyToContinueText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="290904104572834" type="m4_TutorialText">
+                    <param id="0" name="Text">&quot;Place 2 more clothes into the store&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="442725587970380" type="m4_showStore">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="371702277715399" type="m4_showClothes">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="240105084137003" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-12" name="Set group active" sid="958332347597139" type="System">
+                    <param id="0" name="Group name">&quot;ClothingSpawning&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="630704140889766" type="m4_PressAnyKeyToContinueText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="240600195403303">
+            <conditions>
+                <condition id="0" name="On function" sid="151232545304449" type="Function">
+                    <param id="0" name="Name">&quot;disable1,2B&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="928442270447174">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="392796896293262" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="294880413885815" type="m4_Pieces">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="516686621237975" type="m4_Pieces">
+                            <param id="0" name="Instance variable">tutResetX</param>
+                            <param id="1" name="Value">self.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="730005424597426" type="m4_Pieces">
+                            <param id="0" name="Instance variable">tutResetY</param>
+                            <param id="1" name="Value">self.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="334365970564648">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="452847604425957" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="764608145251259" type="m4_Pieces">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="658474400885224" type="m4_Pieces">
+                            <param id="0" name="Instance variable">tutResetX</param>
+                            <param id="1" name="Value">self.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="930024041695688" type="m4_Pieces">
+                            <param id="0" name="Instance variable">tutResetY</param>
+                            <param id="1" name="Value">self.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="731796685292343">
+            <conditions>
+                <condition id="0" name="On function" sid="913685298628505" type="Function">
+                    <param id="0" name="Name">&quot;enable1,2B&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="172013400583158">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="466649400029943" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="172096072643127" type="m4_Pieces">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="752558652076589">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="397804836283038" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="636437219780618" type="m4_Pieces">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="300134824779870">
+            <conditions>
+                <condition id="0" name="On function" sid="341991927722419" type="Function">
+                    <param id="0" name="Name">&quot;disable1,2D&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="624688720155207">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="306860856279824" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="603396456236982" type="m4_Pieces">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="734574436000226">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="335228637371549" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="208746054456106" type="m4_Pieces">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="856497676626411">
+            <conditions>
+                <condition id="0" name="On function" sid="183197174453204" type="Function">
+                    <param id="0" name="Name">&quot;enable1,2D&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="159696712238291">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="254545150166614" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="983197153340437" type="m4_Pieces">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="514121102539363">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="142365834536891" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="522538211512961" type="m4_Pieces">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="355647478332150">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="449975447127023" type="System">
+                    <param id="0" name="Variable">m4_playerScore</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">-1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="611193590692688" type="System">
+                    <param id="0" name="Variable">m4_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="924948130176673" type="Function">
+                    <param id="0" name="Name">&quot;enable1,2D&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="656334164216817" type="System">
+                    <param id="0" name="Variable">m4_playerScore</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="353431380782878" type="m4_InHere">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="865526860949450">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="287379622751036" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="209075282175619" type="m4_Pieces">
+                            <param id="0" name="X">self.tutResetX</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="851057184407670" type="m4_Pieces">
+                            <param id="0" name="Y">self.tutResetY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="594022164984829">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="498899083174483" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="717668337877764" type="m4_Pieces">
+                            <param id="0" name="X">self.tutResetX</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="754576351762883" type="m4_Pieces">
+                            <param id="0" name="Y">self.tutResetY</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="445210421537597">
+            <conditions>
+                <condition id="0" name="On function" sid="585702337285746" type="Function">
+                    <param id="0" name="Name">&quot;disable19,20,21B&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="568459022114619">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="674003102203671" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">18</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="744839909742023" type="m4_Pieces">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="410118444514018" type="m4_Pieces">
+                            <param id="0" name="Instance variable">tutResetX</param>
+                            <param id="1" name="Value">self.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="813108536731625" type="m4_Pieces">
+                            <param id="0" name="Instance variable">tutResetY</param>
+                            <param id="1" name="Value">self.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="725420036288799">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="120989793740828" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">19</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="131200947895563" type="m4_Pieces">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="303065398585561" type="m4_Pieces">
+                            <param id="0" name="Instance variable">tutResetX</param>
+                            <param id="1" name="Value">self.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="632320105172878" type="m4_Pieces">
+                            <param id="0" name="Instance variable">tutResetY</param>
+                            <param id="1" name="Value">self.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="274989149808141">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="880377213281627" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="188877610269937" type="m4_Pieces">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="899967253751441" type="m4_Pieces">
+                            <param id="0" name="Instance variable">tutResetX</param>
+                            <param id="1" name="Value">self.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="170943267320633" type="m4_Pieces">
+                            <param id="0" name="Instance variable">tutResetY</param>
+                            <param id="1" name="Value">self.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="723086743319765">
+            <conditions>
+                <condition id="0" name="On function" sid="878038608878376" type="Function">
+                    <param id="0" name="Name">&quot;enable19,20,21B&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="117170410926669">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="162150387417188" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">19</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="673303872456962" type="m4_Pieces">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="216533807092659">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="649971696675486" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="758945962983933" type="m4_Pieces">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="889783301217902">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="615347738798608" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">21</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="703928108086479" type="m4_Pieces">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="833532905655163">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="251334647974932" type="System">
+                    <param id="0" name="Variable">m4_instanceTracker</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">21</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="546543384086970" type="System">
+                    <param id="0" name="Group name">&quot;ClothingSpawning&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="0" name="Call function" sid="292562659626224" type="Function">
+                    <param id="0" name="Name">&quot;disable19,20,21B&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Set text" sid="672917104070443" type="m4_TutorialText">
+                    <param id="0" name="Text">&quot;Seriously. Place 3&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="233601749465271">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="986054647419092" type="System">
+                    <param id="0" name="Variable">m4_TutorialPiecePlaced</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="200524956379008" type="System">
+                    <param id="0" name="Layer">&quot;TutorialComplete&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="907582728513433" type="System">
+                    <param id="0" name="Group name">&quot;Selling&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="725446002810551">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="489384375399613" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="224110438475205" type="m4_Pieces">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="781025951199920" type="m4_Pieces">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="270964610740952" type="m4_Pieces">
+                            <param id="0" name="X">3000</param>
+                            <param id="1" name="Y">3000</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="897798219443900" type="m4_ThrowingStuffGuy" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="313004330707679">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="297291420827639" type="System">
+                    <param id="0" name="Layer">&quot;TutorialComplete&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="453410863997711" type="m4_showStore">
+                    <param id="0" name="Width">m4_WinFailState.Width</param>
+                    <param id="1" name="Height">m4_WinFailState.Height</param>
+                </action>
+                <action id="-3" name="Set position" sid="238660281712723" type="m4_showStore">
+                    <param id="0" name="X">m4_WinFailState.X</param>
+                    <param id="1" name="Y">m4_WinFailState.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="146882708988942">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="547080428907798" type="Touch">
+                            <param id="0" name="Object">m4_ExitBtn</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="945655835980433" type="m4_storeArray" />
+                        <action id="-3" name="Create object" sid="201638042053987" type="System">
+                            <param id="0" name="Object to create">m4_storeArray</param>
+                            <param id="1" name="Layer">&quot;MainLayer&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="484347300706249" type="System">
+                            <param id="0" name="Variable">m4_randomSellValue</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="245718592739237" type="System">
+                            <param id="0" name="Group name">&quot;GameTimer&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="769495040867068" type="System">
+                            <param id="0" name="Group name">&quot;m4_OtherStuff&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="332148582134052" type="System">
+                            <param id="0" name="Group name">&quot;Selling&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="242796843648632" type="System">
+                            <param id="0" name="Group name">&quot;ClothingSpawning&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="647416706441999" type="System" />
+                        <action id="-45" name="Reset persisted objects" sid="988081611291355" type="System" />
+                        <action id="-9" name="Set value" sid="861017733330543" type="System">
+                            <param id="0" name="Variable">m4_scrollSpeed</param>
+                            <param id="1" name="Value">200</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="663382227271428" type="System">
+                            <param id="0" name="Variable">m4_1StarScore</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="721909458343461" type="System">
+                            <param id="0" name="Variable">m4_2StarScore</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="572382904515368" type="System">
+                            <param id="0" name="Variable">m4_3StarScore</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="400178470039232" type="System">
+                            <param id="0" name="Variable">m4_timeTillItemLeaves</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="733927825836204" type="System">
+                            <param id="0" name="Layout">m4_GameLayout</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
