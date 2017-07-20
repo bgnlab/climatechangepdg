@@ -997,9 +997,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-21" name="Reset global variables" sid="286224787073384" type="System" />
                                 <action id="-26" name="Restart layout" sid="865855938040137" type="System" />
-                                <action id="-45" name="Reset persisted objects" sid="381671909443303" type="System" />
                             </actions>
                         </event-block>
                         <event-block sid="446873023020765">
@@ -1034,16 +1032,67 @@
                                     <param id="0" name="Object">m1_ExitBtn</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="966019973269968" type="Function">
-                                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block sid="223708032580488">
-                                    <conditions />
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="688048114460738" type="m1_Star" />
+                                    </conditions>
                                     <actions />
+                                    <sub-events>
+                                        <event-block sid="952765678870068">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="493497152741959" type="m1_2ndStar" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="899604612117846">
+                                                    <conditions>
+                                                        <condition id="-9" name="Is visible" sid="248716570188498" type="m1_3rdStar" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="180967555574504" type="Function">
+                                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                                            <param id="1" name="Parameter {n}">3</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="914151635008010">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="684304416857088" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="917532051510718" type="Function">
+                                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                                            <param id="1" name="Parameter {n}">2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="375399786431902">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="461140085460806" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="691829188407675" type="Function">
+                                                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                                    <param id="1" name="Parameter {n}">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="823255231392746">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="433383541480595" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="406669081517018" type="Function">
+                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>

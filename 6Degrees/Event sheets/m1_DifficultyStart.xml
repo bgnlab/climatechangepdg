@@ -14,16 +14,16 @@
                         <condition id="-2" name="On start of layout" sid="858121461602235" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-45" name="Reset persisted objects" sid="669023299370216" type="System" />
+                        <action id="-21" name="Reset global variables" sid="522153019079341" type="System" />
                         <action id="-9" name="Set value" sid="596993713476184" type="System">
                             <param id="0" name="Variable">m1_chosenDifficulty</param>
-                            <param id="1" name="Value">GG_Difficulty</param>
+                            <param id="1" name="Value">GG_State.Get(&quot;difficulty&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="437765671506575" type="System">
                             <param id="0" name="Variable">localDifficulty</param>
                             <param id="1" name="Value">m1_chosenDifficulty</param>
                         </action>
-                        <action id="-45" name="Reset persisted objects" sid="669023299370216" type="System" />
-                        <action id="-21" name="Reset global variables" sid="522153019079341" type="System" />
                         <action id="0" name="Call function" sid="320641338266983" type="Function">
                             <param id="0" name="Name">&quot;setDifficulty&quot; &amp;localDifficulty</param>
                             <param id="1" name="Parameter {n}"></param>
