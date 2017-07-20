@@ -1035,13 +1035,17 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-21" name="Reset global variables" sid="574225157118205" type="System" />
-                                <action id="-45" name="Reset persisted objects" sid="842808959417623" type="System" />
                                 <action id="0" name="Call function" sid="966019973269968" type="Function">
                                     <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="223708032580488">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="249817995266745">
                             <conditions>

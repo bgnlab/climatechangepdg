@@ -675,28 +675,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="C6_TitleLevel" uid="20">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>970</x>
-                        <y>190</y>
-                        <z>0</z>
-                        <width>351.499633789</width>
-                        <height>175.749816895</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="C6_ButtonBack" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -764,6 +742,33 @@
                         <z>0</z>
                         <width>319</width>
                         <height>277</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="C6_Levels_Label" uid="20">
+                    <properties>
+                        <text>Level Select</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-96,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>960</x>
+                        <y>200</y>
+                        <z>0</z>
+                        <width>1008.814453125</width>
+                        <height>151.322174072</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -872,7 +877,7 @@
                 </instance>
                 <instance type="C6_TempDiffTitle" uid="13">
                     <properties>
-                        <text>GAME TITLE!!!!!</text>
+                        <text>Game Title</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-96,400,0</font>
                         <color>0,0,0</color>
@@ -899,7 +904,7 @@
                 </instance>
                 <instance type="C6_DiffDescription" uid="17">
                     <properties>
-                        <text>G A ME D E SCRIPTION</text>
+                        <text>Game Description</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-32,400,0</font>
                         <color>0,0,0</color>

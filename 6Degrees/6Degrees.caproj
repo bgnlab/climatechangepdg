@@ -31,8 +31,10 @@
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="brightness">Brightness</effect>
@@ -457,14 +459,6 @@
                             </animation>
                         </animation-folder>
                     </object-type>
-                    <object-type name="C6_TitleLevel" sid="848909340828694">
-                        <plugin id="Sprite" />
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315967146009484" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            </animation>
-                        </animation-folder>
-                    </object-type>
                     <object-type name="C6_Game1" sid="823057396206445">
                         <plugin id="Sprite" />
                         <animation-folder>
@@ -539,6 +533,9 @@
                                 </frame>
                             </animation>
                         </animation-folder>
+                    </object-type>
+                    <object-type name="C6_Levels_Label" sid="197516805289371">
+                        <plugin id="Text" />
                     </object-type>
                 </object-folder>
                 <object-folder name="Difficulty">
@@ -694,14 +691,14 @@
             <object-type name="C6_Background" sid="348671960813810">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="StartScreen" pingpong="0" repeatcount="1" repeatto="0" sid="108905934731114" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casusal game menu screen.png" />
+                    <animation framecount="1" loop="0" name="Blank" pingpong="0" repeatcount="1" repeatto="0" sid="796489804625052" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casual game game select blank.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="LevelSelect" pingpong="0" repeatcount="1" repeatto="0" sid="196747552615964" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Eight Game menu screen.png" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Blank" pingpong="0" repeatcount="1" repeatto="0" sid="796489804625052" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casual game game select blank.png" />
+                    <animation framecount="1" loop="0" name="StartScreen" pingpong="0" repeatcount="1" repeatto="0" sid="108905934731114" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casusal game menu screen.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -10217,6 +10214,1211 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="DC_Parking">
+            <object-folder name="Bike">
+                <object-type name="DC_Bike" sid="133788871564951">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="UClickedOnThis" sid="919709560966675" type="string" />
+                        <instance-variable name="ISpawnedAt" sid="998288223014326" type="string" />
+                        <instance-variable name="ImGoingTo" sid="826927375553643" type="string" />
+                        <instance-variable name="InSpace" sid="157201750913985" type="number" />
+                        <instance-variable name="TARGET" sid="241238425678874" type="number" />
+                        <instance-variable name="ParkAT" sid="131935632774386" type="string" />
+                    </instance-variables>
+                    <container>
+                        <type>DC_Bike</type>
+                        <type>DC_BikeCollider</type>
+                        <type>DC_ThinkyBubbleBike</type>
+                        <type>DC_BikeTarget</type>
+                        <type>DC_LocationIconsBike</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="486380985878943" speed="10">
+                            <frame duration="1" hotspotX="0.453333" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\BikeMan2.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.433333" hotspotY="0.522222" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\BikeMan1.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\BikeMan3.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Parked" pingpong="0" repeatcount="1" repeatto="0" sid="255157545157028" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Secondary Downloads\empty bike.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="1" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="640924234262481" speed="10">
+                            <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.433333" hotspotY="0.522222">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="1" name="Going" pingpong="0" repeatcount="1" repeatto="0" sid="468901336063799" speed="10">
+                            <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.433333" hotspotY="0.522222">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_BikeCollider" sid="426873175036450">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="UClickedOnThis" sid="351165037897884" type="string" />
+                        <instance-variable name="ISpawnedAt" sid="289644713166805" type="string" />
+                        <instance-variable name="ImGoingTo" sid="954844070726982" type="string" />
+                    </instance-variables>
+                    <container>
+                        <type>DC_Bike</type>
+                        <type>DC_BikeCollider</type>
+                        <type>DC_ThinkyBubbleBike</type>
+                        <type>DC_BikeTarget</type>
+                        <type>DC_LocationIconsBike</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="606354455233250" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.85" y="0.88" />
+                                    <point x="0.75" y="0.88" />
+                                    <point x="0.746667" y="0.1" />
+                                    <point x="0.85" y="0.1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_BikeTarget" sid="646686207539298">
+                    <plugin id="Text" />
+                    <container>
+                        <type>DC_Bike</type>
+                        <type>DC_BikeCollider</type>
+                        <type>DC_ThinkyBubbleBike</type>
+                        <type>DC_BikeTarget</type>
+                        <type>DC_LocationIconsBike</type>
+                    </container>
+                </object-type>
+                <object-type name="DC_BikeTrigger" sid="460444905001623">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="Location" name="IAMTOO" sid="394978679374260" type="string" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="953695145952859" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Car">
+                <object-type name="DC_Car" sid="578848878463861">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="UClickedOnThis" sid="654831599933266" type="string" />
+                        <instance-variable name="ISpawnedAt" sid="910919643128375" type="string" />
+                        <instance-variable name="ImGoingTo" sid="209894194934273" type="string" />
+                        <instance-variable name="InSpace" sid="506878346691931" type="number" />
+                        <instance-variable name="TARGET" sid="314282125370209" type="number" />
+                        <instance-variable comment="Parking Space Location" name="PSpaceX" sid="441006157933109" type="number" />
+                        <instance-variable comment="Parking Space Location" name="PSpaceY" sid="935620126704177" type="number" />
+                        <instance-variable name="ParkAt" sid="763979323140175" type="string" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="CustomMovement" sid="739867445271563">
+                            <behavior id="custom" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>DC_Car</type>
+                        <type>DC_CarCollider</type>
+                        <type>DC_ThinkyBubble</type>
+                        <type>DC_PassengerTarget</type>
+                        <type>DC_LocationIconsThinky</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395792726456731" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.511111" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Car.png">
+                                <image-point name="Collider Goes Here" x="-0.353333" y="0.511111" />
+                                <image-point name="CarDoor" x="0.5" y="0" />
+                                <collision-poly>
+                                    <point x="0.0132444" y="0.0219753" />
+                                    <point x="0.802578" y="0.0219753" />
+                                    <point x="0.802578" y="0.978025" />
+                                    <point x="0.0132444" y="0.978025" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="657476506480545" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.511364">
+                                <image-point name="Collider Goes Here" x="-0.378378" y="0.511364" />
+                                <image-point name="CarDoor" x="0.5" y="0" />
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.810811" y="0" />
+                                    <point x="0.810811" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="573043131229427" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.511364">
+                                <image-point name="Collider Goes Here" x="-0.378378" y="0.511364" />
+                                <image-point name="CarDoor" x="0.5" y="0" />
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Parked" pingpong="0" repeatcount="1" repeatto="0" sid="674615610670647" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.511111">
+                                <image-point name="Collider Goes Here" x="-0.353333" y="0.511111" />
+                                <image-point name="CarDoor" x="0.5" y="0" />
+                                <collision-poly>
+                                    <point x="0.0132444" y="0.0219753" />
+                                    <point x="0.802578" y="0.0219753" />
+                                    <point x="0.802578" y="0.978025" />
+                                    <point x="0.0132444" y="0.978025" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Tracking" pingpong="0" repeatcount="1" repeatto="0" sid="250441200867273" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.511364">
+                                <image-point name="Collider Goes Here" x="-0.378378" y="0.511364" />
+                                <image-point name="CarDoor" x="0.5" y="0" />
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.810811" y="0" />
+                                    <point x="0.810811" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_CarCollider" sid="414798947115761">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="UClickedOnThis" sid="878546537812320" type="string" />
+                        <instance-variable name="ISpawnedAt" sid="867537763420171" type="string" />
+                        <instance-variable name="ImGoingTo" sid="423849439514292" type="string" />
+                    </instance-variables>
+                    <container>
+                        <type>DC_Car</type>
+                        <type>DC_CarCollider</type>
+                        <type>DC_ThinkyBubble</type>
+                        <type>DC_PassengerTarget</type>
+                        <type>DC_LocationIconsThinky</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="846457033826044" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Car.png">
+                                <collision-poly>
+                                    <point x="0.133333" y="0.133333" />
+                                    <point x="0.25" y="0.133333" />
+                                    <point x="0.25" y="0.9" />
+                                    <point x="0.133333" y="0.9" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="706540215528709" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.85" y="0.88" />
+                                    <point x="0.75" y="0.88" />
+                                    <point x="0.746667" y="0.1" />
+                                    <point x="0.85" y="0.1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_BlockingCar" sid="738023002161297">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="522755906079924" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\BlueCar.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="248935826879138" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_PassengerTarget" sid="924397093140321">
+                    <plugin id="Text" />
+                    <container>
+                        <type>DC_Car</type>
+                        <type>DC_CarCollider</type>
+                        <type>DC_ThinkyBubble</type>
+                        <type>DC_PassengerTarget</type>
+                        <type>DC_LocationIconsThinky</type>
+                    </container>
+                </object-type>
+            </object-folder>
+            <object-folder name="Clicky">
+                <object-type name="DC_ParkingSpace" sid="339711082530378">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Occupied" sid="477650953035717" type="string" />
+                        <instance-variable name="IAM" sid="798188447071600" type="string" />
+                        <instance-variable name="LANEOCCUPIED" sid="250862449053442" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Parked" pingpong="0" repeatcount="1" repeatto="0" sid="697979234178450" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation4" pingpong="0" repeatcount="1" repeatto="0" sid="487534912397591" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="687891843767823" speed="5">
+                            <frame duration="1" hotspotX="0.486667" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Animations\DC_Car\Parked\000.png">
+                                <collision-poly>
+                                    <point x="0.0533333" y="0.0888889" />
+                                    <point x="0.5" y="0.0666667" />
+                                    <point x="0.953333" y="0.0777778" />
+                                    <point x="0.986667" y="0.5" />
+                                    <point x="0.94" y="0.9" />
+                                    <point x="0.0666667" y="0.888889" />
+                                    <point x="0.0133333" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="792172432110352" speed="5">
+                            <frame duration="1" hotspotX="0.486667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.0533333" y="0.0888889" />
+                                    <point x="0.5" y="0.0666667" />
+                                    <point x="0.953333" y="0.0777778" />
+                                    <point x="0.986667" y="0.5" />
+                                    <point x="0.94" y="0.9" />
+                                    <point x="0.0666667" y="0.888889" />
+                                    <point x="0.0133333" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_ImAPole" sid="388073156891753">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Occupied" sid="348805039174415" type="string" />
+                        <instance-variable name="IAM" sid="225874855320962" type="string" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="667721237751003" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_ParkTrigger" sid="459586250993095">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="Location" name="IAMTOO" sid="932954324976652" type="string" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="846633587180005" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Endgame">
+                <object-type name="DC_EGBG" sid="903714068645833">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="517107971656503" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\Win Fail State.png">
+                                <collision-poly>
+                                    <point x="0.0137383" y="0.132283" />
+                                    <point x="0.52133" y="0.0015748" />
+                                    <point x="0.999277" y="0.19685" />
+                                    <point x="0.999277" y="0.670866" />
+                                    <point x="0.916124" y="0.963779" />
+                                    <point x="0.52133" y="0.998425" />
+                                    <point x="0.117137" y="0.984252" />
+                                    <point x="0.000723066" y="0.670866" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_ST4R" sid="728598835147533">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="UrLosing" sid="473450966374699" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Full" pingpong="0" repeatcount="1" repeatto="0" sid="896040593303805" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Animations\M3_Star\Full\000.png">
+                                <collision-poly>
+                                    <point x="0.336" y="0.336" />
+                                    <point x="0.5" y="0.044" />
+                                    <point x="0.668" y="0.332" />
+                                    <point x="0.916" y="0.5" />
+                                    <point x="0.808" y="0.808" />
+                                    <point x="0.212" y="0.788" />
+                                    <point x="0.096" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="537226193080496" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Animations\M3_Star\Empty\000.png">
+                                <collision-poly>
+                                    <point x="0.336" y="0.336" />
+                                    <point x="0.5" y="0.044" />
+                                    <point x="0.668" y="0.332" />
+                                    <point x="0.916" y="0.5" />
+                                    <point x="0.808" y="0.808" />
+                                    <point x="0.212" y="0.788" />
+                                    <point x="0.096" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_PaintItBlack" sid="404301253081097">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="480426197574469" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_Exit" sid="471791615225211">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="305695740055192" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Animations\M3_Exit\Default\000.png">
+                                <collision-poly>
+                                    <point x="0.154167" y="0.154167" />
+                                    <point x="0.5" y="0.129167" />
+                                    <point x="0.845833" y="0.154167" />
+                                    <point x="0.954167" y="0.5" />
+                                    <point x="0.891667" y="0.891667" />
+                                    <point x="0.5" y="0.933333" />
+                                    <point x="0.108333" y="0.891667" />
+                                    <point x="0.05" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Clicked" pingpong="0" repeatcount="1" repeatto="0" sid="441104390165006" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Animations\M3_Exit\Clicked\000.png">
+                                <collision-poly>
+                                    <point x="0.154167" y="0.154167" />
+                                    <point x="0.5" y="0.129167" />
+                                    <point x="0.845833" y="0.154167" />
+                                    <point x="0.954167" y="0.5" />
+                                    <point x="0.870833" y="0.870833" />
+                                    <point x="0.5" y="0.9" />
+                                    <point x="0.133333" y="0.866667" />
+                                    <point x="0.05" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_Take2" sid="802456871931057">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="309894898551845" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Animations\M3_Retry\Default\000.png">
+                                <collision-poly>
+                                    <point x="0.154167" y="0.154167" />
+                                    <point x="0.5" y="0.133333" />
+                                    <point x="0.841667" y="0.158333" />
+                                    <point x="0.95" y="0.5" />
+                                    <point x="0.895833" y="0.895833" />
+                                    <point x="0.5" y="0.9375" />
+                                    <point x="0.108333" y="0.891667" />
+                                    <point x="0.0541667" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Clicked" pingpong="0" repeatcount="1" repeatto="0" sid="376797509206513" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Animations\M3_Retry\Clicked\000.png">
+                                <collision-poly>
+                                    <point x="0.154167" y="0.154167" />
+                                    <point x="0.5" y="0.133333" />
+                                    <point x="0.841667" y="0.158333" />
+                                    <point x="0.95" y="0.5" />
+                                    <point x="0.866667" y="0.866667" />
+                                    <point x="0.5" y="0.9" />
+                                    <point x="0.133333" y="0.866667" />
+                                    <point x="0.0541667" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_ScoreBackground" sid="656603956224315">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869889879752976" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_ScoreBar" sid="850218184375676">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="705473318029696" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Tutorial Stuff">
+                <object-type name="DC_BlackBox" sid="991842008990588">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="143857742939285" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_HoleBox" sid="919843126319836">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="429747322678363" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_BlackBox2" sid="139841523310451">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="871169404961997" speed="5">
+                            <frame duration="1" hotspotX="0.500873" hotspotY="0.501502" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_BlackBox3" sid="861454395324002">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="179763625479455" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_TapToContinue" sid="388808118468430">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="DC_TutorialText" sid="342649323329851">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="DC_BlackBox4" sid="534945411493881">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="633742282622419" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_BlackBox5" sid="513884084991342">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662340885595039" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Uninteractable">
+                <object-type name="DC_Background" sid="576944961472897">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="497522342621972" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\parking layout.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_StuffSpawnsHere" sid="605768448066620">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="SetRotationTo" sid="915540093033234" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="341130208714411" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_TempScoreThingy" sid="273734261850053">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="DC_RealTargets" sid="996910757673338">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="DC_WallForPathfinding" sid="855230336677498">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="250536987677249">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="604029563732363" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_Person" sid="730854193257482">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="GottaGet2" sid="272994791807259" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pathfinding" sid="120212794204518">
+                            <behavior id="Pathfinding" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="123245996398692" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.588889" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 5.png">
+                                <collision-poly>
+                                    <point x="0" y="0.315822" />
+                                    <point x="1" y="0.315822" />
+                                    <point x="1" y="0.947289" />
+                                    <point x="0" y="0.935911" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_Text" sid="687777089474156">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="DC_TurningPoint1" sid="730463168505060">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="541944057930398" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_TurningPoint1B" sid="237542825743920">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="826986370512129" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_ThinkyBubble" sid="326918932840224">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>DC_Car</type>
+                        <type>DC_CarCollider</type>
+                        <type>DC_ThinkyBubble</type>
+                        <type>DC_PassengerTarget</type>
+                        <type>DC_LocationIconsThinky</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="612621623142306" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Secondary Downloads\thought bubble.png">
+                                <collision-poly>
+                                    <point x="0.95" y="0.5" />
+                                    <point x="0.83" y="0.83" />
+                                    <point x="0.5" y="0.62" />
+                                    <point x="0.38" y="0.62" />
+                                    <point x="0.05" y="0.5" />
+                                    <point x="0.17" y="0.17" />
+                                    <point x="0.5" y="0.07" />
+                                    <point x="0.81" y="0.19" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_ThinkyBubbleBike" sid="110270194196745">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>DC_Bike</type>
+                        <type>DC_BikeCollider</type>
+                        <type>DC_ThinkyBubbleBike</type>
+                        <type>DC_BikeTarget</type>
+                        <type>DC_LocationIconsBike</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="161619086468137" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Secondary Downloads\thought bubble.png">
+                                <collision-poly>
+                                    <point x="0.95" y="0.5" />
+                                    <point x="0.83" y="0.83" />
+                                    <point x="0.5" y="0.62" />
+                                    <point x="0.38" y="0.62" />
+                                    <point x="0.05" y="0.5" />
+                                    <point x="0.17" y="0.17" />
+                                    <point x="0.5" y="0.07" />
+                                    <point x="0.81" y="0.19" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_TurningPoint2" sid="972604625778633">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="240689936016720" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_TurningPoint3" sid="842825953143412">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="568311228440091" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_TurningPoint3B" sid="916856844786703">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="708754310703685" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_TurningPoint4" sid="949560605019316">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804030381735127" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_TurningPoint2B" sid="398004668930505">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="205793573776781" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_TurningPoint4B" sid="447441301852424">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861105951052797" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_LocationIconsThinky" sid="961527859570144">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>DC_Car</type>
+                        <type>DC_CarCollider</type>
+                        <type>DC_ThinkyBubble</type>
+                        <type>DC_PassengerTarget</type>
+                        <type>DC_LocationIconsThinky</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="9" loop="0" name="Animation1" pingpong="0" repeatcount="1" repeatto="0" sid="451654620648280" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon1.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.0375" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.8375" y="0.8375" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon2.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon3.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon4.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon5.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon6.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon7.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon8.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.0375" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.8375" y="0.8375" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon9.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="726056265988928" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation3" pingpong="0" repeatcount="1" repeatto="0" sid="506356390573956" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation4" pingpong="0" repeatcount="1" repeatto="0" sid="836437914081125" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation5" pingpong="0" repeatcount="1" repeatto="0" sid="388300935963261" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation6" pingpong="0" repeatcount="1" repeatto="0" sid="694900112285807" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation7" pingpong="0" repeatcount="1" repeatto="0" sid="849492478994851" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation8" pingpong="0" repeatcount="1" repeatto="0" sid="834990849253350" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_LocationIconsBike" sid="280392469961671">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>DC_Bike</type>
+                        <type>DC_BikeCollider</type>
+                        <type>DC_ThinkyBubbleBike</type>
+                        <type>DC_BikeTarget</type>
+                        <type>DC_LocationIconsBike</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="9" loop="0" name="Animation1" pingpong="0" repeatcount="1" repeatto="0" sid="573082739730284" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon1.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.0375" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.8375" y="0.8375" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon2.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon3.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon4.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon5.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon6.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon7.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon8.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.0375" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.8375" y="0.8375" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon9.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="422874433520458" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation3" pingpong="0" repeatcount="1" repeatto="0" sid="137317047675316" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation4" pingpong="0" repeatcount="1" repeatto="0" sid="552676918896725" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation5" pingpong="0" repeatcount="1" repeatto="0" sid="604021604741019" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation6" pingpong="0" repeatcount="1" repeatto="0" sid="406197886413052" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation7" pingpong="0" repeatcount="1" repeatto="0" sid="498278934307342" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation8" pingpong="0" repeatcount="1" repeatto="0" sid="372578327014089" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DC_MapLocationIcons" sid="238414931573895">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="9" loop="0" name="Animation1" pingpong="0" repeatcount="0" repeatto="0" sid="822016446449628" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon1.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.0375" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.8375" y="0.8375" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon2.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon3.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon4.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon5.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon6.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon7.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon8.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.0375" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.8375" y="0.8375" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon9.png">
+                                <collision-poly>
+                                    <point x="0.175" y="0.175" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.825" y="0.175" />
+                                    <point x="0.975" y="0.5" />
+                                    <point x="0.85" y="0.85" />
+                                    <point x="0.5" y="0.9875" />
+                                    <point x="0.1625" y="0.8375" />
+                                    <point x="0.0375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="121893925311522" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation3" pingpong="0" repeatcount="1" repeatto="0" sid="785508403707735" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation4" pingpong="0" repeatcount="1" repeatto="0" sid="147892265473779" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation5" pingpong="0" repeatcount="1" repeatto="0" sid="352457647999352" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation6" pingpong="0" repeatcount="1" repeatto="0" sid="984350137842988" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation7" pingpong="0" repeatcount="1" repeatto="0" sid="951740624510944" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation8" pingpong="0" repeatcount="1" repeatto="0" sid="934242677521487" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-type name="REPLACE_WITH_REAL_TIMER" sid="711818693617773">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="494997943700755" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="Audio" sid="836488677985367">
             <plugin id="Audio" />
         </object-type>
@@ -10596,6 +11798,10 @@
         <layout-folder name="M7 heat lock">
             <layout>M7_HeatLock.xml</layout>
         </layout-folder>
+        <layout-folder name="DC Parking">
+            <layout>DC_Tutorial_2.xml</layout>
+            <layout>DC_MainGame.xml</layout>
+        </layout-folder>
     </layout-folder>
     <event-folder>
         <event-folder name="M2 Escape Room">
@@ -10641,9 +11847,13 @@
         <event-folder name="M7 heat lock">
             <event-sheet>M7_HeatLock.xml</event-sheet>
         </event-folder>
+        <event-folder name="DC Parking">
+            <event-sheet>DC_EventSheet.xml</event-sheet>
+            <event-sheet>DC_Tutorial.xml</event-sheet>
+        </event-folder>
     </event-folder>
     <global-instances>
-        <global-instance type="Audio" uid="1197">
+        <global-instance type="Audio" uid="1417">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -10657,14 +11867,14 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="1198" />
-        <global-instance type="Mouse" uid="1199" />
-        <global-instance type="Touch" uid="1200">
+        <global-instance type="Function" uid="1418" />
+        <global-instance type="Mouse" uid="1419" />
+        <global-instance type="Touch" uid="1420">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="LocalStorage" uid="1201" />
+        <global-instance type="LocalStorage" uid="1421" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="Game10EscapeRoom">
@@ -10754,6 +11964,22 @@
             <file name="sfx_door_open.ogg" />
             <file name="sfx_AC.m4a" />
             <file name="sfx_AC.ogg" />
+        </sound-folder>
+        <sound-folder name="DC Parking">
+            <file name="sfx_bikebell.m4a" />
+            <file name="sfx_bikebell.ogg" />
+            <file name="sfx_biketirebrake.m4a" />
+            <file name="sfx_biketirebrake.ogg" />
+            <file name="sfx_carhorn.m4a" />
+            <file name="sfx_carhorn.ogg" />
+            <file name="sfx_carparkingbrake.m4a" />
+            <file name="sfx_carparkingbrake.ogg" />
+            <file name="sfx_citytraffit.m4a" />
+            <file name="sfx_citytraffit.ogg" />
+            <file name="sfx_placingcar.m4a" />
+            <file name="sfx_placingcar.ogg" />
+            <file name="sfx_lightswitch.m4a" />
+            <file name="sfx_lightswitch.ogg" />
         </sound-folder>
     </sounds-folder>
     <music-folder>

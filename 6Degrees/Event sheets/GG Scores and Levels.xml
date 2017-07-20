@@ -221,6 +221,89 @@
                         <action id="33" name="Stop all" sid="718182359846678" type="Audio" />
                     </actions>
                     <sub-events>
+                        <comment>Game 0 -- DC Parking</comment>
+                        <event-block sid="177256462072328">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="169947992285312" type="System">
+                                    <param id="0" name="First value">GG_Selected_Game</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="321756650137568">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="634193072998600" type="System">
+                                            <param id="0" name="Variable">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="402936484483207" type="System">
+                                            <param id="0" name="Variable">DC_OfficialDifficulty</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="790928948258283">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="156053937243983" type="System">
+                                            <param id="0" name="Variable">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="510455482776993" type="System">
+                                            <param id="0" name="Variable">DC_OfficialDifficulty</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="287822649156525">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="135757077645233" type="System">
+                                            <param id="0" name="Variable">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="623889622560850" type="System">
+                                            <param id="0" name="Variable">DC_OfficialDifficulty</param>
+                                            <param id="1" name="Value">4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Direct to layout</comment>
+                                <event-block sid="243674876057812">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="604926348767133" type="System">
+                                            <param id="0" name="Variable">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="566858539432959" type="System">
+                                            <param id="0" name="Layout">DC_Tutorial_2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="465430037280221">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="537336525224265" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="842919917539682" type="System">
+                                            <param id="0" name="Layout">DC_MainGame</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <comment>Game 1 -- M6 Food</comment>
                         <event-block sid="468511602489857">
                             <conditions>
