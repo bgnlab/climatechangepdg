@@ -1043,6 +1043,14 @@
                                     <param id="0" name="Variable">m6_tut_checker</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="802994716141182" type="m6_1_tutLight">
+                                    <param id="0" name="X">1448</param>
+                                    <param id="1" name="Y">1141.5</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="436939475758491" type="m6_1_tutLight">
+                                    <param id="0" name="Width">830</param>
+                                    <param id="1" name="Height">260</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="290813218333917">
