@@ -47,7 +47,7 @@
                             <param id="0" name="Audio file">bgm_tirepressure_game</param>
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">-15</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;muse&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -298,6 +298,10 @@
                                         </action>
                                         <action id="6" name="Stop" sid="710218619907765" type="Audio">
                                             <param id="0" name="Tag">&quot;driving&quot;</param>
+                                        </action>
+                                        <action id="22" name="Set paused" sid="620457548056129" type="Audio">
+                                            <param id="0" name="Tag">&quot;muse&quot;</param>
+                                            <param id="1" name="State">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
