@@ -69,7 +69,7 @@
     <object-folder>
         <object-folder name="C6 Casual Menu">
             <object-folder name="Animals">
-                <object-type name="Car" sid="578884680589700">
+                <object-type name="C6_Car" sid="578884680589700">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Car" pingpong="0" repeatcount="1" repeatto="0" sid="134486270652917" speed="5">
@@ -88,7 +88,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Sprite3" sid="802930902891809">
+                <object-type name="C6_Badger" sid="802930902891809">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="789134558324868" speed="5">
@@ -102,6 +102,213 @@
                                     <point x="0.497992" y="0.683794" />
                                     <point x="0.35743" y="0.648221" />
                                     <point x="0.269076" y="0.498024" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="C6_Skunk" sid="987040859342437">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="729207403363740" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502164" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\skunk.png">
+                                <collision-poly>
+                                    <point x="0.36036" y="0.34632" />
+                                    <point x="0.5" y="0.121212" />
+                                    <point x="0.558559" y="0.424242" />
+                                    <point x="0.689189" y="0.497835" />
+                                    <point x="0.905405" y="0.909091" />
+                                    <point x="0.5" y="0.675325" />
+                                    <point x="0.342342" y="0.670996" />
+                                    <point x="0.126126" y="0.497835" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="C6_Rabbits" sid="120470095406703">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="360371758648655" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\bunny twins.png">
+                                <collision-poly>
+                                    <point x="0.17" y="0.149123" />
+                                    <point x="0.5" y="0.557018" />
+                                    <point x="0.83" y="0.149123" />
+                                    <point x="0.815" y="0.5" />
+                                    <point x="0.74" y="0.77193" />
+                                    <point x="0.5" y="0.684211" />
+                                    <point x="0.26" y="0.77193" />
+                                    <point x="0.19" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="C6_Fox" sid="167348927527527">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811892254245485" speed="5">
+                            <frame duration="1" hotspotX="0.502825" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\fox.png">
+                                <collision-poly>
+                                    <point x="0.282486" y="0.149701" />
+                                    <point x="0.497175" y="0.0928144" />
+                                    <point x="0.740113" y="0.137725" />
+                                    <point x="0.836158" y="0.5" />
+                                    <point x="0.723164" y="0.853293" />
+                                    <point x="0.497175" y="0.778443" />
+                                    <point x="0.327684" y="0.826347" />
+                                    <point x="0.316384" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="C6_Deer" sid="875014955054357">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="222134498305006" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500894" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\deer.png">
+                                <collision-poly>
+                                    <point x="0.394958" y="0.336315" />
+                                    <point x="0.5" y="0.0966011" />
+                                    <point x="0.779412" y="0.187835" />
+                                    <point x="0.840336" y="0.499106" />
+                                    <point x="0.821429" y="0.847943" />
+                                    <point x="0.5" y="0.915921" />
+                                    <point x="0.107143" y="0.908766" />
+                                    <point x="0.384454" y="0.499106" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="C6_Moose" sid="768191355533504">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="396455499820410" speed="5">
+                            <frame duration="1" hotspotX="0.502183" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\moose.png">
+                                <collision-poly>
+                                    <point x="0.152838" y="0.0892857" />
+                                    <point x="0.497817" y="0.15051" />
+                                    <point x="0.847162" y="0.0892857" />
+                                    <point x="0.786026" y="0.5" />
+                                    <point x="0.707424" y="0.829082" />
+                                    <point x="0.497817" y="0.897959" />
+                                    <point x="0.379913" y="0.778061" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="C6_Bear" sid="753150928498980">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709696637834568" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\bear.png">
+                                <collision-poly>
+                                    <point x="0.455801" y="0.334008" />
+                                    <point x="0.5" y="0.0425101" />
+                                    <point x="0.839779" y="0.117409" />
+                                    <point x="0.90884" y="0.5" />
+                                    <point x="0.867403" y="0.902834" />
+                                    <point x="0.5" y="0.945344" />
+                                    <point x="0.472376" y="0.653846" />
+                                    <point x="0.267956" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="C6_Heron" sid="475451889912099">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="212297882014180" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\heron.png">
+                                <collision-poly>
+                                    <point x="0.219424" y="0.11597" />
+                                    <point x="0.5" y="0.0969582" />
+                                    <point x="0.708633" y="0.153992" />
+                                    <point x="0.809353" y="0.5" />
+                                    <point x="0.733813" y="0.859316" />
+                                    <point x="0.5" y="0.948669" />
+                                    <point x="0.593525" y="0.686312" />
+                                    <point x="0.514389" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="C6_BBQ" sid="750854013545122">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="269077248293519" speed="5">
+                            <frame duration="1" hotspotX="0.502092" hotspotY="0.501672" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\barbucue.png">
+                                <collision-poly>
+                                    <point x="0.284519" y="0.227425" />
+                                    <point x="0.497908" y="0.220736" />
+                                    <point x="0.702929" y="0.237458" />
+                                    <point x="0.794979" y="0.83612" />
+                                    <point x="0.497908" y="0.488294" />
+                                    <point x="0.1841" y="0.852843" />
+                                    <point x="0.271967" y="0.498328" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="C6_Lizard" sid="610350347500757">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892185898223684" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.501326" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\lizard.png">
+                                <collision-poly>
+                                    <point x="0.783654" y="0.498674" />
+                                    <point x="0.769231" y="0.872679" />
+                                    <point x="0.5" y="0.917772" />
+                                    <point x="0.182692" y="0.899204" />
+                                    <point x="0.302885" y="0.498674" />
+                                    <point x="0.221154" y="0.122016" />
+                                    <point x="0.5" y="0.0477454" />
+                                    <point x="0.697115" y="0.167109" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="C6_Beaver" sid="893296248661267">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="150299142164467" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502513" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\beaver.png">
+                                <collision-poly>
+                                    <point x="0.362745" y="0.371859" />
+                                    <point x="0.5" y="0.0653266" />
+                                    <point x="0.764706" y="0.241206" />
+                                    <point x="0.828431" y="0.497487" />
+                                    <point x="0.637255" y="0.628141" />
+                                    <point x="0.5" y="0.944724" />
+                                    <point x="0.142157" y="0.854271" />
+                                    <point x="0.284314" y="0.497487" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="C6_Hummingbird" sid="935076832525928">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="485257030619331" speed="5">
+                            <frame duration="1" hotspotX="0.502304" hotspotY="0.501639" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\hummingbird.png">
+                                <collision-poly>
+                                    <point x="0.271889" y="0.193443" />
+                                    <point x="0.497696" y="0.121311" />
+                                    <point x="0.78341" y="0.154098" />
+                                    <point x="0.81106" y="0.498361" />
+                                    <point x="0.557604" y="0.685246" />
+                                    <point x="0.497696" y="0.878689" />
+                                    <point x="0.239631" y="0.829508" />
+                                    <point x="0.239631" y="0.498361" />
                                 </collision-poly>
                             </frame>
                         </animation>
