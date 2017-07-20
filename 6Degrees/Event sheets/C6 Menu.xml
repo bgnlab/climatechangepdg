@@ -86,6 +86,29 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Audio Animation Initialization</comment>
+                        <event-block sid="525450854191953">
+                            <conditions>
+                                <condition id="3" name="Is silent" sid="723695587249953" type="Audio" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="816230095397024" type="C6_Sound">
+                                    <param id="0" name="Animation">&quot;off&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="606636747131441">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="466922623091718" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="625672736935872" type="C6_Sound">
+                                    <param id="0" name="Animation">&quot;on&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
@@ -299,6 +322,43 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="451275233955841">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="585212392947408" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="110400701618433" type="Touch">
+                                    <param id="0" name="Object">C6_Sound</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Set silent" sid="697357458315144" type="Audio">
+                                    <param id="0" name="Mode">2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="203275918447945">
+                                    <conditions>
+                                        <condition id="3" name="Is silent" sid="147487017696079" type="Audio" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="941333268197931" type="C6_Sound">
+                                            <param id="0" name="Animation">&quot;off&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="424382448460822">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="516628060789746" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="588020493485883" type="C6_Sound">
+                                            <param id="0" name="Animation">&quot;on&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-group description="" sid="139980612319212" title="C6 Switching Layouts">
@@ -388,7 +448,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="4" name="Set animation" sid="870577216855702" type="C6_ButtonEasy">
-                                                            <param id="0" name="Animation">&quot;d&quot; &amp; tokenat(C6_Game_Difficulty_Data, 0, &quot; &quot;)</param>
+                                                            <param id="0" name="Animation">&quot;d1&quot;</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
                                                     </actions>
@@ -497,8 +557,8 @@
                                                             <param id="0" name="Animation">&quot;d0&quot;</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
-                                                        <action id="-27" name="Set effect enabled" sid="892212317437930" type="C6_ButtonHard">
-                                                            <param id="0" name="Mode">0</param>
+                                                        <action id="-27" name="Set effect enabled" sid="191878722374190" type="C6_ButtonHard">
+                                                            <param id="0" name="Mode">1</param>
                                                             <param id="1" name="Effect">&quot;Sepia&quot;</param>
                                                         </action>
                                                     </actions>
