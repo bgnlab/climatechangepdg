@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>mx_1_main(e)</name>
     <events>
+        <include>GG Scores and Levels</include>
         <variable constant="0" name="mx_1_score" sid="457397118357501" static="0" type="number">0</variable>
         <variable constant="0" name="mx_1_playing" sid="152829263815093" static="0" type="number">1</variable>
         <variable constant="0" name="mx_1_trucks" sid="243642349330860" static="0" type="number">0</variable>
@@ -1850,6 +1851,51 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="994082196224987">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="590103877700830" type="mx_1_moneys">
+                                    <param id="0" name="Instance variable">moneys</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="848944949278875" type="System">
+                                    <param id="0" name="Variable">mx_1_score</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="289071101245044">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="505411504931381" type="mx_1_moneys">
+                                    <param id="0" name="Instance variable">moneys</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">60</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="279814422358131" type="System">
+                                    <param id="0" name="Variable">mx_1_score</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="289552828109197">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="333849406684704" type="mx_1_moneys">
+                                    <param id="0" name="Instance variable">moneys</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="168037404359891" type="System">
+                                    <param id="0" name="Variable">mx_1_score</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="391524305859047">
                             <conditions>
                                 <condition id="17" name="On tap object" sid="555374623365159" type="Touch">
@@ -1858,6 +1904,10 @@
                             </conditions>
                             <actions>
                                 <action id="33" name="Stop all" sid="588524264510657" type="Audio" />
+                                <action id="0" name="Call function" sid="442901775869943" type="Function">
+                                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                    <param id="1" name="Parameter {n}">mx_1_score</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="168617113205344">
@@ -1916,51 +1966,6 @@
                                 <action id="4" name="Set animation" sid="774282106158851" type="mx_1_Retry">
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                     <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="994082196224987">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="590103877700830" type="mx_1_moneys">
-                                    <param id="0" name="Instance variable">moneys</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">30</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="848944949278875" type="System">
-                                    <param id="0" name="Variable">mx_1_score</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="289071101245044">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="505411504931381" type="mx_1_moneys">
-                                    <param id="0" name="Instance variable">moneys</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">60</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="279814422358131" type="System">
-                                    <param id="0" name="Variable">mx_1_score</param>
-                                    <param id="1" name="Value">2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="289552828109197">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="333849406684704" type="mx_1_moneys">
-                                    <param id="0" name="Instance variable">moneys</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">90</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="168037404359891" type="System">
-                                    <param id="0" name="Variable">mx_1_score</param>
-                                    <param id="1" name="Value">3</param>
                                 </action>
                             </actions>
                         </event-block>
