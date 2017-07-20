@@ -1,0 +1,1972 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>mx_1_main(e)</name>
+    <events>
+        <variable constant="0" name="mx_1_score" sid="457397118357501" static="0" type="number">0</variable>
+        <variable constant="0" name="mx_1_playing" sid="152829263815093" static="0" type="number">1</variable>
+        <variable constant="0" name="mx_1_trucks" sid="243642349330860" static="0" type="number">0</variable>
+        <variable constant="0" name="mx_1_bigBuyCost" sid="460215975971356" static="0" type="number">6</variable>
+        <variable constant="0" name="mx_1_timer" sid="180016857008969" static="0" type="number">30</variable>
+        <variable constant="0" name="mx_1_BBuy" sid="260600647039926" static="0" type="number">3.5</variable>
+        <variable constant="0" name="mx_1_VBuy" sid="490014997184337" static="0" type="number">4</variable>
+        <variable constant="0" name="mx_1_CBuy" sid="658811135776505" static="0" type="number">4.5</variable>
+        <variable constant="0" name="mx_1_FreeBuy" sid="357546229878075" static="0" type="number">6</variable>
+        <variable constant="0" name="mx_1_storeEarn" sid="609229671402441" static="0" type="number">0</variable>
+        <variable constant="0" name="mx_1_BigBuy" sid="741683310752727" static="0" type="number">0</variable>
+        <event-block sid="487781565875694">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="884588250251243" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set font color" sid="254720185233702" type="mx_1_Resoucreces">
+                    <param id="0" name="Color">rgb(200, 187, 126)</param>
+                </action>
+                <action id="4" name="Set animation" sid="715555541720029" type="mx_1_bigBuy">
+                    <param id="0" name="Animation">&quot;a&quot; &amp; mx_1_bigBuy.type</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Play" sid="152422181223612" type="Audio">
+                    <param id="0" name="Audio file">bgm_spending_game</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;sng&quot;</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="960688477871106" type="System" />
+                <action id="-4" name="Set layer visible" sid="443360382800159" type="System">
+                    <param id="0" name="Layer">&quot;end&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="978161111353110" title="mx_1_times&amp;checks">
+            <sub-events>
+                <event-block sid="443028845269798">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="163741125556781" type="mx_1_moneys">
+                            <param id="0" name="Instance variable">moneys</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">60</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="625824692400214" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="247881268222459" type="Audio">
+                            <param id="0" name="Audio file">sfx_done</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="176495095587042" type="System">
+                            <param id="0" name="Layer">&quot;end&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="394971473316446" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="477518561536895" type="System">
+                            <param id="0" name="Variable">mx_1_playing</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="918913709832535">
+                    <conditions>
+                        <condition disabled="1" id="-14" name="Compare variable" sid="322603538771143" type="System">
+                            <param id="0" name="Variable">mx_1_timer</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">25</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="528415324262849" type="System">
+                            <param id="0" name="Interval (seconds)">6</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="771911906665707" type="mx_1_Resourcess">
+                            <param id="0" name="Instance variable">platttter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="754112344656195" type="mx_1_Resourcess">
+                            <param id="0" name="Instance variable">platttter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="240937726969110" type="mx_1_moneys">
+                            <param id="0" name="Instance variable">moneys</param>
+                            <param id="1" name="Value">15</param>
+                        </action>
+                        <action id="0" name="Play" sid="787826273143550" type="Audio">
+                            <param id="0" name="Audio file">sfx_cashsound</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="499729325572265">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="396113917082175" type="System">
+                    <param id="0" name="Variable">mx_1_playing</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="126857648681068">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="358069974319347" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="861960668975061">
+                            <conditions />
+                            <actions>
+                                <action id="-6" name="Set height" sid="813649802681317" type="mx_1_VMoneyss2">
+                                    <param id="0" name="Height">mx_1_BShop.moneys*4</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="806252033738470" type="mx_1_CMoneyss">
+                                    <param id="0" name="Height">mx_1_CShop.moneys*4</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="314494520712456" type="mx_1_VMoneyss">
+                                    <param id="0" name="Height">mx_1_VShop.moneys*4</param>
+                                </action>
+                                <action id="0" name="Set text" sid="268268099792275" type="mx_1_myMuney">
+                                    <param id="0" name="Text">mx_1_moneys.moneys</param>
+                                </action>
+                                <action id="0" name="Set text" sid="446274426385269" type="mx_1_bigStoreBuys">
+                                    <param id="0" name="Text">mx_1_bigStoreBuys.bigbuys</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="436709886717649" type="mx_1_BTimer">
+                                    <param id="0" name="Height">150/6.5*mx_1_BBuy</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="983169380773864" type="mx_1_CTimer">
+                                    <param id="0" name="Height">150/5.5*mx_1_CBuy</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="157438647464405" type="mx_1_VTimer">
+                                    <param id="0" name="Height">150/6*mx_1_VBuy</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="598258088316712" type="mx_1_BTimer2">
+                                    <param id="0" name="Height">150/6*mx_1_FreeBuy</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="346348226963647" type="mx_1_PStock">
+                                    <param id="0" name="Animation">&quot;a&quot; &amp; mx_1_Resourcess.platttter</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="680417602140991" type="mx_1_BigBuyCost">
+                                    <param id="0" name="Text">mx_1_bigBuyCost</param>
+                                </action>
+                                <action id="0" name="Set text" sid="314990775550983" type="mx_1_BigestBuy">
+                                    <param id="0" name="Text">mx_1_bigBuyCost</param>
+                                </action>
+                                <action id="-17" name="Move forward" sid="849434049673614" type="mx_1_truck">
+                                    <param id="0" name="Distance">5</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="847564048961813" type="mx_1_truck">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Object">mx_1_bigShop</param>
+                                </action>
+                                <action id="1" name="Set rate" sid="698384476674535" type="mx_1_CASHB">
+                                    <param id="0" name="Rate">mx_1_CASHB.Rate-2</param>
+                                </action>
+                                <action id="1" name="Set rate" sid="571111424684297" type="mx_1_CASHV">
+                                    <param id="0" name="Rate">mx_1_CASHV.Rate-2</param>
+                                </action>
+                                <action id="1" name="Set rate" sid="449725028572436" type="mx_1_CASHC">
+                                    <param id="0" name="Rate">mx_1_CASHC.Rate-2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="798609587281308">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="453579763321707" type="Touch">
+                                    <param id="0" name="Object">mx_1_BigBuyButton</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="756763693763094" type="mx_1_BigBuyButton">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="670447964856777">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="735857513472232" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="352920628014221" type="mx_1_BigBuyButton">
+                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="801488430169507">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="923440442555044" type="System">
+                                    <param id="0" name="Object">mx_1_buyTogel</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="991377615297518">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="212089581957885" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;C&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="680037147175594" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">local</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="426038665294430" type="mx_1_lights">
+                                            <param id="0" name="X">600</param>
+                                            <param id="1" name="Y">593</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="950906840406975" type="mx_1_lights">
+                                            <param id="0" name="Width">250</param>
+                                            <param id="1" name="Height">230</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="141550361626902">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="414797279723440" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;C&quot;</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="317887784515017" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">local</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="939984216975536" type="mx_1_lights">
+                                            <param id="0" name="X">174</param>
+                                            <param id="1" name="Y">150</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="110749150695942" type="mx_1_lights">
+                                            <param id="0" name="Width">150</param>
+                                            <param id="1" name="Height">150</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="883771569905128">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="534817345777343" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;V&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="836878368885755" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">local</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="548176068063172" type="mx_1_lights2">
+                                            <param id="0" name="X">960</param>
+                                            <param id="1" name="Y">593</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="805656579759224" type="mx_1_lights2">
+                                            <param id="0" name="Width">250</param>
+                                            <param id="1" name="Height">230</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="771650591244611">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="433129056065027" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;V&quot;</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="942793330426545" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">local</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="742075610220021" type="mx_1_lights2">
+                                            <param id="0" name="X">495</param>
+                                            <param id="1" name="Y">150</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="466356688084482" type="mx_1_lights2">
+                                            <param id="0" name="Width">150</param>
+                                            <param id="1" name="Height">150</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="590674071493620">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="134696936673365" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;B&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="354913240958878" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">local</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="833193391260452" type="mx_1_lights3">
+                                            <param id="0" name="X">1320</param>
+                                            <param id="1" name="Y">593</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="924849715361379" type="mx_1_lights3">
+                                            <param id="0" name="Width">250</param>
+                                            <param id="1" name="Height">230</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="286713256778720">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="962284046639137" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;B&quot;</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="704232431784413" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">local</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="245700853649831" type="mx_1_lights3">
+                                            <param id="0" name="X">828</param>
+                                            <param id="1" name="Y">150</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="433924487951140" type="mx_1_lights3">
+                                            <param id="0" name="Width">150</param>
+                                            <param id="1" name="Height">150</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="204481053587466">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="272811301495606" type="System">
+                                    <param id="0" name="Object">mx_1_Resoucreces</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="392324825729327">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="364679130993213" type="mx_1_Resoucreces">
+                                            <param id="0" name="Instance variable">num</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="406550636487984" type="mx_1_Resoucreces">
+                                            <param id="0" name="Text">mx_1_Resourcess.platttter</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="841643359959539">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="672091851762462" type="mx_1_Resoucreces">
+                                            <param id="0" name="Instance variable">num</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="156290099492597" type="mx_1_Resoucreces">
+                                            <param id="0" name="Text">mx_1_Resourcess.CAmount</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="190961261337877">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="125644380744045" type="mx_1_Resoucreces">
+                                            <param id="0" name="Instance variable">num</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="241176776503483" type="mx_1_Resoucreces">
+                                            <param id="0" name="Text">mx_1_Resourcess.VAmount</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="858664603979729">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="425057447282080" type="mx_1_Resoucreces">
+                                            <param id="0" name="Instance variable">num</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="809462704198703" type="mx_1_Resoucreces">
+                                            <param id="0" name="Text">mx_1_Resourcess.BAmount</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="276109935005202">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="856653294340303" type="System">
+                                    <param id="0" name="Object">mx_1_buyTogel</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="523760703916617">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="616240769643675" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">local</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="294734663919336" type="mx_1_buyTogel">
+                                            <param id="0" name="Animation">&quot;local&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="593005422637440">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="194625577131517" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="104877942697168" type="mx_1_buyTogel">
+                                            <param id="0" name="Animation">&quot;factory&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="158760690279989">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="521697518675512" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="506295153727593" type="System">
+                            <param id="0" name="Variable">mx_1_timer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="824026032732531" type="System">
+                            <param id="0" name="Variable">mx_1_timer</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="438363637948814" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="547134398978856">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="273333375069721" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="704508965951073" type="System">
+                            <param id="0" name="Variable">mx_1_timer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="221063904277305" type="System">
+                            <param id="0" name="Variable">mx_1_timer</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="933685634959726" type="Audio">
+                            <param id="0" name="Audio file">sfx_timer (1)</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="386581983164388" title="mx_1_buys">
+                    <sub-events>
+                        <event-block sid="415769796605801">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="881440433269573" type="Touch">
+                                    <param id="0" name="Object">mx_1_BShop</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="502712074982078">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="472872502779602" type="System">
+                                            <param id="0" name="Object">mx_1_buyTogel</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="282815190660927" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;B&quot;</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="136635265915464" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">local</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="700163300683609" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">local</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="256886910706276" type="System">
+                                            <param id="0" name="Variable">mx_1_bigBuyCost</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="728372872860739">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="317883793465170" type="Touch">
+                                    <param id="0" name="Object">mx_1_CShop</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="761634705260101">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="739890758228488" type="System">
+                                            <param id="0" name="Object">mx_1_buyTogel</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="350151853846485" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;C&quot;</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="476814150689063" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">local</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="564919428850819" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">local</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="724601250216480" type="System">
+                                            <param id="0" name="Variable">mx_1_bigBuyCost</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="654689744171548">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="241140653846421" type="Touch">
+                                    <param id="0" name="Object">mx_1_VShop</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="168186762167170">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="415308769352907" type="System">
+                                            <param id="0" name="Object">mx_1_buyTogel</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="178377245041565" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;V&quot;</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="253363517195926" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">local</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="211046322315827" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">local</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="328682279796614" type="System">
+                                            <param id="0" name="Variable">mx_1_bigBuyCost</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="140233719957134">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="963611260322491" type="Touch">
+                                    <param id="0" name="Object">mx_1_bigBuy</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="359215363779803">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="523735083213516" type="mx_1_bigBuy">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;C&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="523594661412236">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="638962978569821" type="System">
+                                                    <param id="0" name="Object">mx_1_buyTogel</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="712888668132048" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">type</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;C&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="802795645085071" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">local</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="780052471088727" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">local</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="464530537520826" type="System">
+                                                    <param id="0" name="Variable">mx_1_bigBuyCost</param>
+                                                    <param id="1" name="Value">-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="226428416696505">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="905801920939162" type="mx_1_bigBuy">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;V&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="305136314785781">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="374560596796357" type="System">
+                                                    <param id="0" name="Object">mx_1_buyTogel</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="946101667950238" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">type</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;V&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="445641168425622" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">local</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="122723907464061" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">local</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="142195888737636" type="System">
+                                                    <param id="0" name="Variable">mx_1_bigBuyCost</param>
+                                                    <param id="1" name="Value">-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="642991803124790">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="600222172403258" type="mx_1_bigBuy">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;B&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="861812365312650">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="125798090616024" type="System">
+                                                    <param id="0" name="Object">mx_1_buyTogel</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="779470532748033" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">type</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;B&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="502403473902525" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">local</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="927444787090819" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">local</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="108333652519849" type="System">
+                                                    <param id="0" name="Variable">mx_1_bigBuyCost</param>
+                                                    <param id="1" name="Value">-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" disabled="1" sid="704859355329878" title="mx_1_autoBuys">
+                    <sub-events>
+                        <event-block sid="929781272367077">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="941071534755097" type="System">
+                                    <param id="0" name="Interval (seconds)">5.5</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="223537902713099">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="778079370761581" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">15</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="457899531882012" type="mx_1_Resourcess">
+                                            <param id="0" name="Instance variable">platttter</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="777288793227035" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">15</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="339335911584127" type="mx_1_Resourcess">
+                                            <param id="0" name="Instance variable">platttter</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="605069856772338" type="mx_1_moneys">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">15</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="654167548806799">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="133535497018504" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="267343577050191" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="103581265926840" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">10</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="429336795769458" type="mx_1_bigStoreBuys">
+                                            <param id="0" name="Instance variable">bigbuys</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="659124015538368">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="114117689102713" type="System">
+                                    <param id="0" name="Interval (seconds)">6</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="520147972270200">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="214793717539744" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">15</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="258232497820046" type="mx_1_Resourcess">
+                                            <param id="0" name="Instance variable">platttter</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="188797541400844" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">15</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="470924251888097" type="mx_1_Resourcess">
+                                            <param id="0" name="Instance variable">platttter</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="225564430482759" type="mx_1_moneys">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">15</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="432912898807861">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="624227246090191" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="125550500274639" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="968989884830665" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">10</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="786682799419029" type="mx_1_bigStoreBuys">
+                                            <param id="0" name="Instance variable">bigbuys</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="120308829776559">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="190652826813237" type="System">
+                                    <param id="0" name="Interval (seconds)">6.5</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="876354974633735">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="968725662559364" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">15</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="486557348878209" type="mx_1_Resourcess">
+                                            <param id="0" name="Instance variable">platttter</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="820314626907446" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">15</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="349668839996320" type="mx_1_Resourcess">
+                                            <param id="0" name="Instance variable">platttter</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="681808416814863" type="mx_1_moneys">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">15</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="215412032292763">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="617035014249463" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="105173930468567" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="932727157363600" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">10</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="837236265220888" type="mx_1_bigStoreBuys">
+                                            <param id="0" name="Instance variable">bigbuys</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="992662600348630" title="mx_1_autoBuyV2">
+                    <sub-events>
+                        <event-block sid="993546270679362">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="812755755908932" type="mx_1_BShop">
+                                    <param id="0" name="Instance variable">moneys</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="411425551806521" type="mx_1_BShop">
+                                    <param id="0" name="Instance variable">moneys</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="133228505651032">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="833653096654318" type="mx_1_CShop">
+                                    <param id="0" name="Instance variable">moneys</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="367855633422962" type="mx_1_CShop">
+                                    <param id="0" name="Instance variable">moneys</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="699727875233206">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="312376023031273" type="mx_1_VShop">
+                                    <param id="0" name="Instance variable">moneys</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="517830001619781" type="mx_1_VShop">
+                                    <param id="0" name="Instance variable">moneys</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="846809194699653">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="310935531634918" type="System">
+                                    <param id="0" name="Variable">mx_1_FreeBuy</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="863596771901924" type="System">
+                                    <param id="0" name="Variable">mx_1_FreeBuy</param>
+                                    <param id="1" name="Value">6</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="497626422225803">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="620847040918697" type="System">
+                                    <param id="0" name="Interval (seconds)">0.05</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="691415717018255" type="System">
+                                    <param id="0" name="Variable">mx_1_BBuy</param>
+                                    <param id="1" name="Value">0.05</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="264766713897233" type="System">
+                                    <param id="0" name="Variable">mx_1_CBuy</param>
+                                    <param id="1" name="Value">0.05</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="306007312687701" type="System">
+                                    <param id="0" name="Variable">mx_1_VBuy</param>
+                                    <param id="1" name="Value">0.05</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="648705312628613" type="System">
+                                    <param id="0" name="Variable">mx_1_FreeBuy</param>
+                                    <param id="1" name="Value">0.05</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="604582279613021">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="430179972484643" type="System">
+                                    <param id="0" name="Variable">mx_1_CBuy</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="732113076420161" type="System">
+                                    <param id="0" name="Variable">mx_1_CBuy</param>
+                                    <param id="1" name="Value">4.5</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="683694989877982">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="369853022659376" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">15</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="405241239233159" type="mx_1_Resourcess">
+                                            <param id="0" name="Instance variable">platttter</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="404848929700921" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">15</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="211787891300074" type="mx_1_Resourcess">
+                                            <param id="0" name="Instance variable">platttter</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="289551367886437" type="mx_1_moneys">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">15</param>
+                                        </action>
+                                        <action id="1" name="Set rate" sid="499971075681979" type="mx_1_CASHC">
+                                            <param id="0" name="Rate">50</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="345718666171304" type="Audio">
+                                            <param id="0" name="Audio file">sfx_cashsound</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">100</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="218015224922756">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="157786364853770" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="358736349358036" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">10</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="160545839575461" type="mx_1_bigStoreBuys">
+                                            <param id="0" name="Instance variable">bigbuys</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="228919253076056" type="System">
+                                            <param id="0" name="Variable">mx_1_trucks</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="942041954493428">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="716892786816735" type="System">
+                                    <param id="0" name="Variable">mx_1_VBuy</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="149005787079119" type="System">
+                                    <param id="0" name="Variable">mx_1_VBuy</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="965444828615592">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="591863524195475" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">15</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="290405596935389" type="mx_1_Resourcess">
+                                            <param id="0" name="Instance variable">platttter</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="715921026902578" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">15</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="474814982290151" type="mx_1_Resourcess">
+                                            <param id="0" name="Instance variable">platttter</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="849024164750097" type="mx_1_moneys">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">15</param>
+                                        </action>
+                                        <action id="1" name="Set rate" sid="369311369593913" type="mx_1_CASHV">
+                                            <param id="0" name="Rate">50</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="559510440073780" type="Audio">
+                                            <param id="0" name="Audio file">sfx_cashsound</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">100</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="512587654601678">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="799091726270747" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="516586531902601" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">10</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="179926910899702" type="mx_1_bigStoreBuys">
+                                            <param id="0" name="Instance variable">bigbuys</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="375125143329274" type="System">
+                                            <param id="0" name="Variable">mx_1_trucks</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="451100203243055">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="993624463155075" type="System">
+                                    <param id="0" name="Variable">mx_1_BBuy</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="501013057167624" type="System">
+                                    <param id="0" name="Variable">mx_1_BBuy</param>
+                                    <param id="1" name="Value">3.5</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="562686217385729">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="838233495297681" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">15</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="897421736839027" type="mx_1_Resourcess">
+                                            <param id="0" name="Instance variable">platttter</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="218713415103688" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">15</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="639739071693905" type="mx_1_Resourcess">
+                                            <param id="0" name="Instance variable">platttter</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="375150170923916" type="mx_1_moneys">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">15</param>
+                                        </action>
+                                        <action id="1" name="Set rate" sid="658994995975422" type="mx_1_CASHB">
+                                            <param id="0" name="Rate">50</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="238279488298701" type="Audio">
+                                            <param id="0" name="Audio file">sfx_cashsound</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">100</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="651575444739002">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="849600770844002" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="380048295836057" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">10</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="760998658450403" type="mx_1_bigStoreBuys">
+                                            <param id="0" name="Instance variable">bigbuys</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="333874417290778" type="System">
+                                            <param id="0" name="Variable">mx_1_trucks</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="396121654946909" title="mx_1_BigBuy">
+                    <sub-events>
+                        <event-group description="" disabled="1" sid="242362520510313" title="mx_1_toggleOnBigBuy">
+                            <sub-events>
+                                <event-block sid="760131715811803">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="946434831016706" type="Touch">
+                                            <param id="0" name="Object">mx_1_buyTogel</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-14" name="Toggle boolean" sid="421521395685135" type="mx_1_buyTogel">
+                                            <param id="0" name="Instance variable">local</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="354320760934598">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="711489712868586" type="System">
+                                                    <param id="0" name="Object">mx_1_buyTogel</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="231184519284133">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="346999989845340" type="mx_1_buyTogel">
+                                                            <param id="0" name="Instance variable">type</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;C&quot;</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="349311198978329" type="mx_1_buyTogel">
+                                                            <param id="0" name="Instance variable">local</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="357101354734565" type="System">
+                                                            <param id="0" name="Variable">mx_1_bigBuyCost</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="813750526553897">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="637845191132221" type="mx_1_buyTogel">
+                                                            <param id="0" name="Instance variable">type</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;C&quot;</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="957096569024854" type="mx_1_buyTogel">
+                                                            <param id="0" name="Instance variable">local</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="727200267933064" type="System">
+                                                            <param id="0" name="Variable">mx_1_bigBuyCost</param>
+                                                            <param id="1" name="Value">-1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="574877320176865">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="254018787086451" type="mx_1_buyTogel">
+                                                            <param id="0" name="Instance variable">type</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;V&quot;</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="646192754993408" type="mx_1_buyTogel">
+                                                            <param id="0" name="Instance variable">local</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="920480167756312" type="System">
+                                                            <param id="0" name="Variable">mx_1_bigBuyCost</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="952676667571745">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="585071159901580" type="mx_1_buyTogel">
+                                                            <param id="0" name="Instance variable">type</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;V&quot;</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="702696358734107" type="mx_1_buyTogel">
+                                                            <param id="0" name="Instance variable">local</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="302232693273332" type="System">
+                                                            <param id="0" name="Variable">mx_1_bigBuyCost</param>
+                                                            <param id="1" name="Value">-1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="290831250642979">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="249391339240872" type="mx_1_buyTogel">
+                                                            <param id="0" name="Instance variable">type</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;B&quot;</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="371905323966679" type="mx_1_buyTogel">
+                                                            <param id="0" name="Instance variable">local</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="615800988157442" type="System">
+                                                            <param id="0" name="Variable">mx_1_bigBuyCost</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="249729717774427">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="755261162920702" type="mx_1_buyTogel">
+                                                            <param id="0" name="Instance variable">type</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;B&quot;</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="801019890156423" type="mx_1_buyTogel">
+                                                            <param id="0" name="Instance variable">local</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="324612044325981" type="System">
+                                                            <param id="0" name="Variable">mx_1_bigBuyCost</param>
+                                                            <param id="1" name="Value">-1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-block sid="230795939647126">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="528785643691211" type="Touch" />
+                                <condition id="-7" name="Compare instance variable" sid="183610809544101" type="mx_1_moneys">
+                                    <param id="0" name="Instance variable">moneys</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">mx_1_bigBuyCost</param>
+                                </condition>
+                                <condition id="4" name="Is touching object" sid="998258958012804" type="Touch">
+                                    <param id="0" name="Object">mx_1_BigBuyButton</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="668411417475161" type="mx_1_moneys">
+                                    <param id="0" name="Instance variable">moneys</param>
+                                    <param id="1" name="Value">mx_1_bigBuyCost</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="153387637960756" type="mx_1_Resourcess">
+                                    <param id="0" name="Instance variable">platttter</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="709796599423614">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="146045669158544" type="System">
+                                            <param id="0" name="Object">mx_1_buyTogel</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="593156096078867">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="471465779729968" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">type</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;C&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="588293220523198" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">local</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Add to" sid="531640918158732" type="mx_1_CShop">
+                                                    <param id="0" name="Instance variable">moneys</param>
+                                                    <param id="1" name="Value">3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="366889084399098">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="502545746023656" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">type</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;V&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="818496028113443" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">local</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Add to" sid="270723506020152" type="mx_1_VShop">
+                                                    <param id="0" name="Instance variable">moneys</param>
+                                                    <param id="1" name="Value">3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="706372754098359">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="174057655974656" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">type</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;B&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="466889533229607" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">local</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Add to" sid="458202801663489" type="mx_1_BShop">
+                                                    <param id="0" name="Instance variable">moneys</param>
+                                                    <param id="1" name="Value">3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="815326156141263">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="414088590202551" type="System">
+                                            <param id="0" name="Object">mx_1_buyTogel</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="894336842717769">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="528627659295453" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">local</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="233639883100023" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">type</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;C&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="229157436021865" type="System">
+                                                    <param id="0" name="Variable">mx_1_trucks</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="841500211477940">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="791003879744779" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">local</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="315018441319627" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">type</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;V&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="226010115136113" type="System">
+                                                    <param id="0" name="Variable">mx_1_trucks</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="570361280735371">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="102100415652771" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">local</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="122272122947654" type="mx_1_buyTogel">
+                                                    <param id="0" name="Instance variable">type</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;B&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="770549271935457" type="System">
+                                                    <param id="0" name="Variable">mx_1_trucks</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="491627769638303">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="533949322157615" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="723593038290423" type="System">
+                            <param id="0" name="Variable">mx_1_trucks</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="880499735888391" type="System">
+                            <param id="0" name="Object to create">mx_1_truck</param>
+                            <param id="1" name="Layer">&quot;Layer 0&quot;</param>
+                            <param id="2" name="X">2200</param>
+                            <param id="3" name="Y">choose(187,91)</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="180429652015592" type="System">
+                            <param id="0" name="Variable">mx_1_trucks</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="289253703682153">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="121337286945832" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="540018151687767" type="System">
+                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                            <param id="1" name="Value">choose(1,2,3)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-group description="" sid="551440367914632" title="mx_1_2randget3">
+                            <sub-events>
+                                <event-block sid="929778332616114">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="638967968573929" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="384991748339348" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="157201009922569" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="232567333590500">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="208508569979689" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="511687426105337" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="254487596516392" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="250676082720245">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="864797115094872" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="590296515167404" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="373934776693655" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" disabled="1" sid="491904867997937" title="mx_1_eachstoreget1-2">
+                            <sub-events>
+                                <event-block sid="126153199377631">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="479626648594538" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Value">choose(1,2)</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="242888691939647" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">mx_1_storeEarn</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="980166368293659" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Value">choose(1,2)</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="549235582909867" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">mx_1_storeEarn</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="765836686275859" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Value">choose(1,2)</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="285520612756056" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">mx_1_storeEarn</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" disabled="1" sid="228793402886298" title="mx_1_1gets3-2gets1">
+                            <sub-events>
+                                <event-block sid="184814689851300">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="674302820335070" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="687757260867725" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="562879765051538" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="728178634171387" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="403677958658582">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="689870992469736" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="589236107062145" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="631170737242564" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="625014192113010" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="189807716389570">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="863613041607367" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="251602834023171" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="958888447536132" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="630202805660319" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" disabled="1" sid="511479699315698" title="mx1_1gets3-1gets2">
+                            <sub-events>
+                                <event-block disabled="1" sid="790576891131982">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="265992991921422" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Value">choose(1,2,3,4,5,6)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="340908813231832">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="508819935902952" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="818594719187281" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="276973150553124" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="113177122610180">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="152418576033383" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="828551025236882" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="833386487289736" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="147648561388179">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="476626081470655" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="787398359646759" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="435693068855186" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="984767620681107">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="733911122415498" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="144736829501067" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="514589118215343" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="572376477207760">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="243789989373526" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="749165853132405" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="726251751725856" type="mx_1_BShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="588523513171806">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="810575841403859" type="System">
+                                            <param id="0" name="Variable">mx_1_storeEarn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="779601919546319" type="mx_1_VShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="309596198232084" type="mx_1_CShop">
+                                            <param id="0" name="Instance variable">moneys</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="243453635383667" title="mx_1_End">
+            <sub-events>
+                <event-block sid="177643844909966">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="912186405877972" type="System">
+                            <param id="0" name="Variable">mx_1_playing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="391524305859047">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="555374623365159" type="Touch">
+                                    <param id="0" name="Object">mx_1_Exit</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="588524264510657" type="Audio" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="168617113205344">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="240860015490244" type="Touch">
+                                    <param id="0" name="Object">mx_1_Exit</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="269922538704388" type="mx_1_Exit">
+                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="208916445156761">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="385834776996401" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="856880151596289" type="mx_1_Exit">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="581463801601394">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="521099699062807" type="Touch">
+                                    <param id="0" name="Object">mx_1_Retry</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="613854156819509" type="System" />
+                                <action id="33" name="Stop all" sid="179622406265238" type="Audio" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="258565278499835">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="309356986309637" type="Touch">
+                                    <param id="0" name="Object">mx_1_Retry</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="816310533477597" type="mx_1_Retry">
+                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="481194751368214">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="359800032450036" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="774282106158851" type="mx_1_Retry">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="994082196224987">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="590103877700830" type="mx_1_moneys">
+                                    <param id="0" name="Instance variable">moneys</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="848944949278875" type="System">
+                                    <param id="0" name="Variable">mx_1_score</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="289071101245044">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="505411504931381" type="mx_1_moneys">
+                                    <param id="0" name="Instance variable">moneys</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">60</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="279814422358131" type="System">
+                                    <param id="0" name="Variable">mx_1_score</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="289552828109197">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="333849406684704" type="mx_1_moneys">
+                                    <param id="0" name="Instance variable">moneys</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="168037404359891" type="System">
+                                    <param id="0" name="Variable">mx_1_score</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
