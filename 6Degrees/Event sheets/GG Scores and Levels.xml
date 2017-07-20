@@ -515,6 +515,9 @@
                             </conditions>
                             <actions />
                             <sub-events>
+                                <variable constant="0" name="GG_Score_Sum" sid="699525106719616" static="0" type="number">0</variable>
+                                <comment>Checking the scores of each game, totaling them up</comment>
+                                <comment>Flagging &apos;trigger animal&apos; as necessary</comment>
                                 <event-block sid="613163064254004">
                                     <conditions>
                                         <condition id="-10" name="For" sid="559993311253986" type="System">
@@ -524,10 +527,73 @@
                                         </condition>
                                     </conditions>
                                     <actions />
+                                    <sub-events>
+                                        <event-group description="" sid="773099186739512" title="GG Animals Triggered by Individual Games">
+                                            <sub-events>
+                                                <event-block sid="672294482241099">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="870811603667453" type="System">
+                                                            <param id="0" name="First value">loopindex</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                </event-block>
+                                                <event-block sid="177679064466785">
+                                                    <conditions />
+                                                    <actions />
+                                                </event-block>
+                                                <event-block sid="339080690667896">
+                                                    <conditions />
+                                                    <actions />
+                                                </event-block>
+                                                <event-block sid="561243055355084">
+                                                    <conditions />
+                                                    <actions />
+                                                </event-block>
+                                                <event-block sid="912786802803071">
+                                                    <conditions />
+                                                    <actions />
+                                                </event-block>
+                                            </sub-events>
+                                        </event-group>
+                                        <variable constant="0" name="GG_Temp_Scores" sid="868696582608445" static="0" type="text"></variable>
+                                        <event-block sid="488578182144737">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="255164468489736" type="System">
+                                                    <param id="0" name="First value">GG_State.Get(&quot;game&quot; &amp; loopindex)</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">&quot;0&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="220556020503234" type="System">
+                                                    <param id="0" name="Variable">GG_Temp_Scores</param>
+                                                    <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; loopindex)</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="449729370160634" type="System">
+                                                    <param id="0" name="Variable">GG_Score_Sum</param>
+                                                    <param id="1" name="Value">int(tokenat(GG_Temp_Scores, 1, &quot; &quot;)) + int(tokenat(GG_Temp_Scores, 2, &quot; &quot;)) </param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="516629784204053">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="792677490451919" type="System" />
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment></comment>
+                                <event-block sid="693890748933184">
+                                    <conditions />
+                                    <actions />
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Calculate Narrative Events</comment>
+                        <comment>TODO: Calculate Narrative Events</comment>
                         <event-block sid="367283067033319">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="139931875418523" type="System">
@@ -537,6 +603,13 @@
                                 </condition>
                             </conditions>
                             <actions />
+                            <sub-events>
+                                <comment>Some Stuff</comment>
+                                <event-block sid="257347993227293">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Save new score</comment>
                         <event-block sid="867402010718416">

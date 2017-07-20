@@ -32,6 +32,117 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-group description="" sid="391725355986859" title="C6 Initialize Animals">
+                            <sub-events>
+                                <comment>Initialize Animals</comment>
+                                <event-block sid="356872569864320">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="787644148447854" type="System">
+                                            <param id="0" name="Object">C6_Animals</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="381036825219404">
+                                            <conditions>
+                                                <condition id="3" name="Has key" sid="293590013474013" type="GG_State">
+                                                    <param id="0" name="Key">&quot;C6_Animal&quot; &amp; C6_Animals.gameNum</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="298258225732679" type="GG_State">
+                                                    <param id="0" name="Key">&quot;C6_Animal&quot; &amp; C6_Animals.gameNum</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="517685057077622" type="C6_Animals">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="832276813685750">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="230037054303289" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="861399703037747" type="C6_Animals">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Special conditions</comment>
+                                <event-block sid="256479737120225">
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="216016662371029" type="C6_Bear" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="989651827351225" type="C6_BBQ">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="513196353932868">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="986502445627138" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="133105691908037" type="C6_BBQ">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="533370644694138">
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="968267811751005" type="C6_Skunk" />
+                                        <condition id="-9" name="Is visible" sid="488360724584212" type="C6_Badger" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="320956882649488" type="C6_Car">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="976719059818163">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="522623729338570" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="786080714010071" type="C6_Car">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="172072129356291" title="C6 Initialize Audio">
+                            <sub-events>
+                                <comment>Audio Button Animation Initialization</comment>
+                                <event-block sid="525450854191953">
+                                    <conditions>
+                                        <condition id="3" name="Is silent" sid="723695587249953" type="Audio" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="816230095397024" type="C6_Sound">
+                                            <param id="0" name="Animation">&quot;off&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="606636747131441">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="466922623091718" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="625672736935872" type="C6_Sound">
+                                            <param id="0" name="Animation">&quot;on&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                         <comment>Set UI State</comment>
                         <event-block sid="510923425610583">
                             <conditions>
@@ -41,17 +152,38 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="105772279252488" type="Function">
-                                    <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;UIDifficulty&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <comment>TODO: Set to &quot;UIStart&quot; when score changes</comment>
                                 <event-block sid="433087114017480">
-                                    <conditions />
-                                    <actions />
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="839195968459890" type="GG_State">
+                                            <param id="0" name="Key">&quot;trigger animal&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="418506526892597" type="Function">
+                                            <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;UIDifficulty&quot;</param>
+                                        </action>
+                                        <action id="1" name="Set key" sid="721468149750571" type="GG_State">
+                                            <param id="0" name="Key">&quot;trigger animal&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="204624782948710">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="935877518974816" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="105772279252488" type="Function">
+                                            <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;UIDifficulty&quot;</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -66,7 +198,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Initialization Stuff</comment>
+                        <comment>Other</comment>
                         <event-block sid="908272088239564">
                             <conditions />
                             <actions>
@@ -86,28 +218,9 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Audio Animation Initialization</comment>
-                        <event-block sid="525450854191953">
-                            <conditions>
-                                <condition id="3" name="Is silent" sid="723695587249953" type="Audio" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="816230095397024" type="C6_Sound">
-                                    <param id="0" name="Animation">&quot;off&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="606636747131441">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="466922623091718" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="625672736935872" type="C6_Sound">
-                                    <param id="0" name="Animation">&quot;on&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
+                        <event-block sid="192614010318353">
+                            <conditions />
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>

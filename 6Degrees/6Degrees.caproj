@@ -678,11 +678,11 @@
             <object-type name="C6_Background" sid="348671960813810">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="StartScreen" pingpong="0" repeatcount="1" repeatto="0" sid="108905934731114" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casusal game menu screen.png" />
-                    </animation>
                     <animation framecount="1" loop="0" name="LevelSelect" pingpong="0" repeatcount="1" repeatto="0" sid="196747552615964" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Eight Game menu screen.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="StartScreen" pingpong="0" repeatcount="1" repeatto="0" sid="108905934731114" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casusal game menu screen.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Blank" pingpong="0" repeatcount="1" repeatto="0" sid="796489804625052" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casual game game select blank.png" />
@@ -10477,6 +10477,27 @@
                     <behavior id="Physics" />
                 </behavior-type>
             </behaviors>
+        </family>
+        <family name="C6_Animals" plugin-id="Sprite" sid="501875499112693">
+            <members>
+                <member>C6_Badger</member>
+                <member>C6_BBQ</member>
+                <member>C6_Bear</member>
+                <member>C6_Beaver</member>
+                <member>C6_Car</member>
+                <member>C6_Deer</member>
+                <member>C6_Fox</member>
+                <member>C6_Heron</member>
+                <member>C6_Hummingbird</member>
+                <member>C6_Lizard</member>
+                <member>C6_Moose</member>
+                <member>C6_Rabbits</member>
+                <member>C6_Skunk</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="name" sid="128919664386574" type="string" />
+                <instance-variable name="gameNum" sid="374691224729436" type="number" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder>
