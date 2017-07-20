@@ -314,6 +314,25 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="C6_Squirrel" sid="347553990620632">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="635036005263512" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\squirrel.png">
+                                <collision-poly>
+                                    <point x="0.196721" y="0.204545" />
+                                    <point x="0.5" y="0.338068" />
+                                    <point x="0.655738" y="0.357955" />
+                                    <point x="0.893443" y="0.5" />
+                                    <point x="0.759563" y="0.75" />
+                                    <point x="0.5" y="0.894886" />
+                                    <point x="0.180328" y="0.8125" />
+                                    <point x="0.169399" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="UI">
                 <object-folder name="Start">
@@ -543,9 +562,6 @@
                             <animation framecount="1" loop="0" name="d2" pingpong="0" repeatcount="1" repeatto="0" sid="370650725540899" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\e2.png" />
                             </animation>
-                            <animation framecount="1" loop="0" name="d3" pingpong="0" repeatcount="1" repeatto="0" sid="779146756953873" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\e3.png" />
-                            </animation>
                         </animation-folder>
                     </object-type>
                     <object-type name="C6_ButtonMedium" sid="896657186319280">
@@ -678,11 +694,11 @@
             <object-type name="C6_Background" sid="348671960813810">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="LevelSelect" pingpong="0" repeatcount="1" repeatto="0" sid="196747552615964" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Eight Game menu screen.png" />
-                    </animation>
                     <animation framecount="1" loop="0" name="StartScreen" pingpong="0" repeatcount="1" repeatto="0" sid="108905934731114" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casusal game menu screen.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="LevelSelect" pingpong="0" repeatcount="1" repeatto="0" sid="196747552615964" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Eight Game menu screen.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Blank" pingpong="0" repeatcount="1" repeatto="0" sid="796489804625052" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casual game game select blank.png" />
@@ -10528,6 +10544,7 @@
                 <member>C6_Moose</member>
                 <member>C6_Rabbits</member>
                 <member>C6_Skunk</member>
+                <member>C6_Squirrel</member>
             </members>
             <instance-variables>
                 <instance-variable name="name" sid="128919664386574" type="string" />

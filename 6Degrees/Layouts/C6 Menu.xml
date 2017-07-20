@@ -70,6 +70,32 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="C6_Lizard" uid="821">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <name>2</name>
+                        <gameNum>2</gameNum>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>822</x>
+                        <y>494</y>
+                        <z>0</z>
+                        <width>262.935150146</width>
+                        <height>476.569976807</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.501326263</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="C6_Heron" uid="819">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -448,7 +474,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="C6_Lizard" uid="821">
+                <instance type="C6_Squirrel" uid="1120">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -456,20 +482,20 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>2</name>
-                        <gameNum>2</gameNum>
+                        <name></name>
+                        <gameNum>8</gameNum>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1099</x>
-                        <y>898</y>
+                        <x>1109</x>
+                        <y>973</y>
                         <z>0</z>
-                        <width>262.935150146</width>
-                        <height>476.569976807</height>
+                        <width>366</width>
+                        <height>352</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.501326263</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
