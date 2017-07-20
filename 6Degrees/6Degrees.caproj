@@ -4723,21 +4723,11 @@
                         <animation framecount="1" loop="0" name="a1" pingpong="0" repeatcount="1" repeatto="0" sid="264264321285375" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
-                        <animation framecount="1" loop="0" name="a2" pingpong="0" repeatcount="1" repeatto="0" sid="632123518114003" speed="5">
-                            <frame duration="1" hotspotX="0.500262" hotspotY="0.500417" original-source="C:\Users\GAMEPLAYER-01\Documents\climatechangepdg\6Degrees\Animations\M7_Tutorial_Highlight\click_anywhere\000.png" />
+                        <animation framecount="1" loop="0" name="a2" pingpong="0" repeatcount="1" repeatto="0" sid="379654490108438" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
-                        <animation framecount="1" loop="0" name="a3" pingpong="0" repeatcount="1" repeatto="0" sid="125646985842322" speed="5">
-                            <frame duration="1" hotspotX="0" hotspotY="0">
-                                <collision-poly>
-                                    <point x="0.454948" y="0.444583" />
-                                    <point x="0.501042" y="0.4" />
-                                    <point x="0.546615" y="0.447917" />
-                                    <point x="0.552865" y="0.53125" />
-                                    <point x="0.519792" y="0.582083" />
-                                    <point x="0.475781" y="0.578333" />
-                                    <point x="0.445833" y="0.522083" />
-                                </collision-poly>
-                            </frame>
+                        <animation framecount="1" loop="0" name="a3" pingpong="0" repeatcount="1" repeatto="0" sid="209285430015154" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -4746,6 +4736,23 @@
                 </object-type>
                 <object-type name="m1_Tutorial_Prompt" sid="965397298147158">
                     <plugin id="Text" />
+                </object-type>
+                <object-type name="m1_tutLight" sid="356198533934772">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="937460733425692" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\better square.png">
+                                <collision-poly>
+                                    <point x="0.175521" y="0.306364" />
+                                    <point x="0.5" y="0.170909" />
+                                    <point x="0.80625" y="0.338182" />
+                                    <point x="0.80625" y="0.661818" />
+                                    <point x="0.5" y="0.819091" />
+                                    <point x="0.175" y="0.694545" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
                 </object-type>
             </object-folder>
             <object-type name="m1_2ndStar" sid="107629834795464">
@@ -4928,6 +4935,20 @@
                                 <point x="0.894444" y="0.894444" />
                                 <point x="0.5" y="0.933333" />
                                 <point x="0.111111" y="0.888889" />
+                                <point x="0.05" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="996640923491231" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\Exit2.png">
+                            <collision-poly>
+                                <point x="0.155556" y="0.155556" />
+                                <point x="0.5" y="0.127778" />
+                                <point x="0.844444" y="0.155556" />
+                                <point x="0.955556" y="0.5" />
+                                <point x="0.872222" y="0.872222" />
+                                <point x="0.5" y="0.9" />
+                                <point x="0.133333" y="0.866667" />
                                 <point x="0.05" y="0.5" />
                             </collision-poly>
                         </frame>
@@ -5157,7 +5178,7 @@
                     <instance-variable name="isPressed" sid="138773803454456" type="boolean" />
                 </instance-variables>
                 <animation-folder>
-                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936741788202254" speed="5">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936741788202254" speed="20">
                         <frame duration="1" hotspotX="0.504673" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\HandPump.png" />
                     </animation>
@@ -5208,6 +5229,20 @@
                                 <point x="0.894444" y="0.894444" />
                                 <point x="0.5" y="0.938889" />
                                 <point x="0.111111" y="0.888889" />
+                                <point x="0.0555556" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="979944487568219" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\Retry2.png">
+                            <collision-poly>
+                                <point x="0.155556" y="0.155556" />
+                                <point x="0.5" y="0.133333" />
+                                <point x="0.844444" y="0.155556" />
+                                <point x="0.95" y="0.5" />
+                                <point x="0.866667" y="0.866667" />
+                                <point x="0.5" y="0.9" />
+                                <point x="0.133333" y="0.866667" />
                                 <point x="0.0555556" y="0.5" />
                             </collision-poly>
                         </frame>
