@@ -46,10 +46,10 @@
                                         <event-block sid="381036825219404">
                                             <conditions>
                                                 <condition id="3" name="Has key" sid="293590013474013" type="GG_State">
-                                                    <param id="0" name="Key">&quot;C6_Animal&quot; &amp; C6_Animals.gameNum</param>
+                                                    <param id="0" name="Key">&quot;C6_Animal_Visible&quot; &amp; C6_Animals.gameNum</param>
                                                 </condition>
                                                 <condition id="0" name="Compare value" sid="298258225732679" type="GG_State">
-                                                    <param id="0" name="Key">&quot;C6_Animal&quot; &amp; C6_Animals.gameNum</param>
+                                                    <param id="0" name="Key">&quot;C6_Animal_Visible&quot; &amp; C6_Animals.gameNum</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
@@ -260,9 +260,14 @@
                                     <param id="0" name="Object">C6_ButtonMedium</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Call function" sid="910270435398006" type="Function">
+                                    <param id="0" name="Name">&quot;GG Select Game&quot;</param>
+                                    <param id="1" name="Parameter {n}">GG_Selected_Game{###}1</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block any="1" sid="265236525910663">
+                                <event-block any="1" disabled="1" sid="265236525910663">
                                     <conditions>
                                         <condition id="2" name="Is playing" sid="849388857440849" type="C6_ButtonEasy">
                                             <param id="0" name="Animation">&quot;d1&quot;</param>
@@ -290,9 +295,14 @@
                                     <param id="0" name="Object">C6_ButtonHard</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Call function" sid="114622882855118" type="Function">
+                                    <param id="0" name="Name">&quot;GG Select Game&quot;</param>
+                                    <param id="1" name="Parameter {n}">GG_Selected_Game{###}2</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block any="1" sid="499029792718059">
+                                <event-block any="1" disabled="1" sid="499029792718059">
                                     <conditions>
                                         <condition id="2" name="Is playing" sid="451169100655596" type="C6_ButtonMedium">
                                             <param id="0" name="Animation">&quot;d1&quot;</param>

@@ -493,19 +493,19 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="242000095528323">
-                                    <conditions />
-                                    <actions>
-                                        <action id="0" name="Add key" sid="248290658928722" type="GG_State">
-                                            <param id="0" name="Key">GG_Score_Key</param>
-                                            <param id="1" name="Value">GG_Score_String</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="242000095528323">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Add key" sid="248290658928722" type="GG_State">
+                                    <param id="0" name="Key">GG_Score_Key</param>
+                                    <param id="1" name="Value">GG_Score_String</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <comment>Calculate Animal Scoring</comment>
-                        <event-block sid="363537352198952">
+                        <event-block disabled="1" sid="363537352198952">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="548238461662014" type="System">
                                     <param id="0" name="Variable">GG_GAME_VERSION</param>
@@ -515,82 +515,183 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <variable constant="0" name="GG_Score_Sum" sid="699525106719616" static="0" type="number">0</variable>
-                                <comment>Checking the scores of each game, totaling them up</comment>
-                                <comment>Flagging &apos;trigger animal&apos; as necessary</comment>
-                                <event-block sid="613163064254004">
-                                    <conditions>
-                                        <condition id="-10" name="For" sid="559993311253986" type="System">
-                                            <param id="0" name="Name">&quot;Each Game&quot;</param>
-                                            <param id="1" name="Start index">0</param>
-                                            <param id="2" name="End index">7</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
+                                <variable constant="0" name="GG_trigger_animals" sid="677065542274262" static="0" type="number">0</variable>
+                                <event-group description="" disabled="1" sid="773099186739512" title="GG Checking Individual Game Score Triggers">
                                     <sub-events>
-                                        <event-group description="" sid="773099186739512" title="GG Animals Triggered by Individual Games">
-                                            <sub-events>
-                                                <event-block sid="672294482241099">
-                                                    <conditions>
-                                                        <condition id="-8" name="Compare two values" sid="870811603667453" type="System">
-                                                            <param id="0" name="First value">loopindex</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Second value">0</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions />
-                                                </event-block>
-                                                <event-block sid="177679064466785">
-                                                    <conditions />
-                                                    <actions />
-                                                </event-block>
-                                                <event-block sid="339080690667896">
-                                                    <conditions />
-                                                    <actions />
-                                                </event-block>
-                                                <event-block sid="561243055355084">
-                                                    <conditions />
-                                                    <actions />
-                                                </event-block>
-                                                <event-block sid="912786802803071">
-                                                    <conditions />
-                                                    <actions />
-                                                </event-block>
-                                            </sub-events>
-                                        </event-group>
-                                        <variable constant="0" name="GG_Temp_Scores" sid="868696582608445" static="0" type="text"></variable>
-                                        <event-block sid="488578182144737">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="255164468489736" type="System">
-                                                    <param id="0" name="First value">GG_State.Get(&quot;game&quot; &amp; loopindex)</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Second value">&quot;0&quot;</param>
-                                                </condition>
-                                            </conditions>
+                                        <variable constant="0" name="GG_Temp_Score" sid="160953389768475" static="0" type="text"></variable>
+                                        <event-block disabled="1" sid="776436073283749">
+                                            <conditions />
                                             <actions>
-                                                <action id="-9" name="Set value" sid="220556020503234" type="System">
-                                                    <param id="0" name="Variable">GG_Temp_Scores</param>
-                                                    <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; loopindex)</param>
-                                                </action>
-                                                <action id="-10" name="Add to" sid="449729370160634" type="System">
-                                                    <param id="0" name="Variable">GG_Score_Sum</param>
-                                                    <param id="1" name="Value">int(tokenat(GG_Temp_Scores, 1, &quot; &quot;)) + int(tokenat(GG_Temp_Scores, 2, &quot; &quot;)) </param>
+                                                <action id="-9" name="Set value" sid="689106451821114" type="System">
+                                                    <param id="0" name="Variable">GG_Temp_Score</param>
+                                                    <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; GG_Selected_Game)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="516629784204053">
+                                        <comment>If Medium + Hard scores is greater than 3</comment>
+                                        <event-block disabled="1" sid="672294482241099">
                                             <conditions>
-                                                <condition id="-22" name="Else" sid="792677490451919" type="System" />
+                                                <condition id="-8" name="Compare two values" sid="763256825039302" type="System">
+                                                    <param id="0" name="First value">GG_Temp_Score</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">&quot;0&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="695136384419588" type="System">
+                                                    <param id="0" name="First value">int(tokenat(GG_Temp_Score, 1, &quot; &quot;)) + int(tokenat(GG_Temp_Score, 2, &quot; &quot;)) </param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Second value">3</param>
+                                                </condition>
+                                                <condition id="3" name="Has key" sid="992685850578933" type="GG_State">
+                                                    <param id="0" name="Key">&quot;C6_Animal_Visible&quot; &amp; GG_Selected_Game</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="873120884328848" type="GG_State">
+                                                    <param id="0" name="Key">&quot;C6_Animal_Visible&quot; &amp; GG_Selected_Game</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="761161382359160" type="System">
+                                                    <param id="0" name="Variable">GG_trigger_animals</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
-                                </event-block>
-                                <comment></comment>
-                                <event-block sid="693890748933184">
-                                    <conditions />
-                                    <actions />
-                                </event-block>
+                                </event-group>
+                                <event-group description="" disabled="1" sid="492662667356403" title="GG Checking Total Game Score Triggers">
+                                    <sub-events>
+                                        <variable constant="0" name="GG_Score_Sum" sid="699525106719616" static="0" type="number">0</variable>
+                                        <comment>Checking the scores of each game, totaling them up</comment>
+                                        <comment>Flagging &apos;trigger animal&apos; as necessary</comment>
+                                        <event-block disabled="1" sid="613163064254004">
+                                            <conditions>
+                                                <condition id="-10" name="For" sid="559993311253986" type="System">
+                                                    <param id="0" name="Name">&quot;Each Game&quot;</param>
+                                                    <param id="1" name="Start index">0</param>
+                                                    <param id="2" name="End index">7</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <comment>Adding Medium and Hard Scores to Sum</comment>
+                                                <variable constant="0" name="GG_Temp_Scores" sid="868696582608445" static="0" type="text"></variable>
+                                                <event-block disabled="1" sid="488578182144737">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="255164468489736" type="System">
+                                                            <param id="0" name="First value">GG_State.Get(&quot;game&quot; &amp; loopindex)</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Second value">&quot;0&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="220556020503234" type="System">
+                                                            <param id="0" name="Variable">GG_Temp_Scores</param>
+                                                            <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; loopindex)</param>
+                                                        </action>
+                                                        <action id="-10" name="Add to" sid="449729370160634" type="System">
+                                                            <param id="0" name="Variable">GG_Score_Sum</param>
+                                                            <param id="1" name="Value">int(tokenat(GG_Temp_Scores, 1, &quot; &quot;)) + int(tokenat(GG_Temp_Scores, 2, &quot; &quot;)) </param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <comment>Animals with total conditions</comment>
+                                        <event-block disabled="1" sid="693890748933184">
+                                            <conditions>
+                                                <condition id="3" name="Has key" sid="795388211871094" type="GG_State">
+                                                    <param id="0" name="Key">&quot;C6_Animal_Visible8&quot;</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="421500533024235" type="GG_State">
+                                                    <param id="0" name="Key">&quot;C6_Animal_Visible8&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="158536538842892" type="System">
+                                                    <param id="0" name="Variable">GG_Score_Sum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">8</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="556627224429507" type="System">
+                                                    <param id="0" name="Variable">GG_trigger_animals</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block disabled="1" sid="534917539902060">
+                                            <conditions>
+                                                <condition id="3" name="Has key" sid="317579798222418" type="GG_State">
+                                                    <param id="0" name="Key">&quot;C6_Animal_Visible9&quot;</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="588678948084705" type="GG_State">
+                                                    <param id="0" name="Key">&quot;C6_Animal_Visible9&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="709913227302435" type="System">
+                                                    <param id="0" name="Variable">GG_Score_Sum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">16</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="715309130228686" type="System">
+                                                    <param id="0" name="Variable">GG_trigger_animals</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block disabled="1" sid="972282665264981">
+                                            <conditions>
+                                                <condition id="3" name="Has key" sid="425169221178791" type="GG_State">
+                                                    <param id="0" name="Key">&quot;C6_Animal_Visible10&quot;</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="995337903564562" type="GG_State">
+                                                    <param id="0" name="Key">&quot;C6_Animal_Visible10&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="935493009729545" type="System">
+                                                    <param id="0" name="Variable">GG_Score_Sum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">32</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="191612573930025" type="System">
+                                                    <param id="0" name="Variable">GG_trigger_animals</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block disabled="1" sid="458727541706323">
+                                            <conditions>
+                                                <condition id="3" name="Has key" sid="349501713751674" type="GG_State">
+                                                    <param id="0" name="Key">&quot;C6_Animal_Visible11&quot;</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="963335366602916" type="GG_State">
+                                                    <param id="0" name="Key">&quot;C6_Animal_Visible11&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="298678048677988" type="System">
+                                                    <param id="0" name="Variable">GG_Score_Sum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">48</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="644684546948310" type="System">
+                                                    <param id="0" name="Variable">GG_trigger_animals</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
                             </sub-events>
                         </event-block>
                         <comment>TODO: Calculate Narrative Events</comment>
@@ -824,6 +925,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="743333456747552" title="GG Layout Start" />
     </events>
 </c2eventsheet>

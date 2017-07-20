@@ -2651,7 +2651,7 @@
                                         </action>
                                         <action id="0" name="Call function" sid="164119036121556" type="Function">
                                             <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
-                                            <param id="1" name="Parameter {n}">min(max(3 - (M7_Temperature - 18), 3), 0)</param>
+                                            <param id="1" name="Parameter {n}">max(min((3 - (M7_Temperature - 18)), 3), 0)</param>
                                         </action>
                                     </actions>
                                 </event-block>
