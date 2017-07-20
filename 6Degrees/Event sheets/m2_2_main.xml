@@ -1362,12 +1362,74 @@
                                             <param id="0" name="Object">m2_2_exit</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="735190133665178" type="Function">
-                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="184403825068197">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="668225433694737" type="System">
+                                                    <param id="0" name="Variable">m2_2_score</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">6</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="735190133665178" type="Function">
+                                                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                                    <param id="1" name="Parameter {n}">3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="600152346801025">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="861033226793851" type="System">
+                                                    <param id="0" name="Variable">m2_2_score</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="531151826583995" type="Function">
+                                                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                                    <param id="1" name="Parameter {n}">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block any="1" sid="135808136827400">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="256804010060859" type="System">
+                                                    <param id="0" name="Variable">m2_2_score</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="357580649621236" type="System">
+                                                    <param id="0" name="Variable">m2_2_score</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="601602753917706" type="Function">
+                                                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                                    <param id="1" name="Parameter {n}">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block any="1" sid="430525005578759">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="959557660991061" type="System">
+                                                    <param id="0" name="Variable">m2_2_score</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="119288169879006" type="Function">
+                                                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                                    <param id="1" name="Parameter {n}">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="460269527530907">
                                     <conditions>

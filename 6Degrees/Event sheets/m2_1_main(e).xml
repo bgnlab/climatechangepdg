@@ -1360,8 +1360,8 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="982546254914066" type="Function">
-                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;m2_1 Restart Game&quot;</param>
+                                            <param id="0" name="Name">&quot;m2_1 Restart Game&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1398,7 +1398,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="233636070556968" type="Function">
                                             <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                            <param id="1" name="Parameter {n}">max(m2_1_score - 1, 0)</param>
                                         </action>
                                     </actions>
                                 </event-block>

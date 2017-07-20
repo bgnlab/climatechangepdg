@@ -444,9 +444,15 @@
                         <action id="33" name="Stop all" sid="633028135238768" type="Audio" />
                         <action id="0" name="Call function" sid="996516788082565" type="Function">
                             <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                            <param id="1" name="Parameter {n}">ceil(m2_3_score/2)</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="651841334138336">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="420615040753475">
                     <conditions>
