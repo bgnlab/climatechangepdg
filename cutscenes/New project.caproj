@@ -1,0 +1,724 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3n8ib5rp73asi</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1920</width>
+        <height>1200</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Cutscenes">
+            <object-folder name="Cutscene_Change1C">
+                <object-type name="1C_Background" sid="892521702581988">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664301278028083" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\(story ver) Map 2.0 1 degrees.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="1C_Thermostat" sid="137952715623477">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="162564372361950" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\1C thermometer.png">
+                                <collision-poly>
+                                    <point x="0.0818505" y="0.534884" />
+                                    <point x="0.5" y="0.255814" />
+                                    <point x="0.922598" y="0.505814" />
+                                    <point x="0.922598" y="0.494186" />
+                                    <point x="0.5" y="0.732558" />
+                                    <point x="0.0818505" y="0.465116" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="CutScene_Change2C">
+                <object-type name="2C_Background" sid="745537540076223">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="296079368464440">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="712716495784952" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\(story ver) Map 2.0 2 degrees.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="2C_HanaSmol" sid="997965748153490">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="402184712337996" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\narrative scientist really happy.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="2C_Thermostat" sid="958445447383820">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="112746077795633">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="500508160742169" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\2C thermometer.png">
+                                <collision-poly>
+                                    <point x="0.0818505" y="0.505495" />
+                                    <point x="0.5" y="0.252747" />
+                                    <point x="0.922598" y="0.478022" />
+                                    <point x="0.922598" y="0.521978" />
+                                    <point x="0.5" y="0.703297" />
+                                    <point x="0.0818505" y="0.494505" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="CutScene_Change3C">
+                <object-type name="3C_Background" sid="729114266114632">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="317986284662259">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="390439860709833" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\(story ver) Map 2.0 3 degrees.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="3C_Thermostat" sid="811166476278645">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="379099213785197">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="624123136369518" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.50289" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\3C thermometer.png">
+                                <collision-poly>
+                                    <point x="0.0818505" y="0.531792" />
+                                    <point x="0.5" y="0.260116" />
+                                    <point x="0.922598" y="0.50289" />
+                                    <point x="0.922598" y="0.49711" />
+                                    <point x="0.922598" y="0.49711" />
+                                    <point x="0.5" y="0.734104" />
+                                    <point x="0.0818505" y="0.468208" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="CutScene_Change4C">
+                <object-type name="4C_Background" sid="470495574810975">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="594479891018267">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="701505907057330" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\(story ver) Map 2.0 4 degrees.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="4C_Thermostat" sid="207185312332834">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="480438426352273">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="561245006217551" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\4C thermometer.png">
+                                <collision-poly>
+                                    <point x="0.0818505" y="0.538012" />
+                                    <point x="0.5" y="0.245614" />
+                                    <point x="0.922598" y="0.508772" />
+                                    <point x="0.922598" y="0.491228" />
+                                    <point x="0.5" y="0.725146" />
+                                    <point x="0.0818505" y="0.461988" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="4C_HanaSmol" sid="279665789662135">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="738290961215873" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\narrative scientist normal.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Cutscene_Change5C">
+                <object-type name="5C_Background" sid="425255634127375">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="698621832343121">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="419070088351530" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\(story ver) Map 2.0 5 degrees.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="5C_Thermostat" sid="171878879604131">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="109674839584902">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211036609389272" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\5C thermometer.png">
+                                <collision-poly>
+                                    <point x="0.0827402" y="0.574074" />
+                                    <point x="0.5" y="0.246914" />
+                                    <point x="0.922598" y="0.537037" />
+                                    <point x="0.922598" y="0.462963" />
+                                    <point x="0.5" y="0.753086" />
+                                    <point x="0.0836299" y="0.419753" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="HanaCall_Background" sid="475508185544491">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="579920743160460" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="HanaCall_Box" sid="556210969766626">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="455923955125412" speed="3">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\Skype notif 2 (826 x 174).png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\Skype notif 1 (826 x 174).png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\Skype notif (826 x 174).png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="HanaCall_Button" sid="199104152921729">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820891373870302" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\Skype answer button unpressed (234 x 70).png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="580335933507628" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\Skype answer button pressed (234 x 70).png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="HanaCall_DontUDare" sid="877094524118190">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="776603023747110" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\Skype decline button unpressed.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Cutscene_Ending">
+                <object-type name="End_EarthGud" sid="131211411130204">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="552296662415375" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\Earth Good.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="EndText" sid="853547903411445">
+                    <plugin id="Text" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="703522959285956">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+            </object-folder>
+            <object-folder name="Cutscene_Opening">
+                <object-type name="Dialogue1" sid="563456597888473">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="Dialogue2" sid="256958485437644">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="Dialogue_Source" sid="877785841317955">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="Scene1_EarthFK" sid="211344483415067">
+                    <plugin id="TiledBg" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="664441903332774">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="C:\Users\N.O.S\Downloads\Earth Bad.png" />
+                </object-type>
+                <object-type name="Scene2_Static" sid="718375649402450">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="643687866030462">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="107067121423922" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\N.O.S\Downloads\static 1.png" />
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\N.O.S\Downloads\static 2.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene3_HanaBig" sid="560266363376106">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="333658395883856" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\N.O.S\Downloads\narrative scientist normal dark.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene3_TextBoxBig" sid="333005628786293">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="189743289462403" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\dialogue box (1478 x 282).png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene4_6CMap" sid="190682468727601">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="928224255582343">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="716076809531897" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\(story ver) Map 2.0 6 degrees.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene4_Calendar2100" sid="953703862853744">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="444456378132286" speed="5">
+                            <frame duration="1" hotspotX="0.501099" hotspotY="0.501818" original-source="C:\Users\N.O.S\Downloads\Calender base.png">
+                                <collision-poly>
+                                    <point x="0.208242" y="0.344545" />
+                                    <point x="0.5" y="0.116364" />
+                                    <point x="0.791758" y="0.344545" />
+                                    <point x="0.791758" y="0.655455" />
+                                    <point x="0.5" y="0.917273" />
+                                    <point x="0.208242" y="0.655455" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene4_HanaSmol" sid="870210515135462">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="645542429778959" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\narrative scientist frowning dark.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene4_TextBoxSmol" sid="639119836866195">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764932462642068" speed="5">
+                            <frame duration="1" hotspotX="0.500677" hotspotY="0.503546" original-source="C:\Users\N.O.S\Downloads\dialogue box (1478 x 282).png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene4_Thermostat6" sid="814538852027243">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="472558374750715">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="687738268797117" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\6C thermometer.png">
+                                <collision-poly>
+                                    <point x="0.0645724" y="0.308333" />
+                                    <point x="0.5" y="0.1" />
+                                    <point x="0.943281" y="0.270833" />
+                                    <point x="0.95288" y="0.5" />
+                                    <point x="0.942408" y="0.725" />
+                                    <point x="0.5" y="0.8125" />
+                                    <point x="0.0689354" y="0.670833" />
+                                    <point x="0.0619546" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene5_2017" sid="987494715800506">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="908806743942709" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\Calender falling 2017.png">
+                                <collision-poly>
+                                    <point x="0.208242" y="0.344545" />
+                                    <point x="0.5" y="0.298182" />
+                                    <point x="0.791758" y="0.344545" />
+                                    <point x="0.791758" y="0.655455" />
+                                    <point x="0.5" y="0.917273" />
+                                    <point x="0.208242" y="0.655455" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene5_2100" sid="414379554713215">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="153023758832063">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="150449281219359" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\Calender base.png">
+                                <collision-poly>
+                                    <point x="0.208242" y="0.344545" />
+                                    <point x="0.5" y="0.116364" />
+                                    <point x="0.791758" y="0.344545" />
+                                    <point x="0.791758" y="0.655455" />
+                                    <point x="0.5" y="0.917273" />
+                                    <point x="0.208242" y="0.655455" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene5_Background" sid="812359233009698">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="828772900616387" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene5_CalendarBase" sid="962311814909452">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="966200179145229" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\Calender base.png">
+                                <collision-poly>
+                                    <point x="0.208242" y="0.344545" />
+                                    <point x="0.5" y="0.116364" />
+                                    <point x="0.791758" y="0.344545" />
+                                    <point x="0.791758" y="0.655455" />
+                                    <point x="0.5" y="0.917273" />
+                                    <point x="0.208242" y="0.655455" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene6_Background" sid="548349970905257">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="479407781630694" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\(story ver) Map 2.0 2017.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene6_Calendar" sid="903056193562756">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="675565548016426" speed="5">
+                            <frame duration="1" hotspotX="0.501099" hotspotY="0.501818" original-source="C:\Users\N.O.S\Downloads\Calender base.png">
+                                <collision-poly>
+                                    <point x="0.208242" y="0.344545" />
+                                    <point x="0.5" y="0.116364" />
+                                    <point x="0.791758" y="0.344545" />
+                                    <point x="0.791758" y="0.655455" />
+                                    <point x="0.5" y="0.917273" />
+                                    <point x="0.208242" y="0.655455" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene6_Calendar2017" sid="950015544085882">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="630017127909722" speed="5">
+                            <frame duration="1" hotspotX="0.501099" hotspotY="0.501818" original-source="C:\Users\N.O.S\Downloads\Calender falling 2017.png">
+                                <collision-poly>
+                                    <point x="0.208242" y="0.344545" />
+                                    <point x="0.5" y="0.298182" />
+                                    <point x="0.791758" y="0.344545" />
+                                    <point x="0.791758" y="0.655455" />
+                                    <point x="0.5" y="0.917273" />
+                                    <point x="0.208242" y="0.655455" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type global="1" name="Scene6_HanaSmol" sid="381112136053120">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="499713465320297">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="631297817304312" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\narrative scientist normal dark.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene6_TexBox" sid="647722408636537">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677865805758070" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\dialogue box (1478 x 282).png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Scene6_Thermostat" sid="670789359051360">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="404484466238849" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\1C thermometer.png">
+                                <collision-poly>
+                                    <point x="0.0818505" y="0.534884" />
+                                    <point x="0.5" y="0.255814" />
+                                    <point x="0.922598" y="0.505814" />
+                                    <point x="0.922598" y="0.494186" />
+                                    <point x="0.5" y="0.732558" />
+                                    <point x="0.0818505" y="0.465116" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="NextButton" sid="490827609658878">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="273455366192928" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\Arrow.png">
+                                <collision-poly>
+                                    <point x="0.607353" y="0.116176" />
+                                    <point x="0.991176" y="0.5" />
+                                    <point x="0.604411" y="0.886765" />
+                                    <point x="0.605883" y="0.632353" />
+                                    <point x="0.00882347" y="0.629412" />
+                                    <point x="0.00735295" y="0.5" />
+                                    <point x="0.00735289" y="0.366177" />
+                                    <point x="0.608824" y="0.366176" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\Arrow.png">
+                                <collision-poly>
+                                    <point x="0.748529" y="0.251471" />
+                                    <point x="0.991176" y="0.5" />
+                                    <point x="0.748529" y="0.748529" />
+                                    <point x="0.5" y="0.632353" />
+                                    <point x="0.367647" y="0.632353" />
+                                    <point x="0.00735295" y="0.5" />
+                                    <point x="0.366176" y="0.366176" />
+                                    <point x="0.5" y="0.366176" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Opening_Darkscreen" sid="746089409005614">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="458457686637006">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="595119470255156" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Opening_End" sid="188158135720096">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="107114364010496">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="982477713420691" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-type name="Touch" sid="487193857016386">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Mouse" sid="721577408348617">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Audio" sid="214083915930503">
+            <plugin id="Audio" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout-folder name="Cutscene">
+            <layout>Opening.xml</layout>
+            <layout>Change5C.xml</layout>
+            <layout>Change4C.xml</layout>
+            <layout>Change3C.xml</layout>
+            <layout>Change2C.xml</layout>
+            <layout>Change1C.xml</layout>
+            <layout>Ending.xml</layout>
+        </layout-folder>
+    </layout-folder>
+    <event-folder>
+        <event-folder name="Cutscene">
+            <event-sheet>Opening_Event.xml</event-sheet>
+            <event-sheet>Change5C_Event.xml</event-sheet>
+            <event-sheet>Change4C_Event.xml</event-sheet>
+            <event-sheet>Change3C_Event.xml</event-sheet>
+            <event-sheet>Change2C_Event.xml</event-sheet>
+            <event-sheet>Change1C_Event.xml</event-sheet>
+            <event-sheet>Ending_Event.xml</event-sheet>
+        </event-folder>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="3" />
+        <global-instance type="Touch" uid="8">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="101">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <sound-folder name="Cutscene">
+            <file name="sfx_ringtone.m4a" />
+            <file name="sfx_ringtone.ogg" />
+            <file name="sfx_screen_up.m4a" />
+            <file name="sfx_screen_up.ogg" />
+            <file name="sfx_static.m4a" />
+            <file name="sfx_static.ogg" />
+            <file name="sfx_text.m4a" />
+            <file name="sfx_text.ogg" />
+            <file name="sfx_calendar.m4a" />
+            <file name="sfx_calendar.ogg" />
+            <file name="sfx_reboot.m4a" />
+            <file name="sfx_reboot.ogg" />
+            <file name="sfx_Hana_giggle1.m4a" />
+            <file name="sfx_Hana_giggle1.ogg" />
+            <file name="sfx_Hana_giggle2.m4a" />
+            <file name="sfx_Hana_giggle2.ogg" />
+            <file name="sfx_Hana_giggle3.m4a" />
+            <file name="sfx_Hana_giggle3.ogg" />
+            <file name="sfx_Hana_laugh1.m4a" />
+            <file name="sfx_Hana_laugh1.ogg" />
+            <file name="sfx_Hana_laugh2.m4a" />
+            <file name="sfx_Hana_laugh2.ogg" />
+            <file name="sfx_Hana_sigh.m4a" />
+            <file name="sfx_Hana_sigh.ogg" />
+            <file name="bgm_1.m4a" />
+            <file name="bgm_1.ogg" />
+            <file name="bgm_2.m4a" />
+            <file name="bgm_2.ogg" />
+        </sound-folder>
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file-folder name="Cutscene">
+            <file name="OrangeKid-Regular.eot" />
+            <file name="OrangeKid-Regular.ttf" />
+            <file name="OrangeKid-Regular.woff" />
+            <file name="stylesheet.css" />
+        </file-folder>
+    </files-folder>
+</c2project>

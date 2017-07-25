@@ -1,0 +1,2183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Opening_Event</name>
+    <events>
+        <variable constant="0" name="FadeRate" sid="550389633717224" static="0" type="number">0</variable>
+        <variable constant="0" name="AudioFade" sid="336104311609274" static="0" type="number">0</variable>
+        <variable constant="0" name="STrigger" sid="707154631491968" static="0" type="number">0</variable>
+        <variable constant="0" name="Timer" sid="986036073231157" static="0" type="number">0</variable>
+        <variable constant="0" name="N" sid="665010911811830" static="0" type="number">0</variable>
+        <event-block sid="895589459439901">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="660712534757572" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="486882213709641" type="System">
+                    <param id="0" name="Group name">&quot;Text1&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="841108060057126" type="System">
+                    <param id="0" name="Group name">&quot;Text2&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="592752624382421" type="System">
+                    <param id="0" name="Group name">&quot;Text3&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="111955922034206" type="System">
+                    <param id="0" name="Group name">&quot;Text4&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="178931396185751" type="System">
+                    <param id="0" name="Group name">&quot;Text5&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="498481371227421" type="System">
+                    <param id="0" name="Group name">&quot;Text6&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="498081706181108" type="System">
+                    <param id="0" name="Group name">&quot;Text7&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="169613767539226" type="System">
+                    <param id="0" name="Group name">&quot;Text8&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="344345312513676" type="System">
+                    <param id="0" name="Group name">&quot;Text9&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="931065508448872" type="System">
+                    <param id="0" name="Group name">&quot;Text10&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="501906597581059" type="System">
+                    <param id="0" name="Group name">&quot;Text11&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="496530346077222" type="System">
+                    <param id="0" name="Group name">&quot;Text12&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="222292501467738" type="System">
+                    <param id="0" name="Group name">&quot;Text13&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="108542784996158" type="System">
+                    <param id="0" name="Group name">&quot;Text14&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="978435857163279" type="System">
+                    <param id="0" name="Group name">&quot;Text15&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="801221649872716" type="System">
+                    <param id="0" name="Group name">&quot;Text16&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="553399728250830" type="System">
+                    <param id="0" name="Group name">&quot;Text17&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="146128948222080" type="System">
+                    <param id="0" name="Group name">&quot;Text18&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="625384465799583" type="System">
+                    <param id="0" name="Group name">&quot;Text3.1&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="395587139750218" type="System">
+                    <param id="0" name="Group name">&quot;Text4.1&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="655040787666132" type="System">
+                    <param id="0" name="Group name">&quot;Text6.1&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="628391721714882" type="System">
+                    <param id="0" name="Group name">&quot;BGMFade2&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="489013215106508" type="System">
+                    <param id="0" name="Group name">&quot;BGMFade3&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="787022777376818" type="System">
+                    <param id="0" name="Group name">&quot;BGMFade4&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="5" name="Set web font" sid="468164635276225" type="Dialogue1">
+                    <param id="0" name="Family name">&quot;Orange Kid&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="5" name="Set web font" sid="403199098841784" type="Dialogue2">
+                    <param id="0" name="Family name">&quot;Orange Kid&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="321795646406579" type="Audio">
+                    <param id="0" name="Audio file">bgm_1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="427753380746425">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="265416120836550" type="System">
+                    <param id="0" name="Interval (seconds)">0.05</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="400545189727265" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Value">0.05</param>
+                </action>
+                <action id="0" name="Set text" sid="159890047139983" type="Dialogue1">
+                    <param id="0" name="Text">left(Dialogue_Source.Text, len(Dialogue1.Text) + 1)</param>
+                </action>
+                <action id="0" name="Set text" sid="564164217760266" type="Dialogue2">
+                    <param id="0" name="Text">left(Dialogue_Source.Text, len(Dialogue2.Text) + 1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="208764684754127">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="691019244493358" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="471395262014254" type="System">
+                    <param id="0" name="Variable">AudioFade</param>
+                    <param id="1" name="Value">FadeRate</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="742646743240115" title="BGMFade1">
+            <sub-events>
+                <event-block sid="433526359980860">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="172087914046710" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="133361402893543" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="537073612022963" type="System">
+                            <param id="0" name="Variable">AudioFade</param>
+                            <param id="1" name="Value">-20</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="223798040622175" type="System">
+                            <param id="0" name="Variable">FadeRate</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="380176874038801">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="644163155189583" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="220112036936606" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                            <param id="1" name="dB">AudioFade</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="637724214340730">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="903262390993555" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="804085972393427" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="681488054284816" type="System">
+                            <param id="0" name="Group name">&quot;BGMFade1&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="983020234608375" title="Text0">
+            <sub-events>
+                <event-block sid="758355520575240">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="142593804998296" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="329232806555432" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="345138412958165">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="185789642834806" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="785697978957782" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="364226135779722" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="591035735082799" type="Scene3_TextBoxBig">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="285678535903120" type="Dialogue1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="447441728967006" type="Dialogue1">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="560043879139287" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="856997697001584" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="302257005890134" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="442464653384866" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="803587480195662">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="999701923364435" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="114338047210359" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="501764084468080" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="548172383829203" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="675006209352963" title="Text1">
+            <sub-events>
+                <event-block sid="575971751004475">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="583037582247941" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2.45</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="836451968119276" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="206711646842190" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="752561929907427">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="805514078466896" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="362380217545753" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2.45</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="871375198525875" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="464691464821172" type="Dialogue1">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="926092544428389" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;If you think it’s bad out there, wait until you get to the surface.&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="293057767672857" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="487506567005078" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="218588328022078" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="595796790900136" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="314989517527266">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="476000705478327" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="107212960040128" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="118239805209894" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="299324225966563" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="999304334940550" title="Text2">
+            <sub-events>
+                <event-block sid="900508191563953">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="355838362852384" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3.35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="454391005782448" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="314769568799601" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="342782383299240">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="693356501963324" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="786169619123303" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3.35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="628000575888043" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="111221313565525" type="Dialogue1">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="652113002717502" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;Don’t get me wrong, there are some good things here. Like the tech; how else would I be talking to people from the past right now?&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="342877498250944" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="911530311693895" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="755893017784381" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="719804883519099" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="914874229291013">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="628228276553776" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="319609858605550" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="196119244271833" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="438473809524808" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="591128361576871" title="Text3">
+            <sub-events>
+                <event-block sid="479672214053253">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="394887982499703" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">6.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="187339940182478" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="797222214373165" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="953501031926749">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="846064429710357" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="115567294269231" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">6.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="952535709980139" type="System">
+                            <param id="0" name="Group name">&quot;Text3.1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="906889175019988" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="950822919318496" type="Dialogue1">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="369830198510406" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;But other than that, life on Earth in 2100 kinda…&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="576300847143536" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="973000057610180" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="171019021645240" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="943385013811012" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="390520210322652" title="Text3.1">
+            <sub-events>
+                <event-block sid="478987319872268">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="724693713363872" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2.45</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="657220010685071" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="183888330086791" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="440333816033520">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="479401454122843" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3.45</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="316021705611586" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="998365266805036" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;But other than that, life on Earth in 2100 kinda… sucks...&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="917643726704533" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="471673041074728">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="766637921198952" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3.9</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="225804726612039" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="789587788635822" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="250166924478677">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="637652741529517" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4.9</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="106327781285911" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="904095715239640" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;But other than that, life on Earth in 2100 kinda… sucks... A lot.&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="942090173148127" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="841416041207288">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="373007715256782" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="392590476876369" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="493467781199810" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="892167915183116" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="406964308086467" title="Text4">
+            <sub-events>
+                <event-block sid="560982251758236">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="586998710139956" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5.25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="473307885613506" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="195149452029327" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="554106308027751">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="691164856836424" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="199187101691228" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5.25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="581016930009121" type="System">
+                            <param id="0" name="Group name">&quot;Text3.1&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="111894032055564" type="System">
+                            <param id="0" name="Group name">&quot;Text4.1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="942580736159977" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="852847002491738" type="Scene2_Static">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="109422196900607" type="Dialogue1">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="424495710791839" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="744362876484922" type="Audio">
+                            <param id="0" name="Audio file">sfx_static</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-15</param>
+                            <param id="1" name="Tag (optional)">&quot;static&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="459298117138311" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="916252418711315" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="580003938369484" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="222502566312991" title="Text4.1">
+            <sub-events>
+                <event-block sid="143461950166723">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="156464307522371" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="716856553768403" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="954733600652820" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;Aww, c’mon, r-really? Geez, I’m sorry; technical difficulties still exist in 2100 for whatever reason. People in the past need to figure out how to fix that too.&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="667090749850854" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="289523518514249">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="723245794133936" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="757945008299285" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="870051228380702" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="336819085194000" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="871534809024559" title="Text5">
+            <sub-events>
+                <event-block sid="238775942190306">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="657638778270063" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">9.05</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="232149427311775" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="345239333824197" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="551007912080101">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="450684512279144" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="432440304267989" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">9.05</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="344143432872697" type="System">
+                            <param id="0" name="Group name">&quot;Text4.1&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="450621285544664" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="908571875947884" type="Dialogue1">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="537583786099011" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;Just… Hang on a second.&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="624207957893760" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="224585910757243" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="574561360237724" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="124717470353925" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="463652911788687">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="410491020560134" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="232140831390594" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="986643572230952" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="808021276728188" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="338700488331311" title="Text6">
+            <sub-events>
+                <event-block sid="471653692328426">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="526230503914401" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1.15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="856086889141397" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="573681325995803" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="524020242998314">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="607230887015283" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="610090848648806" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1.15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="572261106730327" type="System">
+                            <param id="0" name="Group name">&quot;Text6.1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="972727055433645" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="241712771757707" type="Scene3_HanaBig">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="130896606599299" type="Dialogue1">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="434644037440291" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="544879063212751" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="614807402474381" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="464271359974816" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="150882622589687" type="Audio">
+                            <param id="0" name="Audio file">sfx_reboot</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="988181977052762" title="Text6.1">
+            <sub-events>
+                <event-block sid="675990438454658">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="464501525402762" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1.5</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="502840793785759" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="432235736899863" type="System">
+                            <param id="0" name="Variable">AudioFade</param>
+                            <param id="1" name="Value">15</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="587601327497074" type="System">
+                            <param id="0" name="Variable">FadeRate</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="642193794125971" type="Scene2_Static" />
+                    </actions>
+                </event-block>
+                <event-block sid="883039219373528">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="654196709776787" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="695693705157022" type="Audio">
+                            <param id="0" name="Tag">&quot;static&quot;</param>
+                            <param id="1" name="dB">-AudioFade</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="772747314727214">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="740650771335907" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="331547796821780" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="773326988962217" type="Audio">
+                            <param id="0" name="Tag">&quot;static&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="969722570980954" type="Audio">
+                            <param id="0" name="Audio file">sfx_Hana_giggle1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="331121879361687" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;Hey past people! My name’s Hana. I’m a meteorologist from the year 2100.&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="486185369019000" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="871958198378087">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="672006555704381" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="380843118106347" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="784980116082636" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="920761099388937" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="169428910920392" title="Text7">
+            <sub-events>
+                <event-block sid="521926393812105">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="869841153867725" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">9.6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="382991522941516" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="680521613650438" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="434107179672031">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="236688485294517" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="405467037319526" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">9.6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="448523587607648" type="System">
+                            <param id="0" name="Group name">&quot;Text6.1&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="200983712273602" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="842054540593182" type="Dialogue1">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="902669855727628" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;I’m contacting a bunch of you because, technically speaking, you’re our last hope.&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="594057210392002" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="216610234315285" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="439147908559919" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="321627104242963" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="478657620147228">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="284994055011230" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">8</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="250610672773863" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="287138992493995" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="582487062557002" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="896504996803726" title="Text8">
+            <sub-events>
+                <event-block sid="346576184258203">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="171919531783870" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="555404853066459" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="988873254208577" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="512185823829894">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="881814947845578" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="851281484007066" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="361433707643743" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="525753020323277" type="Dialogue1" />
+                        <action id="-15" name="Set visible" sid="237134574090378" type="Scene4_6CMap">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="124884983911887" type="Scene4_HanaSmol">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="207693654317641" type="Scene4_TextBoxSmol">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="903724334711695" type="Scene4_Calendar2100">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="779321886976071" type="Scene4_Thermostat6">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="153514806257203" type="Audio">
+                            <param id="0" name="Audio file">sfx_Hana_sigh</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-9</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="424297945667481" type="Dialogue2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="487744267774577" type="Dialogue2">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="839430985003140" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;See, when Earth’s temperature started to seriously affect our lives, a lot of us tried to fix the damage... But it was too late.&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="628095440515908" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="127666987620996" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="696840950741959" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="874703415772464" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="501850323200566">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="160800946985553" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">9</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="308230878551167" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="862654815657905" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="688471592983524" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="209181359185595" title="Text9">
+            <sub-events>
+                <event-block sid="629395530933569">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="809658638582815" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">6.4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="100129840451784" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="228007668813740" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="252237577620447">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="206565447588725" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="710393668378691" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">6.4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="918267884111413" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="110241980893501" type="Dialogue2">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="143396330514046" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;Things are at the point of no return now. Food and water are scarce, New York City is the new lost city of Atlantis…&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="137498789584094" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="301640044150138" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="686667771098377" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="318239764995794" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="398638206333899">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="320407719787636" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="360828557335924" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="301420419777801" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="487097873299394" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="498751209680154" title="Text10">
+            <sub-events>
+                <event-block sid="275179947093647">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="206665697567518" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5.8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="711782955811085" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="852310148238873" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="131025891345785">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="647177484224861" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="442511845456749" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5.8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="624851380718501" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="233272067627503" type="Dialogue2">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="113776443898578" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;People are even migrating North because of the heat waves that have already burnt so many crops and forests to a crisp.&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="864477443399434" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="142392702345718" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="339898613608472" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="532654863937958" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="774861823289233">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="473125536487898" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">11</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="810341806575865" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="910113992055422" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="889486346050984" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="332523282336467" title="Text11">
+            <sub-events>
+                <event-block sid="395713246950122">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="618860063639271" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5.95</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="851597948643397" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="175730429388188" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="393606316931221">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="220258239997249" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="758659072303414" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5.95</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="538689185535548" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="588295062608087" type="Dialogue2">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="631993327378257" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;I would say that that’s just the tip of the iceberg, but icebergs don’t exist anymore...&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="112294218784618" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="843537318954447" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="678482923578406" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="579940277956989" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="106334673001074">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="302688919913483" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">12</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="555014672560020" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="254992317119364" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="416535651904494" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="504780809176609" title="Text12">
+            <sub-events>
+                <event-block sid="459349516212079">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="834944237659795" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4.4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="243556217356464" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="185950783774690" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="804210513441653">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="976954234488257" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="400417534099394" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4.4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="376916756578204" type="System">
+                            <param id="0" name="Group name">&quot;BGMFade2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="957888291061345" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="947576931660124" type="Dialogue2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="347953049868386" type="Scene5_Background">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="961075225422482" type="Audio">
+                            <param id="0" name="Audio file">sfx_calendar</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="336134616551267" type="Scene5_CalendarBase">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="102174347414955" type="Scene5_2100">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="232318905802201" type="Scene5_2017">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="493412760286383" type="Scene5_2100" />
+                        <action id="-10" name="Add to" sid="787610136873841" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="266250388280366" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="946312473498846" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="209369120868767" title="BGMFade2">
+            <sub-events>
+                <event-block sid="416214546793232">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="997686624618017" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="981021483982937" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="509374858073422" type="System">
+                            <param id="0" name="Variable">AudioFade</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="417160474235567" type="System">
+                            <param id="0" name="Variable">FadeRate</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="813534992773222">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="568988964473110" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="795162853344469" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                            <param id="1" name="dB">-AudioFade</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="767762098797346">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="406867197636393" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="147563479628965" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="456081982452670" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="612961050772892" type="System">
+                            <param id="0" name="Group name">&quot;BGMFade2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="729251704862355">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="365257507397640" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">13</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="854986014377685" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="716945205057997" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="157753767497895" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="127316612221673" title="Text13">
+            <sub-events>
+                <event-block sid="867154646040093">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="442236442819459" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2.8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="418400947462854" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="348225830617118">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="504150182748203" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="876114938637954" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2.8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="504766430654373" type="System">
+                            <param id="0" name="Group name">&quot;BGMFade3&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="291322906555386" type="Audio">
+                            <param id="0" name="Audio file">bgm_2</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm2&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="559841905776339" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="264639324342670" type="Dialogue2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="713935714243840" type="Scene6_Background">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="415688928348188" type="Scene6_Thermostat">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="815591920883117" type="Scene6_Calendar">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="710719388370851" type="Scene6_Calendar2017">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="752842413548801" type="Scene6_HanaSmol">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="185435793894642" type="Scene6_TexBox">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="576315729976262" type="Audio">
+                            <param id="0" name="Audio file">sfx_Hana_giggle1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="302371721022361" type="Dialogue2">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="457860370273798" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;But luckily for all of us, you can stop that from ever happening!&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="921988772140659" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="285090938642958" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="710483999070074" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="546603041235332" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="351661186838520" title="BGMFade3">
+            <sub-events>
+                <event-block sid="151202303114830">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="210441565623798" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="325049817919585" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="899580113923886" type="System">
+                            <param id="0" name="Variable">AudioFade</param>
+                            <param id="1" name="Value">-20</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="840990640953814" type="System">
+                            <param id="0" name="Variable">FadeRate</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="881491357138252">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="164199749124213" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="947438500072700" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm2&quot;</param>
+                            <param id="1" name="dB">AudioFade</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="876660349275102">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="121371153657279" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="780978869694698" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="778233928842179" type="System">
+                            <param id="0" name="Group name">&quot;BGMFade3&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="500862447551232">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="558015224963288" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">14</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="682906653052962" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="755415310167362" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="126117142547678" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="610777988921871" title="Text14">
+            <sub-events>
+                <event-block sid="542874579745477">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="690966180535801" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3.25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="664092758465276" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="986927742830597" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="840791311999905">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="265884520722724" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="796178756341313" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3.25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="298755921085885" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="736294001071370" type="Dialogue2">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="426315190325803" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;If you can help change how humans lived in your time, there is a chance we can save the world from turning into what you just saw.&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="705031196022087" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="702000263354255" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="478825940220054" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="597666321213822" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="160901834268343">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="540200455471657" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">15</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="480335969258278" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="679328103804680" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="362070882404989" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="884820929145671" title="Text15">
+            <sub-events>
+                <event-block sid="460585645683639">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="344696052883805" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">6.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="393610832853692" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="735015856008995" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="450300439653687">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="459082223769247" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="982389460839695" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">6.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="306634308415483" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="607950903448162" type="Dialogue2">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="650963674849868" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;We need you all to save us, the future, and yourselves…&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="912109703283930" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="793231700336934" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="268814775397080" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="361528669985761" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="623941052723685">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="582092025024001" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">16</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="998002933851476" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="369414131695173" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="490888246009539" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="689619598576203" title="Text16">
+            <sub-events>
+                <event-block sid="245409808216930">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="440691143310573" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2.75</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="158590127134036" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="841055615518049" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="911185605366639">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="463408325390382" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="201414916346840" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2.75</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="149604677946227" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="335155111331633" type="Dialogue2">
+                            <param id="0" name="Text">&quot; &quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="583512152910016" type="Dialogue_Source">
+                            <param id="0" name="Text">&quot;But more importantly us because I’m tired of dealing with near human extinction.&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="545920141197195" type="Audio">
+                            <param id="0" name="Audio file">sfx_text</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="182534163527653" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="236428820512201" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="345566459587982" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="381432914137894">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="805010558063935" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">17</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="572629968809261" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="407868980925336" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="767093675684602" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="350318728177902" title="Text17">
+            <sub-events>
+                <event-block sid="286946003759763">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="679195876815531" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="475947983123771" type="NextButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="523360107691949" type="Audio">
+                            <param id="0" name="Tag">&quot;text&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="279412941217596">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="752967671559671" type="Touch">
+                            <param id="0" name="Object">NextButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="829313429024767" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="368692569092665" type="System">
+                            <param id="0" name="Group name">&quot;BGMFade4&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="228185972856027" type="Opening_End">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="799046170783441" type="Opening_End" />
+                        <action id="0" name="Play" sid="703382487444164" type="Audio">
+                            <param id="0" name="Audio file">sfx_screen_up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="825997967563828" type="System">
+                            <param id="0" name="Variable">N</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="148276305482594" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="203343200143742" type="NextButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="183195123151911" title="BGMFade4">
+            <sub-events>
+                <event-block sid="239032839729571">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="337960316974132" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="734840882194410" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="163152110091162" type="System">
+                            <param id="0" name="Variable">AudioFade</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="413137709069440" type="System">
+                            <param id="0" name="Variable">FadeRate</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="815580806117971">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="976650119571910" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="750076150892453" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm2&quot;</param>
+                            <param id="1" name="dB">-AudioFade</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="465385433802552">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="736155288909905" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="390935144244936" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="175789429047041" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm2&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="616769139015621" type="System">
+                            <param id="0" name="Group name">&quot;BGMFade4&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="137239568262764">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="192211147099776" type="System">
+                    <param id="0" name="Variable">N</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">18</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="400311571486824" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="684854710838254" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N - 1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="848105997285266" type="System">
+                    <param id="0" name="Group name">&quot;Text&quot; &amp; N</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="541790424628026" title="Text18">
+            <sub-events>
+                <event-block sid="501735162969495">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="908430115749687" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
