@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>N6 Present View</name>
     <events>
+        <include>N6 Map Transitions</include>
         <variable constant="0" name="N6_PresentTemperature" sid="606254854442624" static="0" type="number">1</variable>
         <event-block sid="410060440315229">
             <conditions>
@@ -10,7 +11,7 @@
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="846002179871313" type="N6_Thermometer">
-                    <param id="0" name="Animation">N6_PresentTemperature &amp; &quot;C&quot;</param>
+                    <param id="0" name="Animation">&quot;0C&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="537759382587617" type="N6_TransitionCalendar">
@@ -132,6 +133,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <include>N6 Map Transitions</include>
     </events>
 </c2eventsheet>
