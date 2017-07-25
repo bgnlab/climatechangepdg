@@ -3,15 +3,18 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>N6 Future View</name>
     <events>
-        <include>N6 Scores and Levels</include>
+        <include>GG Scores and Levels</include>
+        <include>N6 Map Transitions</include>
         <variable constant="0" name="N6_FutureTemperature" sid="660448388328563" static="0" type="number">6</variable>
         <comment>1: transitioning in, -1: transitioning out, 0: not transitioning</comment>
         <event-block sid="518304049511162">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="154384768192758" type="System" />
+                <condition id="0" name="On function" sid="834305055945882" type="Function">
+                    <param id="0" name="Name">&quot;Start STORY&quot;</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="160826906389186" type="N6_Background">
+                <action id="4" name="Set animation" sid="160826906389186" type="N6_Background_Future">
                     <param id="0" name="Animation">N6_FutureTemperature &amp; &quot;C&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -19,11 +22,22 @@
                     <param id="0" name="Animation">N6_FutureTemperature &amp; &quot;C&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="154045836958002" type="N6_TransitionCalendar">
+                    <param id="0" name="Animation">&quot;future&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="0" name="Call function" sid="228886068982522" type="Function">
                     <param id="0" name="Name">&quot;N6 Transition In&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
+            <sub-events>
+                <comment>Set a condition to play opening cutscene</comment>
+                <event-block sid="252903939469625">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
         </event-block>
         <comment>Switch to Present View</comment>
         <event-block sid="387632259763592">
@@ -44,6 +58,5 @@
                 </action>
             </actions>
         </event-block>
-        <include>N6 Map Transitions</include>
     </events>
 </c2eventsheet>

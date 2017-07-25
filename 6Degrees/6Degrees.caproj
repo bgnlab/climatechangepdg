@@ -55,7 +55,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>C6 Menu</first-layout>
+    <first-layout>N6 Opening Cutscene</first-layout>
     <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -4782,6 +4782,46 @@
                             </animation>
                         </animation-folder>
                     </object-type>
+                    <object-type name="N6_Calendar_Present" sid="602535998501778">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="155240767714589" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.526364" original-source="C:\Users\GAMEPLAYER-01\Downloads\Calender 2017.png">
+                                    <collision-poly>
+                                        <point x="0.00093985" y="0.350154" />
+                                        <point x="0.5" y="0.0916581" />
+                                        <point x="0.99906" y="0.350154" />
+                                        <point x="0.99906" y="0.702369" />
+                                        <point x="0.5" y="0.99897" />
+                                        <point x="0.00093985" y="0.702369" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="N6_Background_Future" sid="532587382221566">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="1C" pingpong="0" repeatcount="1" repeatto="0" sid="250851931494756" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 1 degrees.png" />
+                            </animation>
+                            <animation framecount="1" loop="0" name="2C" pingpong="0" repeatcount="1" repeatto="0" sid="662388841989649" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 2 degrees.png" />
+                            </animation>
+                            <animation framecount="1" loop="0" name="3C" pingpong="0" repeatcount="1" repeatto="0" sid="490095913987159" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 3 degrees.png" />
+                            </animation>
+                            <animation framecount="1" loop="0" name="4C" pingpong="0" repeatcount="1" repeatto="0" sid="630174243154985" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 4 degrees.png" />
+                            </animation>
+                            <animation framecount="1" loop="0" name="5C" pingpong="0" repeatcount="1" repeatto="0" sid="323827638425710" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 5 degrees.png" />
+                            </animation>
+                            <animation framecount="1" loop="0" name="6C" pingpong="0" repeatcount="1" repeatto="0" sid="966077666164981" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 6 degrees.png" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
                 </object-folder>
                 <object-folder name="Present">
                     <object-type name="N6_ToFuture" sid="142781596255546">
@@ -4809,6 +4849,31 @@
                     <object-type name="N6_TempIncrement" sid="761347235231717">
                         <plugin id="Button" />
                     </object-type>
+                    <object-type name="N6_Calendar_Future" sid="991879189562653">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="640469862156205" speed="5">
+                                <frame duration="1" hotspotX="0.501099" hotspotY="0.527273" original-source="C:\Users\GAMEPLAYER-01\Downloads\Calender base.png">
+                                    <collision-poly>
+                                        <point x="0.00093985" y="0.350154" />
+                                        <point x="0.5" y="0.0916581" />
+                                        <point x="0.99906" y="0.350154" />
+                                        <point x="0.99906" y="0.702369" />
+                                        <point x="0.5" y="0.99897" />
+                                        <point x="0.00093985" y="0.702369" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="N6_Background_Past" sid="445298873831439">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="322585810594157" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\(story ver) Map 2.0 2017.png" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
                 </object-folder>
                 <object-folder name="TimeTransition">
                     <object-type name="N6_TransitionCalendar" sid="568433220671061">
@@ -4816,11 +4881,31 @@
                         <container>
                             <type>N6_TransitionPane</type>
                             <type>N6_TransitionCalendar</type>
-                            <type>N6_TransitionYear</type>
                         </container>
                         <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="649981966407716" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <animation framecount="1" loop="0" name="future" pingpong="0" repeatcount="1" repeatto="0" sid="649981966407716" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Calender base.png">
+                                    <collision-poly>
+                                        <point x="0.208242" y="0.344545" />
+                                        <point x="0.5" y="0.116364" />
+                                        <point x="0.791758" y="0.344545" />
+                                        <point x="0.791758" y="0.655455" />
+                                        <point x="0.5" y="0.917273" />
+                                        <point x="0.208242" y="0.655455" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="present" pingpong="0" repeatcount="1" repeatto="0" sid="945319640377321" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Calender 2017.png">
+                                    <collision-poly>
+                                        <point x="0.208242" y="0.344545" />
+                                        <point x="0.5" y="0.116364" />
+                                        <point x="0.791758" y="0.344545" />
+                                        <point x="0.791758" y="0.655455" />
+                                        <point x="0.5" y="0.917273" />
+                                        <point x="0.208242" y="0.655455" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -4829,7 +4914,6 @@
                         <container>
                             <type>N6_TransitionPane</type>
                             <type>N6_TransitionCalendar</type>
-                            <type>N6_TransitionYear</type>
                         </container>
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="256091124874760" speed="5">
@@ -4837,38 +4921,7 @@
                             </animation>
                         </animation-folder>
                     </object-type>
-                    <object-type name="N6_TransitionYear" sid="446034824435545">
-                        <plugin id="Text" />
-                        <container>
-                            <type>N6_TransitionPane</type>
-                            <type>N6_TransitionCalendar</type>
-                            <type>N6_TransitionYear</type>
-                        </container>
-                    </object-type>
                 </object-folder>
-                <object-type name="N6_Background" sid="532587382221566">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="1C" pingpong="0" repeatcount="1" repeatto="0" sid="250851931494756" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 1 degrees.png" />
-                        </animation>
-                        <animation framecount="1" loop="0" name="2C" pingpong="0" repeatcount="1" repeatto="0" sid="662388841989649" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 2 degrees.png" />
-                        </animation>
-                        <animation framecount="1" loop="0" name="3C" pingpong="0" repeatcount="1" repeatto="0" sid="490095913987159" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 3 degrees.png" />
-                        </animation>
-                        <animation framecount="1" loop="0" name="4C" pingpong="0" repeatcount="1" repeatto="0" sid="630174243154985" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 4 degrees.png" />
-                        </animation>
-                        <animation framecount="1" loop="0" name="5C" pingpong="0" repeatcount="1" repeatto="0" sid="323827638425710" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 5 degrees.png" />
-                        </animation>
-                        <animation framecount="1" loop="0" name="6C" pingpong="0" repeatcount="1" repeatto="0" sid="966077666164981" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 6 degrees.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
                 <object-type name="N6_Thermometer" sid="109642287589657">
                     <plugin id="Sprite" />
                     <animation-folder>
@@ -4945,25 +4998,6 @@
                             </frame>
                         </animation>
                     </animation-folder>
-                </object-type>
-                <object-type name="N6_Calendar" sid="602535998501778">
-                    <plugin id="Sprite" />
-                    <container>
-                        <type>N6_Calendar</type>
-                        <type>N6_Year</type>
-                    </container>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="155240767714589" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="N6_Year" sid="675197188356856">
-                    <plugin id="Text" />
-                    <container>
-                        <type>N6_Calendar</type>
-                        <type>N6_Year</type>
-                    </container>
                 </object-type>
             </object-folder>
             <object-folder name="Opening Cutscene">
@@ -10909,12 +10943,12 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="123245996398692" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.588889" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 5.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.585938" original-source="C:\Users\GAMEPLAYER-01\Desktop\bike passenger.png">
                                 <collision-poly>
-                                    <point x="0" y="0.315822" />
-                                    <point x="1" y="0.315822" />
-                                    <point x="1" y="0.947289" />
-                                    <point x="0" y="0.935911" />
+                                    <point x="0.3125" y="0.140625" />
+                                    <point x="0.65625" y="0.140625" />
+                                    <point x="0.65625" y="0.78125" />
+                                    <point x="0.3125" y="0.78125" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -11146,7 +11180,7 @@
                                     <point x="0.0375" y="0.5" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon9.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\icon9.png">
                                 <collision-poly>
                                     <point x="0.175" y="0.175" />
                                     <point x="0.5" y="0.05" />
@@ -11289,7 +11323,7 @@
                                     <point x="0.0375" y="0.5" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon9.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\icon9.png">
                                 <collision-poly>
                                     <point x="0.175" y="0.175" />
                                     <point x="0.5" y="0.05" />
@@ -11425,7 +11459,7 @@
                                     <point x="0.0375" y="0.5" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon9.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\icon9.png">
                                 <collision-poly>
                                     <point x="0.175" y="0.175" />
                                     <point x="0.5" y="0.05" />
@@ -16181,7 +16215,6 @@
             <event-sheet>N6 Level Select.xml</event-sheet>
             <event-sheet>N6 Opening Cutscene.xml</event-sheet>
             <event-sheet>N6 Present View.xml</event-sheet>
-            <event-sheet>N6 Scores and Levels.xml</event-sheet>
             <event-sheet>N6 Map Transitions.xml</event-sheet>
             <event-sheet>N6 Story Scripting.xml</event-sheet>
         </event-folder>

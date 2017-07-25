@@ -4,7 +4,6 @@
     <name>N6 Level Select</name>
     <events>
         <include>GG Scores and Levels</include>
-        <include>N6 Scores and Levels</include>
         <variable constant="0" name="N6_Region" sid="165429645144269" static="0" type="number">0</variable>
         <event-group description="" sid="370635687356346" title="N6 Drawing and Generating Levels">
             <sub-events>
@@ -79,10 +78,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="718819399996039" type="System">
-                            <param id="0" name="Variable">N6_Difficulty</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                         <action id="-25" name="Go to layout (by name)" sid="209961119755825" type="System">
                             <param id="0" name="Layout">N6_LevelIcon.LevelLayout</param>
                         </action>
@@ -102,10 +97,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="913570804430322" type="System">
-                            <param id="0" name="Variable">N6_Difficulty</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action id="-25" name="Go to layout (by name)" sid="836936477022465" type="System">
                             <param id="0" name="Layout">N6_LevelIcon.LevelLayout</param>
                         </action>
@@ -125,10 +116,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="632258517298310" type="System">
-                            <param id="0" name="Variable">N6_Difficulty</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
                         <action id="-25" name="Go to layout (by name)" sid="892800112988404" type="System">
                             <param id="0" name="Layout">N6_LevelIcon.LevelLayout</param>
                         </action>
