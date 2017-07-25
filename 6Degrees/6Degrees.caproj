@@ -10310,16 +10310,6 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="1" loop="0" name="Parked" pingpong="0" repeatcount="1" repeatto="0" sid="255157545157028" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Secondary Downloads\empty bike.png">
-                                <collision-poly>
-                                    <point x="1" y="0" />
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
                         <animation framecount="4" loop="1" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="640924234262481" speed="10">
                             <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
                                 <collision-poly>
@@ -10385,6 +10375,26 @@
                                     <point x="0.8" y="0" />
                                     <point x="0.8" y="1" />
                                     <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="OldParked" pingpong="0" repeatcount="1" repeatto="0" sid="847207051935271" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Parked" pingpong="0" repeatcount="1" repeatto="0" sid="556718814706545" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -11319,7 +11329,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="9" loop="0" name="Animation1" pingpong="0" repeatcount="0" repeatto="0" sid="822016446449628" speed="0">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon1.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\icon1.png">
                                 <collision-poly>
                                     <point x="0.175" y="0.175" />
                                     <point x="0.5" y="0.0375" />
@@ -11331,7 +11341,7 @@
                                     <point x="0.0375" y="0.5" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon2.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\icon2.png">
                                 <collision-poly>
                                     <point x="0.175" y="0.175" />
                                     <point x="0.5" y="0.05" />
@@ -11343,7 +11353,7 @@
                                     <point x="0.0375" y="0.5" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon3.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\icon3.png">
                                 <collision-poly>
                                     <point x="0.175" y="0.175" />
                                     <point x="0.5" y="0.05" />
@@ -11355,7 +11365,7 @@
                                     <point x="0.0375" y="0.5" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon4.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\icon4.png">
                                 <collision-poly>
                                     <point x="0.175" y="0.175" />
                                     <point x="0.5" y="0.05" />
@@ -11367,7 +11377,7 @@
                                     <point x="0.0375" y="0.5" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon5.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\icon5.png">
                                 <collision-poly>
                                     <point x="0.175" y="0.175" />
                                     <point x="0.5" y="0.05" />
@@ -11379,7 +11389,7 @@
                                     <point x="0.0375" y="0.5" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon6.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\icon6.png">
                                 <collision-poly>
                                     <point x="0.175" y="0.175" />
                                     <point x="0.5" y="0.05" />
@@ -11391,7 +11401,7 @@
                                     <point x="0.0375" y="0.5" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon7.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\icon7.png">
                                 <collision-poly>
                                     <point x="0.175" y="0.175" />
                                     <point x="0.5" y="0.05" />
@@ -11403,7 +11413,7 @@
                                     <point x="0.0375" y="0.5" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon8.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Desktop\icon8.png">
                                 <collision-poly>
                                     <point x="0.175" y="0.175" />
                                     <point x="0.5" y="0.0375" />
@@ -15303,14 +15313,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="853505727150899" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\Arrow.png">
+                        <frame duration="1" hotspotX="0.50505" hotspotY="0.428571" original-source="C:\Users\GAMEPLAYER-01\Downloads\Frogger Arrow.png">
                             <collision-poly>
-                                <point x="0.370588" y="0" />
-                                <point x="0.632353" y="0" />
-                                <point x="1" y="0.508824" />
+                                <point x="0.485013" y="0" />
+                                <point x="0.514524" y="0" />
+                                <point x="0.823232" y="0.34832" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
-                                <point x="0" y="0.5" />
+                                <point x="0.167929" y="0.357143" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -15463,14 +15473,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="100630084510771" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\Arrow.png">
+                        <frame duration="1" hotspotX="0.571429" hotspotY="0.50505" original-source="C:\Users\GAMEPLAYER-01\Downloads\Frogger Arrow.png">
                             <collision-poly>
-                                <point x="0" y="0" />
-                                <point x="0.502941" y="0" />
-                                <point x="1" y="0.361765" />
-                                <point x="1" y="0.632353" />
-                                <point x="0.488235" y="1" />
+                                <point x="0.653361" y="0.17803" />
+                                <point x="1" y="0.484949" />
+                                <point x="1" y="0.514886" />
+                                <point x="0.655463" y="0.82197" />
                                 <point x="0" y="1" />
+                                <point x="0" y="0" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -15645,14 +15655,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="916246279789758" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\Arrow.png">
+                        <frame duration="1" hotspotX="0.428571" hotspotY="0.50505" original-source="C:\Users\GAMEPLAYER-01\Downloads\Frogger Arrow.png">
                             <collision-poly>
-                                <point x="0" y="0.366177" />
-                                <point x="0.5" y="0" />
+                                <point x="0.334454" y="0.823232" />
+                                <point x="0" y="0.514836" />
+                                <point x="0" y="0.485006" />
+                                <point x="0.344538" y="0.174242" />
                                 <point x="1" y="0" />
                                 <point x="1" y="1" />
-                                <point x="0.482353" y="1" />
-                                <point x="0" y="0.638235" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -15709,14 +15719,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="456121784198072" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\Arrow.png">
+                        <frame duration="1" hotspotX="0.50505" hotspotY="0.571429" original-source="C:\Users\GAMEPLAYER-01\Downloads\Frogger Arrow.png">
                             <collision-poly>
-                                <point x="0" y="0.626471" />
-                                <point x="0" y="2.32831e-010" />
+                                <point x="0" y="0" />
                                 <point x="1" y="0" />
-                                <point x="1" y="0.602941" />
-                                <point x="0.620588" y="1" />
-                                <point x="0.367647" y="1" />
+                                <point x="0.818182" y="0.642857" />
+                                <point x="0.515152" y="1" />
+                                <point x="0.485322" y="1" />
+                                <point x="0.174242" y="0.65168" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -15766,6 +15776,14 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="897511527207376" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_reboundBox" sid="481121157309966">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="847651111509739" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>

@@ -723,5 +723,17 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="309658747741108">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="950826437586332" type="my_reboundBox">
+                    <param id="0" name="Object">my_Frog</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="472511025326797" type="my_Frog">
+                    <param id="0" name="Y">1088</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

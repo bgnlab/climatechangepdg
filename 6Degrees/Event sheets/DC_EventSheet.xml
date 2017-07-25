@@ -903,6 +903,25 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="487110821127576" type="DC_Person" />
                     </actions>
+                    <sub-events>
+                        <event-block sid="761197613395680">
+                            <conditions>
+                                <condition id="-5" name="Compare width" sid="787278823957821" type="REPLACE_WITH_REAL_TIMER">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Width">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="507988038886812" type="System">
+                                    <param id="0" name="Variable">DC_StuffParked</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="309805577629474" type="DC_ScoreBar">
+                                    <param id="0" name="Height">40 * DC_StuffParked</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -1809,11 +1828,11 @@
                                             <param id="0" name="Name">&quot;DC_SucksToBeCars&quot;</param>
                                             <param id="1" name="Parameter {n}">DC_ParkingSpace.IAM</param>
                                         </action>
-                                        <action id="-10" name="Add to" sid="609066712167535" type="System">
+                                        <action disabled="1" id="-10" name="Add to" sid="609066712167535" type="System">
                                             <param id="0" name="Variable">DC_StuffParked</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-6" name="Set height" sid="767181478263102" type="DC_ScoreBar">
+                                        <action disabled="1" id="-6" name="Set height" sid="767181478263102" type="DC_ScoreBar">
                                             <param id="0" name="Height">40 * DC_StuffParked</param>
                                         </action>
                                     </actions>
@@ -1930,11 +1949,11 @@
                                     <param id="0" name="Instance variable">ImGoingTo</param>
                                     <param id="1" name="Value">DC_ImAPole.IAM</param>
                                 </action>
-                                <action id="-10" name="Add to" sid="432064406377000" type="System">
+                                <action disabled="1" id="-10" name="Add to" sid="432064406377000" type="System">
                                     <param id="0" name="Variable">DC_StuffParked</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-6" name="Set height" sid="992934755117417" type="DC_ScoreBar">
+                                <action disabled="1" id="-6" name="Set height" sid="992934755117417" type="DC_ScoreBar">
                                     <param id="0" name="Height">40 * DC_StuffParked</param>
                                 </action>
                             </actions>
@@ -2635,6 +2654,22 @@
                     <actions>
                         <action id="-26" name="Move to layer" sid="136063540570944" type="DC_ParkingSpace">
                             <param id="0" name="Layer">&quot;SolidObjects&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="388430701781358" title="DC_FadingBikes">
+            <sub-events>
+                <event-block sid="582770375675137">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="167685020535106" type="DC_Bike">
+                            <param id="0" name="Animation">&quot;Parked&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="337203833084760" type="DC_Bike">
+                            <param id="0" name="Opacity">DC_Bike.Opacity-0.5</param>
                         </action>
                     </actions>
                 </event-block>
