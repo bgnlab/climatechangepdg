@@ -10596,6 +10596,117 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="DC_GhostBike" sid="631035143936464">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="UClickedOnThis" sid="848040025497120" type="string" />
+                        <instance-variable name="ISpawnedAt" sid="929984452539444" type="string" />
+                        <instance-variable name="ImGoingTo" sid="234048040125856" type="string" />
+                        <instance-variable name="InSpace" sid="402883138451847" type="number" />
+                        <instance-variable name="TARGET" sid="516724083005373" type="number" />
+                        <instance-variable name="ParkAT" sid="944907938055479" type="string" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="201421369639533" speed="10">
+                            <frame duration="1" hotspotX="0.453333" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\BikeMan2.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="1" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="849021765679272" speed="10">
+                            <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.433333" hotspotY="0.522222">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="1" name="Going" pingpong="0" repeatcount="1" repeatto="0" sid="623540205011530" speed="10">
+                            <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.433333" hotspotY="0.522222">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.8" y="0" />
+                                    <point x="0.8" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="OldParked" pingpong="0" repeatcount="1" repeatto="0" sid="552072713884696" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Parked" pingpong="0" repeatcount="1" repeatto="0" sid="179615945346515" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Car">
                 <object-type name="DC_Car" sid="578848878463861">

@@ -1817,6 +1817,36 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="DC_GhostBike" uid="214">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <UClickedOnThis></UClickedOnThis>
+                        <ISpawnedAt></ISpawnedAt>
+                        <ImGoingTo></ImGoingTo>
+                        <InSpace>0</InSpace>
+                        <TARGET>0</TARGET>
+                        <ParkAT></ParkAT>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2478</x>
+                        <y>471</y>
+                        <z>0</z>
+                        <width>150</width>
+                        <height>90</height>
+                        <depth>0</depth>
+                        <hotspotX>0.453333348</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.75</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -2576,7 +2606,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-64,400,0</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
@@ -2586,7 +2616,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>7</x>
-                        <y>-131</y>
+                        <y>0</y>
                         <z>0</z>
                         <width>2030</width>
                         <height>108</height>
