@@ -324,6 +324,9 @@
                                 <action id="6" name="Stop" sid="363628133888687" type="Audio">
                                     <param id="0" name="Tag">&quot;w0ta&quot;</param>
                                 </action>
+                                <action id="-18" name="Rotate clockwise" sid="637415274076023" type="m2_2_valve">
+                                    <param id="0" name="Degrees">45</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="904940462694601">
@@ -827,6 +830,9 @@
                         <event-block sid="288970232742592">
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="434454727042885" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="194726615595767" type="Touch">
+                                    <param id="0" name="Object">m2_2_microwave</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-14" name="Toggle boolean" sid="868158036917317" type="m2_2_microwave">
