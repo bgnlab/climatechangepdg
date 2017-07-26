@@ -130,10 +130,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1792</x>
-                        <y>1125</y>
+                        <x>185.722381592</x>
+                        <y>1125.032104492</y>
                         <z>0</z>
-                        <width>246</width>
+                        <width>370.184326172</width>
                         <height>150</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -158,8 +158,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>163</x>
-                        <y>1262</y>
+                        <x>130</x>
+                        <y>1479</y>
                         <z>0</z>
                         <width>320</width>
                         <height>500</height>
@@ -369,10 +369,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1320</x>
-                        <y>583</y>
+                        <y>587</y>
                         <z>0</z>
                         <width>250</width>
-                        <height>250</height>
+                        <height>242</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -536,10 +536,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>960</x>
-                        <y>583</y>
+                        <y>588</y>
                         <z>0</z>
                         <width>250</width>
-                        <height>250</height>
+                        <height>240</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -565,8 +565,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>175</x>
-                        <y>1146</y>
+                        <x>142</x>
+                        <y>1363</y>
                         <z>0</z>
                         <width>174</width>
                         <height>62</height>
@@ -652,8 +652,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>208</x>
-                        <y>1240</y>
+                        <x>175</x>
+                        <y>1457</y>
                         <z>0</z>
                         <width>174</width>
                         <height>62</height>
@@ -682,8 +682,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>210</x>
-                        <y>1337</y>
+                        <x>177</x>
+                        <y>1554</y>
                         <z>0</z>
                         <width>174</width>
                         <height>62</height>
@@ -712,8 +712,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>123</x>
-                        <y>1433</y>
+                        <x>90</x>
+                        <y>1650</y>
                         <z>0</z>
                         <width>174</width>
                         <height>62</height>
@@ -1071,28 +1071,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="mx_2_PStock" uid="1580">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>162.645004272</x>
-                        <y>932.677001953</y>
-                        <z>0</z>
-                        <width>315.290008545</width>
-                        <height>157.645004272</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="mx_2_lights" uid="1581">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1310,8 +1288,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1735</x>
-                        <y>1089</y>
+                        <x>86.016860962</x>
+                        <y>1089.59765625</y>
                         <z>0</z>
                         <width>225</width>
                         <height>161</height>
@@ -1506,6 +1484,104 @@
                         <z>0</z>
                         <width>94</width>
                         <height>92</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="mx_endMe" uid="306">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>971</x>
+                        <y>423</y>
+                        <z>0</z>
+                        <width>1966</width>
+                        <height>1626</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="mx_endMe" uid="307">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>162</x>
+                        <y>749</y>
+                        <z>0</z>
+                        <width>442</width>
+                        <height>628</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="mx_2_PStock" uid="1580">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-365</x>
+                        <y>1035</y>
+                        <z>0</z>
+                        <width>315.290008545</width>
+                        <height>157.645004272</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
