@@ -5,7 +5,37 @@
     <events>
         <include>GG Scores and Levels</include>
         <include>N6 Map Transitions</include>
-        <variable constant="0" name="N6_FutureTemperature" sid="660448388328563" static="0" type="number">6</variable>
+        <variable constant="0" name="N6_FutureTemperature" sid="660448388328563" static="0" type="number">0</variable>
+        <event-block sid="964253527100110">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="808219079054885" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="974556353251679">
+                    <conditions>
+                        <condition id="4" name="Is empty" sid="282176488573420" type="GG_State" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="845444293321518" type="Function">
+                            <param id="0" name="Name">&quot;GG Initialize Data&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="914830990978467">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="216830379071957" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="697617302902155" type="Function">
+                            <param id="0" name="Name">&quot;Start STORY&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <comment>1: transitioning in, -1: transitioning out, 0: not transitioning</comment>
         <event-block sid="518304049511162">
             <conditions>
@@ -14,6 +44,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="746223331246955" type="System">
+                    <param id="0" name="Variable">N6_FutureTemperature</param>
+                    <param id="1" name="Value">GG_State.Get(&quot;future temperature&quot;)</param>
+                </action>
                 <action id="4" name="Set animation" sid="160826906389186" type="N6_Background_Future">
                     <param id="0" name="Animation">N6_FutureTemperature &amp; &quot;C&quot;</param>
                     <param id="1" name="From">1</param>
@@ -31,13 +65,6 @@
                     <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
-            <sub-events>
-                <comment>Set a condition to play opening cutscene</comment>
-                <event-block sid="252903939469625">
-                    <conditions />
-                    <actions />
-                </event-block>
-            </sub-events>
         </event-block>
         <comment>Switch to Present View</comment>
         <event-block sid="387632259763592">

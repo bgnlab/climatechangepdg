@@ -55,7 +55,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>N6 Opening Cutscene</first-layout>
+    <first-layout>Opening</first-layout>
     <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -670,6 +670,123 @@
                     </object-type>
                     <object-type name="C6_DiffDescription" sid="583985029252231">
                         <plugin id="Text" />
+                    </object-type>
+                    <object-type name="C6_GameIcon" sid="508125455044026">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="G0" pingpong="0" repeatcount="1" repeatto="0" sid="874160359397975" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\hi\parking game icon.png">
+                                    <collision-poly>
+                                        <point x="0.303922" y="0.296935" />
+                                        <point x="0.5" y="0.231801" />
+                                        <point x="0.696078" y="0.296935" />
+                                        <point x="0.815686" y="0.5" />
+                                        <point x="0.696078" y="0.703065" />
+                                        <point x="0.5" y="0.768199" />
+                                        <point x="0.303922" y="0.703065" />
+                                        <point x="0.186275" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="G1" pingpong="0" repeatcount="1" repeatto="0" sid="669240389005748" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\hi\fridge icon.png">
+                                    <collision-poly>
+                                        <point x="0.303922" y="0.296935" />
+                                        <point x="0.5" y="0.231801" />
+                                        <point x="0.696078" y="0.296935" />
+                                        <point x="0.815686" y="0.5" />
+                                        <point x="0.696078" y="0.703065" />
+                                        <point x="0.5" y="0.768199" />
+                                        <point x="0.303922" y="0.703065" />
+                                        <point x="0.186275" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="G2" pingpong="0" repeatcount="1" repeatto="0" sid="985856096958902" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\hi\heat lock icon.png">
+                                    <collision-poly>
+                                        <point x="0.303922" y="0.296935" />
+                                        <point x="0.5" y="0.231801" />
+                                        <point x="0.696078" y="0.296935" />
+                                        <point x="0.815686" y="0.5" />
+                                        <point x="0.696078" y="0.703065" />
+                                        <point x="0.5" y="0.768199" />
+                                        <point x="0.303922" y="0.703065" />
+                                        <point x="0.186275" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="G3" pingpong="0" repeatcount="1" repeatto="0" sid="647818599768030" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\hi\clothing patch.png">
+                                    <collision-poly>
+                                        <point x="0.303922" y="0.296935" />
+                                        <point x="0.5" y="0.231801" />
+                                        <point x="0.696078" y="0.296935" />
+                                        <point x="0.815686" y="0.5" />
+                                        <point x="0.696078" y="0.703065" />
+                                        <point x="0.5" y="0.768199" />
+                                        <point x="0.303922" y="0.703065" />
+                                        <point x="0.186275" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="G4" pingpong="0" repeatcount="1" repeatto="0" sid="547108315471886" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\hi\tire pressure icon.png">
+                                    <collision-poly>
+                                        <point x="0.303922" y="0.296935" />
+                                        <point x="0.5" y="0.231801" />
+                                        <point x="0.696078" y="0.296935" />
+                                        <point x="0.815686" y="0.5" />
+                                        <point x="0.696078" y="0.703065" />
+                                        <point x="0.5" y="0.768199" />
+                                        <point x="0.303922" y="0.703065" />
+                                        <point x="0.186275" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="G5" pingpong="0" repeatcount="1" repeatto="0" sid="735735232411668" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\hi\frogger game.png">
+                                    <collision-poly>
+                                        <point x="0.303922" y="0.296935" />
+                                        <point x="0.5" y="0.231801" />
+                                        <point x="0.696078" y="0.296935" />
+                                        <point x="0.815686" y="0.5" />
+                                        <point x="0.696078" y="0.703065" />
+                                        <point x="0.5" y="0.768199" />
+                                        <point x="0.303922" y="0.703065" />
+                                        <point x="0.186275" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="G6" pingpong="0" repeatcount="1" repeatto="0" sid="532457447867866" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\hi\escape room patch.png">
+                                    <collision-poly>
+                                        <point x="0.303922" y="0.296935" />
+                                        <point x="0.5" y="0.231801" />
+                                        <point x="0.696078" y="0.296935" />
+                                        <point x="0.815686" y="0.5" />
+                                        <point x="0.696078" y="0.703065" />
+                                        <point x="0.5" y="0.768199" />
+                                        <point x="0.303922" y="0.703065" />
+                                        <point x="0.186275" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="G7" pingpong="0" repeatcount="1" repeatto="0" sid="483947138901717" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\hi\spending icon.png">
+                                    <collision-poly>
+                                        <point x="0.303922" y="0.296935" />
+                                        <point x="0.5" y="0.231801" />
+                                        <point x="0.696078" y="0.296935" />
+                                        <point x="0.815686" y="0.5" />
+                                        <point x="0.696078" y="0.703065" />
+                                        <point x="0.5" y="0.768199" />
+                                        <point x="0.303922" y="0.703065" />
+                                        <point x="0.186275" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
                     </object-type>
                 </object-folder>
                 <object-type name="C6_ButtonBack" sid="716684449658093">
@@ -4845,9 +4962,6 @@
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             </animation>
                         </animation-folder>
-                    </object-type>
-                    <object-type name="N6_TempIncrement" sid="761347235231717">
-                        <plugin id="Button" />
                     </object-type>
                     <object-type name="N6_Calendar_Future" sid="991879189562653">
                         <plugin id="Sprite" />
@@ -16438,6 +16552,14 @@
         <object-type global="1" name="Dictionary" sid="185893897457786">
             <plugin id="Dictionary" />
         </object-type>
+        <object-type name="Sprite3" sid="507126063992337">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="202739243948843" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="m2_3_nightLightWires" plugin-id="Sprite" sid="359556569661644">
@@ -16739,8 +16861,6 @@
             <layout>N6 Present View.xml</layout>
             <layout>N6 Future View.xml</layout>
             <layout>N6 Level Select.xml</layout>
-            <layout>N6 Opening Cutscene.xml</layout>
-            <layout>N6 Test Level.xml</layout>
         </layout-folder>
         <layout-folder name="M3 Carpool">
             <layout>M3_Medium.xml</layout>
@@ -16813,10 +16933,8 @@
         <event-folder name="N6 Story Map">
             <event-sheet>N6 Future View.xml</event-sheet>
             <event-sheet>N6 Level Select.xml</event-sheet>
-            <event-sheet>N6 Opening Cutscene.xml</event-sheet>
             <event-sheet>N6 Present View.xml</event-sheet>
             <event-sheet>N6 Map Transitions.xml</event-sheet>
-            <event-sheet>N6 Story Scripting.xml</event-sheet>
         </event-folder>
         <event-folder name="M3 Carpool">
             <event-sheet>M3_GameEventSheet.xml</event-sheet>

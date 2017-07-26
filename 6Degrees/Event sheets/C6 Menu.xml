@@ -271,6 +271,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>DEBUG MODE</comment>
                         <event-block sid="429297913093982">
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="759298962178104" type="Touch" />
@@ -306,6 +307,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>DEBUG MODE</comment>
                         <event-block sid="849987999967404">
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="441531268657081" type="Touch" />
@@ -568,7 +570,132 @@
                                     </actions>
                                     <sub-events>
                                         <comment>Setting the Text, Description, etc...</comment>
-                                        <event-group description="" sid="600431153687778" title="C6 Setting Text" />
+                                        <event-group description="" sid="600431153687778" title="C6 Setting Text and Icon">
+                                            <sub-events>
+                                                <comment>Set GameIcon</comment>
+                                                <event-block sid="526438218254844">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="226503826438319" type="C6_GameIcon">
+                                                            <param id="0" name="Animation">&quot;G&quot; &amp; GG_Selected_Game</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="376694844690381">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="827141218551669" type="System">
+                                                            <param id="0" name="Variable">GG_Selected_Game</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="179402943336289" type="C6_TempDiffTitle">
+                                                            <param id="0" name="Text">&quot;Spot Rush&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="195955627866464">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="760907898723996" type="System">
+                                                            <param id="0" name="Variable">GG_Selected_Game</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="468482359697803" type="C6_TempDiffTitle">
+                                                            <param id="0" name="Text">&quot;Dish Fusion&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="220600799067070">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="944577085660599" type="System">
+                                                            <param id="0" name="Variable">GG_Selected_Game</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="860491868818855" type="C6_TempDiffTitle">
+                                                            <param id="0" name="Text">&quot;Heat-Lock&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="750476895396039">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="367179078269424" type="System">
+                                                            <param id="0" name="Variable">GG_Selected_Game</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">3</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="540114996175893" type="C6_TempDiffTitle">
+                                                            <param id="0" name="Text">&quot;Donation Overload&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="513273281301631">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="934407563199385" type="System">
+                                                            <param id="0" name="Variable">GG_Selected_Game</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">4</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="243070477298879" type="C6_TempDiffTitle">
+                                                            <param id="0" name="Text">&quot;Pitstop Pursuit&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="173075674769431">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="933760866781738" type="System">
+                                                            <param id="0" name="Variable">GG_Selected_Game</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">5</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="663793219760371" type="C6_TempDiffTitle">
+                                                            <param id="0" name="Text">&quot;Delivery Dodger&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="719167476945232">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="290270478008736" type="System">
+                                                            <param id="0" name="Variable">GG_Selected_Game</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">6</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="321773930929295" type="C6_TempDiffTitle">
+                                                            <param id="0" name="Text">&quot;Electronics Hunt&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="371139961935307">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="471101488599933" type="System">
+                                                            <param id="0" name="Variable">GG_Selected_Game</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">7</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="221433374497684" type="C6_TempDiffTitle">
+                                                            <param id="0" name="Text">&quot;Gather, Platter, Profit&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-group>
                                         <comment>Setting the States of the Difficulty Buttons</comment>
                                         <event-group description="" sid="613998623232183" title="C6 Setting Difficulty Button State">
                                             <sub-events>
