@@ -839,7 +839,7 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <comment>Check if it is change or not (value is non-existent or is 0)</comment>
+                                                <comment>Check if it is changed or not (value is non-existent or is 0)</comment>
                                                 <event-block sid="794309833168250">
                                                     <conditions>
                                                         <condition id="3" name="Has key" sid="992685850578933" type="GG_State">
@@ -1175,10 +1175,144 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <comment>Some Stuff</comment>
-                                <event-block sid="257347993227293">
-                                    <conditions />
+                                <comment>Checking the scores of each game, totaling them up</comment>
+                                <variable constant="0" name="GG_Score_Sum" sid="605250245451765" static="0" type="number">0</variable>
+                                <variable constant="0" name="GG_Trigger_Cutscene" sid="733431029731912" static="0" type="number">0</variable>
+                                <event-block sid="808729754794253">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="883923447664859" type="System">
+                                            <param id="0" name="Name">&quot;Each Game&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">7</param>
+                                        </condition>
+                                    </conditions>
                                     <actions />
+                                    <sub-events>
+                                        <comment>Adding Medium and Hard Scores to Sum</comment>
+                                        <variable constant="0" name="GG_Temp_Scores" sid="388954189826448" static="0" type="text"></variable>
+                                        <event-block sid="877421662199105">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="120449442259561" type="System">
+                                                    <param id="0" name="First value">GG_State.Get(&quot;game&quot; &amp; loopindex)</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">&quot;0&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="692018042062023" type="System">
+                                                    <param id="0" name="Variable">GG_Temp_Scores</param>
+                                                    <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; loopindex)</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="906551032373171" type="System">
+                                                    <param id="0" name="Variable">GG_Score_Sum</param>
+                                                    <param id="1" name="Value">int(tokenat(GG_Temp_Scores, 1, &quot; &quot;)) + int(tokenat(GG_Temp_Scores, 2, &quot; &quot;)) </param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-group description="" sid="829488546995792" title="Cutscene Conditions">
+                                    <sub-events>
+                                        <event-block sid="354674185641499">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="155871283484862" type="System">
+                                                    <param id="0" name="Variable">GG_Score_Sum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="989038817249291" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">6</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                        <event-block sid="280956727521828">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="878578546534761" type="System">
+                                                    <param id="0" name="Variable">GG_Score_Sum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">12</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="820991794047287" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                        <event-block sid="608310171762135">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="886969943916490" type="System">
+                                                    <param id="0" name="Variable">GG_Score_Sum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">19</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="217963297271665" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                        <event-block sid="818623401764854">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="195585172847863" type="System">
+                                                    <param id="0" name="Variable">GG_Score_Sum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">26</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="944252032799691" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                        <event-block sid="177880080525361">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="162335098810684" type="System">
+                                                    <param id="0" name="Variable">GG_Score_Sum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">33</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="570023347563970" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                        <event-block sid="995927573441065">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="935746455022683" type="System">
+                                                    <param id="0" name="Variable">GG_Score_Sum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">40</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="676148027475281" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                                <event-block sid="632947947886974">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Add key" sid="837716274613582" type="GG_State">
+                                            <param id="0" name="Key">&quot;trigger cutscene&quot;</param>
+                                            <param id="1" name="Value">GG_Trigger_Cutscene</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -1241,6 +1375,68 @@
                                         </condition>
                                     </conditions>
                                     <actions />
+                                    <sub-events>
+                                        <event-block sid="801178916670384">
+                                            <conditions>
+                                                <condition id="0" name="Compare value" sid="183282082190672" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                        <event-block sid="340355297807239">
+                                            <conditions>
+                                                <condition id="0" name="Compare value" sid="746413506908597" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                        <event-block sid="108289014612760">
+                                            <conditions>
+                                                <condition id="0" name="Compare value" sid="123159955181527" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                        <event-block sid="535240572950399">
+                                            <conditions>
+                                                <condition id="0" name="Compare value" sid="323491446758415" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                        <event-block sid="934634662535922">
+                                            <conditions>
+                                                <condition id="0" name="Compare value" sid="109943258955784" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                        <event-block sid="414251850432779">
+                                            <conditions>
+                                                <condition id="0" name="Compare value" sid="587763275042961" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <comment>Else go to present view</comment>
                                 <event-block sid="402734797398929">
