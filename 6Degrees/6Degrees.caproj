@@ -4749,6 +4749,21 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="N6_LevelSelectBackgroundBackground" sid="569470452097075">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="consumption" pingpong="0" repeatcount="1" repeatto="0" sid="752164156917760" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\(story ver) Map 2.0 2017.png">
+                                <collision-poly>
+                                    <point x="0.0260417" y="0.0416667" />
+                                    <point x="0.973958" y="0.0416667" />
+                                    <point x="0.973958" y="0.958333" />
+                                    <point x="0.0260417" y="0.958333" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Maps">
                 <object-folder name="Future">
