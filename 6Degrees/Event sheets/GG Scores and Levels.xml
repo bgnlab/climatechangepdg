@@ -1226,7 +1226,16 @@
                                                     <param id="2" name="Value">6</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="0" name="Add key" sid="181110545016201" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Value">5</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="167120953646892" type="System">
+                                                    <param id="0" name="Variable">GG_Trigger_Cutscene</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                         <event-block sid="280956727521828">
                                             <conditions>
