@@ -1599,6 +1599,9 @@
                         <action id="0" name="Set text" sid="835514493216068" type="m6_1_kek">
                             <param id="0" name="Text">&quot;You used the wrong ingredients or too many of the same ingrdient&quot;</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="800717290916191" type="m6_1_Star1" />
+                        <action id="-9" name="Destroy" sid="239580548819385" type="m6_1_Star2" />
+                        <action id="-9" name="Destroy" sid="643169260096466" type="m6_1_Star3" />
                     </actions>
                     <sub-events>
                         <event-block sid="989145158586989">

@@ -508,28 +508,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m2_2_valve" uid="35">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>675.538085938</x>
-                        <y>787.422424316</y>
-                        <z>0</z>
-                        <width>50</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="m2_2_waterDroplet" uid="36">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -568,10 +546,32 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m2_2_waterFaucet" uid="43">
+                <instance type="m2_2_valve" uid="35">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>675.85369873</x>
+                        <y>754.686523438</y>
+                        <z>0</z>
+                        <width>80</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="m2_2_waterFaucet" uid="43">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>

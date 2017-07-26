@@ -312,6 +312,9 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;C&quot;</param>
                                 </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="804227462542158" type="mx_1_CShop">
+                                    <param id="0" name="Instance variable">yes</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-4" name="Set position to another object" sid="721301549780670" type="mx_1_lights">
@@ -338,6 +341,9 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;V&quot;</param>
                                 </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="128744545729050" type="mx_1_VShop">
+                                    <param id="0" name="Instance variable">yes</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-4" name="Set position to another object" sid="771602112179441" type="mx_1_lights2">
@@ -363,6 +369,9 @@
                                     <param id="0" name="Instance variable">type</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;B&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="908969685553112" type="mx_1_BShop">
+                                    <param id="0" name="Instance variable">yes</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -745,6 +754,22 @@
                     </sub-events>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="548666679356431">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="621507515860952" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="891861164122702" type="mx_1_bigBuy">
+                    <param id="0" name="Animation">&quot;a&quot; &amp; mx_1_bigBuy.type</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="242461590301260" type="System" />
+                <action id="-9" name="Set value" sid="118200262569505" type="System">
+                    <param id="0" name="Variable">mx_1_bigBuyCost</param>
+                    <param id="1" name="Value">6</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

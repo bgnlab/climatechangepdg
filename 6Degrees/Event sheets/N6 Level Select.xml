@@ -112,15 +112,30 @@
                 </event-group>
                 <event-group description="" sid="666589189835209" title="N6 Initialize Difficulty Buttons And Stars">
                     <sub-events>
+                        <variable constant="0" name="N6_Game_Difficulty_Data" sid="526430408419720" static="0" type="text"></variable>
+                        <event-block sid="777502023100426">
+                            <conditions />
+                            <actions />
+                        </event-block>
                         <comment>Game 0</comment>
                         <event-block sid="385513462591527">
                             <conditions />
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="532460426523955" type="System">
+                                    <param id="0" name="Variable">N6_Game_Difficulty_Data</param>
+                                    <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; N6_SelectGame0)</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <comment>Game 1</comment>
                         <event-block sid="411641129080124">
                             <conditions />
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="473270654938111" type="System">
+                                    <param id="0" name="Variable">N6_Game_Difficulty_Data</param>
+                                    <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; N6_SelectGame1)</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -129,7 +144,9 @@
         <comment>Back Button to Present View</comment>
         <event-block sid="684439861590293">
             <conditions>
-                <condition id="14" name="On tap" sid="558584099850057" type="Touch" />
+                <condition id="17" name="On tap object" sid="558584099850057" type="Touch">
+                    <param id="0" name="Object">N6_LevelSelectBackButton</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-25" name="Go to layout (by name)" sid="735524774447119" type="System">
