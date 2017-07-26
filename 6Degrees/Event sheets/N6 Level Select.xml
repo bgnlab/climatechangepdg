@@ -220,7 +220,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="439709924538853" type="N6_LevelButton_m0">
+                                        <action id="-15" name="Set visible" sid="439709924538853" type="N6_LevelButton_m1">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                     </actions>
@@ -230,10 +230,10 @@
                                         <condition id="-22" name="Else" sid="261198210966473" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="520254901799982" type="N6_LevelButton_m0">
+                                        <action id="-15" name="Set visible" sid="520254901799982" type="N6_LevelButton_m1">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
-                                        <action id="4" name="Set animation" sid="683817535912208" type="N6_LevelStar_m0">
+                                        <action id="4" name="Set animation" sid="683817535912208" type="N6_LevelStar_m1">
                                             <param id="0" name="Animation">&quot;s&quot; &amp; tokenat(N6_Game_Difficulty_Data, 1, &quot; &quot;)</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -254,7 +254,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="641445210955064" type="N6_LevelButton_h0">
+                                        <action id="-15" name="Set visible" sid="641445210955064" type="N6_LevelButton_h1">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                     </actions>
@@ -264,10 +264,10 @@
                                         <condition id="-22" name="Else" sid="731396380957608" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="128818792524488" type="N6_LevelButton_h0">
+                                        <action id="-15" name="Set visible" sid="128818792524488" type="N6_LevelButton_h1">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
-                                        <action id="4" name="Set animation" sid="443553708850216" type="N6_LevelStar_h0">
+                                        <action id="4" name="Set animation" sid="443553708850216" type="N6_LevelStar_h1">
                                             <param id="0" name="Animation">&quot;s&quot; &amp; tokenat(N6_Game_Difficulty_Data, 2, &quot; &quot;)</param>
                                             <param id="1" name="From">1</param>
                                         </action>
