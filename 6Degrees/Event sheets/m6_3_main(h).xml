@@ -230,7 +230,7 @@
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">0</param>
                                     <param id="2" name="Z">0</param>
-                                    <param id="3" name="Value">&quot;Spaghetti&quot;</param>
+                                    <param id="3" name="Value">&quot;Carbonera&quot;</param>
                                 </action>
                                 <action id="4" name="Set at XYZ" sid="410921834465576" type="m6_3_Recipe">
                                     <param id="0" name="X">0</param>
@@ -2010,6 +2010,9 @@
                         <action id="0" name="Set text" sid="267185027646490" type="m6_3_kek">
                             <param id="0" name="Text">&quot;You used the wrong ingredients or too many of the same ingrdient&quot;</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="265941934788140" type="m6_3_Star1" />
+                        <action id="-9" name="Destroy" sid="770589549800340" type="m6_3_Star2" />
+                        <action id="-9" name="Destroy" sid="907624002925227" type="m6_3_Star3" />
                     </actions>
                     <sub-events>
                         <event-block sid="306448900630584">

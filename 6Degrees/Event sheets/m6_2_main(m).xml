@@ -172,7 +172,7 @@
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">0</param>
                                     <param id="2" name="Z">0</param>
-                                    <param id="3" name="Value">&quot;Chicken/Bacon Salad&quot;</param>
+                                    <param id="3" name="Value">&quot;Mixed Salad&quot;</param>
                                 </action>
                                 <action id="4" name="Set at XYZ" sid="163869512359990" type="m6_2_Recipe">
                                     <param id="0" name="X">0</param>
@@ -1755,6 +1755,9 @@
                             <param id="0" name="Variable">m6_2_score</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="916836937096756" type="m6_2_Star1" />
+                        <action id="-9" name="Destroy" sid="847872763964735" type="m6_2_Star2" />
+                        <action id="-9" name="Destroy" sid="936277353594140" type="m6_2_Star3" />
                     </actions>
                     <sub-events>
                         <event-block sid="508014539124253">
