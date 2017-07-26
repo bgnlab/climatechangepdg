@@ -125,7 +125,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>287</x>
-                        <y>751</y>
+                        <y>750</y>
                         <z>0</z>
                         <width>300</width>
                         <height>200</height>
@@ -147,7 +147,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1632</x>
-                        <y>991</y>
+                        <y>990</y>
                         <z>0</z>
                         <width>300</width>
                         <height>200</height>
@@ -169,7 +169,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>287</x>
-                        <y>991</y>
+                        <y>990</y>
                         <z>0</z>
                         <width>300</width>
                         <height>200</height>
@@ -191,7 +191,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1632</x>
-                        <y>751</y>
+                        <y>750</y>
                         <z>0</z>
                         <width>300</width>
                         <height>200</height>
@@ -242,6 +242,94 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="N6_LevelStar_m0" uid="869">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>670</x>
+                        <y>750</y>
+                        <z>0</z>
+                        <width>376</width>
+                        <height>113</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.504424751</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="N6_LevelStar_m1" uid="870">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>670</x>
+                        <y>990</y>
+                        <z>0</z>
+                        <width>376</width>
+                        <height>113</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.504424751</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="N6_LevelStar_h1" uid="2036">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1249</x>
+                        <y>990</y>
+                        <z>0</z>
+                        <width>376</width>
+                        <height>113</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.504424751</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="N6_LevelStar_h0" uid="2037">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1249</x>
+                        <y>750</y>
+                        <z>0</z>
+                        <width>376</width>
+                        <height>113</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.504424989</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

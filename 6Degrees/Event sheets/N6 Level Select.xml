@@ -113,34 +113,310 @@
                 <event-group description="" sid="666589189835209" title="N6 Initialize Difficulty Buttons And Stars">
                     <sub-events>
                         <variable constant="0" name="N6_Game_Difficulty_Data" sid="526430408419720" static="0" type="text"></variable>
-                        <event-block sid="777502023100426">
-                            <conditions />
-                            <actions />
-                        </event-block>
-                        <comment>Game 0</comment>
-                        <event-block sid="385513462591527">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="532460426523955" type="System">
-                                    <param id="0" name="Variable">N6_Game_Difficulty_Data</param>
-                                    <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; N6_SelectGame0)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>Game 1</comment>
-                        <event-block sid="411641129080124">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="473270654938111" type="System">
-                                    <param id="0" name="Variable">N6_Game_Difficulty_Data</param>
-                                    <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; N6_SelectGame1)</param>
-                                </action>
-                            </actions>
-                        </event-block>
+                        <event-group description="" sid="232531952120783" title="N6 Level Select Game 0">
+                            <sub-events>
+                                <event-block sid="385513462591527">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="532460426523955" type="System">
+                                            <param id="0" name="Variable">N6_Game_Difficulty_Data</param>
+                                            <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; N6_SelectGame0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Medium Button</comment>
+                                <event-block any="1" sid="248524085385206">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="572953814515184" type="System">
+                                            <param id="0" name="Variable">N6_Game_Difficulty_Data</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;0&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="196884363680418" type="System">
+                                            <param id="0" name="First value">tokenat(N6_Game_Difficulty_Data, 0, &quot; &quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;0&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="389694710166853" type="N6_LevelButton_m0">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="684142327169957">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="633347827823389" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="638965414788089" type="N6_LevelButton_m0">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="707817904737500" type="N6_LevelStar_m0">
+                                            <param id="0" name="Animation">&quot;s&quot; &amp; tokenat(N6_Game_Difficulty_Data, 1, &quot; &quot;)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Hard Button</comment>
+                                <event-block any="1" sid="533818586641785">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="192594103229812" type="System">
+                                            <param id="0" name="Variable">N6_Game_Difficulty_Data</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;0&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="543888152961141" type="System">
+                                            <param id="0" name="First value">tokenat(N6_Game_Difficulty_Data, 1, &quot; &quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;0&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="764651201462710" type="N6_LevelButton_h0">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="984485933545797">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="185501214383141" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="605020918153146" type="N6_LevelButton_h0">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="130258479270216" type="N6_LevelStar_h0">
+                                            <param id="0" name="Animation">&quot;s&quot; &amp; tokenat(N6_Game_Difficulty_Data, 2, &quot; &quot;)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="778493198266873" title="N6 Level Select Game 1">
+                            <sub-events>
+                                <event-block sid="411641129080124">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="473270654938111" type="System">
+                                            <param id="0" name="Variable">N6_Game_Difficulty_Data</param>
+                                            <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; N6_SelectGame1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Medium Button</comment>
+                                <event-block any="1" sid="465380290101007">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="411173134921443" type="System">
+                                            <param id="0" name="Variable">N6_Game_Difficulty_Data</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;0&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="597293804589385" type="System">
+                                            <param id="0" name="First value">tokenat(N6_Game_Difficulty_Data, 0, &quot; &quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;0&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="439709924538853" type="N6_LevelButton_m0">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="682872911528745">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="261198210966473" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="520254901799982" type="N6_LevelButton_m0">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="683817535912208" type="N6_LevelStar_m0">
+                                            <param id="0" name="Animation">&quot;s&quot; &amp; tokenat(N6_Game_Difficulty_Data, 1, &quot; &quot;)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Hard Button</comment>
+                                <event-block any="1" sid="310095750977029">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="786136710790040" type="System">
+                                            <param id="0" name="Variable">N6_Game_Difficulty_Data</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;0&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="416252347777767" type="System">
+                                            <param id="0" name="First value">tokenat(N6_Game_Difficulty_Data, 1, &quot; &quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;0&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="641445210955064" type="N6_LevelButton_h0">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="832103730161627">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="731396380957608" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="128818792524488" type="N6_LevelButton_h0">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="443553708850216" type="N6_LevelStar_h0">
+                                            <param id="0" name="Animation">&quot;s&quot; &amp; tokenat(N6_Game_Difficulty_Data, 2, &quot; &quot;)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                     </sub-events>
                 </event-group>
             </sub-events>
         </event-block>
+        <event-group description="" sid="737451300491531" title="M6 Level Select Tap Difficulty">
+            <sub-events>
+                <event-block sid="278250967578070">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="606662801934415" type="Touch">
+                            <param id="0" name="Object">N6_LevelButton_e0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="114027640631462" type="Function">
+                            <param id="0" name="Name">&quot;GG Select Game&quot;</param>
+                            <param id="1" name="Parameter {n}">N6_SelectGame0{###}0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="878152645412781">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="103116617531010" type="Touch">
+                            <param id="0" name="Object">N6_LevelButton_m0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="958549509682034">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="554116725150682" type="N6_LevelButton_m0" />
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="260299811037089">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="937932552770582" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="586177189549916" type="Function">
+                                    <param id="0" name="Name">&quot;GG Select Game&quot;</param>
+                                    <param id="1" name="Parameter {n}">N6_SelectGame0{###}1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="949170618908252">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="241569244010464" type="Touch">
+                            <param id="0" name="Object">N6_LevelButton_h0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="811293087650391">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="920632549946335" type="N6_LevelButton_h0" />
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="798764706758053">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="682784863546000" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="910534982337514" type="Function">
+                                    <param id="0" name="Name">&quot;GG Select Game&quot;</param>
+                                    <param id="1" name="Parameter {n}">N6_SelectGame0{###}2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="440267170095145">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="785250148519898" type="Touch">
+                            <param id="0" name="Object">N6_LevelButton_e1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="325030343835295" type="Function">
+                            <param id="0" name="Name">&quot;GG Select Game&quot;</param>
+                            <param id="1" name="Parameter {n}">N6_SelectGame1{###}0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="630811818504296">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="483660580864879" type="Touch">
+                            <param id="0" name="Object">N6_LevelButton_m1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="635348653635893">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="129647819861801" type="N6_LevelButton_m1" />
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="222898246425407">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="848392091737481" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="572709301372681" type="Function">
+                                    <param id="0" name="Name">&quot;GG Select Game&quot;</param>
+                                    <param id="1" name="Parameter {n}">N6_SelectGame1{###}1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="281990394184331">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="225931085923067" type="Touch">
+                            <param id="0" name="Object">N6_LevelButton_h1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="846709524151224">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="385687367049371" type="N6_LevelButton_h1" />
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="199803443596444">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="830207567095740" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="771281781434842" type="Function">
+                                    <param id="0" name="Name">&quot;GG Select Game&quot;</param>
+                                    <param id="1" name="Parameter {n}">N6_SelectGame1{###}2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <comment>Back Button to Present View</comment>
         <event-block sid="684439861590293">
             <conditions>
