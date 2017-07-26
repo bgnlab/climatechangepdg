@@ -4,7 +4,8 @@
     <name>N6 Level Select</name>
     <events>
         <include>GG Scores and Levels</include>
-        <variable constant="0" name="N6_Region" sid="165429645144269" static="0" type="number">0</variable>
+        <variable constant="0" name="N6_SelectGame0" sid="661262640863336" static="0" type="number">0</variable>
+        <variable constant="0" name="N6_SelectGame1" sid="305591738730349" static="0" type="number">0</variable>
         <comment>Dynamically Draw Levels</comment>
         <event-block sid="167712343179998">
             <conditions>
@@ -12,56 +13,124 @@
             </conditions>
             <actions />
             <sub-events>
-                <comment>Pick Background Depending on Game</comment>
-                <event-block sid="483902740159741">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="515818199886654" type="System">
-                            <param id="0" name="Variable">GG_Selected_Region</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block sid="783889176068174">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="864879746768936" type="System">
-                            <param id="0" name="Variable">GG_Selected_Region</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block sid="194129805327438">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="937890842793864" type="System">
-                            <param id="0" name="Variable">GG_Selected_Region</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block sid="956015311820921">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="527513116807501" type="System">
-                            <param id="0" name="Variable">GG_Selected_Region</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block sid="385513462591527">
-                    <conditions />
-                    <actions />
-                </event-block>
+                <event-group description="" sid="856851978355350" title="N6 Initialize Background">
+                    <sub-events>
+                        <comment>Pick Background Depending on Game</comment>
+                        <event-block sid="483902740159741">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="515818199886654" type="System">
+                                    <param id="0" name="Variable">GG_Selected_Region</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="430006674123848" type="N6_LevelSelectBackground">
+                                    <param id="0" name="Animation">&quot;transit&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="131199931845423" type="System">
+                                    <param id="0" name="Variable">N6_SelectGame0</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="255990365659342" type="System">
+                                    <param id="0" name="Variable">N6_SelectGame1</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="783889176068174">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="864879746768936" type="System">
+                                    <param id="0" name="Variable">GG_Selected_Region</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="601865078834528" type="N6_LevelSelectBackground">
+                                    <param id="0" name="Animation">&quot;consumption&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="531745653205584" type="System">
+                                    <param id="0" name="Variable">N6_SelectGame0</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="958038725255657" type="System">
+                                    <param id="0" name="Variable">N6_SelectGame1</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="194129805327438">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="937890842793864" type="System">
+                                    <param id="0" name="Variable">GG_Selected_Region</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="243890349240895" type="N6_LevelSelectBackground">
+                                    <param id="0" name="Animation">&quot;energy&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="291142625634309" type="System">
+                                    <param id="0" name="Variable">N6_SelectGame0</param>
+                                    <param id="1" name="Value">6</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="177976653203858" type="System">
+                                    <param id="0" name="Variable">N6_SelectGame1</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="956015311820921">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="527513116807501" type="System">
+                                    <param id="0" name="Variable">GG_Selected_Region</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="477415044277071" type="N6_LevelSelectBackground">
+                                    <param id="0" name="Animation">&quot;food&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="961654113839581" type="System">
+                                    <param id="0" name="Variable">N6_SelectGame0</param>
+                                    <param id="1" name="Value">7</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="984404080362858" type="System">
+                                    <param id="0" name="Variable">N6_SelectGame1</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="666589189835209" title="N6 Initialize Difficulty Buttons And Stars">
+                    <sub-events>
+                        <comment>Game 0</comment>
+                        <event-block sid="385513462591527">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                        <comment>Game 1</comment>
+                        <event-block sid="411641129080124">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-block>
         <comment>Back Button to Present View</comment>
         <event-block sid="684439861590293">
-            <conditions />
+            <conditions>
+                <condition id="14" name="On tap" sid="558584099850057" type="Touch" />
+            </conditions>
             <actions>
                 <action id="-25" name="Go to layout (by name)" sid="735524774447119" type="System">
                     <param id="0" name="Layout">&quot;N6 Present View&quot;</param>

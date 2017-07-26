@@ -56,7 +56,7 @@
         <comment>Opening a Region</comment>
         <event-block sid="487788977395882">
             <conditions>
-                <condition id="4" name="Is touching object" sid="185351199210951" type="Touch">
+                <condition id="17" name="On tap object" sid="185351199210951" type="Touch">
                     <param id="0" name="Object">N6_Region</param>
                 </condition>
             </conditions>
