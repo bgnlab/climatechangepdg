@@ -369,11 +369,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1320</x>
-                        <y>583</y>
+                        <x>1322</x>
+                        <y>586.63659668</y>
                         <z>0</z>
                         <width>250</width>
-                        <height>250</height>
+                        <height>242.726776123</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -408,8 +408,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1420</x>
-                        <y>454</y>
+                        <x>1422.910888672</x>
+                        <y>464.454223633</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -447,8 +447,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1048</x>
-                        <y>454</y>
+                        <x>1052</x>
+                        <y>463</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -513,10 +513,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>960</x>
-                        <y>583</y>
+                        <y>587.546142578</y>
                         <z>0</z>
                         <width>250</width>
-                        <height>250</height>
+                        <height>240.907775879</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1133,10 +1133,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1320</x>
+                        <x>1319.5859375</x>
                         <y>593</y>
                         <z>0</z>
-                        <width>250</width>
+                        <width>250.828125</width>
                         <height>230</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -1521,10 +1521,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>185</x>
-                        <y>692</y>
+                        <y>701</y>
                         <z>0</z>
                         <width>366</width>
-                        <height>754</height>
+                        <height>736</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1566,6 +1566,44 @@
                         <z>0</z>
                         <width>150</width>
                         <height>75</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="mx_endMe" uid="303">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>983.5</x>
+                        <y>409.5</y>
+                        <z>0</z>
+                        <width>1966</width>
+                        <height>1626</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

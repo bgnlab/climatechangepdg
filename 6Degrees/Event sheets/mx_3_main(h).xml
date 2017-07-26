@@ -5,7 +5,6 @@
     <events>
         <include>GG Scores and Levels</include>
         <variable constant="0" name="mx_2_score" sid="457397118357501" static="0" type="number">0</variable>
-        <variable constant="0" name="mx_2_playing" sid="152829263815093" static="0" type="number">-5</variable>
         <variable constant="0" name="mx_2_trucks" sid="243642349330860" static="0" type="number">0</variable>
         <variable constant="0" name="mx_2_bigBuyCost" sid="460215975971356" static="0" type="number">6</variable>
         <variable constant="0" name="mx_2_timer" sid="180016857008969" static="0" type="number">30</variable>
@@ -20,7 +19,7 @@
                 <condition id="17" name="On tap object" sid="174617501054973" type="Touch">
                     <param id="0" name="Object">mx_3_NP</param>
                 </condition>
-                <condition id="-14" name="Compare variable" sid="157825327980648" type="System">
+                <condition id="-14" name="Compare variable" sid="527392208685728" type="System">
                     <param id="0" name="Variable">mx_2_playing</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">-5</param>
@@ -56,6 +55,10 @@
                 <action id="-4" name="Set layer visible" sid="443360382800159" type="System">
                     <param id="0" name="Layer">&quot;end&quot;</param>
                     <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="113317266131152" type="System">
+                    <param id="0" name="Variable">mx_2_playing</param>
+                    <param id="1" name="Value">-5</param>
                 </action>
             </actions>
         </event-block>
@@ -188,6 +191,32 @@
                             <param id="1" name="Value">15</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="186967947107510">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="409504491445817" type="System">
+                                    <param id="0" name="Object">mx_1_PStock</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="937568282686013" type="mx_1_PStock">
+                                    <param id="0" name="Instance variable">NUM</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="181078342623387" type="mx_1_PStock" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="179336865902385">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Set value" sid="260272121967106" type="mx_1_PStock">
+                                    <param id="0" name="Instance variable">NUM</param>
+                                    <param id="1" name="Value">mx_1_PStock.NUM-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="126857648681068">
                     <conditions>
@@ -1186,6 +1215,32 @@
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="711658142159404">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="850887703773162" type="System">
+                                                    <param id="0" name="Object">mx_1_PStock</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="538370408428642" type="mx_1_PStock">
+                                                    <param id="0" name="Instance variable">NUM</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="567455635257434" type="mx_1_PStock" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="804400393895380">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="424666927469145" type="mx_1_PStock">
+                                                    <param id="0" name="Instance variable">NUM</param>
+                                                    <param id="1" name="Value">mx_1_PStock.NUM-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="218015224922756">
                                     <conditions>
@@ -1263,6 +1318,32 @@
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="349591097837344">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="449061398699003" type="System">
+                                                    <param id="0" name="Object">mx_1_PStock</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="918084221188616" type="mx_1_PStock">
+                                                    <param id="0" name="Instance variable">NUM</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="492236291552672" type="mx_1_PStock" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="298911719589494">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="671630749286956" type="mx_1_PStock">
+                                                    <param id="0" name="Instance variable">NUM</param>
+                                                    <param id="1" name="Value">mx_1_PStock.NUM-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="512587654601678">
                                     <conditions>
@@ -1340,6 +1421,32 @@
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="255384945345274">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="536384280651974" type="System">
+                                                    <param id="0" name="Object">mx_1_PStock</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="186169936306207" type="mx_1_PStock">
+                                                    <param id="0" name="Instance variable">NUM</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="306871288003610" type="mx_1_PStock" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="859588464264679">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="440285142317445" type="mx_1_PStock">
+                                                    <param id="0" name="Instance variable">NUM</param>
+                                                    <param id="1" name="Value">mx_1_PStock.NUM-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="651575444739002">
                                     <conditions>
@@ -1522,6 +1629,16 @@
                                 <action id="-11" name="Add to" sid="153387637960756" type="mx_3_Resourcess">
                                     <param id="0" name="Instance variable">platttter</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="368701201903371" type="System">
+                                    <param id="0" name="Object to create">mx_1_PStock</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">100+(mx_3_Resourcess.platttter%2)*150</param>
+                                    <param id="3" name="Y">900-mx_3_Resourcess.platttter*50</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="265200504825143" type="mx_1_PStock">
+                                    <param id="0" name="Instance variable">NUM</param>
+                                    <param id="1" name="Value">mx_3_Resourcess.platttter</param>
                                 </action>
                             </actions>
                             <sub-events>
