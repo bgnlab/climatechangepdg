@@ -1250,7 +1250,16 @@
                                                     <param id="2" name="Value">5</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="0" name="Add key" sid="251869138990835" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Value">4</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="421750467431301" type="System">
+                                                    <param id="0" name="Variable">GG_Trigger_Cutscene</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                         <event-block sid="608310171762135">
                                             <conditions>
@@ -1265,7 +1274,16 @@
                                                     <param id="2" name="Value">4</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="0" name="Add key" sid="507693524807981" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Value">3</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="693967619435662" type="System">
+                                                    <param id="0" name="Variable">GG_Trigger_Cutscene</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                         <event-block sid="818623401764854">
                                             <conditions>
@@ -1280,7 +1298,16 @@
                                                     <param id="2" name="Value">3</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="0" name="Add key" sid="989079533785027" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="589269162734172" type="System">
+                                                    <param id="0" name="Variable">GG_Trigger_Cutscene</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                         <event-block sid="177880080525361">
                                             <conditions>
@@ -1295,7 +1322,16 @@
                                                     <param id="2" name="Value">2</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="0" name="Add key" sid="871274052937641" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="197141549296074" type="System">
+                                                    <param id="0" name="Variable">GG_Trigger_Cutscene</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                         <event-block sid="995927573441065">
                                             <conditions>
@@ -1310,7 +1346,16 @@
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="0" name="Add key" sid="714237255550406" type="GG_State">
+                                                    <param id="0" name="Key">&quot;future temperature&quot;</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="749545536826388" type="System">
+                                                    <param id="0" name="Variable">GG_Trigger_Cutscene</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-group>
@@ -1393,7 +1438,11 @@
                                                     <param id="2" name="Value">5</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="-2" name="Go to layout" sid="533719121749891" type="System">
+                                                    <param id="0" name="Layout">Change5C</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                         <event-block sid="340355297807239">
                                             <conditions>
@@ -1403,7 +1452,11 @@
                                                     <param id="2" name="Value">4</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="-2" name="Go to layout" sid="385642644728717" type="System">
+                                                    <param id="0" name="Layout">Change4C</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                         <event-block sid="108289014612760">
                                             <conditions>
@@ -1413,7 +1466,11 @@
                                                     <param id="2" name="Value">3</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="-2" name="Go to layout" sid="404684168444295" type="System">
+                                                    <param id="0" name="Layout">Change3C</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                         <event-block sid="535240572950399">
                                             <conditions>
@@ -1423,7 +1480,11 @@
                                                     <param id="2" name="Value">2</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="-2" name="Go to layout" sid="251469667221931" type="System">
+                                                    <param id="0" name="Layout">Change2C</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                         <event-block sid="934634662535922">
                                             <conditions>
@@ -1433,7 +1494,11 @@
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="-2" name="Go to layout" sid="900945618187084" type="System">
+                                                    <param id="0" name="Layout">Change1C</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                         <event-block sid="414251850432779">
                                             <conditions>
@@ -1443,7 +1508,11 @@
                                                     <param id="2" name="Value">0</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="-2" name="Go to layout" sid="481146926311579" type="System">
+                                                    <param id="0" name="Layout">Ending</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
