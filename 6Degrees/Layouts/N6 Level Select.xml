@@ -73,6 +73,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="N6_LevelSelectBackButton" uid="868">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>960</x>
+                        <y>1136</y>
+                        <z>0</z>
+                        <width>121</width>
+                        <height>105</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504132211</hotspotX>
+                        <hotspotY>0.504761934</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
