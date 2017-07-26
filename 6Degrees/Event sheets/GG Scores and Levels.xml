@@ -526,6 +526,20 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="564812317092791">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="848006978014591" type="System">
+                                            <param id="0" name="First value">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="755638294938625" type="System">
+                                            <param id="0" name="Layout">My GameLayoutHard</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <comment>Game 6 -- M2 Escape Room</comment>
