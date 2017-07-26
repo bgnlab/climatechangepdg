@@ -93,7 +93,7 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="0" name="Add key" sid="304624125692322" type="GG_State">
-                                    <param id="0" name="Key">&quot;total score&quot;</param>
+                                    <param id="0" name="Key">&quot;temperature&quot;</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
@@ -1197,11 +1197,23 @@
                                     <param id="2" name="Value">&quot;STORY&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-25" name="Go to layout (by name)" sid="269588288000798" type="System">
-                                    <param id="0" name="Layout">&quot;N6 Future View&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <comment>if cutscene triggered then go to cutscene</comment>
+                                <event-block sid="870518489244397">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                                <comment>Else go to present view</comment>
+                                <event-block sid="551283114715952">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="836141589289275" type="System">
+                                            <param id="0" name="Layout">&quot;N6 Present View&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
