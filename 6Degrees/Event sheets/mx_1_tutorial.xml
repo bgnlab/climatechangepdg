@@ -108,7 +108,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="690924759220141" type="mx_1_TutText">
-                                    <param id="0" name="Text">&quot;You can select to buy from a local business for 3$...&quot;</param>
+                                    <param id="0" name="Text">&quot;You can select to buy from a local suppliers for 3$...&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -207,6 +207,37 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="621303538148246">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="249378816945896" type="Touch">
+                            <param id="0" name="Object">mx_1_BShop</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="663311663336178" type="mx_1_BShop">
+                            <param id="0" name="Instance variable">yes</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="336917092916038" type="mx_1_lights3">
+                            <param id="0" name="X">1320</param>
+                            <param id="1" name="Y">593</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="585631747303513" type="mx_1_lights3">
+                            <param id="0" name="Width">250</param>
+                            <param id="1" name="Height">230</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="442329277287241" type="mx_1_BShop">
+                            <param id="0" name="Instance variable">yes</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="576734353156820" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="340602322171099" type="System">
+                            <param id="0" name="Variable">mx_1_tutPage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="715458726219990">
@@ -219,12 +250,12 @@
             </conditions>
             <actions>
                 <action id="-3" name="Set position" sid="210727528522054" type="mx_1_tutHighLight2">
-                    <param id="0" name="X">341</param>
-                    <param id="1" name="Y">152</param>
+                    <param id="0" name="X">510</param>
+                    <param id="1" name="Y">150</param>
                 </action>
                 <action id="-7" name="Set size" sid="828249367138171" type="mx_1_tutHighLight2">
-                    <param id="0" name="Width">755</param>
-                    <param id="1" name="Height">284</param>
+                    <param id="0" name="Width">1293</param>
+                    <param id="1" name="Height">329</param>
                 </action>
             </actions>
             <sub-events>
@@ -321,6 +352,32 @@
                                     <param id="0" name="Seconds">0.1</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="638507091852309" type="System">
+                                    <param id="0" name="Variable">mx_1_tutPage</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="734466376992004">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="745683565987396" type="mx_1_bigBuy">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;B&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="285471635546776" type="mx_1_lights3">
+                                    <param id="0" name="Object">mx_1_bigBuy</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="949396785734292" type="mx_1_lights3">
+                                    <param id="0" name="Width">150</param>
+                                    <param id="1" name="Height">150</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="504579752426894" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="100897551103565" type="System">
                                     <param id="0" name="Variable">mx_1_tutPage</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -451,7 +508,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="851444219354453" type="mx_1_TutText">
-                                    <param id="0" name="Text">&quot;If you have Platters ready,You will sell platters automatically, as people come to your store.&quot;</param>
+                                    <param id="0" name="Text">&quot;If you have Platters ready,You will sell platters automatically for $15, as people come to your store.&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -527,7 +584,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="223157053824319" type="mx_1_TutText">
-                                    <param id="0" name="Text">&quot;Local businesses will also buy from your store if they have enough cash(past the red bar)&quot;</param>
+                                    <param id="0" name="Text">&quot;Local suppliers will also buy from your store if they have enough cash(past the red bar)&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
