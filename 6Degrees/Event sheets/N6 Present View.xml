@@ -5,6 +5,7 @@
     <events>
         <include>GG Scores and Levels</include>
         <include>N6 Map Transitions</include>
+        <variable constant="0" name="N6_Clicker_Timer" sid="931006204960019" static="0" type="number">0</variable>
         <variable constant="0" name="N6_PresentTemperature" sid="606254854442624" static="0" type="number">1</variable>
         <event-block sid="410060440315229">
             <conditions>
@@ -51,8 +52,58 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="486814725524203">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="528843615360586" type="System">
+                            <param id="0" name="Variable">N6_Clicker_Timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="372571138440617" type="System">
+                            <param id="0" name="Layer">&quot;Clickers&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
+        <event-group description="" sid="181688994204036" title="N6 Clickers">
+            <sub-events>
+                <variable constant="1" name="N6_CLICKER_DELAY" sid="458844889644376" static="0" type="number">4</variable>
+                <event-block sid="209393093885723">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="173017457328467" type="System">
+                            <param id="0" name="Variable">N6_Clicker_Timer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">N6_CLICKER_DELAY</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="803145762964168" type="System">
+                            <param id="0" name="Variable">N6_Clicker_Timer</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="229471154034955">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="437597970803541" type="System">
+                                    <param id="0" name="Variable">N6_Clicker_Timer</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">N6_CLICKER_DELAY</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="191782344688282" type="System">
+                                    <param id="0" name="Layer">&quot;Clickers&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <comment>Opening a Region</comment>
         <event-block sid="487788977395882">
             <conditions>
