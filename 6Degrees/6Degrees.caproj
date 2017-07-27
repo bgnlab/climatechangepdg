@@ -1513,10 +1513,13 @@
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="455578404581897" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\Electronics Game\art\closet closed 01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\closet opened 02 (1).png" />
                         </animation>
                         <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="718112501300009" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\Electronics Game\art\closet opened 01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\closet opened 02 (1).png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation3" pingpong="0" repeatcount="1" repeatto="0" sid="852119389974537" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -3462,44 +3465,6 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="m2_3_powerBarPlug" sid="512096463848416">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Physics" sid="489874069775500">
-                            <behavior id="Physics" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="129289232592892" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\power plug in socket .png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_3_powerBarWire" sid="485837369790457">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="911970618960878" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\wires.png">
-                                <collision-poly>
-                                    <point x="0.312" y="0.312" />
-                                    <point x="0.688" y="0.312" />
-                                    <point x="0.888" y="0.5" />
-                                    <point x="0.688" y="0.688" />
-                                    <point x="0.312" y="0.688" />
-                                    <point x="0.112" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="m2_3_powerPlugPlug" sid="948213959295934">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232596480489754" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\power outlet (50 x 100).png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
             </object-folder>
             <object-folder name="M2 EscapeRoom(M)">
                 <object-type name="m2_2_topCabinet" sid="801041803501639">
@@ -4647,6 +4612,22 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
+            <object-type name="m2_tutLite" sid="860783000603051">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="625026262646079" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m2_tutLite2" sid="560005361502483">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="659635297816152" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="N6 Story Menu">
             <object-folder name="Level Select">
@@ -11971,7 +11952,7 @@
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="963758445321746" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\spideng malt\Shop containers.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\Shop containers 01.png">
                                 <collision-poly>
                                     <point x="0.08" y="0.08" />
                                     <point x="0.92" y="0.08" />
@@ -12987,7 +12968,7 @@
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="963758445321746" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\spideng malt\Shop containers.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\Shop containers 01.png">
                                 <collision-poly>
                                     <point x="0.08" y="0.08" />
                                     <point x="0.92" y="0.08" />
@@ -13822,7 +13803,7 @@
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="963758445321746" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\spideng malt\Shop containers.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\Shop containers 01.png">
                                 <collision-poly>
                                     <point x="0.08" y="0.08" />
                                     <point x="0.92" y="0.08" />
@@ -14482,6 +14463,9 @@
                         </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="mx_EndText" sid="291251314159822">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-folder name="M4">
@@ -17331,19 +17315,6 @@
                 <instance-variable name="HasSun" sid="739186013012499" type="number" />
                 <instance-variable name="WeatherInfluence" sid="544240484345993" type="number" />
             </instance-variables>
-        </family>
-        <family name="m2_3_powerBarWires" plugin-id="Sprite" sid="462114644302959">
-            <members>
-                <member>m2_3_powerBarWire</member>
-            </members>
-            <instance-variables>
-                <instance-variable name="number" sid="809151934933888" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Physics" sid="574221465016420">
-                    <behavior id="Physics" />
-                </behavior-type>
-            </behaviors>
         </family>
         <family name="C6_Animals" plugin-id="Sprite" sid="501875499112693">
             <members>

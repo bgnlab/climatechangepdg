@@ -52,6 +52,13 @@
                         <action id="-42" name="Signal" sid="693673719398007" type="System">
                             <param id="0" name="Tag">&quot;m2_1_init&quot;</param>
                         </action>
+                        <action id="-24" name="Move to top" sid="605506972680003" type="m2_1_endBlur" />
+                        <action id="-24" name="Move to top" sid="933458037051535" type="m2_1_ACLight" />
+                        <action id="-29" name="Move to object" sid="895276253672865" type="m2_1_boilerLight">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">m2_1_closetDoor</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="676027071583420" type="m2_1_TvLight" />
                     </actions>
                     <sub-events>
                         <event-block sid="254636161755232">
@@ -288,37 +295,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="315805820332545">
-                            <conditions>
-                                <condition id="17" name="On tap object" sid="905191730396954" type="Touch">
-                                    <param id="0" name="Object">m2_1_closetDoor</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="759195753216630" type="m2_1_closetDoor">
-                                    <param id="0" name="Instance variable">open</param>
-                                </condition>
-                                <condition id="4" inverted="1" name="Is touching object" sid="993981366641143" type="Touch">
-                                    <param id="0" name="Object">m2_1_waterHeater</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="119370309096614" type="m2_1_closetDoor">
-                                    <param id="0" name="Instance variable">open</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-29" name="Move to object" sid="643726723437394" type="m2_1_closetDoor">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Object">m2_1_waterHeater</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="741755428623936" type="m2_1_closetDoor">
-                                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-29" name="Move to object" sid="775259104945206" type="m2_1_boilerLight">
-                                    <param id="0" name="Where">1</param>
-                                    <param id="1" name="Object">m2_1_closetDoor</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="326551952842101">
                             <conditions>
                                 <condition id="17" name="On tap object" sid="112559444782401" type="Touch">
@@ -363,11 +339,11 @@
                         <event-block sid="799970480933680">
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="700079584762150" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="280882177474665" type="Touch">
-                                    <param id="0" name="Object">m2_1_waterHeater</param>
-                                </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="547006592773101" type="m2_1_closetDoor">
                                     <param id="0" name="Instance variable">open</param>
+                                </condition>
+                                <condition id="4" name="Is touching object" sid="174389629426030" type="Touch">
+                                    <param id="0" name="Object">m2_1_closetDoor</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -400,6 +376,10 @@
                                             <param id="0" name="Tag">&quot;Heat&quot;</param>
                                             <param id="1" name="State">1</param>
                                         </action>
+                                        <action id="4" name="Set animation" sid="901165988085207" type="m2_1_closetDoor">
+                                            <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="236309931814893">
@@ -419,6 +399,10 @@
                                         <action id="22" name="Set paused" sid="657383420711763" type="Audio">
                                             <param id="0" name="Tag">&quot;Heat&quot;</param>
                                             <param id="1" name="State">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="385257962614516" type="m2_1_closetDoor">
+                                            <param id="0" name="Animation">&quot;Animation3&quot;</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1278,20 +1262,6 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="662966943716138">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="242275591106409" type="System">
-                                    <param id="0" name="Variable">m2_1_win</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="980221500642696" type="m2_1_endDescription">
-                                    <param id="0" name="Text">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="985293154446553">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="877588569247607" type="System">
@@ -1345,7 +1315,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Append text" sid="726001203873045" type="m2_1_endDescription">
+                                <action id="0" name="Set text" sid="726001203873045" type="m2_1_endDescription">
                                     <param id="0" name="Text">newline&amp;&quot;You are still wasting energy.  Try again to improve your score!&quot;</param>
                                 </action>
                             </actions>
@@ -1776,5 +1746,16 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="929355364724916">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="948708621060464" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="635800394475627" type="m2_tutLite">
+                    <param id="0" name="Object">m2_1_TvLight</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
