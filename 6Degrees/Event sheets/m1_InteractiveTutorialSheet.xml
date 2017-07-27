@@ -99,10 +99,10 @@
                     </conditions>
                     <actions>
                         <action id="-5" name="Set width" sid="831448143881838" type="m1_FuelProgress">
-                            <param id="0" name="Width">m1_FuelProgress.defaultWidth/2</param>
+                            <param id="0" name="Width">m1_FuelProgress.defaultWidth/3</param>
                         </action>
                         <action id="3" name="Set progress" sid="269255305745265" type="m1_FuelMeter">
-                            <param id="0" name="Value">3</param>
+                            <param id="0" name="Value">2</param>
                         </action>
                         <action id="-10" name="Add to" sid="729051287961968" type="System">
                             <param id="0" name="Variable">m1_tutorialTracker</param>
@@ -421,11 +421,23 @@
                             <param id="0" name="Name">&quot;Pump&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-10" name="Add to" sid="870865239189098" type="System">
-                            <param id="0" name="Variable">m1_tutorialTracker</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="554612252697286">
+                            <conditions>
+                                <condition id="1" name="Compare progress" sid="832683047839477" type="m1_TirePressureMeter">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="870865239189098" type="System">
+                                    <param id="0" name="Variable">m1_tutorialTracker</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
