@@ -17849,7 +17849,7 @@
         </event-folder>
     </event-folder>
     <global-instances>
-        <global-instance type="Audio" uid="1992">
+        <global-instance type="Audio" uid="2143">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -17863,14 +17863,14 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="1993" />
-        <global-instance type="Mouse" uid="1994" />
-        <global-instance type="Touch" uid="2107">
+        <global-instance type="Function" uid="2144" />
+        <global-instance type="Mouse" uid="2145" />
+        <global-instance type="Touch" uid="2146">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="LocalStorage" uid="2108" />
+        <global-instance type="LocalStorage" uid="2147" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="Game10EscapeRoom">
@@ -18101,6 +18101,8 @@
         <file name="David Cutter - Like This.ogg" />
         <file name="bgm_clothing_game.m4a" />
         <file name="bgm_clothing_game.ogg" />
+        <file name="bgm_credits.m4a" />
+        <file name="bgm_credits.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
