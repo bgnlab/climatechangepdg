@@ -2434,6 +2434,61 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="114411065990414">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="400305279296292" type="M7_Timer_Bar">
+                                            <param id="0" name="Instance variable">TimeLeft</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                        <condition id="-6" name="Every X seconds" sid="716838440367419" type="System">
+                                            <param id="0" name="Interval (seconds)">1.0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="450167326260028" type="M7_Timer_Bar">
+                                            <param id="0" name="Instance variable">TimeLeft</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="529235954246982" type="M7_Timer_Bar">
+                                            <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="235763300587378" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="403215759400406" type="M7_Timer_Bar">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="193259155332056">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="825487104676295" type="M7_Timer_Bar">
+                                            <param id="0" name="Instance variable">TimeLeft</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                        <condition id="-6" name="Every X seconds" sid="418300194780121" type="System">
+                                            <param id="0" name="Interval (seconds)">1.0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="128065560378177" type="M7_Timer_Bar">
+                                            <param id="0" name="Instance variable">TimeLeft</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="429187152835949" type="Audio">
+                                            <param id="0" name="Audio file">sfx_timer (1)</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-group>
                     </sub-events>
