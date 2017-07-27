@@ -1689,5 +1689,18 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="750553886890331">
+            <conditions>
+                <condition id="0" name="On click" sid="602467289017812" type="Mouse">
+                    <param id="0" name="Mouse button">1</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="564754764380236" type="System">
+                    <param id="0" name="Layout">Change4C</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
