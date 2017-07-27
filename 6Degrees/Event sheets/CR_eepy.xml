@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CR_eepy</name>
+    <events>
+        <variable comment="Used to fade in the graves" constant="0" name="CR_Timestep" sid="641958270017513" static="0" type="number">0</variable>
+        <variable comment="Narrative or Casual" constant="0" name="CR_WhatGameAreWe" sid="407062815161631" static="0" type="text">Narrative</variable>
+        <variable comment="how fast the credits scroll" constant="0" name="CR_ScrollSpeed" sid="175892978580764" static="0" type="number">240</variable>
+        <variable comment="ignore this its used for line breaks because c&apos;mon" constant="0" name="CR_string" sid="702562595746414" static="0" type="text"></variable>
+        <event-block sid="413489630096038">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="785408074164160" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="133378995994810" type="CR_ScrollTheText">
+                    <param id="0" name="Family name">&quot;Orange Kid&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="693376492229239" type="System">
+                    <param id="0" name="Variable">CR_string</param>
+                    <param id="1" name="Value">&quot;Thanks for playing &lt;3&quot; &amp; newline &amp; newline &amp;&#x0D;&#x0A;&#x0D;&#x0A;&quot;Developed at the BGNlab at Wilfrid Laurier University in Brantford, Ontario, Canada.&quot;&amp; newline &amp; newline &amp;&#x0D;&#x0A;&#x0D;&#x0A;&quot;Funded by the Government of Ontario&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="630480449634732" type="CR_Title1">
+                    <param id="0" name="Text">CR_string</param>
+                </action>
+                <action id="4" name="Set animation" sid="369584799134198" type="CR_TitleScreen">
+                    <param id="0" name="Animation">CR_WhatGameAreWe</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Play" sid="563160870003377" type="Audio">
+                    <param id="0" name="Audio file">bgm_credits</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="322290783364131">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="253632469315077" type="System">
+                            <param id="0" name="Object">CR_PeopleNames</param>
+                            <param id="1" name="Instance">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="661490076552986" type="System">
+                            <param id="0" name="Variable">CR_string</param>
+                            <param id="1" name="Value">&quot;Dr. Scott Nicholson&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Dr. Steve Wilcox&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Dr. Emily Flynn-Jones&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="430302169918808" type="CR_PeopleNames">
+                            <param id="0" name="Text">CR_string</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="885157549028014">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="579875715524515" type="System">
+                            <param id="0" name="Object">CR_PeopleNames</param>
+                            <param id="1" name="Instance">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="726931908688210" type="System">
+                            <param id="0" name="Variable">CR_string</param>
+                            <param id="1" name="Value">&quot;Robert Durant&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="331504590552420" type="CR_PeopleNames">
+                            <param id="0" name="Text">CR_string</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="168530671418061">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="603131604107677" type="System">
+                            <param id="0" name="Object">CR_PeopleNames</param>
+                            <param id="1" name="Instance">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="708129940773063" type="System">
+                            <param id="0" name="Variable">CR_string</param>
+                            <param id="1" name="Value">&quot;Stephan Reilly&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="466492293977744" type="CR_PeopleNames">
+                            <param id="0" name="Text">CR_string</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="709659241838533">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="949875066185074" type="System">
+                            <param id="0" name="Object">CR_PeopleNames</param>
+                            <param id="1" name="Instance">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="273549333750651" type="System">
+                            <param id="0" name="Variable">CR_string</param>
+                            <param id="1" name="Value">&quot;Son Le&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Nick Nowak&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Jelena Vulić&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="314854587044480" type="CR_PeopleNames">
+                            <param id="0" name="Text">CR_string</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="621663768394415">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="959487089429825" type="System">
+                            <param id="0" name="Object">CR_PeopleNames</param>
+                            <param id="1" name="Instance">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="357870779271831" type="System">
+                            <param id="0" name="Variable">CR_string</param>
+                            <param id="1" name="Value">&quot;Hunter Davies&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Allison Langlois&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Bernice Wong&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="456552594559106" type="CR_PeopleNames">
+                            <param id="0" name="Text">CR_string</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="931019027167579">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="170448632005339" type="System">
+                            <param id="0" name="Object">CR_PeopleNames</param>
+                            <param id="1" name="Instance">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="205220990311653" type="System">
+                            <param id="0" name="Variable">CR_string</param>
+                            <param id="1" name="Value">&quot;Allison Langlois&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Bernice Wong&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="746580581213516" type="CR_PeopleNames">
+                            <param id="0" name="Text">CR_string</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="899813921214982">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="407895132516352" type="System">
+                            <param id="0" name="Object">CR_PeopleNames</param>
+                            <param id="1" name="Instance">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="583780925814904" type="System">
+                            <param id="0" name="Variable">CR_string</param>
+                            <param id="1" name="Value">&quot;Allison Langlois&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Son Le&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Nick Nowak&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Jelena Vulić&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Bernice Wong&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="569643073330414" type="CR_PeopleNames">
+                            <param id="0" name="Text">CR_string</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="710729571760465">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="895788810683167" type="System">
+                            <param id="0" name="Object">CR_PeopleNames</param>
+                            <param id="1" name="Instance">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="361629903814741" type="System">
+                            <param id="0" name="Variable">CR_string</param>
+                            <param id="1" name="Value">&quot;Ivan Boyko&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="304006035370783" type="CR_PeopleNames">
+                            <param id="0" name="Text">CR_string</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="705377948050146">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="612093273086293" type="System">
+                            <param id="0" name="Object">CR_PeopleNames</param>
+                            <param id="1" name="Instance">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="942618112351312" type="System">
+                            <param id="0" name="Variable">CR_string</param>
+                            <param id="1" name="Value">&quot;Kah (David) Cheong&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Jerry Chen&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Connor McQuade&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="317716870537128" type="CR_PeopleNames">
+                            <param id="0" name="Text">CR_string</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="448674297200421">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="204270384557454" type="System">
+                            <param id="0" name="Object">CR_PeopleNames</param>
+                            <param id="1" name="Instance">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="478754736821474" type="System">
+                            <param id="0" name="Variable">CR_string</param>
+                            <param id="1" name="Value">&quot;Pauline Dewan&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Dayna Duckers&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Cassie Duliban&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Shayne Gannes&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Michelle Goodridge&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Amber Hafeez&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Torri Jacobs&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Lukas Peters&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Kara Stone&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Celine Taillefer-Travers&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="678211418350156" type="CR_PeopleNames">
+                            <param id="0" name="Text">CR_string</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="334082743062759">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="984790586129669" type="System" />
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="220970700668488" type="CR_ScrollTheText">
+                    <param id="0" name="Angle">-90</param>
+                    <param id="1" name="Distance">CR_ScrollSpeed * dt</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="559908502774648" type="CR_ScrollSprites">
+                    <param id="0" name="Angle">-90</param>
+                    <param id="1" name="Distance">CR_ScrollSpeed * dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>This is the end of credits, probably</comment>
+        <event-block sid="367339457566943">
+            <conditions>
+                <condition id="0" name="Compare text" sid="649098622528712" type="CR_TitleText">
+                    <param id="0" name="Text to compare">&quot;Thank you to all our awesome playtesters &lt;3&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="559980192006105" type="CR_TitleText">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">-200</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="657465973384393">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="695122622973667" type="CR_UnusedAssets">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">1215</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="511694361889664" type="CR_UnusedAssets">
+                    <param id="0" name="Animation">&quot;Team&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="217569204654683" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="459407098682460" type="System">
+                    <param id="0" name="Variable">CR_ScrollSpeed</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="262119186554814" type="System">
+                    <param id="0" name="Variable">CR_Timestep</param>
+                    <param id="1" name="Value">time</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="418374656688677">
+            <conditions>
+                <condition id="2" name="Is in touch" sid="501182122555724" type="Touch" />
+                <condition id="-2" inverted="1" name="Compare Y" sid="770172118192112" type="CR_UnusedAssets">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">1215</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="385006824823026" type="CR_UnusedAssets">
+                    <param id="0" name="Animation">&quot;Graves&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>definitely don&apos;t go to the carpool game that would be silly</comment>
+                <event-block sid="617921144696391">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="856667620745709" type="Touch">
+                            <param id="0" name="Object">CR_UnusedAssets</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="658025392374929" type="CR_UnusedAssets">
+                            <param id="0" name="Animation">&quot;Graves&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="150269143463074" type="System">
+                            <param id="0" name="Layout">M3_Medium</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="195608868431306">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="491193636012720" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="738959430515765" type="System">
+                            <param id="0" name="Variable">CR_ScrollSpeed</param>
+                            <param id="1" name="Value">960</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="179280105342353">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="171148069657757" type="Touch" />
+                <condition id="2" name="Is playing" sid="509578441852538" type="CR_UnusedAssets">
+                    <param id="0" name="Animation">&quot;Team&quot;</param>
+                </condition>
+                <condition id="-2" inverted="1" name="Compare Y" sid="275747136619287" type="CR_UnusedAssets">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">1215</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="473044536572718" type="System">
+                    <param id="0" name="Variable">CR_ScrollSpeed</param>
+                    <param id="1" name="Value">240</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="347068676134916">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="184618347794669" type="System" />
+                <condition id="-7" name="Compare time" sid="358750862987306" type="System">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Time (seconds)">CR_Timestep + 15</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="720186018801553" type="System">
+                    <param id="0" name="Variable">CR_ScrollSpeed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="796279641175681" type="CR_UnusedAssets">
+                    <param id="0" name="Animation">&quot;Team&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="532085460074494" type="CR_UnusedAssets">
+                    <param id="0" name="Opacity">CR_UnusedAssets.Opacity-1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="581310526382183" type="CR_TitleText">
+                    <param id="0" name="Opacity">CR_TitleText.Opacity-1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
