@@ -190,6 +190,12 @@
                             <param id="0" name="Instance variable">moneys</param>
                             <param id="1" name="Value">15</param>
                         </action>
+                        <action id="0" name="Play" sid="254061062629981" type="Audio">
+                            <param id="0" name="Audio file">sfx_cashsound</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="186967947107510">
@@ -522,6 +528,32 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="911021817560529">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="583764537170830" type="mx_tempstars">
+                                    <param id="0" name="Instance variable">muneeeeeeeys</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">mx_2_moneys.moneys</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="715875111673429" type="mx_tempstars">
+                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="290000132408422">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="277655684798177" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="973360827832270" type="mx_tempstars">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="276109935005202">
                             <conditions>

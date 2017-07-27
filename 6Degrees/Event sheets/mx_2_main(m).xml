@@ -5,7 +5,6 @@
     <events>
         <include>GG Scores and Levels</include>
         <variable constant="0" name="mx_2_score" sid="457397118357501" static="0" type="number">0</variable>
-        <variable constant="0" name="mx_2_playing" sid="152829263815093" static="0" type="number">1</variable>
         <variable constant="0" name="mx_2_trucks" sid="243642349330860" static="0" type="number">0</variable>
         <variable constant="0" name="mx_2_bigBuyCost" sid="460215975971356" static="0" type="number">6</variable>
         <variable constant="0" name="mx_2_timer" sid="180016857008969" static="0" type="number">30</variable>
@@ -15,6 +14,7 @@
         <variable constant="0" name="mx_2_FreeBuy" sid="357546229878075" static="0" type="number">6</variable>
         <variable constant="0" name="mx_2_storeEarn" sid="609229671402441" static="0" type="number">0</variable>
         <variable constant="0" name="mx_2_BigBuy" sid="741683310752727" static="0" type="number">0</variable>
+        <variable constant="0" name="mx_2_playing" sid="152829263815093" static="0" type="number">1</variable>
         <event-block sid="487781565875694">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="884588250251243" type="System" />
@@ -113,6 +113,12 @@
                         <action id="-11" name="Add to" sid="240937726969110" type="mx_2_moneys">
                             <param id="0" name="Instance variable">moneys</param>
                             <param id="1" name="Value">15</param>
+                        </action>
+                        <action id="0" name="Play" sid="843492736882726" type="Audio">
+                            <param id="0" name="Audio file">sfx_cashsound</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -483,6 +489,32 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="318191289076469">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="967869986364537" type="mx_tempstars">
+                                    <param id="0" name="Instance variable">muneeeeeeeys</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">mx_2_moneys.moneys</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="405063538414496" type="mx_tempstars">
+                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="655630475904590">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="815893732504268" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="310975003320995" type="mx_tempstars">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1988,6 +2020,7 @@
                             <param id="0" name="Instance variable">platttter</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="662602924241336" type="mx_tempstars" />
                     </actions>
                     <sub-events>
                         <event-block sid="994082196224987">
