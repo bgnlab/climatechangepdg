@@ -462,6 +462,107 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="907375676384463">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="707609574928268" type="System">
+                    <param id="0" name="Variable">m4_TutorialTracker</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="462767169580437" type="System">
+                    <param id="0" name="Variable">m4_playerScore</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="538384180868211" type="m4_InHere">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="406637270495420">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="639571037532005" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">19</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="131697886383576">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="572310428561959" type="m4_Pieces">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">LayoutWidth *2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="644788397978388" type="m4_Pieces">
+                                    <param id="0" name="X">self.tutResetX</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="769567807885343" type="m4_Pieces">
+                                    <param id="0" name="Y">self.tutResetY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="359344091337311">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="411656506264047" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">20</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="250214454977626">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="764595191198187" type="m4_Pieces">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">LayoutWidth *2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="918337027376097" type="m4_Pieces">
+                                    <param id="0" name="X">self.tutResetX</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="488498962822636" type="m4_Pieces">
+                                    <param id="0" name="Y">self.tutResetY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="361209539518922">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="908000788381609" type="System">
+                            <param id="0" name="Object">m4_Pieces</param>
+                            <param id="1" name="Instance">21</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="394709136120179">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="167180770431832" type="m4_Pieces">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">LayoutWidth *2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="821932830694349" type="m4_Pieces">
+                                    <param id="0" name="X">self.tutResetX</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="609436738415388" type="m4_Pieces">
+                                    <param id="0" name="Y">self.tutResetY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="445210421537597">
             <conditions>
                 <condition id="0" name="On function" sid="585702337285746" type="Function">
@@ -602,7 +703,7 @@
                     <param id="1" name="Parameter {n}"></param>
                 </action>
                 <action id="0" name="Set text" sid="672917104070443" type="m4_TutorialText">
-                    <param id="0" name="Text">&quot;Seriously. Place 3&quot;</param>
+                    <param id="0" name="Text">&quot;Seriously. Place a total of 3&quot;</param>
                 </action>
             </actions>
         </event-block>
