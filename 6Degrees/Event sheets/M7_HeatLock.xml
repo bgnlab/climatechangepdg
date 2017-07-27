@@ -29,10 +29,6 @@
                             <param id="0" name="Layer">&quot;EndGame&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
-                        <action id="0" name="Call function" sid="655973672784259" type="Function">
-                            <param id="0" name="Name">&quot;M7 Reset Values&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                         <action id="0" name="Play" sid="456824832616543" type="Audio">
                             <param id="0" name="Audio file">bgm_heatlock</param>
                             <param id="2" name="Loop">1</param>
@@ -72,6 +68,15 @@
                                 <action id="-4" name="Set layer visible" sid="501960065276660" type="System">
                                     <param id="0" name="Layer">&quot;Tutorial&quot;</param>
                                     <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="268946909217045">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="655973672784259" type="Function">
+                                    <param id="0" name="Name">&quot;M7 Reset Values&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -362,6 +367,51 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-group description="" sid="899033844642183" title="M7 Stars">
+                            <sub-events>
+                                <event-block sid="880754812297886">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="751499539173792" type="System">
+                                            <param id="0" name="Variable">M7_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="422785246761783" type="System">
+                                            <param id="0" name="Variable">M7_Game_State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Game&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="396007069283462" type="M7_End_Star0">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="896739776691190" type="M7_End_Star1">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="101527973969331" type="M7_End_Star2">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="313776470659499">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="255255482778914" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="693294616684791" type="M7_End_Star0">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="163112728424011" type="M7_End_Star1">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="996997532171602" type="M7_End_Star2">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                     </sub-events>
                 </event-block>
             </sub-events>
@@ -756,6 +806,10 @@
                                                                 <action id="-3" name="Set position" sid="541287029813111" type="M7_ThermostatSignal">
                                                                     <param id="0" name="X">-500</param>
                                                                     <param id="1" name="Y">-500</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="787912454297587" type="M7_End_Star2">
+                                                                    <param id="0" name="Animation">&quot;Empty&quot;</param>
+                                                                    <param id="1" name="From">1</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -1290,6 +1344,10 @@
                                                         <action id="-9" name="Set value" sid="384210738925617" type="System">
                                                             <param id="0" name="Variable">M7_Tutorial_Progress</param>
                                                             <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="274756978870988" type="M7_End_Star2">
+                                                            <param id="0" name="Animation">&quot;Full&quot;</param>
+                                                            <param id="1" name="From">1</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="608555328835178" type="Function">
                                                             <param id="0" name="Name">&quot;M7 Reset Values&quot;</param>

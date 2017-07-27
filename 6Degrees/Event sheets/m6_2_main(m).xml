@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>m6_2_main(m)</name>
     <events>
-        <variable constant="0" name="m6_2_tempscore" sid="508698068355647" static="0" type="number">0</variable>
         <include>GG Scores and Levels</include>
+        <variable constant="0" name="m6_2_tempscore" sid="508698068355647" static="0" type="number">0</variable>
         <variable constant="0" name="m6_2_containersOpan" sid="985454352105659" static="0" type="number">0</variable>
         <variable constant="0" name="m6_2_recipe" sid="499942595774607" static="0" type="number">0</variable>
         <variable constant="0" name="m6_2_buy" sid="868122023909889" static="0" type="number">0</variable>
@@ -662,6 +662,61 @@
                         <action id="-9" name="Set value" sid="887606722336908" type="System">
                             <param id="0" name="Variable">m6_2_win</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="413923733457214">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="314086082551501" type="System">
+                            <param id="0" name="Variable">m6_2_timer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="818348777312803" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="300032124604626" type="System">
+                            <param id="0" name="Variable">m6_2_timer</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="559697549543701" type="m6_2_timer">
+                            <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="806726509093697" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="857174840435225" type="m6_2_timer">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="641433040440460">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="394290093010823" type="System">
+                            <param id="0" name="Variable">m6_2_timer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="351260464426061" type="System">
+                            <param id="0" name="Variable">m6_2_buy</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="329195872730740" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="159929099849679" type="Audio">
+                            <param id="0" name="Audio file">sfx_timer (1)</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>

@@ -297,11 +297,8 @@
                                             <param id="0" name="Instance variable">parked</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="6" name="Stop" sid="710218619907765" type="Audio">
+                                        <action id="22" name="Set paused" sid="710218619907765" type="Audio">
                                             <param id="0" name="Tag">&quot;driving&quot;</param>
-                                        </action>
-                                        <action id="22" name="Set paused" sid="620457548056129" type="Audio">
-                                            <param id="0" name="Tag">&quot;muse&quot;</param>
                                             <param id="1" name="State">0</param>
                                         </action>
                                     </actions>
@@ -366,6 +363,10 @@
                                             <param id="2" name="Loop">1</param>
                                             <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;driving&quot;</param>
+                                        </action>
+                                        <action id="22" name="Set paused" sid="930050525547944" type="Audio">
+                                            <param id="0" name="Tag">&quot;driving&quot;</param>
+                                            <param id="1" name="State">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
