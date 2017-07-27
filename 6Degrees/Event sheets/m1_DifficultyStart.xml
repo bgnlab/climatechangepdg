@@ -16,6 +16,10 @@
                     <actions>
                         <action id="-45" name="Reset persisted objects" sid="669023299370216" type="System" />
                         <action id="-21" name="Reset global variables" sid="522153019079341" type="System" />
+                        <action id="-13" name="Set boolean" sid="709628510795770" type="m1_Tornado">
+                            <param id="0" name="Instance variable">isInTutorial</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action id="-9" name="Set value" sid="596993713476184" type="System">
                             <param id="0" name="Variable">m1_chosenDifficulty</param>
                             <param id="1" name="Value">GG_State.Get(&quot;difficulty&quot;)</param>
@@ -37,6 +41,14 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-13" name="Set boolean" sid="275199837039367" type="m1_Tornado">
+                            <param id="0" name="Instance variable">isInTutorial</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="862925435773517" type="m1_Tornado">
+                            <param id="0" name="X">-6000</param>
+                            <param id="1" name="Y">-6000</param>
+                        </action>
                         <action id="-9" name="Set value" sid="239005467212697" type="System">
                             <param id="0" name="Variable">m1_pressureLoss</param>
                             <param id="1" name="Value">0.6</param>
@@ -57,7 +69,37 @@
                             <param id="0" name="Variable">m1_3StarValue</param>
                             <param id="1" name="Value">0.8</param>
                         </action>
+                        <action id="-3" name="Set position" sid="451680500586714" type="m1_Star">
+                            <param id="0" name="X">-6000</param>
+                            <param id="1" name="Y">-6000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="136910592490370" type="m1_2ndStar">
+                            <param id="0" name="X">-6000</param>
+                            <param id="1" name="Y">-6000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="623532640760450" type="m1_3rdStar">
+                            <param id="0" name="X">-6000</param>
+                            <param id="1" name="Y">-6000</param>
+                        </action>
+                        <action id="0" name="Set text" sid="133214269628010" type="m1_WinFailText">
+                            <param id="0" name="Text">&quot;Now don&apos;t get caught in the other difficulties&quot;</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="214189640798394">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="432378379484937" type="System">
+                                    <param id="0" name="Object">m1_EmptyStar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="624067409516513" type="m1_EmptyStar">
+                                    <param id="0" name="X">-6000</param>
+                                    <param id="1" name="Y">-6000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="925763179838085">
                     <conditions>

@@ -708,6 +708,7 @@
                         <carStopTornadoSpeed>8</carStopTornadoSpeed>
                         <test>0</test>
                         <wonXPosition>0</wonXPosition>
+                        <isInTutorial>false</isInTutorial>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1083,7 +1084,7 @@
                 </instance>
                 <instance type="m1_WinFailText" uid="1152">
                     <properties>
-                        <text>Text</text>
+                        <text>The moose got too close to you. Try managing your tire pressure more efficiently.</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
@@ -1185,8 +1186,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>902</x>
-                        <y>593</y>
+                        <x>946</x>
+                        <y>-473</y>
                         <z>0</z>
                         <width>72</width>
                         <height>24</height>
@@ -1210,8 +1211,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>569</x>
-                        <y>336</y>
+                        <x>520</x>
+                        <y>-886</y>
                         <z>0</z>
                         <width>784</width>
                         <height>376</height>

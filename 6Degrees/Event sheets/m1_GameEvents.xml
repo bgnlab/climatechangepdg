@@ -909,45 +909,77 @@
                         <action id="-9" name="Destroy" sid="586809291580412" type="m1_Tornado" />
                     </actions>
                     <sub-events>
-                        <event-block sid="460072560983242">
+                        <event-block sid="172496605600788">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="767219564539462" type="m1_Tornado">
-                                    <param id="0" name="Instance variable">wonXPosition</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">m1_Car.ContactX * m1_1StarValue</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="495503229208522" type="m1_Tornado">
+                                    <param id="0" name="Instance variable">isInTutorial</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="593147746644871" type="m1_Star">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="460072560983242">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="767219564539462" type="m1_Tornado">
+                                            <param id="0" name="Instance variable">wonXPosition</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">m1_Car.ContactX * m1_1StarValue</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="593147746644871" type="m1_Star">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="863409163570209" type="m1_WinFailText">
+                                            <param id="0" name="Text">&quot;The moose got too close to you. Try managing your tire pressure more efficiently&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="156795180857064">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="407727689836195" type="m1_Tornado">
+                                            <param id="0" name="Instance variable">wonXPosition</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">m1_Car.ContactX * m1_2StarValue</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="251193941892356" type="m1_2ndStar">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="916651632143903" type="m1_WinFailText">
+                                            <param id="0" name="Text">&quot;The moose got too close to you. Try managing your tire pressure more efficiently&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="851238500681075">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="183186299302812" type="m1_Tornado">
+                                            <param id="0" name="Instance variable">wonXPosition</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">m1_Car.ContactX * m1_3StarValue</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="194524096192563" type="m1_3rdStar">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="754511103206733" type="m1_WinFailText">
+                                            <param id="0" name="Text">&quot;You got away from the moose!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="156795180857064">
+                        <event-block sid="455230644137602">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="407727689836195" type="m1_Tornado">
-                                    <param id="0" name="Instance variable">wonXPosition</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">m1_Car.ContactX * m1_2StarValue</param>
+                                <condition id="-22" name="Else" sid="683849758277463" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="640616889345210" type="m1_Tornado">
+                                    <param id="0" name="Instance variable">isInTutorial</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="251193941892356" type="m1_2ndStar">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="851238500681075">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="183186299302812" type="m1_Tornado">
-                                    <param id="0" name="Instance variable">wonXPosition</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">m1_Car.ContactX * m1_3StarValue</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="194524096192563" type="m1_3rdStar">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="0" name="Set text" sid="734076674340784" type="m1_WinFailText">
+                                    <param id="0" name="Text">&quot;Now don&apos;t get caught in the other difficulties...&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
