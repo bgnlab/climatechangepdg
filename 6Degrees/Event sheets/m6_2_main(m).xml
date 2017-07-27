@@ -711,14 +711,7 @@
                             <param id="0" name="Interval (seconds)">1</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="159929099849679" type="Audio">
-                            <param id="0" name="Audio file">sfx_timer (1)</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

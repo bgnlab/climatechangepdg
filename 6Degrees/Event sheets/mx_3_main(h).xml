@@ -712,14 +712,7 @@
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="933685634959726" type="Audio">
-                            <param id="0" name="Audio file">sfx_timer (1)</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-group description="" sid="386581983164388" title="mx_1_buys">
                     <sub-events>
