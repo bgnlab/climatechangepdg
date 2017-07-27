@@ -4,6 +4,7 @@
     <name>m4_GameEventSheet</name>
     <events>
         <include>GG Scores and Levels</include>
+        <variable constant="0" name="m4_arrayNumber" sid="923213790112537" static="0" type="number">0</variable>
         <variable constant="0" name="m4_tapLeniency" sid="490408921976131" static="0" type="number">50</variable>
         <variable constant="0" name="m4_droppedOverZone" sid="589369347876108" static="0" type="number">0</variable>
         <variable constant="0" name="m4_itterator" sid="465031812448796" static="0" type="number">0</variable>
@@ -514,12 +515,22 @@
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="363398324145279" type="m4_Pieces">
+                                    <param id="0" name="Instance variable">putOnConveyor</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action id="-11" name="Subtract from" sid="881954103588960" type="System">
                                     <param id="0" name="Variable">m4_playerScore</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="0" name="Set text" sid="145165112144471" type="m4_ScoreText">
                                     <param id="0" name="Text">&quot;Score: &quot; &amp;m4_playerScore</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="167832899881753" type="m4_Pieces">
+                                    <param id="0" name="Width">m4_Pieces.Width / 2</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="212285281750927" type="m4_Pieces">
+                                    <param id="0" name="Height">m4_Pieces.Height / 2</param>
                                 </action>
                                 <action disabled="1" id="0" name="Set text" sid="187700875968487" type="m4_ScoreText">
                                     <param id="0" name="Text">&quot;IS NOT IN BOUNDS&quot;</param>
@@ -755,6 +766,10 @@
                             <param id="0" name="Variable">m4_playerScore</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="780946246337443" type="m4_Pieces">
+                            <param id="0" name="Instance variable">putOnConveyor</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action id="-3" name="Set position" sid="427251084544675" type="m4_Pieces">
                             <param id="0" name="X">LayoutWidth *2</param>
                             <param id="1" name="Y">0</param>
@@ -771,6 +786,12 @@
                         </action>
                         <action id="0" name="Set text" sid="541695356965180" type="m4_ScoreText">
                             <param id="0" name="Text">&quot;Score: &quot; &amp;m4_playerScore</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="229909339590831" type="m4_Pieces">
+                            <param id="0" name="Width">m4_Pieces.Width / 2</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="495994180275872" type="m4_Pieces">
+                            <param id="0" name="Height">m4_Pieces.Height / 2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -989,6 +1010,38 @@
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block any="1" disabled="1" sid="512319152434156">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="559834336051062" type="System">
+                                                    <param id="0" name="Variable">m4_instanceTracker</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">20</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="666390818602392" type="System">
+                                                    <param id="0" name="Object to create">m4_Pieces</param>
+                                                    <param id="1" name="Layer">0</param>
+                                                    <param id="2" name="X">-6000</param>
+                                                    <param id="3" name="Y">-6000</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="486454675742639" type="m4_Pieces">
+                                                    <param id="0" name="Animation">&quot;Piece&quot; &amp;round(random(1,21))</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="576154973843288" type="m4_Pieces">
+                                                    <param id="0" name="Angle">90</param>
+                                                </action>
+                                                <action id="-5" name="Set width" sid="196738375983085" type="m4_Pieces">
+                                                    <param id="0" name="Width">m4_Pieces.Width / 3</param>
+                                                </action>
+                                                <action id="-6" name="Set height" sid="658822140671736" type="m4_Pieces">
+                                                    <param id="0" name="Height">m4_Pieces.Height / 3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
