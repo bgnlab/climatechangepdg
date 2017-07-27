@@ -1597,7 +1597,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <muneeeeeeeys>30</muneeeeeeeys>
+                        <muneeeeeeeys>60</muneeeeeeeys>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1622,7 +1622,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <muneeeeeeeys>60</muneeeeeeeys>
+                        <muneeeeeeeys>80</muneeeeeeeys>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1647,7 +1647,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <muneeeeeeeys>90</muneeeeeeeys>
+                        <muneeeeeeeys>100</muneeeeeeeys>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1657,6 +1657,28 @@
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="M7_Timer_Icon" uid="2111">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>960</x>
+                        <y>30</y>
+                        <z>0</z>
+                        <width>62</width>
+                        <height>62</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1830,6 +1852,33 @@
                         <z>0</z>
                         <width>240</width>
                         <height>240</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="mx_EndText" uid="2105">
+                    <properties>
+                        <text>Not enough locals bought your platters.</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-64,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>960</x>
+                        <y>626</y>
+                        <z>0</z>
+                        <width>1111</width>
+                        <height>248</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

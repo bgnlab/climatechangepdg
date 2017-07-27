@@ -39,8 +39,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>963.770446777</x>
-                        <y>604.489257813</y>
+                        <x>960</x>
+                        <y>600</y>
                         <z>0</z>
                         <width>1920</width>
                         <height>1200</height>
@@ -202,24 +202,25 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="m2_1_waterHeater" uid="267">
+                <instance type="m2_1_closetDoor" uid="2100">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>animation3</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <power>true</power>
+                        <open>false</open>
+                        <lock>true</lock>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1623.770507813</x>
-                        <y>539.489257813</y>
+                        <x>1623</x>
+                        <y>500</y>
                         <z>0</z>
-                        <width>120</width>
-                        <height>600</height>
+                        <width>320</width>
+                        <height>700</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -237,11 +238,77 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1635.770507813</x>
-                        <y>694.489257813</y>
+                        <x>1605.877807617</x>
+                        <y>181.727798462</y>
                         <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="m2_1_boilerLight" uid="267">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1584.228759766</x>
+                        <y>424.370300293</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="m2_1_boilerLight" uid="2101">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1679.377685547</x>
+                        <y>358.211334229</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="m2_1_boilerLight" uid="2102">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1623.669921875</x>
+                        <y>783.154907227</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>12</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -252,7 +319,7 @@
                 <instance type="m2_1_closetDoor" uid="269">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -263,8 +330,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1623.770507813</x>
-                        <y>498.489257813</y>
+                        <x>1623</x>
+                        <y>500</y>
                         <z>0</z>
                         <width>320</width>
                         <height>700</height>
@@ -469,6 +536,31 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="m2_1_waterHeater" uid="2103">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <power>true</power>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1778</x>
+                        <y>1542</y>
+                        <z>0</z>
+                        <width>120</width>
+                        <height>600</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="m2_1theLight" uid="274">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -479,8 +571,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1110.770507813</x>
-                        <y>2056.489257813</y>
+                        <x>953</x>
+                        <y>1826</y>
                         <z>0</z>
                         <width>1920</width>
                         <height>1200</height>
@@ -803,6 +895,50 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="m2_tutLite" uid="2098">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>8</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1191.588012695</x>
+                        <y>819.515197754</y>
+                        <z>0</z>
+                        <width>30</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="m2_tutLite2" uid="2099">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>8</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1251.770996094</x>
+                        <y>207.488998413</y>
+                        <z>0</z>
+                        <width>21</width>
+                        <height>21</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -862,7 +998,7 @@
                 </instance>
                 <instance type="m2_1_endDescription" uid="285">
                     <properties>
-                        <text>Stuff about the level</text>
+                        <text>Now try to unplug/turn off everything in the other difficulties.</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-37,400,0</font>
                         <color>0,0,0</color>

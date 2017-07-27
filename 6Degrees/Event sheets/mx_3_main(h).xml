@@ -534,7 +534,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="583764537170830" type="mx_tempstars">
                                     <param id="0" name="Instance variable">muneeeeeeeys</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">mx_2_moneys.moneys</param>
+                                    <param id="2" name="Value">mx_3_moneys.moneys</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -712,14 +712,7 @@
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="933685634959726" type="Audio">
-                            <param id="0" name="Audio file">sfx_timer (1)</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-group description="" sid="386581983164388" title="mx_1_buys">
                     <sub-events>
@@ -2175,6 +2168,9 @@
                                     <param id="0" name="Animation">&quot;Animation2&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="0" name="Set text" sid="344753809761749" type="mx_EndText">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="289071101245044">
@@ -2182,7 +2178,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="505411504931381" type="mx_3_moneys">
                                     <param id="0" name="Instance variable">moneys</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">75</param>
+                                    <param id="2" name="Value">80</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2194,6 +2190,9 @@
                                     <param id="0" name="Animation">&quot;Animation2&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="0" name="Set text" sid="260925517491807" type="mx_EndText">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="289552828109197">
@@ -2201,7 +2200,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="333849406684704" type="mx_3_moneys">
                                     <param id="0" name="Instance variable">moneys</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">90</param>
+                                    <param id="2" name="Value">100</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2212,6 +2211,9 @@
                                 <action id="4" name="Set animation" sid="885982894328494" type="mx_3_star3">
                                     <param id="0" name="Animation">&quot;Animation2&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="126040378685808" type="mx_EndText">
+                                    <param id="0" name="Text">&quot;You&apos;ve sold a lot of platters.&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

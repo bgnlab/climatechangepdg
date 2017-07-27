@@ -67,7 +67,7 @@
                 <event-block sid="704308869049336">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="122940830245966" type="System">
-                            <param id="0" name="Interval (seconds)">0.01</param>
+                            <param id="0" name="Interval (seconds)">0.05</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="682337810258025" type="System">
                             <param id="0" name="Variable">m2_2_playing</param>
@@ -83,7 +83,7 @@
                     <actions>
                         <action id="-11" name="Subtract from" sid="296313175028355" type="System">
                             <param id="0" name="Variable">m2_2_timer</param>
-                            <param id="1" name="Value">0.01</param>
+                            <param id="1" name="Value">0.05</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -133,14 +133,7 @@
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="416749884986897" type="Audio">
-                                    <param id="0" name="Audio file">sfx_timer (1)</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1202,6 +1195,9 @@
                                     <param id="0" name="Animation">&quot;Animation2&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="0" name="Set text" sid="359146608691110" type="m2_2_endDescription">
+                                    <param id="0" name="Text">&quot;You unplugged all of the necessary appliances.&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="614367554205798">
@@ -1246,11 +1242,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="164950770391740" type="m2_2_endDescription">
-                                    <param id="0" name="Text">&quot;&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block any="1" sid="998295185813714">
                                     <conditions>
@@ -1311,20 +1303,6 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="992674350734699">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="309292557874977" type="System">
-                                    <param id="0" name="Variable">m2_2_score</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">6</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Append text" sid="349690159591138" type="m2_2_endDescription">
-                                    <param id="0" name="Text">newline&amp;&quot;You are still wasting energy.  Try again to improve your score!&quot;</param>
-                                </action>
-                            </actions>
                         </event-block>
                         <event-group description="" sid="191794632724762" title="buttons">
                             <sub-events>

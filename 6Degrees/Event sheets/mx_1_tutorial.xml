@@ -460,6 +460,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-3" name="Create object" sid="450245312352086" type="System">
+                            <param id="0" name="Object to create">mx_1_PStock</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">100+(mx_1_Resourcess.platttter%2)*150</param>
+                            <param id="3" name="Y">900-mx_1_Resourcess.platttter*50</param>
+                        </action>
                         <action id="-16" name="Wait" sid="431173040221953" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
