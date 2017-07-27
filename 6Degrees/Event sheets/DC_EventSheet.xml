@@ -743,6 +743,7 @@
         </event-group>
         <event-group description="" sid="947475836464704" title="DC_CarColliders">
             <sub-events>
+                <comment>updated to 70% speed as per roberto commando</comment>
                 <event-block sid="826092403008003">
                     <conditions>
                         <condition id="1" inverted="1" name="Is overlapping another object" sid="158066761157269" type="DC_CarCollider">
@@ -767,7 +768,7 @@
                     <actions>
                         <action id="-23" name="Move at angle" sid="645273293744719" type="DC_Car">
                             <param id="0" name="Angle">DC_Car.Angle</param>
-                            <param id="1" name="Distance">300 * dt</param>
+                            <param id="1" name="Distance">300 * dt * 0.7</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -783,7 +784,7 @@
                             <actions>
                                 <action id="-23" name="Move at angle" sid="270742406720422" type="DC_Car">
                                     <param id="0" name="Angle">DC_Car.Angle</param>
-                                    <param id="1" name="Distance">180 * dt</param>
+                                    <param id="1" name="Distance">180 * dt * 1.2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -807,6 +808,7 @@
         </event-group>
         <event-group description="" sid="132098121752518" title="DC_BikeCollider">
             <sub-events>
+                <comment>updated to 70% speed as per roberto commando</comment>
                 <event-block sid="133342245858201">
                     <conditions>
                         <condition id="1" inverted="1" name="Is overlapping another object" sid="877814605162568" type="DC_BikeCollider">
@@ -831,7 +833,7 @@
                     <actions>
                         <action id="-23" name="Move at angle" sid="306036471302136" type="DC_Bike">
                             <param id="0" name="Angle">DC_Bike.Angle</param>
-                            <param id="1" name="Distance">300 * dt</param>
+                            <param id="1" name="Distance">300 * dt * 0.7</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -846,7 +848,7 @@
                             <actions>
                                 <action id="-23" name="Move at angle" sid="313729251793456" type="DC_Bike">
                                     <param id="0" name="Angle">DC_Bike.Angle</param>
-                                    <param id="1" name="Distance">180 * dt</param>
+                                    <param id="1" name="Distance">180 * dt * 1.2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1715,7 +1717,7 @@
                         <action id="33" name="Stop all" sid="274116054624000" type="Audio" />
                         <action id="0" name="Play" sid="123958668030553" type="Audio">
                             <param id="0" name="Audio file">sfx_citytraffit</param>
-                            <param id="2" name="Loop">0</param>
+                            <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
@@ -1967,10 +1969,6 @@
                                     <param id="0" name="Variable">DC_ThingsOnScreen</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="522497429392839" type="DC_Bike">
-                                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                                 <action id="-3" name="Create object" sid="447618681151671" type="System">
                                     <param id="0" name="Object to create">DC_Person</param>
                                     <param id="1" name="Layer">&quot;MovingObject&quot;</param>
@@ -2014,6 +2012,9 @@
                                 </action>
                                 <action disabled="1" id="-6" name="Set height" sid="992934755117417" type="DC_ScoreBar">
                                     <param id="0" name="Height">40 * DC_StuffParked</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="315504821009432" type="DC_Bike">
+                                    <param id="0" name="Collisions">0</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -2120,6 +2121,10 @@
                                 <action id="-10" name="Add to" sid="278260254642498" type="System">
                                     <param id="0" name="Variable">DC_ThingsOnScreen</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="154638673849370" type="System">
+                                    <param id="0" name="Variable">DC_TimeInterval</param>
+                                    <param id="1" name="Value">time</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2374,6 +2379,52 @@
                             <param id="1" name="Visibility">0</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="811686907622826">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="943175053393563" type="System">
+                            <param id="0" name="Variable">DC_OfficialDifficulty</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="197938395826221" type="DC_EndgameText">
+                            <param id="0" name="Text">&quot;Now try to park as many vehicles as you can in the other difficulties!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="846956504746770">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="597280138254003" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="823750229215999">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="852157557158259" type="System">
+                                    <param id="0" name="Variable">DC_StuffParked</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="977210337849157" type="DC_EndgameText">
+                                    <param id="0" name="Text">&quot;You successfully parked &quot; &amp; DC_StuffParked &amp; &quot; vehicles.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="231336500307307">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="505596673527082" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="231587592455044" type="DC_EndgameText">
+                                    <param id="0" name="Text">&quot;You parked &quot; &amp; DC_StuffParked &amp; &quot; vehicles. Park &quot; &amp; 10-DC_StuffParked &amp; &quot; more to earn 3 stars!&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -2823,6 +2874,9 @@
                     <actions>
                         <action id="-5" name="Set width" sid="518288878127100" type="DC_timer">
                             <param id="0" name="Width">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="309802731502593" type="DC_ST4R">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>

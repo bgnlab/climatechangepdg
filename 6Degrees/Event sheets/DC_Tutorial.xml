@@ -891,7 +891,7 @@
                             <actions>
                                 <action id="-23" name="Move at angle" sid="822686189692482" type="DC_Car">
                                     <param id="0" name="Angle">DC_Car.Angle</param>
-                                    <param id="1" name="Distance">300 * dt</param>
+                                    <param id="1" name="Distance">300 * dt * 0.7</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -907,7 +907,7 @@
                                     <actions>
                                         <action id="-23" name="Move at angle" sid="876487447417949" type="DC_Car">
                                             <param id="0" name="Angle">DC_Car.Angle</param>
-                                            <param id="1" name="Distance">180 * dt</param>
+                                            <param id="1" name="Distance">180 * dt * 1.2</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -951,7 +951,7 @@
                             <actions>
                                 <action id="-23" name="Move at angle" sid="800345615453336" type="DC_Bike">
                                     <param id="0" name="Angle">DC_Bike.Angle</param>
-                                    <param id="1" name="Distance">300 * dt</param>
+                                    <param id="1" name="Distance">300 * dt * 0.7</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -966,7 +966,7 @@
                                     <actions>
                                         <action id="-23" name="Move at angle" sid="470188456548484" type="DC_Bike">
                                             <param id="0" name="Angle">DC_Bike.Angle</param>
-                                            <param id="1" name="Distance">180 * dt</param>
+                                            <param id="1" name="Distance">180 * dt * 1.2</param>
                                         </action>
                                     </actions>
                                 </event-block>
