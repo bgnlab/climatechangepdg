@@ -192,6 +192,12 @@
                                             <param id="2" name="X">960</param>
                                             <param id="3" name="Y">600</param>
                                         </action>
+                                        <action id="0" name="Play" sid="338296268814366" type="Audio">
+                                            <param id="0" name="Audio file">sfx_placeclothing</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;Animal Notification&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="204624782948710">
