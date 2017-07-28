@@ -135,6 +135,15 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <comment>DEBUG</comment>
+                                <event-block sid="954989324679088">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="417300150961366" type="C6_Animals">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-group>
                         <event-group description="" sid="172072129356291" title="C6 Initialize Audio">
@@ -906,6 +915,68 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="719585060478590" title="C6 New Animal Notification" />
+        <event-group description="" sid="719585060478590" title="C6 Animal Animations">
+            <sub-events>
+                <variable constant="1" name="C6_ANIM_DUR_MIN" sid="686588198041134" static="0" type="number">5</variable>
+                <variable constant="1" name="C6_ANIM_DUR_MAX" sid="483099773090685" static="0" type="number">12</variable>
+                <event-block sid="378047504861795">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="392635635315287" type="C6_Animals">
+                            <param id="0" name="Animation">&quot;moving&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="648533128818659" type="C6_Animals">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="497118559417018" type="C6_Animals">
+                            <param id="0" name="Instance variable">anim_dur</param>
+                            <param id="1" name="Value">random(C6_ANIM_DUR_MIN,C6_ANIM_DUR_MAX)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="537774361427876">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="832910404547621" type="System">
+                            <param id="0" name="Object">C6_Animals</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="356580546255356" type="C6_Animals" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="366548999976590">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="724758227773608" type="C6_Animals">
+                                    <param id="0" name="Instance variable">anim_dur</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="653046163746098" type="C6_Animals">
+                                    <param id="0" name="Instance variable">anim_dur</param>
+                                    <param id="1" name="Value">dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="110883971517284">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="588676257489418" type="System" />
+                                <condition id="2" inverted="1" name="Is playing" sid="824055788750543" type="C6_Animals">
+                                    <param id="0" name="Animation">&quot;moving&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="867445921207216" type="C6_Animals">
+                                    <param id="0" name="Animation">&quot;moving&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

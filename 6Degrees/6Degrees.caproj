@@ -119,18 +119,25 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="729207403363740" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.502164" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\skunk.png">
+                            <frame duration="1" hotspotX="0.502674" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\skunk.png">
                                 <collision-poly>
-                                    <point x="0.36036" y="0.34632" />
-                                    <point x="0.5" y="0.121212" />
-                                    <point x="0.558559" y="0.424242" />
-                                    <point x="0.689189" y="0.497835" />
-                                    <point x="0.905405" y="0.909091" />
-                                    <point x="0.5" y="0.675325" />
-                                    <point x="0.342342" y="0.670996" />
-                                    <point x="0.126126" y="0.497835" />
+                                    <point x="0.326203" y="0.34466" />
+                                    <point x="0.491979" y="0.0922329" />
+                                    <point x="0.561498" y="0.432038" />
+                                    <point x="0.716577" y="0.514563" />
+                                    <point x="0.973262" y="0.975728" />
+                                    <point x="0.491979" y="0.713593" />
+                                    <point x="0.304812" y="0.708738" />
+                                    <point x="0.0481282" y="0.514563" />
                                 </collision-poly>
                             </frame>
+                        </animation>
+                        <animation framecount="5" loop="0" name="moving" pingpong="0" repeatcount="1" repeatto="0" sid="130769571342753" speed="13">
+                            <frame duration="0.15" hotspotX="0.502674" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\skunk 2.png" />
+                            <frame duration="1" hotspotX="0.502674" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\skunk 3.png" />
+                            <frame duration="1" hotspotX="0.502674" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\skunk 4.png" />
+                            <frame duration="1" hotspotX="0.502674" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.502674" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -138,18 +145,23 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="360371758648655" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\bunny twins.png">
+                            <frame duration="1" hotspotX="0.503356" hotspotY="0.502392" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\bunny twins.png">
                                 <collision-poly>
-                                    <point x="0.17" y="0.149123" />
-                                    <point x="0.5" y="0.557018" />
-                                    <point x="0.83" y="0.149123" />
-                                    <point x="0.815" y="0.5" />
-                                    <point x="0.74" y="0.77193" />
-                                    <point x="0.5" y="0.684211" />
-                                    <point x="0.26" y="0.77193" />
-                                    <point x="0.19" y="0.5" />
+                                    <point x="0.0596026" y="0.111111" />
+                                    <point x="0.496689" y="0.580809" />
+                                    <point x="0.933775" y="0.111111" />
+                                    <point x="0.913907" y="0.515152" />
+                                    <point x="0.81457" y="0.828283" />
+                                    <point x="0.496689" y="0.727273" />
+                                    <point x="0.178808" y="0.828283" />
+                                    <point x="0.0860927" y="0.515152" />
                                 </collision-poly>
                             </frame>
+                        </animation>
+                        <animation framecount="3" loop="0" name="moving" pingpong="0" repeatcount="1" repeatto="0" sid="649827539785813" speed="10">
+                            <frame duration="1" hotspotX="0.503356" hotspotY="0.502392" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\bunny twins 2.png" />
+                            <frame duration="1" hotspotX="0.503356" hotspotY="0.502392" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\bunny twins 3.png" />
+                            <frame duration="1" hotspotX="0.503356" hotspotY="0.502392" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -176,7 +188,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="222134498305006" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.500894" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\deer.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500917" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\deer.png">
                                 <collision-poly>
                                     <point x="0.394958" y="0.336315" />
                                     <point x="0.5" y="0.0966011" />
@@ -189,13 +201,20 @@
                                 </collision-poly>
                             </frame>
                         </animation>
+                        <animation framecount="5" loop="0" name="moving" pingpong="0" repeatcount="1" repeatto="0" sid="546324347301106" speed="10">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500917" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\deer 2.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500917" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\deer 3.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500917" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\deer 4.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500917" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500917" />
+                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="C6_Moose" sid="768191355533504">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="396455499820410" speed="5">
-                            <frame duration="1" hotspotX="0.502183" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\moose.png">
+                            <frame duration="1" hotspotX="0.501859" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\moose.png">
                                 <collision-poly>
                                     <point x="0.152838" y="0.0892857" />
                                     <point x="0.497817" y="0.15051" />
@@ -206,6 +225,11 @@
                                     <point x="0.379913" y="0.778061" />
                                 </collision-poly>
                             </frame>
+                        </animation>
+                        <animation framecount="3" loop="0" name="moving" pingpong="0" repeatcount="1" repeatto="0" sid="660463458990356" speed="10">
+                            <frame duration="1" hotspotX="0.501859" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\moose 2.png" />
+                            <frame duration="1" hotspotX="0.501859" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\moose 3.png" />
+                            <frame duration="1" hotspotX="0.501859" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -269,7 +293,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892185898223684" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.501326" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\lizard.png">
+                            <frame duration="1" hotspotX="0.502008" hotspotY="0.501285" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\lizard.png">
                                 <collision-poly>
                                     <point x="0.783654" y="0.498674" />
                                     <point x="0.769231" y="0.872679" />
@@ -281,6 +305,13 @@
                                     <point x="0.697115" y="0.167109" />
                                 </collision-poly>
                             </frame>
+                        </animation>
+                        <animation framecount="5" loop="0" name="moving" pingpong="0" repeatcount="1" repeatto="0" sid="746128026442541" speed="10">
+                            <frame duration="1" hotspotX="0.502008" hotspotY="0.501285" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\lizard 2.png" />
+                            <frame duration="1" hotspotX="0.502008" hotspotY="0.501285" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\lizard 3.png" />
+                            <frame duration="1" hotspotX="0.502008" hotspotY="0.501285" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\lizard 4.png" />
+                            <frame duration="1" hotspotX="0.502008" hotspotY="0.501285" />
+                            <frame duration="1" hotspotX="0.502008" hotspotY="0.501285" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -18134,6 +18165,7 @@
             <instance-variables>
                 <instance-variable name="name" sid="128919664386574" type="string" />
                 <instance-variable name="gameNum" sid="374691224729436" type="number" />
+                <instance-variable name="anim_dur" sid="974978916342294" type="number" />
             </instance-variables>
         </family>
         <family name="m4_PiecesFamily" plugin-id="Sprite" sid="658068990436359">
