@@ -633,29 +633,12 @@
                         <action id="-15" name="Set visible" sid="799916067355525" type="NextButton">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-2" name="Go to layout" sid="335284935001794" type="System">
+                            <param id="0" name="Layout">CR_edits</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="357073913608849">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="963288805880320" type="System">
-                    <param id="0" name="Variable">N</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">5</param>
-                </condition>
-                <condition id="-4" name="Trigger once while true" sid="922150364117005" type="System" />
-            </conditions>
-            <actions>
-                <action id="-12" name="Set group active" sid="309217268626732" type="System">
-                    <param id="0" name="Group name">&quot;TextE&quot; &amp; N - 1</param>
-                    <param id="1" name="State">0</param>
-                </action>
-                <action id="-12" name="Set group active" sid="868358185458941" type="System">
-                    <param id="0" name="Group name">&quot;TextE&quot; &amp; N</param>
-                    <param id="1" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

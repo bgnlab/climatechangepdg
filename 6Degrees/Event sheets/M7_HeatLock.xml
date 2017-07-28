@@ -2722,31 +2722,56 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <comment>End Text</comment>
-                        <event-block sid="300080830344756">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="258283349793019" type="System">
-                                    <param id="0" name="Variable">M7_Temperature</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">18</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="683572741437601" type="M7_End_Text">
-                                    <param id="0" name="Text">&quot;The people stayed warm without raising the temperature.&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="353995877072981">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="533078796837159" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="939741053915093" type="M7_End_Text">
-                                    <param id="0" name="Text">&quot;The people stayed warm, but had raised the temperature by &quot; &amp; (M7_Temperature - 18) &amp;&quot;degrees.&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
+                        <event-group description="" sid="418662239688992" title="M7 End Text Conditions">
+                            <sub-events>
+                                <event-block sid="217044739859882">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="760059600334303" type="System">
+                                            <param id="0" name="Variable">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="795743317393480" type="M7_End_Text">
+                                            <param id="0" name="Text">&quot;Now keep the people warm in the other difficulties!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="764935077132079">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="946211167969383" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="300080830344756">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="258283349793019" type="System">
+                                                    <param id="0" name="Variable">M7_Temperature</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">18</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="683572741437601" type="M7_End_Text">
+                                                    <param id="0" name="Text">&quot;The people stayed warm without raising the temperature.&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="353995877072981">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="533078796837159" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="939741053915093" type="M7_End_Text">
+                                                    <param id="0" name="Text">&quot;The people stayed warm, but had raised the temperature by &quot; &amp; (M7_Temperature - 18) &amp;&quot;degrees.&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                         <event-block sid="394673863991002">
                             <conditions />
                             <actions>

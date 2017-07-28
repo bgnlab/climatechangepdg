@@ -79,6 +79,10 @@
                                     <param id="0" name="Key">&quot;total score&quot;</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="0" name="Add key" sid="436243414876713" type="GG_State">
+                                    <param id="0" name="Key">&quot;trigger animals&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="727758283959044">
@@ -1164,7 +1168,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>TODO: Calculate Narrative Events</comment>
+                        <comment>Narrative Events</comment>
                         <event-block sid="367283067033319">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="139931875418523" type="System">
