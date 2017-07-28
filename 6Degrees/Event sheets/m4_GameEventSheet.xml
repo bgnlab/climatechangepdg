@@ -8,7 +8,7 @@
         <variable constant="0" name="m4_tapLeniency" sid="490408921976131" static="0" type="number">50</variable>
         <variable constant="0" name="m4_droppedOverZone" sid="589369347876108" static="0" type="number">0</variable>
         <variable constant="0" name="m4_itterator" sid="465031812448796" static="0" type="number">0</variable>
-        <variable constant="0" name="m4_playerScore" sid="516533506679574" static="0" type="number">9000</variable>
+        <variable constant="0" name="m4_playerScore" sid="516533506679574" static="0" type="number">0</variable>
         <variable constant="0" name="m4_gridTileSizeX" sid="712430873457542" static="0" type="number">96</variable>
         <variable constant="0" name="m4_gridTileSizeY" sid="481391999204459" static="0" type="number">96</variable>
         <variable constant="0" name="m4_gridTileOffsetX" sid="757052443947767" static="0" type="number">32</variable>
@@ -30,6 +30,9 @@
                 <action id="4" name="Set animation" sid="587346441094996" type="m4_PiecesMini">
                     <param id="0" name="Animation">choose(&quot;Piece1&quot;,&quot;Piece2&quot;,&quot;Piece3&quot;,&quot;Piece4&quot;,&quot;Piece5&quot;,&quot;Piece6&quot;,&quot;Piece7&quot;,&quot;Piece8&quot;,&quot;Piece10&quot;,&quot;Piece11&quot;,&quot;Piece12&quot;,&quot;Piece13&quot;,&quot;Piece14&quot;,&quot;Piece15&quot;,&quot;Piece16&quot;,&quot;Piece17&quot;,&quot;Piece18&quot;,&quot;Piece19&quot;,&quot;Piece20&quot;,&quot;Piece21&quot;)</param>
                     <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="448660788823532" type="m4_PiecesMini">
+                    <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
             <sub-events>
@@ -1041,11 +1044,11 @@
                                             <param id="0" name="Comparison">5</param>
                                             <param id="1" name="Number">2</param>
                                         </condition>
-                                        <condition id="-13" name="Pick nth instance" sid="114194643810314" type="System">
+                                        <condition disabled="1" id="-13" name="Pick nth instance" sid="114194643810314" type="System">
                                             <param id="0" name="Object">m4_Pieces</param>
                                             <param id="1" name="Instance">m4_instanceTracker</param>
                                         </condition>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="877253432482993" type="m4_Pieces">
+                                        <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="877253432482993" type="m4_Pieces">
                                             <param id="0" name="Instance variable">putOnConveyor</param>
                                         </condition>
                                     </conditions>
