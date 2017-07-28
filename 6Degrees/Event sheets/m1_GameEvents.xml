@@ -488,7 +488,7 @@
                                             <param id="0" name="Animation">&quot;Can&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="544064791441891" type="Function">
+                                        <action disabled="1" id="0" name="Call function" sid="544064791441891" type="Function">
                                             <param id="0" name="Name">&quot;hideTires&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
@@ -565,22 +565,24 @@
                                     <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="288510429455465">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="741673030140592" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="724432511133960" type="m1_Exhaust">
+                                            <param id="0" name="X">m1_Car.ImagePointX(1)</param>
+                                            <param id="1" name="Y">m1_Car.ImagePointY(1)</param>
+                                        </action>
+                                        <action id="-18" name="Rotate clockwise" sid="195138709400622" type="m1_Rim">
+                                            <param id="0" name="Degrees">5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="288510429455465">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="741673030140592" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="724432511133960" type="m1_Exhaust">
-                            <param id="0" name="X">m1_Car.ImagePointX(1)</param>
-                            <param id="1" name="Y">m1_Car.ImagePointY(1)</param>
-                        </action>
-                        <action id="-18" name="Rotate clockwise" sid="195138709400622" type="m1_Rim">
-                            <param id="0" name="Degrees">5</param>
-                        </action>
-                    </actions>
                 </event-block>
                 <comment>moves the tornado a % of the distance towards the car every tick</comment>
                 <event-group description="" sid="186891661912293" title="TornadoScrolling">
@@ -796,6 +798,10 @@
                                 <condition id="-6" name="Every X seconds" sid="824591141651914" type="System">
                                     <param id="0" name="Interval (seconds)">1</param>
                                 </condition>
+                                <condition id="1" name="Compare progress" sid="905006737706238" type="m1_TirePressureMeter">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -822,7 +828,7 @@
                                     <conditions>
                                         <condition id="1" name="Compare progress" sid="896251940426604" type="m1_TirePressureMeter">
                                             <param id="0" name="Comparison">3</param>
-                                            <param id="1" name="Value">40</param>
+                                            <param id="1" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -836,13 +842,47 @@
                                     <conditions>
                                         <condition id="1" name="Compare progress" sid="396476777011597" type="m1_TirePressureMeter">
                                             <param id="0" name="Comparison">4</param>
-                                            <param id="1" name="Value">40</param>
+                                            <param id="1" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="4" name="Set animation" sid="167011084101780" type="m1_Tire">
                                             <param id="0" name="Animation">&quot;Default&quot;</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="540514810948708">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="704645849429035" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="854032951802439">
+                                    <conditions>
+                                        <condition id="1" name="Compare progress" sid="218826660183603" type="m1_TirePressureMeter">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set progress" sid="957439296267649" type="m1_TirePressureMeter">
+                                            <param id="0" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="490109456970594">
+                                    <conditions>
+                                        <condition id="-5" name="Compare width" sid="623561356681285" type="m1_PressureProgress">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Width">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-5" name="Set width" sid="575983552614688" type="m1_PressureProgress">
+                                            <param id="0" name="Width">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1066,8 +1106,24 @@
                             </conditions>
                             <actions />
                             <sub-events>
+                                <event-block sid="507451713922092">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="922059621527501" type="System">
+                                            <param id="0" name="Variable">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="541624104178649" type="Function">
+                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="223708032580488">
                                     <conditions>
+                                        <condition id="-22" name="Else" sid="382335895471340" type="System" />
                                         <condition id="-9" name="Is visible" sid="688048114460738" type="m1_Star" />
                                     </conditions>
                                     <actions />

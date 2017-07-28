@@ -5412,25 +5412,25 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Driving" pingpong="0" repeatcount="1" repeatto="0" sid="715205405165661" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\CarV2.png">
-                            <image-point name="fuelExhaust" x="0.0160714" y="0.63" />
-                            <image-point name="frontWheel" x="0.207143" y="0.783333" />
-                            <image-point name="backWheel" x="0.810714" y="0.783333" />
+                        <frame duration="1" hotspotX="0.500901" hotspotY="0.467532" original-source="C:\Users\GAMEPLAYER-03\Downloads\Car.png">
+                            <image-point name="fuelExhaust" x="0.0162162" y="0.735931" />
+                            <image-point name="frontWheel" x="0.814414" y="0.844156" />
+                            <image-point name="backWheel" x="0.212613" y="0.844156" />
                             <collision-poly>
-                                <point x="0.075" y="0.14" />
-                                <point x="0.5" y="0.126667" />
-                                <point x="0.923214" y="0.143333" />
-                                <point x="1" y="0.493333" />
-                                <point x="0.930357" y="0.87" />
-                                <point x="0.5" y="0.89" />
-                                <point x="0.069643" y="0.87" />
-                                <point x="0" y="0.5" />
+                                <point x="0" y="0" />
+                                <point x="0" y="0" />
+                                <point x="0.873052" y="0" />
+                                <point x="1" y="0.391644" />
+                                <point x="0.891693" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.412606" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Can" pingpong="0" repeatcount="1" repeatto="0" sid="374069757748524" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\CarPump.png">
-                            <image-point name="movedExhaust" x="0.302734" y="0.595703" />
+                        <frame duration="1" hotspotX="0.628947" hotspotY="0.486667" original-source="C:\Users\GAMEPLAYER-03\Downloads\Car Refilling.png">
+                            <image-point name="movedExhaust" x="0.394737" y="0.6" />
                             <collision-poly>
                                 <point x="0.5" y="0.40625" />
                                 <point x="0.59375" y="0.40625" />
@@ -5445,6 +5445,19 @@
                     <animation framecount="1" loop="0" name="Pressure" pingpong="0" repeatcount="1" repeatto="0" sid="288918716933963" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501305" original-source="C:\Users\Connor\Desktop\HandPumpConnorVer.png">
                             <image-point name="fuelExhaust" x="0" y="0.809399" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="fyuck" pingpong="0" repeatcount="1" repeatto="0" sid="952317452688112" speed="5">
+                        <frame duration="1" hotspotX="0.0957031" hotspotY="0.558594" original-source="C:\Users\GAMEPLAYER-03\Downloads\CarPump.png">
+                            <collision-poly>
+                                <point x="0.40625" y="0.40625" />
+                                <point x="0.5" y="0.40625" />
+                                <point x="0.960938" y="0.5" />
+                                <point x="0.6875" y="0.6875" />
+                                <point x="0.5" y="0.654297" />
+                                <point x="0.345703" y="0.654297" />
+                                <point x="0.166016" y="0.5" />
+                            </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
@@ -17849,7 +17862,7 @@
         </event-folder>
     </event-folder>
     <global-instances>
-        <global-instance type="Audio" uid="2143">
+        <global-instance type="Audio" uid="2301">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -17863,14 +17876,14 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="2144" />
-        <global-instance type="Mouse" uid="2145" />
-        <global-instance type="Touch" uid="2146">
+        <global-instance type="Function" uid="2302" />
+        <global-instance type="Mouse" uid="2303" />
+        <global-instance type="Touch" uid="2304">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="LocalStorage" uid="2147" />
+        <global-instance type="LocalStorage" uid="2305" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="Game10EscapeRoom">
