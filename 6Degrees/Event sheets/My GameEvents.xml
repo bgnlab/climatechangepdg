@@ -53,95 +53,163 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="263272747151839">
+                        <event-block sid="535508989376891">
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="430130818099965" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="374098313842231" type="Touch">
-                                    <param id="0" name="Object">my_upArrow</param>
-                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="549638965310046" type="my_Frog">
-                                    <param id="0" name="Y">my_Frog.Y - my_Frog.Width</param>
+                                <action id="-15" name="Set visible" sid="666924920229234" type="my_Frog">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-8" name="Set angle" sid="338263424606081" type="my_Frog">
-                                    <param id="0" name="Angle">0</param>
-                                </action>
-                                <action id="0" name="Play" sid="711720477478939" type="Audio">
-                                    <param id="0" name="Audio file">FrogHop</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                <action id="-15" name="Set visible" sid="563245466702506" type="my_frogJump">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="477646861619464">
-                            <conditions>
-                                <condition id="0" name="On any touch start" sid="334502181023892" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="987785694248952" type="Touch">
-                                    <param id="0" name="Object">my_downArrow</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="798611409383984" type="my_Frog">
-                                    <param id="0" name="Y">my_Frog.Y + my_Frog.Width</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="508133031127262" type="my_Frog">
-                                    <param id="0" name="Angle">180</param>
-                                </action>
-                                <action id="0" name="Play" sid="294466952438379" type="Audio">
-                                    <param id="0" name="Audio file">FrogHop</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="513232559238872">
-                            <conditions>
-                                <condition id="0" name="On any touch start" sid="314382077125980" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="760853895194996" type="Touch">
-                                    <param id="0" name="Object">my_leftArrow</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-1" name="Set X" sid="830566978883554" type="my_Frog">
-                                    <param id="0" name="X">my_Frog.X - my_Frog.Height</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="840592701292938" type="my_Frog">
-                                    <param id="0" name="Angle">270</param>
-                                </action>
-                                <action id="0" name="Play" sid="184761183659952" type="Audio">
-                                    <param id="0" name="Audio file">FrogHop</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="488044670106408">
-                            <conditions>
-                                <condition id="0" name="On any touch start" sid="720560132279648" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="157916131300220" type="Touch">
-                                    <param id="0" name="Object">my_rightArrow</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-1" name="Set X" sid="321322986042198" type="my_Frog">
-                                    <param id="0" name="X">my_Frog.X + my_Frog.Height</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="146690814201211" type="my_Frog">
-                                    <param id="0" name="Angle">90</param>
-                                </action>
-                                <action id="0" name="Play" sid="323059392052683" type="Audio">
-                                    <param id="0" name="Audio file">FrogHop</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                            </actions>
+                            <sub-events>
+                                <event-block sid="263272747151839">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="374098313842231" type="Touch">
+                                            <param id="0" name="Object">my_upArrow</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="549638965310046" type="my_Frog">
+                                            <param id="0" name="Y">my_Frog.Y - my_Frog.Width</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="338263424606081" type="my_Frog">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="918023364006968" type="my_frogJump">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="711720477478939" type="Audio">
+                                            <param id="0" name="Audio file">FrogHop</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="869707101908785" type="Function">
+                                            <param id="0" name="Name">&quot;my_frogJumpEnd&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="477646861619464">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="987785694248952" type="Touch">
+                                            <param id="0" name="Object">my_downArrow</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="798611409383984" type="my_Frog">
+                                            <param id="0" name="Y">my_Frog.Y + my_Frog.Width</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="508133031127262" type="my_Frog">
+                                            <param id="0" name="Angle">180</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="914895915195299" type="my_frogJump">
+                                            <param id="0" name="Angle">180</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="294466952438379" type="Audio">
+                                            <param id="0" name="Audio file">FrogHop</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="761930758128719" type="Function">
+                                            <param id="0" name="Name">&quot;my_frogJumpEnd&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="513232559238872">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="760853895194996" type="Touch">
+                                            <param id="0" name="Object">my_leftArrow</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="830566978883554" type="my_Frog">
+                                            <param id="0" name="X">my_Frog.X - my_Frog.Height</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="840592701292938" type="my_Frog">
+                                            <param id="0" name="Angle">270</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="191758050299736" type="my_frogJump">
+                                            <param id="0" name="Angle">270</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="184761183659952" type="Audio">
+                                            <param id="0" name="Audio file">FrogHop</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="842745565475340" type="Function">
+                                            <param id="0" name="Name">&quot;my_frogJumpEnd&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="488044670106408">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="157916131300220" type="Touch">
+                                            <param id="0" name="Object">my_rightArrow</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="321322986042198" type="my_Frog">
+                                            <param id="0" name="X">my_Frog.X + my_Frog.Height</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="146690814201211" type="my_Frog">
+                                            <param id="0" name="Angle">90</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="718430001357658" type="my_frogJump">
+                                            <param id="0" name="Angle">90</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="323059392052683" type="Audio">
+                                            <param id="0" name="Audio file">FrogHop</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="621063190129361" type="Function">
+                                            <param id="0" name="Name">&quot;my_frogJumpEnd&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="542223205341652">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="967542124755288" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="430872720257495" type="my_frogJump">
+                            <param id="0" name="X">my_Frog.X</param>
+                            <param id="1" name="Y">my_Frog.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="760705112905529">
+                    <conditions>
+                        <condition id="0" name="On function" sid="155567422425914" type="Function">
+                            <param id="0" name="Name">&quot;my_frogJumpEnd&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="429721454768650" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="293961492848793" type="my_Frog">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="454644333234966" type="my_frogJump">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -190,10 +258,7 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="0" name="Set text" sid="918415615776428" type="m4_WinFailText">
-                                    <param id="0" name="Text">&quot;WASTED&quot;</param>
-                                </action>
-                                <action id="4" name="Set font color" sid="442346864147110" type="m4_WinFailText">
-                                    <param id="0" name="Color">rgb(255, 10, 10)</param>
+                                    <param id="0" name="Text">&quot;The frog got hit by a truck&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -213,8 +278,8 @@
                                     <param id="0" name="Animation">&quot;DedH&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="0" name="Set text" sid="911942164906688" type="m4_WinFailText">
-                                    <param id="0" name="Text">&quot;U R DED&quot;</param>
+                                <action id="0" name="Set text" sid="905407045141190" type="m4_WinFailText">
+                                    <param id="0" name="Text">&quot;The frog got hit by a truck&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -446,8 +511,8 @@
                             <param id="0" name="Layer">&quot;Win/Lose&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
-                        <action id="0" name="Set text" sid="749499415544343" type="m4_WinFailText">
-                            <param id="0" name="Text">&quot;FROGGO GET!&quot;</param>
+                        <action disabled="1" id="0" name="Set text" sid="749499415544343" type="m4_WinFailText">
+                            <param id="0" name="Text">&quot;The frog stayed hydrated without using any water bottles!&quot;</param>
                         </action>
                         <action id="0" name="Call function" sid="939872439089372" type="Function">
                             <param id="0" name="Name">&quot;onWin&quot;</param>
@@ -587,6 +652,9 @@
                                 <action id="-15" name="Set visible" sid="321844273916221" type="m4_star1">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="0" name="Set text" sid="136922133382167" type="m4_WinFailText">
+                                    <param id="0" name="Text">&quot;The frog stayed hydrated, bs used too many water bottles&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="212632644595197">
@@ -601,6 +669,9 @@
                                 <action id="-15" name="Set visible" sid="637543003744077" type="m4_star2">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="0" name="Set text" sid="753975214084572" type="m4_WinFailText">
+                                    <param id="0" name="Text">&quot;The frog stayed hydrated, bs used too many water bottles&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="950651348131630">
@@ -614,6 +685,9 @@
                             <actions>
                                 <action id="-15" name="Set visible" sid="307463068212917" type="m4_star3">
                                     <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="494975777920983" type="m4_WinFailText">
+                                    <param id="0" name="Text">&quot;The frog stayed hydrated without using any water bottles!&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
