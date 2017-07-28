@@ -390,7 +390,7 @@
                     <object-type name="C6_TitlePlaceHolder" sid="157485250313807">
                         <plugin id="Text" />
                     </object-type>
-                    <object-type name="Sprite2" sid="663659426814040">
+                    <object-type name="C6_Title" sid="663659426814040">
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="693388632292983" speed="5">
@@ -406,6 +406,14 @@
                                         <point x="0.122917" y="0.5" />
                                     </collision-poly>
                                 </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="C6_CreditsButton" sid="823068192580388">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="725906588165405" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -840,7 +848,16 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="294178683490327" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\animal notification.png">
+                            <collision-poly>
+                                <point x="0.168229" y="0.269167" />
+                                <point x="0.831771" y="0.269167" />
+                                <point x="0.840625" y="0.5" />
+                                <point x="0.831771" y="0.730833" />
+                                <point x="0.168229" y="0.730833" />
+                                <point x="0.159375" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -5022,7 +5039,18 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="812469399379617" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.501992" original-source="C:\Users\GAMEPLAYER-01\Downloads\Past Button.png">
+                                    <collision-poly>
+                                        <point x="0.104444" y="0.187251" />
+                                        <point x="0.5" y="0.25498" />
+                                        <point x="0.902222" y="0.175299" />
+                                        <point x="0.982222" y="0.498008" />
+                                        <point x="0.906667" y="0.832669" />
+                                        <point x="0.5" y="0.756972" />
+                                        <point x="0.1" y="0.820717" />
+                                        <point x="0.0311111" y="0.498008" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -5072,7 +5100,18 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="908969582072030" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.501992" original-source="C:\Users\GAMEPLAYER-01\Downloads\Future Button.png">
+                                    <collision-poly>
+                                        <point x="0.104444" y="0.187251" />
+                                        <point x="0.5" y="0.290837" />
+                                        <point x="0.904444" y="0.171315" />
+                                        <point x="0.982222" y="0.498008" />
+                                        <point x="0.906667" y="0.832669" />
+                                        <point x="0.5" y="0.717131" />
+                                        <point x="0.102222" y="0.816733" />
+                                        <point x="0.0333333" y="0.498008" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -7377,9 +7416,14 @@
             </object-type>
             <object-type name="GG_Black" sid="690027789939674">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="570538328059921">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="264219779795925" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\loading screen----.png" />
                     </animation>
                 </animation-folder>
             </object-type>

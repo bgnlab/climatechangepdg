@@ -252,6 +252,16 @@
                                     <param id="0" name="Layer">&quot;GG_Black&quot;</param>
                                     <param id="1" name="Visibility">1</param>
                                 </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="178090876966656" type="GG_Black">
+                                    <param id="0" name="Fade-in time">0</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="181818831772542" type="GG_Black">
+                                    <param id="0" name="Fade-out time">0</param>
+                                </action>
+                                <action behavior="Fade" id="3" name="Set wait time" sid="372506558645698" type="GG_Black">
+                                    <param id="0" name="Wait time">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="918209069048133" type="GG_Black" />
                             </actions>
                         </event-block>
                         <event-block sid="553899874807136">
