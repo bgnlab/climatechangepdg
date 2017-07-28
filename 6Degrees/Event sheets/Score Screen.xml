@@ -3,28 +3,17 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Score Screen</name>
     <events>
+        <variable constant="0" name="1A" sid="810520331821845" static="0" type="text"></variable>
         <event-block sid="128953304725421">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="944434347981893" type="System" />
             </conditions>
             <actions />
             <sub-events>
-                <comment>Game0</comment>
-                <event-block sid="384552471876238">
-                    <conditions />
-                    <actions>
-                        <action id="0" name="Set text" sid="459159950464812" type="SS_Info0">
-                            <param id="0" name="Text">&quot;Tutorial: &quot;</param>
-                        </action>
-                        <action id="1" name="Append text" sid="565549178922902" type="SS_Info0">
-                            <param id="0" name="Text">GG_State.Get(&quot;game&quot; &amp; 0)</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-group description="" sid="351383520900477" title="SS Calculate Total">
                     <sub-events>
                         <variable constant="0" name="GG_Score_Sum" sid="349869527942969" static="0" type="number">0</variable>
-                        <variable constant="0" name="GG_Trigger_Cutscene" sid="408069155592615" static="0" type="number">0</variable>
+                        <variable constant="0" name="GG_Time_Sum" sid="359074426913434" static="0" type="number">0</variable>
                         <event-block sid="319534125330314">
                             <conditions>
                                 <condition id="-10" name="For" sid="131035921791816" type="System">
@@ -35,41 +24,132 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <comment>Adding Medium and Hard Scores to Sum</comment>
                                 <variable constant="0" name="GG_Temp_Scores" sid="381423096902173" static="0" type="text"></variable>
-                                <event-block sid="899490393477255">
+                                <variable constant="0" name="GG_Temp_Scores_Str" sid="475756486484760" static="0" type="text"></variable>
+                                <variable constant="0" name="GG_Temp_Time" sid="228334598851122" static="0" type="number">0</variable>
+                                <event-block sid="476366178492910">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="987325623904232" type="System">
-                                            <param id="0" name="First value">GG_State.Get(&quot;game&quot; &amp; loopindex)</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Second value">&quot;0&quot;</param>
+                                        <condition id="-7" name="Compare instance variable" sid="221022971523958" type="SS_Info0">
+                                            <param id="0" name="Instance variable">Thing</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">loopindex</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="565359462131614" type="System">
-                                            <param id="0" name="Variable">GG_Temp_Scores</param>
-                                            <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; loopindex)</param>
+                                        <action id="-10" name="Add to" sid="818583250672142" type="System">
+                                            <param id="0" name="Variable">1A</param>
+                                            <param id="1" name="Value">SS_Info0.IID &amp; &quot; &quot; &amp; SS_Info0.Thing &amp; &quot; %%% &quot;</param>
                                         </action>
-                                        <action id="-10" name="Add to" sid="887485590139072" type="System">
-                                            <param id="0" name="Variable">GG_Score_Sum</param>
-                                            <param id="1" name="Value">int(tokenat(GG_Temp_Scores, 1, &quot; &quot;)) + int(tokenat(GG_Temp_Scores, 2, &quot; &quot;)) </param>
+                                        <action id="0" name="Set text" sid="189255329347947" type="SS_Info0">
+                                            <param id="0" name="Text">&quot;&quot;</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                                <event-block sid="421984244030900">
-                                    <conditions />
-                                    <actions />
+                                    <sub-events>
+                                        <comment>Add Scores</comment>
+                                        <event-block sid="899490393477255">
+                                            <conditions>
+                                                <condition id="3" name="Has key" sid="400877578999624" type="GG_State">
+                                                    <param id="0" name="Key">&quot;game&quot; &amp; loopindex</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="565359462131614" type="System">
+                                                    <param id="0" name="Variable">GG_Temp_Scores</param>
+                                                    <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; loopindex)</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="887485590139072" type="System">
+                                                    <param id="0" name="Variable">GG_Score_Sum</param>
+                                                    <param id="1" name="Value">int(tokenat(GG_Temp_Scores, 1, &quot; &quot;)) + int(tokenat(GG_Temp_Scores, 2, &quot; &quot;)) </param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="760815108047277">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="1" name="Append text" sid="335965416010209" type="SS_Info0">
+                                                            <param id="0" name="Text">&quot;Tutorial: &quot; &amp; (int(tokenat(GG_Temp_Scores, 0, &quot; &quot;)) = 0 ? &quot;Not Done&quot; : &quot;Done&quot;) &amp; newline</param>
+                                                        </action>
+                                                        <action id="1" name="Append text" sid="779331842406053" type="SS_Info0">
+                                                            <param id="0" name="Text">&quot;Medium: &quot; &amp; tokenat(GG_Temp_Scores, 1, &quot; &quot;) &amp; newline</param>
+                                                        </action>
+                                                        <action id="1" name="Append text" sid="172774226240971" type="SS_Info0">
+                                                            <param id="0" name="Text">&quot;Hard: &quot; &amp; tokenat(GG_Temp_Scores, 2, &quot; &quot;) &amp; newline</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="839165446166156">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="786797840567124" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Append text" sid="985575091697703" type="SS_Info0">
+                                                    <param id="0" name="Text">&quot;No Score Data&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="870721081706233">
+                                            <conditions />
+                                            <actions>
+                                                <action id="1" name="Append text" sid="838069487842747" type="SS_Info0">
+                                                    <param id="0" name="Text">newline</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>Add Time</comment>
+                                        <event-block sid="569758635154474">
+                                            <conditions>
+                                                <condition id="3" name="Has key" sid="892595184882450" type="GG_State">
+                                                    <param id="0" name="Key">&quot;time&quot; &amp; loopindex</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="497973309963716" type="System">
+                                                    <param id="0" name="Variable">GG_Temp_Time</param>
+                                                    <param id="1" name="Value">GG_State.Get(&quot;time&quot; &amp; loopindex)</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="649719582855460" type="System">
+                                                    <param id="0" name="Variable">GG_Time_Sum</param>
+                                                    <param id="1" name="Value">GG_Temp_Time</param>
+                                                </action>
+                                                <action id="1" name="Append text" sid="608503328735728" type="SS_Info0">
+                                                    <param id="0" name="Text">&quot;Time Spent: &quot; &amp; floor(GG_Temp_Time) &amp; &quot;s&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="377354550755184">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="861510644446928" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Append text" sid="201051145316227" type="SS_Info0">
+                                                    <param id="0" name="Text">&quot;No Time Data&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>Print stats for total</comment>
                         <event-block sid="395101742309645">
                             <conditions />
                             <actions>
                                 <action id="0" name="Set text" sid="188836386889130" type="SS_InfoX">
-                                    <param id="0" name="Text">&quot;Total: &quot;</param>
+                                    <param id="0" name="Text">&quot;Total Stars: &quot;</param>
                                 </action>
                                 <action id="1" name="Append text" sid="900531317932053" type="SS_InfoX">
                                     <param id="0" name="Text">GG_Score_Sum</param>
+                                </action>
+                                <action id="1" name="Append text" sid="332889704236722" type="SS_InfoX">
+                                    <param id="0" name="Text">newline</param>
+                                </action>
+                                <action id="1" name="Append text" sid="782892023273937" type="SS_InfoX">
+                                    <param id="0" name="Text">&quot;Total Time in minigames: &quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="158236777096054" type="SS_InfoX">
+                                    <param id="0" name="Text">floor(GG_Time_Sum) &amp; &quot;s&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -79,7 +159,7 @@
         </event-block>
         <event-block sid="172451340696401">
             <conditions>
-                <condition id="14" name="On tap" sid="679675686764986" type="Touch" />
+                <condition id="0" name="On any touch start" sid="679675686764986" type="Touch" />
             </conditions>
             <actions />
             <sub-events>

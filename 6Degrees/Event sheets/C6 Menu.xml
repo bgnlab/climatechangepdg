@@ -136,7 +136,7 @@
                                     </actions>
                                 </event-block>
                                 <comment>DEBUG</comment>
-                                <event-block sid="954989324679088">
+                                <event-block disabled="1" sid="954989324679088">
                                     <conditions />
                                     <actions>
                                         <action id="-15" name="Set visible" sid="417300150961366" type="C6_Animals">
@@ -182,7 +182,12 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Add key" sid="939882333540247" type="GG_State">
+                                    <param id="0" name="Key">&quot;exit from game&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <comment>TODO: Set to &quot;UIStart&quot; when score changes</comment>
                                 <event-block sid="433087114017480">
@@ -419,95 +424,112 @@
                         <event-block sid="337458181481037">
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="794677730294377" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="133626459089082" type="Touch">
-                                    <param id="0" name="Object">C6_ButtonLevels</param>
-                                </condition>
                             </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="534284093832503" type="System">
-                                    <param id="0" name="Variable">C6_Switched</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="319080604571406" type="Function">
-                                    <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;UILevels&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="451275233955841">
-                            <conditions>
-                                <condition id="0" name="On any touch start" sid="585212392947408" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="110400701618433" type="Touch">
-                                    <param id="0" name="Object">C6_Sound</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="899748187666027" type="System">
-                                    <param id="0" name="Variable">C6_Switched</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="8" name="Set silent" sid="697357458315144" type="Audio">
-                                    <param id="0" name="Mode">2</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
-                                <event-block sid="203275918447945">
+                                <event-block sid="101957701906778">
                                     <conditions>
-                                        <condition id="3" name="Is silent" sid="147487017696079" type="Audio" />
+                                        <condition id="4" name="Is touching object" sid="133626459089082" type="Touch">
+                                            <param id="0" name="Object">C6_ButtonLevels</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="941333268197931" type="C6_Sound">
-                                            <param id="0" name="Animation">&quot;off&quot;</param>
-                                            <param id="1" name="From">1</param>
+                                        <action id="-9" name="Set value" sid="534284093832503" type="System">
+                                            <param id="0" name="Variable">C6_Switched</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="319080604571406" type="Function">
+                                            <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;UILevels&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="424382448460822">
+                                <event-block sid="655518581189830">
                                     <conditions>
-                                        <condition id="-22" name="Else" sid="516628060789746" type="System" />
+                                        <condition id="4" name="Is touching object" sid="110400701618433" type="Touch">
+                                            <param id="0" name="Object">C6_Sound</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="588020493485883" type="C6_Sound">
-                                            <param id="0" name="Animation">&quot;on&quot;</param>
-                                            <param id="1" name="From">1</param>
+                                        <action id="-9" name="Set value" sid="899748187666027" type="System">
+                                            <param id="0" name="Variable">C6_Switched</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="8" name="Set silent" sid="697357458315144" type="Audio">
+                                            <param id="0" name="Mode">2</param>
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="691360003313515">
+                                        <event-block sid="203275918447945">
                                             <conditions>
-                                                <condition id="4" name="Is any playing" sid="714163671130310" type="Audio" />
-                                            </conditions>
-                                            <actions />
-                                        </event-block>
-                                        <event-block sid="164309577227648">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="595602141414012" type="System" />
+                                                <condition id="3" name="Is silent" sid="147487017696079" type="Audio" />
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Play" sid="529409319061515" type="Audio">
-                                                    <param id="0" name="Audio file">bgm_casualmenubackground</param>
-                                                    <param id="2" name="Loop">1</param>
-                                                    <param id="3" name="Volume">0</param>
-                                                    <param id="1" name="Tag (optional)">&quot;Casual Menu&quot;</param>
+                                                <action id="4" name="Set animation" sid="941333268197931" type="C6_Sound">
+                                                    <param id="0" name="Animation">&quot;off&quot;</param>
+                                                    <param id="1" name="From">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="424382448460822">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="516628060789746" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="588020493485883" type="C6_Sound">
+                                                    <param id="0" name="Animation">&quot;on&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="691360003313515">
+                                                    <conditions>
+                                                        <condition id="4" name="Is any playing" sid="714163671130310" type="Audio" />
+                                                    </conditions>
+                                                    <actions />
+                                                </event-block>
+                                                <event-block sid="164309577227648">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="595602141414012" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="529409319061515" type="Audio">
+                                                            <param id="0" name="Audio file">bgm_casualmenubackground</param>
+                                                            <param id="2" name="Loop">1</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;Casual Menu&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="845478679691389">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="674941170501694" type="Touch">
+                                            <param id="0" name="Object">C6_CreditsButton</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="463670082651062" type="System">
+                                            <param id="0" name="Layout">CR_edits</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="293768219577817">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="131472778900713" type="Touch">
+                                            <param id="0" name="Object">C6_StatsButton</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="567895431091476" type="System">
+                                            <param id="0" name="Layout">Score Screen</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="859141816407081">
-                            <conditions>
-                                <condition id="0" name="On any touch start" sid="538412177672642" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="674941170501694" type="Touch">
-                                    <param id="0" name="Object">C6_CreditsButton</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="463670082651062" type="System">
-                                    <param id="0" name="Layout">CR_edits</param>
-                                </action>
-                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
