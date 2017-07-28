@@ -35,6 +35,10 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action id="-9" name="Set value" sid="300993636334578" type="System">
+                    <param id="0" name="Variable">CR_Timestep</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="322290783364131">

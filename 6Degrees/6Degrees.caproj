@@ -17836,6 +17836,23 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Score Screen">
+            <object-type name="SS_Title" sid="583258007323342">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="SS_Title_Game1" sid="737822138005816">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="SS_Info0" sid="722085833279438">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="Thing" sid="517357497367606" type="number" />
+                </instance-variables>
+            </object-type>
+            <object-type name="SS_InfoX" sid="763623526211472">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-type name="Audio" sid="836488677985367">
             <plugin id="Audio" />
         </object-type>
@@ -18215,6 +18232,9 @@
         <layout-folder name="Credits">
             <layout>CR_edits.xml</layout>
         </layout-folder>
+        <layout-folder name="Score Screen">
+            <layout>Score Screen.xml</layout>
+        </layout-folder>
     </layout-folder>
     <event-folder>
         <event-folder name="M2 Escape Room">
@@ -18290,9 +18310,12 @@
         <event-folder name="Credits">
             <event-sheet>CR_eepy.xml</event-sheet>
         </event-folder>
+        <event-folder name="Score Screen">
+            <event-sheet>Score Screen.xml</event-sheet>
+        </event-folder>
     </event-folder>
     <global-instances>
-        <global-instance type="Audio" uid="2305">
+        <global-instance type="Audio" uid="2308">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -18306,14 +18329,14 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="2308" />
-        <global-instance type="Mouse" uid="2309" />
-        <global-instance type="Touch" uid="2310">
+        <global-instance type="Function" uid="2309" />
+        <global-instance type="Mouse" uid="2310" />
+        <global-instance type="Touch" uid="2311">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="LocalStorage" uid="2311" />
+        <global-instance type="LocalStorage" uid="2313" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="Game10EscapeRoom">

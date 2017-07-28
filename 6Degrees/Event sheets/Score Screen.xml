@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Score Screen</name>
+    <events>
+        <event-block sid="128953304725421">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="944434347981893" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>Game0</comment>
+                <event-block sid="384552471876238">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set text" sid="459159950464812" type="SS_Info0">
+                            <param id="0" name="Text">&quot;Tutorial: &quot;</param>
+                        </action>
+                        <action id="1" name="Append text" sid="565549178922902" type="SS_Info0">
+                            <param id="0" name="Text">GG_State.Get(&quot;game&quot; &amp; 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="351383520900477" title="SS Calculate Total">
+                    <sub-events>
+                        <variable constant="0" name="GG_Score_Sum" sid="349869527942969" static="0" type="number">0</variable>
+                        <variable constant="0" name="GG_Trigger_Cutscene" sid="408069155592615" static="0" type="number">0</variable>
+                        <event-block sid="319534125330314">
+                            <conditions>
+                                <condition id="-10" name="For" sid="131035921791816" type="System">
+                                    <param id="0" name="Name">&quot;Each Game&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">7</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Adding Medium and Hard Scores to Sum</comment>
+                                <variable constant="0" name="GG_Temp_Scores" sid="381423096902173" static="0" type="text"></variable>
+                                <event-block sid="899490393477255">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="987325623904232" type="System">
+                                            <param id="0" name="First value">GG_State.Get(&quot;game&quot; &amp; loopindex)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;0&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="565359462131614" type="System">
+                                            <param id="0" name="Variable">GG_Temp_Scores</param>
+                                            <param id="1" name="Value">GG_State.Get(&quot;game&quot; &amp; loopindex)</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="887485590139072" type="System">
+                                            <param id="0" name="Variable">GG_Score_Sum</param>
+                                            <param id="1" name="Value">int(tokenat(GG_Temp_Scores, 1, &quot; &quot;)) + int(tokenat(GG_Temp_Scores, 2, &quot; &quot;)) </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="421984244030900">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="395101742309645">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="188836386889130" type="SS_InfoX">
+                                    <param id="0" name="Text">&quot;Total: &quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="900531317932053" type="SS_InfoX">
+                                    <param id="0" name="Text">GG_Score_Sum</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-block>
+        <event-block sid="172451340696401">
+            <conditions>
+                <condition id="14" name="On tap" sid="679675686764986" type="Touch" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="276228129507421">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="223780828027054" type="System">
+                            <param id="0" name="Variable">GG_GAME_VERSION</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;CASUAL&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="656708473389238" type="System">
+                            <param id="0" name="Layout">C6 Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="806978717720977">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="338992525784530" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="691689114233506" type="System">
+                            <param id="0" name="Layout">N6 Future View</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
