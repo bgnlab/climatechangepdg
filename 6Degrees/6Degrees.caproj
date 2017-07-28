@@ -16040,8 +16040,8 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="591054789245044" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Hopper\frogger frog.png">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="591054789245044" speed="0.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-04\Desktop\frogger frog.png">
                             <collision-poly>
                                 <point x="0.363083" y="0.309577" />
                                 <point x="0.616633" y="0.309577" />
@@ -16051,7 +16051,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Ded" pingpong="0" repeatcount="1" repeatto="0" sid="626001422768590" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Hopper\dead frog.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-04\Desktop\dead frog.png">
                             <collision-poly>
                                 <point x="0.0709939" y="0.0668151" />
                                 <point x="0.926978" y="0.077951" />
@@ -16061,7 +16061,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="DedH" pingpong="0" repeatcount="1" repeatto="0" sid="520294246660815" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Hopper\dead frog horizontal.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-04\Desktop\dead frog horizontal.png">
                             <collision-poly>
                                 <point x="0.166667" y="0.166667" />
                                 <point x="0.5" y="0.0208333" />
@@ -16070,6 +16070,16 @@
                                 <point x="0.90625" y="0.90625" />
                                 <point x="0.09375" y="0.90625" />
                                 <point x="0.1875" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="909035415747496" speed="5">
+                        <frame duration="1" hotspotX="0.505882" hotspotY="0.338346">
+                            <collision-poly>
+                                <point x="0.388235" y="0.338346" />
+                                <point x="0.611765" y="0.338346" />
+                                <point x="0.611765" y="0.556391" />
+                                <point x="0.388235" y="0.56391" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -16482,6 +16492,25 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="847651111509739" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_frogJump" sid="240421039085707">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="958032254786419" speed="5">
+                        <frame duration="1" hotspotX="0.504" hotspotY="0.355263" original-source="C:\Users\GAMEPLAYER-04\Desktop\frog jump.png">
+                            <collision-poly>
+                                <point x="0.208" y="0.171053" />
+                                <point x="0.496" y="0.0921053" />
+                                <point x="0.792" y="0.171053" />
+                                <point x="0.704" y="0.5" />
+                                <point x="0.816" y="0.848684" />
+                                <point x="0.496" y="0.644737" />
+                                <point x="0.184" y="0.848684" />
+                                <point x="0.288" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -17849,7 +17878,7 @@
         </event-folder>
     </event-folder>
     <global-instances>
-        <global-instance type="Audio" uid="2143">
+        <global-instance type="Audio" uid="2301">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -17863,14 +17892,14 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="2144" />
-        <global-instance type="Mouse" uid="2145" />
-        <global-instance type="Touch" uid="2146">
+        <global-instance type="Function" uid="2302" />
+        <global-instance type="Mouse" uid="2303" />
+        <global-instance type="Touch" uid="2304">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="LocalStorage" uid="2147" />
+        <global-instance type="LocalStorage" uid="2305" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="Game10EscapeRoom">
