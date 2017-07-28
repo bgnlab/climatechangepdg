@@ -311,6 +311,12 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="883203680437981">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="410426145041496" type="System" />
+                                    </conditions>
+                                    <actions />
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <comment>DEBUG MODE</comment>
@@ -346,6 +352,12 @@
                                             <param id="1" name="Parameter {n}">GG_Selected_Game{###}2</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                                <event-block sid="248806029961324">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="590698805131127" type="System" />
+                                    </conditions>
+                                    <actions />
                                 </event-block>
                             </sub-events>
                         </event-block>
