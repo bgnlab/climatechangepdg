@@ -192,10 +192,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>960</x>
-                        <y>20</y>
+                        <y>25</y>
                         <z>0</z>
-                        <width>1920</width>
-                        <height>40</height>
+                        <width>50</width>
+                        <height>50</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -459,8 +459,8 @@
                         <x>1056</x>
                         <y>-736</y>
                         <z>0</z>
-                        <width>384</width>
-                        <height>288</height>
+                        <width>428.651153564</width>
+                        <height>576</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1039,8 +1039,8 @@
                         <x>238</x>
                         <y>-748</y>
                         <z>0</z>
-                        <width>288</width>
-                        <height>288</height>
+                        <width>216</width>
+                        <height>216</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1387,7 +1387,7 @@
                         <x>224</x>
                         <y>-704</y>
                         <z>0</z>
-                        <width>448</width>
+                        <width>560</width>
                         <height>288</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -1561,8 +1561,8 @@
                         <x>336</x>
                         <y>-836</y>
                         <z>0</z>
-                        <width>288</width>
-                        <height>384</height>
+                        <width>1200</width>
+                        <height>800</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1728,6 +1728,46 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="m4_PiecesMini" uid="2306">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Piece1</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <xOffsetValue>0</xOffsetValue>
+                        <yOffsetValue>0</yOffsetValue>
+                        <isSelected>false</isSelected>
+                        <lastX>0</lastX>
+                        <lastY>0</lastY>
+                        <wasDropped>false</wasDropped>
+                        <placementSuccessful>false</placementSuccessful>
+                        <putOnConveyor>false</putOnConveyor>
+                        <timeLeftInStore>0</timeLeftInStore>
+                        <wasSold>false</wasSold>
+                        <grabbed>false</grabbed>
+                        <wasMoved>false</wasMoved>
+                        <isSizedUp>false</isSizedUp>
+                        <Number>0</Number>
+                        <tutResetX>0</tutResetX>
+                        <tutResetY>0</tutResetY>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2461</x>
+                        <y>365</y>
+                        <z>0</z>
+                        <width>96</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1815,12 +1855,12 @@
                 </instance>
                 <instance type="m4_WinFailText" uid="1714">
                     <properties>
-                        <text>Text</text>
+                        <text>There was more donations than you were able to sell, but you could possibly organize your store a bit better to fit a few more in.</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-35,400,0</font>
+                        <font>Arial,-48,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -1829,10 +1869,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>391</x>
-                        <y>484</y>
+                        <y>475</y>
                         <z>0</z>
                         <width>1133</width>
-                        <height>226</height>
+                        <height>267</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
