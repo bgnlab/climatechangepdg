@@ -236,8 +236,8 @@
                 <object-type name="C6_Bear" sid="753150928498980">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709696637834568" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\c6\bear.png">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="803042297765064" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500935">
                                 <collision-poly>
                                     <point x="0.455801" y="0.334008" />
                                     <point x="0.5" y="0.0425101" />
@@ -249,6 +249,28 @@
                                     <point x="0.267956" y="0.5" />
                                 </collision-poly>
                             </frame>
+                        </animation>
+                        <animation framecount="9" loop="0" name="moving" pingpong="0" repeatcount="1" repeatto="0" sid="709696637834568" speed="5">
+                            <frame duration="8" hotspotX="0.5" hotspotY="0.500935" original-source="C:\Users\GAMEPLAYER-01\Downloads\drive-download-20170801T212529Z-001\bear.png">
+                                <collision-poly>
+                                    <point x="0.455801" y="0.334008" />
+                                    <point x="0.5" y="0.0425101" />
+                                    <point x="0.839779" y="0.117409" />
+                                    <point x="0.90884" y="0.5" />
+                                    <point x="0.867403" y="0.902834" />
+                                    <point x="0.5" y="0.945344" />
+                                    <point x="0.472376" y="0.653846" />
+                                    <point x="0.267956" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500935" original-source="C:\Users\GAMEPLAYER-01\Downloads\drive-download-20170801T212529Z-001\bear 2.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500935" original-source="C:\Users\GAMEPLAYER-01\Downloads\drive-download-20170801T212529Z-001\bear 3.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500935" original-source="C:\Users\GAMEPLAYER-01\Downloads\drive-download-20170801T212529Z-001\bear 4.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500935" original-source="C:\Users\GAMEPLAYER-01\Downloads\drive-download-20170801T212529Z-001\bear 5.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500935" original-source="C:\Users\GAMEPLAYER-01\Downloads\drive-download-20170801T212529Z-001\bear 6.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500935" original-source="C:\Users\GAMEPLAYER-01\Downloads\drive-download-20170801T212529Z-001\bear 7.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500935" original-source="C:\Users\GAMEPLAYER-01\Downloads\drive-download-20170801T212529Z-001\bear 8.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500935" original-source="C:\Users\GAMEPLAYER-01\Downloads\drive-download-20170801T212529Z-001\bear 9.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -357,7 +379,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="635036005263512" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\squirrel.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.501259" original-source="C:\Users\GAMEPLAYER-01\Downloads\drive-download-20170801T212538Z-001\squirrel.png">
                                 <collision-poly>
                                     <point x="0.196721" y="0.204545" />
                                     <point x="0.5" y="0.338068" />
@@ -369,6 +391,14 @@
                                     <point x="0.169399" y="0.5" />
                                 </collision-poly>
                             </frame>
+                        </animation>
+                        <animation framecount="6" loop="0" name="moving" pingpong="0" repeatcount="1" repeatto="0" sid="421509679511702" speed="6">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.501259" original-source="C:\Users\GAMEPLAYER-01\Downloads\drive-download-20170801T212538Z-001\squirrel 2.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.501259" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.501259" original-source="C:\Users\GAMEPLAYER-01\Downloads\drive-download-20170801T212538Z-001\squirrel 4.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.501259" original-source="C:\Users\GAMEPLAYER-01\Downloads\drive-download-20170801T212538Z-001\squirrel 3.png" />
+                            <frame duration="5" hotspotX="0.5" hotspotY="0.501259" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.501259" original-source="C:\Users\GAMEPLAYER-01\Downloads\drive-download-20170801T212538Z-001\squirrel.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -444,7 +474,18 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="725906588165405" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\GAMEPLAYER-01\Downloads\credit button.png">
+                                    <collision-poly>
+                                        <point x="0.0375" y="0.1" />
+                                        <point x="0.5" y="0" />
+                                        <point x="0.9625" y="0.1" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.9625" y="0.9" />
+                                        <point x="0.5" y="1" />
+                                        <point x="0.0375" y="0.9" />
+                                        <point x="0" y="0.5" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -452,7 +493,18 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="193165035944000" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\GAMEPLAYER-01\Downloads\stats button.png">
+                                    <collision-poly>
+                                        <point x="0.0375" y="0.1" />
+                                        <point x="0.5" y="0" />
+                                        <point x="0.9625" y="0.1" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.9625" y="0.9" />
+                                        <point x="0.5" y="1" />
+                                        <point x="0.0375" y="0.9" />
+                                        <point x="0" y="0.5" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -871,12 +923,6 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\Casusal game menu screen.png" />
                     </animation>
                 </animation-folder>
-            </object-type>
-            <object-type global="1" name="C6_ScoreList" sid="104839921834037">
-                <plugin id="Arr" />
-            </object-type>
-            <object-type global="1" name="Array" sid="887064551721954">
-                <plugin id="Arr" />
             </object-type>
             <object-type name="C6_NewAnimalText" sid="927439465223004">
                 <plugin id="Sprite" />
@@ -5251,7 +5297,18 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="805515513381335" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\GAMEPLAYER-01\Downloads\stats button.png">
+                                    <collision-poly>
+                                        <point x="0.0375" y="0.1" />
+                                        <point x="0.5" y="0" />
+                                        <point x="0.9625" y="0.1" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.9625" y="0.9" />
+                                        <point x="0.5" y="1" />
+                                        <point x="0.0375" y="0.9" />
+                                        <point x="0" y="0.5" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>

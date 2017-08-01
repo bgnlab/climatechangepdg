@@ -19,7 +19,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="845444293321518" type="Function">
                             <param id="0" name="Name">&quot;GG Initialize Data&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                            <param id="1" name="Parameter {n}">&quot;STORY&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -60,6 +60,12 @@
                     <param id="0" name="Animation">&quot;future&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="0" name="Play" sid="435732954829997" type="Audio">
+                    <param id="0" name="Audio file">bgm_1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="0" name="Call function" sid="228886068982522" type="Function">
                     <param id="0" name="Name">&quot;N6 Transition In&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
@@ -79,6 +85,7 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="304106484670452" type="Audio" />
                 <action id="0" name="Call function" sid="446648195789756" type="Function">
                     <param id="0" name="Name">&quot;N6 Transition To&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;N6 Present View&quot;</param>

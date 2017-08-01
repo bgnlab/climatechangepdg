@@ -2187,6 +2187,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="454267155211708" type="Scene6_HanaSmol" />
+                                <action id="33" name="Stop all" sid="398108071135430" type="Audio" />
                                 <action id="-2" name="Go to layout" sid="287730513686746" type="System">
                                     <param id="0" name="Layout">N6 Future View</param>
                                 </action>
@@ -2205,6 +2206,7 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="921605832408663" type="Scene6_HanaSmol" />
+                <action id="33" name="Stop all" sid="434509399746379" type="Audio" />
                 <action id="-2" name="Go to layout" sid="511902188846956" type="System">
                     <param id="0" name="Layout">N6 Future View</param>
                 </action>

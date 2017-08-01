@@ -124,6 +124,33 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="C6_BBQ" uid="820">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <name>bbq</name>
+                        <gameNum>0</gameNum>
+                        <anim_dur>0</anim_dur>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1004</x>
+                        <y>648</y>
+                        <z>0</z>
+                        <width>258.724517822</width>
+                        <height>323.676300049</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502092063</hotspotX>
+                        <hotspotY>0.501672268</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="C6_Bear" uid="818">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -142,11 +169,11 @@
                         <x>1109</x>
                         <y>513</y>
                         <z>0</z>
-                        <width>327.841888428</width>
-                        <height>447.386413574</height>
+                        <width>411.160827637</width>
+                        <height>484.517669678</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.500934601</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -189,7 +216,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1560</x>
-                        <y>710</y>
+                        <y>616</y>
                         <z>0</z>
                         <width>400</width>
                         <height>150</height>
@@ -211,7 +238,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1560</x>
-                        <y>960</y>
+                        <y>1012</y>
                         <z>0</z>
                         <width>108</width>
                         <height>108</height>
@@ -286,11 +313,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>367</x>
-                        <y>418</y>
+                        <x>377</x>
+                        <y>441</y>
                         <z>0</z>
-                        <width>315.818817139</width>
-                        <height>308.397521973</height>
+                        <width>364.861907959</width>
+                        <height>356.28817749</height>
                         <depth>0</depth>
                         <hotspotX>0.502008021</hotspotX>
                         <hotspotY>0.501976311</hotspotY>
@@ -348,33 +375,6 @@
                         <depth>0</depth>
                         <hotspotX>0.502824843</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="C6_BBQ" uid="820">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <name>bbq</name>
-                        <gameNum>0</gameNum>
-                        <anim_dur>0</anim_dur>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1004</x>
-                        <y>662</y>
-                        <z>0</z>
-                        <width>258.724517822</width>
-                        <height>323.676300049</height>
-                        <depth>0</depth>
-                        <hotspotX>0.502092063</hotspotX>
-                        <hotspotY>0.501672268</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -505,11 +505,11 @@
                         <x>1109</x>
                         <y>973</y>
                         <z>0</z>
-                        <width>366</width>
-                        <height>352</height>
+                        <width>404</width>
+                        <height>397</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.501259446</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -524,14 +524,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1460</x>
-                        <y>845</y>
+                        <x>1560</x>
+                        <y>868</y>
                         <z>0</z>
                         <width>200</width>
-                        <height>100</height>
+                        <height>75</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.50666666</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -546,14 +546,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1660</x>
-                        <y>845</y>
+                        <x>1560</x>
+                        <y>761</y>
                         <z>0</z>
                         <width>200</width>
-                        <height>100</height>
+                        <height>75</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.50666666</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1113,20 +1113,6 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="C6_ScoreList" uid="2">
-            <properties>
-                <width>0</width>
-                <height>0</height>
-                <depth>0</depth>
-            </properties>
-        </instance>
-        <instance type="Array" uid="25">
-            <properties>
-                <width>12</width>
-                <height>3</height>
-                <depth>1</depth>
-            </properties>
-        </instance>
         <instance type="Dictionary" uid="1202" />
     </nonworld-instances>
     <effects />

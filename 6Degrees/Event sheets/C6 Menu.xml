@@ -38,7 +38,12 @@
                             <conditions>
                                 <condition id="4" name="Is empty" sid="248737792494712" type="GG_State" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Call function" sid="859032456075485" type="Function">
+                                    <param id="0" name="Name">&quot;GG Initialize Data&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;CASUAL&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="998892436236842">
                             <conditions>
@@ -98,6 +103,15 @@
                                             <actions>
                                                 <action id="-15" name="Set visible" sid="861399703037747" type="C6_Animals">
                                                     <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>DEBUG</comment>
+                                        <event-block disabled="1" sid="157823720120215">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="568082845730707" type="C6_Animals">
+                                                    <param id="0" name="Visibility">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>

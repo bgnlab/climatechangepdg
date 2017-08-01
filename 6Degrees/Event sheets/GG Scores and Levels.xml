@@ -9,32 +9,9 @@
         <variable constant="0" name="GG_Callback" sid="401688082894111" static="0" type="text"></variable>
         <variable comment="Debug Stuff" constant="0" name="GG_hi" sid="119982164244513" static="0" type="text"></variable>
         <variable constant="0" name="GG_Selected_Region" sid="834754807406336" static="0" type="number">0</variable>
-        <variable comment="Either &apos;CASUAL&apos; or &apos;STORY&apos;" constant="1" name="GG_GAME_VERSION" sid="661238395450024" static="0" type="text">CASUAL</variable>
+        <variable comment="Either &apos;CASUAL&apos; or &apos;STORY&apos;" constant="1" name="GG_GAME_VERSION" sid="661238395450024" static="0" type="text">STORY</variable>
         <event-group description="" sid="888092148056112" title="GG Initializing Data">
             <sub-events>
-                <event-block sid="926914594403044">
-                    <conditions>
-                        <condition id="-25" name="On loader layout complete" sid="475709293447271" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="145375459362051">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="514950079676497" type="System">
-                                    <param id="0" name="Variable">GG_GAME_VERSION</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;CASUAL&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="563922283526913" type="Function">
-                                    <param id="0" name="Name">&quot;GG Initialize Data&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="100060445461913">
                     <conditions>
                         <condition id="0" name="On function" sid="340401043164049" type="Function">
@@ -44,7 +21,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="644260469200207" type="System">
                             <param id="0" name="Variable">GG_After_LS</param>
-                            <param id="1" name="Value">&quot;Start &quot; &amp; GG_GAME_VERSION</param>
+                            <param id="1" name="Value">&quot;Start &quot; &amp; Function.Param(0)</param>
                         </action>
                     </actions>
                     <sub-events>
