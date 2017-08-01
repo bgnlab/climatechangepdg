@@ -1014,6 +1014,10 @@
                                 <action id="0" name="Set text" sid="734076674340784" type="m1_WinFailText">
                                     <param id="0" name="Text">&quot;Now don&apos;t get caught in the other difficulties...&quot;</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="888427355275322" type="m1_RetryBtn" />
+                                <action id="-1" name="Set X" sid="417750293075115" type="m1_ExitBtn">
+                                    <param id="0" name="X">960</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>

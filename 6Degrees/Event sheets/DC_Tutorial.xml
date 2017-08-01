@@ -53,7 +53,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="972850757979799" type="DC_TutorialText">
-                            <param id="0" name="Text">&quot;Parking vehicles increases your score. Park ten or more vehicles for a perfect score!&quot;</param>
+                            <param id="0" name="Text">&quot;Parking vehicles will increase your score when the passenger reaches their destination.&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="189191188655626" type="DC_TapToContinue">
                             <param id="0" name="Text">&quot;Tap to Continue&quot;</param>
@@ -103,7 +103,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="504872338806578" type="DC_Bike">
                             <param id="0" name="Instance variable">TARGET</param>
-                            <param id="1" name="Value">choose(1,2,3,4,5,6,7,8,9)</param>
+                            <param id="1" name="Value">choose(4,8,9)</param>
                         </action>
                         <action id="-10" name="Set value" sid="560530407151592" type="DC_Bike">
                             <param id="0" name="Instance variable">UClickedOnThis</param>
@@ -261,7 +261,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="175099084840914" type="DC_Car">
                                     <param id="0" name="Instance variable">TARGET</param>
-                                    <param id="1" name="Value">choose(1,2,3,4,5,6,7,8,9)</param>
+                                    <param id="1" name="Value">choose(4,8,9)</param>
                                 </action>
                                 <action id="0" name="Set text" sid="587226232955440" type="DC_PassengerTarget">
                                     <param id="0" name="Text">DC_Car.TARGET</param>
@@ -643,7 +643,7 @@
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
                                                                 <action id="0" name="Set text" sid="454535853055065" type="DC_TutorialText">
-                                                                    <param id="0" name="Text">&quot;Bikes have yellow parking spots scattered around the map. Tap a bike pole or bike rack to park the bike.&quot;</param>
+                                                                    <param id="0" name="Text">&quot;Bikes have yellow parking spots scattered around the map. Tap a bike pole to park the bike.&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Set text" sid="196744520655357" type="DC_TapToContinue">
                                                                     <param id="0" name="Text">&quot;Park the bike to continue.&quot;</param>
@@ -658,7 +658,7 @@
                                                                 <action id="-15" name="Set visible" sid="322659712653238" type="DC_BlackBox4">
                                                                     <param id="0" name="Visibility">1</param>
                                                                 </action>
-                                                                <action id="-15" name="Set visible" sid="147659984477267" type="DC_BlackBox2">
+                                                                <action disabled="1" id="-15" name="Set visible" sid="147659984477267" type="DC_BlackBox2">
                                                                     <param id="0" name="Visibility">1</param>
                                                                 </action>
                                                                 <action id="-15" name="Set visible" sid="972187135916476" type="DC_BlackBox5">
@@ -1261,8 +1261,11 @@
                                             <param id="0" name="Variable">TutorialCounter</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action id="3" name="Set font size" sid="283337680000122" type="DC_TutorialText">
+                                            <param id="0" name="Size (pt)">36</param>
+                                        </action>
                                         <action id="0" name="Set text" sid="178755369418779" type="DC_TutorialText">
-                                            <param id="0" name="Text">&quot;Vehicles will avoid hitting pedestrians, and blue cars will periodically block parking spaces. Good luck!&quot;</param>
+                                            <param id="0" name="Text">&quot;Vehicles will avoid hitting pedestrians, and blue cars will periodically block parking spaces. Park ten or more vehicles for a perfect score!&quot;</param>
                                         </action>
                                         <action id="0" name="Set text" sid="500413088999629" type="DC_TapToContinue">
                                             <param id="0" name="Text">&quot;Tap anywhere to begin the game!&quot;</param>

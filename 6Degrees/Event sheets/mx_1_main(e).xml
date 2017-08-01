@@ -66,6 +66,10 @@
                             <param id="0" name="Layer">&quot;end&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="477705816686646" type="mx_1_Retry" />
+                        <action id="-1" name="Set X" sid="605182544322516" type="mx_1_Exit">
+                            <param id="0" name="X">960</param>
+                        </action>
                         <action id="-16" name="Wait" sid="394971473316446" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
