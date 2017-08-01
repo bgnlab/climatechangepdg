@@ -6,7 +6,7 @@
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
-    <app-id>com.bgnlab.casualcritters</app-id>
+    <app-id>com.bgnlab.sixdegs</app-id>
     <unique-id>1mvkr2z7vwd8g</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
@@ -57,15 +57,15 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>LoadingLayout</first-layout>
-    <use-loader-layout>1</use-loader-layout>
+    <first-layout>C6 Menu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Medium quality</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
-        <prop name="Loader style">Nothing (not recommended)</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
@@ -7485,6 +7485,14 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="264219779795925" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\loading screen----.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GG_Black2" sid="532992309588961">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="182428909386570" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\loading screen----.png" />
                     </animation>
                 </animation-folder>
