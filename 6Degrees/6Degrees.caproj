@@ -5030,20 +5030,34 @@
                         <animation framecount="1" loop="0" name="s1" pingpong="0" repeatcount="1" repeatto="0" sid="809649813071030" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="C:\Users\GAMEPLAYER-01\Downloads\a\stars1.png">
                                 <collision-poly>
-                                    <point x="0.976064" y="0.495575" />
-                                    <point x="0.933511" y="0.778761" />
-                                    <point x="0.5" y="0.831858" />
-                                    <point x="0.066489" y="0.778761" />
-                                    <point x="0.026596" y="0.495575" />
                                     <point x="0.095745" y="0.318584" />
                                     <point x="0.5" y="0" />
                                     <point x="0.904255" y="0.318584" />
+                                    <point x="0.973404" y="0.495575" />
+                                    <point x="0.933511" y="0.778761" />
+                                    <point x="0.5" y="0.831858" />
+                                    <point x="0.066489" y="0.778761" />
+                                    <point x="0.023936" y="0.495575" />
                                 </collision-poly>
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="s2" pingpong="0" repeatcount="1" repeatto="0" sid="201890128344941" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="C:\Users\GAMEPLAYER-01\Downloads\a\stars2.png">
                                 <collision-poly>
+                                    <point x="0.095745" y="0.318584" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.904255" y="0.318584" />
+                                    <point x="0.973404" y="0.495575" />
+                                    <point x="0.933511" y="0.778761" />
+                                    <point x="0.5" y="0.831858" />
+                                    <point x="0.066489" y="0.778761" />
+                                    <point x="0.023936" y="0.495575" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="s3" pingpong="0" repeatcount="1" repeatto="0" sid="307988647259081" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="C:\Users\GAMEPLAYER-01\Downloads\a\stars3.png">
+                                <collision-poly>
                                     <point x="0.976064" y="0.495575" />
                                     <point x="0.933511" y="0.778761" />
                                     <point x="0.5" y="0.831858" />
@@ -5052,20 +5066,6 @@
                                     <point x="0.095745" y="0.318584" />
                                     <point x="0.5" y="0" />
                                     <point x="0.904255" y="0.318584" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="s3" pingpong="0" repeatcount="1" repeatto="0" sid="307988647259081" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="C:\Users\GAMEPLAYER-01\Downloads\a\stars3.png">
-                                <collision-poly>
-                                    <point x="0.0957447" y="0.318584" />
-                                    <point x="0.5" y="0" />
-                                    <point x="0.904255" y="0.318584" />
-                                    <point x="0.973404" y="0.495575" />
-                                    <point x="0.933511" y="0.778761" />
-                                    <point x="0.5" y="0.831858" />
-                                    <point x="0.0664894" y="0.778761" />
-                                    <point x="0.0239362" y="0.495575" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -5306,8 +5306,20 @@
                 <object-type name="N6_Thermometer" sid="109642287589657">
                     <plugin id="Sprite" />
                     <animation-folder>
+                        <animation framecount="1" loop="0" name="0C" pingpong="0" repeatcount="1" repeatto="0" sid="749595446818740" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\1C thermometer pastel.png">
+                                <collision-poly>
+                                    <point x="0.0818505" y="0.534884" />
+                                    <point x="0.5" y="0.255814" />
+                                    <point x="0.922598" y="0.505814" />
+                                    <point x="0.922598" y="0.494186" />
+                                    <point x="0.5" y="0.732558" />
+                                    <point x="0.0818505" y="0.465116" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
                         <animation framecount="1" loop="0" name="1C" pingpong="0" repeatcount="1" repeatto="0" sid="805681667362982" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\1C thermometer.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\1C thermometer pastel.png">
                                 <collision-poly>
                                     <point x="0.0818505" y="0.534884" />
                                     <point x="0.5" y="0.255814" />
@@ -5319,7 +5331,7 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="2C" pingpong="0" repeatcount="1" repeatto="0" sid="746040380847724" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\2C thermometer.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\2C thermometer pastel.png">
                                 <collision-poly>
                                     <point x="0.0818505" y="0.534884" />
                                     <point x="0.5" y="0.255814" />
@@ -5331,7 +5343,7 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="3C" pingpong="0" repeatcount="1" repeatto="0" sid="471113806346741" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.50289" original-source="C:\Users\Yuan\Downloads\3C thermometer.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.50289" original-source="C:\Users\GAMEPLAYER-01\Downloads\3C thermometer pastel.png">
                                 <collision-poly>
                                     <point x="0.0818505" y="0.534884" />
                                     <point x="0.5" y="0.255814" />
@@ -5343,7 +5355,7 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="4C" pingpong="0" repeatcount="1" repeatto="0" sid="913500653986006" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\Yuan\Downloads\4C thermometer.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.505747" original-source="C:\Users\GAMEPLAYER-01\Downloads\4C thermometer pastel.png">
                                 <collision-poly>
                                     <point x="0.0818505" y="0.534884" />
                                     <point x="0.5" y="0.255814" />
@@ -5355,7 +5367,7 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="5C" pingpong="0" repeatcount="1" repeatto="0" sid="220601361936956" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\5C thermometer.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\5C thermometer pastel.png">
                                 <collision-poly>
                                     <point x="0.0818505" y="0.534884" />
                                     <point x="0.5" y="0.255814" />
@@ -5367,7 +5379,7 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="6C" pingpong="0" repeatcount="1" repeatto="0" sid="963249364634463" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\6C thermometer.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\6C thermometer pastel.png">
                                 <collision-poly>
                                     <point x="0.0818505" y="0.534884" />
                                     <point x="0.5" y="0.255814" />

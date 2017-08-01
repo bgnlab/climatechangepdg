@@ -37,7 +37,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="300993636334578" type="System">
                     <param id="0" name="Variable">CR_Timestep</param>
-                    <param id="1" name="Value">0</param>
+                    <param id="1" name="Value">time</param>
                 </action>
             </actions>
             <sub-events>
@@ -337,7 +337,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="33" name="Stop all" sid="867665702635837" type="Audio" />
+                <action id="33" name="Stop all" sid="849765836090869" type="Audio" />
             </actions>
             <sub-events>
                 <event-block sid="617921144696391">
