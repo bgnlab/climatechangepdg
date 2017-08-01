@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GG LoadingLayout</name>
+    <events>
+        <include>GG Scores and Levels</include>
+        <variable constant="0" name="GG_NOOBS" sid="899310988840659" static="0" type="text">Loading...</variable>
+        <event-block sid="610971972986877">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="805908648332272" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="109540346071005" type="C6_TitlePlaceHolder">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="703884070740225">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="995609064607478" type="System">
+                    <param id="0" name="Interval (seconds)">0.25</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="345764272019850">
+                    <conditions>
+                        <condition id="-14" inverted="1" name="Compare variable" sid="147665826276548" type="System">
+                            <param id="0" name="Variable">GG_NOOBS</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="882224964960533" type="C6_TitlePlaceHolder">
+                            <param id="0" name="Text">left(GG_NOOBS,1)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="136423413888969" type="System">
+                            <param id="0" name="Variable">GG_NOOBS</param>
+                            <param id="1" name="Value">right(GG_NOOBS,len(GG_NOOBS)-1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="485723785806697">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="114347211748149" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="494317743715018" type="System">
+                            <param id="0" name="Variable">GG_NOOBS</param>
+                            <param id="1" name="Value">&quot;Loading...&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="498116227419125" type="C6_TitlePlaceHolder">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="724707983315150">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="154306795231902" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="656542283616829">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="843743081921202" type="System">
+                            <param id="0" name="Variable">GG_GAME_VERSION</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;CASUAL&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="332292876451664" type="System">
+                            <param id="0" name="Layout">C6 Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="221866849040805">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="662702745185516" type="System">
+                            <param id="0" name="Variable">GG_GAME_VERSION</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;STORY&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="775307631239682" type="System">
+                            <param id="0" name="Layout">Opening</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

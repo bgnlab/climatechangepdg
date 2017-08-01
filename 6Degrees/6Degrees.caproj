@@ -6,7 +6,7 @@
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
-    <app-id>com.bgnlab.sixdegrees</app-id>
+    <app-id>com.bgnlab.casualcritters</app-id>
     <unique-id>1mvkr2z7vwd8g</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
@@ -57,7 +57,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>C6 Menu</first-layout>
+    <first-layout>LoadingLayout</first-layout>
     <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -65,7 +65,7 @@
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
-        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Loader style">Nothing (not recommended)</prop>
         <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
@@ -5116,20 +5116,23 @@
                             <animation framecount="1" loop="0" name="6C" pingpong="0" repeatcount="1" repeatto="0" sid="966077666164981" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 6 degrees.png" />
                             </animation>
-                            <animation framecount="1" loop="0" name="1C" pingpong="0" repeatcount="1" repeatto="0" sid="250851931494756" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 1 degrees.png" />
-                            </animation>
-                            <animation framecount="1" loop="0" name="2C" pingpong="0" repeatcount="1" repeatto="0" sid="662388841989649" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 2 degrees.png" />
-                            </animation>
-                            <animation framecount="1" loop="0" name="3C" pingpong="0" repeatcount="1" repeatto="0" sid="490095913987159" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 3 degrees.png" />
+                            <animation framecount="1" loop="0" name="5C" pingpong="0" repeatcount="1" repeatto="0" sid="323827638425710" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 5 degrees.png" />
                             </animation>
                             <animation framecount="1" loop="0" name="4C" pingpong="0" repeatcount="1" repeatto="0" sid="630174243154985" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 4 degrees.png" />
                             </animation>
-                            <animation framecount="1" loop="0" name="5C" pingpong="0" repeatcount="1" repeatto="0" sid="323827638425710" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 5 degrees.png" />
+                            <animation framecount="1" loop="0" name="3C" pingpong="0" repeatcount="1" repeatto="0" sid="490095913987159" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 3 degrees.png" />
+                            </animation>
+                            <animation framecount="1" loop="0" name="2C" pingpong="0" repeatcount="1" repeatto="0" sid="662388841989649" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 2 degrees.png" />
+                            </animation>
+                            <animation framecount="1" loop="0" name="1C" pingpong="0" repeatcount="1" repeatto="0" sid="250851931494756" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Yuan\Downloads\drive-download-20170606T134615Z-001\(story ver) Map 2.0 1 degrees.png" />
+                            </animation>
+                            <animation framecount="1" loop="0" name="0C" pingpong="0" repeatcount="1" repeatto="0" sid="574873431737972" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -18208,6 +18211,7 @@
     <layout-folder>
         <layout-folder name="C6 Casual Menu">
             <layout>C6 Menu.xml</layout>
+            <layout>LoadingLayout.xml</layout>
         </layout-folder>
         <layout-folder name="M2 Escape Room">
             <layout>m2_2_main.xml</layout>
@@ -18309,6 +18313,7 @@
         </event-folder>
         <event-folder name="GG Scoring and Levels">
             <event-sheet>GG Scores and Levels.xml</event-sheet>
+            <event-sheet>GG LoadingLayout.xml</event-sheet>
         </event-folder>
         <event-folder name="M6 Food">
             <event-sheet>m6_1_main(e).xml</event-sheet>

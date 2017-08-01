@@ -7,10 +7,9 @@
         <variable constant="0" name="GG_Selected_Game" sid="396281275119535" static="0" type="number">-1</variable>
         <variable constant="0" name="GG_After_LS" sid="802643025859519" static="0" type="text"></variable>
         <variable constant="0" name="GG_Callback" sid="401688082894111" static="0" type="text"></variable>
-        <variable constant="0" name="GG_hi" sid="119982164244513" static="0" type="text"></variable>
-        <comment>Game Version is either &apos;CASUAL&apos; or &apos;STORY&apos;</comment>
+        <variable comment="Debug Stuff" constant="0" name="GG_hi" sid="119982164244513" static="0" type="text"></variable>
         <variable constant="0" name="GG_Selected_Region" sid="834754807406336" static="0" type="number">0</variable>
-        <variable constant="1" name="GG_GAME_VERSION" sid="661238395450024" static="0" type="text">CASUAL</variable>
+        <variable comment="Either &apos;CASUAL&apos; or &apos;STORY&apos;" constant="1" name="GG_GAME_VERSION" sid="661238395450024" static="0" type="text">CASUAL</variable>
         <event-group description="" sid="888092148056112" title="GG Initializing Data">
             <sub-events>
                 <event-block sid="926914594403044">
