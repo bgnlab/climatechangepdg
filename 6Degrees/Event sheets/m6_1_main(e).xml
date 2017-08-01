@@ -1806,6 +1806,10 @@
                                     <param id="0" name="Animation">&quot;Animation2&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="792005441133004" type="m6_1_retry" />
+                                <action id="-1" name="Set X" sid="444243407771632" type="m6_1_ecit">
+                                    <param id="0" name="X">960</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>

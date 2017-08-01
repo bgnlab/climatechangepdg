@@ -1197,6 +1197,18 @@
                         </action>
                         <action id="-9" name="Destroy" sid="391358888832340" type="m2_1_tutText" />
                         <action id="-9" name="Destroy" sid="533437114584479" type="m2_1_tutText2" />
+                        <action id="-3" name="Set position" sid="566874166199222" type="m2_1_endDescription">
+                            <param id="0" name="X">m2_1_endMenu.X</param>
+                            <param id="1" name="Y">m2_1_endMenu.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="993935498901276" type="m2_1_exit">
+                            <param id="0" name="X">m2_1_endMenu.X-300</param>
+                            <param id="1" name="Y">m2_1_endMenu.Y+200</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="952971427167460" type="m2_1_retry">
+                            <param id="0" name="X">m2_1_endMenu.X+300</param>
+                            <param id="1" name="Y">m2_1_endMenu.Y+200</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="497682640052617">
@@ -1284,7 +1296,12 @@
                                     <param id="2" name="Value">4</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Destroy" sid="956809747821325" type="m2_1_retry" />
+                                <action id="-1" name="Set X" sid="446363198990616" type="m2_1_exit">
+                                    <param id="0" name="X">960</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="280184173316241">
                             <conditions>
@@ -1399,25 +1416,6 @@
                             </sub-events>
                         </event-group>
                     </sub-events>
-                </event-block>
-                <event-block sid="318570602938846">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="568891859717799" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="544339473317471" type="m2_1_endDescription">
-                            <param id="0" name="X">m2_1_endMenu.X</param>
-                            <param id="1" name="Y">m2_1_endMenu.Y</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="889453840663323" type="m2_1_exit">
-                            <param id="0" name="X">m2_1_endMenu.X-300</param>
-                            <param id="1" name="Y">m2_1_endMenu.Y+200</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="724610403348020" type="m2_1_retry">
-                            <param id="0" name="X">m2_1_endMenu.X+300</param>
-                            <param id="1" name="Y">m2_1_endMenu.Y+200</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
