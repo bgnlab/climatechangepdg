@@ -6546,7 +6546,7 @@
             <object-type name="m1_WLText" sid="240212865631124">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="LiveStar" sid="177878114425358">
+            <object-type name="m1_LiveStar" sid="177878114425358">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="liveStarLose" sid="431540733978418" type="number" />
@@ -14810,6 +14810,9 @@
             </object-type>
             <object-type name="m4_emptyStar" sid="790711650945993">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="onWinScreen" sid="499644652302472" type="number" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="934219244271680" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Global UI\empty star (new).png">
@@ -16575,6 +16578,17 @@
                                 <point x="0.0416667" y="0.993056" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m4_LiveStar" sid="492542183115503">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="loseValue" sid="687704977071237" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="650807699394304" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
