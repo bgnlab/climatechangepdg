@@ -97,6 +97,63 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="815247203138448">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="715586891493442" type="System">
+                            <param id="0" name="Object">m4_LiveStar</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="973787146820764">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="370393930668381" type="m4_LiveStar">
+                                    <param id="0" name="Instance variable">loseValue</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="558732131087241" type="m4_LiveStar">
+                                    <param id="0" name="Instance variable">loseValue</param>
+                                    <param id="1" name="Value">m4_1StarScore</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="866168009484564">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="452265454172681" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="179674689167354" type="m4_LiveStar">
+                                    <param id="0" name="Instance variable">loseValue</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="539643246134733" type="m4_LiveStar">
+                                    <param id="0" name="Instance variable">loseValue</param>
+                                    <param id="1" name="Value">m4_2StarScore</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="977083756290400">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="433165367628021" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="751354853680941" type="m4_LiveStar">
+                                    <param id="0" name="Instance variable">loseValue</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="408452097944599" type="m4_LiveStar">
+                                    <param id="0" name="Instance variable">loseValue</param>
+                                    <param id="1" name="Value">m4_3StarScore</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-block>
         <comment>Initialize after state has been  loaded</comment>
@@ -898,6 +955,10 @@
                                     <param id="0" name="Variable">m4_fin</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="296833607824366" type="m4_LiveStar">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="683126221463486" type="m4_Pieces" />
                             </actions>
                             <sub-events>
                                 <event-block sid="599727278568937">
@@ -950,6 +1011,30 @@
                                             <param id="0" name="Text">&quot;The donated amount far out-weighed the amount you managed to sell, but you still prevented considerable waste.&quot;</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                                <event-block sid="234175378267708">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="732666106156834" type="System">
+                                            <param id="0" name="Object">m4_emptyStar</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="823118369790837">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="723472113171514" type="m4_emptyStar">
+                                                    <param id="0" name="Instance variable">onWinScreen</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="181361771111925" type="m4_emptyStar">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -1412,6 +1497,46 @@
                     <param id="0" name="Rate">self.Rate -2</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="618806367244021">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="613135746441846" type="System" />
+                <condition id="-11" name="For Each" sid="107764140111192" type="System">
+                    <param id="0" name="Object">m4_LiveStar</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="652436364508470" type="System">
+                    <param id="0" name="Variable">m4_fin</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="331437795570481">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="302627556552565" type="m4_LiveStar">
+                            <param id="0" name="Instance variable">loseValue</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">m4_playerScore</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="601892339865574" type="m4_LiveStar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="776978735214449">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="622429792898471" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="846784930417123" type="m4_LiveStar">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

@@ -89,21 +89,21 @@
                         <event-block sid="116884894469495">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="433349229552739" type="System">
-                                    <param id="0" name="Object">LiveStar</param>
+                                    <param id="0" name="Object">m1_LiveStar</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
                                 <event-block sid="455157953501836">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="941513569629904" type="LiveStar">
+                                        <condition id="-7" name="Compare instance variable" sid="941513569629904" type="m1_LiveStar">
                                             <param id="0" name="Instance variable">liveStarLose</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="436972615166959" type="LiveStar">
+                                        <action id="-10" name="Set value" sid="436972615166959" type="m1_LiveStar">
                                             <param id="0" name="Instance variable">liveStarLose</param>
                                             <param id="1" name="Value">m1_Car.ContactX * m1_1StarValue</param>
                                         </action>
@@ -111,14 +111,14 @@
                                 </event-block>
                                 <event-block sid="759329351150023">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="972595664061846" type="LiveStar">
+                                        <condition id="-7" name="Compare instance variable" sid="972595664061846" type="m1_LiveStar">
                                             <param id="0" name="Instance variable">liveStarLose</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">2</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="727662808168548" type="LiveStar">
+                                        <action id="-10" name="Set value" sid="727662808168548" type="m1_LiveStar">
                                             <param id="0" name="Instance variable">liveStarLose</param>
                                             <param id="1" name="Value">m1_Car.ContactX * m1_2StarValue</param>
                                         </action>
@@ -126,14 +126,14 @@
                                 </event-block>
                                 <event-block sid="371107602794180">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="997557697973561" type="LiveStar">
+                                        <condition id="-7" name="Compare instance variable" sid="997557697973561" type="m1_LiveStar">
                                             <param id="0" name="Instance variable">liveStarLose</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">3</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="354340136306976" type="LiveStar">
+                                        <action id="-10" name="Set value" sid="354340136306976" type="m1_LiveStar">
                                             <param id="0" name="Instance variable">liveStarLose</param>
                                             <param id="1" name="Value">m1_Car.ContactX * m1_3StarValue</param>
                                         </action>
@@ -1014,7 +1014,7 @@
                                 <action id="-15" name="Set visible" sid="324655416684571" type="m1_EmptyStar">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="581711954467675" type="LiveStar">
+                                <action id="-15" name="Set visible" sid="581711954467675" type="m1_LiveStar">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
@@ -1123,7 +1123,7 @@
                             <param id="0" name="Instance variable">isDriving</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="832937865120965" type="LiveStar">
+                        <action id="-15" name="Set visible" sid="832937865120965" type="m1_LiveStar">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="33" name="Stop all" sid="557376839512910" type="Audio" />
@@ -1322,21 +1322,21 @@
                         <event-block sid="563506821708603">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="420319364265250" type="System">
-                                    <param id="0" name="Object">LiveStar</param>
+                                    <param id="0" name="Object">m1_LiveStar</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
                                 <event-block sid="657071960102537">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="944690023600934" type="LiveStar">
+                                        <condition id="-7" name="Compare instance variable" sid="944690023600934" type="m1_LiveStar">
                                             <param id="0" name="Instance variable">liveStarLose</param>
                                             <param id="1" name="Comparison">2</param>
                                             <param id="2" name="Value">m1_Tornado.X</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="938204648994760" type="LiveStar">
+                                        <action id="-15" name="Set visible" sid="938204648994760" type="m1_LiveStar">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                     </actions>
