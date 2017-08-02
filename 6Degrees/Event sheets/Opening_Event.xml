@@ -123,6 +123,14 @@
                     <param id="3" name="Volume">-20</param>
                     <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
                 </action>
+                <action id="4" name="Set animation" sid="558116984521232" type="N6_Background_Future">
+                    <param id="0" name="Animation">&quot;6C&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="819259761770626" type="N6_Background_Future2">
+                    <param id="0" name="Animation">&quot;6C&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="427753380746425">
