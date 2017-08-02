@@ -2341,6 +2341,11 @@
                                             <param id="1" name="Comparison">5</param>
                                             <param id="2" name="Value">21</param>
                                         </condition>
+                                        <condition id="-14" name="Compare variable" sid="602623621307514" type="System">
+                                            <param id="0" name="Variable">GG_Difficulty</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="802824012534428" type="Function">
