@@ -5,6 +5,7 @@
     <events>
         <include>GG Scores and Levels</include>
         <include>m1_GameEvents</include>
+        <variable constant="0" name="m1_dontProceedTutorial" sid="143424937993633" static="0" type="number">0</variable>
         <variable constant="0" name="m1_tutorialTracker" sid="169111311010715" static="0" type="number">1</variable>
         <event-block sid="631001687726206">
             <conditions>
@@ -150,6 +151,10 @@
                 <action id="0" name="Set text" sid="270608376058907" type="m1_Tutorial_Instruction">
                     <param id="0" name="Text">&quot;You will stop to refuel automatically.&quot;</param>
                 </action>
+                <action id="-9" name="Set value" sid="335798094136477" type="System">
+                    <param id="0" name="Variable">m1_dontProceedTutorial</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action id="-10" name="Add to" sid="636159358727289" type="System">
                     <param id="0" name="Variable">m1_tutorialTracker</param>
                     <param id="1" name="Value">1</param>
@@ -176,6 +181,10 @@
                 <action id="0" name="Set text" sid="530643620900955" type="m1_Tutorial_Prompt">
                     <param id="0" name="Text">&quot;Tap anywhere to continue&quot;</param>
                 </action>
+                <action id="-9" name="Set value" sid="646592072932831" type="System">
+                    <param id="0" name="Variable">m1_dontProceedTutorial</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="420492134301486">
@@ -191,6 +200,9 @@
                 </action>
                 <action id="3" name="Set progress" sid="825278628659618" type="m1_TirePressureMeter">
                     <param id="0" name="Value">30</param>
+                </action>
+                <action id="0" name="Set text" sid="304669507902052" type="m1_Tutorial_Prompt">
+                    <param id="0" name="Text">&quot;Tap anywhere to continue&quot;</param>
                 </action>
                 <action id="0" name="Set text" sid="279731924774114" type="m1_InteractiveTutorialText">
                     <param id="0" name="Text">&quot;Fuel depletes faster when tire pressure is low.&quot;</param>
@@ -296,6 +308,11 @@
             <conditions>
                 <condition id="17" name="On tap object" sid="440837062950325" type="Touch">
                     <param id="0" name="Object">m1_AdvanceTutorialClick</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="764542631107748" type="System">
+                    <param id="0" name="Variable">m1_dontProceedTutorial</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
