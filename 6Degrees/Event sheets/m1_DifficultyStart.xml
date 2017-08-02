@@ -84,6 +84,10 @@
                         <action id="0" name="Set text" sid="133214269628010" type="m1_WinFailText">
                             <param id="0" name="Text">&quot;Now don&apos;t get caught in the other difficulties&quot;</param>
                         </action>
+                        <action id="-3" name="Set position" sid="509516185031197" type="m1_LiveStar">
+                            <param id="0" name="X">-6000</param>
+                            <param id="1" name="Y">-6000</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="214189640798394">

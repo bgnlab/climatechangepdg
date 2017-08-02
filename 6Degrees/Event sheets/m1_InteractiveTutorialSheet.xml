@@ -253,7 +253,7 @@
                     <param id="0" name="Text">&quot;Use the arrow to get off and on the road to check the tire pressure.&quot;</param>
                 </action>
                 <action id="0" name="Set text" sid="876022843756441" type="m1_Tutorial_Prompt">
-                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="0" name="Text">&quot;Press Arrow to continue&quot;</param>
                 </action>
                 <action id="-7" name="Set size" sid="705993648200744" type="m1_Highlighter">
                     <param id="0" name="Width">m1_DoubleArrow.Width</param>
@@ -293,6 +293,9 @@
                 </action>
                 <action id="0" name="Set text" sid="188405731204012" type="m1_Tutorial_Instruction">
                     <param id="0" name="Text">&quot;Leave the stop&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="964647537403522" type="m1_Tutorial_Prompt">
+                    <param id="0" name="Text">&quot;Press Arrow to continue&quot;</param>
                 </action>
                 <action id="-3" name="Set position" sid="621734684701678" type="m1_tutLight">
                     <param id="0" name="X">1226</param>
@@ -354,6 +357,9 @@
                                 </action>
                                 <action id="0" name="Set text" sid="431222005835080" type="m1_Tutorial_Instruction">
                                     <param id="0" name="Text">&quot;While parked, you can refill your tire pressure by pressing the pump.&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="243511882219110" type="m1_Tutorial_Prompt">
+                                    <param id="0" name="Text">&quot;Fully fill air pressure to continue&quot;</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="841130218546665" type="m1_tutLight">
                                     <param id="0" name="X">1446</param>
