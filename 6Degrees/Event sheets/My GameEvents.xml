@@ -653,7 +653,7 @@
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="0" name="Set text" sid="136922133382167" type="m4_WinFailText">
-                                    <param id="0" name="Text">&quot;The frog stayed hydrated, bs used too many water bottles&quot;</param>
+                                    <param id="0" name="Text">&quot;The frog stayed hydrated, but used too many water bottles&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -670,7 +670,7 @@
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="0" name="Set text" sid="753975214084572" type="m4_WinFailText">
-                                    <param id="0" name="Text">&quot;The frog stayed hydrated, bs used too many water bottles&quot;</param>
+                                    <param id="0" name="Text">&quot;The frog stayed hydrated, but used too many water bottles&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -808,6 +808,31 @@
                     <param id="0" name="Y">1088</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="193128717771503">
+            <conditions>
+                <condition id="-11" name="For Each" sid="489484470114448" type="System">
+                    <param id="0" name="Object">my_star</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="198920019334294">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="136748330873191" type="my_star">
+                            <param id="0" name="Instance variable">rip</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">my_bottlesUsed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="131233311776131" type="my_star">
+                            <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
