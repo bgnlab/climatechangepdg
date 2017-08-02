@@ -57,7 +57,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>C6 Menu</first-layout>
+    <first-layout>Opening</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -17714,6 +17714,14 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
+            <object-type name="Cutscene_Skip_Button" sid="461957836778799">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="652268669721756" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Credits">
             <object-type name="CR_Title1" sid="527697389524212">
