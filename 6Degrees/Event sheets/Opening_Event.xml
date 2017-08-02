@@ -13,11 +13,11 @@
                 <condition id="-2" name="On start of layout" sid="660712534757572" type="System" />
             </conditions>
             <actions>
-                <action id="5" name="Set web font" sid="468164635276225" type="Dialogue1">
+                <action disabled="1" id="5" name="Set web font" sid="468164635276225" type="Dialogue1">
                     <param id="0" name="Family name">&quot;Orange Kid&quot;</param>
                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
                 </action>
-                <action id="5" name="Set web font" sid="403199098841784" type="Dialogue2">
+                <action disabled="1" id="5" name="Set web font" sid="403199098841784" type="Dialogue2">
                     <param id="0" name="Family name">&quot;Orange Kid&quot;</param>
                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
                 </action>
