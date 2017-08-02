@@ -121,6 +121,11 @@
                 <condition id="17" name="On tap object" sid="185351199210951" type="Touch">
                     <param id="0" name="Object">N6_Region</param>
                 </condition>
+                <condition id="-14" inverted="1" name="Compare variable" sid="914585778010850" type="System">
+                    <param id="0" name="Variable">N6_Transitioning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="615483289231383" type="System">
@@ -138,10 +143,10 @@
                 <condition id="17" name="On tap object" sid="163530752901896" type="Touch">
                     <param id="0" name="Object">N6_ToFuture</param>
                 </condition>
-                <condition id="-14" name="Compare variable" sid="828093459050441" type="System">
+                <condition id="-14" inverted="1" name="Compare variable" sid="505173885650271" type="System">
                     <param id="0" name="Variable">N6_Transitioning</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
+                    <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>
