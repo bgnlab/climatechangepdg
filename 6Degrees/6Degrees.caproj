@@ -18196,6 +18196,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="m6_BGG" sid="483827736140113">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="171123534468199" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\kitchen background.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="m2_3_nightLightWires" plugin-id="Sprite" sid="359556569661644">
