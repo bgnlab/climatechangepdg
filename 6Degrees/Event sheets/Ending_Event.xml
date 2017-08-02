@@ -98,6 +98,14 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;ringtone&quot;</param>
                 </action>
+                <action id="4" name="Set animation" sid="812738613074545" type="N6_Background_Future">
+                    <param id="0" name="Animation">&quot;0C&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="929564504697628" type="N6_Background_Future2">
+                    <param id="0" name="Animation">&quot;0C&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="400623367297044">

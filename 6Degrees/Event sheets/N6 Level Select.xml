@@ -11,7 +11,12 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="940253013816985" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-9" name="Set value" sid="964593821836800" type="System">
+                    <param id="0" name="Variable">N6_PreviousMapLayout</param>
+                    <param id="1" name="Value">&quot;lol&quot;</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-group description="" sid="856851978355350" title="N6 Initialize Background">
                     <sub-events>
