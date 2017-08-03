@@ -17213,6 +17213,9 @@
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\narrative scientist really happy.png" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\narrative scientist really happy01.png" />
                         </animation>
+                        <animation framecount="1" loop="0" name="Stop" pingpong="0" repeatcount="1" repeatto="0" sid="549283313239469" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
                     </animation-folder>
                 </object-type>
             </object-folder>
@@ -17248,8 +17251,12 @@
                 <object-type name="4C_HanaSmol" sid="279665789662135">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="738290961215873" speed="5">
+                        <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="738290961215873" speed="4">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\narrative scientist normal.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\narrative scientist normal01.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Stop" pingpong="0" repeatcount="1" repeatto="0" sid="523620993035196" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -17367,6 +17374,9 @@
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\N.O.S\Downloads\narrative scientist normal dark.png" />
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\GAMEPLAYER-01\Downloads\narrative scientist normal dark01.png" />
                         </animation>
+                        <animation framecount="1" loop="0" name="Stop" pingpong="0" repeatcount="1" repeatto="0" sid="230574448924763" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="Scene3_TextBoxBig" sid="333005628786293">
@@ -17413,6 +17423,9 @@
                         <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="645542429778959" speed="4">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\narrative scientist frowning dark.png" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\narrative scientist frowning dark01.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Stop" pingpong="0" repeatcount="1" repeatto="0" sid="138657764868831" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -17606,6 +17619,9 @@
                         <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="631297817304312" speed="4">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\narrative scientist normal dark.png" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\narrative scientist normal dark01.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Stop" pingpong="0" repeatcount="1" repeatto="0" sid="345134231002051" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>

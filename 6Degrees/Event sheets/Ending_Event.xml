@@ -165,6 +165,10 @@
                     <param id="3" name="Volume">-15</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action id="4" name="Set animation" sid="602372553402099" type="2C_HanaSmol">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="-15" name="Set visible" sid="272981925850319" type="Dialogue2">
                     <param id="0" name="Visibility">1</param>
                 </action>
@@ -255,6 +259,10 @@
                         <action id="-15" name="Set visible" sid="592879925243431" type="NextButton">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="4" name="Set animation" sid="575569331519265" type="2C_HanaSmol">
+                            <param id="0" name="Animation">&quot;Stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="6" name="Stop" sid="378850298935224" type="Audio">
                             <param id="0" name="Tag">&quot;text&quot;</param>
                         </action>
@@ -277,6 +285,10 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="768676834416875" type="2C_HanaSmol">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="0" name="Set text" sid="931413817569783" type="Dialogue2">
                             <param id="0" name="Text">&quot;&quot;</param>
@@ -338,6 +350,10 @@
                     <actions>
                         <action id="-15" name="Set visible" sid="769468082988761" type="NextButton">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="268047429977318" type="2C_HanaSmol">
+                            <param id="0" name="Animation">&quot;Stop&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="6" name="Stop" sid="844235455444612" type="Audio">
                             <param id="0" name="Tag">&quot;text&quot;</param>
