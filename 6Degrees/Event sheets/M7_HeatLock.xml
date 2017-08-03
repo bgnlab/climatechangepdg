@@ -2869,10 +2869,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-16" name="Wait" sid="763770534048453" type="System">
-                                            <param id="0" name="Seconds">0.1</param>
+                                        <action id="0" name="Call function" sid="540920061449000" type="Function">
+                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">max(min((3 - (M7_Temperature - 18)), 3), 0){###}&quot;M7 Restart&quot;</param>
                                         </action>
-                                        <action id="-26" name="Restart layout" sid="683953705616247" type="System" />
                                     </actions>
                                 </event-block>
                                 <event-block sid="408893782623042">
@@ -2924,6 +2924,16 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="102605382694966">
+                            <conditions>
+                                <condition id="0" name="On function" sid="883742380869690" type="Function">
+                                    <param id="0" name="Name">&quot;M7 Restart&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="262867670299789" type="System" />
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
