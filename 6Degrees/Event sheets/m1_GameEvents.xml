@@ -952,6 +952,7 @@
         <variable constant="0" name="m1_1StarValue" sid="132998827015713" static="0" type="number">1</variable>
         <variable constant="0" name="m1_2StarValue" sid="526070587096520" static="0" type="number">0.9</variable>
         <variable constant="0" name="m1_3StarValue" sid="185509416990427" static="0" type="number">0.8</variable>
+        <variable constant="0" name="m1_endScore" sid="342683265445485" static="0" type="number">0</variable>
         <event-group description="" sid="977008248092565" title="Win/Loss">
             <sub-events>
                 <comment>They went the full distance without getting hit by the tornado (tornado version)</comment>
@@ -1042,6 +1043,10 @@
                                         <action id="0" name="Set text" sid="863409163570209" type="m1_WinFailText">
                                             <param id="0" name="Text">&quot;The moose got too close to you. Try managing your tire pressure more efficiently&quot;</param>
                                         </action>
+                                        <action id="-9" name="Set value" sid="429468122384445" type="System">
+                                            <param id="0" name="Variable">m1_endScore</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="156795180857064">
@@ -1059,6 +1064,10 @@
                                         <action id="0" name="Set text" sid="916651632143903" type="m1_WinFailText">
                                             <param id="0" name="Text">&quot;The moose got too close to you. Try managing your tire pressure more efficiently&quot;</param>
                                         </action>
+                                        <action id="-9" name="Set value" sid="989492587862247" type="System">
+                                            <param id="0" name="Variable">m1_endScore</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="851238500681075">
@@ -1075,6 +1084,10 @@
                                         </action>
                                         <action id="0" name="Set text" sid="754511103206733" type="m1_WinFailText">
                                             <param id="0" name="Text">&quot;You got away from the moose!&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="571087223551268" type="System">
+                                            <param id="0" name="Variable">m1_endScore</param>
+                                            <param id="1" name="Value">3</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1094,6 +1107,10 @@
                                 <action id="-9" name="Destroy" sid="888427355275322" type="m1_RetryBtn" />
                                 <action id="-1" name="Set X" sid="417750293075115" type="m1_ExitBtn">
                                     <param id="0" name="X">960</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="850900079708235" type="System">
+                                    <param id="0" name="Variable">m1_endScore</param>
+                                    <param id="1" name="Value">3</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1121,6 +1138,10 @@
                         </action>
                         <action id="-13" name="Set boolean" sid="535729266818820" type="m1_Car">
                             <param id="0" name="Instance variable">isDriving</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="684903237599903" type="System">
+                            <param id="0" name="Variable">m1_endScore</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="832937865120965" type="m1_LiveStar">
@@ -1207,85 +1228,12 @@
                                     <param id="0" name="Object">m1_ExitBtn</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="507451713922092">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="922059621527501" type="System">
-                                            <param id="0" name="Variable">GG_Difficulty</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="541624104178649" type="Function">
-                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
-                                            <param id="1" name="Parameter {n}">3</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="223708032580488">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="382335895471340" type="System" />
-                                        <condition id="-9" name="Is visible" sid="688048114460738" type="m1_Star" />
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="952765678870068">
-                                            <conditions>
-                                                <condition id="-9" name="Is visible" sid="493497152741959" type="m1_2ndStar" />
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="899604612117846">
-                                                    <conditions>
-                                                        <condition id="-9" name="Is visible" sid="248716570188498" type="m1_3rdStar" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Call function" sid="180967555574504" type="Function">
-                                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
-                                                            <param id="1" name="Parameter {n}">3</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="914151635008010">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="684304416857088" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Call function" sid="917532051510718" type="Function">
-                                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
-                                                            <param id="1" name="Parameter {n}">2</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                        <event-block sid="375399786431902">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="461140085460806" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="691829188407675" type="Function">
-                                                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
-                                                    <param id="1" name="Parameter {n}">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="823255231392746">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="433383541480595" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="406669081517018" type="Function">
-                                            <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
-                                            <param id="1" name="Parameter {n}">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="0" name="Call function" sid="450067928631199" type="Function">
+                                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
+                                    <param id="1" name="Parameter {n}">m1_endScore</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="249817995266745">
                             <conditions>
