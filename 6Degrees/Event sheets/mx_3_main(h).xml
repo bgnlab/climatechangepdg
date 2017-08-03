@@ -123,12 +123,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="625824692400214" type="System" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="247881268222459" type="Audio">
-                                    <param id="0" name="Audio file">sfx_done</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">10</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="477518561536895" type="System">
                                     <param id="0" name="Variable">mx_2_playing</param>
                                     <param id="1" name="Value">2</param>
@@ -149,12 +143,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="830079903606615" type="System" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="394389663506642" type="Audio">
-                                    <param id="0" name="Audio file">sfx_done</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">10</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="835327941018841" type="System">
                                     <param id="0" name="Variable">mx_2_playing</param>
                                     <param id="1" name="Value">2</param>
