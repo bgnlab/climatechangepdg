@@ -5219,6 +5219,27 @@
                             </animation>
                         </animation-folder>
                     </object-type>
+                    <object-type name="N6_FuturePrompt" sid="882994428896538">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Fade" sid="181389040485347">
+                                <behavior id="Fade" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="933031329271089" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="N6_FuturePromptText" sid="661042913789850">
+                        <plugin id="Text" />
+                        <behaviors>
+                            <behavior-type name="Fade" sid="337940188563755">
+                                <behavior id="Fade" />
+                            </behavior-type>
+                        </behaviors>
+                    </object-type>
                 </object-folder>
                 <object-folder name="Present">
                     <object-type name="N6_ToFuture" sid="142781596255546">
@@ -5360,7 +5381,7 @@
                                 </frame>
                             </animation>
                             <animation framecount="1" loop="0" name="present" pingpong="0" repeatcount="1" repeatto="0" sid="945319640377321" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Calender 2017.png">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Calender falling 2017.png">
                                     <collision-poly>
                                         <point x="0.208242" y="0.344545" />
                                         <point x="0.5" y="0.116364" />
@@ -17514,7 +17535,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="908806743942709" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\Calender falling 2017.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Calender falling 2017.png">
                                 <collision-poly>
                                     <point x="0.208242" y="0.344545" />
                                     <point x="0.5" y="0.298182" />
@@ -17536,7 +17557,7 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="150449281219359" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\Calender base.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\Calender base.png">
                                 <collision-poly>
                                     <point x="0.208242" y="0.344545" />
                                     <point x="0.5" y="0.116364" />
@@ -17603,7 +17624,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="630017127909722" speed="5">
-                            <frame duration="1" hotspotX="0.501099" hotspotY="0.501818" original-source="C:\Users\N.O.S\Downloads\Calender falling 2017.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.501818" original-source="C:\Users\GAMEPLAYER-01\Downloads\Calender falling 2017.png">
                                 <collision-poly>
                                     <point x="0.208242" y="0.344545" />
                                     <point x="0.5" y="0.298182" />

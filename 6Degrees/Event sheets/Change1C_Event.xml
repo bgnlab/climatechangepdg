@@ -201,9 +201,7 @@
                 </event-block>
                 <event-block sid="946819826601785">
                     <conditions>
-                        <condition id="17" name="On tap object" sid="127977714010614" type="Touch">
-                            <param id="0" name="Object">NextButton</param>
-                        </condition>
+                        <condition id="14" name="On tap" sid="673141560661795" type="Touch" />
                         <condition id="-14" name="Compare variable" sid="295681279685737" type="System">
                             <param id="0" name="Variable">Timer</param>
                             <param id="1" name="Comparison">5</param>
