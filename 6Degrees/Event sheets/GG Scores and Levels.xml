@@ -9,7 +9,7 @@
         <variable constant="0" name="GG_Callback" sid="401688082894111" static="0" type="text"></variable>
         <variable comment="Debug Stuff" constant="0" name="GG_hi" sid="119982164244513" static="0" type="text"></variable>
         <variable constant="0" name="GG_Selected_Region" sid="834754807406336" static="0" type="number">0</variable>
-        <variable comment="Either &apos;CASUAL&apos; or &apos;STORY&apos;" constant="1" name="GG_GAME_VERSION" sid="661238395450024" static="0" type="text">CASUAL</variable>
+        <variable comment="Either &apos;CASUAL&apos; or &apos;STORY&apos;" constant="1" name="GG_GAME_VERSION" sid="661238395450024" static="0" type="text">STORY</variable>
         <variable comment="1 for debug. Turn off when game ships" constant="1" name="GG_DEBGU" sid="164960728268705" static="0" type="number">1</variable>
         <event-group description="" sid="888092148056112" title="GG Initializing Data">
             <sub-events>
@@ -1483,6 +1483,10 @@
                                                 <action id="-2" name="Go to layout" sid="533719121749891" type="System">
                                                     <param id="0" name="Layout">Change5C</param>
                                                 </action>
+                                                <action id="-27" name="Set effect enabled" sid="216309291197221" type="N6_Thermometer">
+                                                    <param id="0" name="Mode">1</param>
+                                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="340355297807239">
@@ -1496,6 +1500,10 @@
                                             <actions>
                                                 <action id="-2" name="Go to layout" sid="385642644728717" type="System">
                                                     <param id="0" name="Layout">Change4C</param>
+                                                </action>
+                                                <action id="-27" name="Set effect enabled" sid="317821721215158" type="N6_Thermometer">
+                                                    <param id="0" name="Mode">1</param>
+                                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1511,6 +1519,10 @@
                                                 <action id="-2" name="Go to layout" sid="404684168444295" type="System">
                                                     <param id="0" name="Layout">Change3C</param>
                                                 </action>
+                                                <action id="-27" name="Set effect enabled" sid="792898685862463" type="N6_Thermometer">
+                                                    <param id="0" name="Mode">1</param>
+                                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="535240572950399">
@@ -1525,6 +1537,10 @@
                                                 <action id="-2" name="Go to layout" sid="251469667221931" type="System">
                                                     <param id="0" name="Layout">Change2C</param>
                                                 </action>
+                                                <action id="-27" name="Set effect enabled" sid="246938653117925" type="N6_Thermometer">
+                                                    <param id="0" name="Mode">1</param>
+                                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="934634662535922">
@@ -1538,6 +1554,10 @@
                                             <actions>
                                                 <action id="-2" name="Go to layout" sid="900945618187084" type="System">
                                                     <param id="0" name="Layout">Change1C</param>
+                                                </action>
+                                                <action id="-27" name="Set effect enabled" sid="682376700369220" type="N6_Thermometer">
+                                                    <param id="0" name="Mode">1</param>
+                                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>

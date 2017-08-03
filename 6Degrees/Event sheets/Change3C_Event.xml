@@ -28,6 +28,10 @@
                     <param id="0" name="Layer">1</param>
                     <param id="1" name="Visibility">0</param>
                 </action>
+                <action id="-4" name="Set layer visible" sid="389532964241488" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
                 <action disabled="1" id="5" name="Set web font" sid="321572591176384" type="Dialogue2">
                     <param id="0" name="Family name">&quot;Orange Kid&quot;</param>
                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
@@ -49,6 +53,42 @@
                 <action id="4" name="Set animation" sid="545198306099979" type="N6_Background_Future2">
                     <param id="0" name="Animation">&quot;3C&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="101715039172009">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="480277025620441" type="System">
+                    <param id="0" name="Interval (seconds)">0.05</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="637743145614712" type="System">
+                    <param id="0" name="Variable">n6_thermorCahnge</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="664234169671272" type="System">
+                    <param id="0" name="Variable">n6_thermorCahnge</param>
+                    <param id="1" name="Value">0.025</param>
+                </action>
+                <action id="-5" name="Set width" sid="637847951124310" type="n6_thermo_cut">
+                    <param id="0" name="Width">self.Width+150/40</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="570867382187052" type="N6_Thermometer">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">92+n6_thermorCahnge*2</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="907372874382560" type="N6_Thermometer">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">1</param>
+                    <param id="2" name="Value">86-n6_thermorCahnge*19</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="375084882416938" type="N6_Thermometer">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">2</param>
+                    <param id="2" name="Value">42-n6_thermorCahnge*9</param>
                 </action>
             </actions>
         </event-block>
@@ -90,6 +130,10 @@
                     <param id="0" name="Layer">1</param>
                     <param id="1" name="Visibility">1</param>
                 </action>
+                <action id="-4" name="Set layer visible" sid="248161596139029" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
                 <action id="0" name="Play" sid="397817984338213" type="Audio">
                     <param id="0" name="Audio file">sfx_Hana_giggle3</param>
                     <param id="2" name="Loop">0</param>
@@ -118,10 +162,13 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="840223053107147" type="4C_Background" />
-                <action behavior="Fade" id="1" name="Start fade" sid="495119831345984" type="4C_Thermostat" />
                 <action id="-12" name="Set group active" sid="979983449219299" type="System">
                     <param id="0" name="Group name">&quot;TextC3&quot;</param>
                     <param id="1" name="State">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="378600431421337" type="System">
+                    <param id="0" name="Variable">n6_thermorCahnge</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>

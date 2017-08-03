@@ -20,6 +20,10 @@
                     <param id="0" name="Animation">&quot;present&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="-27" name="Set effect enabled" sid="526840482672658" type="N6_Thermometer">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block any="1" sid="177656437374172">
@@ -154,6 +158,13 @@
                 <action id="0" name="Call function" sid="920040200529562" type="Function">
                     <param id="0" name="Name">&quot;N6 Transition To&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;N6 Future View&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="976707810527781" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="668467567372623" type="N6_Thermometer">
+                    <param id="0" name="Mode">1</param>
+                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
                 </action>
             </actions>
         </event-block>

@@ -50,6 +50,46 @@
                     <param id="0" name="Animation">&quot;1C&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="-4" name="Set layer visible" sid="340645765873020" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="906422840169122">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="324486913957993" type="System">
+                    <param id="0" name="Interval (seconds)">0.05</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="205599359470479" type="System">
+                    <param id="0" name="Variable">n6_thermorCahnge</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="980316318828160" type="System">
+                    <param id="0" name="Variable">n6_thermorCahnge</param>
+                    <param id="1" name="Value">0.025</param>
+                </action>
+                <action id="-5" name="Set width" sid="659449142261275" type="n6_thermo_cut">
+                    <param id="0" name="Width">self.Width+150/40</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="516456707113837" type="N6_Thermometer">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">70-n6_thermorCahnge*13</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="791247166452182" type="N6_Thermometer">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">1</param>
+                    <param id="2" name="Value">85+n6_thermorCahnge*4</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="602719478094324" type="N6_Thermometer">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">2</param>
+                    <param id="2" name="Value">100-n6_thermorCahnge*7</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="570949330492801">
@@ -90,6 +130,10 @@
                     <param id="0" name="Layer">1</param>
                     <param id="1" name="Visibility">1</param>
                 </action>
+                <action id="-4" name="Set layer visible" sid="458125496579167" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
                 <action id="0" name="Play" sid="934077821085066" type="Audio">
                     <param id="0" name="Audio file">sfx_Hana_laugh1</param>
                     <param id="2" name="Loop">0</param>
@@ -118,10 +162,13 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="304784380447811" type="2C_Background" />
-                <action behavior="Fade" id="1" name="Start fade" sid="771029836222997" type="2C_Thermostat" />
                 <action id="-12" name="Set group active" sid="422226461693187" type="System">
                     <param id="0" name="Group name">&quot;TextC1&quot;</param>
                     <param id="1" name="State">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="991132333609402" type="System">
+                    <param id="0" name="Variable">n6_thermorCahnge</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>

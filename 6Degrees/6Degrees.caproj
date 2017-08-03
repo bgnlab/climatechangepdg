@@ -46,6 +46,7 @@
         <effect author="Scirra" id="brightness">Brightness</effect>
         <effect author="Scirra" id="scanlines">Scan lines</effect>
         <effect author="Scirra" id="sepia">Sepia</effect>
+        <effect author="Scirra" id="setcolor">Set color</effect>
         <effect author="Scirra" id="warpripple">Warp Ripple</effect>
     </used-effects>
     <configurations>
@@ -5409,6 +5410,11 @@
                 </object-folder>
                 <object-type name="N6_Thermometer" sid="109642287589657">
                     <plugin id="Sprite" />
+                    <effects>
+                        <effect-type name="SetColor">
+                            <effect id="setcolor" />
+                        </effect-type>
+                    </effects>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="0C" pingpong="0" repeatcount="1" repeatto="0" sid="749595446818740" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\1C thermometer pastel.png">
@@ -5482,8 +5488,8 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="1" loop="0" name="6C" pingpong="0" repeatcount="1" repeatto="0" sid="963249364634463" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-01\Downloads\6C thermometer pastel.png">
+                        <animation framecount="1" loop="1" name="6C" pingpong="1" repeatcount="1" repeatto="0" sid="963249364634463" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\Thermometer red fill.png">
                                 <collision-poly>
                                     <point x="0.0818505" y="0.534884" />
                                     <point x="0.5" y="0.255814" />
@@ -5491,6 +5497,48 @@
                                     <point x="0.922598" y="0.494186" />
                                     <point x="0.5" y="0.732558" />
                                     <point x="0.0818505" y="0.465116" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="test" pingpong="0" repeatcount="1" repeatto="0" sid="464884185550189" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\Thermometer red fill.png">
+                                <collision-poly>
+                                    <point x="0.128926" y="0.45614" />
+                                    <point x="0.5" y="0.403509" />
+                                    <point x="0.879339" y="0.426901" />
+                                    <point x="0.882645" y="0.5" />
+                                    <point x="0.873554" y="0.552632" />
+                                    <point x="0.5" y="0.555556" />
+                                    <point x="0.132231" y="0.532164" />
+                                    <point x="0.128926" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="test2" pingpong="0" repeatcount="1" repeatto="0" sid="637699232431960" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\Thermometer colouring transtions.png">
+                                <collision-poly>
+                                    <point x="0.128926" y="0.45614" />
+                                    <point x="0.5" y="0.403509" />
+                                    <point x="0.879339" y="0.426901" />
+                                    <point x="0.882645" y="0.5" />
+                                    <point x="0.873554" y="0.552632" />
+                                    <point x="0.5" y="0.555556" />
+                                    <point x="0.132231" y="0.532164" />
+                                    <point x="0.128926" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="test3" pingpong="0" repeatcount="1" repeatto="0" sid="966065350278729" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\Thermometer clear.png">
+                                <collision-poly>
+                                    <point x="0.119008" y="0.421053" />
+                                    <point x="0.5" y="0.359649" />
+                                    <point x="0.890083" y="0.388889" />
+                                    <point x="0.896694" y="0.5" />
+                                    <point x="0.884298" y="0.590643" />
+                                    <point x="0.5" y="0.599415" />
+                                    <point x="0.122314" y="0.567251" />
+                                    <point x="0.115702" y="0.5" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -17165,23 +17213,6 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="1C_Thermostat" sid="137952715623477">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="162564372361950" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\1C thermometer.png">
-                                <collision-poly>
-                                    <point x="0.0818505" y="0.534884" />
-                                    <point x="0.5" y="0.255814" />
-                                    <point x="0.922598" y="0.505814" />
-                                    <point x="0.922598" y="0.494186" />
-                                    <point x="0.5" y="0.732558" />
-                                    <point x="0.0818505" y="0.465116" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
             </object-folder>
             <object-folder name="CutScene_Change2C">
                 <object-type name="2C_Background" sid="745537540076223">
@@ -17206,28 +17237,6 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="2C_Thermostat" sid="958445447383820">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Fade" sid="112746077795633">
-                            <behavior id="Fade" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="500508160742169" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\2C thermometer.png">
-                                <collision-poly>
-                                    <point x="0.0818505" y="0.505495" />
-                                    <point x="0.5" y="0.252747" />
-                                    <point x="0.922598" y="0.478022" />
-                                    <point x="0.922598" y="0.521978" />
-                                    <point x="0.5" y="0.703297" />
-                                    <point x="0.0818505" y="0.494505" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
             </object-folder>
             <object-folder name="CutScene_Change3C">
                 <object-type name="3C_Background" sid="729114266114632">
@@ -17243,29 +17252,6 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="3C_Thermostat" sid="811166476278645">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Fade" sid="379099213785197">
-                            <behavior id="Fade" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="624123136369518" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.50289" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\3C thermometer.png">
-                                <collision-poly>
-                                    <point x="0.0818505" y="0.531792" />
-                                    <point x="0.5" y="0.260116" />
-                                    <point x="0.922598" y="0.50289" />
-                                    <point x="0.922598" y="0.49711" />
-                                    <point x="0.922598" y="0.49711" />
-                                    <point x="0.5" y="0.734104" />
-                                    <point x="0.0818505" y="0.468208" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
             </object-folder>
             <object-folder name="CutScene_Change4C">
                 <object-type name="4C_Background" sid="470495574810975">
@@ -17278,28 +17264,6 @@
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="701505907057330" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\(story ver) Map 2.0 4 degrees.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="4C_Thermostat" sid="207185312332834">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Fade" sid="480438426352273">
-                            <behavior id="Fade" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="561245006217551" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\4C thermometer.png">
-                                <collision-poly>
-                                    <point x="0.0818505" y="0.538012" />
-                                    <point x="0.5" y="0.245614" />
-                                    <point x="0.922598" y="0.508772" />
-                                    <point x="0.922598" y="0.491228" />
-                                    <point x="0.5" y="0.725146" />
-                                    <point x="0.0818505" y="0.461988" />
-                                </collision-poly>
-                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -17323,28 +17287,6 @@
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="419070088351530" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\(story ver) Map 2.0 5 degrees.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="5C_Thermostat" sid="171878879604131">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Fade" sid="109674839584902">
-                            <behavior id="Fade" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211036609389272" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\#Narrative Assets\5C thermometer.png">
-                                <collision-poly>
-                                    <point x="0.0827402" y="0.574074" />
-                                    <point x="0.5" y="0.246914" />
-                                    <point x="0.922598" y="0.537037" />
-                                    <point x="0.922598" y="0.462963" />
-                                    <point x="0.5" y="0.753086" />
-                                    <point x="0.0836299" y="0.419753" />
-                                </collision-poly>
-                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -17512,8 +17454,8 @@
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="687738268797117" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\N.O.S\Downloads\6C thermometer.png">
+                        <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="687738268797117" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
                                     <point x="0.0645724" y="0.308333" />
                                     <point x="0.5" y="0.1" />
@@ -17525,6 +17467,47 @@
                                     <point x="0.0619546" y="0.5" />
                                 </collision-poly>
                             </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.0645724" y="0.308333" />
+                                    <point x="0.5" y="0.1" />
+                                    <point x="0.943281" y="0.270833" />
+                                    <point x="0.95288" y="0.5" />
+                                    <point x="0.942408" y="0.725" />
+                                    <point x="0.5" y="0.8125" />
+                                    <point x="0.0689354" y="0.670833" />
+                                    <point x="0.0619546" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\Thermometer clear.png">
+                                <collision-poly>
+                                    <point x="0.0645724" y="0.308333" />
+                                    <point x="0.5" y="0.1" />
+                                    <point x="0.943281" y="0.270833" />
+                                    <point x="0.95288" y="0.5" />
+                                    <point x="0.942408" y="0.725" />
+                                    <point x="0.5" y="0.8125" />
+                                    <point x="0.0689354" y="0.670833" />
+                                    <point x="0.0619546" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="587860722729343" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\pastel fire 3.png">
+                                <collision-poly>
+                                    <point x="0.128926" y="0.45614" />
+                                    <point x="0.5" y="0.403509" />
+                                    <point x="0.878512" y="0.429825" />
+                                    <point x="0.880992" y="0.5" />
+                                    <point x="0.872727" y="0.549708" />
+                                    <point x="0.5" y="0.555556" />
+                                    <point x="0.132231" y="0.532164" />
+                                    <point x="0.128926" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Animation3" pingpong="0" repeatcount="1" repeatto="0" sid="700523812013427" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -18190,6 +18173,33 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="171123534468199" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\kitchen background.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="n6_Thermometer_holder" sid="875167664791430">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170161470613197" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\Thermometer clear.png">
+                        <collision-poly>
+                            <point x="0.119008" y="0.421053" />
+                            <point x="0.5" y="0.359649" />
+                            <point x="0.890083" y="0.388889" />
+                            <point x="0.896694" y="0.5" />
+                            <point x="0.884298" y="0.590643" />
+                            <point x="0.5" y="0.599415" />
+                            <point x="0.122314" y="0.567251" />
+                            <point x="0.115702" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="n6_thermo_cut" sid="854846524964507">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995868115585890" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

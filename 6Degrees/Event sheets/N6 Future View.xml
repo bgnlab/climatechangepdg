@@ -10,7 +10,12 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="808219079054885" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-27" name="Set effect enabled" sid="159749331035719" type="N6_Thermometer">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="974556353251679">
                     <conditions>
