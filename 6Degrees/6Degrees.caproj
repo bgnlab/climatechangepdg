@@ -5766,6 +5766,20 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="512343983922534" speed="5">
+                        <frame duration="1" hotspotX="1.53333" hotspotY="1.09333" original-source="C:\Users\GAMEPLAYER-03\Downloads\Full Tire.png">
+                            <collision-poly>
+                                <point x="0.146667" y="0.146667" />
+                                <point x="0.5" y="0.00333333" />
+                                <point x="0.853333" y="0.146667" />
+                                <point x="0.996667" y="0.5" />
+                                <point x="0.853333" y="0.853333" />
+                                <point x="0.5" y="0.996667" />
+                                <point x="0.146667" y="0.853333" />
+                                <point x="0.00333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="m1_DifficultyList" sid="344293230000031">
