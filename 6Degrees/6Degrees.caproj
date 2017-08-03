@@ -5807,7 +5807,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726901617106558" speed="5">
-                        <frame duration="1" hotspotX="0.489899" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-04\Desktop\FuelCan1.png">
+                        <frame duration="1" hotspotX="0.489899" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-04\Desktop\FuelCan1 (1).png">
                             <collision-poly>
                                 <point x="0.0113398" y="0.0688312" />
                                 <point x="0.489691" y="0.0480519" />
@@ -10857,6 +10857,14 @@
                                 <point x="0.5" y="0.971667" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m6_BGG" sid="483827736140113">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="171123534468199" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\kitchen background.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -18155,14 +18163,6 @@
                             <point x="0.096" y="0.5" />
                         </collision-poly>
                     </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="m6_BGG" sid="483827736140113">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="171123534468199" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\kitchen background.png" />
                 </animation>
             </animation-folder>
         </object-type>

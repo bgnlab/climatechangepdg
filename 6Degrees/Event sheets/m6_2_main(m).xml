@@ -725,6 +725,22 @@
                 </action>
             </actions>
             <sub-events>
+                <event-block sid="886897062570508">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="523398505694497" type="System">
+                            <param id="0" name="Object">m6_2_fud</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="297037932616768" type="m6_2_fud">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">1100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="725400016399160" type="m6_2_fud">
+                            <param id="0" name="Y">1100</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="216202787204609">
                     <conditions>
                         <condition id="-11" name="For Each" sid="282092431222934" type="System">
