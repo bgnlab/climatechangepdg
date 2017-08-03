@@ -5554,6 +5554,33 @@
                     </behaviors>
                 </object-type>
             </object-folder>
+            <object-type name="n6_Thermometer_holder" sid="875167664791430">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170161470613197" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\Thermometer clear.png">
+                            <collision-poly>
+                                <point x="0.119008" y="0.421053" />
+                                <point x="0.5" y="0.359649" />
+                                <point x="0.890083" y="0.388889" />
+                                <point x="0.896694" y="0.5" />
+                                <point x="0.884298" y="0.590643" />
+                                <point x="0.5" y="0.599415" />
+                                <point x="0.122314" y="0.567251" />
+                                <point x="0.115702" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="n6_thermo_cut" sid="854846524964507">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995868115585890" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="M1 Tire Pressure">
             <object-folder name="m1 tutorial">
@@ -5707,7 +5734,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="Pressure" pingpong="0" repeatcount="1" repeatto="0" sid="288918716933963" speed="5">
+                    <animation framecount="1" loop="0" name="PressureOld" pingpong="0" repeatcount="1" repeatto="0" sid="288918716933963" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501305" original-source="C:\Users\GAMEPLAYER-04\Desktop\Car Refilling.png">
                             <image-point name="fuelExhaust" x="0" y="0.809399" />
                         </frame>
@@ -5722,6 +5749,20 @@
                                 <point x="0.5" y="0.654297" />
                                 <point x="0.345703" y="0.654297" />
                                 <point x="0.166016" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Pressure" pingpong="0" repeatcount="1" repeatto="0" sid="159880623473956" speed="5">
+                        <frame duration="1" hotspotX="0.628947" hotspotY="0.486667">
+                            <image-point name="movedExhaust" x="0.394737" y="0.6" />
+                            <collision-poly>
+                                <point x="0.5" y="0.40625" />
+                                <point x="0.59375" y="0.40625" />
+                                <point x="1" y="0.564453" />
+                                <point x="0.654297" y="0.654297" />
+                                <point x="0.5" y="0.654297" />
+                                <point x="0.3125" y="0.6875" />
+                                <point x="0.0390625" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -17209,6 +17250,78 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="my_lulwhy" sid="179676660874449">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="381493216115904" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\water droplet outline.png">
+                            <collision-poly>
+                                <point x="0.292553" y="0.221774" />
+                                <point x="0.5" y="0.0645161" />
+                                <point x="0.712766" y="0.217742" />
+                                <point x="0.882979" y="0.5" />
+                                <point x="0.75" y="0.810484" />
+                                <point x="0.5" y="0.875" />
+                                <point x="0.255319" y="0.806452" />
+                                <point x="0.12766" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_signs" sid="139530842819395">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="980269972648694" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\water bottle sign.png">
+                            <collision-poly>
+                                <point x="0.0721393" y="0.119835" />
+                                <point x="0.5" y="0.103306" />
+                                <point x="0.925373" y="0.123967" />
+                                <point x="0.935323" y="0.5" />
+                                <point x="0.870647" y="0.785124" />
+                                <point x="0.5" y="0.677686" />
+                                <point x="0.116915" y="0.805785" />
+                                <point x="0.0621891" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="my_star" sid="280155414630376">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="rip" sid="223731495730435" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="470317527450001" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\star full (new).png">
+                            <collision-poly>
+                                <point x="0.336" y="0.336" />
+                                <point x="0.5" y="0.044" />
+                                <point x="0.668" y="0.332" />
+                                <point x="0.916" y="0.5" />
+                                <point x="0.808" y="0.808" />
+                                <point x="0.212" y="0.788" />
+                                <point x="0.096" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="141600766316895" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\empty star (new).png">
+                            <collision-poly>
+                                <point x="0.336" y="0.336" />
+                                <point x="0.5" y="0.044" />
+                                <point x="0.668" y="0.332" />
+                                <point x="0.916" y="0.5" />
+                                <point x="0.808" y="0.808" />
+                                <point x="0.212" y="0.788" />
+                                <point x="0.096" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Cutscenes">
             <object-folder name="Cutscene_Change1C">
@@ -18114,105 +18227,6 @@
         </object-type>
         <object-type global="1" name="Dictionary" sid="185893897457786">
             <plugin id="Dictionary" />
-        </object-type>
-        <object-type name="my_signs" sid="139530842819395">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="980269972648694" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\water bottle sign.png">
-                        <collision-poly>
-                            <point x="0.0721393" y="0.119835" />
-                            <point x="0.5" y="0.103306" />
-                            <point x="0.925373" y="0.123967" />
-                            <point x="0.935323" y="0.5" />
-                            <point x="0.870647" y="0.785124" />
-                            <point x="0.5" y="0.677686" />
-                            <point x="0.116915" y="0.805785" />
-                            <point x="0.0621891" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="my_lulwhy" sid="179676660874449">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="381493216115904" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\water droplet outline.png">
-                        <collision-poly>
-                            <point x="0.292553" y="0.221774" />
-                            <point x="0.5" y="0.0645161" />
-                            <point x="0.712766" y="0.217742" />
-                            <point x="0.882979" y="0.5" />
-                            <point x="0.75" y="0.810484" />
-                            <point x="0.5" y="0.875" />
-                            <point x="0.255319" y="0.806452" />
-                            <point x="0.12766" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="my_star" sid="280155414630376">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="rip" sid="223731495730435" type="number" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="470317527450001" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\star full (new).png">
-                        <collision-poly>
-                            <point x="0.336" y="0.336" />
-                            <point x="0.5" y="0.044" />
-                            <point x="0.668" y="0.332" />
-                            <point x="0.916" y="0.5" />
-                            <point x="0.808" y="0.808" />
-                            <point x="0.212" y="0.788" />
-                            <point x="0.096" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="141600766316895" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Desktop\art\empty star (new).png">
-                        <collision-poly>
-                            <point x="0.336" y="0.336" />
-                            <point x="0.5" y="0.044" />
-                            <point x="0.668" y="0.332" />
-                            <point x="0.916" y="0.5" />
-                            <point x="0.808" y="0.808" />
-                            <point x="0.212" y="0.788" />
-                            <point x="0.096" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="n6_Thermometer_holder" sid="875167664791430">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170161470613197" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-03\Downloads\Thermometer clear.png">
-                        <collision-poly>
-                            <point x="0.119008" y="0.421053" />
-                            <point x="0.5" y="0.359649" />
-                            <point x="0.890083" y="0.388889" />
-                            <point x="0.896694" y="0.5" />
-                            <point x="0.884298" y="0.590643" />
-                            <point x="0.5" y="0.599415" />
-                            <point x="0.122314" y="0.567251" />
-                            <point x="0.115702" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="n6_thermo_cut" sid="854846524964507">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995868115585890" speed="5">
-                    <frame duration="1" hotspotX="1" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
         </object-type>
     </object-folder>
     <families>
