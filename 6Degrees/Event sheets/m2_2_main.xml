@@ -1317,8 +1317,83 @@
                                             <param id="0" name="Object">m2_2_retry</param>
                                         </condition>
                                     </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="473950797822277">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="864179590530026" type="System">
+                                                    <param id="0" name="Variable">m2_2_score</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">6</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="142986823553400" type="Function">
+                                                    <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                                    <param id="1" name="Parameter {n}">3{###}&quot;M2_2 Restart&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="982914455274268">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="334611138182763" type="System">
+                                                    <param id="0" name="Variable">m2_2_score</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="589161360928681" type="Function">
+                                                    <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                                    <param id="1" name="Parameter {n}">2{###}&quot;M2_2 Restart&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block any="1" sid="680942047779551">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="328549683130148" type="System">
+                                                    <param id="0" name="Variable">m2_2_score</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="375732683687136" type="System">
+                                                    <param id="0" name="Variable">m2_2_score</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="654165827350830" type="Function">
+                                                    <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                                    <param id="1" name="Parameter {n}">1{###}&quot;M2_2 Restart&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block any="1" sid="579007874277358">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="965634671703098" type="System">
+                                                    <param id="0" name="Variable">m2_2_score</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="496176548404219" type="Function">
+                                                    <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                                    <param id="1" name="Parameter {n}">0{###}&quot;M2_2 Restart&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="695570419178147">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="565993582909613" type="Function">
+                                            <param id="0" name="Name">&quot;M2_2 Restart&quot;</param>
+                                        </condition>
+                                    </conditions>
                                     <actions>
-                                        <action id="-26" name="Restart layout" sid="202650318724537" type="System" />
+                                        <action id="-26" name="Restart layout" sid="797408469277054" type="System" />
                                     </actions>
                                 </event-block>
                                 <event-block sid="839216571507341">

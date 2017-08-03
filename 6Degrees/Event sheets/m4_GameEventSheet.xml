@@ -1278,9 +1278,69 @@
                                     <param id="0" name="Object">m4_RetryBtn</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-26" name="Restart layout" sid="215607170402912" type="System" />
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="262681453376891">
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="507884501324320" type="m4_star1" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="760529040345540">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="877249289829508" type="m4_star2" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="249606408894798">
+                                                    <conditions>
+                                                        <condition id="-9" name="Is visible" sid="376539006975497" type="m4_star3" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="619646457437474" type="Function">
+                                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                                            <param id="1" name="Parameter {n}">3{###}&quot;M4 Restart&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="379351117874496">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="527208120881702" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="981457015231913" type="Function">
+                                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                                            <param id="1" name="Parameter {n}">2{###}&quot;M4 Restart&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="597805322212691">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="123179613714799" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="594536928689657" type="Function">
+                                                    <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                                    <param id="1" name="Parameter {n}">1{###}&quot;M4 Restart&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="387501801678423">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="231553259111098" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="939435282853470" type="Function">
+                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">0{###}&quot;M4 Restart&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="935323696426892">
                             <conditions>
@@ -1353,6 +1413,16 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="584754855870555">
+                    <conditions>
+                        <condition id="0" name="On function" sid="154931001705943" type="Function">
+                            <param id="0" name="Name">&quot;M4 Restart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="215607170402912" type="System" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

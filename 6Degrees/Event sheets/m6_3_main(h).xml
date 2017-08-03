@@ -2111,13 +2111,79 @@
                                     <param id="0" name="Object">m6_3_retry</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="512964755284851" type="m6_3_RecipeList">
-                                    <param id="0" name="Text">&quot;&quot;</param>
-                                </action>
-                                <action id="-26" name="Restart layout" sid="731661835512033" type="System" />
-                                <action id="33" name="Stop all" sid="136752067545584" type="Audio" />
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="653403317749121">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="380997157210830" type="System">
+                                            <param id="0" name="Variable">m6_2_tempscore</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="542542106813182" type="Function">
+                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">0{###}&quot;M6_3 Restart&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="127491811803278">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="337519102292758" type="System">
+                                            <param id="0" name="Variable">m6_2_tempscore</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="628677447203170" type="System">
+                                            <param id="0" name="Variable">m6_2_tempscore</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="886782349005806" type="Function">
+                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">1{###}&quot;M6_3 Restart&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="285067074478122">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="133639258732682" type="System">
+                                            <param id="0" name="Variable">m6_2_tempscore</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="864384027575666" type="System">
+                                            <param id="0" name="Variable">m6_2_tempscore</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="111744639623011" type="Function">
+                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">2{###}&quot;M6_3 Restart&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="910001751708251">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="210491260722842" type="System">
+                                            <param id="0" name="Variable">m6_2_tempscore</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="866663155032195" type="Function">
+                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">3{###}&quot;M6_3 Restart&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="197446366941328">
                             <conditions>
@@ -2127,10 +2193,6 @@
                             </conditions>
                             <actions>
                                 <action id="33" name="Stop all" sid="180834707552980" type="Audio" />
-                                <action id="0" name="Call function" sid="613032415194054" type="Function">
-                                    <param id="0" name="Name">&quot;GG Exit Game&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="100015306236587">
@@ -2254,6 +2316,20 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="299255620756561">
+                    <conditions>
+                        <condition id="0" name="On function" sid="812053009848156" type="Function">
+                            <param id="0" name="Name">&quot;M6_3 Restart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="702776266169655" type="m6_3_RecipeList">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="554036401383960" type="System" />
+                        <action id="33" name="Stop all" sid="651564579602216" type="Audio" />
+                    </actions>
                 </event-block>
                 <event-block sid="875524880203458">
                     <conditions>

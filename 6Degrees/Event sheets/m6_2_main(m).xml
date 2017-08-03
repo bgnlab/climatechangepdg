@@ -1859,13 +1859,79 @@
                                     <param id="0" name="Object">m6_2_retry</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="512964755284851" type="m6_2_RecipeList">
-                                    <param id="0" name="Text">&quot;&quot;</param>
-                                </action>
-                                <action id="-26" name="Restart layout" sid="731661835512033" type="System" />
-                                <action id="33" name="Stop all" sid="136752067545584" type="Audio" />
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="667984551033024">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="879825214957402" type="System">
+                                            <param id="0" name="Variable">m6_2_score</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="326750635190962" type="Function">
+                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">0{###}&quot;M6_2 Restart&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="668321925270921">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="757306096565173" type="System">
+                                            <param id="0" name="Variable">m6_2_score</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="507644209676041" type="System">
+                                            <param id="0" name="Variable">m6_2_score</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">7</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="381504196559836" type="Function">
+                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">1{###}&quot;M6_2 Restart&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="674630476883739">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="392122619533514" type="System">
+                                            <param id="0" name="Variable">m6_2_score</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="964537176278825" type="System">
+                                            <param id="0" name="Variable">m6_2_score</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">9</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="636870117941652" type="Function">
+                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">2{###}&quot;M6_2 Restart&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="543751071044073">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="364078601658012" type="System">
+                                            <param id="0" name="Variable">m6_2_score</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="961888613420752" type="Function">
+                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">3{###}&quot;M6_2 Restart&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="197446366941328">
                             <conditions>
@@ -1998,6 +2064,20 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="720897477931857">
+                    <conditions>
+                        <condition id="0" name="On function" sid="710275152051910" type="Function">
+                            <param id="0" name="Name">&quot;M6_2 Restart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="434737640212275" type="m6_2_RecipeList">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="283048528542599" type="System" />
+                        <action id="33" name="Stop all" sid="595403646119371" type="Audio" />
+                    </actions>
                 </event-block>
                 <event-block sid="875524880203458">
                     <conditions>

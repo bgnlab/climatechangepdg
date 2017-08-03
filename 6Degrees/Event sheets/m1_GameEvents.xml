@@ -1187,7 +1187,10 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-26" name="Restart layout" sid="865855938040137" type="System" />
+                                <action id="0" name="Call function" sid="282237196444542" type="Function">
+                                    <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                    <param id="1" name="Parameter {n}">m1_endScore{###}&quot;M1 Restart&quot;</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="550507267961687">
@@ -1292,6 +1295,16 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="254577416837127">
+                    <conditions>
+                        <condition id="0" name="On function" sid="413436319014853" type="Function">
+                            <param id="0" name="Name">&quot;M1 Restart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="434014281781545" type="System" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

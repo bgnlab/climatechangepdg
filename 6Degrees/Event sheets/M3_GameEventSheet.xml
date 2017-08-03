@@ -1500,6 +1500,14 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="922179647078607">
+                    <conditions>
+                        <condition id="0" name="On function" sid="532935651313065" type="Function">
+                            <param id="0" name="Name">&quot;M3 Restart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="482585415493870" title="M3_Fuel CostsEZ">

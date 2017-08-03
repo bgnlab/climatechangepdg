@@ -1346,9 +1346,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="982546254914066" type="Function">
-                                            <param id="0" name="Name">&quot;m2_1 Restart Game&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                        <action id="0" name="Call function" sid="846716919458822" type="Function">
+                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">max(m2_1_score - 1, 0){###}&quot;M2_1 Restart&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1728,18 +1728,18 @@
         </event-block>
         <event-group description="" sid="163558769125825" title="m2_1 Restart Game">
             <sub-events>
-                <event-block sid="375255312625718">
+                <event-block sid="361784390380864">
                     <conditions>
-                        <condition id="0" name="On function" sid="272160812643958" type="Function">
-                            <param id="0" name="Name">&quot;m2_1 Restart Game&quot;</param>
+                        <condition id="0" name="On function" sid="845728701087441" type="Function">
+                            <param id="0" name="Name">&quot;M2_1 Restart&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="318327817795492" type="System">
+                        <action id="-9" name="Set value" sid="930110622290369" type="System">
                             <param id="0" name="Variable">GG_hi</param>
                             <param id="1" name="Value">&quot;546456&quot;</param>
                         </action>
-                        <action id="-26" name="Restart layout" sid="826947667254423" type="System" />
+                        <action id="-26" name="Restart layout" sid="778280071728634" type="System" />
                     </actions>
                 </event-block>
             </sub-events>

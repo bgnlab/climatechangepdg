@@ -369,6 +369,19 @@
                     </conditions>
                     <actions>
                         <action id="33" name="Stop all" sid="274633754795127" type="Audio" />
+                        <action id="0" name="Call function" sid="148741635377613" type="Function">
+                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                            <param id="1" name="Parameter {n}">ceil(m2_3_score/2){###}&quot;M2_3 Reload&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="429775402938415">
+                    <conditions>
+                        <condition id="0" name="On function" sid="878620575220503" type="Function">
+                            <param id="0" name="Name">&quot;M2_3 Reload&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
                         <action id="-26" name="Restart layout" sid="271446037151403" type="System" />
                     </actions>
                 </event-block>

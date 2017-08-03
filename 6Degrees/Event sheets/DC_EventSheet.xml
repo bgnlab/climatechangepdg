@@ -2447,6 +2447,86 @@
                             <param id="1" name="Width">0</param>
                         </condition>
                     </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="463553836970834">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="525761144584348" type="System">
+                                    <param id="0" name="Variable">DC_StuffParked</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="759776102629644" type="Function">
+                                    <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}&quot;DC Restart&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="218959585185225">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="924591431250622" type="System">
+                                    <param id="0" name="Variable">DC_StuffParked</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="605241941927171" type="System">
+                                    <param id="0" name="Variable">DC_StuffParked</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="358327714077269" type="Function">
+                                    <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                    <param id="1" name="Parameter {n}">1{###}&quot;DC Restart&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="480833885729871">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="935827426832515" type="System">
+                                    <param id="0" name="Variable">DC_StuffParked</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="655499652748712" type="System">
+                                    <param id="0" name="Variable">DC_StuffParked</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="660305803188525" type="Function">
+                                    <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                    <param id="1" name="Parameter {n}">2{###}&quot;DC Restart&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="417204773380407">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="921456804194941" type="System">
+                                    <param id="0" name="Variable">DC_StuffParked</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="969306160656090" type="Function">
+                                    <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                    <param id="1" name="Parameter {n}">3{###}&quot;DC Restart&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="871658555126581">
+                    <conditions>
+                        <condition id="0" name="On function" sid="225492368381409" type="Function">
+                            <param id="0" name="Name">&quot;DC Restart&quot;</param>
+                        </condition>
+                    </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="899652999865470" type="System">
                             <param id="0" name="Variable">TempDiff</param>

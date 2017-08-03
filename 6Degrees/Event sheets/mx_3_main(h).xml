@@ -2244,8 +2244,10 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-26" name="Restart layout" sid="613854156819509" type="System" />
-                                <action id="33" name="Stop all" sid="179622406265238" type="Audio" />
+                                <action id="0" name="Call function" sid="326004429445412" type="Function">
+                                    <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                    <param id="1" name="Parameter {n}">mx_2_score{###}&quot;MX_3 Restart&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="258565278499835">
@@ -2273,6 +2275,17 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="424622698925812">
+                    <conditions>
+                        <condition id="0" name="On function" sid="229998683358918" type="Function">
+                            <param id="0" name="Name">&quot;MX_3 Restart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="613854156819509" type="System" />
+                        <action id="33" name="Stop all" sid="179622406265238" type="Audio" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

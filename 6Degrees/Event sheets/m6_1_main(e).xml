@@ -1737,6 +1737,14 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="749307118617348">
+                    <conditions>
+                        <condition id="0" name="On function" sid="434653822512102" type="Function">
+                            <param id="0" name="Name">&quot;M6_1 Restart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
                 <event-block sid="208952532471652">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="389918648417985" type="System">

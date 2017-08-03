@@ -554,11 +554,69 @@
                                     <param id="0" name="Object">m4_RetryBtn</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="33" name="Stop all" sid="789587705171972" type="Audio" />
-                                <action id="-21" name="Reset global variables" sid="579253981372637" type="System" />
-                                <action id="-26" name="Restart layout" sid="802024908821474" type="System" />
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="948387972789244">
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="630482828389239" type="m4_star1" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="793452600638517">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="800714292290460" type="m4_star2" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="941327708760775">
+                                                    <conditions>
+                                                        <condition id="-9" name="Is visible" sid="424327681040326" type="m4_star3" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="661857627324500" type="Function">
+                                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                                            <param id="1" name="Parameter {n}">3{###}&quot;MY Restart&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="634927545660443">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="552733983671753" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="553517090327953" type="Function">
+                                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                                            <param id="1" name="Parameter {n}">2{###}&quot;MY Restart&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="312484579833471">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="831247686823958" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="967471356837740" type="Function">
+                                                    <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                                    <param id="1" name="Parameter {n}">1{###}&quot;MY Restart&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="852651372595391">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="437613562482922" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="791653695693707" type="Function">
+                                            <param id="0" name="Name">&quot;GG Reload Game&quot;</param>
+                                            <param id="1" name="Parameter {n}">0{###}&quot;MY Restart&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="136218961826625">
                             <conditions>
@@ -631,6 +689,18 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="416915421532021">
+                    <conditions>
+                        <condition id="0" name="On function" sid="209083676829127" type="Function">
+                            <param id="0" name="Name">&quot;MY Restart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="789587705171972" type="Audio" />
+                        <action id="-21" name="Reset global variables" sid="579253981372637" type="System" />
+                        <action id="-26" name="Restart layout" sid="802024908821474" type="System" />
+                    </actions>
                 </event-block>
                 <event-block sid="593960435252696">
                     <conditions>
