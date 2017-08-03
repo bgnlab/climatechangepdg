@@ -286,10 +286,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="192614010318353">
-                            <conditions />
-                            <actions />
-                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
@@ -307,149 +303,175 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="745528376621192">
+                        <event-block sid="602066614602037">
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="493006171061322" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="409284748115823" type="Touch">
-                                    <param id="0" name="Object">C6_ButtonEasy</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="550914155368628" type="System">
-                                    <param id="0" name="Variable">C6_Switched</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="501922786289729" type="Function">
-                                    <param id="0" name="Name">&quot;GG Select Game&quot;</param>
-                                    <param id="1" name="Parameter {n}">GG_Selected_Game{###}0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>DEBUG MODE</comment>
-                        <event-block sid="429297913093982">
-                            <conditions>
-                                <condition id="0" name="On any touch start" sid="759298962178104" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="908481572458396" type="Touch">
-                                    <param id="0" name="Object">C6_ButtonMedium</param>
-                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="739035242546386">
+                                <event-block sid="745528376621192">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="175700580695218" type="System">
-                                            <param id="0" name="Variable">GG_DEBGU</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
+                                        <condition id="4" name="Is touching object" sid="409284748115823" type="Touch">
+                                            <param id="0" name="Object">C6_ButtonEasy</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="910270435398006" type="Function">
+                                        <action id="0" name="Play" sid="411595809111848" type="Audio">
+                                            <param id="0" name="Audio file">sfx_clicking_clikable_obj</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;click&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="550914155368628" type="System">
+                                            <param id="0" name="Variable">C6_Switched</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="501922786289729" type="Function">
                                             <param id="0" name="Name">&quot;GG Select Game&quot;</param>
-                                            <param id="1" name="Parameter {n}">GG_Selected_Game{###}1</param>
+                                            <param id="1" name="Parameter {n}">GG_Selected_Game{###}0</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="213343914734256">
+                                <event-block sid="429297913093982">
                                     <conditions>
-                                        <condition id="-22" name="Else" sid="197981880426476" type="System" />
+                                        <condition id="4" name="Is touching object" sid="908481572458396" type="Touch">
+                                            <param id="0" name="Object">C6_ButtonMedium</param>
+                                        </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block any="1" sid="265236525910663">
+                                        <event-block sid="739035242546386">
                                             <conditions>
-                                                <condition id="2" name="Is playing" sid="849388857440849" type="C6_ButtonEasy">
-                                                    <param id="0" name="Animation">&quot;d1&quot;</param>
-                                                </condition>
-                                                <condition id="2" name="Is playing" sid="202727757748191" type="C6_ButtonEasy">
-                                                    <param id="0" name="Animation">&quot;d2&quot;</param>
-                                                </condition>
-                                                <condition id="2" name="Is playing" sid="501026836269824" type="C6_ButtonEasy">
-                                                    <param id="0" name="Animation">&quot;d3&quot;</param>
+                                                <condition id="-14" name="Compare variable" sid="175700580695218" type="System">
+                                                    <param id="0" name="Variable">GG_DEBGU</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="890818353186043" type="Function">
+                                                <action id="0" name="Call function" sid="910270435398006" type="Function">
                                                     <param id="0" name="Name">&quot;GG Select Game&quot;</param>
                                                     <param id="1" name="Parameter {n}">GG_Selected_Game{###}1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="213343914734256">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="197981880426476" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block any="1" sid="265236525910663">
+                                                    <conditions>
+                                                        <condition id="2" name="Is playing" sid="849388857440849" type="C6_ButtonEasy">
+                                                            <param id="0" name="Animation">&quot;d1&quot;</param>
+                                                        </condition>
+                                                        <condition id="2" name="Is playing" sid="202727757748191" type="C6_ButtonEasy">
+                                                            <param id="0" name="Animation">&quot;d2&quot;</param>
+                                                        </condition>
+                                                        <condition id="2" name="Is playing" sid="501026836269824" type="C6_ButtonEasy">
+                                                            <param id="0" name="Animation">&quot;d3&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="180087164613923" type="Audio">
+                                                            <param id="0" name="Audio file">sfx_clicking_clikable_obj</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;click&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="890818353186043" type="Function">
+                                                            <param id="0" name="Name">&quot;GG Select Game&quot;</param>
+                                                            <param id="1" name="Parameter {n}">GG_Selected_Game{###}1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
-                            </sub-events>
-                        </event-block>
-                        <comment>DEBUG MODE</comment>
-                        <event-block sid="849987999967404">
-                            <conditions>
-                                <condition id="0" name="On any touch start" sid="441531268657081" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="900231201511949" type="Touch">
-                                    <param id="0" name="Object">C6_ButtonHard</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="409258782696733">
+                                <event-block sid="849987999967404">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="236629193237864" type="System">
-                                            <param id="0" name="Variable">GG_DEBGU</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
+                                        <condition id="4" name="Is touching object" sid="900231201511949" type="Touch">
+                                            <param id="0" name="Object">C6_ButtonHard</param>
                                         </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="114622882855118" type="Function">
-                                            <param id="0" name="Name">&quot;GG Select Game&quot;</param>
-                                            <param id="1" name="Parameter {n}">GG_Selected_Game{###}2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="350796712301080">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="159649834944350" type="System" />
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block any="1" sid="499029792718059">
+                                        <event-block sid="409258782696733">
                                             <conditions>
-                                                <condition id="2" name="Is playing" sid="451169100655596" type="C6_ButtonMedium">
-                                                    <param id="0" name="Animation">&quot;d1&quot;</param>
-                                                </condition>
-                                                <condition id="2" name="Is playing" sid="787615903643958" type="C6_ButtonMedium">
-                                                    <param id="0" name="Animation">&quot;d2&quot;</param>
-                                                </condition>
-                                                <condition id="2" name="Is playing" sid="898293582502507" type="C6_ButtonMedium">
-                                                    <param id="0" name="Animation">&quot;d3&quot;</param>
+                                                <condition id="-14" name="Compare variable" sid="236629193237864" type="System">
+                                                    <param id="0" name="Variable">GG_DEBGU</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="163990332250951" type="Function">
+                                                <action id="0" name="Call function" sid="114622882855118" type="Function">
                                                     <param id="0" name="Name">&quot;GG Select Game&quot;</param>
                                                     <param id="1" name="Parameter {n}">GG_Selected_Game{###}2</param>
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="350796712301080">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="159649834944350" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block any="1" sid="499029792718059">
+                                                    <conditions>
+                                                        <condition id="2" name="Is playing" sid="451169100655596" type="C6_ButtonMedium">
+                                                            <param id="0" name="Animation">&quot;d1&quot;</param>
+                                                        </condition>
+                                                        <condition id="2" name="Is playing" sid="787615903643958" type="C6_ButtonMedium">
+                                                            <param id="0" name="Animation">&quot;d2&quot;</param>
+                                                        </condition>
+                                                        <condition id="2" name="Is playing" sid="898293582502507" type="C6_ButtonMedium">
+                                                            <param id="0" name="Animation">&quot;d3&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="353433201467342" type="Audio">
+                                                            <param id="0" name="Audio file">sfx_clicking_clikable_obj</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;click&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="163990332250951" type="Function">
+                                                            <param id="0" name="Name">&quot;GG Select Game&quot;</param>
+                                                            <param id="1" name="Parameter {n}">GG_Selected_Game{###}2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="644328527431372">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="661329554695581" type="Touch">
+                                            <param id="0" name="Object">C6_ButtonBack</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="370911850749959" type="Audio">
+                                            <param id="0" name="Audio file">sfx_clicking_clikable_obj</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;click&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="269323787601337" type="System">
+                                            <param id="0" name="Variable">C6_Switched</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="603757517301941" type="Function">
+                                            <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;UILevels&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="644328527431372">
-                            <conditions>
-                                <condition id="0" name="On any touch start" sid="251422763671930" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="661329554695581" type="Touch">
-                                    <param id="0" name="Object">C6_ButtonBack</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="269323787601337" type="System">
-                                    <param id="0" name="Variable">C6_Switched</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="603757517301941" type="Function">
-                                    <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;UILevels&quot;</param>
-                                </action>
-                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -473,7 +495,14 @@
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="794677730294377" type="Touch" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Play" sid="451966238888688" type="Audio">
+                                    <param id="0" name="Audio file">sfx_clicking_clikable_obj</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;click&quot;</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="101957701906778">
                                     <conditions>
@@ -597,45 +626,59 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="544983462933344">
+                        <event-block sid="109246091617247">
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="983189037642173" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="361810555944347" type="Touch">
-                                    <param id="0" name="Object">C6_LevelIcon</param>
-                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="721783501718663" type="System">
-                                    <param id="0" name="Variable">C6_Switched</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="459080238536782" type="System">
-                                    <param id="0" name="Variable">GG_Selected_Game</param>
-                                    <param id="1" name="Value">C6_LevelIcon.Game</param>
-                                </action>
-                                <action id="0" name="Call function" sid="697786891815410" type="Function">
-                                    <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;UIDifficulty&quot;</param>
+                                <action id="0" name="Play" sid="688815619144456" type="Audio">
+                                    <param id="0" name="Audio file">sfx_clicking_clikable_obj</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;click&quot;</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="798998185949249">
-                            <conditions>
-                                <condition id="0" name="On any touch start" sid="387460478253427" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="192961663569824" type="Touch">
-                                    <param id="0" name="Object">C6_ButtonBack</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="303921483225693" type="System">
-                                    <param id="0" name="Variable">C6_Switched</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="289370447166658" type="Function">
-                                    <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;UIStart&quot;</param>
-                                </action>
-                            </actions>
+                            <sub-events>
+                                <event-block sid="544983462933344">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="361810555944347" type="Touch">
+                                            <param id="0" name="Object">C6_LevelIcon</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="721783501718663" type="System">
+                                            <param id="0" name="Variable">C6_Switched</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="459080238536782" type="System">
+                                            <param id="0" name="Variable">GG_Selected_Game</param>
+                                            <param id="1" name="Value">C6_LevelIcon.Game</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="697786891815410" type="Function">
+                                            <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;UIDifficulty&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="798998185949249">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="771909741504988" type="System" />
+                                        <condition id="4" name="Is touching object" sid="192961663569824" type="Touch">
+                                            <param id="0" name="Object">C6_ButtonBack</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="303921483225693" type="System">
+                                            <param id="0" name="Variable">C6_Switched</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="289370447166658" type="Function">
+                                            <param id="0" name="Name">&quot;C6 Switch Menu To&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;UIStart&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

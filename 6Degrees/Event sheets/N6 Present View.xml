@@ -48,7 +48,7 @@
                             <param id="0" name="Audio file">bgm_2</param>
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="822174715580317" type="System">
                             <param id="0" name="Variable">N6_PreviousMapLayout</param>
@@ -136,6 +136,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="861210717797127" type="Audio">
+                    <param id="0" name="Audio file">sfx_clicking_clikable_obj</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;click&quot;</param>
+                </action>
                 <action id="-9" name="Set value" sid="615483289231383" type="System">
                     <param id="0" name="Variable">GG_Selected_Region</param>
                     <param id="1" name="Value">N6_Region.RegionNumber</param>
@@ -158,7 +164,15 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="33" name="Stop all" sid="892999311469344" type="Audio" />
+                <action id="0" name="Play" sid="667812569515298" type="Audio">
+                    <param id="0" name="Audio file">sfx_clicking_clikable_obj</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;click&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="892999311469344" type="Audio">
+                    <param id="0" name="Tag">&quot;bgm&quot;</param>
+                </action>
                 <action id="0" name="Call function" sid="920040200529562" type="Function">
                     <param id="0" name="Name">&quot;N6 Transition To&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;N6 Future View&quot;</param>
@@ -181,6 +195,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="731491727251169" type="Audio">
+                    <param id="0" name="Audio file">sfx_clicking_clikable_obj</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;click&quot;</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="412471311948339" type="System">
                     <param id="0" name="Layout">Score Screen</param>
                 </action>

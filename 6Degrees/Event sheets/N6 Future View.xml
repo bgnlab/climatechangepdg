@@ -73,7 +73,7 @@
                     <param id="0" name="Audio file">bgm_1</param>
                     <param id="2" name="Loop">1</param>
                     <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                    <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="228886068982522" type="Function">
                     <param id="0" name="Name">&quot;N6 Transition In&quot;</param>
@@ -100,7 +100,15 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="33" name="Stop all" sid="304106484670452" type="Audio" />
+                        <action id="6" name="Stop" sid="304106484670452" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="742490879748634" type="Audio">
+                            <param id="0" name="Audio file">sfx_clicking_clikable_obj</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;click&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="446648195789756" type="Function">
                             <param id="0" name="Name">&quot;N6 Transition To&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;N6 Present View&quot;</param>
