@@ -5734,7 +5734,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="Pressure" pingpong="0" repeatcount="1" repeatto="0" sid="288918716933963" speed="5">
+                    <animation framecount="1" loop="0" name="PressureOld" pingpong="0" repeatcount="1" repeatto="0" sid="288918716933963" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501305" original-source="C:\Users\GAMEPLAYER-04\Desktop\Car Refilling.png">
                             <image-point name="fuelExhaust" x="0" y="0.809399" />
                         </frame>
@@ -5749,6 +5749,20 @@
                                 <point x="0.5" y="0.654297" />
                                 <point x="0.345703" y="0.654297" />
                                 <point x="0.166016" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Pressure" pingpong="0" repeatcount="1" repeatto="0" sid="159880623473956" speed="5">
+                        <frame duration="1" hotspotX="0.628947" hotspotY="0.486667">
+                            <image-point name="movedExhaust" x="0.394737" y="0.6" />
+                            <collision-poly>
+                                <point x="0.5" y="0.40625" />
+                                <point x="0.59375" y="0.40625" />
+                                <point x="1" y="0.564453" />
+                                <point x="0.654297" y="0.654297" />
+                                <point x="0.5" y="0.654297" />
+                                <point x="0.3125" y="0.6875" />
+                                <point x="0.0390625" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
