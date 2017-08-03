@@ -131,7 +131,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>935</x>
+                        <x>960</x>
                         <y>1421</y>
                         <z>0</z>
                         <width>1920</width>
@@ -242,7 +242,7 @@
                 </instance>
                 <instance type="N6_FuturePromptText" uid="218">
                     <properties>
-                        <text>It’s too late to change anything in 2100, click the calendar to go back to 2017</text>
+                        <text>It’s too late to change anything in 2100. Tap the calendar to go back to the present day</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-48,400,0</font>
                         <color>255,255,255</color>
@@ -257,7 +257,7 @@
                             <properties>
                                 <active-at-start>Yes</active-at-start>
                                 <fade-in-time>0</fade-in-time>
-                                <wait-time>4</wait-time>
+                                <wait-time>2</wait-time>
                                 <fade-out-time>1</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
@@ -266,11 +266,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>935</x>
+                        <x>960</x>
                         <y>1421</y>
                         <z>0</z>
-                        <width>1669.251342773</width>
-                        <height>92.736183167</height>
+                        <width>1873.153564453</width>
+                        <height>104.064079285</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

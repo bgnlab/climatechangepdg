@@ -670,7 +670,7 @@
                                 <action id="0" name="Play" sid="292195635768059" type="Audio">
                                     <param id="0" name="Audio file">sfx_placeclothing</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
+                                    <param id="3" name="Volume">-10</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action disabled="1" id="-10" name="Add to" sid="116590754619797" type="System">
@@ -801,7 +801,7 @@
                                 <action id="0" name="Play" sid="237382489688986" type="Audio">
                                     <param id="0" name="Audio file">sfx_placeclothing</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
+                                    <param id="3" name="Volume">-10</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="331546887372664" type="System">
@@ -913,17 +913,11 @@
                         <action id="0" name="Play" sid="683452400692707" type="Audio">
                             <param id="0" name="Audio file">sfx_trashclothing</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-15</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="457734144151972" type="m4_ScoreText">
                             <param id="0" name="Text">&quot;Score: &quot; &amp;m4_playerScore</param>
-                        </action>
-                        <action id="0" name="Play" sid="232322076709752" type="Audio">
-                            <param id="0" name="Audio file">sfx_trashclothing</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1240,7 +1234,7 @@
                                                 <action id="0" name="Play" sid="182765878433175" type="Audio">
                                                     <param id="0" name="Audio file">sfx_soldclothing</param>
                                                     <param id="2" name="Loop">0</param>
-                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="3" name="Volume">-10</param>
                                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                                 </action>
                                                 <action id="-13" name="Set boolean" sid="451426934289285" type="m4_Pieces">
