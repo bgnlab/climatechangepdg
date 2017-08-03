@@ -54,6 +54,10 @@
                             <param id="0" name="Variable">N6_PreviousMapLayout</param>
                             <param id="1" name="Value">&quot;&quot;</param>
                         </action>
+                        <action id="1" name="Set key" sid="771322084554941" type="GG_State">
+                            <param id="0" name="Key">&quot;exit from game&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="612255170809621">

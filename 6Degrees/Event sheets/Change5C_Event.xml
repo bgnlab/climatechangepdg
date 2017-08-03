@@ -163,6 +163,10 @@
                 <action id="-15" name="Set visible" sid="424501347644974" type="Scene6_HanaSmol">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="136625100618283" type="Scene6_HanaSmol">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="-15" name="Set visible" sid="462858738847261" type="Scene4_TextBoxSmol">
                     <param id="0" name="Visibility">1</param>
                 </action>
@@ -196,6 +200,10 @@
                         <action id="-15" name="Set visible" sid="830798924819595" type="NextButton">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="4" name="Set animation" sid="889200605043450" type="Scene6_HanaSmol">
+                            <param id="0" name="Animation">&quot;Stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="6" name="Stop" sid="414629798041954" type="Audio">
                             <param id="0" name="Tag">&quot;text&quot;</param>
                         </action>
@@ -203,9 +211,7 @@
                 </event-block>
                 <event-block sid="825963785080682">
                     <conditions>
-                        <condition id="17" name="On tap object" sid="238697720574784" type="Touch">
-                            <param id="0" name="Object">NextButton</param>
-                        </condition>
+                        <condition id="14" name="On tap" sid="654628777453594" type="Touch" />
                         <condition id="-14" name="Compare variable" sid="129166120948547" type="System">
                             <param id="0" name="Variable">Timer</param>
                             <param id="1" name="Comparison">5</param>

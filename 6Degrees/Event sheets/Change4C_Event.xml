@@ -169,6 +169,14 @@
                 <action id="-15" name="Set visible" sid="956470760936863" type="Scene6_HanaSmol">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="263779950032490" type="Scene6_HanaSmol">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="390548552398946" type="4C_HanaSmol">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="259766395617649" type="Scene6_HanaSmol" />
                 <action id="-12" name="Set group active" sid="769159172424823" type="System">
                     <param id="0" name="Group name">&quot;TextC4&quot;</param>
@@ -190,6 +198,10 @@
                         <action id="-15" name="Set visible" sid="639869845084431" type="NextButton">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="4" name="Set animation" sid="589884635836087" type="4C_HanaSmol">
+                            <param id="0" name="Animation">&quot;Stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="6" name="Stop" sid="213622130288320" type="Audio">
                             <param id="0" name="Tag">&quot;text&quot;</param>
                         </action>
@@ -197,9 +209,7 @@
                 </event-block>
                 <event-block sid="974542853469880">
                     <conditions>
-                        <condition id="17" name="On tap object" sid="808306212950786" type="Touch">
-                            <param id="0" name="Object">NextButton</param>
-                        </condition>
+                        <condition id="14" name="On tap" sid="865039651464817" type="Touch" />
                         <condition id="-14" name="Compare variable" sid="957599699901869" type="System">
                             <param id="0" name="Variable">Timer</param>
                             <param id="1" name="Comparison">5</param>
