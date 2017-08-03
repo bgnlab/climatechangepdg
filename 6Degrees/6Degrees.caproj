@@ -189,7 +189,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="222134498305006" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.500917" original-source="C:\Users\GAMEPLAYER-01\Downloads\Casual Game Assets\deer.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500917" original-source="C:\Users\GAMEPLAYER-01\Downloads\deer 2.png">
                                 <collision-poly>
                                     <point x="0.394958" y="0.336315" />
                                     <point x="0.5" y="0.0966011" />
@@ -5709,7 +5709,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Pressure" pingpong="0" repeatcount="1" repeatto="0" sid="288918716933963" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.501305" original-source="C:\Users\Connor\Desktop\HandPumpConnorVer.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501305" original-source="C:\Users\GAMEPLAYER-04\Desktop\Car Refilling.png">
                             <image-point name="fuelExhaust" x="0" y="0.809399" />
                         </frame>
                     </animation>
@@ -5829,7 +5829,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726901617106558" speed="5">
-                        <frame duration="1" hotspotX="0.491667" hotspotY="0.5" original-source="C:\Users\Connor\Desktop\Game Art\Tire Pressure\Gas Tank.png">
+                        <frame duration="1" hotspotX="0.489899" hotspotY="0.5" original-source="C:\Users\GAMEPLAYER-04\Desktop\FuelCan1.png">
                             <collision-poly>
                                 <point x="0.0113398" y="0.0688312" />
                                 <point x="0.489691" y="0.0480519" />
@@ -5877,7 +5877,7 @@
                 <instance-variables>
                     <instance-variable name="originalXPos" sid="350414195737079" type="number" />
                 </instance-variables>
-                <texture original-source="C:\Users\Connor\Desktop\Grass.png" />
+                <texture original-source="C:\Users\GAMEPLAYER-04\Desktop\Grass (1).png" />
             </object-type>
             <object-type name="m1_Highlighter" sid="204916499458807">
                 <plugin id="Sprite" />
@@ -18036,14 +18036,10 @@
                     <animation framecount="1" loop="0" name="Graves" pingpong="0" repeatcount="1" repeatto="0" sid="908019411327469" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501587" original-source="D:\Secondary Downloads\graves(2).png">
                             <collision-poly>
-                                <point x="0.122153" y="0.320652" />
-                                <point x="0.5" y="0.165761" />
-                                <point x="0.869565" y="0.342391" />
-                                <point x="0.89648" y="0.5" />
-                                <point x="0.900621" y="0.73913" />
-                                <point x="0.5" y="1" />
-                                <point x="0.0362319" y="0.904891" />
-                                <point x="0.0776398" y="0.5" />
+                                <point x="0.0376914" y="0.126984" />
+                                <point x="0.202591" y="0.126984" />
+                                <point x="0.204947" y="0.993651" />
+                                <point x="0.0382803" y="0.993651" />
                             </collision-poly>
                         </frame>
                     </animation>
